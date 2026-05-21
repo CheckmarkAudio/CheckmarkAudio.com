@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+wix-export/*.har
+wix-export/*.rtf
+original-assets/
+wix-export/
+migration/public-pages/
