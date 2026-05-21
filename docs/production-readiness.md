@@ -4,6 +4,7 @@
 
 - `index.html` is the active static homepage.
 - `CNAME` is present for `CheckmarkAudio.com`.
+- `.nojekyll` is present so GitHub Pages serves static files directly.
 - Production assets are available under `assets/production/`.
 - Full-resolution source assets are kept locally and ignored by Git.
 - The site can be hosted by GitHub Pages as a static site.

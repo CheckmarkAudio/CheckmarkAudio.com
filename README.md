@@ -20,7 +20,7 @@ Then visit `http://localhost:8080`.
 4. Confirm the custom domain is `CheckmarkAudio.com`.
 
 The `CNAME` file is included so GitHub Pages keeps the custom domain attached after deploys.
-The static launch also includes `404.html`, `robots.txt`, and `sitemap.xml`.
+The static launch also includes `.nojekyll`, `404.html`, `robots.txt`, and `sitemap.xml`.
 
 ## Asset Policy
 
