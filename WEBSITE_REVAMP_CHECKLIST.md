@@ -53,6 +53,7 @@ This is the working checklist for rebuilding CheckmarkAudio.com outside of Wix a
 - [ ] Build alternate preview concept 2: darker premium audio brand.
 - [ ] Build alternate preview concept 3: bold artist-first/music-culture direction.
 - [x] Build current-site modernized preview that keeps the Wix homepage structure closer to the original.
+- [x] Build MAK-inspired editorial/luxury preview using Checkmark Audio media.
 - [ ] Compare mobile hero treatments.
 - [ ] Compare navigation styles.
 - [ ] Compare gallery layouts using extracted original photos.

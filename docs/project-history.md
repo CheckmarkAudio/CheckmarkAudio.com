@@ -22,6 +22,7 @@
 - Added `404.html`, `robots.txt`, `sitemap.xml`, and `docs/site-structure.md`.
 - Added LocalBusiness structured data to `index.html`.
 - Added `docs/video-asset-capture.md` for the remaining Wix video capture workflow.
+- Built `preview-mak-inspired.html` as an editorial/luxury concept inspired by MAK Management's visual direction, using Checkmark Audio content and assets.
 
 ## Current Direction
 
