@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkmark Audio School UI Visual Draft</title>
+  <style>
+    :root {
+      --bg: #fffaf0;
+      --surface: #ffffff;
+      --surface-alt: #f7f2e8;
+      --surface-hover: #f1eadf;
+      --ink: #111114;
+      --gold: #e1ad32;
+      --gold-muted: #c88f16;
+      --purple: #8b5cf6;
+      --border: #e7dcc8;
+      --border-strong: #cdbf9f;
+      --text: #141416;
+      --muted: #4d4a43;
+      --light: #81786a;
+      --success: #059669;
+      --danger: #dc2626;
+      --module-1: #2563eb;
+      --module-2: #0891b2;
+      --module-3: #c47f10;
+      --shadow: 0 18px 60px rgba(30, 24, 10, 0.14);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .hero-board {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.98)),
+        linear-gradient(90deg, rgba(225,173,50,0.09), transparent 36%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 64px;
+      padding: 0 22px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.84);
+    }
+
+    .app-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .app-name {
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      font-size: 17px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 18px;
+      overflow: hidden;
+    }
+
+    .nav span {
+      display: inline-flex;
+      align-items: center;
+      height: 34px;
+      padding: 0 13px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav .active {
+      background: var(--gold);
+      color: #1d1709;
+    }
+
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .resume {
+      height: 38px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 0;
+      background: var(--gold);
+      color: #1d1709;
+      font-weight: 800;
+      font-family: inherit;
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border-strong);
+      display: grid;
+      place-items: center;
+      color: var(--gold-muted);
+      font-size: 13px;
+      font-weight: 850;
+      background: var(--surface);
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .page-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--gold-muted);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .sub {
+      margin: 9px 0 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .primary-action {
+      height: 42px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--gold);
+      font-family: inherit;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .panel {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(20,17,10,0.08);
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 50px;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .panel-body {
+      padding: 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 25px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(201,168,76,0.15);
+      color: var(--gold-muted);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .continue {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .tile {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--ink);
+      color: var(--gold);
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .lesson-label {
+      color: var(--module-3);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .lesson-title {
+      margin: 6px 0 14px;
+      font-size: 19px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .progress-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .progress {
+      flex: 1;
+      height: 7px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--surface-alt);
+    }
+
+    .progress i {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--gold);
+    }
+
+    .mono {
+      color: var(--gold-muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      padding: 17px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 27px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 9px;
+      color: var(--light);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .callout {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 13px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-left-width: 3px;
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .callout .small-tile {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .callout h3 {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .callout p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .key {
+      border-left-color: var(--purple);
+    }
+
+    .key .small-tile {
+      background: rgba(139,92,246,0.13);
+      color: var(--purple);
+    }
+
+    .listen {
+      border-left-color: var(--gold);
+    }
+
+    .listen .small-tile {
+      background: rgba(201,168,76,0.16);
+      color: var(--gold-muted);
+    }
+
+    .deliver {
+      border-left-color: var(--success);
+    }
+
+    .deliver .small-tile {
+      background: rgba(5,150,105,0.12);
+      color: var(--success);
+    }
+
+    .side-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .side-row:last-child {
+      border-bottom: 0;
+    }
+
+    .side-row strong {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .project-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .swatch {
+      min-height: 86px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .swatch div {
+      height: 46px;
+    }
+
+    .swatch span {
+      display: block;
+      padding: 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-family: var(--mono);
+    }
+
+    .notes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .note {
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .note h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+    }
+
+    .note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 860px) {
+      .page { padding: 16px; }
+      .page-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .app-header { flex-wrap: wrap; padding: 14px; }
+      .nav { order: 3; width: 100%; margin-left: 0; overflow-x: auto; }
+      .header-actions { margin-left: 0; }
+      .content { padding: 18px; }
+      .grid,
+      .stats,
+      .swatches,
+      .notes {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero-board" aria-label="Student dashboard visual draft">
+      <div class="app-header">
+        <img class="app-logo" src="design-system/assets/01-school-logo-black.png" alt="Checkmark Audio School logo" />
+        <div class="app-name">Checkmark Audio School</div>
+        <nav class="nav" aria-label="Prototype navigation">
+          <span class="active">Overview</span>
+          <span>Curriculum</span>
+          <span>My Work</span>
+          <span>Calendar</span>
+          <span>Resources</span>
+        </nav>
+        <div class="header-actions">
+          <button class="resume">Resume Class</button>
+          <div class="avatar">JA</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <p class="eyebrow">Cohort 7 · Week 43 of 48</p>
+            <h1>Welcome back, Jordan</h1>
+            <p class="sub">You are in Module 3, building the final mixed and mastered song that becomes the centerpiece of your portfolio.</p>
+          </div>
+          <button class="primary-action">Continue Chapter 6</button>
+        </div>
+
+        <div class="grid">
+          <div class="stack">
+            <section class="panel">
+              <div class="panel-head">
+                <h2>Continue Where You Left Off</h2>
+                <span class="badge">In Progress</span>
+              </div>
+              <div class="panel-body">
+                <div class="continue">
+                  <div class="tile">✓</div>
+                  <div>
+                    <div class="lesson-label">Module 03 · Chapter 6</div>
+                    <h2 class="lesson-title">Full Personal Song Mix — Top-Down Method</h2>
+                    <div class="progress-row">
+                      <div class="progress"><i style="width:62%"></i></div>
+                      <span class="mono">62%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="stats">
+              <div class="card stat"><strong class="mono" style="font-size:27px">43</strong><span>Classes Done</span></div>
+              <div class="card stat"><strong>12</strong><span>Deliverables</span></div>
+              <div class="card stat"><strong class="mono" style="font-size:27px">-14</strong><span>Target LUFS</span></div>
+            </div>
+
+            <section class="panel">
+              <div class="panel-head">
+                <h2>Up Next This Week</h2>
+                <span class="mono">Weeks 43-44</span>
+              </div>
+              <div class="panel-body stack">
+                <div class="callout key">
+                  <div class="small-tile">★</div>
+                  <div>
+                    <h3>Key Concept — Top-Down Mixing</h3>
+                    <p>Start from the full mix and carve down. Set the loudest section first so every move has context.</p>
+                  </div>
+                </div>
+                <div class="callout listen">
+                  <div class="small-tile">♪</div>
+                  <div>
+                    <h3>Listening Task</h3>
+                    <p>Pull two reference tracks in your genre. Log low-end balance and vocal level before touching a fader.</p>
+                  </div>
+                </div>
+                <div class="callout deliver">
+                  <div class="small-tile">✓</div>
+                  <div>
+                    <h3>Deliverable — First-Pass Mix</h3>
+                    <p>Export a rough top-down mix with your reference notes. Due end of Class 44.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <aside class="stack">
+            <section class="panel">
+              <div class="panel-head"><h2>Program Progress</h2></div>
+              <div class="panel-body">
+                <div class="side-row"><span>Module 1 · Production</span><strong>Done</strong></div>
+                <div class="side-row"><span>Module 2 · Recording</span><strong>Done</strong></div>
+                <div class="side-row"><span>Module 3 · Mix & Master</span><strong class="mono">71%</strong></div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head"><h2>Next Class</h2></div>
+              <div class="panel-body">
+                <div class="side-row"><span>Class 44</span><strong>Mix Review</strong></div>
+                <div class="side-row"><span>Time</span><strong>Thu · 6-10 PM</strong></div>
+                <div class="side-row"><span>Bring</span><strong>Session file</strong></div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head">
+                <h2>Final Project</h2>
+                <span class="badge" style="color:var(--purple);background:rgba(139,92,246,0.12)">Milestone</span>
+              </div>
+              <div class="panel-body">
+                <p class="project-copy">A fully mixed and mastered version of your original song, built through critique, revision, and final delivery standards.</p>
+                <div class="progress-row" style="margin-top:16px">
+                  <div class="progress"><i style="width:48%"></i></div>
+                  <span class="mono">48%</span>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="swatches" aria-label="Color direction">
+      <div class="swatch"><div style="background:var(--bg)"></div><span>#fffaf0 · paper</span></div>
+      <div class="swatch"><div style="background:var(--surface)"></div><span>#ffffff · panel</span></div>
+      <div class="swatch"><div style="background:var(--ink)"></div><span>#111114 · ink</span></div>
+      <div class="swatch"><div style="background:var(--gold)"></div><span>#e1ad32 · honey</span></div>
+      <div class="swatch"><div style="background:var(--purple)"></div><span>#8b5cf6 · key</span></div>
+      <div class="swatch"><div style="background:var(--border)"></div><span>#e7dcc8 · line</span></div>
+    </section>
+
+    <section class="notes" aria-label="Revision notes">
+      <div class="note">
+        <h3>No Gray Default</h3>
+        <p>The app starts on a warm paper canvas so it feels educational, clean, and premium before it feels technical.</p>
+      </div>
+      <div class="note">
+        <h3>Gold As Signal</h3>
+        <p>Gold marks action, brand, focus, and progress. It is controlled instead of washing over every surface.</p>
+      </div>
+      <div class="note">
+        <h3>Studio Dark Later</h3>
+        <p>The darker studio treatment stays available, but this visual direction treats it as a mode, not the main identity.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

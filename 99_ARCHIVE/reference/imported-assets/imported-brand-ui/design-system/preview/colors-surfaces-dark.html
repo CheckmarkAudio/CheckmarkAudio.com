@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Studio Dark Surfaces" subtitle="Optional focus mode — charcoal, ink, borders, text" viewport="700x250" -->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .cell { border-radius: 12px; overflow:hidden; border:1px solid var(--border); }
+  .sw { height: 72px; }
+  .lbl { padding:8px 10px; background: var(--surface); }
+  .name { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--fg); }
+  .hex { font: var(--text-mono); color: var(--fg-light); display:block; margin-top:2px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .txtrow { display:flex; gap:18px; margin-top:16px; align-items:baseline; }
+  .txtrow span { font-size:15px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Studio Dark — Surfaces &amp; Ink</span><span class="sub">optional focus mode · charcoal under gold</span></div>
+  <div class="grid">
+    <div class="cell"><div class="sw" style="background:var(--bg)"></div><div class="lbl"><span class="name">bg</span><span class="hex">#15151B</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--surface)"></div><div class="lbl"><span class="name">surface</span><span class="hex">#1E1E25</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--surface-alt)"></div><div class="lbl"><span class="name">surface-alt</span><span class="hex">#26262D</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--surface-hover)"></div><div class="lbl"><span class="name">surface-hover</span><span class="hex">#2E2E36</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--ink)"></div><div class="lbl"><span class="name">ink</span><span class="hex">#0A0A10</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--border)"></div><div class="lbl"><span class="name">border</span><span class="hex">#34343D</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--border-light)"></div><div class="lbl"><span class="name">border-light</span><span class="hex">#4D4D57</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--ink); display:flex;align-items:center;justify-content:center"><span style="color:var(--gold);font-size:24px">✓</span></div><div class="lbl"><span class="name">ink + gold</span><span class="hex">icon tile</span></div></div>
+  </div>
+  <div class="txtrow">
+    <span style="color:var(--fg)">fg — primary</span>
+    <span style="color:var(--fg-muted)">fg-muted — secondary</span>
+    <span style="color:var(--fg-light)">fg-light — meta</span>
+  </div>
+</body>
+</html>

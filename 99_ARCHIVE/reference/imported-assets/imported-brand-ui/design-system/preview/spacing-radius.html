@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Spacing" name="Radius Scale" subtitle="8 → 16 + pill" viewport="700x200" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .scale { display:flex; align-items:flex-end; gap:18px; }
+  .item { text-align:center; }
+  .box { background:var(--gold); border-radius:8px; }
+  .nm { font:var(--text-mono); font-size:11px; color:var(--fg-light); display:block; margin-top:8px; }
+  .px { font:var(--text-label); letter-spacing:var(--tracking-label); text-transform:uppercase; color:var(--fg); display:block; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Radius Scale</span><span class="sub">8 · 12 · 16 — controls/cards → widgets → shell</span></div>
+  <div class="scale">
+    <div class="item"><div class="box" style="width:72px;height:72px;border-radius:8px"></div><span class="px">SM</span><span class="nm">8px</span></div>
+    <div class="item"><div class="box" style="width:80px;height:80px;border-radius:12px"></div><span class="px">MD</span><span class="nm">12px</span></div>
+    <div class="item"><div class="box" style="width:88px;height:88px;border-radius:8px"></div><span class="px">LG · card</span><span class="nm">8px</span></div>
+    <div class="item"><div class="box" style="width:104px;height:104px;border-radius:12px"></div><span class="px">XL · widget</span><span class="nm">12px</span></div>
+    <div class="item"><div class="box" style="width:120px;height:120px;border-radius:16px"></div><span class="px">2XL · shell</span><span class="nm">16px</span></div>
+    <div class="item"><div class="box" style="width:84px;height:44px;border-radius:999px"></div><span class="px">Pill</span><span class="nm">999px</span></div>
+  </div>
+</body>
+</html>

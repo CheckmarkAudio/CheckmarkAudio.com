@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Lockup & Parent Brand" subtitle="School sub-brand under Checkmark Audio" viewport="700x230" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .lockup { display:flex; align-items:center; gap:16px; padding:18px 20px; border-radius:16px; background:var(--surface); border:1px solid var(--border); margin-bottom:14px; }
+  .lockup img { height:52px; }
+  .wm { font:800 22px/1 var(--font-sans); letter-spacing:-.02em; color:var(--fg); }
+  .wm small { display:block; font:600 11px/1.4 var(--font-sans); letter-spacing:.16em; text-transform:uppercase; color:var(--gold); margin-top:5px; }
+  .rule { width:1px; height:46px; background:var(--border); }
+  .parent { display:flex; align-items:center; gap:12px; }
+  .parent img { height:40px; opacity:.85; }
+  .parent .pn { font:700 15px/1.2 var(--font-sans); color:var(--fg-muted); }
+  .note { font:var(--text-caption); color:var(--fg-light); margin-top:4px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Lockup &amp; Parent Brand</span><span class="sub">school sub-brand sits under Checkmark Audio</span></div>
+  <div class="lockup">
+    <img src="../assets/02-school-logo-gold.png" alt="school" />
+    <div class="wm">Checkmark Audio School<small>Mixing · Mastering · Production</small></div>
+  </div>
+  <div class="lockup">
+    <div class="parent">
+      <img src="../assets/00-checkmark-audio-logo.png" alt="parent" />
+      <div><div class="pn">Checkmark Audio</div><div class="note">parent brand — headphones + mic</div></div>
+    </div>
+    <div class="rule"></div>
+    <div class="parent">
+      <img src="../assets/02-school-logo-gold.png" alt="school" style="opacity:1" />
+      <div><div class="pn" style="color:var(--gold)">School</div><div class="note">education branch — book + headphones</div></div>
+    </div>
+  </div>
+</body>
+</html>

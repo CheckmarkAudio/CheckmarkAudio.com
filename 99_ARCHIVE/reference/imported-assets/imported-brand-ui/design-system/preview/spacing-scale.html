@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Spacing" name="Spacing Scale" subtitle="4px base rhythm" viewport="700x160" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .scale { display:flex; align-items:flex-end; gap:14px; }
+  .item { text-align:center; }
+  .bar { background:color-mix(in srgb, var(--gold) 30%, transparent); border:1px solid var(--gold); border-radius:4px; width:28px; }
+  .nm { font:var(--text-mono); font-size:11px; color:var(--fg-light); display:block; margin-top:8px; }
+  .tok { font:var(--text-label); letter-spacing:var(--tracking-label); text-transform:uppercase; color:var(--fg); display:block; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Spacing — 4px Base</span><span class="sub">consistent rhythm from inline gaps to section breaks</span></div>
+  <div class="scale">
+    <div class="item"><div class="bar" style="height:4px"></div><span class="tok">1</span><span class="nm">4</span></div>
+    <div class="item"><div class="bar" style="height:8px"></div><span class="tok">2</span><span class="nm">8</span></div>
+    <div class="item"><div class="bar" style="height:12px"></div><span class="tok">3</span><span class="nm">12</span></div>
+    <div class="item"><div class="bar" style="height:16px"></div><span class="tok">4</span><span class="nm">16</span></div>
+    <div class="item"><div class="bar" style="height:20px"></div><span class="tok">5</span><span class="nm">20</span></div>
+    <div class="item"><div class="bar" style="height:24px"></div><span class="tok">6</span><span class="nm">24</span></div>
+    <div class="item"><div class="bar" style="height:32px"></div><span class="tok">8</span><span class="nm">32</span></div>
+    <div class="item"><div class="bar" style="height:40px"></div><span class="tok">10</span><span class="nm">40</span></div>
+    <div class="item"><div class="bar" style="height:48px"></div><span class="tok">12</span><span class="nm">48</span></div>
+    <div class="item"><div class="bar" style="height:64px"></div><span class="tok">16</span><span class="nm">64</span></div>
+  </div>
+</body>
+</html>

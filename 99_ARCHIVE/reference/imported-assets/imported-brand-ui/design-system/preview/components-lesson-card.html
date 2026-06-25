@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Lesson Card" subtitle="Module strip, status, progress" viewport="700x220" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+  .lesson { border-radius:16px; border:1px solid var(--border); background:var(--surface); overflow:hidden; position:relative; }
+  .lesson .strip { height:4px; background:var(--module-3); }
+  .lesson .body { padding:16px; }
+  .top { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+  .chip { font:700 11px/1 var(--font-sans); padding:5px 10px; border-radius:999px; background:#f6e2bd; color:#a15c0a; }
+  .num { font:var(--text-mono); font-size:11px; color:var(--fg-light); }
+  h3 { margin:0 0 6px; font:var(--text-h3); color:var(--fg); }
+  .meta { font:var(--text-caption); color:var(--fg-light); margin:0 0 14px; }
+  .foot { display:flex; align-items:center; justify-content:space-between; }
+  .prog { flex:1; height:6px; border-radius:999px; background:var(--surface-alt); margin-right:12px; overflow:hidden; }
+  .prog i { display:block; height:100%; width:62%; background:var(--gold); }
+  .pct { font:var(--text-mono); font-size:11px; color:var(--gold); }
+  .iconwrap { display:flex; align-items:center; gap:10px; }
+  .ink { width:36px;height:36px;border-radius:10px;background:var(--ink);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Lesson / Chapter Card</span><span class="sub">module strip · status chip · progress · class number</span></div>
+  <div class="grid">
+    <div class="lesson">
+      <div class="strip"></div>
+      <div class="body">
+        <div class="top"><span class="chip">Module 03</span><span class="num">Classes 33–34</span></div>
+        <h3>Critical Listening &amp; Analyzing Pro Mixes</h3>
+        <p class="meta">Weeks 33–34 · 2 classes · listening + hands-on</p>
+        <div class="foot"><div class="prog"><i></i></div><span class="pct">62%</span></div>
+      </div>
+    </div>
+    <div class="lesson">
+      <div class="strip" style="background:var(--module-2)"></div>
+      <div class="body">
+        <div class="top"><span class="iconwrap"><span class="ink">✓</span></span><span class="num">Classes 25–26</span></div>
+        <h3>Vocal Tracking With Analog Chains</h3>
+        <p class="meta">Weeks 25–26 · 2 classes · recording</p>
+        <div class="foot"><div class="prog"><i style="width:100%;background:var(--success)"></i></div><span class="pct" style="color:var(--success)">Done</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

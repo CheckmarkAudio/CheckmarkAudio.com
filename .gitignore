@@ -1,5 +1,10 @@
 .DS_Store
 Thumbs.db
+
+# Local-only raw exports and temporary intake.
+99_ARCHIVE/ignored-local/
+
+# Legacy raw-export locations, kept ignored if old tooling recreates them.
 wix-export/*.har
 wix-export/*.rtf
 original-assets/

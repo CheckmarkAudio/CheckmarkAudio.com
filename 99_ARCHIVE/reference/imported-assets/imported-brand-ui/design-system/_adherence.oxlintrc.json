@@ -1,0 +1,211 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/learning-app/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inter|JetBrains Mono))/i]",
+        "message": "Font not provided by the design system. Available: Inter, JetBrains Mono."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent",
+      "--accent-deep",
+      "--accent-strong",
+      "--bg",
+      "--border",
+      "--border-light",
+      "--border-strong",
+      "--color-brand-100",
+      "--color-brand-200",
+      "--color-brand-300",
+      "--color-brand-400",
+      "--color-brand-50",
+      "--color-brand-500",
+      "--color-brand-600",
+      "--color-brand-700",
+      "--color-brand-800",
+      "--color-brand-900",
+      "--color-brand-950",
+      "--danger",
+      "--danger-bg",
+      "--fg",
+      "--fg-light",
+      "--fg-muted",
+      "--font-mono",
+      "--font-sans",
+      "--gold",
+      "--gold-dim",
+      "--gold-muted",
+      "--info",
+      "--info-bg",
+      "--ink",
+      "--module-1",
+      "--module-2",
+      "--module-3",
+      "--on-gold",
+      "--radius-2xl",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xl",
+      "--ring-gold",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-sm",
+      "--space-1",
+      "--space-10",
+      "--space-12",
+      "--space-16",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-8",
+      "--success",
+      "--success-bg",
+      "--surface",
+      "--surface-alt",
+      "--surface-hover",
+      "--text-body",
+      "--text-caption",
+      "--text-display",
+      "--text-h1",
+      "--text-h2",
+      "--text-h3",
+      "--text-label",
+      "--text-mono",
+      "--text-section",
+      "--tracking-display",
+      "--tracking-label",
+      "--tracking-tight",
+      "--warning",
+      "--warning-bg"
+    ],
+    "tokenKinds": {
+      "--color-brand-50": "color",
+      "--color-brand-100": "color",
+      "--color-brand-200": "color",
+      "--color-brand-300": "color",
+      "--color-brand-400": "color",
+      "--color-brand-500": "color",
+      "--color-brand-600": "color",
+      "--color-brand-700": "color",
+      "--color-brand-800": "color",
+      "--color-brand-900": "color",
+      "--color-brand-950": "color",
+      "--gold": "color",
+      "--gold-muted": "color",
+      "--gold-dim": "color",
+      "--accent": "color",
+      "--accent-strong": "color",
+      "--accent-deep": "color",
+      "--bg": "color",
+      "--surface": "color",
+      "--surface-alt": "color",
+      "--surface-hover": "color",
+      "--ink": "color",
+      "--border": "color",
+      "--border-light": "color",
+      "--border-strong": "color",
+      "--fg": "color",
+      "--fg-muted": "color",
+      "--fg-light": "color",
+      "--on-gold": "color",
+      "--success": "color",
+      "--success-bg": "color",
+      "--warning": "color",
+      "--warning-bg": "color",
+      "--danger": "color",
+      "--danger-bg": "color",
+      "--info": "color",
+      "--info-bg": "color",
+      "--module-1": "color",
+      "--module-2": "color",
+      "--module-3": "color",
+      "--font-sans": "font",
+      "--font-mono": "font",
+      "--text-display": "font",
+      "--text-h1": "font",
+      "--text-h2": "font",
+      "--text-h3": "font",
+      "--text-section": "font",
+      "--text-body": "font",
+      "--text-caption": "font",
+      "--text-label": "font",
+      "--text-mono": "font",
+      "--tracking-display": "font",
+      "--tracking-tight": "font",
+      "--tracking-label": "font",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-xl": "radius",
+      "--radius-2xl": "radius",
+      "--radius-pill": "radius",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--ring-gold": "shadow",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-10": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing"
+    },
+    "fontFamilies": [
+      "Inter",
+      "JetBrains Mono"
+    ]
+  }
+}

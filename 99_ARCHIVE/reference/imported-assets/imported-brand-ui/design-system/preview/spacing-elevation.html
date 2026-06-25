@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Spacing" name="Elevation & Shadow" subtitle="Flat default → deep shell lift" viewport="700x180" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 28px 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:22px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .grid { display:grid; grid-template-columns: repeat(4,1fr); gap:24px; align-items:start; }
+  .item { text-align:center; }
+  .card { height:96px; border-radius:16px; background:var(--surface); border:1px solid var(--border); }
+  .nm { font:var(--text-label); letter-spacing:var(--tracking-label); text-transform:uppercase; color:var(--fg); display:block; margin-top:12px; }
+  .ds { font:var(--text-mono); font-size:11px; color:var(--fg-light); }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Elevation &amp; Shadow</span><span class="sub">flat-by-default · subtle lift for cards, deep shadow for shell &amp; modals</span></div>
+  <div class="grid">
+    <div class="item"><div class="card" style="box-shadow:none"></div><span class="nm">Flat</span><span class="ds">border only</span></div>
+    <div class="item"><div class="card" style="box-shadow:var(--shadow-sm)"></div><span class="nm">SM</span><span class="ds">0 1 2 / .25</span></div>
+    <div class="item"><div class="card" style="box-shadow:var(--shadow-md)"></div><span class="nm">MD · card</span><span class="ds">0 4 14 / .30</span></div>
+    <div class="item"><div class="card" style="box-shadow:var(--shadow-lg)"></div><span class="nm">LG · shell</span><span class="ds">0 22 70 / .45</span></div>
+  </div>
+</body>
+</html>

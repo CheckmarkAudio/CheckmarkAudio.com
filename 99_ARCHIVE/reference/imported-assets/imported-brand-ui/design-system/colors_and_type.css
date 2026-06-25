@@ -1,0 +1,175 @@
+/* ============================================================================
+   CHECKMARK AUDIO SCHOOL — Design Foundations
+   Colors + Type for the educational branch of the Checkmark Audio brand.
+
+   Identity: black / white / GOLD, with PURPLE reserved as an accent for
+   "important" curriculum moments (key concepts, callouts, milestones).
+   Derived from the Checkmark Audio Dashboard (src/index.css) and tuned for
+   an instructional, studio-meets-classroom feel.
+
+   Two themes:
+     • Default (Classroom Studio) — warm white paper, black ink, gold signal.
+     • [data-theme="dark"]        — charcoal studio mode for focused evening work.
+
+   Load this file, then set semantic classes on elements. All values are CSS
+   custom properties so a downstream tweak cascades everywhere.
+   ============================================================================ */
+
+/* Fonts — Inter (brand core) + JetBrains Mono for technical audio readouts
+   (dB / LUFS / Hz / ms). NOTE: the Dashboard ships Inter only; the mono face
+   is an EDUCATIONAL ADDITION for engineering values and is flagged in README. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------------------------------------------------------------- BRAND GOLD */
+  --color-brand-50:  #fdf8ec;
+  --color-brand-100: #f9edd0;
+  --color-brand-200: #f0d89e;
+  --color-brand-300: #e4be65;
+  --color-brand-400: #d4a63e;
+  --color-brand-500: #C9A84C;  /* primary gold */
+  --color-brand-600: #A8893D;
+  --color-brand-700: #8a6e2f;
+  --color-brand-800: #6b5524;
+  --color-brand-900: #4a3b19;
+  --color-brand-950: #2d2410;
+
+  --gold:        #C9A84C;   /* primary brand gold      */
+  --gold-muted:  #A8893D;   /* hover / pressed gold    */
+  --gold-dim:    #8a6e2f;   /* disabled / faint gold   */
+
+  /* ------------------------------------------------------- PURPLE (ACCENT ONLY)
+     Reserved for "important" curriculum signals — key concepts, milestone
+     markers, "must know" callouts. Never a primary surface or default action. */
+  --accent:        #a78bfa;  /* violet-400 — accent text/icon on dark   */
+  --accent-strong: #8b5cf6;  /* violet-500 — solid accent fills         */
+  --accent-deep:   #6d28d9;  /* violet-700 — accent text on light       */
+
+  /* --------------------------------------------------------- CLASSROOM STUDIO (default) */
+  --bg:             #fffaf0;  /* warm paper background    */
+  --surface:        #ffffff;  /* card / panel             */
+  --surface-alt:    #f7f2e8;  /* nested / raised          */
+  --surface-hover:  #f1eadf;  /* hover state              */
+  --ink:            #111114;  /* near-black icon tile     */
+
+  --border:         #e7dcc8;  /* default hairline         */
+  --border-light:   #f0e6d6;  /* faint divider            */
+  --border-strong:  #cdbf9f;  /* visible hairline         */
+
+  --fg:             #141416;  /* primary text             */
+  --fg-muted:       #4d4a43;  /* secondary text           */
+  --fg-light:       #81786a;  /* meta / captions          */
+  --on-gold:        #1d1709;  /* text on a gold fill      */
+
+  /* ------------------------------------------------------- SEMANTIC STATUS */
+  --success:     #34d399;  --success-bg: rgba(16, 185, 129, 0.12);
+  --warning:     #fbbf24;  --warning-bg: rgba(245, 158, 11, 0.12);
+  --danger:      #f87171;  --danger-bg:  rgba(239, 68, 68, 0.12);
+  --info:        #7dd3fc;  --info-bg:    rgba(14, 165, 233, 0.12);
+
+  /* ------------------------------------------------------- MODULE / TRACK COLORS
+     Each curriculum module carries a quiet identity hue (used for module
+     badges, progress rails, chapter chips). Cool-toned so they never fight
+     gold or the purple "important" accent. */
+  --module-1: #60a5fa;  /* Production & Sound Design — blue   */
+  --module-2: #22d3ee;  /* Recording & Engineering   — cyan   */
+  --module-3: #f59e0b;  /* Mixing, Mastering & Delivery — amber/gold-leaning */
+
+  /* ------------------------------------------------------- TYPE FAMILIES */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ------------------------------------------------------- TYPE SCALE
+     Display → micro-label. line-heights + tracking baked in. */
+  --text-display: 700 2.5rem/1.1 var(--font-sans);    /* 40px hero / module titles */
+  --text-h1:      700 1.875rem/1.2 var(--font-sans);  /* 30px page title           */
+  --text-h2:      700 1.5rem/1.3 var(--font-sans);    /* 24px section / chapter    */
+  --text-h3:      600 1.125rem/1.45 var(--font-sans); /* 18px card / panel title   */
+  --text-section: 600 0.875rem/1.4 var(--font-sans);  /* 14px section header       */
+  --text-body:    400 0.9375rem/1.6 var(--font-sans); /* 15px reading body         */
+  --text-caption: 400 0.75rem/1.4 var(--font-sans);   /* 12px caption              */
+  --text-label:   600 0.6875rem/1.45 var(--font-sans);/* 11px UPPERCASE micro-label*/
+  --text-mono:    500 0.8125rem/1.4 var(--font-mono);  /* 13px technical readout    */
+
+  --tracking-display: -0.02em;
+  --tracking-tight:   -0.01em;
+  --tracking-label:    0.08em;
+
+  /* ------------------------------------------------------- RADIUS / SHADOW / SPACE */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  8px;    /* standard card                 */
+  --radius-xl:  12px;   /* widget / large panel          */
+  --radius-2xl: 16px;   /* app shell                     */
+  --radius-pill: 999px;
+
+  --shadow-sm:  0 1px 2px rgba(20,17,10,0.08);
+  --shadow-md:  0 8px 22px rgba(30,24,10,0.10);
+  --shadow-lg:  0 18px 60px rgba(30,24,10,0.14);  /* shell / modal lift   */
+  --ring-gold:  0 0 0 2px rgba(201,168,76,0.30);  /* focus ring           */
+
+  /* 4px base spacing scale */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px;
+}
+
+/* ============================================================ STUDIO DARK */
+:root[data-theme="dark"] {
+  --bg:             #15151b;
+  --surface:        #1e1e25;
+  --surface-alt:    #26262d;
+  --surface-hover:  #2e2e36;
+  --ink:            #0a0a10;
+
+  --border:         #34343d;
+  --border-light:   #4d4d57;
+  --border-strong:  #4d4d57;
+
+  --fg:             #e2e2ea;
+  --fg-muted:       #bcbcc6;
+  --fg-light:       #8e8e98;
+  --on-gold:        #15151b;
+
+  --gold:        #C9A84C;
+  --gold-muted:  #A8893D;
+  --gold-dim:    #8a6e2f;
+
+  --accent:        #a78bfa;
+  --accent-strong: #8b5cf6;
+  --accent-deep:   #6d28d9;
+
+  --success-bg: rgba(16, 185, 129, 0.12);
+  --warning-bg: rgba(245, 158, 11, 0.12);
+  --danger-bg:  rgba(239, 68, 68, 0.12);
+  --info-bg:    rgba(14, 165, 233, 0.12);
+
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.25);
+  --shadow-md:  0 4px 14px rgba(0,0,0,0.30);
+  --shadow-lg:  0 22px 70px rgba(0,0,0,0.45);
+}
+
+/* ============================================================ SEMANTIC TYPE CLASSES */
+.t-display { font: var(--text-display); letter-spacing: var(--tracking-display); color: var(--fg); }
+.t-h1      { font: var(--text-h1); letter-spacing: var(--tracking-tight); color: var(--fg); }
+.t-h2      { font: var(--text-h2); letter-spacing: var(--tracking-tight); color: var(--fg); }
+.t-h3      { font: var(--text-h3); color: var(--fg); }
+.t-section { font: var(--text-section); color: var(--fg); }
+.t-body    { font: var(--text-body); color: var(--fg-muted); }
+.t-caption { font: var(--text-caption); color: var(--fg-light); }
+.t-label   { font: var(--text-label); letter-spacing: var(--tracking-label);
+             text-transform: uppercase; color: var(--fg-light); }
+.t-mono    { font: var(--text-mono); color: var(--fg-muted); font-feature-settings: "tnum" 1; }
+
+/* Gold + accent text helpers */
+.t-gold   { color: var(--gold); }
+.t-accent { color: var(--accent); }
+
+/* Base reset hooks (optional — apply to body of a doc) */
+.cas-base {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

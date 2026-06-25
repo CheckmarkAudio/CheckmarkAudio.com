@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Form Inputs" subtitle="Labelled fields, gold focus, checkboxes" viewport="700x230" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap:20px; }
+  label { display:block; font:600 12px/1 var(--font-sans); color:var(--fg-muted); margin-bottom:7px; }
+  input, select { width:100%; box-sizing:border-box; height:40px; padding:0 12px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--fg); font:400 14px var(--font-sans); outline:none; }
+  input::placeholder { color:var(--fg-light); }
+  .focused { border-color:var(--gold); box-shadow:var(--ring-gold); }
+  .field { margin-bottom:14px; }
+  .hint { font:var(--text-caption); color:var(--fg-light); margin-top:6px; }
+  .check { display:flex; align-items:center; gap:10px; }
+  .box { width:20px;height:20px;border-radius:6px;border:1px solid var(--border-light); background:var(--surface-alt); display:flex;align-items:center;justify-content:center; }
+  .box.on { background:var(--gold); border-color:var(--gold); color:var(--on-gold); font-size:13px; }
+  .check span { font:400 14px var(--font-sans); color:var(--fg); }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Form Inputs</span><span class="sub">labelled fields · gold focus ring · checkboxes</span></div>
+  <div class="grid">
+    <div>
+      <div class="field"><label>Student name</label><input value="Jordan Avery" /></div>
+      <div class="field"><label>Assignment</label><input class="focused" placeholder="Top-down mix — first pass" /><div class="hint">Gold focus ring · 2px @ 30%</div></div>
+    </div>
+    <div>
+      <div class="field"><label>Module</label><select><option>Module 03 — Mixing, Mastering &amp; Delivery</option></select></div>
+      <div class="field"><label>Submission checklist</label>
+        <div class="check" style="margin-bottom:8px"><div class="box on">✓</div><span>Reference track imported</span></div>
+        <div class="check"><div class="box"></div><span>Loudness within −14 LUFS</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

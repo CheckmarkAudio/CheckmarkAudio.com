@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Buttons" subtitle="Primary / secondary / ghost / accent / danger + sizes" viewport="700x210" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:16px; }
+  .btn { display:inline-flex; align-items:center; gap:8px; height:40px; padding:0 18px; border-radius:12px; font:600 14px/1 var(--font-sans); cursor:pointer; border:1px solid transparent; transition:all .15s ease; }
+  .primary { background:var(--gold); color:var(--on-gold); }
+  .primary:hover { background:var(--gold-muted); }
+  .secondary { background:var(--surface-alt); color:var(--fg); border-color:var(--border); }
+  .secondary:hover { background:var(--surface-hover); }
+  .ghost { background:transparent; color:var(--fg-muted); }
+  .ghost:hover { background:var(--surface-hover); color:var(--fg); }
+  .accent { background:var(--accent-strong); color:#fff; }
+  .danger { background:var(--danger-bg); color:var(--danger); border-color:rgba(248,113,113,.3); }
+  .sm { height:32px; padding:0 12px; font-size:12px; border-radius:10px; }
+  .lg { height:48px; padding:0 22px; border-radius:14px; }
+  .lbl { font:var(--text-caption); color:var(--fg-light); width:60px; }
+  .grp { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Buttons</span><span class="sub">gold = primary · purple = "important / start lesson" · ghost &amp; secondary support</span></div>
+  <div class="btns">
+    <button class="btn primary">✓ Mark Complete</button>
+    <button class="btn secondary">Save Draft</button>
+    <button class="btn ghost">Cancel</button>
+    <button class="btn accent">★ Start Key Lesson</button>
+    <button class="btn danger">Delete</button>
+  </div>
+  <div class="grp"><span class="lbl">SM</span><button class="btn primary sm">✓ Submit</button><button class="btn secondary sm">Skip</button></div>
+  <div class="grp"><span class="lbl">LG</span><button class="btn primary lg">Begin Module 3</button><button class="btn secondary lg">View Syllabus</button></div>
+</body>
+</html>

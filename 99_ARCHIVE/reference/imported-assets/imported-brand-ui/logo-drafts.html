@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkmark School Logo Modification Drafts</title>
+  <style>
+    :root {
+      --ink: #050505;
+      --paper: #fffdf8;
+      --line: #ded4c1;
+      --gold: #b98222;
+      --muted: #6f685f;
+      --soft: #f6efe3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 42px 42px 56px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .note {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .reference-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .draft-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .card {
+      min-height: 320px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .card.compare {
+      min-height: 360px;
+    }
+
+    .label {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .label span:last-child {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .logo-stage {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border: 1px dashed rgba(5, 5, 5, 0.16);
+      border-radius: 6px;
+      background:
+        linear-gradient(var(--soft), var(--soft)) center / 1px 100% no-repeat,
+        linear-gradient(90deg, var(--soft), var(--soft)) center / 100% 1px no-repeat,
+        #fff;
+    }
+
+    .reference-row .logo-stage {
+      max-height: 300px;
+    }
+
+    .logo-stage img {
+      width: 72%;
+      height: 72%;
+      object-fit: contain;
+    }
+
+    svg {
+      width: 84%;
+      height: 84%;
+      overflow: visible;
+    }
+
+    .main-reference svg {
+      width: 66%;
+      height: 66%;
+    }
+
+    .takeaway {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .stroke {
+      fill: none;
+      stroke: var(--ink);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .fill {
+      fill: var(--ink);
+    }
+
+    .thin {
+      stroke-width: 10;
+    }
+
+    .med {
+      stroke-width: 14;
+    }
+
+    .heavy {
+      stroke-width: 18;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>School Logo Proportion Drafts</h1>
+      </div>
+      <p class="note">Visual exploration only. The permanent Checkmark production/microphone mark stays untouched. These drafts test how the school book-and-headphones mark can share a more similar footprint, weight, and vertical distribution.</p>
+    </header>
+
+    <section class="reference-row">
+      <article class="card compare">
+        <div class="label"><span>Current School Mark</span><span>Reference Starting Point</span></div>
+        <div class="logo-stage">
+          <img src="design-system/assets/01-school-logo-black.png" alt="Current Checkmark School logo">
+        </div>
+        <p class="takeaway">Current read: friendly and clear, but wider and lower. The book carries most of the visual mass, so it does not share the same tall centered footprint as the main brand mark.</p>
+      </article>
+
+      <article class="card compare main-reference">
+        <div class="label"><span>Main Brand Mark</span><span>Permanent</span></div>
+        <div class="logo-stage">
+          <svg viewBox="0 0 400 400" role="img" aria-label="Main microphone logo reference">
+            <path class="stroke heavy" d="M70 205C70 83 145 38 200 38s130 45 130 167" />
+            <rect class="fill" x="38" y="175" width="62" height="92" rx="18" />
+            <rect class="fill" x="300" y="175" width="62" height="92" rx="18" />
+            <rect class="fill" x="62" y="195" width="50" height="112" rx="17" />
+            <rect class="fill" x="288" y="195" width="50" height="112" rx="17" />
+            <rect class="fill" x="158" y="126" width="84" height="176" rx="42" />
+            <path class="stroke med" d="M135 285c10 48 42 70 65 70s55-22 65-70" />
+            <path class="stroke med" d="M200 350v28" />
+            <path class="stroke med" d="M162 379h76" />
+            <path class="stroke heavy" d="M154 170h44M154 202h44M154 234h44M154 266h44M202 170h44M202 202h44M202 234h44M202 266h44" stroke="#fff" />
+          </svg>
+        </div>
+        <p class="takeaway">Target read: tall arch, strong side pads, centered vertical symbol, clean black mass, and a compact square footprint.</p>
+      </article>
+    </section>
+
+    <section class="draft-grid">
+      <article class="card">
+        <div class="label"><span>Option 1</span><span>Tall Arch</span></div>
+        <div class="logo-stage">
+          <svg viewBox="0 0 400 400" role="img" aria-label="Option 1 tall arch book headphones logo">
+            <path class="stroke heavy" d="M67 213C69 88 145 47 200 47s131 41 133 166" />
+            <rect class="fill" x="39" y="184" width="60" height="88" rx="16" />
+            <rect class="fill" x="301" y="184" width="60" height="88" rx="16" />
+            <rect class="fill" x="62" y="207" width="52" height="96" rx="16" />
+            <rect class="fill" x="286" y="207" width="52" height="96" rx="16" />
+            <path class="stroke med" d="M112 176v142c24 1 55 10 88 34V162c-32 0-62 7-88 14Z" />
+            <path class="stroke med" d="M288 176v142c-24 1-55 10-88 34V162c32 0 62 7 88 14Z" />
+            <path class="stroke med" d="M200 352c-13 0-25-8-31-22" />
+            <path class="stroke thin" d="M137 205c20 4 37 12 50 22M137 237c20 4 37 12 50 22M137 269c20 5 37 13 50 24" />
+            <path class="stroke thin" d="M263 205c-20 4-37 12-50 22M263 237c-20 4-37 12-50 22M263 269c-20 5-37 13-50 24" />
+          </svg>
+        </div>
+        <p class="takeaway">Keeps the current book idea, but raises the arch and thickens the outer mass so it sits closer to the main mark’s square footprint.</p>
+      </article>
+
+      <article class="card">
+        <div class="label"><span>Option 2</span><span>Compact Book Core</span></div>
+        <div class="logo-stage">
+          <svg viewBox="0 0 400 400" role="img" aria-label="Option 2 compact book headphones logo">
+            <path class="stroke heavy" d="M70 207C72 83 145 42 200 42s128 41 130 165" />
+            <rect class="fill" x="42" y="176" width="61" height="96" rx="18" />
+            <rect class="fill" x="297" y="176" width="61" height="96" rx="18" />
+            <rect class="fill" x="62" y="200" width="56" height="112" rx="17" />
+            <rect class="fill" x="282" y="200" width="56" height="112" rx="17" />
+            <path class="stroke heavy" d="M128 176v146c26 1 50 9 72 31V164c-25 0-49 4-72 12Z" />
+            <path class="stroke heavy" d="M272 176v146c-26 1-50 9-72 31V164c25 0 49 4 72 12Z" />
+            <path class="stroke med" d="M200 352v18" />
+            <path class="stroke med" d="M171 371h58" />
+            <path class="stroke thin" d="M148 205c15 4 28 10 40 18M148 234c15 4 28 10 40 18M148 263c15 4 28 10 40 18" />
+            <path class="stroke thin" d="M252 205c-15 4-28 10-40 18M252 234c-15 4-28 10-40 18M252 263c-15 4-28 10-40 18" />
+          </svg>
+        </div>
+        <p class="takeaway">Most like the main mark structurally: taller center, stronger black silhouette, and a small base gesture to echo the mic stand without becoming a mic logo.</p>
+      </article>
+
+      <article class="card">
+        <div class="label"><span>Option 3</span><span>Rounded Seal</span></div>
+        <div class="logo-stage">
+          <svg viewBox="0 0 400 400" role="img" aria-label="Option 3 rounded seal book headphones logo">
+            <path class="stroke heavy" d="M65 215C65 92 144 48 200 48s135 44 135 167" />
+            <path class="stroke med" d="M125 300c15 36 44 54 75 54s60-18 75-54" />
+            <rect class="fill" x="38" y="182" width="64" height="88" rx="18" />
+            <rect class="fill" x="298" y="182" width="64" height="88" rx="18" />
+            <rect class="fill" x="62" y="204" width="54" height="108" rx="16" />
+            <rect class="fill" x="284" y="204" width="54" height="108" rx="16" />
+            <path class="stroke med" d="M125 172v150c27 0 52 9 75 31V160c-24 0-49 4-75 12Z" />
+            <path class="stroke med" d="M275 172v150c-27 0-52 9-75 31V160c24 0 49 4 75 12Z" />
+            <path class="stroke thin" d="M148 202c15 4 29 10 40 18M148 232c15 4 29 10 40 18M148 262c15 4 29 10 40 18" />
+            <path class="stroke thin" d="M252 202c-15 4-29 10-40 18M252 232c-15 4-29 10-40 18M252 262c-15 4-29 10-40 18" />
+          </svg>
+        </div>
+        <p class="takeaway">Adds the lower curve from the permanent mark, making the school logo feel more like a sibling in the same family while staying book-first.</p>
+      </article>
+
+      <article class="card">
+        <div class="label"><span>Option 4</span><span>Vertical Pages</span></div>
+        <div class="logo-stage">
+          <svg viewBox="0 0 400 400" role="img" aria-label="Option 4 vertical pages book headphones logo">
+            <path class="stroke heavy" d="M70 207C72 82 145 42 200 42s128 40 130 165" />
+            <rect class="fill" x="42" y="177" width="61" height="96" rx="18" />
+            <rect class="fill" x="297" y="177" width="61" height="96" rx="18" />
+            <rect class="fill" x="62" y="201" width="55" height="110" rx="17" />
+            <rect class="fill" x="283" y="201" width="55" height="110" rx="17" />
+            <path class="fill" d="M124 170c27-8 51-12 76-12v198c-22-25-48-35-76-36V170Z" />
+            <path class="fill" d="M276 170c-27-8-51-12-76-12v198c22-25 48-35 76-36V170Z" />
+            <path class="stroke heavy" d="M200 159v197" stroke="#fff" />
+            <path class="stroke med" d="M146 205c17 4 32 11 45 22M146 238c17 4 32 11 45 22M146 271c17 4 32 11 45 22" stroke="#fff" />
+            <path class="stroke med" d="M254 205c-17 4-32 11-45 22M254 238c-17 4-32 11-45 22M254 271c-17 4-32 11-45 22" stroke="#fff" />
+            <path class="stroke med" d="M164 354c12 14 24 21 36 21s24-7 36-21" />
+          </svg>
+        </div>
+        <p class="takeaway">Boldest family match. The book becomes a heavier central symbol, closer to the microphone’s black mass, while page lines stay readable in reverse.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

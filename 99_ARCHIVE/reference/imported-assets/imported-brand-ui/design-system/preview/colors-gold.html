@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Brand Gold Scale" subtitle="The signature gold — 50→950 + token" viewport="700x200" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .grid { display:grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+  .sw { border-radius: 12px; height: 84px; display:flex; align-items:flex-end; padding:8px; border:1px solid var(--border-strong); }
+  .meta { margin-top:6px; }
+  .name { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--fg); }
+  .hex { font: var(--text-mono); color: var(--fg-light); display:block; margin-top:2px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Brand Gold</span><span class="sub">— the signature. Primary actions, highlights, the Checkmark identity.</span></div>
+  <div class="grid">
+    <div><div class="sw" style="background:var(--color-brand-50)"></div><div class="meta"><span class="name">50</span><span class="hex">#FDF8EC</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-100)"></div><div class="meta"><span class="name">100</span><span class="hex">#F9EDD0</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-200)"></div><div class="meta"><span class="name">200</span><span class="hex">#F0D89E</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-300)"></div><div class="meta"><span class="name">300</span><span class="hex">#E4BE65</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-400)"></div><div class="meta"><span class="name">400</span><span class="hex">#D4A63E</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-500); box-shadow: var(--ring-gold)"><span style="font:var(--text-label);letter-spacing:var(--tracking-label);color:var(--on-gold)">500</span></div><div class="meta"><span class="name">500 ·base</span><span class="hex">#C9A84C</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-600)"></div><div class="meta"><span class="name">600</span><span class="hex">#A8893D</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-700)"></div><div class="meta"><span class="name">700</span><span class="hex">#8A6E2F</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-800)"></div><div class="meta"><span class="name">800</span><span class="hex">#6B5524</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-900)"></div><div class="meta"><span class="name">900</span><span class="hex">#4A3B19</span></div></div>
+    <div><div class="sw" style="background:var(--color-brand-950)"></div><div class="meta"><span class="name">950</span><span class="hex">#2D2410</span></div></div>
+    <div><div class="sw" style="background:var(--gold); display:flex; align-items:center; justify-content:center"><span style="font:var(--text-h3);color:var(--on-gold)">✓</span></div><div class="meta"><span class="name">--gold</span><span class="hex">token</span></div></div>
+  </div>
+</body>
+</html>

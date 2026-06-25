@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Curriculum Callouts" subtitle="Key concept, safety, listening, deliverable" viewport="700x300" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .co { display:flex; gap:12px; align-items:flex-start; border-radius:12px; padding:13px 15px; margin-bottom:12px; border:1px solid var(--border); background:var(--surface); }
+  .co .ic { width:34px;height:34px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17px; }
+  .co h4 { margin:0; font:600 14px/1.3 var(--font-sans); color:var(--fg); }
+  .co p { margin:3px 0 0; font:var(--text-caption); color:var(--fg-muted); line-height:1.5; }
+  .key { border-left:3px solid var(--accent-strong); }
+  .key .ic { background:color-mix(in srgb,var(--accent) 18%,transparent); color:var(--accent); }
+  .safe { border-left:3px solid var(--danger); }
+  .safe .ic { background:var(--danger-bg); color:var(--danger); }
+  .listen { border-left:3px solid var(--gold); }
+  .listen .ic { background:color-mix(in srgb,var(--gold) 16%,transparent); color:var(--gold); }
+  .deliver { border-left:3px solid var(--success); }
+  .deliver .ic { background:var(--success-bg); color:var(--success); }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Curriculum Callouts</span><span class="sub">purple = key concept · the four instructional signals</span></div>
+  <div class="co key"><div class="ic">★</div><div><h4>Key Concept</h4><p>Always reference at −14 LUFS so loudness doesn't trick your ear into thinking a mix is "better."</p></div></div>
+  <div class="co safe"><div class="ic">⚠</div><div><h4>Studio Safety</h4><p>Set monitor gain to zero before patching. Protect your ears and the speakers.</p></div></div>
+  <div class="co listen"><div class="ic">♪</div><div><h4>Listening Task</h4><p>Compare three pro mixes in your genre. Note low-end balance and vocal placement.</p></div></div>
+  <div class="co deliver"><div class="ic">✓</div><div><h4>Deliverable</h4><p>Export a first-pass top-down mix and submit with your reference notes.</p></div></div>
+</body>
+</html>

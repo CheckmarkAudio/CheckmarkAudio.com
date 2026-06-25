@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Module Hues" subtitle="Per-module identity colors" viewport="700x150" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .grid { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; }
+  .mod { border-radius:14px; border:1px solid var(--border); background:var(--surface); padding:16px; position:relative; overflow:hidden; }
+  .bar { position:absolute; left:0; top:0; bottom:0; width:4px; }
+  .num { font:var(--text-label); letter-spacing:var(--tracking-label); text-transform:uppercase; }
+  .ttl { font:var(--text-h3); color:var(--fg); margin:8px 0 2px; }
+  .hex { font:var(--text-mono); color:var(--fg-light); font-size:11px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Module / Track Hues</span><span class="sub">quiet identity per curriculum module · badges, progress rails, chapter chips</span></div>
+  <div class="grid">
+    <div class="mod"><div class="bar" style="background:var(--module-1)"></div><span class="num" style="color:var(--module-1)">Module 01</span><div class="ttl">Production &amp; Sound Design</div><span class="hex">--module-1 #60A5FA</span></div>
+    <div class="mod"><div class="bar" style="background:var(--module-2)"></div><span class="num" style="color:var(--module-2)">Module 02</span><div class="ttl">Recording &amp; Engineering</div><span class="hex">--module-2 #22D3EE</span></div>
+    <div class="mod"><div class="bar" style="background:var(--module-3)"></div><span class="num" style="color:var(--module-3)">Module 03</span><div class="ttl">Mixing, Mastering &amp; Delivery</div><span class="hex">--module-3 #F59E0B</span></div>
+  </div>
+</body>
+</html>

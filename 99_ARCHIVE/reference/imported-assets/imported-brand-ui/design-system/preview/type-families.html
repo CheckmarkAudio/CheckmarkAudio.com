@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Type Families" subtitle="Inter core + JetBrains Mono readouts" viewport="700x200" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .wrap { display:grid; grid-template-columns: 1fr 1fr; gap:22px; }
+  .fam h2 { margin:0; color:var(--fg); }
+  .inter h2 { font:800 56px/1 var(--font-sans); letter-spacing:-.03em; }
+  .mono h2 { font:600 48px/1 var(--font-mono); }
+  .label { font:var(--text-label); letter-spacing:var(--tracking-label); text-transform:uppercase; color:var(--gold); margin:12px 0 6px; }
+  .glyphs { color:var(--fg-muted); font-size:14px; word-spacing:2px; }
+  .inter .glyphs { font-family:var(--font-sans); }
+  .mono .glyphs { font-family:var(--font-mono); }
+  .weights { display:flex; gap:14px; flex-wrap:wrap; margin-top:6px; color:var(--fg); }
+  .weights span { font-size:18px; }
+  .note { font:var(--text-caption); color:var(--fg-light); margin-top:8px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="fam inter">
+      <h2 style="color:var(--fg)">Inter</h2>
+      <div class="label">Brand Core · UI &amp; Reading</div>
+      <div class="weights"><span style="font-weight:400">Regular</span><span style="font-weight:500">Medium</span><span style="font-weight:600">Semibold</span><span style="font-weight:700">Bold</span><span style="font-weight:800">Black</span></div>
+      <div class="glyphs">AaBbCc 0123456789 &amp; ✓</div>
+    </div>
+    <div class="fam mono">
+      <h2 style="color:var(--gold)">JetBrains&nbsp;Mono</h2>
+      <div class="label">Technical Readouts</div>
+      <div class="weights"><span style="font-family:var(--font-mono);font-weight:400">−14 LUFS</span><span style="font-family:var(--font-mono);font-weight:500">2.4 kHz</span><span style="font-family:var(--font-mono);font-weight:600">−3 dB</span></div>
+      <div class="glyphs">0123456789 dB · Hz · ms · LUFS</div>
+      <div class="note">Educational addition — flagged in README (Dashboard ships Inter only).</div>
+    </div>
+  </div>
+</body>
+</html>

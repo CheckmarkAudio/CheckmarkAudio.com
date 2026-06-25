@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Semantic Status" subtitle="Pass / revise / missing / in-review" viewport="700x140" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--gold); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .grid { display:grid; grid-template-columns: repeat(4,1fr); gap:14px; }
+  .stat { border-radius:12px; border:1px solid var(--border); background:var(--surface); padding:12px 14px; }
+  .pill { display:inline-flex; align-items:center; gap:6px; border-radius:999px; padding:5px 12px; font:700 12px/1 var(--font-sans); white-space:nowrap; }
+  .dot { width:8px;height:8px;border-radius:50%; }
+  .hex { font: var(--text-mono); color: var(--fg-light); display:block; margin-top:10px; font-size:11px; }
+  .pass { background:#cdebd9; color:#0f6b43; }
+  .rev  { background:#f6dba0; color:#8a5212; }
+  .miss { background:#f7d5d5; color:#a3261f; }
+  .rvw  { background:#cfe6f7; color:#0b5f8a; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Semantic Status</span><span class="sub">tinted surface + deep text · chips, badges, alerts</span></div>
+  <div class="grid">
+    <div class="stat"><span class="pill pass"><span class="dot" style="background:#0f6b43"></span>Passed</span><span class="hex">--success&nbsp;#34D399</span></div>
+    <div class="stat"><span class="pill rev"><span class="dot" style="background:#8a5212"></span>Revise</span><span class="hex">--warning&nbsp;#FBBF24</span></div>
+    <div class="stat"><span class="pill miss"><span class="dot" style="background:#a3261f"></span>Missing</span><span class="hex">--danger&nbsp;#F87171</span></div>
+    <div class="stat"><span class="pill rvw"><span class="dot" style="background:#0b5f8a"></span>In&nbsp;Review</span><span class="hex">--info&nbsp;#7DD3FC</span></div>
+  </div>
+</body>
+</html>

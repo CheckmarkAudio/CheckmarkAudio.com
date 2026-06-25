@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Purple Accent" subtitle="The 'important' signal — key concepts only" viewport="700x150" -->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body { margin:0; }
+  body { background: var(--bg); font-family: var(--font-sans); padding: 24px; }
+  .row { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .tag { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--accent); }
+  .sub { font: var(--text-caption); color: var(--fg-light); }
+  .grid { display:grid; grid-template-columns: 150px 150px 150px 1fr; gap:14px; align-items:stretch; }
+  .cell { border-radius:12px; overflow:hidden; border:1px solid var(--border); }
+  .sw { height:64px; }
+  .lbl { padding:8px 10px; background: var(--surface); }
+  .name { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform:uppercase; color: var(--fg); }
+  .hex { font: var(--text-mono); color: var(--fg-light); display:block; margin-top:2px; }
+  .callout { border-radius:14px; background:var(--surface); border:1px solid var(--border); padding:14px 16px; display:flex; gap:12px; align-items:flex-start; }
+  .pip { width:34px;height:34px;border-radius:9px; background:color-mix(in srgb, var(--accent) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 36%, transparent); display:flex;align-items:center;justify-content:center; color:var(--accent); font-size:18px; flex-shrink:0; }
+  .callout h4 { margin:0; font: var(--text-h3); color:var(--fg); }
+  .callout p { margin:4px 0 0; font: var(--text-caption); color:var(--fg-muted); }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">Purple — The "Important" Accent</span><span class="sub">key concepts · milestones · must-know callouts. Never a primary surface.</span></div>
+  <div class="grid">
+    <div class="cell"><div class="sw" style="background:var(--accent)"></div><div class="lbl"><span class="name">accent</span><span class="hex">#A78BFA</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--accent-strong)"></div><div class="lbl"><span class="name">accent-strong</span><span class="hex">#8B5CF6</span></div></div>
+    <div class="cell"><div class="sw" style="background:var(--accent-deep)"></div><div class="lbl"><span class="name">accent-deep</span><span class="hex">#6D28D9</span></div></div>
+    <div class="callout">
+      <div class="pip">★</div>
+      <div><h4>Key Concept</h4><p>Purple flags the moments students must not miss — gain staging, the null test, the −14 LUFS target.</p></div>
+    </div>
+  </div>
+</body>
+</html>

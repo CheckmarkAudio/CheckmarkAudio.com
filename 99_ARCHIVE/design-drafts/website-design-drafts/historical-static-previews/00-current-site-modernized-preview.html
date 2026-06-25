@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkmark Audio | Modernized Current Site Preview</title>
+    <style>
+      :root {
+        --ink: #f6f1ea;
+        --charcoal: #050505;
+        --paper: #090909;
+        --panel: #141414;
+        --muted: #b8ada2;
+        --line: rgba(255, 255, 255, 0.13);
+        --brand: #f1aa2e;
+        --accent: #d83f2f;
+        --blue: #101820;
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        background: #050505;
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 24px;
+        align-items: center;
+        padding: 18px clamp(18px, 4vw, 54px);
+        color: white;
+        background: #000000;
+      }
+
+      .topbar p,
+      .topbar address {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.92rem;
+        font-style: normal;
+      }
+
+      .topbar strong {
+        display: block;
+        color: white;
+        font-size: 1rem;
+      }
+
+      .topbar img {
+        width: 88px;
+        height: 88px;
+        object-fit: contain;
+      }
+
+      .socials {
+        justify-self: end;
+        display: flex;
+        gap: 10px;
+      }
+
+      .socials a {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        gap: 2px;
+        padding: 0 16px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(5, 5, 5, 0.96);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav a {
+        padding: 17px 15px;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .nav a:hover {
+        color: var(--brand);
+      }
+
+      .section {
+        width: min(var(--max), calc(100% - 36px));
+        margin: 0 auto;
+        padding: 72px 0;
+      }
+
+      .light-section {
+        width: 100%;
+        color: #171717;
+        background: #f4f1ec;
+      }
+
+      .light-section .section {
+        padding: 72px 0;
+      }
+
+      .light-section h2,
+      .light-section blockquote {
+        color: #171717;
+      }
+
+      .light-section p,
+      .light-section .quote-meta,
+      .light-section .center-title p {
+        color: #6e6760;
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        align-items: end;
+        min-height: calc(100vh - 170px);
+        background: #070707;
+      }
+
+      .hero-image {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.28) 55%, rgba(0, 0, 0, 0.6)),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.08) 45%),
+          url("../../../../02_ASSETS/production/hero/00-studio-sign-hero.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-panel {
+        position: relative;
+        width: min(760px, calc(100% - 40px));
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0 auto;
+        padding: 0 0 clamp(54px, 8vw, 92px);
+        color: white;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--brand);
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: clamp(3rem, 8vw, 6.4rem);
+        font-weight: 300;
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: clamp(1.9rem, 4vw, 3.65rem);
+        font-weight: 300;
+        line-height: 1.04;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 1.28rem;
+        font-weight: 600;
+      }
+
+      .hero-panel p {
+        max-width: 500px;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 1.08rem;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 48px;
+        padding: 13px 18px;
+        border: 1px solid currentColor;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .button.primary {
+        border-color: var(--accent);
+        color: white;
+        background: var(--accent);
+      }
+
+      .testimonial {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr minmax(260px, 460px);
+        gap: 46px;
+        align-items: center;
+        padding-top: 92px;
+        padding-bottom: 92px;
+      }
+
+      .testimonial > div {
+        position: relative;
+        padding: clamp(28px, 5vw, 48px);
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+      }
+
+      blockquote {
+        margin: 0;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.3rem, 2.4vw, 2.15rem);
+        font-weight: 400;
+        line-height: 1.25;
+      }
+
+      .quote-meta {
+        margin-top: 20px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .testimonial img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .center-title {
+        text-align: center;
+      }
+
+      .center-title p {
+        width: min(760px, 100%);
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 1.06rem;
+      }
+
+      .partner-strip {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1px;
+        margin-top: 36px;
+        background: var(--line);
+      }
+
+      .partner-strip div {
+        display: grid;
+        min-height: 120px;
+        place-items: center;
+        padding: 18px;
+        color: #544d46;
+        background: #ffffff;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .video-band {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: var(--blue);
+        color: white;
+      }
+
+      .video-still {
+        min-height: 420px;
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+          url("../../../../02_ASSETS/production/video/00-studio-video-still.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .video-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(34px, 6vw, 70px);
+      }
+
+      .video-copy p {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .service-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+      }
+
+      .service-card {
+        padding: 44px 28px;
+        background: #ffffff;
+        color: #171717;
+        text-align: center;
+      }
+
+      .service-card p {
+        color: #6e6760;
+      }
+
+      .service-card .icon {
+        display: grid;
+        place-items: center;
+        width: 86px;
+        height: 86px;
+        margin: 0 auto 22px;
+        border: 2px solid #171717;
+        color: var(--accent);
+        font-size: 1.65rem;
+        font-weight: 600;
+      }
+
+      .gift-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 28px;
+        padding: 46px clamp(22px, 5vw, 58px);
+        color: white;
+        background: #9f2b22;
+      }
+
+      .gift-card h2 {
+        margin-bottom: 0;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+
+      .gallery img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        background: #ffffff;
+      }
+
+      footer {
+        color: white;
+        background: var(--charcoal);
+      }
+
+      .footer-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 34px;
+        width: min(var(--max), calc(100% - 36px));
+        margin: 0 auto;
+        padding: 50px 0;
+      }
+
+      footer h3 {
+        text-transform: uppercase;
+      }
+
+      footer p,
+      footer a,
+      footer address {
+        color: rgba(255, 255, 255, 0.72);
+        font-style: normal;
+      }
+
+      .footer-links {
+        display: grid;
+        gap: 8px;
+      }
+
+      .copyright {
+        padding: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        color: rgba(255, 255, 255, 0.55);
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .topbar,
+        .hero,
+        .testimonial,
+        .video-band,
+        .footer-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .socials {
+          justify-self: start;
+        }
+
+        .nav {
+          justify-content: flex-start;
+          overflow-x: auto;
+        }
+
+        .partner-strip,
+        .gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .topbar {
+          text-align: left;
+        }
+
+        .topbar img {
+          width: 70px;
+          height: 70px;
+        }
+
+        .hero-panel {
+          width: calc(100% - 40px);
+          padding: 0 0 44px;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 15vw, 4.5rem);
+        }
+
+        .section {
+          padding: 54px 0;
+        }
+
+        .service-icons,
+        .partner-strip,
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .gift-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="topbar">
+        <address>
+          <strong>Checkmark Audio</strong>
+          5413 Lomas Blvd<br>
+          Albuquerque, NM 87110<br>
+          Tel: <a href="tel:+15052670558">505-267-0558</a> (Call or Text)<br>
+          Email: <a href="mailto:CheckmarkAudio@gmail.com">CheckmarkAudio@gmail.com</a>
+        </address>
+        <img src="../../../../02_ASSETS/production/brand/00-checkmark-audio-logo-mark.png" alt="Checkmark Audio logo">
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="YouTube">Yt</a>
+          <a href="#" aria-label="SoundCloud">Sc</a>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#studios">Studios</a>
+        <a href="#booking">Booking</a>
+        <a href="#about">About</a>
+        <a href="#gift-card">Gift Card</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-label="Checkmark Audio">
+        <div class="hero-image"></div>
+        <div class="hero-panel">
+          <p class="eyebrow">Vocal Recording / Mixing / Mastering</p>
+          <h1>Checkmark Audio</h1>
+          <p>Albuquerque recording studio offering professional production, mastering, studio rental, and music education in a creative, artist-friendly environment.</p>
+          <div class="button-row">
+            <a class="button primary" href="#booking">Book Online</a>
+            <a class="button" href="tel:+15052670558">Call or Text</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="light-section">
+        <div class="section testimonial">
+          <div>
+            <p class="eyebrow">Yelp Review</p>
+            <blockquote>"Checkmark Audio is easy to work with. Their free consultation is invaluable and Gavin is a true pro with a ton of experience. Using Checkmark Audio brought my recording and mixing projects to a polished, professional and commercially viable level."</blockquote>
+            <p class="quote-meta">Jake H. / Yelp</p>
+          </div>
+        <img src="../../../../02_ASSETS/production/gallery/00-control-room-instruments.jpg" alt="Checkmark Audio control room session">
+        </div>
+      </section>
+
+      <section class="light-section">
+        <div class="section center-title" id="studios">
+          <p class="eyebrow">Albuquerque Recording Studio</p>
+          <h2>Recording, mixing, mastering, and artist development in one place.</h2>
+          <p>Keep the same familiar site flow, but make every section easier to read, faster to scan, and cleaner on mobile.</p>
+          <div class="partner-strip" aria-label="Affiliations and partners">
+            <div>RRFC</div>
+            <div>Library of Congress</div>
+            <div>NAMM</div>
+            <div>Los Angeles Film School</div>
+            <div>Lessons.com Top Pro</div>
+            <div>Workforce Connection</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-band" aria-label="Studio videos">
+        <div class="video-still"></div>
+        <div class="video-copy">
+          <p class="eyebrow">All Videos</p>
+          <h2>Studio videos stay in the same spot.</h2>
+          <p>This preview keeps the video area from the current homepage, but frames it with a cleaner split layout. Once we finish the video extraction pass, this can become a real embedded video module.</p>
+          <div class="button-row">
+            <a class="button primary" href="#gallery">View Gallery</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="light-section">
+        <div class="section" id="services">
+          <div class="center-title">
+            <p class="eyebrow">Services</p>
+            <h2>Recording / Mixing / Mastering</h2>
+          </div>
+          <div class="service-icons">
+            <article class="service-card">
+              <div class="icon">R</div>
+              <h3>Recording</h3>
+              <p>Capture vocals, instruments, demos, and full sessions in a professional studio environment.</p>
+            </article>
+            <article class="service-card">
+              <div class="icon">M</div>
+              <h3>Mixing</h3>
+              <p>Balance, shape, and clean up the track so it translates beyond the studio.</p>
+            </article>
+            <article class="service-card">
+              <div class="icon">✓</div>
+              <h3>Mastering</h3>
+              <p>Final polish for streaming, release, and consistent playback across systems.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gift-card" id="gift-card">
+        <h2>Gift Cards!</h2>
+        <a class="button" href="#">Gift Card</a>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="center-title">
+          <p class="eyebrow">Gallery</p>
+          <h2>Studio moments, cleaned up.</h2>
+        </div>
+        <div class="gallery">
+          <img src="../../../../02_ASSETS/production/gallery/01-live-room.jpg" alt="Live recording room">
+          <img src="../../../../02_ASSETS/production/gallery/02-blue-microphone-pop-filter.jpg" alt="Blue-lit microphone pop filter">
+          <img src="../../../../02_ASSETS/production/gallery/08-vocal-booth-artist.jpg" alt="Artist recording vocals">
+          <img src="../../../../02_ASSETS/production/gallery/04-control-room.jpg" alt="Control room">
+          <img src="../../../../02_ASSETS/production/gallery/06-synth-keyboards.jpg" alt="Studio synth keyboards">
+          <img src="../../../../02_ASSETS/production/gallery/05-microphone-pop-filter.jpg" alt="Microphone and pop filter">
+          <img src="../../../../02_ASSETS/production/gallery/03-artist-portrait.jpg" alt="Studio portrait">
+          <img src="../../../../02_ASSETS/production/gallery/07-compressor-rack.jpg" alt="Compressor rack closeup">
+        </div>
+      </section>
+
+      <section class="section center-title" id="booking">
+        <p class="eyebrow">Booking</p>
+        <h2>Start with a free consultation.</h2>
+        <p>Keep booking prominent like the current site, with phone, email, and a future online booking link ready to connect.</p>
+        <div class="button-row" style="justify-content: center;">
+          <a class="button primary" href="mailto:CheckmarkAudio@gmail.com?subject=Booking%20Request">Email the Studio</a>
+          <a class="button" href="tel:+15052670558">Call or Text</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="about">
+      <div class="footer-inner">
+        <div>
+          <h3>Checkmark Audio</h3>
+          <p>Vocal Production / Mastering Service / Music Education</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#studios">Studios</a>
+          <a href="#booking">Booking</a>
+        </nav>
+        <address>
+          5413 Lomas Blvd<br>
+          Albuquerque, NM 87110<br>
+          Tel: <a href="tel:+15052670558">505-267-0558</a><br>
+          Email: <a href="mailto:CheckmarkAudio@gmail.com">CheckmarkAudio@gmail.com</a>
+        </address>
+      </div>
+      <div class="copyright">© 2026 by Checkmark Audio</div>
+    </footer>
+  </body>
+</html>

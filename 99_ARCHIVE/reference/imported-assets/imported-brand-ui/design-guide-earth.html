@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkmark Audio School Design Guide — Earth Tone Variation</title>
+  <style>
+    :root {
+      --canvas: #f7f4ee;
+      --specimen: #f2eadf;
+      --card: #fffdf8;
+      --card-soft: #ead8c2;
+      --ink: #2f2b28;
+      --text: #2f2b28;
+      --muted: #655b50;
+      --quiet: #83796e;
+      --line: #dccbb7;
+      --line-strong: #bfa88f;
+
+      --honey-50: #f7f4ee;
+      --honey-100: #ead8c2;
+      --honey-200: #dcc0a0;
+      --honey-300: #cfa47f;
+      --honey-400: #b98563;
+      --honey-500: #9f6f4f;
+      --honey-600: #7f573e;
+      --honey-700: #6b5848;
+      --honey-800: #4a3b31;
+      --honey-900: #2f2b28;
+      --honey: var(--honey-400);
+      --honey-deep: var(--honey-600);
+      --honey-dark: #d2a477;
+
+      --purple: #a9b298;
+      --purple-strong: #8f9b7d;
+      --purple-deep: #677457;
+      --purple-soft: #e3ead8;
+
+      --success: #5f7f62;
+      --success-soft: #e0eadb;
+      --warning: #9b6c2f;
+      --warning-soft: #f0ddbd;
+      --danger: #a25a43;
+      --danger-soft: #f0d8ce;
+      --info: #5f7280;
+      --info-soft: #dae4e7;
+
+      --module-1: #7d8c68;
+      --module-2: #6f807c;
+      --module-3: #b98563;
+
+      --dark: #2f2b28;
+      --dark-panel: #3a332d;
+      --dark-soft: #4a4037;
+      --dark-line: #675747;
+      --dark-text: #f7f4ee;
+      --dark-muted: #dccbb7;
+
+      --display-font: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --font: Montserrat, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --body-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--text);
+      font-family: var(--body-font);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 28px 26px 54px;
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: 1fr minmax(320px, 520px);
+      gap: 28px;
+      align-items: center;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      background: radial-gradient(circle at 0 0, #ffffff 0, var(--card) 42%, #f8f1e7 100%);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 1px 2px rgba(30, 24, 10, 0.06);
+    }
+
+    .brand-row {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .brand-row img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .eyebrow,
+    .spec-label {
+      margin: 0;
+      color: var(--honey-deep);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 0;
+      font-family: var(--display-font);
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+    }
+
+    .summary {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+      font-family: var(--font);
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px;
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      backdrop-filter: blur(14px);
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 14px;
+      color: var(--muted);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 750;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav a:first-child,
+    .nav a:hover {
+      background: var(--honey);
+      color: #211603;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      box-shadow: 0 1px 2px rgba(30, 24, 10, 0.06);
+    }
+
+    .section-title {
+      display: grid;
+      grid-template-columns: minmax(220px, 420px) 1fr;
+      gap: 28px;
+      align-items: end;
+      padding: 16px 22px 18px;
+      background: var(--card);
+    }
+
+      .section-title h2 {
+      margin: 0;
+      font-family: var(--display-font);
+      font-size: 31px;
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title p:last-child {
+      margin: 0;
+      color: var(--quiet);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .specimen {
+      padding: 36px 40px;
+      background: var(--specimen);
+      border-top: 1px solid var(--line);
+    }
+
+    .specimen.white { background: var(--card); }
+    .specimen.dark { background: var(--dark); color: var(--dark-text); }
+    .specimen.dark p,
+    .specimen.dark .muted,
+    .specimen.dark .token {
+      color: var(--dark-muted);
+    }
+
+    .grid { display: grid; gap: 24px; }
+    .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .g5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+    .logo-card {
+      min-height: 340px;
+      display: grid;
+      place-items: center;
+      padding: 34px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      box-shadow: 0 1px 2px rgba(30, 24, 10, 0.08);
+      text-align: center;
+    }
+
+    .logo-card.dark {
+      background: var(--dark);
+      border-color: var(--dark-line);
+    }
+
+    .logo-card img {
+      width: 148px;
+      height: 148px;
+      object-fit: contain;
+      margin-bottom: 30px;
+    }
+
+    .earth-mark {
+      filter: sepia(0.55) saturate(0.65) hue-rotate(345deg) brightness(0.72);
+    }
+
+    .logo-card h3 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .logo-card.dark h3 { color: var(--dark-text); }
+
+    .token {
+      display: block;
+      margin-top: 8px;
+      color: var(--quiet);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .swatch {
+      overflow: hidden;
+      min-height: 260px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .swatch .color {
+      height: 128px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .swatch .copy {
+      padding: 22px;
+      background: var(--card);
+    }
+
+    .swatch h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .swatch p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .compact-card {
+      padding: 24px 28px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 1px 2px rgba(30, 24, 10, 0.06);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 40px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 850;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .success { background: var(--success-soft); color: var(--success); }
+    .warning { background: var(--warning-soft); color: var(--warning); }
+    .danger { background: var(--danger-soft); color: var(--danger); }
+    .info { background: var(--info-soft); color: var(--info); }
+
+    .callout {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 22px;
+      align-items: center;
+      min-height: 122px;
+      padding: 24px 28px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left-width: 5px;
+      border-radius: 16px;
+      box-shadow: 0 1px 2px rgba(30, 24, 10, 0.06);
+    }
+
+    .callout h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      font-family: var(--font);
+      line-height: 1.1;
+    }
+
+    .callout p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.45;
+    }
+
+    .icon-box {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      font-size: 30px;
+      font-weight: 900;
+    }
+
+    .key { border-left-color: var(--purple-strong); }
+    .key .icon-box { background: var(--purple-soft); color: var(--purple-deep); }
+    .safe { border-left-color: #ff6b6b; }
+    .safe .icon-box { background: var(--danger-soft); color: #ff6b6b; }
+    .listen { border-left-color: var(--honey); }
+    .listen .icon-box { background: var(--honey-100); color: var(--honey-deep); }
+    .deliver { border-left-color: #2fcf91; }
+    .deliver .icon-box { background: var(--success-soft); color: #2fcf91; }
+
+    .font-stage {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .big-inter {
+      margin: 0 0 28px;
+      color: var(--ink);
+      font-family: var(--display-font);
+      font-size: 92px;
+      line-height: 0.95;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .big-mono {
+      margin: 0 0 18px;
+      color: var(--honey-deep);
+      font-family: var(--mono);
+      font-size: 72px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .font-weights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin: 12px 0;
+      font-size: 32px;
+    }
+
+    .type-scale-row {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 42px;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .type-scale-row:last-child { border-bottom: 0; }
+
+    .type-meta .spec-label { margin-bottom: 14px; }
+    .type-meta .token { font-size: 18px; }
+    .type-sample { margin: 0; color: var(--ink); }
+    .display { font-family: var(--display-font); font-size: 64px; line-height: 1.05; font-weight: 500; letter-spacing: -0.025em; }
+    .h1 { font-family: var(--display-font); font-size: 48px; line-height: 1.1; font-weight: 500; letter-spacing: -0.02em; }
+    .h2 { font-family: var(--display-font); font-size: 38px; line-height: 1.15; font-weight: 500; letter-spacing: -0.01em; }
+    .h3 { font-size: 28px; line-height: 1.2; font-weight: 800; }
+    .body { font-size: 24px; line-height: 1.48; font-weight: 450; }
+    .caption { font-size: 20px; line-height: 1.45; }
+    .label-text { font-size: 17px; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .space-scale {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 20px;
+      align-items: end;
+      padding-top: 20px;
+    }
+
+    .space-item {
+      text-align: center;
+    }
+
+    .bar {
+      width: 100%;
+      min-width: 36px;
+      margin: 0 auto 8px;
+      background: rgba(242, 184, 46, 0.2);
+      border: 2px solid var(--honey);
+      border-radius: 7px;
+    }
+
+    .space-item strong {
+      display: block;
+      font-size: 20px;
+    }
+
+    .space-item span {
+      display: block;
+      margin-top: 14px;
+      color: var(--quiet);
+      font-family: var(--mono);
+      font-weight: 750;
+    }
+
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .icon-card {
+      min-height: 170px;
+      padding: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .icon-pair {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .tile {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .tile.light {
+      color: var(--ink);
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+
+    .tile.dark {
+      color: var(--honey-dark);
+      background: var(--ink);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .icon-card h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+    }
+
+    .icon-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .mode-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .mode {
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .mode.dark {
+      color: var(--dark-text);
+      background: var(--dark);
+      border-color: var(--dark-line);
+    }
+
+    .mode.dark p { color: var(--dark-muted); }
+    .mode-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .mode-head img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .mode-panel {
+      padding: 22px;
+      background: var(--specimen);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .mode.dark .mode-panel {
+      background: var(--dark-panel);
+      border-color: var(--dark-line);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      font-size: 15px;
+      font-weight: 850;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn.honey { color: #211603; background: var(--honey); }
+    .btn.ink { color: var(--honey-dark); background: var(--ink); }
+    .btn.soft { color: var(--text); background: var(--card); border-color: var(--line); }
+    .mode.dark .btn.soft { color: var(--dark-text); background: var(--dark-soft); border-color: var(--dark-line); }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--honey-100);
+      color: var(--honey-deep);
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .mode.dark .pill {
+      color: var(--honey-dark);
+      background: rgba(255, 201, 74, 0.16);
+    }
+
+    .rule-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .rule-card {
+      padding: 26px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .rule-card.do { border-left: 5px solid var(--success); }
+    .rule-card.dont { border-left: 5px solid var(--danger); }
+    .rule-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .rule-card li {
+      margin: 10px 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 980px) {
+      .masthead,
+      .section-title,
+      .font-stage,
+      .type-scale-row,
+      .mode-pair,
+      .rule-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .g2, .g3, .g4, .g5, .icon-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .display { font-size: 46px; }
+      .h1 { font-size: 38px; }
+    }
+
+    @media (max-width: 620px) {
+      .page { padding: 16px; }
+      .specimen { padding: 24px 18px; }
+      .g2, .g3, .g4, .g5, .icon-grid, .space-scale {
+        grid-template-columns: 1fr;
+      }
+      .big-inter, .big-mono { font-size: 58px; }
+      .logo-card { min-height: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div class="brand-row">
+        <img src="design-system/assets/01-school-logo-black.png" alt="Checkmark Audio School logo">
+        <div>
+          <p class="eyebrow">Design Guide · Source Of Truth</p>
+          <h1>Checkmark Audio School</h1>
+        </div>
+      </div>
+      <p class="summary">Earth tone variation for the Checkmark Audio School brand guide: ivory, warm sand, muted sage, clay, walnut, and charcoal. This keeps the school calm, knowledgeable, creative, and trustworthy without returning to the cold gray canvas.</p>
+    </header>
+
+    <nav class="nav" aria-label="Design guide sections">
+      <a href="#logos">Logos</a>
+      <a href="#gold">Earth Palette</a>
+      <a href="#purple">Sage</a>
+      <a href="#status">Status</a>
+      <a href="#callouts">Callouts</a>
+      <a href="#icons">Icons</a>
+      <a href="#type">Type</a>
+      <a href="#spacing">Spacing</a>
+      <a href="#modes">Light / Dark</a>
+      <a href="#aesthetic">Aesthetic</a>
+      <a href="#rules">Rules</a>
+    </nav>
+
+    <section class="section" id="logos">
+      <div class="section-title">
+        <div>
+          <h2>Brand Marks</h2>
+          <p class="eyebrow">Black · White · Earth Accent</p>
+        </div>
+        <p>The normal header treatment is the black book/headphones mark on a clean white surface. Use one brand instance per screen.</p>
+      </div>
+      <div class="specimen">
+        <div class="grid g3">
+          <article class="logo-card">
+            <div>
+              <img src="design-system/assets/01-school-logo-black.png" alt="Black school logo">
+              <h3>Black · On White</h3>
+              <span class="token">primary header + documents</span>
+            </div>
+          </article>
+          <article class="logo-card dark">
+            <div>
+              <img src="design-system/assets/03-school-logo-white.png" alt="White school logo">
+              <h3>White · On Black</h3>
+              <span class="token">studio dark + black panels</span>
+            </div>
+          </article>
+          <article class="logo-card dark">
+            <div>
+              <img class="earth-mark" src="design-system/assets/02-school-logo-gold.png" alt="Earth accent school logo">
+              <h3>Clay · Accent</h3>
+              <span class="token">covers + special earth-tone moments</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gold">
+      <div class="section-title">
+        <div>
+          <h2>Earth Tone Palette</h2>
+          <p class="eyebrow">Ivory · Sand · Sage · Clay · Walnut · Charcoal</p>
+        </div>
+        <p>This option is light, subtle, and organic. Clay becomes the warm action accent; sage becomes the important curriculum signal; walnut and charcoal carry depth.</p>
+      </div>
+      <div class="specimen">
+        <div class="grid g5">
+          <article class="swatch"><div class="color" style="background:var(--honey-50)"></div><div class="copy"><h3>Ivory</h3><span class="token">#f7f4ee</span><p>Page canvas and document background.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--honey-100)"></div><div class="copy"><h3>Warm Sand</h3><span class="token">#ead8c2</span><p>Soft cards, chips, quiet fills.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--purple)"></div><div class="copy"><h3>Muted Sage</h3><span class="token">#a9b298</span><p>Important learning signals.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--honey-400)"></div><div class="copy"><h3>Clay</h3><span class="token">#b98563</span><p>Actions, section labels, accents.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--honey-700)"></div><div class="copy"><h3>Walnut</h3><span class="token">#6b5848</span><p>Deep accents and warm contrast.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--honey-900)"></div><div class="copy"><h3>Charcoal</h3><span class="token">#2f2b28</span><p>Text, dark mode, strong anchors.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--honey-200)"></div><div class="copy"><h3>Paper Tan</h3><span class="token">#dcc0a0</span><p>Divider fills and image mats.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--honey-300)"></div><div class="copy"><h3>Soft Clay</h3><span class="token">#cfa47f</span><p>Hover states and gentle emphasis.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--honey-500)"></div><div class="copy"><h3>Burnt Clay</h3><span class="token">#9f6f4f</span><p>Pressed states and label text.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--honey-800)"></div><div class="copy"><h3>Deep Walnut</h3><span class="token">#4a3b31</span><p>Dark cards and footer surfaces.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="purple">
+      <div class="section-title">
+        <div>
+          <h2>Sage Accent</h2>
+          <p class="eyebrow">The Important Signal</p>
+        </div>
+        <p>In this earth-tone option, muted sage replaces purple as the important signal. It flags key concepts, milestones, and must-know callouts without feeling loud.</p>
+      </div>
+      <div class="specimen">
+        <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)) 300px;">
+          <article class="swatch"><div class="color" style="background:var(--purple)"></div><div class="copy"><h3>Sage</h3><span class="token">#a9b298</span><p>Soft important accents and icons.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--purple-strong)"></div><div class="copy"><h3>Sage-Strong</h3><span class="token">#8f9b7d</span><p>Callout rails and important marks.</p></div></article>
+          <article class="swatch"><div class="color" style="background:var(--purple-deep)"></div><div class="copy"><h3>Sage-Deep</h3><span class="token">#677457</span><p>Legible sage text on light.</p></div></article>
+          <article class="compact-card">
+            <div class="icon-box" style="background:var(--purple-soft);color:var(--purple-deep);margin-bottom:18px;">★</div>
+            <h3 style="font-size:28px;margin-bottom:16px;">Key Concept</h3>
+            <p style="color:var(--muted);font-size:20px;line-height:1.45;">Sage flags the moments students must not miss: gain staging, the null test, the -14 LUFS target.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="status">
+      <div class="section-title">
+        <div>
+          <h2>Semantic Status</h2>
+          <p class="eyebrow">Tinted Surface + Deep Text</p>
+        </div>
+        <p>Status colors are functional. Use them for chips, badges, alerts, grading states, review queues, and student work status.</p>
+      </div>
+      <div class="specimen">
+        <div class="grid g4">
+          <article class="compact-card"><span class="status success"><span class="dot"></span>Passed</span><span class="token">--success · #13795b</span></article>
+          <article class="compact-card"><span class="status warning"><span class="dot"></span>Revise</span><span class="token">--warning · #9a6410</span></article>
+          <article class="compact-card"><span class="status danger"><span class="dot"></span>Missing</span><span class="token">--danger · #b4232a</span></article>
+          <article class="compact-card"><span class="status info"><span class="dot"></span>In Review</span><span class="token">--info · #136f9f</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="callouts">
+      <div class="section-title">
+        <div>
+          <h2>Curriculum Callouts</h2>
+          <p class="eyebrow">Four Instructional Signals</p>
+        </div>
+        <p>These are shared between the portal, lesson pages, handouts, rubrics, and teacher materials. The icon, color, and wording should stay consistent.</p>
+      </div>
+      <div class="specimen">
+        <div class="grid">
+          <article class="callout key"><div class="icon-box">★</div><div><h3>Key Concept</h3><p>Always reference at -14 LUFS so loudness does not trick your ear into thinking a mix is better.</p></div></article>
+          <article class="callout safe"><div class="icon-box">!</div><div><h3>Studio Safety</h3><p>Set monitor gain to zero before patching. Protect your ears and the speakers.</p></div></article>
+          <article class="callout listen"><div class="icon-box">♪</div><div><h3>Listening Task</h3><p>Compare three pro mixes in your genre. Note low-end balance and vocal placement.</p></div></article>
+          <article class="callout deliver"><div class="icon-box">✓</div><div><h3>Deliverable</h3><p>Export a first-pass top-down mix and submit it with your reference notes.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="icons">
+      <div class="section-title">
+        <div>
+          <h2>Icon System</h2>
+          <p class="eyebrow">Lucide Style + Paired Modes</p>
+        </div>
+        <p>Production icons should use Lucide-style line icons. Every icon pattern needs a light version and a dark version so the system does not fall apart later.</p>
+      </div>
+      <div class="specimen">
+        <div class="icon-grid">
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">✓</span><span class="tile dark">✓</span></div><h3>Check</h3><p>Complete, pass, mark done.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">▶</span><span class="tile dark">▶</span></div><h3>Play</h3><p>Resume class or preview audio.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">▦</span><span class="tile dark">▦</span></div><h3>Dashboard</h3><p>Overview and student home.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">▤</span><span class="tile dark">▤</span></div><h3>Curriculum</h3><p>Modules, chapters, lessons.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">♪</span><span class="tile dark">♪</span></div><h3>Listening</h3><p>Reference tracks and ear work.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">★</span><span class="tile dark">★</span></div><h3>Key Concept</h3><p>Important learning signal.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">!</span><span class="tile dark">!</span></div><h3>Safety</h3><p>Hearing, gear, patching risk.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">↥</span><span class="tile dark">↥</span></div><h3>Submit</h3><p>Upload or turn in work.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">◷</span><span class="tile dark">◷</span></div><h3>Schedule</h3><p>Calendar and due dates.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">⌕</span><span class="tile dark">⌕</span></div><h3>Search</h3><p>Find lessons and resources.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">⚙</span><span class="tile dark">⚙</span></div><h3>Settings</h3><p>Preferences and admin.</p></article>
+          <article class="icon-card"><div class="icon-pair"><span class="tile light">?</span><span class="tile dark">?</span></div><h3>Help</h3><p>Support, glossary, guidance.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="type">
+      <div class="section-title">
+        <div>
+          <h2>Type Families</h2>
+          <p class="eyebrow">Editorial Display + Practical UI</p>
+        </div>
+        <p>This earth-tone option uses a softer editorial display direction for brand moments, with Montserrat/Inter for practical UI and JetBrains Mono for audio readouts.</p>
+      </div>
+      <div class="specimen">
+        <div class="font-stage">
+          <div>
+            <p class="big-inter">Cormorant</p>
+            <p class="spec-label">Display · Brand Moments</p>
+            <div class="font-weights">
+              <span style="font-weight:400">Regular</span>
+              <span style="font-weight:500">Medium</span>
+              <span style="font-weight:650">Semibold</span>
+              <span style="font-weight:800">Bold</span>
+              <span style="font-weight:900">Black</span>
+            </div>
+            <p style="font-size:26px;color:var(--muted);">Warm, editorial, calm, knowledgeable.</p>
+          </div>
+          <div>
+            <p class="big-mono">JetBrains Mono</p>
+            <p class="spec-label">Technical Readouts</p>
+            <p style="font-family:var(--mono);font-size:34px;margin-bottom:10px;">-14 LUFS&nbsp; 2.4 kHz&nbsp; -3 dB</p>
+            <p style="font-family:var(--mono);font-size:25px;color:var(--muted);">0123456789 dB · Hz · ms · LUFS</p>
+            <p style="font-size:22px;color:var(--quiet);line-height:1.45;">Educational addition for audio values. Body/UI text uses Montserrat or Inter; mono is only for technical values.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>Type Scale</h2>
+          <p class="eyebrow">Display To Label</p>
+        </div>
+        <p>The scale is built for curriculum context, not marketing pages. Use big type for true titles and compact type for dashboards.</p>
+      </div>
+      <div class="specimen">
+        <div class="type-scale-row"><div class="type-meta"><p class="spec-label">Display</p><span class="token">40 / 800</span></div><p class="type-sample display">Mixing & Mastering</p></div>
+        <div class="type-scale-row"><div class="type-meta"><p class="spec-label">H1</p><span class="token">30 / 800</span></div><p class="type-sample h1">Module 3 · Critical Listening</p></div>
+        <div class="type-scale-row"><div class="type-meta"><p class="spec-label">H2</p><span class="token">24 / 800</span></div><p class="type-sample h2">Chapter 1 — Analyzing Pro Mixes</p></div>
+        <div class="type-scale-row"><div class="type-meta"><p class="spec-label">H3</p><span class="token">18 / 750</span></div><p class="type-sample h3">Class objective & deliverable</p></div>
+        <div class="type-scale-row"><div class="type-meta"><p class="spec-label">Body</p><span class="token">15 / 450</span></div><p class="type-sample body">Students learn by doing real audio work in a professional studio, with critique and clear deliverables.</p></div>
+        <div class="type-scale-row"><div class="type-meta"><p class="spec-label">Caption</p><span class="token">12 / 450</span></div><p class="type-sample caption">Weeks 33-34 · Classes 33-34 · 4-hour session</p></div>
+        <div class="type-scale-row"><div class="type-meta"><p class="spec-label">Label</p><span class="token">11 / 850</span></div><p class="type-sample label-text">Required Materials</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="spacing">
+      <div class="section-title">
+        <div>
+          <h2>Spacing</h2>
+          <p class="eyebrow">4px Base Rhythm</p>
+        </div>
+        <p>Use this scale for inline gaps, card padding, section spacing, document rhythm, and portal layout. Keep the rhythm consistent.</p>
+      </div>
+      <div class="specimen">
+        <div class="space-scale">
+          <div class="space-item"><div class="bar" style="height:8px"></div><strong>1</strong><span>4</span></div>
+          <div class="space-item"><div class="bar" style="height:12px"></div><strong>2</strong><span>8</span></div>
+          <div class="space-item"><div class="bar" style="height:20px"></div><strong>3</strong><span>12</span></div>
+          <div class="space-item"><div class="bar" style="height:28px"></div><strong>4</strong><span>16</span></div>
+          <div class="space-item"><div class="bar" style="height:36px"></div><strong>5</strong><span>20</span></div>
+          <div class="space-item"><div class="bar" style="height:44px"></div><strong>6</strong><span>24</span></div>
+          <div class="space-item"><div class="bar" style="height:56px"></div><strong>8</strong><span>32</span></div>
+          <div class="space-item"><div class="bar" style="height:68px"></div><strong>10</strong><span>40</span></div>
+          <div class="space-item"><div class="bar" style="height:82px"></div><strong>12</strong><span>48</span></div>
+          <div class="space-item"><div class="bar" style="height:108px"></div><strong>16</strong><span>64</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="modes">
+      <div class="section-title">
+        <div>
+          <h2>Light And Dark Versions</h2>
+          <p class="eyebrow">Every Pattern Needs Both</p>
+        </div>
+        <p>Light mode is the default. Dark mode is a studio focus mode. Do not create a reusable component, icon, or callout without checking both.</p>
+      </div>
+      <div class="specimen">
+        <div class="mode-pair">
+          <article class="mode">
+            <div class="mode-head">
+              <div>
+                <p class="spec-label">Light Default</p>
+                <h3 style="font-size:26px;margin:6px 0 0;">Classroom Studio</h3>
+              </div>
+              <img src="design-system/assets/01-school-logo-black.png" alt="Black school logo">
+            </div>
+            <div class="mode-panel">
+              <p class="spec-label">Continue Where You Left Off</p>
+              <h3 style="font-size:24px;margin:8px 0;">Full Personal Song Mix</h3>
+              <p style="color:var(--muted);font-size:16px;">Ivory canvas, warm sand panels, charcoal text, clay action.</p>
+              <div class="button-row"><a class="btn honey" href="#">Resume Class</a><a class="btn soft" href="#">View Rubric</a><span class="pill">In Progress</span><span class="tile light">✓</span></div>
+            </div>
+          </article>
+
+          <article class="mode dark">
+            <div class="mode-head">
+              <div>
+                <p class="spec-label">Dark Focus</p>
+                <h3 style="font-size:26px;margin:6px 0 0;">Studio Dark</h3>
+              </div>
+              <img src="design-system/assets/03-school-logo-white.png" alt="White school logo">
+            </div>
+            <div class="mode-panel">
+              <p class="spec-label">Continue Where You Left Off</p>
+              <h3 style="font-size:24px;margin:8px 0;color:var(--dark-text);">Full Personal Song Mix</h3>
+              <p style="font-size:16px;">Charcoal panels, ivory text, walnut lines, soft clay action.</p>
+              <div class="button-row"><a class="btn honey" href="#">Resume Class</a><a class="btn soft" href="#">View Rubric</a><span class="pill">In Progress</span><span class="tile dark">✓</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="aesthetic">
+      <div class="section-title">
+        <div>
+          <h2>Brand Aesthetic</h2>
+          <p class="eyebrow">Mood · Imagery · Graphic Elements</p>
+        </div>
+        <p>This earth-tone option should feel light and print-friendly, organic but modern, minimal and uncluttered, professional but approachable.</p>
+      </div>
+      <div class="specimen">
+        <div class="grid g3">
+          <article class="compact-card">
+            <p class="spec-label">Brand Essence</p>
+            <ul style="margin:18px 0 0;padding-left:20px;color:var(--muted);font-size:17px;line-height:1.7;">
+              <li>Educational</li>
+              <li>Creative</li>
+              <li>Professional</li>
+              <li>Warm</li>
+              <li>Modern</li>
+              <li>Encouraging</li>
+            </ul>
+          </article>
+          <article class="compact-card">
+            <p class="spec-label">Imagery Direction</p>
+            <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px;">
+              <div style="height:132px;border-radius:10px;background:linear-gradient(135deg,#5c4b3d,#d8c2a8);"></div>
+              <div style="height:132px;border-radius:10px;background:linear-gradient(135deg,#2f2b28,#a9b298);"></div>
+              <div style="height:132px;border-radius:10px;background:linear-gradient(135deg,#ead8c2,#b98563);"></div>
+            </div>
+            <p style="color:var(--muted);font-size:15px;line-height:1.5;margin:14px 0 0;">Studio detail, focused listening, notes, collaboration, natural light, soft contrast.</p>
+          </article>
+          <article class="compact-card">
+            <p class="spec-label">Graphic Elements</p>
+            <div style="display:grid;gap:14px;margin-top:18px;color:var(--muted);font-size:16px;">
+              <span style="display:flex;align-items:center;gap:12px;"><i style="width:44px;height:1px;background:var(--line-strong);display:inline-block;"></i>Thin dividers</span>
+              <span style="display:flex;align-items:center;gap:12px;"><i style="width:28px;height:28px;border:1px solid var(--line-strong);border-radius:6px;display:inline-block;"></i>Rounded boxes</span>
+              <span style="display:flex;align-items:center;gap:12px;"><i style="width:28px;height:28px;background:var(--honey-50);border:1px solid var(--line);display:inline-block;"></i>Soft paper textures</span>
+              <span style="display:flex;align-items:center;gap:12px;"><i style="width:44px;height:20px;background:linear-gradient(90deg,transparent,var(--purple),transparent);display:inline-block;clip-path:polygon(0 48%,10% 55%,18% 44%,26% 60%,35% 36%,44% 62%,55% 40%,64% 58%,74% 45%,84% 54%,100% 48%,100% 52%,84% 58%,74% 49%,64% 62%,55% 44%,44% 66%,35% 40%,26% 64%,18% 48%,10% 59%,0 52%);"></i>Waveform accents</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rules">
+      <div class="section-title">
+        <div>
+          <h2>Drift Prevention</h2>
+          <p class="eyebrow">Rules For Codex, Claude, And Humans</p>
+        </div>
+        <p>This is the formula to follow when creating new portal screens, curriculum pages, handouts, decks, or blueprints.</p>
+      </div>
+      <div class="specimen">
+        <div class="rule-grid">
+          <article class="rule-card do">
+            <h3 style="font-size:24px;">Do</h3>
+            <ul>
+              <li>Use the black logo on white for normal headers.</li>
+              <li>Use warm paper instead of a gray page background.</li>
+              <li>Use clay for primary action, progress, section labels, and selected states.</li>
+              <li>Reserve sage for key concepts and milestones.</li>
+              <li>Use the four callout types consistently.</li>
+              <li>Define light and dark versions for reusable components and icons.</li>
+              <li>Keep portal screens operational, not marketing-page styled.</li>
+            </ul>
+          </article>
+
+          <article class="rule-card dont">
+            <h3 style="font-size:24px;">Do Not</h3>
+            <ul>
+              <li>Do not bring back the cold gray background from the earlier draft.</li>
+              <li>Do not repeat the logo or full brand lockup multiple times on one screen.</li>
+              <li>Do not let clay become muddy or heavy; keep the canvas light.</li>
+              <li>Do not use sage as a generic decoration; it means important.</li>
+              <li>Do not invent new status meanings when a semantic color already exists.</li>
+              <li>Do not ship dark-mode components as an afterthought.</li>
+              <li>Do not nest cards inside cards or add decorative panels without purpose.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
