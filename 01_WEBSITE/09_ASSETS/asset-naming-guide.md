@@ -13,7 +13,7 @@ tags:
 
 # Asset Naming Guide
 
-Use short names for internal filing. Use richer alt text and metadata for SEO.
+Use descriptive, concise names for internal filing and website-ready image SEO. Image filenames are not the strongest SEO signal, but they are still a best practice because they help humans, accessibility workflows, image search context, and future page building.
 
 ## Good Asset Names
 
@@ -26,7 +26,20 @@ Use short names for internal filing. Use richer alt text and metadata for SEO.
 - `00-team-gavin.jpg`
 - `00-live-session.jpg`
 
-Use a two-digit numeric prefix inside each folder, followed by a short visual description.
+Use a two-digit numeric prefix inside each folder, followed by a short visual description. For website-ready public images, include the service and location when relevant.
+
+Preferred website image format:
+
+```text
+00-visual-description-service-location.ext
+```
+
+Examples:
+
+- `00-vocal-booth-recording-albuquerque.jpg`
+- `01-control-room-mixing-mastering.jpg`
+- `02-gavin-engineering-session-checkmark-audio.jpg`
+- `03-studio-sign-recording-studio-albuquerque.jpg`
 - `mix-before.mp3`
 - `mix-after.mp3`
 
@@ -40,11 +53,16 @@ Use a two-digit numeric prefix inside each folder, followed by a short visual de
 
 ## SEO Note
 
-Short internal names are for humans. Public website SEO should come from:
+Public website SEO should come from the full image system:
 
 - Image alt text.
+- Descriptive filenames.
 - Captions.
 - Nearby page copy.
 - Page title and H1.
 - Structured data when appropriate.
 - URL slug when the image is part of a page.
+
+Ranking weight and best practice are different. A descriptive filename may be a lighter signal than alt text or page context, but it is still worth doing when organizing website assets.
+
+Before renaming many assets, state the naming rule first and confirm whether the numeric prefix is based on upload order, folder order, chronology, or page priority.
