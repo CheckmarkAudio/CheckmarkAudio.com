@@ -18,7 +18,7 @@ tags:
 
 This folder is the website encyclopedia for the post-Wix Checkmark Audio website. It organizes the completion playbook by subject, not only by project phase, so every page, asset, blocker, SEO target, and KPI can be found quickly.
 
-The source of truth is `99_SOURCES/CHECKMARK_AUDIO_WEBSITE_SOURCE_OF_TRUTH.docx`. The working master checklist is `00_INDEX/completion-playbook-master-checklist.md`.
+The source of truth is `99_SOURCES/CHECKMARK_AUDIO_WEBSITE_SOURCE_OF_TRUTH.docx`. The working website planning index is `00_INDEX/website-master-plan.md`.
 
 Archived legacy references live outside this active website folder in `99_ARCHIVE/`.
 
@@ -26,16 +26,16 @@ Do not rename or replace the source-of-truth DOCX without Bridget explicitly app
 
 ## Folder Map
 
-- `00_INDEX/` - master index, launch roadmap, content trackers, tag standards, and readiness dashboards.
-- `01_PAGES/` - core website page requirements: Home, Services, Pricing, Book Now, Contact, FAQ, and Policies.
-- `02_SERVICES/` - recording, vocal production, mixing, mastering, production, band recording, podcast, photography, and EPK services.
-- `03_STUDIOS/` - Studio A, Studio B, room comparison, gear highlights, photos needed, and booking use cases.
-- `04_PROOF/` - audio/video examples, Checkmark Live Sessions, testimonials, credits, case studies, and student proof.
-- `05_BRAND/` - team list, bios, About story, mission, Albuquerque community positioning, and brand decisions.
-- `07_POLICIES/` - deposit, cancellation, no-show, refund, revisions, file delivery, privacy, terms, and trust language.
-- `08_SEO/` - URL map, local keyword pages, metadata, schema, analytics, Search Console, and sitemap planning.
-- `09_ASSETS/` - website-ready assets once collected: logos, photos, audio, video, headshots, and portfolio media.
-- `10_PHASES/` - phase plans and notes on what was done during each launch phase.
+- `00_INDEX/` - `website-master-plan.md` and `source-of-truth-rules.md`.
+- `01_PAGES/` - `pages-master-plan.md` for Home, Services, Pricing, Book Now, Contact, FAQ, and Policies.
+- `02_SERVICES/` - `services-master-plan.md` for recording, production, mixing/mastering, artist media, and education service planning.
+- `03_STUDIOS/` - `studios-master-plan.md` for Studio A, Studio B, room comparison, gear highlights, photos needed, and booking use cases.
+- `04_PROOF/` - `proof-portfolio-master-plan.md` for audio/video examples, Checkmark Live Sessions, testimonials, credits, case studies, and student proof.
+- `05_BRAND/` - `brand-about-team-master-plan.md` for team, About, mission, story, community positioning, and brand decisions.
+- `07_POLICIES/` - `policies-master-plan.md` for deposit, cancellation, no-show, refund, revisions, file delivery, privacy, terms, and trust language.
+- `08_SEO/` - `seo-master-plan.md` for URL map, local keyword pages, metadata, schema, analytics, Search Console, and sitemap planning.
+- `09_ASSETS/` - `asset-master-plan.md` for asset naming, inventory, logos, photos, audio, video, headshots, and portfolio media.
+- `10_PHASES/` - `phase-roadmap.md` for phase plans and notes on what was done during each launch phase.
 - `99_SOURCES/` - active source-of-truth DOCX and playbook summaries.
 
 Separate-school, imported-conversion, old design-draft, and legacy DOCX references are archived in `99_ARCHIVE/`.
@@ -68,4 +68,4 @@ tags:
 ---
 ```
 
-Use `00_INDEX/tag-system-guide.md` as the source of truth for statuses, phases, KPIs, and tags.
+Use `00_INDEX/source-of-truth-rules.md` for statuses, phases, KPIs, tags, and handler rules.

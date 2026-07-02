@@ -4,8 +4,8 @@ Static GitHub Pages rebuild for CheckmarkAudio.com. The current production entry
 
 ## Folder Map
 
-- `00_START/`: quick-start docs, project history, migration notes, and baseline planning.
-- `01_WEBSITE/`: website completion playbook and the active source-of-truth DOCX.
+- `00_START/`: quick-start docs and the consolidated project context.
+- `01_WEBSITE/`: consolidated website planning files and the active source-of-truth DOCX.
 - `02_ASSETS/`: tracked source image library and optimized production assets.
 - `03_EMAIL_TEMPLATES/`: EmailJS-ready templates and email copy.
 - `04_MIGRATION/`: Wix migration manifests, URL records, and asset audit output.
@@ -29,8 +29,8 @@ Then visit `http://localhost:8080`.
 3. Set the source to the main branch and root folder.
 4. Confirm the custom domain is `CheckmarkAudio.com`.
 
-The `CNAME` file is included so GitHub Pages keeps the custom domain attached after deploys.
-The static launch also includes `.nojekyll`, `404.html`, `robots.txt`, and `sitemap.xml`.
+Do not attach the custom domain until the site is ready to migrate away from the current Wix setup.
+The static launch includes `404.html`, `robots.txt`, and `sitemap.xml`.
 
 ## Asset Policy
 
@@ -38,7 +38,7 @@ The public site should use optimized deployable files from `02_ASSETS/production
 The tracked source image library now lives in `02_ASSETS/library/`, with cleaned, descriptive filenames so future website planning can find usable images without digging through Wix hashes.
 Keep new raw one-off downloads in `99_ARCHIVE/ignored-local/original-assets/` only as temporary local intake; that folder is ignored by Git.
 
-Project history, migration context, and asset naming rules live in `00_START/`.
+Project history, migration context, and baseline planning live in `00_START/project-context.md`.
 
 ## Booking Note
 
@@ -68,4 +68,4 @@ HAR files can contain sensitive request metadata. Keep `99_ARCHIVE/ignored-local
 
 The active website completion checklist lives at `01_WEBSITE/99_SOURCES/CHECKMARK_AUDIO_WEBSITE_SOURCE_OF_TRUTH.docx`. Codex and Claude should update that DOCX only for checklist answers, SEO notes, SEO gaps, and build-ready planning.
 
-The handler rules for this workflow live at `01_WEBSITE/00_INDEX/source-of-truth-rule.md` and `01_WEBSITE/00_INDEX/handler-filing-protocol.md`.
+The handler rules for this workflow live at `01_WEBSITE/00_INDEX/source-of-truth-rules.md`.

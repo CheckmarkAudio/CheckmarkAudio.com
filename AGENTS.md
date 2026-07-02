@@ -10,14 +10,15 @@ Active planning source:
 
 Core handler rules:
 
-- `01_WEBSITE/00_INDEX/source-of-truth-rule.md`
-- `01_WEBSITE/00_INDEX/handler-filing-protocol.md`
-- `01_WEBSITE/09_ASSETS/asset-naming-guide.md`
-- `01_WEBSITE/08_SEO/`
+- `01_WEBSITE/00_INDEX/source-of-truth-rules.md`
+- `01_WEBSITE/00_INDEX/website-master-plan.md`
+- `01_WEBSITE/09_ASSETS/asset-master-plan.md`
+- `01_WEBSITE/08_SEO/seo-master-plan.md`
 
 ## Standing Workflow
 
 - Read the source-of-truth and handler rules before making website-planning, SEO, asset, or content changes.
+- Use the consolidated master Markdown files in each active planning folder. Do not treat archived pre-consolidation Markdown files as active instructions.
 - Keep the main checklist clean: concise answers under the matching checkbox item, with only short SEO notes and SEO gaps when useful.
 - Put longer research notes, sources, or audit trails in appendix-style notes or the matching Markdown planning file, not in the main checklist body.
 - Do not begin full website implementation until Bridget explicitly says planning is ready to become build work.
@@ -70,6 +71,7 @@ Use concise lowercase kebab-case. Avoid camera names, hashes, vague names, and g
 - The active DOCX must not be renamed unless Bridget explicitly approves it.
 - Do not create a second active source-of-truth checklist.
 - Archive stale drafts in `99_ARCHIVE/` instead of letting them steer the build.
+- Pre-consolidation Markdown sources are preserved in `99_ARCHIVE/reference/consolidated-md-sources/2026-07-02/` and are reference-only.
 - Public-facing school content belongs to the separate school website; reference-only school material stays archived.
 
 ## Git
