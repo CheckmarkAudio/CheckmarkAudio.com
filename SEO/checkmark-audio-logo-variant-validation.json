@@ -1,0 +1,34 @@
+{
+  "canonical_geometry_source": "/Users/bridges/Desktop/CHECKMARK/MARKETING/01 -ANYWHERE CONTENT/CM- LOGO.png",
+  "source_sha256": "d64d730612b91fb2450e6f95e343f2eb4eb2c5a14d9528ef827ca9c7b0fa1c6a",
+  "linework_rule": "All approved variants reuse the source alpha mask exactly; RGB only is changed.",
+  "outputs": {
+    "checkmark-audio-logo-official-white-transparent.png": {
+      "dimensions": [
+        190,
+        198
+      ],
+      "alpha_mask_matches_approved_white": true,
+      "dimensions_match_approved_white": true,
+      "sha256": "d64d730612b91fb2450e6f95e343f2eb4eb2c5a14d9528ef827ca9c7b0fa1c6a"
+    },
+    "checkmark-audio-logo-official-black-transparent.png": {
+      "dimensions": [
+        190,
+        198
+      ],
+      "alpha_mask_matches_approved_white": true,
+      "dimensions_match_approved_white": true,
+      "sha256": "d0a5655442b0028fb90e1431ba2846e823ef3a9d87edc42a62a7e78ebe33f82b"
+    },
+    "checkmark-audio-logo-official-gold-gradient-transparent.png": {
+      "dimensions": [
+        190,
+        198
+      ],
+      "alpha_mask_matches_approved_white": true,
+      "dimensions_match_approved_white": true,
+      "sha256": "42f13a66f33096126427e873e8b94caf0c6359df71237585af648bc320398ec4"
+    }
+  }
+}
