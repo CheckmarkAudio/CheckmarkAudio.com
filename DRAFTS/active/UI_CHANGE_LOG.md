@@ -263,3 +263,57 @@ This is the chronological record of exploratory visual decisions in `DRAFTS/acti
 **Files changed:** `DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html`, `DRAFTS/active/checkmark-hero-editor.css`, and `DRAFTS/active/UI_CHANGE_LOG.md`.
 
 **Outcome and validation:** The preview action is now a sticky top toolbar in the right media column.
+
+## 2026-08-19 — All draft pages / editorial media — Shared section media editor
+
+**Status:** Exploratory
+
+**Change:** Extend the homepage media-editing interaction to editorial media across every page in the protected multipage draft: page hero backgrounds, homepage feature videos, homepage studio photographs, and the Studio A/B galleries.
+
+**Preserve:** Specialized homepage hero carousel editor, page copy and layout, navigation, service pricing, reviews, audio comparison, booking, logos, affiliate marks, badges, icons, original media files, and production isolation.
+
+**Reference:** Bridget's request to make the photo editor usable on each section and page; the approved homepage editor interaction; current page-specific media assignments.
+
+**Acceptance criteria:**
+
+- [x] All nine draft HTML pages load the shared media editor.
+- [x] Eight inner-page hero backgrounds have stable page-specific slots.
+- [x] Both homepage feature videos and all three homepage studio photographs are editable.
+- [x] All 24 generated Studio A/B gallery positions have stable slot identifiers.
+- [x] Photographs support replacement, direct drag cropping, zoom, desktop/mobile positioning, and per-slot reset.
+- [x] Video positions support browsing, preview, replacement, and per-slot reset without image-only crop controls.
+- [x] Changes persist locally by named page and slot and do not alter source media.
+- [x] Brand marks and functional interfaces remain locked.
+
+**Files changed:**
+
+- `DRAFTS/active/checkmark-site-media-editor.css`
+- `DRAFTS/active/checkmark-site-media-editor.js`
+- `DRAFTS/active/checkmark-preview-pages.js`
+- all nine `DRAFTS/active/` preview HTML files
+- `DRAFTS/active/UI_CHANGE_LOG.md`
+
+**Outcome and validation:** Shared scripts parse successfully, every draft page includes the shared editor, and gallery slots are generated after the shared page content is constructed.
+
+**Open questions / follow-up:** Sections without an existing visual slot remain structurally unchanged. Adding brand-new media blocks to text-only sections would be a separate layout decision rather than a media replacement.
+
+## 2026-08-19 — All draft pages / editor navigation — Persistent header and gallery controls
+
+**Status:** Exploratory
+
+**Change:** Replace easy-to-miss media overlays with a persistent page media toolbar. Give every inner page an explicit **Header image** action, and give Studio A and Studio B a separate **Photo gallery** manager showing all gallery positions together.
+
+**Preserve:** Existing page layouts, copy, assigned photographs, per-slot crop settings, the homepage carousel editor, project-media browser, local-only persistence, and production isolation.
+
+**Reference:** Bridget's Studio B screenshot and request to differentiate header-image editing from gallery-image editing.
+
+**Acceptance criteria:**
+
+- [x] Every inner page exposes a persistent Header image action without hover.
+- [x] Studio A and Studio B expose a separately labeled Photo gallery action.
+- [x] The gallery manager shows all 12 positions for the selected studio in one organized view.
+- [x] Selecting a gallery position opens the existing crop and replacement editor for that specific slot.
+- [x] Scattered gallery hover buttons are removed from the presentation.
+- [x] The shared editor continues to parse and the Studio B workflow is browser-tested.
+
+**Outcome and validation:** Studio B now renders a fixed two-action toolbar—Header image and Photo gallery—and the gallery manager exposes all 12 positions before the user chooses an image to crop or replace. Other inner pages receive the Header image action; Studio A receives the same 12-position gallery workflow.
