@@ -1,0 +1,64 @@
+.service-calendar > .wrap {
+  width: calc(100% - clamp(28px, 4vw, 80px));
+  max-width: 1800px;
+}
+
+.service-calendar .service-calendar-head {
+  max-width: 1500px;
+}
+
+.service-calendar .calendar-frame {
+  grid-template-columns: minmax(250px, 300px) minmax(0, 1fr);
+  min-height: 880px;
+  box-shadow: 0 28px 70px rgba(62, 43, 23, .1);
+}
+
+.service-calendar .calendar-info {
+  padding: clamp(28px, 3vw, 48px);
+}
+
+.live-calendar {
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cal-live-frame {
+  display: block;
+  width: 100%;
+  min-height: 880px;
+  border: 0;
+  background: #fff;
+}
+
+@media (min-width: 1500px) {
+  .service-calendar > .wrap {
+    width: calc(100% - 64px);
+  }
+
+  .service-calendar .calendar-frame {
+    grid-template-columns: 290px minmax(0, 1fr);
+  }
+
+  .cal-live-frame {
+    min-height: 940px;
+  }
+}
+
+@media (max-width: 950px) {
+  .service-calendar .calendar-frame {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .service-calendar > .wrap {
+    width: calc(100% - 20px);
+  }
+
+  .cal-live-frame {
+    min-height: 900px;
+  }
+}

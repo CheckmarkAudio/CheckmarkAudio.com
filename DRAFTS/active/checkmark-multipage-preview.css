@@ -1,0 +1,21 @@
+.navlinks .navdrop{position:relative}
+.navlinks .navdrop>button{border:0;background:none;color:#eee6da;padding:10px 0;font:600 .82rem "Barlow Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.navlinks .navdrop>button:hover,.navlinks .navdrop>button:focus,.navlinks a[aria-current="page"]{color:var(--gold)}
+.navdrop-menu{display:none;position:absolute;top:100%;left:-18px;min-width:220px;padding:10px;background:#11110f;border:1px solid var(--line);box-shadow:0 18px 45px rgba(0,0,0,.4)}
+.navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu,.navdrop.open .navdrop-menu{display:grid}
+.navdrop-menu a{padding:11px 12px;white-space:nowrap}
+.review-carousel{overflow:hidden}.review-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#9a6a32 transparent}.review-track .review{flex:0 0 33.333%;scroll-snap-align:start}.review-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:24px}.review-controls button{width:42px;height:42px;border:1px solid rgba(80,57,29,.35);background:transparent;color:#69451e;font-size:1.2rem;cursor:pointer}.review-controls span{font:700 .7rem "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#69451e}
+.pagehero{min-height:430px;display:flex;align-items:end;padding:90px 0 70px;background:linear-gradient(90deg,rgba(8,9,9,.98),rgba(8,9,9,.72)),var(--page-image,none) center/cover}
+.pagehero h1{max-width:880px;margin:8px 0 16px;color:var(--gold);font:500 clamp(3.3rem,8vw,7rem)/.86 "Playfair Display",serif;letter-spacing:-.04em}
+.pagehero p{max-width:690px;color:#d9d0c5}
+.pagebody{padding:80px 0;background:var(--paper);color:var(--ink)}
+.pagegrid{display:grid;grid-template-columns:1.2fr .8fr;gap:46px}
+.pagebody h2{font:600 clamp(2rem,4vw,3.8rem)/1 "Playfair Display",serif;margin:0 0 20px}
+.pagebody h3{font:600 1.45rem "Playfair Display",serif}
+.pagebody p,.pagebody li{color:#625a51}
+.pagebody .panel{padding:26px;border:1px solid #d4c6b5;background:#fff}
+.pagebody .panel+.panel{margin-top:14px}
+.pagecta{padding:70px 0;background:#11110f;text-align:center}
+.pagecta h2{font:500 clamp(2rem,5vw,4rem) "Playfair Display",serif;color:var(--gold);margin:0 0 20px}
+@media(max-width:980px){.navlinks.open .navdrop{width:100%}.navlinks.open .navdrop-menu{position:static;box-shadow:none;margin-top:5px}.navlinks.open .navdrop>button{width:100%;text-align:left}.pagegrid{grid-template-columns:1fr}.review-track .review{flex-basis:50%}}
+@media(max-width:660px){.review-track .review{flex-basis:100%}}

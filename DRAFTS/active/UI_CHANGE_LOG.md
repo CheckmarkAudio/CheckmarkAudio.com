@@ -1,0 +1,265 @@
+# UI Change Log
+
+This is the chronological record of exploratory visual decisions in `DRAFTS/active/`. It does not replace the brand guide, project state, source-of-truth documents, or an explicit approval from Bridget or Gavin.
+
+## Entry template
+
+```markdown
+## YYYY-MM-DD — Page / section — Short change name
+
+**Status:** Exploratory | Preferred direction | Approved visual baseline | Superseded | Rejected
+
+**Change:**
+
+**Preserve:**
+
+**Reference:**
+
+**Acceptance criteria:**
+
+- [ ] Criterion
+
+**Files changed:**
+
+**Outcome and validation:**
+
+**Open questions / follow-up:**
+```
+
+---
+
+## 2026-08-11 — Process — Visual-tweak protocol established
+
+**Status:** Preferred direction
+
+**Change:** Establish a repeatable design-tweak procedure, decision log, approval-gated visual-baseline folder, and open-questions register.
+
+**Preserve:** Existing project authority, production isolation, current repository conflict rules, and explicit human approval requirements.
+
+**Reference:** Bridget's direction in the active design-preview task on 2026-08-11.
+
+**Acceptance criteria:**
+
+- [x] Every future visual request begins with Change / Preserve / Reference / Acceptance Criteria.
+- [x] Visual outcomes use explicit decision-status labels.
+- [x] Approved screenshots have a dedicated, approval-gated location.
+- [x] Unresolved design choices have one active register.
+
+**Files changed:**
+
+- `DRAFTS/active/UI_TWEAK_PROTOCOL.md`
+- `DRAFTS/active/UI_CHANGE_LOG.md`
+- `DRAFTS/active/APPROVED_VISUAL_BASELINES/README.md`
+- `DRAFTS/active/OPEN_DESIGN_QUESTIONS.md`
+
+**Outcome and validation:** The procedure and supporting records were created and cross-aligned.
+
+**Open questions / follow-up:** Existing exploratory changes below predate the protocol and should not be retroactively treated as approved.
+
+## 2026-08-11 — Homepage / hero — Checkmark studio-sign composition
+
+**Status:** Exploratory
+
+**Change:** Use `albuquerque-new-mexico-music-studio-recording-checkmark-sign.webp` as the hero image and move toward the current CheckmarkAudio.com composition.
+
+**Preserve:** Left-weighted title, champagne-gold typography, readable call to action, and the named image.
+
+**Reference:** User screenshots comparing the draft with the current aired website.
+
+**Acceptance criteria:**
+
+- [ ] Complete sign is clearly visible with breathing room.
+- [ ] Sign is noticeably right-of-center, not centered or clipped at the edge.
+- [ ] Dark studio area remains useful behind the title.
+- [ ] Desktop and mobile crops are both intentional.
+
+**Files changed:** `DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html`, `DRAFTS/active/checkmark-home-interactions.css`
+
+**Outcome and validation:** Still under active visual review. No approved baseline exists yet.
+
+**Open questions / follow-up:** Confirm the final crop against a refreshed preview and the live-site reference.
+
+## 2026-08-11 — Homepage / reviews — Full-width looping carousel
+
+**Status:** Exploratory
+
+**Change:** Make the verified-review carousel span the page and loop automatically.
+
+**Preserve:** Five verified excerpts, attribution, manual arrows, warm-cream review treatment, and responsive access.
+
+**Reference:** Homepage design direction and user feedback from the rendered preview.
+
+**Acceptance criteria:**
+
+- [x] Three evenly aligned reviews appear on desktop.
+- [x] Carousel stays inside its background without horizontal page overflow.
+- [x] Automatic loop and manual arrows operate.
+- [x] Responsive review counts adjust for smaller screens.
+
+**Files changed:** `DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html`, `DRAFTS/active/checkmark-home-interactions.css`
+
+**Outcome and validation:** Alignment, automatic movement, and arrow control were functionally checked. Visual approval remains open.
+
+**Open questions / follow-up:** Decide whether the final motion should be stepped, continuous, or user-controlled only.
+
+## 2026-08-11 — Booking / calendar — Large selectable consultation calendar
+
+**Status:** Preferred direction
+
+**Change:** Restore the large visual scale of the earlier calendar while keeping the real Cal.com consultation calendar selectable.
+
+**Preserve:** Direct booking for the free one-hour consultation, optional inquiry path, and separation from future paid-session booking.
+
+**Reference:** Earlier large read-only calendar layout plus the corrected 2026-08-10/11 scheduling decision.
+
+**Acceptance criteria:**
+
+- [x] Live Cal.com times remain selectable.
+- [x] Calendar uses near-full-page width.
+- [x] Calendar remains usable on service pages and the homepage.
+- [x] Mobile retains a tall touch-friendly layout.
+
+**Files changed:** `DRAFTS/active/checkmark-live-calendar.css`, homepage and shared service-page calendar integration.
+
+**Outcome and validation:** The selectable embed was enlarged without reverting to illustrative or read-only slots.
+
+**Open questions / follow-up:** Final visual balance between the information sidebar and scheduler remains subject to approval.
+
+## 2026-08-11 — Services / overview — Editorial services presentation
+
+**Status:** Exploratory
+
+**Change:** Replace the office-like three-box presentation with an image-led recording feature and quieter editorial rows.
+
+**Preserve:** Approved service groupings, descriptions, starting-price guidance, and links to detailed pages.
+
+**Reference:** Classy but authentic brand direction and user feedback on the blocky rendered design.
+
+**Acceptance criteria:**
+
+- [x] Less corporate card repetition.
+- [x] More authentic studio imagery and editorial hierarchy.
+- [x] All prices and service links remain visible.
+- [x] Responsive layout collapses cleanly.
+
+**Files changed:** `DRAFTS/active/checkmark-preview-services.html`, `DRAFTS/active/checkmark-services-editorial.css`
+
+**Outcome and validation:** Implemented for evaluation; not approved as a baseline.
+
+**Open questions / follow-up:** Confirm whether the image-led Recording emphasis is the intended service hierarchy.
+
+## 2026-08-11 — Homepage / structure and media — Remove drift and restore recorded requirements
+
+**Status:** Preferred direction
+
+**Change:** Remove the entire “Your vision. Our craft.” and standalone “Starting points” sections; replace the post-review feature strip with affiliation/recognition logos; add the documented studio-tour and music-demo-reel videos to the homepage; verify and wire the documented Millie raw/master comparison pair.
+
+**Preserve:** Verified reviews, Services navigation and pricing destination, studio-gallery introduction, selectable consultation calendar, optional inquiry path, synchronized A/B behavior, and draft-only isolation.
+
+**Reference:** Bridget's 2026-08-11 correction; `START_HERE/PROJECT_STATE.md`; `START_HERE/NEXT_STEPS.md`; `SEO/OPEN_QUESTIONS_FOR_LAUNCH.md`; current root `index.html`; media catalog and metadata.
+
+**Acceptance criteria:**
+
+- [x] “Your vision. Our craft.” is absent from the homepage.
+- [x] The standalone homepage “Starting points” pricing section is absent.
+- [x] Service pricing remains available on the Services overview and detailed service pages.
+- [x] The black strip below reviews contains real repository affiliation/recognition logos.
+- [x] Studio tour uses `intro-richard-music-studio-checkmark-audio-recording.mp4`.
+- [x] Music demo reel uses `cma-music-studio-demo.mp4`.
+- [x] A/B player uses the Millie “Love All of Me” raw/master pair, with matched 160.968-second web files and original WAV fallbacks.
+- [x] Homepage script parses after the structural changes.
+
+**Files changed:**
+
+- `DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html`
+- `DRAFTS/active/checkmark-home-media.css`
+- `DRAFTS/active/UI_CHANGE_LOG.md`
+- `DRAFTS/active/OPEN_DESIGN_QUESTIONS.md`
+
+**Outcome and validation:** Required media and filenames were verified against the current active notes and repository files. Audio durations match to the millisecond. Both local videos are embedded with controls and metadata-only preload. The removed sections no longer exist in the homepage source.
+
+**Open questions / follow-up:** Third-party trademark-use review remains open for the affiliation marks. Final visual approval of the new media section and affiliate bar remains open.
+
+## 2026-08-19 — Homepage / hero — Draft visual carousel editor
+
+**Status:** Exploratory
+
+**Change:** Convert the protected draft's single hero background into a timed carousel and add a draft-only visual interface for selecting, reordering, hiding, adding, dragging, zooming, and positioning repository photographs separately for desktop and mobile.
+
+**Preserve:** Current studio-sign first slide and composition, hero copy and CTAs, navigation, all homepage sections below the hero, production files, Wix, DNS, Cal.com, and EmailJS.
+
+**Reference:** The current protected draft before implementation (`checkmark-website-draft-preview-2026-08-05.html`, SHA-256 `f740257d6f497b5e7f19e9a15b738b4d133958c3db548762ad8174423554ad67`) and the 2026-08-19 four-part design contract.
+
+**Acceptance criteria:**
+
+- [x] Current studio-sign photograph remains slide one and the safe fallback.
+- [x] Carousel has previous, next, dot, and pause controls.
+- [x] Automatic movement stops for reduced-motion users and while editing.
+- [x] Draft editor supports direct dragging, precision positioning, zoom, ordering, enable/disable, adding from a bounded media library, timing, transitions, and reset.
+- [x] Desktop and mobile positions are stored separately.
+- [x] An invalid or empty saved configuration falls back safely and at least one slide must remain visible.
+- [x] Settings persist only in local browser storage and are not connected to production or publishing.
+
+**Files changed:**
+
+- `DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html`
+- `DRAFTS/active/checkmark-hero-editor.css`
+- `DRAFTS/active/checkmark-hero-editor.js`
+- `DRAFTS/active/UI_CHANGE_LOG.md`
+
+**Outcome and validation:** Implemented as an isolated CSS/JavaScript layer over the existing hero. Final browser interaction and responsive visual evaluation remain required before this can become a preferred direction.
+
+**Open questions / follow-up:** This prototype deliberately does not upload files, authenticate users, or publish changes. Those capabilities require a separately approved secure persistence architecture.
+
+## 2026-08-19 — Homepage / hero editor — Full project media browser and natural crop dragging
+
+**Status:** Exploratory
+
+**Change:** Replace the bounded hero-photo dropdown with a searchable, filterable browser for the complete `MEDIA/IMAGES` and `MEDIA/VIDEO` project folders; add large media previews; allow any indexed project photograph to be added to the carousel; change direct manipulation from click-position jumping to natural drag-offset cropping similar to social cover-photo editors.
+
+**Preserve:** Existing carousel configuration, starter slides, separate desktop/mobile crops, zoom controls, local-only persistence, original media files and filenames, and all page content outside the hero editor.
+
+**Reference:** Bridget's 2026-08-19 request and the repository's active `MEDIA` organization.
+
+**Acceptance criteria:**
+
+- [x] All supported project photographs and videos appear in a generated media index.
+- [x] Search, media-type filters, folder filters, result counts, pagination, and lazy image thumbnails are available.
+- [x] Images and videos can be previewed without moving or editing their source files.
+- [x] Any indexed photograph can be added to the locally saved header carousel.
+- [x] Videos are previewable but cannot be inserted into the header until playback and performance rules are approved.
+- [x] Dragging begins from the current crop and moves by pointer offset instead of jumping to the click location.
+- [x] Existing range controls and reset behavior remain available.
+
+**Files changed:**
+
+- `DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html`
+- `DRAFTS/active/checkmark-hero-editor.css`
+- `DRAFTS/active/checkmark-hero-editor.js`
+- `DRAFTS/active/build-media-index.mjs`
+- `DRAFTS/active/checkmark-media-index.json`
+- `DRAFTS/active/UI_CHANGE_LOG.md`
+
+**Outcome and validation:** The generated index contains 1,007 supported assets: 945 photographs and 62 videos. The browser renders only the first 60 matches at a time and lazy-loads image thumbnails to limit initial work.
+
+**Open questions / follow-up:** Decide whether future header videos should autoplay silently, require a play action, or remain excluded. Uploading new files and publishing shared edits still require the separately approved secure editing architecture.
+
+## 2026-08-19 — Homepage / media browser — Persistent selected-photo action
+
+**Status:** Preferred direction
+
+**Change:** Move the selected-photo action above the large preview and keep it fixed at the top of the right preview column.
+
+**Preserve:** Search, filters, selected asset, preview size, gallery scroll position, and add-to-carousel behavior.
+
+**Reference:** Bridget's screenshot showing the action falling below the visible preview area.
+
+**Acceptance criteria:**
+
+- [x] The selected filename and Add Photo to Header action appear above the preview.
+- [x] The action remains visible while the preview column scrolls.
+- [x] Disabled states still explain videos and photographs already in the header.
+
+**Files changed:** `DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html`, `DRAFTS/active/checkmark-hero-editor.css`, and `DRAFTS/active/UI_CHANGE_LOG.md`.
+
+**Outcome and validation:** The preview action is now a sticky top toolbar in the right media column.
