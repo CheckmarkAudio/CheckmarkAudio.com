@@ -317,3 +317,17 @@ This is the chronological record of exploratory visual decisions in `DRAFTS/acti
 - [x] The shared editor continues to parse and the Studio B workflow is browser-tested.
 
 **Outcome and validation:** Studio B now renders a fixed two-action toolbar—Header image and Photo gallery—and the gallery manager exposes all 12 positions before the user chooses an image to crop or replace. Other inner pages receive the Header image action; Studio A receives the same 12-position gallery workflow.
+
+## 2026-08-21 — Homepage hero / recovered selected carousel
+
+**Status:** Recovered working selection
+
+**Change:** Preserve Bridget's four selected homepage hero photographs and crop positions directly in the draft files instead of relying only on browser-local settings.
+
+**Selected order:** Control-room microphone, red electric guitar, Checkmark studio sign, and studio patch-bay/rack gear.
+
+**Reference:** Bridget's four screenshots from `localhost:4173/DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html?v=20260819-7` and the matching Chrome local-storage configuration recovered on August 21.
+
+**Files changed:** `checkmark-hero-editor.js`, `checkmark-website-draft-preview-2026-08-05.html`, `recovered-media-selections-2026-08-21.json`, and this change log.
+
+**Outcome and validation:** The exact four-image, eight-second crossfade sequence is now the file-backed default. The recovered JSON also preserves the three edited homepage studio-photo selections and desktop/mobile crop positions.

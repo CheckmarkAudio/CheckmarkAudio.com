@@ -3,15 +3,15 @@
 
   const storageKey = 'checkmark-draft-home-hero-v1';
   const starterMedia = [
-    { id: 'sign', label: 'Checkmark studio sign', src: '../../MEDIA/IMAGES/albuquerque-new-mexico-music-studio-recording-checkmark-sign.webp', alt: 'Checkmark Audio recording studio sign in Albuquerque, New Mexico', desktop: { x: 100, y: 50, zoom: 100 }, mobile: { x: 82, y: 50, zoom: 122 } },
-    { id: 'control-room', label: 'Control room workstation', src: '../../MEDIA/IMAGES/music-studio-desk-checkmark-audio-view-06.webp', alt: 'Music production workstation inside Checkmark Audio', desktop: { x: 58, y: 48, zoom: 106 }, mobile: { x: 55, y: 48, zoom: 118 } },
-    { id: 'microphone-room', label: 'Control room microphone', src: '../../MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp', alt: 'Recording microphone and control room at Checkmark Audio in Albuquerque', desktop: { x: 64, y: 50, zoom: 108 }, mobile: { x: 68, y: 50, zoom: 125 } },
-    { id: 'studio-lounge', label: 'Studio lounge session', src: '../../MEDIA/IMAGES/GALLERY/recording-session-studio-lounge-view-03.webp', alt: 'Recording session in the Checkmark Audio studio lounge', desktop: { x: 55, y: 52, zoom: 108 }, mobile: { x: 62, y: 50, zoom: 126 } }
+    { id: 'microphone-room', label: 'Control room microphone', src: '../../MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp', alt: 'Recording microphone and control room at Checkmark Audio in Albuquerque', desktop: { x: 0, y: 56, zoom: 118 }, mobile: { x: 68, y: 50, zoom: 125 } },
+    { id: 'MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp', label: 'Electric guitarist action portrait', src: '../../MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp', alt: 'Musician playing a red electric guitar', desktop: { x: 51, y: 71, zoom: 100 }, mobile: { x: 50, y: 44, zoom: 115 } },
+    { id: 'MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp', label: 'Checkmark studio sign', src: '../../MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp', alt: 'Checkmark Audio recording studio sign in Albuquerque, New Mexico', desktop: { x: 0, y: 30, zoom: 110 }, mobile: { x: 50, y: 50, zoom: 115 } },
+    { id: 'MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp', label: 'Studio patch bay and rack gear', src: '../../MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp', alt: 'Studio patch bay and rack gear at Checkmark Audio', desktop: { x: 0, y: 46, zoom: 113 }, mobile: { x: 50, y: 50, zoom: 115 } }
   ];
   const defaults = {
     interval: 8000,
     transition: 'crossfade',
-    slides: starterMedia.slice(0, 3).map((item, index) => ({ ...item, enabled: true, added: index }))
+    slides: starterMedia.map((item, index) => ({ ...item, enabled: true, added: index }))
   };
 
   const clone = value => JSON.parse(JSON.stringify(value));

@@ -1,0 +1,137 @@
+{
+  "recovery": {
+    "recoveredOn": "2026-08-21",
+    "sourceOrigin": "http://localhost:4173",
+    "sourcePreview": "DRAFTS/active/checkmark-website-draft-preview-2026-08-05.html",
+    "sourceStorageKeys": [
+      "checkmark-draft-home-hero-v1",
+      "checkmark-draft-site-media-v1"
+    ],
+    "note": "Recovered from Chrome local storage so Bridget's draft photo selections and crop positions are preserved in the repository. This is an exploratory draft configuration and has not yet been promoted to the root website."
+  },
+  "homepageHero": {
+    "interval": 8000,
+    "transition": "crossfade",
+    "slides": [
+      {
+        "id": "microphone-room",
+        "label": "Control room microphone",
+        "src": "../../MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp",
+        "alt": "Recording microphone and control room at Checkmark Audio in Albuquerque",
+        "desktop": {
+          "x": 0,
+          "y": 56,
+          "zoom": 118
+        },
+        "mobile": {
+          "x": 68,
+          "y": 50,
+          "zoom": 125
+        },
+        "enabled": true,
+        "added": 2
+      },
+      {
+        "id": "MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp",
+        "label": "antoine electric guitarist action portrait",
+        "src": "../../MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp",
+        "alt": "",
+        "desktop": {
+          "x": 51,
+          "y": 71,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 44,
+          "zoom": 115
+        },
+        "enabled": true,
+        "added": 1787162590318
+      },
+      {
+        "id": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
+        "label": "checkmark audio studio sign png",
+        "src": "../../MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
+        "alt": "",
+        "desktop": {
+          "x": 0,
+          "y": 30,
+          "zoom": 110
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        },
+        "enabled": true,
+        "added": 1787162771907
+      },
+      {
+        "id": "MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp",
+        "label": "studio patch bay and rack gear",
+        "src": "../../MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp",
+        "alt": "",
+        "desktop": {
+          "x": 0,
+          "y": 46,
+          "zoom": 113
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        },
+        "enabled": true,
+        "added": 1787163533066
+      }
+    ]
+  },
+  "homepageSectionMedia": {
+    "home-studio-photo-1": {
+      "slot": "home-studio-photo-1",
+      "kind": "image",
+      "src": "../../MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp",
+      "desktop": {
+        "x": 57,
+        "y": 26,
+        "zoom": 100
+      },
+      "mobile": {
+        "x": 50,
+        "y": 50,
+        "zoom": 115
+      }
+    },
+    "home-studio-photo-2": {
+      "slot": "home-studio-photo-2",
+      "kind": "image",
+      "src": "../../MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp",
+      "desktop": {
+        "x": 62.55129419191919,
+        "y": 48.22758838383838,
+        "zoom": 100
+      },
+      "mobile": {
+        "x": 50,
+        "y": 50,
+        "zoom": 115
+      }
+    },
+    "home-studio-photo-3": {
+      "slot": "home-studio-photo-3",
+      "kind": "image",
+      "src": "../../MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp",
+      "desktop": {
+        "x": 50,
+        "y": 62,
+        "zoom": 100
+      },
+      "mobile": {
+        "x": 50,
+        "y": 50,
+        "zoom": 115
+      }
+    }
+  }
+}
