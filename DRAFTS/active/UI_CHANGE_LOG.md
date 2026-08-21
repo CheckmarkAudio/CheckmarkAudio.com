@@ -320,7 +320,7 @@ This is the chronological record of exploratory visual decisions in `DRAFTS/acti
 
 ## 2026-08-21 — Homepage hero / recovered selected carousel
 
-**Status:** Recovered working selection
+**Status:** Incomplete recovery — corrected below
 
 **Change:** Preserve Bridget's four selected homepage hero photographs and crop positions directly in the draft files instead of relying only on browser-local settings.
 
@@ -331,3 +331,17 @@ This is the chronological record of exploratory visual decisions in `DRAFTS/acti
 **Files changed:** `checkmark-hero-editor.js`, `checkmark-website-draft-preview-2026-08-05.html`, `recovered-media-selections-2026-08-21.json`, and this change log.
 
 **Outcome and validation:** The exact four-image, eight-second crossfade sequence is now the file-backed default. The recovered JSON also preserves the three edited homepage studio-photo selections and desktop/mobile crop positions.
+
+## 2026-08-21 — Homepage media recovery / correction after visual review
+
+**Status:** Correction in progress — not yet approved
+
+**Report from Bridget:** The linked preview is not yet an exact match. Some photographs do not reflect her changes and some selected photographs are missing.
+
+**Verified:** The four recovered hero source files match the four supplied screenshots. The earlier recovery made those hero images file-backed, but only archived the three recovered homepage studio-photo choices in JSON instead of making them the page defaults.
+
+**Correction:** Promote the recovered homepage studio-photo sources and their desktop/mobile crop positions into the shared media editor's file-backed defaults. The three selections are the engineers at the control-room workstation, the blue-light vocal-booth microphone, and Richard Baca at the mixing workstation.
+
+**Files changed:** `checkmark-site-media-editor.js`, `checkmark-website-draft-preview-2026-08-05.html`, and this change log.
+
+**Approval state:** Do not describe the overall photo recovery as approved until Bridget confirms the full page against her screenshots and remembered selections.
