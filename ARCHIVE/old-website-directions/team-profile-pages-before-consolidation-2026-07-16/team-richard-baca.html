@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- EXPERIMENTAL DRAFT MOCKUP — placeholder team profile, not approved content -->
+<title>Richard Baca | Checkmark Audio Team</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="site.css?v=10">
+</head>
+<body>
+<button class="fixtoggle" id="fixtoggle" type="button" title="Toggle red draft/TODO markers"><span class="dot"></span><span class="lbl">Hide Draft Notes</span></button>
+<div class="draft">EXPERIMENTAL DRAFT — INTERNAL MOCKUP ONLY · NOT LIVE · NOT A SOURCE OF TRUTH</div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="MEDIA/IMAGES/00-checkmark-audio-logo-mark-web.png" alt="Checkmark Audio logo"><b>Checkmark&nbsp;Audio</b></a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#team">Team</a>
+      <a class="button primary pulse" style="min-height:48px;padding:12px 24px;font-size:.85rem" href="index.html#book">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero" style="padding-bottom:0">
+  <div class="wrap"><p class="crumb"><a href="index.html">Home</a> / <a href="index.html#team">Team</a> / Richard Baca <a class="button" style="min-height:36px;padding:6px 16px;margin-left:14px;vertical-align:middle" href="index.html">&#8592; Back to Home</a></p></div>
+</section>
+
+<section style="padding-top:34px">
+  <div class="wrap">
+    <div class="profile-grid">
+      <div>
+        <div class="ph-photo"><span class="fix">Photo coming soon</span></div>
+        <div class="socials-row"><span>Instagram</span><span>TikTok</span><span>YouTube</span></div>
+        <p class="fix" style="margin-top:8px">Social links TBD</p>
+        <p class="eyebrow" style="margin:26px 0 0;font-size:.66rem">The Team</p>
+        <div class="team-nav"><a href="team-gavin-hammond.html" title="Gavin Hammond">GH</a><a class="cur" href="team-richard-baca.html" title="Richard Baca">RB</a><a href="team-bridget-reinhard.html" title="Bridget Reinhard">BR</a><a href="team-matton-bow.html" title="Matton Bow">MB</a><a href="team-christian-clepper.html" title="Christian Clepper">CC</a></div>
+      </div>
+      <div>
+        <p class="eyebrow">Sound Engineer · Studio Manager</p>
+        <h1 style="font-size:clamp(2rem,4.5vw,3rem)"><span class="serif" style="font-style:italic">Richard Baca</span></h1>
+        <div class="rule"></div>
+        <p class="sub" style="font-size:1.05rem">Runs the sessions and the studio behind them — coordination, client care, and engineering that keeps every project moving.</p>
+        <p class="fix" style="margin-top:14px">Placeholder bio — genres, Ableton workflow, and student-support details pending (#7)</p>
+        <table style="max-width:520px">
+          <tr><td><b>Best for</b></td><td class="fix">TBD</td></tr>
+          <tr><td><b>Services handled</b></td><td class="fix">TBD</td></tr>
+          <tr><td><b>Credits / highlights</b></td><td class="fix">TBD</td></tr>
+        </table>
+        <div class="button-row">
+          <a class="button primary" href="index.html#book">Book a Session</a>
+          <a class="button" href="index.html#team">Meet the Rest of the Team</a>
+          <a class="button" href="index.html">&#8592; Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="legal" style="border:none;margin:0;padding:0">© 2026 by Checkmark Audio. All rights reserved. · EXPERIMENTAL DRAFT MOCKUP — not published.</div>
+  </div>
+</footer>
+<div class="bar">
+  <a class="p" href="index.html#book">Book</a>
+  <a href="tel:+15052670558">Call</a>
+  <a href="sms:+15052670558">Text</a>
+</div>
+<script>
+(function(){var ft=document.getElementById('fixtoggle');
+function set(h){document.body.classList.toggle('hidefix',h);try{localStorage.setItem('hidefix',h?'1':'0')}catch(e){}
+ft.querySelector('.lbl').textContent=h?'Show Draft Notes':'Hide Draft Notes'}
+ft.addEventListener('click',function(){set(!document.body.classList.contains('hidefix'))});
+var saved=false;try{saved=localStorage.getItem('hidefix')==='1'}catch(e){}
+set(saved)})();
+</script>
+</body>
+</html>

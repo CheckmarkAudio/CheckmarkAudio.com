@@ -1,7 +1,7 @@
 ---
 title: Checkmark Audio Brand Style Guide
 status: active-guidance
-updated: 2026-08-10
+updated: 2026-08-20
 ---
 
 # Checkmark Audio Brand Style Guide
@@ -10,7 +10,7 @@ updated: 2026-08-10
 
 This file defines Checkmark Audio's current approved brand direction for visual design, copy, photography, and digital applications.
 
-Bridget approved the color character and typography direction developed in the editorial singer website concept on August 8, 2026. On August 10, 2026, she identified `CM- LOGO.png` as the canonical logo linework. The generated logo used in the mockups and `CMA_Logo_Black.png` are **not correct and are prohibited**.
+Bridget approved the color character and typography direction developed in the editorial singer website concept on August 8, 2026. On August 20, 2026, she supplied her own matching 2000×2000 transparent gold, black, and white logo exports and designated them as the official standards. Comparable older Checkmark Audio logo treatments are archived and inactive.
 
 This guide does not replace `START_HERE/CHECKMARK_AUDIO_WEBSITE_SOURCE_OF_TRUTH.docx`, which remains the repository's only active business-requirements checklist. Website-specific layout and implementation details remain in the draft website design guide until that website concept is formally promoted to the root build.
 
@@ -36,8 +36,7 @@ If an item has no label, treat it as **[PENDING]**, not approved.
 | Color tokens below | **[WORKING TOKEN]** Visually approved; subject to accessibility calibration |
 | Typography character | **[APPROVED]** |
 | Exact production font families/files | **[PENDING]** Final match, licensing, and performance review |
-| `CM- LOGO.png` white linework | **[CANONICAL ASSET]** Approved geometry source |
-| Exact-mask white, black, and gold-gradient derivatives | **[CANONICAL ASSET]** Approved for web preparation |
+| Bridget's 2000×2000 gold, black, and white transparent exports | **[OFFICIAL STANDARD]** Only active logo family |
 | Generated mockup logo | **[PROHIBITED]** Never use |
 | `CMA_Logo_Black.png` | **[PROHIBITED]** Incorrect lower microphone linework |
 | Photography direction | **[APPROVED]** |
@@ -227,15 +226,15 @@ Candidates:
 
 ### Critical rule
 
-**[CANONICAL ASSET]** The approved geometry source is the white transparent PNG originally supplied as `CM- LOGO.png`. Its distinctive curved lower microphone linework must be preserved exactly.
+**[OFFICIAL STANDARD]** Bridget's matching 2000×2000 transparent PNG exports supplied on August 20, 2026 are the approved logo family. Their geometry and transparent square canvas must be preserved exactly.
 
-The web-ready canonical set is:
+The official active set is:
 
 - `MEDIA/IMAGES/checkmark-audio-logo-official-white-transparent.png`
 - `MEDIA/IMAGES/checkmark-audio-logo-official-black-transparent.png`
 - `MEDIA/IMAGES/checkmark-audio-logo-official-gold-gradient-transparent.png`
 
-The black and gold files are deterministic recolors of the white source. Their dimensions and alpha masks are validated as exact matches; they are not AI redraws.
+The gold file is the current website default. Black and white are contrast alternatives. All older standalone Checkmark Audio logo treatments are historical reference only under `ARCHIVE/logo-standards-superseded-2026-08-20/`.
 
 **[PROHIBITED]** The headphones-and-microphone logo visible in generated website mockups is not correct. It must not be extracted, traced, recreated, published, or used as reference.
 

@@ -1,39 +1,39 @@
 # Checkmark Audio Logo Asset Manifest
 
-Updated: 2026-08-10
+Updated: 2026-08-20
 
-## Status key
+## Current official standards
 
-- **[CANONICAL ASSET]** exact approved source or mechanically validated derivative
-- **[PROHIBITED]** known incorrect; never use
-- **[PENDING]** requires a future decision
+Bridget's three revised 2000×2000 transparent PNG exports supplied from `Desktop/CHECKMARK/LOGO/` on August 20, 2026 are the only active Checkmark Audio logo standards. They share the same approved geometry and differ only by color treatment.
 
-## Canonical geometry
+| Active file | Status | Intended use | SHA-256 |
+| --- | --- | --- | --- |
+| `MEDIA/IMAGES/checkmark-audio-logo-official-gold-gradient-transparent.png` | **[OFFICIAL STANDARD]** | Current website default; dark and premium applications | `b62722c37773f974119d12484a8c9229fad442634af0f47e37a5fbdb85d3567d` |
+| `MEDIA/IMAGES/checkmark-audio-logo-official-black-transparent.png` | **[OFFICIAL STANDARD]** | White, cream, and other light backgrounds | `d587da6a08ebeacab38a88197d5008f5efb2d353a97dc8eac0066bd302f88a0f` |
+| `MEDIA/IMAGES/checkmark-audio-logo-official-white-transparent.png` | **[OFFICIAL STANDARD]** | Black, dark, and photographic backgrounds | `36598e0b2c6a2788b8ce2d52ff431ca6865d46cacd3f3613e4aee98d61ebf516` |
 
-**[CANONICAL ASSET]** `CM- LOGO.png` is the sole approved linework source. Source SHA-256:
+The website currently uses the gold standard for its header, shared inner-page header and footer, favicon, and LocalBusiness structured-data logo.
 
-`d64d730612b91fb2450e6f95e343f2eb4eb2c5a14d9528ef827ca9c7b0fa1c6a`
+## Superseded material
 
-All approved PNGs are 190×198 pixels with transparency. The black and gold-gradient variants were made by changing RGB values only. Their alpha masks match the approved white source byte-for-byte, preserving the microphone curve and every other edge.
+Older Checkmark Audio standalone logo treatments, generated reconstructions, prior 190×198 approved files, page-assignment copies, and original source variants were removed from the active media library and preserved under:
 
-| File | Status | Intended use |
-|---|---|---|
-| `checkmark-audio-logo-official-white-transparent.png` | **[CANONICAL ASSET]** | Dark and photographic backgrounds |
-| `checkmark-audio-logo-official-black-transparent.png` | **[CANONICAL ASSET]** | Cream, white, and light backgrounds |
-| `checkmark-audio-logo-official-gold-gradient-transparent.png` | **[CANONICAL ASSET]** | Premium dark applications with sufficient contrast |
+`ARCHIVE/logo-standards-superseded-2026-08-20/`
 
-Machine-verifiable dimensions, alpha-mask checks, and hashes are recorded in `checkmark-audio-logo-variant-validation.json`.
+The immediately preceding canonical set is preserved separately under `previous-canonical-set-before-desktop-cm/` inside that archive.
 
-## Rejected assets
+They are historical reference only and must not be restored to the website unless Bridget explicitly approves a future change. Third-party logos, separate Checkmark brands, and photographs containing real studio signage were not included in this retirement.
 
-- **[PROHIBITED]** `CMA_Logo_Black.png`: incorrect lower microphone geometry; the curved section is flattened/different.
-- **[PROHIBITED]** Any logo visible only inside an AI-generated website rendering.
-- **[PROHIBITED]** Any traced, recreated, embellished, or icon-library substitute.
+## Usage rules
 
-Rejected files are intentionally not copied into the canonical web asset set.
+- Use the gold standard by default for the current website.
+- Use black or white only when background contrast calls for it.
+- Do not trace, redraw, recolor, distort, crop, or substitute the official geometry.
+- Keep the transparent background and original square canvas.
+- Do not use an archived logo merely because it was previously labeled canonical or approved.
 
 ## Pending production decisions
 
-- **[PENDING]** Minimum size and clear-space specification
-- **[PENDING]** Separate wordmark/lockup system
-- **[PENDING]** Professionally supplied original-vector or SVG master
+- Minimum display size and clear-space specification
+- Separate wordmark/lockup system
+- Whether Bridget wants native SVG masters exported from the vector-authoring source in addition to these approved PNG exports

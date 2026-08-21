@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+/* Prominent shared brand lockup for interior pages. */
+.header nav.wrap {
+  min-height: 104px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: var(--gold2);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo img {
+  width: 72px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.logo span {
+  color: #ddb978;
+  font: 500 clamp(1.9rem, 2.7vw, 2.65rem)/.86 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -.028em;
+  text-transform: uppercase;
+}
+
+.header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  isolation: isolate;
+  transition: background .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+#site-header + main { padding-top: 104px; }
+
+.header nav.wrap,
+.logo img,
+.logo span {
+  transition: min-height .28s ease, width .28s ease, height .28s ease, font-size .28s ease;
+}
+
+.header.is-scrolled {
+  background: rgba(8, 9, 9, .975);
+  border-color: rgba(221, 185, 120, .3);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, .42);
+}
+
+.header.is-scrolled nav.wrap { min-height: 74px; }
+.header.is-scrolled .logo img { width: 50px; height: 53px; }
+.header.is-scrolled .logo span { font-size: clamp(1.5rem, 2.05vw, 1.95rem); }
+
+@media (max-width: 1120px) {
+  .header nav.wrap { min-height: 90px; }
+  .logo img { width: 62px; height: 65px; }
+  .navlinks.open { top: 90px; }
+}
+
+@media (max-width: 650px) {
+  .header nav.wrap { min-height: 82px; gap: 11px; }
+  .logo { gap: 11px; }
+  .logo img { width: 53px; height: 56px; }
+  .logo span { font-size: clamp(1.25rem, 6.2vw, 1.65rem); letter-spacing: -.02em; }
+  .header .btn.primary { display: none; }
+  .navlinks.open { top: 82px; }
+}
+
+@media (max-width: 650px) {
+  .header.is-scrolled nav.wrap { min-height: 68px; }
+  .header.is-scrolled .logo img { width: 43px; height: 46px; }
+  .header.is-scrolled .logo span { font-size: clamp(1.12rem, 5.4vw, 1.42rem); }
+  .header.is-scrolled .navlinks.open { top: 68px; }
+  #site-header + main { padding-top: 82px; }
+}

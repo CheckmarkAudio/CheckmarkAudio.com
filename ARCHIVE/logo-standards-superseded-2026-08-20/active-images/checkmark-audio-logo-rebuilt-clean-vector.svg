@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 198" role="img" aria-labelledby="title desc">
+  <title id="title">Checkmark Audio logo</title>
+  <desc id="desc">A symmetrical pair of headphones surrounding a vintage studio microphone.</desc>
+  <g fill="#000000">
+    <!-- Smooth, symmetrical headphone arch. -->
+    <path d="M21 99V84C21 41 53.8 8 95 8s74 33 74 76v15"
+          fill="none" stroke="#000000" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Mirrored headphone ear pads. -->
+    <rect x="10" y="91" width="43" height="72" rx="12"/>
+    <rect x="5" y="102" width="12" height="50" rx="6"/>
+    <rect x="137" y="91" width="43" height="72" rx="12"/>
+    <rect x="173" y="102" width="12" height="50" rx="6"/>
+
+    <!-- Microphone: centered spine with four equal, level grille bars. -->
+    <path d="M69 91A26 26 0 0 1 121 91H98V99H121V108H98V116H121V125H98V133H121V142H98V150H121V157A26 26 0 0 1 69 157V150H92V142H69V133H92V125H69V116H92V108H69V99H92V91Z"/>
+
+    <!-- Smooth concentric microphone cradle, stem, and base. -->
+    <path d="M61 158A34 34 0 0 0 129 158"
+          fill="none" stroke="#000000" stroke-width="7" stroke-linecap="round"/>
+    <rect x="92" y="188" width="6" height="7" rx="3"/>
+    <rect x="76" y="193" width="38" height="5" rx="2.5"/>
+  </g>
+</svg>

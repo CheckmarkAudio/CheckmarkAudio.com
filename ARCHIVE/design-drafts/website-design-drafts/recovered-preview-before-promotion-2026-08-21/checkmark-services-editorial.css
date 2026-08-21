@@ -1,0 +1,24 @@
+/* Exploratory editorial treatment for the services overview. */
+body[data-page="services"] .pagebody { position:relative; overflow:hidden; background:#eee5d9; }
+body[data-page="services"] .pagebody::before { content:""; position:absolute; width:420px; height:420px; right:-210px; top:70px; border:1px solid rgba(158,111,54,.22); border-radius:50%; }
+body[data-page="services"] .pagebody .wrap { position:relative; }
+body[data-page="services"] .pagebody h2 { max-width:760px; margin-bottom:44px; font-size:clamp(3.6rem,7vw,7.2rem); font-weight:500; letter-spacing:-.045em; }
+body[data-page="services"] .service-overview { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr); grid-template-rows:1fr 1fr; gap:0; margin-top:0; border-top:1px solid #cbb89f; border-bottom:1px solid #cbb89f; box-shadow:0 28px 70px rgba(48,35,20,.09); }
+body[data-page="services"] .service-overview-card { position:relative; min-height:330px; padding:clamp(34px,4vw,58px); border:0; background:rgba(249,245,238,.76); overflow:hidden; transition:background .35s ease,color .35s ease; }
+body[data-page="services"] .service-overview-card:nth-child(1) { grid-row:1 / 3; min-height:680px; justify-content:end; border-right:1px solid #cbb89f; color:#fff7ec; background:linear-gradient(0deg,rgba(9,8,7,.94) 4%,rgba(9,8,7,.56) 62%,rgba(9,8,7,.16)),url('../../MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-albuquerque-nm-control-room-microphone.webp') center / cover; }
+body[data-page="services"] .service-overview-card:nth-child(2) { border-bottom:1px solid #cbb89f; }
+body[data-page="services"] .service-overview-card:nth-child(n+2):hover { background:#f8f1e7; }
+body[data-page="services"] .service-overview-card:nth-child(1)::before { content:"01"; position:absolute; top:32px; right:36px; color:rgba(255,247,236,.55); font:600 .76rem "Barlow Condensed",sans-serif; letter-spacing:.2em; }
+body[data-page="services"] .service-overview-card:nth-child(2)::before,body[data-page="services"] .service-overview-card:nth-child(3)::before { position:absolute; top:36px; right:40px; color:#a87840; font:600 .72rem "Barlow Condensed",sans-serif; letter-spacing:.2em; }
+body[data-page="services"] .service-overview-card:nth-child(2)::before { content:"02"; }
+body[data-page="services"] .service-overview-card:nth-child(3)::before { content:"03"; }
+body[data-page="services"] .service-overview-card h3 { max-width:570px; margin:20px 0 18px; font-size:clamp(2rem,3.4vw,3.6rem); line-height:.98; letter-spacing:-.025em; }
+body[data-page="services"] .service-overview-card > p:not(.eyebrow) { max-width:570px; font-size:1rem; line-height:1.7; }
+body[data-page="services"] .service-overview-card:nth-child(1) > p:not(.eyebrow),body[data-page="services"] .service-overview-card:nth-child(1) .price-lines { color:#e4d9ca; }
+body[data-page="services"] .price-lines { max-width:570px; margin:24px 0; padding-top:20px; border-top:1px solid rgba(151,115,74,.28); }
+body[data-page="services"] .service-overview-card:nth-child(1) .price-lines { border-color:rgba(255,255,255,.25); }
+body[data-page="services"] .service-overview-card:nth-child(1) .price-lines b,body[data-page="services"] .service-overview-card:nth-child(1) > strong { color:#edbd7d; }
+body[data-page="services"] .service-overview-card > strong { margin-top:12px; font-size:.79rem; letter-spacing:.08em; text-transform:uppercase; }
+body[data-page="services"] .service-note { max-width:920px; margin-top:30px; color:#665d52; }
+@media(max-width:900px){body[data-page="services"] .service-overview{grid-template-columns:1fr;grid-template-rows:auto}body[data-page="services"] .service-overview-card:nth-child(1){grid-row:auto;min-height:610px;border-right:0;border-bottom:1px solid #cbb89f}}
+@media(max-width:600px){body[data-page="services"] .pagebody h2{font-size:3.5rem}body[data-page="services"] .service-overview-card{min-height:0;padding:34px 26px}body[data-page="services"] .service-overview-card:nth-child(1){min-height:540px}}

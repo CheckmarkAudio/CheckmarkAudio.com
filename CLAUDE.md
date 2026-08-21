@@ -1,5 +1,7 @@
-@AGENTS.md
+# Claude handoff
 
-## Claude Code
+Read `AGENTS.md` and the four first documents it lists before website work.
 
-Follow the project instructions in `AGENTS.md`. For SEO, website-planning, and asset work, read the consolidated master files in `01_WEBSITE/00_INDEX/`, `01_WEBSITE/08_SEO/`, and `01_WEBSITE/09_ASSETS/` before making broad changes.
+The repository root is the only active replacement website. `index.html` is the recovered homepage Bridget selected on 2026-08-21. Its approved desktop references are in `START_HERE/APPROVED_VISUAL_BASELINES/`, and the canonical image/crop data is in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`.
+
+Do not create a parallel homepage, revive an archived mockup, or treat browser-local editor settings as safely saved. Write approved visual changes into the root implementation and selection record. Keep `noindex`; Wix remains public until explicit launch approval.

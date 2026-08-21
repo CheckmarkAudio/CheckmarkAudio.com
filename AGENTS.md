@@ -2,80 +2,42 @@
 
 ## Project
 
-This repository is the Checkmark Audio website rebuild and planning system.
+Build, test, approve, and launch Checkmark Audio's independent replacement for the Wix-hosted CheckmarkAudio.com website. Wix is the current production host, not the destination. Keep it live until the replacement is approved and ready for controlled cutover.
 
-Active planning source:
+The replacement includes branded EmailJS inquiries and a selectable Cal.com calendar for the free one-hour consultation. Paid project-session self-booking is separate future work.
 
-- `01_WEBSITE/99_SOURCES/CHECKMARK_AUDIO_WEBSITE_SOURCE_OF_TRUTH.docx`
+## Read first
 
-Core handler rules:
+1. `START_HERE/PROJECT_STATE.md`
+2. `START_HERE/RULES.md`
+3. `START_HERE/DOCUMENT_MAP.md`
+4. `START_HERE/NEXT_STEPS.md`
+5. `START_HERE/SEO_STRUCTURE.md`
+6. `START_HERE/MEDIA_SEO_PLAN.md` for media work
+7. `START_HERE/PLATFORM_ARCHITECTURE.md`
+8. `START_HERE/CHECKMARK_AUDIO_WEBSITE_SOURCE_OF_TRUTH.docx`
+9. the two required SEO DOCX files listed in `DOCUMENT_MAP.md`
+10. `SEO/README.md` and relevant `SEO/` references
 
-- `01_WEBSITE/00_INDEX/source-of-truth-rules.md`
-- `01_WEBSITE/00_INDEX/website-master-plan.md`
-- `01_WEBSITE/09_ASSETS/asset-master-plan.md`
-- `01_WEBSITE/08_SEO/seo-master-plan.md`
+## Non-negotiable rules
 
-## Standing Workflow
+- The Source of Truth DOCX is the only active completion checklist. Do not rename it without Bridget's approval.
+- The repository root is the one active replacement website. Do not create a second active site tree.
+- `index.html` is the protected homepage direction selected on 2026-08-21. Preserve its approved visual baseline and media selections unless Bridget asks for a change.
+- The site remains `noindex` and in development until explicit launch approval.
+- `MEDIA/` is the only active website-media library.
+- `DRAFTS/active/` is for genuinely active off-direction experiments only; each experiment gets one dated folder. Drafts never override root.
+- `DRAFTS/reference/` and `ARCHIVE/` are reference-only unless Bridget explicitly revives an item.
+- Do not invent prices, policies, testimonials, credits, team facts, or booking details.
+- Preserve user changes and update references in the same pass when moving files.
+- Browser-local visual changes are not safely preserved until written into root files and `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`.
+- Do not point the domain away from Wix until the replacement is approved and tested.
+- Keep the school on its separate website; the studio site may introduce and link to it without duplicating its SEO pages.
 
-- Read the source-of-truth and handler rules before making website-planning, SEO, asset, or content changes.
-- Use the consolidated master Markdown files in each active planning folder. Do not treat archived pre-consolidation Markdown files as active instructions.
-- Keep the main checklist clean: concise answers under the matching checkbox item, with only short SEO notes and SEO gaps when useful.
-- Put longer research notes, sources, or audit trails in appendix-style notes or the matching Markdown planning file, not in the main checklist body.
-- Do not begin full website implementation until Bridget explicitly says planning is ready to become build work.
+## Media naming
 
-## SEO Accuracy Rule
-
-When answering SEO questions, separate ranking weight from best practice.
-
-Use this tier language:
-
-- Critical: strongly affects indexing, local visibility, conversion, accessibility, or launch readiness.
-- Helpful: worthwhile best practice with meaningful indirect or smaller SEO value.
-- Nice-to-have: useful polish, but not urgent.
-- Not worth doing: low value compared with time cost.
-
-For SEO claims that affect many files, page architecture, metadata, schema, image naming, accessibility, redirects, or public launch decisions:
-
-- Verify against Google Search Central or another primary source before giving confident advice.
-- Say when something is a small ranking signal but still a best practice.
-- Do not dismiss a best practice just because it is not the largest ranking factor.
-- If a recommendation is based on inference or general web practice, label it as an inference.
-
-## Image And Asset Naming
-
-Website image filenames matter for organization, accessibility workflow, and image SEO. They are not usually the strongest SEO signal, but descriptive names are still a best practice.
-
-Before renaming or moving multiple assets:
-
-- Pause and state the exact naming rule.
-- Confirm whether numbers should preserve order, chronology, page position, or campaign grouping.
-- Search for references and update links in the same pass.
-
-Preferred website image format:
-
-```text
-00-visual-description-service-location.ext
-```
-
-Examples:
-
-- `00-vocal-booth-recording-albuquerque.jpg`
-- `01-control-room-mixing-mastering.jpg`
-- `02-gavin-engineering-session-checkmark-audio.jpg`
-- `03-studio-sign-recording-studio-albuquerque.jpg`
-
-Use concise lowercase kebab-case. Avoid camera names, hashes, vague names, and generic filenames.
-
-## Source Of Truth Rules
-
-- The active DOCX must not be renamed unless Bridget explicitly approves it.
-- Do not create a second active source-of-truth checklist.
-- Archive stale drafts in `99_ARCHIVE/` instead of letting them steer the build.
-- Pre-consolidation Markdown sources are preserved in `99_ARCHIVE/reference/consolidated-md-sources/2026-07-02/` and are reference-only.
-- Public-facing school content belongs to the separate school website; reference-only school material stays archived.
+Follow `SEO/ASSET_NAMING_RULES.md`: lowercase kebab-case using service, useful location, specific description, and brand only when useful. Do not keyword-stuff or invent a location.
 
 ## Git
 
-- Before committing, check status and confirm the changed file list matches the request.
-- Do not revert user changes unless Bridget explicitly asks.
-- If pushing to `main`, make sure local `main` is synced with `origin/main` and report the final commit hash.
+Before committing, confirm the changed-file list matches the request and do not revert user work. Before pushing `main`, sync with `origin/main` and report the final commit hash.

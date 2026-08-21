@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkmark Audio | Proof-First Studio Preview</title>
+    <style>
+      :root {
+        --ink: #0c0d0f;
+        --charcoal: #17191d;
+        --paper: #f5f4ef;
+        --white: #ffffff;
+        --muted: #676a70;
+        --line-dark: rgba(255, 255, 255, 0.2);
+        --line-light: rgba(12, 13, 15, 0.17);
+        --electric: #5d79ff;
+        --cyan: #69d8d2;
+        --acid: #d9f052;
+        --coral: #ef665d;
+        --max: 1380px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+      }
+      body::before {
+        content: "DRAFT / CONTENT PLACEHOLDERS ARE LABELED";
+        position: fixed;
+        z-index: 100;
+        right: 14px;
+        bottom: 14px;
+        padding: 7px 10px;
+        color: var(--ink);
+        background: var(--acid);
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+      img { display: block; width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+
+      .nav {
+        position: absolute;
+        inset: 0 0 auto;
+        z-index: 20;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 28px;
+        padding: 22px clamp(20px, 4vw, 60px);
+        color: var(--white);
+        border-bottom: 1px solid var(--line-dark);
+      }
+      .brand { display: flex; align-items: center; gap: 12px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+      .brand img { width: 38px; height: 38px; object-fit: contain; }
+      .nav-links { display: flex; justify-content: center; gap: clamp(18px, 3vw, 40px); font-size: 0.69rem; text-transform: uppercase; }
+      .nav-links a, .phone { opacity: 0.82; }
+      .nav-links a:hover, .phone:hover { opacity: 1; }
+
+      .hero {
+        position: relative;
+        min-height: min(820px, 96vh);
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+        color: var(--white);
+        background: var(--ink);
+      }
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: saturate(0.78) contrast(1.05);
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(34, 53, 128, 0.42);
+        mix-blend-mode: multiply;
+      }
+      .hero-shade {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(12, 13, 15, 0.08) 22%, rgba(12, 13, 15, 0.84) 100%);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+        padding: 150px 0 54px;
+      }
+      .kicker { margin: 0 0 14px; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em; }
+      .hero .kicker { color: var(--acid); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2, .display {
+        font-family: "Bodoni 72", Didot, Georgia, serif;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+      h1 { max-width: 900px; margin-bottom: 26px; font-size: clamp(3.25rem, 7.2vw, 7.2rem); line-height: 0.92; }
+      h2 { margin-bottom: 18px; font-size: clamp(2.2rem, 4.7vw, 4.8rem); line-height: 0.98; }
+      h3 { margin-bottom: 10px; font-size: clamp(1.15rem, 1.7vw, 1.55rem); font-weight: 600; }
+      .hero-bottom { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: end; }
+      .hero-copy { max-width: 610px; margin: 0; color: rgba(255,255,255,0.78); font-size: clamp(0.98rem, 1.4vw, 1.13rem); }
+      .button-row { display: flex; flex-wrap: wrap; gap: 10px; }
+      .button {
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        border: 1px solid currentColor;
+        font-size: 0.7rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        transition: 180ms ease;
+      }
+      .button.primary { color: var(--ink); background: var(--acid); border-color: var(--acid); }
+      .button.ghost { color: var(--white); background: rgba(12,13,15,0.18); }
+      .button:hover { transform: translateY(-2px); }
+
+      .proof-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        color: var(--white);
+        background: var(--ink);
+        border-top: 1px solid var(--line-dark);
+      }
+      .proof-nav a { display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center; padding: 24px clamp(20px, 4vw, 56px); border-right: 1px solid var(--line-dark); }
+      .proof-nav a:last-child { border-right: 0; }
+      .proof-nav small { color: var(--cyan); font-size: 0.66rem; }
+      .proof-nav strong { font-family: "Bodoni 72", Didot, Georgia, serif; font-size: clamp(1.1rem, 2vw, 1.65rem); font-weight: 400; }
+      .proof-nav span { color: var(--acid); }
+
+      .section { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; padding: clamp(76px, 10vw, 132px) 0; }
+      .section-head { display: grid; grid-template-columns: 0.5fr 1fr; gap: clamp(28px, 6vw, 90px); align-items: start; margin-bottom: clamp(42px, 7vw, 78px); }
+      .section-head p:last-child { max-width: 650px; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.14rem); }
+
+      .people { background: var(--paper); }
+      .people-grid { display: grid; grid-template-columns: 1.15fr 0.85fr 0.85fr; gap: 12px; }
+      .person-card { position: relative; min-height: 520px; overflow: hidden; background: var(--charcoal); color: var(--white); }
+      .person-card img { position: absolute; inset: 0; height: 100%; object-fit: cover; filter: saturate(0.72); transition: 500ms ease; }
+      .person-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 36%, rgba(12,13,15,0.9)); }
+      .person-card:nth-child(2)::before { content: ""; position: absolute; z-index: 1; inset: 0; background: rgba(105,216,210,0.22); mix-blend-mode: color; }
+      .person-card:nth-child(3)::before { content: ""; position: absolute; z-index: 1; inset: 0; background: rgba(239,102,93,0.25); mix-blend-mode: color; }
+      .person-card:hover img { transform: scale(1.025); }
+      .person-copy { position: absolute; z-index: 2; inset: auto 0 0; padding: 26px; }
+      .person-copy p { margin: 0; color: rgba(255,255,255,0.7); }
+      .placeholder { display: inline-flex; padding: 5px 8px; color: var(--ink); background: var(--acid); font-size: 0.58rem; font-weight: 800; text-transform: uppercase; }
+
+      .sound { color: var(--white); background: var(--charcoal); }
+      .sound .section-head p:last-child { color: rgba(255,255,255,0.63); }
+      .sound-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .record-card { display: grid; grid-template-columns: 220px 1fr; gap: 34px; align-items: center; padding: clamp(24px, 4vw, 48px); color: var(--ink); background: var(--paper); }
+      .record-card.alt { background: var(--cyan); }
+      .disc {
+        position: relative;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: repeating-radial-gradient(circle at center, #151515 0 5px, #252525 6px 8px);
+        box-shadow: 0 18px 36px rgba(0,0,0,0.24);
+      }
+      .disc::before { content: "A / B"; position: absolute; inset: 34%; display: grid; place-items: center; border-radius: 50%; color: var(--ink); background: var(--acid); font-size: 0.68rem; font-weight: 900; }
+      .disc.playing { animation: spin 3.2s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .track-title { margin-bottom: 8px; font-family: "Bodoni 72", Didot, Georgia, serif; font-size: clamp(1.55rem, 2.7vw, 2.55rem); line-height: 1; }
+      .track-meta { margin-bottom: 22px; color: #4f5358; }
+      .ab-controls { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; }
+      .ab-button, .play-button { min-height: 42px; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; }
+      .ab-button.active { color: var(--white); background: var(--ink); }
+      .play-button { width: 44px; font-size: 1rem; }
+      .missing-note { margin: 14px 0 0; font-size: 0.69rem; font-weight: 700; text-transform: uppercase; }
+
+      .look { background: var(--white); }
+      .gallery { display: grid; grid-template-columns: 1.25fr 0.75fr 0.75fr; grid-template-rows: 330px 330px; gap: 10px; }
+      .gallery figure { position: relative; margin: 0; overflow: hidden; background: #d9d9d9; }
+      .gallery figure:first-child { grid-row: 1 / span 2; }
+      .gallery figure:nth-child(4) { grid-column: 2 / span 2; }
+      .gallery img { height: 100%; object-fit: cover; }
+      .gallery figure:nth-child(2) img { filter: grayscale(1) contrast(1.08); }
+      .gallery figure:nth-child(3)::after { content: ""; position: absolute; inset: 0; background: rgba(93,121,255,0.3); mix-blend-mode: color; }
+      .gallery figcaption { position: absolute; z-index: 2; inset: auto 12px 12px; padding: 7px 9px; width: max-content; max-width: calc(100% - 24px); color: var(--ink); background: var(--paper); font-size: 0.65rem; font-weight: 800; text-transform: uppercase; }
+
+      .reviews { overflow: hidden; color: var(--white); background: var(--electric); }
+      .reviews .section { padding-bottom: 52px; }
+      .review-shell { display: grid; grid-template-columns: minmax(180px, 0.36fr) minmax(0, 1fr); gap: clamp(30px, 7vw, 100px); align-items: start; }
+      .rating { position: sticky; top: 30px; }
+      .rating-number { margin: 0; font-family: "Bodoni 72", Didot, Georgia, serif; font-size: clamp(4.4rem, 8vw, 8rem); line-height: 0.8; }
+      .stars { margin: 18px 0 8px; color: var(--acid); letter-spacing: 0.18em; }
+      .review-window { position: relative; min-height: 370px; }
+      .review-slide { display: none; }
+      .review-slide.active { display: block; animation: appear 300ms ease; }
+      @keyframes appear { from { opacity: 0; transform: translateY(8px); } }
+      blockquote { margin: 0 0 32px; font-family: "Bodoni 72", Didot, Georgia, serif; font-size: clamp(2rem, 4.2vw, 4.2rem); line-height: 1.04; }
+      .review-byline { display: flex; justify-content: space-between; gap: 20px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.42); font-size: 0.72rem; text-transform: uppercase; }
+      .review-placeholder { max-width: 560px; padding: 24px; color: var(--ink); background: var(--acid); }
+      .review-placeholder h3 { font-family: "Bodoni 72", Didot, Georgia, serif; font-size: 2rem; font-weight: 400; }
+      .review-controls { display: flex; justify-content: flex-end; gap: 8px; margin-top: 28px; }
+      .review-controls button { width: 46px; height: 46px; border: 1px solid rgba(255,255,255,0.6); color: var(--white); background: transparent; cursor: pointer; font-size: 1.1rem; }
+
+      .booking { color: var(--white); background: var(--ink); }
+      .booking-inner { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; padding: clamp(72px, 10vw, 130px) 0; display: grid; grid-template-columns: 1fr 0.55fr; gap: clamp(34px, 8vw, 110px); align-items: end; }
+      .booking h2 { max-width: 850px; }
+      .booking-copy { color: rgba(255,255,255,0.66); }
+      .booking .button { margin-top: 16px; }
+      footer { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 24px clamp(20px, 4vw, 60px); color: var(--white); background: var(--ink); border-top: 1px solid var(--line-dark); font-size: 0.67rem; text-transform: uppercase; }
+
+      @media (max-width: 980px) {
+        .nav-links { display: none; }
+        .hero-bottom, .section-head, .review-shell, .booking-inner { grid-template-columns: 1fr; }
+        .people-grid { grid-template-columns: 1fr 1fr; }
+        .person-card:first-child { grid-column: 1 / span 2; }
+        .sound-grid { grid-template-columns: 1fr; }
+        .rating { position: static; }
+      }
+      @media (max-width: 720px) {
+        body::before { display: none; }
+        .phone { font-size: 0; }
+        .phone::after { content: "Call"; font-size: 0.7rem; }
+        .hero { min-height: 86vh; }
+        h1 { max-width: 100%; font-size: clamp(2.7rem, 11.5vw, 3.55rem); line-height: 0.96; }
+        .hero .kicker { max-width: 270px; }
+        .hero-bottom { align-items: start; }
+        .proof-nav { grid-template-columns: 1fr; }
+        .proof-nav a { border-right: 0; border-bottom: 1px solid var(--line-dark); }
+        .people-grid { grid-template-columns: 1fr; }
+        .person-card, .person-card:first-child { grid-column: auto; min-height: 420px; }
+        .record-card { grid-template-columns: 1fr; }
+        .disc { width: min(72vw, 240px); margin: 0 auto; }
+        .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 250px); }
+        .gallery figure:first-child { grid-column: 1 / span 2; grid-row: auto; }
+        .gallery figure:nth-child(4) { grid-column: 1 / span 2; }
+        footer { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#top"><img src="../../MEDIA/IMAGES/00-checkmark-audio-logo-mark-web.png" alt=""><span>Checkmark Audio</span></a>
+      <nav class="nav-links" aria-label="Preview navigation"><a href="#people">People</a><a href="#sound">Sound</a><a href="#look">Studio</a><a href="#reviews">Reviews</a><a href="#booking">Book</a></nav>
+      <a class="phone" href="tel:+15052670558">505-267-0558</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-media" src="../../MEDIA/IMAGES/00-studio-sign-hero-web.jpg" alt="Checkmark Audio studio entrance sign">
+        <div class="hero-overlay"></div><div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="kicker">Albuquerque recording / production / mixing / mastering</p>
+          <h1>Make the record sound like you meant it.</h1>
+          <div class="hero-bottom">
+            <p class="hero-copy">A professional studio for artists, bands, creators, and students who want strong guidance, a comfortable room, and release-ready work.</p>
+            <div class="button-row"><a class="button primary" href="#booking">Book a free consultation</a><a class="button ghost" href="#sound">Hear the work</a></div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="proof-nav" aria-label="Homepage proof sections">
+        <a href="#people"><small>01</small><strong>Who we work with</strong><span>↓</span></a>
+        <a href="#sound"><small>02</small><strong>What we sound like</strong><span>↓</span></a>
+        <a href="#look"><small>03</small><strong>What we look like</strong><span>↓</span></a>
+      </nav>
+
+      <section class="people" id="people">
+        <div class="section">
+          <div class="section-head">
+            <div><p class="kicker">01 / The people</p><h2>Built around the artist.</h2></div>
+            <p>The strongest proof is not a gear list. It is the range of people who can walk in, feel understood, and leave with work that sounds more finished than when they arrived.</p>
+          </div>
+          <div class="people-grid">
+            <article class="person-card"><img src="../../MEDIA/IMAGES/08-vocal-booth-artist-web.jpg" alt="Vocal artist recording in the Checkmark Audio booth"><div class="person-copy"><span class="placeholder">Artist credit needed</span><h3>Vocalists &amp; rappers</h3><p>Capture, direction, comping, production, and mix support.</p></div></article>
+            <article class="person-card"><img src="../../MEDIA/IMAGES/03-artist-portrait-web.jpg" alt="Artist portrait made with Checkmark Audio"><div class="person-copy"><span class="placeholder">Project credit needed</span><h3>Singer-songwriters</h3><p>From voice memo to arranged, release-ready record.</p></div></article>
+            <article class="person-card"><img src="../../MEDIA/IMAGES/00-control-room-instruments-web.jpg" alt="Control room and instruments at Checkmark Audio"><div class="person-copy"><span class="placeholder">Session photo needed</span><h3>Bands &amp; creators</h3><p>Room, engineering, collaboration, and practical next steps.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sound" id="sound">
+        <div class="section">
+          <div class="section-head">
+            <div><p class="kicker">02 / The sound</p><h2>Before. After. The difference.</h2></div>
+            <p>These CD-inspired A/B players preserve the listening mechanic while making the missing content obvious. Once approved files arrive, each card can switch instantly between the raw and finished version.</p>
+          </div>
+          <div class="sound-grid">
+            <article class="record-card">
+              <div class="disc" aria-hidden="true"></div>
+              <div><span class="placeholder">Audio files needed</span><p class="track-title">Vocal production comparison</p><p class="track-meta">Raw session / Produced, mixed &amp; mastered</p><div class="ab-controls"><button class="ab-button active" type="button">A / Before</button><button class="ab-button" type="button">B / After</button><button class="play-button" type="button" aria-label="Preview placeholder">▶</button></div><p class="missing-note">Placeholder mechanic: no audio attached yet</p></div>
+            </article>
+            <article class="record-card alt">
+              <div class="disc" aria-hidden="true"></div>
+              <div><span class="placeholder">Audio files needed</span><p class="track-title">Mix &amp; master comparison</p><p class="track-meta">Client mix / Checkmark final master</p><div class="ab-controls"><button class="ab-button active" type="button">A / Before</button><button class="ab-button" type="button">B / After</button><button class="play-button" type="button" aria-label="Preview placeholder">▶</button></div><p class="missing-note">Placeholder mechanic: no audio attached yet</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="look" id="look">
+        <div class="section">
+          <div class="section-head">
+            <div><p class="kicker">03 / The studio</p><h2>A real look inside.</h2></div>
+            <p>Bright, dark, technical, comfortable. This section uses different image treatments and a looser editorial grid so the visual rhythm changes without hiding what the studio actually looks like.</p>
+          </div>
+          <div class="gallery">
+            <figure><img src="../../MEDIA/IMAGES/04-control-room-web.jpg" alt="Checkmark Audio control room"><figcaption>Control room</figcaption></figure>
+            <figure><img src="../../MEDIA/IMAGES/01-live-room-web.jpg" alt="Checkmark Audio live room"><figcaption>Live room</figcaption></figure>
+            <figure><img src="../../MEDIA/IMAGES/02-blue-microphone-pop-filter-web.jpg" alt="Studio microphone and pop filter"><figcaption>Vocal capture</figcaption></figure>
+            <figure><img src="../../MEDIA/IMAGES/07-compressor-rack-web.jpg" alt="Studio compressor and rack equipment"><figcaption>Outboard detail</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <div class="section">
+          <div class="review-shell">
+            <aside class="rating"><p class="kicker">Client reviews</p><p class="rating-number">5.0</p><p class="stars" aria-label="Five stars">★★★★★</p><p>Current public rating found during review research. Confirm count before launch.</p></aside>
+            <div>
+              <div class="review-window" aria-live="polite">
+                <article class="review-slide active"><blockquote>“Checkmark Audio is easy to work with. Their free consultation is invaluable and Gavin is a true pro with a ton of experience.”</blockquote><div class="review-byline"><span>Jake H.</span><span>Current live website / Yelp attribution</span></div></article>
+                <article class="review-slide"><div class="review-placeholder"><h3>Google review #2 goes here.</h3><p>Use the real reviewer name and approved review text once it is copied from the current Google Business Profile.</p></div></article>
+                <article class="review-slide"><div class="review-placeholder"><h3>Google review #3 goes here.</h3><p>This slide shows the carousel behavior without inventing a client quote or credit.</p></div></article>
+              </div>
+              <div class="review-controls"><button type="button" data-review="prev" aria-label="Previous review">←</button><button type="button" data-review="next" aria-label="Next review">→</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking" id="booking">
+        <div class="booking-inner">
+          <div><p class="kicker">Ready when you are</p><h2>Bring the idea. We’ll help shape the next step.</h2></div>
+          <div><p class="booking-copy">Start with a free consultation about your project, the right room, and the session path that makes sense.</p><a class="button primary" href="mailto:CheckmarkAudio@gmail.com?subject=Free%20consultation%20request">Book a free consultation</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>© 2026 Checkmark Audio</span><span>5413 Lomas Blvd / Albuquerque, NM / 505-267-0558</span></footer>
+    <script>
+      const reviewSlides = [...document.querySelectorAll('.review-slide')];
+      let reviewIndex = 0;
+      document.querySelectorAll('[data-review]').forEach((button) => {
+        button.addEventListener('click', () => {
+          reviewSlides[reviewIndex].classList.remove('active');
+          reviewIndex = button.dataset.review === 'next'
+            ? (reviewIndex + 1) % reviewSlides.length
+            : (reviewIndex - 1 + reviewSlides.length) % reviewSlides.length;
+          reviewSlides[reviewIndex].classList.add('active');
+        });
+      });
+
+      document.querySelectorAll('.record-card').forEach((card) => {
+        const disc = card.querySelector('.disc');
+        const play = card.querySelector('.play-button');
+        const modes = [...card.querySelectorAll('.ab-button')];
+        play.addEventListener('click', () => {
+          disc.classList.toggle('playing');
+          play.textContent = disc.classList.contains('playing') ? '■' : '▶';
+        });
+        modes.forEach((mode) => mode.addEventListener('click', () => {
+          modes.forEach((item) => item.classList.remove('active'));
+          mode.classList.add('active');
+        }));
+      });
+    </script>
+  </body>
+</html>

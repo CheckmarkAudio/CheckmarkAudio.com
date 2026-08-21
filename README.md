@@ -1,71 +1,48 @@
-# Checkmark Audio Website
+# CheckmarkAudio.com
 
-Static GitHub Pages rebuild for CheckmarkAudio.com. The current production entry point is `index.html`.
+This repository contains Checkmark Audio's independent replacement website. The current Wix site remains public until this replacement is approved, tested, and deliberately launched.
 
-## Folder Map
+## Canonical website
 
-- `00_START/`: quick-start docs and the consolidated project context.
-- `01_WEBSITE/`: consolidated website planning files and the active source-of-truth DOCX.
-- `02_ASSETS/`: tracked source image library and optimized production assets.
-- `03_EMAIL_TEMPLATES/`: EmailJS-ready templates and email copy.
-- `04_MIGRATION/`: Wix migration manifests, URL records, and asset audit output.
-- `98_TOOLS/`: local helper scripts for extraction, downloads, and asset audits.
-- `99_ARCHIVE/`: archived or ignored local material that should not drive the website build.
+The only active website is at the repository root:
 
-## Local Preview
+- `index.html` — approved working homepage direction recovered and promoted on 2026-08-21
+- `services.html` — service overview and approved starting-price guidance
+- `recording.html`, `mixing-mastering.html`, `live-recordings.html` — detailed service pages
+- `studio-a.html`, `studio-b.html`, `team.html`, `community.html` — supporting pages
+- `site.css` and the root `checkmark-*.css` / `checkmark-*.js` files — canonical website support files
 
-Open `index.html` directly in a browser, or run a tiny local server:
+The root site remains `noindex` and visibly marked as in development. It is not the public CheckmarkAudio.com site yet.
 
-```sh
-python3 -m http.server 8080
-```
+## Folder map
 
-Then visit `http://localhost:8080`.
+- `START_HERE/` — current project state, rules, decisions, and next actions
+- `MEDIA/` — the only active website media library
+- `SEO/` — SEO requirements, inventories, and research
+- `POLICIES/` — organized approved and reference policy documents
+- `EMAIL/` — inquiry-email assets and documentation
+- `DRAFTS/active/` — only genuinely active off-direction experiments, each in its own dated folder
+- `DRAFTS/reference/` — retained design studies that are not active
+- `ARCHIVE/` — superseded website directions and historical systems; never use as current by default
+- `MIGRATION/` — launch and migration records
+- `scripts/` — maintenance utilities
 
-## Deploying To GitHub Pages
+There is deliberately no second active website folder and no top-level `MOCKUP/`.
 
-1. Push this folder to the GitHub repository for `CheckmarkAudio.com`.
-2. In GitHub, open **Settings > Pages**.
-3. Set the source to the main branch and root folder.
-4. Confirm the custom domain is `CheckmarkAudio.com`.
+## Protected homepage direction
 
-Do not attach the custom domain until the site is ready to migrate away from the current Wix setup.
-The static launch includes `404.html`, `robots.txt`, and `sitemap.xml`.
+The homepage selected by Bridget on 2026-08-21 is the root `index.html`. Its approved hero references are in `START_HERE/APPROVED_VISUAL_BASELINES/`, and its canonical media/crop record is `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`.
 
-## Asset Policy
+Visual editor changes stored in a browser are working changes only. An approved change is not protected until it is also written into the root files and the selection record.
 
-The public site should use optimized deployable files from `02_ASSETS/production/`.
-The tracked source image library now lives in `02_ASSETS/library/`, with cleaned, descriptive filenames so future website planning can find usable images without digging through Wix hashes.
-Keep new raw one-off downloads in `99_ARCHIVE/ignored-local/original-assets/` only as temporary local intake; that folder is ignored by Git.
+## Local preview
 
-Project history, migration context, and baseline planning live in `00_START/project-context.md`.
+From the repository root, run a local web server and open `http://localhost:4173/`. Do not open HTML files directly from Finder because the media index and interactive tools require HTTP.
 
-## Booking Note
+## Production boundary
 
-The current Wix booking flow is replaced with direct consultation requests by email and phone. Add a scheduling provider link later if you want automated calendar booking after the domain cutover.
-
-## Pulling Media From Wix
-
-Wix does not provide a clean full-site HTML/CSS export. For media migration, use Wix Media Manager downloads when possible. If there is no bulk download button, you can export a local Chrome HAR from the Wix Media Manager network traffic and let this repo extract media URLs.
-
-Suggested workflow:
-
-1. In Chrome DevTools, open the **Network** tab.
-2. Refresh the Wix Media Manager page.
-3. Scroll through the full media library so every item loads.
-4. Right-click the Network request list and choose **Save all as HAR with content**.
-5. Save it into this repo as `99_ARCHIVE/ignored-local/wix-export/media.har`.
-6. Run:
-
-```sh
-node 98_TOOLS/extract-wix-media.mjs 99_ARCHIVE/ignored-local/wix-export/media.har
-node 98_TOOLS/download-wix-media.mjs 99_ARCHIVE/ignored-local/wix-export/wix-media-urls.txt 99_ARCHIVE/ignored-local/original-assets
-```
-
-HAR files can contain sensitive request metadata. Keep `99_ARCHIVE/ignored-local/wix-export/*.har` local and do not commit it.
-
-## Website Completion Source Of Truth
-
-The active website completion checklist lives at `01_WEBSITE/99_SOURCES/CHECKMARK_AUDIO_WEBSITE_SOURCE_OF_TRUTH.docx`. Codex and Claude should update that DOCX only for checklist answers, SEO notes, SEO gaps, and build-ready planning.
-
-The handler rules for this workflow live at `01_WEBSITE/00_INDEX/source-of-truth-rules.md`.
+- Keep Wix live until the replacement passes review and launch checks.
+- The free consultation uses a selectable Cal.com calendar.
+- The inquiry form uses the branded EmailJS workflow.
+- Paid project-session self-booking remains separate future work.
+- Do not remove `noindex` or point the domain here without Bridget's explicit launch approval.
