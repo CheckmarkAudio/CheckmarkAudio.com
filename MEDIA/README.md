@@ -2,6 +2,10 @@
 
 `MEDIA/` is the only active, publishable website-media library. Files in this folder may become publicly reachable when the website is deployed.
 
+## Git storage boundary — 2026-08-21
+
+The optimized image library and the two small homepage comparison `.m4a` files are protected in Git. The remaining full audio masters and the multi-gigabyte `VIDEO/` library are correctly filed here locally but are intentionally not committed yet; some are too large for ordinary Git hosting. Do not delete them or add them wholesale to Git. Choose Git LFS or protected object storage first, then document and perform that migration as a separate task.
+
 ## Active Structure
 
 ```text
