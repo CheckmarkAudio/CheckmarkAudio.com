@@ -361,3 +361,27 @@ This is the chronological record of root-website and exploratory visual decision
 **Outcome and validation:** The recovered configuration is now file-backed at root. The superseded root homepage, old mockup, and pre-promotion preview are separated in dated archive folders so none can be mistaken for the active design.
 
 **Open questions / follow-up:** Approval protects this homepage direction and supplied desktop references; complete page-by-page, responsive, accessibility, content, SEO, and launch approval remain open.
+
+## 2026-08-21 — Homepage and Services / services catalog placement
+
+**Status:** Preferred direction
+
+**Change:** Move the complete filterable “Come with an idea. Leave with a record.” services catalog from the canonical homepage to the Services page.
+
+**Preserve:** The catalog's six service cards, approved starting-price guidance, filter categories, cream editorial styling, service-specific inquiry paths, shared navigation, homepage media, inquiry form, selectable Cal.com consultation calendar, and development `noindex` boundary.
+
+**Reference:** Bridget's attached screenshot, `Screenshot 2026-08-21 at 12.14.38 PM.png`, and her instruction to put the pictured section on the Services page and remove it from the front page.
+
+**Acceptance criteria:**
+
+- [x] The catalog appears on `services.html` and no longer appears in `index.html`.
+- [x] All, Recording, Finish, and Create filters update the visible cards and pressed state.
+- [x] Card links return to the homepage inquiry form with the matching service selected and a starter message filled in.
+- [x] Desktop, tablet, and mobile layouts have no horizontal overflow; cards display in three, two, and one columns respectively.
+- [x] The homepage media, inquiry form, consultation calendar, navigation, and `noindex` state remain in place.
+
+**Files changed:** `index.html`, `services.html`, `checkmark-services-editorial.css`, and this change log.
+
+**Outcome and validation:** Browser-tested at 1440 px, 768 px, and 390 px. The six-card catalog renders on Services, the category control filters correctly, the homepage contains no catalog instance, and the Vocal Recording card successfully prefills the homepage inquiry form. The only console warnings came from the existing third-party Cal.com embed and are unrelated to this placement change.
+
+**Open questions / follow-up:** This entry records the requested placement as the preferred direction; it does not approve the entire Services page or authorize launch.
