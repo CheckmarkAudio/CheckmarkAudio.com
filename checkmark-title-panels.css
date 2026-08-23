@@ -1,0 +1,136 @@
+/* Shared hero-image treatment approved for the active replacement site.
+   Photography stays at full strength; readability comes from a broad,
+   left-anchored gradient that feathers to clear behind the hero copy. */
+
+.hero-media img,
+.sme-background-image {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.hero-media::before,
+.pagehero.sme-host::after {
+  display: none !important;
+  background: none !important;
+}
+
+.hero::before,
+.pagehero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 24% 54%, rgba(156, 91, 31, 0.12), transparent 27%),
+    linear-gradient(90deg,
+      rgba(5, 6, 6, 0.97) 0%,
+      rgba(5, 6, 6, 0.92) 24%,
+      rgba(5, 6, 6, 0.74) 43%,
+      rgba(5, 6, 6, 0.38) 62%,
+      rgba(5, 6, 6, 0.12) 76%,
+      rgba(5, 6, 6, 0) 88%);
+  pointer-events: none;
+}
+
+.hero-title-panel,
+.pagehero > .wrap {
+  position: relative;
+  isolation: isolate;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero-title-panel::before,
+.pagehero > .wrap::before {
+  content: none;
+}
+
+.hero-title-panel {
+  z-index: 1;
+  width: min(100%, 760px);
+  padding: clamp(24px, 3vw, 42px);
+}
+
+.hero-copy .actions {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title-panel .eyebrow {
+  margin-top: 0;
+}
+
+.hero-title-panel .local {
+  margin-bottom: 0;
+}
+
+.pagehero {
+  position: relative;
+  overflow: hidden;
+  background-image: var(--page-image) !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.pagehero.qa-hero {
+  background-position: center 52% !important;
+}
+
+.pagehero > .wrap {
+  z-index: 2;
+  width: min(900px, calc(100% - 40px));
+  margin-right: auto;
+  margin-left: max(20px, calc((100% - var(--max)) / 2));
+  padding: clamp(26px, 3.5vw, 48px);
+}
+
+.pagehero > .wrap > :first-child {
+  margin-top: 0;
+}
+
+.pagehero > .wrap > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 660px) {
+  .hero .hero-title-panel h1 {
+    font-size: clamp(3.15rem, 14vw, 5rem);
+  }
+
+  .hero-title-panel::before,
+  .pagehero > .wrap::before {
+    content: none;
+  }
+
+  .hero::before,
+  .pagehero::before {
+    background:
+      radial-gradient(circle at 25% 56%, rgba(156, 91, 31, 0.1), transparent 28%),
+      linear-gradient(90deg,
+        rgba(5, 6, 6, 0.97) 0%,
+        rgba(5, 6, 6, 0.91) 52%,
+        rgba(5, 6, 6, 0.62) 76%,
+        rgba(5, 6, 6, 0.2) 94%,
+        rgba(5, 6, 6, 0.08) 100%);
+  }
+
+  .hero-title-panel {
+    padding: 22px 18px;
+  }
+
+  .pagehero > .wrap {
+    width: calc(100% - 26px);
+    margin-right: 13px;
+    margin-left: 13px;
+    padding: 24px 19px;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .hero::before,
+  .pagehero::before {
+    background: linear-gradient(90deg, rgba(5, 6, 6, 0.99) 0%, rgba(5, 6, 6, 0.95) 40%, rgba(5, 6, 6, 0.62) 68%, rgba(5, 6, 6, 0) 90%);
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: Project State
 status: active
-updated: 2026-08-21
+updated: 2026-08-23
 ---
 
 # Project State
@@ -47,6 +47,7 @@ The former top-level `MOCKUP/` is archived at `ARCHIVE/old-website-directions/mo
 
 - Active official logo standards are the matching gold, black, and white 2000×2000 transparent files recorded in `SEO/LOGO_ASSET_MANIFEST.md`; superseded logo work is archived.
 - Approved visual character: deep black, warm cream, champagne gold, restrained red accent, editorial serif, expressive italic, and condensed labels.
+- Approved hero-image treatment: show homepage and inner-page hero photography at full strength. Use a broad, full-banner-height left-anchored charcoal gradient that is darkest behind the hero heading and supporting copy and fades horizontally to clear, with no border, visible container edge, or horizontal seam. Do not dim or lower the opacity of the underlying image.
 - Approved starting-price model: vocal recording from $50/hour, general studio/engineering from $65/hour, band recording from $75/hour; project work is quoted.
 - Studio-client policies are approved in `POLICIES/01_STUDIO_CLIENT/POLICY_SET.md`. Website privacy/legal documents retain the statuses written in their files.
 - Do not infer missing team, studio, rights, testimonial, policy, or business facts.

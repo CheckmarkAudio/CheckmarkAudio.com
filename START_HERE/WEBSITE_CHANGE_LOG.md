@@ -385,3 +385,57 @@ This is the chronological record of root-website and exploratory visual decision
 **Outcome and validation:** Browser-tested at 1440 px, 768 px, and 390 px. The six-card catalog renders on Services, the category control filters correctly, the homepage contains no catalog instance, and the Vocal Recording card successfully prefills the homepage inquiry form. The only console warnings came from the existing third-party Cal.com embed and are unrelated to this placement change.
 
 **Open questions / follow-up:** This entry records the requested placement as the preferred direction; it does not approve the entire Services page or authorize launch.
+
+## 2026-08-22 — All pages / hero imagery — Full-strength photographs with translucent title panels
+
+**Status:** Preferred direction
+
+**Change:** Remove the darkening filters and full-image gradient overlays from the homepage carousel and every inner-page hero. Place the hero eyebrow, title, tagline, and supporting introduction on a restrained translucent panel instead.
+
+**Preserve:** The protected homepage composition, all file-backed image selections and crop positions, page copy, navigation, calls to action, media-editing controls, gallery and video presentation, responsive behavior, and development `noindex` state.
+
+**Reference:** Bridget's 2026-08-22 instruction: do not dim the lighting or opacity of page background images; use a translucent box behind the title fonts.
+
+**Acceptance criteria:**
+
+- [x] Homepage carousel images render without brightness, saturation, contrast, or opacity reduction.
+- [x] Inner-page hero images render without a full-image dark gradient or image brightness reduction.
+- [x] Homepage and inner-page hero copy has a translucent, bordered readability panel.
+- [x] Ordinary content images, studio galleries, video, captions, and approved crop settings remain unchanged.
+- [x] The treatment adapts to desktop and mobile widths.
+- [ ] Bridget reviews the treatment across the homepage, Q & A, one service page, and one studio page.
+
+**Files changed:** `checkmark-title-panels.css`, `index.html`, `inner-pages.js`, `START_HERE/PROJECT_STATE.md`, and this change log.
+
+**Outcome and validation:** Shared CSS now owns the hero-image and title-panel rule for all ten active pages, including locally selected hero images. JavaScript syntax, 106 active local references, nine inner-page hero hooks, and the local server responses pass; visual desktop/mobile approval remains with Bridget's page-by-page review.
+
+**Open questions / follow-up:** Fine-tune the panel opacity, width, and padding only after reviewing representative light and dark hero photographs. This entry does not authorize changes to ordinary editorial imagery or launch.
+
+## 2026-08-23 — All pages / hero titles — Broad left-anchored gradient selected
+
+**Status:** Preferred direction selected by Bridget
+
+**Change:** Replace the bordered translucent title boxes on the homepage and all nine inner-page heroes with the broad left-anchored Atmospheric Veil concept. Keep the gradient darkest directly behind the eyebrow, title, tagline, and supporting copy, then feather it smoothly to full transparency without a visible panel edge.
+
+**Preserve:** All approved hero photographs, carousel selections, crop positions, page wording, navigation, calls to action, media-editing controls, ordinary editorial imagery, responsive structure, and development `noindex` state.
+
+**Reference:** Bridget's 2026-08-23 review of the three title-treatment image boards and instruction, “lets do the broad left anchored gradient for each page then yes I like that.” The selected concept board is `DRAFTS/active/2026-08-23-hero-title-treatments/01-atmospheric-veil.png`.
+
+**Acceptance criteria:**
+
+- [x] No thin border, rectangular glass card, or hard title-container edge remains.
+- [x] One shared style applies the chosen gradient to the homepage and every inner-page hero.
+- [x] The gradient stays concentrated behind the copy and fades to clear before obscuring the full photograph.
+- [x] Homepage carousel imagery and inner-page hero photography remain at full image strength.
+- [x] The treatment adapts at mobile widths and includes a reduced-transparency fallback.
+- [ ] Bridget reviews the browser-rendered homepage, Services, Studio A, and Q & A pages after implementation.
+
+**Files changed:** `checkmark-title-panels.css`, `index.html`, `inner-pages.js`, `START_HERE/PROJECT_STATE.md`, the dated concept-study README, and this change log.
+
+**Outcome and validation:** Browser-tested on the homepage, Services, Studio A, and Q & A at desktop and 390-pixel mobile widths. The shared gradient renders without a border or solid panel background, stays concentrated behind the copy, preserves full-strength imagery, and introduces no horizontal overflow. The homepage mobile title size was tightened so “CHECKMARK” remains fully visible, and the homepage calls to action were given an explicit foreground layer above the extended gradient.
+
+**Open questions / follow-up:** Page-specific gradient position variables may be added only if representative photographs expose a readability problem. This selection does not authorize changing the approved photos or launching the website.
+
+### 2026-08-23 refinement — gradient spans the full banner height
+
+Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored gradient ended before the top of the hero. The shared treatment now lives on the full hero banner rather than the title container, covering the complete banner height and fading only from left to right. This removes the double-line/misalignment effect while preserving the selected Atmospheric Veil direction, full-strength photography, and borderless title presentation.
