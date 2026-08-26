@@ -30,6 +30,8 @@ Protected records:
 
 The homepage's four approved hero images are the studio sign, patch bay/rack gear, control-room microphone, and Antoine guitarist image recorded in the selection JSON. The three approved homepage section images are also file-backed there.
 
+On 2026-08-26 Bridget selected the matched dark-cinematic Studio A and Studio B concept pair for implementation. Both root studio pages now use the shared cinematic split layout: a large room-specific hero, three factual use chips, a three-image room-detail rail, and a cream three-column information deck. The complete existing page galleries and inquiry path remain in place. The selected page media is recorded in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, and wide rendered baselines are preserved in `START_HERE/APPROVED_VISUAL_BASELINES/`.
+
 The root site remains visibly marked as in development and `noindex`. It is not public production. It retains the real EmailJS inquiry flow and selectable Cal.com consultation calendar.
 
 ## Repository organization

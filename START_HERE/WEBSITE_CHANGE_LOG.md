@@ -439,3 +439,29 @@ This is the chronological record of root-website and exploratory visual decision
 ### 2026-08-23 refinement — gradient spans the full banner height
 
 Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored gradient ended before the top of the hero. The shared treatment now lives on the full hero banner rather than the title container, covering the complete banner height and fading only from left to right. This removes the double-line/misalignment effect while preserving the selected Atmospheric Veil direction, full-strength photography, and borderless title presentation.
+
+## 2026-08-26 — Studio A and Studio B / matched cinematic split pages
+
+**Status:** Preferred direction selected and implemented by Bridget
+
+**Change:** Replace the generic Studio A and Studio B intro layouts with the matched Concept 01 cinematic split system: a large room-specific hero, broad dark copy veil, monumental serif room name, three concise use chips, a stacked three-image room-detail rail, and a cream three-column information deck.
+
+**Preserve:** The root website, shared header/footer, `noindex` development state, factual Studio A/B descriptions, complete 12-image galleries, free-consultation and inquiry destinations, approved homepage baseline, and all unresolved gear/rate/roster approval gates.
+
+**Reference:** Bridget's 2026-08-26 instruction, “I like studio a and b examples 1 and 2 here, can you implement them into the website?”, the supplied Studio B mockup, and the paired `studio-a-concept-01-cinematic-split.png` and `studio-b-concept-01-cinematic-split.png` files in `DRAFTS/active/inner-page-layout-mockups-2026-08-26/`.
+
+**Acceptance criteria:**
+
+- [x] Studio A and Studio B use one cohesive component and responsive-layout system.
+- [x] Each page has its own authentic hero and supporting room-detail imagery.
+- [x] Only confirmed room uses and descriptions appear; no equipment models, rates, testimonials, or people were invented.
+- [x] The existing studio galleries remain present with all 12 images per page.
+- [x] Inquiry actions still lead to `index.html#book` and the shared mobile menu still works.
+- [x] Both pages retain `noindex,nofollow`, correct active navigation, and no broken local images.
+- [x] Browser testing at 1536×1024 and 390×844 shows no horizontal overflow or console warnings.
+
+**Files changed:** `studio-a.html`, `studio-b.html`, `studio-pages.css`, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, `START_HERE/PROJECT_STATE.md`, the dated study README, two approved visual baseline PNGs, and this change log.
+
+**Outcome and validation:** The implemented pages closely reproduce the selected visual hierarchy while remaining real HTML/CSS rather than flattened mockup artwork. Desktop keeps the stacked right-side photo rail; tablet and mobile convert it to a three-image horizontal filmstrip and stack the cream information cards. Wide approved baselines are stored as `2026-08-26-studio-a-cinematic-layout-wide.png` and `2026-08-26-studio-b-cinematic-layout-wide.png`.
+
+**Open questions / follow-up:** Final room-specific rates and any public equipment highlights remain approval-gated. This selection does not authorize launch or changes to the protected homepage.

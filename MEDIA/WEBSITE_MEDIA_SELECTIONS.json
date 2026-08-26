@@ -141,5 +141,25 @@
         "zoom": 115
       }
     }
+  },
+  "innerPageMedia": {
+    "studioA": {
+      "status": "Selected cinematic split layout implemented 2026-08-26",
+      "hero": "MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp",
+      "detailRail": [
+        "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp"
+      ]
+    },
+    "studioB": {
+      "status": "Selected cinematic split layout implemented 2026-08-26",
+      "hero": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp",
+      "detailRail": [
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp"
+      ]
+    }
   }
 }
