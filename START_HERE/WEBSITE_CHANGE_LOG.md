@@ -648,3 +648,39 @@ Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored
 **Files changed:** `community.html`, `community-page.css`, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, `START_HERE/PROJECT_STATE.md`, and this change log.
 
 **Open questions / follow-up:** Final public project names, credits, captions, outbound links, and permissions remain subject to the existing media and launch review gates.
+
+## 2026-09-01 — Logo audio visualizer draft (standalone experiment)
+
+**Status:** Draft prototype awaiting Bridget's review; no root website files touched
+
+**Change:** New standalone experiment at `DRAFTS/active/logo-audio-visualizer-2026-09-01/` — a music-reactive replacement candidate for the homepage YouTube music-demo video. The official gold checkmark logo pulses to the low end inside a mirrored circular spectrum analyzer (Web Audio API + canvas) in the brand gold palette. The track dropdown auto-lists every audio file in `MEDIA/AUDIO/`, so new song demos appear without code changes.
+
+**Preserve:** Root homepage and its gear-UI music-demo framing remain untouched; the official gold-gradient logo geometry is used unmodified per `SEO/LOGO_ASSET_MANIFEST.md`.
+
+**Files changed:** `DRAFTS/active/logo-audio-visualizer-2026-09-01/index.html`, its `README.md`, and this change log.
+
+**Open questions / follow-up:** Bridget reviews the motion and styling; integration into the homepage music section (inside the existing gear-UI framing) is a separate approved change. Final curated track list and display titles are Bridget's call — the auto-list currently shows raw session filenames, including unmixed/inst versions.
+
+## 2026-09-01 — Sound demo visualizer replaces demo reel video
+
+**Status:** Implemented per Bridget's direction; live-render review pending
+
+**Change:** The homepage gear console ("Demo reel") now hosts the approved music-reactive logo visualizer instead of the demo mp4: the bright official gold logo pulses to the low end inside the ambient twin-line halo (locked baseline `DRAFTS/active/logo-audio-visualizer-2026-09-01/APPROVED-LOCKED-2026-09-01.html`). Console head renamed "Sound demo"; cue arrows now toggle tracks; the Gain fader drives a Web Audio gain node; the readout shows track number and title.
+
+**Tracks:** Listed in `checkmark-demo-playlist.js` (11 mp3s from `MEDIA/AUDIO/`, filename-derived titles pending Bridget's edits). Adding a song = drop the mp3 in `MEDIA/AUDIO/` and add one line there. `untagged-master.mp3` omitted (no derivable title).
+
+**Compatibility:** Tap-to-play (mobile autoplay policies), `preload="none"`, blur fallback for pre-18 Safari, drawing paused off-screen/hidden tab, `prefers-reduced-motion` honored. Visualizer logo overrides the site-wide champagne toning to keep full gold (`#demoVizLogo img{filter:none}`).
+
+**Preserve:** Gear console framing, official logo geometry, `noindex`, launch gates. Prior video untouched at `MEDIA/VIDEO/cma-music-studio-demo.mp4`; old controller `checkmark-home-video-console.js` retained but no longer loaded.
+
+**Files changed:** `index.html`, `checkmark-home-media.css`, new `checkmark-demo-playlist.js`, new `checkmark-home-visualizer.js`, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, and this change log.
+
+**Validation:** Local server checks — play/pause via logo, track toggle continues playback, fader paints, no console errors, 390-pixel viewport shows no horizontal overflow and the stage fills the console screen.
+
+**Open questions / follow-up:** Bridget to edit playlist titles/order, review on her phone and desktop, and approve a new baseline screenshot. If the visualizer screen should center within the whole console (moving the gain channel), that is a separate design decision.
+
+## 2026-09-01 — Sound demo serves 30-second clips only
+
+**Change:** The sound demo now plays 30-second demo clips from `MEDIA/AUDIO/demo-clips/` instead of the full songs. `MEDIA/AUDIO/make-demo-clips.py` (requires ffmpeg) finds each song's most active 30 seconds by loudness, cuts it with fades, and strips metadata; rerunning it clips any newly added mp3. The full masters are never referenced by the website and stay out of Git per the `MEDIA/README.md` storage boundary; the small clips (~0.55 MB each) are committed and are the only audio the deployed site exposes.
+
+**Files changed:** `checkmark-demo-playlist.js`, new `MEDIA/AUDIO/make-demo-clips.py`, new `MEDIA/AUDIO/demo-clips/` (11 clips), and this change log.

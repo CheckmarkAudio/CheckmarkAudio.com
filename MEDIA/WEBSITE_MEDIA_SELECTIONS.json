@@ -23,7 +23,7 @@
     "slots": {
       "home-studio-photo-1": { "slot": "home-studio-photo-1", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp" },
       "home-studio-photo-2": { "slot": "home-studio-photo-2", "kind": "image", "src": "MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp" },
-      "home-feature-video-1": { "slot": "home-feature-video-1", "kind": "video", "src": "MEDIA/VIDEO/cma-music-studio-demo.mp4" },
+      "home-feature-video-1": { "slot": "home-feature-video-1", "kind": "audio-visualizer", "src": "checkmark-demo-playlist.js", "note": "2026-09-01: demo reel video replaced by the approved logo sound visualizer (baseline DRAFTS/active/logo-audio-visualizer-2026-09-01/APPROVED-LOCKED-2026-09-01.html); tracks listed in checkmark-demo-playlist.js; prior video retained at MEDIA/VIDEO/cma-music-studio-demo.mp4" },
       "home-feature-video-2": { "slot": "home-feature-video-2", "kind": "video", "src": "MEDIA/VIDEO/intro-richard-music-studio-checkmark-audio-recording.mp4" },
       "services-recording": { "slot": "services-recording", "kind": "dataset", "src": "MEDIA/IMAGES/jjune-vocal-recording-session.webp" },
       "services-production": { "slot": "services-production", "kind": "dataset", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp" },
@@ -39,9 +39,9 @@
       "team-bridget": { "slot": "team-bridget", "kind": "image", "src": "MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "team-richard": { "slot": "team-richard", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-guitar-lesson.webp", "desktop": { "x": 48, "y": 49.85511363636363, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "community-hero": { "slot": "community-hero", "kind": "background", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-view-02.webp", "cssVar": "--page-image" },
-      "community-lead": { "slot": "community-lead", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/recording-studio-engineer-and-clients-session.webp" },
-      "community-tonight-1": { "slot": "community-tonight-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/kai-warrior-interview-checkmark-audio-studio.webp" },
-      "community-tonight-2": { "slot": "community-tonight-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/male-vocalist-microphone-portrait.webp" },
+      "community-lead": { "slot": "community-lead", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp" },
+      "community-tonight-1": { "slot": "community-tonight-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/unchained-male-vocalist-checkmark-tonight.webp" },
+      "community-tonight-2": { "slot": "community-tonight-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/unchained-female-vocalist-checkmark-tonight.webp" },
       "community-tonight-3": { "slot": "community-tonight-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/male-musician-studio-interview-speaking.webp" },
       "community-stories": { "slot": "community-stories", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-and-marz-studio-session.webp" },
       "community-produced": { "slot": "community-produced", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/artist-purple-silhouette-view-05.webp" },
@@ -206,10 +206,10 @@
     },
     "community": {
       "status": "Selected cinematic broadcast-wall layout implemented 2026-09-01",
-      "lead": "MEDIA/IMAGES/GALLERY/recording-studio-engineer-and-clients-session.webp",
+      "lead": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp",
       "checkmarkTonight": [
-        "MEDIA/IMAGES/BY_PAGE/community/kai-warrior-interview-checkmark-audio-studio.webp",
-        "MEDIA/IMAGES/BY_PAGE/community/male-vocalist-microphone-portrait.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/unchained-male-vocalist-checkmark-tonight.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/unchained-female-vocalist-checkmark-tonight.webp",
         "MEDIA/IMAGES/BY_PAGE/community/male-musician-studio-interview-speaking.webp"
       ],
       "artistStories": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-and-marz-studio-session.webp",
