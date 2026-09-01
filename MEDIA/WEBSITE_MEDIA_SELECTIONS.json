@@ -39,7 +39,7 @@
       "team-bridget": { "slot": "team-bridget", "kind": "image", "src": "MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "team-richard": { "slot": "team-richard", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-guitar-lesson.webp", "desktop": { "x": 48, "y": 49.85511363636363, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "community-hero": { "slot": "community-hero", "kind": "background", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-view-02.webp", "cssVar": "--page-image" },
-      "community-lead": { "slot": "community-lead", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp" },
+      "community-lead-depth": { "slot": "community-lead-depth", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp" },
       "community-tonight-1": { "slot": "community-tonight-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/unchained-male-vocalist-checkmark-tonight.webp" },
       "community-tonight-2": { "slot": "community-tonight-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/unchained-female-vocalist-checkmark-tonight.webp" },
       "community-tonight-3": { "slot": "community-tonight-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/male-musician-studio-interview-speaking.webp" },

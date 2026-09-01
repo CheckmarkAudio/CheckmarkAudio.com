@@ -1,7 +1,7 @@
 ---
 title: Codex Handoff Queue
 status: active
-updated: 2026-08-18
+updated: 2026-09-01
 ---
 
 # Codex Handoff Queue
@@ -29,3 +29,5 @@ Check items off once Bridget has actually given them to Codex, not once Codex ha
 ## Backlog / still being refined
 
 - [ ] **Texture sourcing (precondition for the texture handoff above).** Find and download real, properly licensed (or CC0/free) texture files matching the three reference families — warm brown/gold grunge, B&W industrial (to be warm-tinted), fine geometric linework — at 2000px+ resolution, save them into `MEDIA/IMAGES/TEXTURES/APPROVED/`, and record each file's source + license in a `SOURCES.md` there. Reference screenshots go in `MEDIA/IMAGES/TEXTURES/REFERENCE/`.
+
+- [ ] **Community hero — revisit the foreground depth effect.** Preserve the current improved `COMMUNITY` typography, current consultation button, and selected lead photo. The intended effect is a real person in the foreground overlapping the `COMMUNITY` title like the depth effect on an iPhone lock screen—not a floating cap/logo, ellipse, simulated CSS mask, or unrelated cutout. The temporary depth overlay was removed because its subject alignment was visibly wrong. Revisit only after a clean transparent cutout can be made from the exact selected lead photo and aligned naturally with the source image; keep the photo rail restrained and close to the approved community draft.
