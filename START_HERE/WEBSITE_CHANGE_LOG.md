@@ -690,3 +690,17 @@ Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored
 **Change:** The paused sound demo now shows a centered white play arrow over the full-brightness logo, with a warm glow and slight scale-up on hover. Replaces the small gold arrow that sat below the logo; an earlier red treatment was rejected as too dark.
 
 **Files changed:** `checkmark-home-media.css`, `index.html` (stylesheet cache version), and this change log.
+
+## 2026-09-01 — Community hero foreground depth effect
+
+**Status:** Implemented to Bridget's selected concept; live-render review pending
+
+**Change:** The Community hero now has the intended depth effect — the foreground people overlap the `COMMUNITY` title like an iPhone lock screen. The lead photo is drawn twice: the full photo behind the title, and a transparent cutout of the foreground subjects above it. The cutout is traced from the exact selected lead photo with `MEDIA/IMAGES/make-subject-cutout.swift` (macOS Vision subject isolation) and kept on the source's original canvas size, so it overlays 1:1. Restored `community-page.js`, which mirrors the lead photo's live layout box, object-fit, crop, and zoom transform onto the cutout on load, resize, and mutation — so alignment holds through re-crops, breakpoints, and the localhost media editor, which restyles slotted images. Lead and rail photography brightened and the hero vignettes lightened to match the approved concept.
+
+**Safeguards:** The depth layer starts hidden and is only shown once alignment is computed, so it degrades to the plain title if scripting fails. It hides itself when the lead photo no longer matches `data-depth-for`, preventing a cutout of the wrong photo from being overlaid.
+
+**Files changed:** `community.html`, `community-page.css`, new `community-page.js`, new `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-foreground-cutout.webp`, new `MEDIA/IMAGES/make-subject-cutout.swift`, `START_HERE/CODEX_HANDOFF_QUEUE.md`, and this change log.
+
+**Validation:** Lead and cutout layers measured pixel-identical at desktop, 1150px, and 390px, including the mobile 1.15 zoom transform; verified both with the localhost media editor active and with it simulated off (production behaviour); no console errors; no horizontal overflow at 390px.
+
+**Open questions / follow-up:** The distressed/textured gold treatment on the `COMMUNITY` letters in the concept art is not implemented — the title still uses the smooth gold gradient. Bridget to review the live render and approve a baseline screenshot.
