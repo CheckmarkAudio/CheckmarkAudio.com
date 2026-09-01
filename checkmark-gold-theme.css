@@ -1,0 +1,93 @@
+:root {
+  --brand-gold: #d6a85e;
+  --brand-gold-bright: #e4bf7a;
+  --brand-gold-deep: #875b25;
+  --brand-gold-rgb: 214, 168, 94;
+  --gold: var(--brand-gold);
+  --gold2: var(--brand-gold);
+  --red: var(--brand-gold);
+  --line: rgba(var(--brand-gold-rgb), .24);
+}
+
+/* One warm-gold voice for display, label, and interactive typography. */
+body :is(
+  .eyebrow,
+  .media-number,
+  .hero h1,
+  .hero .tagline,
+  .hero .tagline b,
+  .pagehero h1,
+  .pagecta h2,
+  .gallery-head h2,
+  .services-copy h1,
+  .services-kicker,
+  .service-rate,
+  .service-window-bar,
+  .studio-kicker,
+  .studio-cinematic h1,
+  .studio-tagline,
+  .studio-tagline span,
+  .studio-flourish,
+  .feature,
+  .amount,
+  .caption .studio-label,
+  .contactbox b
+) {
+  color: var(--brand-gold);
+}
+
+.header .logo,
+.header .logo span,
+.header .navdrop > button,
+.header .navlinks > a:hover,
+.header .navlinks > a:focus-visible,
+.header .navdrop > .services-link:hover,
+.header .navdrop > .services-link:focus-visible,
+.header .navlinks > a[aria-current="page"],
+.header .navdrop > .services-link[aria-current="page"] {
+  color: var(--brand-gold);
+}
+
+.header .navlinks > a[aria-current="page"],
+.header .navdrop > .services-link[aria-current="page"] {
+  box-shadow: inset 0 -2px var(--brand-gold);
+}
+
+.header .navdrop-menu a:hover,
+.header .navdrop-menu a:focus-visible,
+.header .navdrop-menu a[aria-current="page"],
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--brand-gold-bright);
+}
+
+body[data-page="services"] {
+  --service-gold: var(--brand-gold);
+}
+
+.service-detail a {
+  text-decoration-color: var(--brand-gold);
+}
+
+.studio-showcase {
+  --studio-gold: var(--brand-gold);
+  --studio-red: var(--brand-gold);
+}
+
+.studio-info-card--action a,
+.qa-list summary:hover,
+.qa-list summary:focus-visible,
+.price,
+.textlink,
+.review a {
+  color: var(--brand-gold-deep);
+}
+
+.pending,
+.service-note {
+  border-left-color: var(--brand-gold);
+}
+
+:where(a, button, input, select, textarea):focus-visible {
+  outline-color: var(--brand-gold-bright);
+}

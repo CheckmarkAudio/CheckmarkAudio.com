@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Checkmark Audio — Logo Visualizer Draft</title>
+<style>
+  :root {
+    --bg: #0b0a08;
+    --gold-deep: #a96c22;
+    --gold-mid: #e5bd6d;
+    --gold-hi: #f5dc9b;
+    --ink: #eee6da;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
+  }
+  #stage { position: fixed; inset: 0; }
+  canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+  #logoWrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--logo-size, 220px);
+    height: var(--logo-size, 220px);
+    cursor: pointer;
+    will-change: transform;
+  }
+  #logoGlow {
+    position: absolute; inset: -45%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240, 205, 130, 0.35) 0%, rgba(240, 205, 130, 0.08) 45%, transparent 70%);
+    opacity: 0;
+    will-change: opacity, transform;
+    pointer-events: none;
+  }
+  #logo {
+    position: absolute; inset: 8%;
+    width: 84%; height: 84%;
+    object-fit: contain;
+    will-change: transform;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  #controls {
+    position: fixed;
+    left: 50%; bottom: 28px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(16, 16, 14, 0.72);
+    border: 1px solid rgba(240, 207, 136, 0.28);
+    border-radius: 999px;
+    padding: 10px 16px;
+    backdrop-filter: blur(8px);
+    z-index: 5;
+  }
+  #controls select, #controls button, #controls label {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid rgba(240, 207, 136, 0.35);
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+  }
+  #controls select { max-width: 220px; }
+  #controls select option { background: #171511; }
+  #controls button:hover, #controls label:hover { border-color: var(--gold-hi); color: var(--gold-hi); }
+  #playBtn { min-width: 78px; }
+  #fileInput { display: none; }
+
+  #hint {
+    position: fixed;
+    left: 50%; top: calc(50% + clamp(150px, 24vmin, 260px));
+    transform: translateX(-50%);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #d6a85e;
+    opacity: 0.85;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    z-index: 4;
+  }
+  #hint.hidden { opacity: 0; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="viz"></canvas>
+  <div id="logoWrap" title="Play / pause">
+    <div id="logoGlow"></div>
+    <img id="logo" src="../../../MEDIA/IMAGES/checkmark-audio-logo-official-gold-gradient-transparent.png" alt="Checkmark Audio">
+  </div>
+  <div id="hint">Press play</div>
+</div>
+
+<div id="controls">
+  <button id="playBtn">Play</button>
+  <select id="trackSelect"></select>
+  <label for="fileInput">Load file</label>
+  <input type="file" id="fileInput" accept="audio/*">
+</div>
+
+<audio id="player" crossorigin="anonymous" loop></audio>
+
+<script>
+(() => {
+  const canvas = document.getElementById('viz');
+  const ctx = canvas.getContext('2d');
+  const player = document.getElementById('player');
+  const playBtn = document.getElementById('playBtn');
+  const trackSelect = document.getElementById('trackSelect');
+  const fileInput = document.getElementById('fileInput');
+  const logoWrap = document.getElementById('logoWrap');
+  const logoGlow = document.getElementById('logoGlow');
+  const hint = document.getElementById('hint');
+
+  let audioCtx = null, analyser = null, freqData = null;
+  let W = 0, H = 0, dpr = 1;
+
+  // Mirrored radial spectrum: BAR_COUNT bars per side.
+  const BAR_COUNT = 72;
+  const smoothBars = new Float32Array(BAR_COUNT);
+  let bassLevel = 0;      // smoothed low-end energy, drives the logo pulse
+  let energyLevel = 0;    // smoothed broadband energy, drives ring + rotation
+  let rotation = -Math.PI / 2;
+
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = canvas.clientWidth; H = canvas.clientHeight;
+    canvas.width = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const logoSize = Math.round(Math.min(W, H) * 0.26);
+    logoWrap.style.setProperty('--logo-size', logoSize + 'px');
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function ensureAudio() {
+    if (audioCtx) return;
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const src = audioCtx.createMediaElementSource(player);
+    analyser = audioCtx.createAnalyser();
+    analyser.fftSize = 4096;
+    analyser.smoothingTimeConstant = 0.78;
+    src.connect(analyser);
+    analyser.connect(audioCtx.destination);
+    freqData = new Uint8Array(analyser.frequencyBinCount);
+  }
+
+  // Map each bar to a log-spaced frequency band (40 Hz – 15 kHz).
+  function barValue(i) {
+    const nyquist = audioCtx.sampleRate / 2;
+    const fMin = 40, fMax = 15000;
+    const f0 = fMin * Math.pow(fMax / fMin, i / BAR_COUNT);
+    const f1 = fMin * Math.pow(fMax / fMin, (i + 1) / BAR_COUNT);
+    let b0 = Math.floor(f0 / nyquist * freqData.length);
+    let b1 = Math.max(b0 + 1, Math.ceil(f1 / nyquist * freqData.length));
+    let sum = 0;
+    for (let b = b0; b < b1 && b < freqData.length; b++) sum += freqData[b];
+    return (sum / (b1 - b0)) / 255;
+  }
+
+  function draw() {
+    requestAnimationFrame(draw);
+    ctx.clearRect(0, 0, W, H);
+    if (!analyser) return;
+
+    analyser.getByteFrequencyData(freqData);
+
+    // Low-end energy (roughly < 150 Hz) for the pulse.
+    const nyquist = audioCtx.sampleRate / 2;
+    const bassBins = Math.max(4, Math.round(150 / nyquist * freqData.length));
+    let bass = 0;
+    for (let i = 0; i < bassBins; i++) bass += freqData[i];
+    bass = bass / bassBins / 255;
+    bassLevel += (bass - bassLevel) * (bass > bassLevel ? 0.5 : 0.12);
+
+    let energy = 0;
+    for (let i = 0; i < BAR_COUNT; i++) {
+      const v = barValue(i);
+      smoothBars[i] += (v - smoothBars[i]) * (v > smoothBars[i] ? 0.55 : 0.18);
+      energy += smoothBars[i];
+    }
+    energy /= BAR_COUNT;
+    energyLevel += (energy - energyLevel) * 0.15;
+
+    const cx = W / 2, cy = H / 2;
+    const logoR = Math.min(W, H) * 0.13;
+    const innerR = logoR * 1.42 * (1 + bassLevel * 0.05);
+    const maxLen = Math.min(W, H) * 0.20;
+
+    rotation += 0.0006 + energyLevel * 0.0022;
+
+    // Breathing ring just outside the logo.
+    ctx.beginPath();
+    ctx.arc(cx, cy, innerR - 6, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(214, 168, 94,' + (0.18 + bassLevel * 0.4).toFixed(3) + ')';
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+
+    // Mirrored radial bars, additive blend for a soft gold bloom.
+    ctx.globalCompositeOperation = 'lighter';
+    ctx.lineCap = 'round';
+    for (let i = 0; i < BAR_COUNT; i++) {
+      const v = Math.pow(smoothBars[i], 1.55);
+      const len = 3 + v * maxLen;
+      // Low frequencies at the top, highs sweeping down each side.
+      const a = (i + 0.5) / BAR_COUNT * Math.PI;
+      for (const side of [-1, 1]) {
+        const ang = rotation + a * side;
+        const x0 = cx + Math.cos(ang) * innerR;
+        const y0 = cy + Math.sin(ang) * innerR;
+        const x1 = cx + Math.cos(ang) * (innerR + len);
+        const y1 = cy + Math.sin(ang) * (innerR + len);
+        const g = ctx.createLinearGradient(x0, y0, x1, y1);
+        g.addColorStop(0, 'rgba(169, 108, 34, ' + (0.10 + v * 0.5).toFixed(3) + ')');
+        g.addColorStop(0.6, 'rgba(229, 189, 109, ' + (0.16 + v * 0.62).toFixed(3) + ')');
+        g.addColorStop(1, 'rgba(245, 220, 155, ' + (0.05 + v * 0.85).toFixed(3) + ')');
+        ctx.strokeStyle = g;
+        ctx.lineWidth = 2.4;
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(x1, y1);
+        ctx.stroke();
+        // Bright tip
+        if (v > 0.12) {
+          ctx.fillStyle = 'rgba(255, 232, 173, ' + (v * 0.8).toFixed(3) + ')';
+          ctx.beginPath();
+          ctx.arc(x1, y1, 1.4 + v * 1.6, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+    }
+    ctx.globalCompositeOperation = 'source-over';
+
+    // Logo pulse + glow.
+    const scale = 1 + bassLevel * 0.085;
+    logoWrap.style.transform = 'translate(-50%, -50%) scale(' + scale.toFixed(4) + ')';
+    logoGlow.style.opacity = (0.25 + bassLevel * 0.75).toFixed(3);
+  }
+  requestAnimationFrame(draw);
+
+  async function togglePlay() {
+    ensureAudio();
+    if (audioCtx.state === 'suspended') await audioCtx.resume();
+    if (!player.src) player.src = trackSelect.value;
+    if (player.paused) {
+      await player.play();
+      playBtn.textContent = 'Pause';
+      hint.classList.add('hidden');
+    } else {
+      player.pause();
+      playBtn.textContent = 'Play';
+    }
+  }
+
+  playBtn.addEventListener('click', togglePlay);
+  logoWrap.addEventListener('click', togglePlay);
+
+  trackSelect.addEventListener('change', async () => {
+    ensureAudio();
+    player.src = trackSelect.value;
+    if (audioCtx.state === 'suspended') await audioCtx.resume();
+    await player.play();
+    playBtn.textContent = 'Pause';
+    hint.classList.add('hidden');
+  });
+
+  fileInput.addEventListener('change', async () => {
+    const f = fileInput.files[0];
+    if (!f) return;
+    ensureAudio();
+    player.src = URL.createObjectURL(f);
+    if (audioCtx.state === 'suspended') await audioCtx.resume();
+    await player.play();
+    playBtn.textContent = 'Pause';
+    hint.classList.add('hidden');
+  });
+})();
+</script>
+</body>
+</html>

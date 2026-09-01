@@ -28,6 +28,18 @@ This is the chronological record of root-website and exploratory visual decision
 
 ---
 
+## 2026-08-27 — Site-wide media — Durable shared editor
+
+**Status:** Implemented development tooling
+
+**Change:** Wired all ten pages to the canonical media-selection JSON through a small shared loader and one localhost-only editor. Added stable slots for current heroes, homepage section media and videos, Services media states, and Studio A/B primary images, rails, and generated galleries. Added an unmistakable unsaved state and full JSON download for durable project saving.
+
+**Preserve:** The approved homepage baseline, current page layouts, `noindex` status, and public-site invisibility of editing controls.
+
+**Outcome and validation:** Syntax and JSON validation passed. Fresh browser checks on all ten pages found the editor toolbar and drawer, correct page-specific media counts, canonical media loading, and no horizontal overflow. A simulated crop change produced the required unsaved warning and JSON-export prompt.
+
+**Open questions / follow-up:** Texture implementation remains gated on approved assets in `MEDIA/IMAGES/TEXTURES/APPROVED/`.
+
 ## 2026-08-11 — Process — Visual-tweak protocol established
 
 **Status:** Preferred direction
@@ -386,6 +398,30 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Open questions / follow-up:** This entry records the requested placement as the preferred direction; it does not approve the entire Services page or authorize launch.
 
+## 2026-08-21 — Shared header and Q & A page / first page-review addition
+
+**Status:** Preferred direction
+
+**Change:** Add a `Q & A` item to the shared website header and create a dedicated `faq.html` review page containing the six questions Bridget supplied: free-consultation inclusions, first-time/beginner artists, mixing/mastering file formats, remote mixing/mastering, session preparation, and recording full bands/drums/podcasts/voice-over.
+
+**Preserve:** Canonical root website, approved homepage imagery and crops, existing navigation order and Services dropdown, free-consultation CTA, EmailJS and Cal.com behavior, editorial black/cream/gold styling, mobile navigation, development `noindex`, and all unresolved policy boundaries.
+
+**Reference:** Bridget's `Screenshot 2026-08-21 at 12.30.39 PM.png` and her instruction to add a Q & A section to the header using those questions. `SEO/FAQ_BANK.md`, `SEO/BUSINESS_FACTS.md`, and `POLICIES/01_STUDIO_CLIENT/POLICY_SET.md` constrain the answers where the screenshot truncates wording.
+
+**Acceptance criteria:**
+
+- [x] `Q & A` appears in the homepage and shared inner-page header and footer navigation.
+- [x] The six requested questions appear on one dedicated, accessible expandable-answer page.
+- [x] No unapproved revision count, turnaround, retention period, included stem count, payment rule, or refund promise is invented.
+- [x] Newer podcast, remote-work, and deliverable decisions are reconciled into the active fact and FAQ records rather than left contradictory.
+- [ ] Bridget reviews the rendered desktop and mobile page and confirms or revises the answer wording.
+
+**Files changed:** `faq.html`, `faq.css`, `index.html`, `inner-pages.js`, `recording.html`, `README.md`, active state/content records, and this change log.
+
+**Outcome and validation:** The new page contains six expandable questions and six answers, retains `noindex`, loads the shared header/footer and visual review controls, and passes the active-site local-reference check with no missing files. The in-app preview was unable to access the local server during this pass, so desktop/mobile visual approval remains with Bridget's page review.
+
+**Open questions / follow-up:** The screenshot truncates parts of several answers. Conservative wording is used in the review page; Bridget can edit or replace it during page review. This does not approve the entire Q & A page or authorize launch.
+
 ## 2026-08-22 — All pages / hero imagery — Full-strength photographs with translucent title panels
 
 **Status:** Preferred direction
@@ -465,3 +501,150 @@ Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored
 **Outcome and validation:** The implemented pages closely reproduce the selected visual hierarchy while remaining real HTML/CSS rather than flattened mockup artwork. Desktop keeps the stacked right-side photo rail; tablet and mobile convert it to a three-image horizontal filmstrip and stack the cream information cards. Wide approved baselines are stored as `2026-08-26-studio-a-cinematic-layout-wide.png` and `2026-08-26-studio-b-cinematic-layout-wide.png`.
 
 **Open questions / follow-up:** Final room-specific rates and any public equipment highlights remain approval-gated. This selection does not authorize launch or changes to the protected homepage.
+
+## 2026-08-26 — Services / interactive signal-path page
+
+**Status:** Preferred direction selected and implemented by Bridget
+
+**Change:** Replace the older cream filter-card catalog with the selected Concept 09 single-window Services layout, refined with the quieter vertical selector from Concept 11. Add a full-width illustrated `IDEA → RECORD → PRODUCE → MIX → MASTER → RELEASE` signal path, monumental condensed title, one cinematic media window, gold-filled consultation CTA, and six service rows whose outline, bullet, rate, copy, link, and authentic image update on interaction.
+
+**Preserve:** Root canonical site, shared destinations, development `noindex`, approved vocal/general/band starting-price model, project-quote boundaries, real `MEDIA/` photography, protected homepage, Studio A/B pages, EmailJS inquiry and Cal.com consultation paths, and all unresolved service-page/rights approvals.
+
+**Reference:** Bridget's 2026-08-26 selection of “the first revision” plus her instruction to use the simpler highlightable rows where the box outline and bullet appear on hover. Primary layout reference: `DRAFTS/active/inner-page-layout-mockups-2026-08-26/services-concept-09-single-cinematic-window.png`.
+
+**Acceptance criteria:**
+
+- [x] The top process diagram is code-native scalable line art rather than a flattened mockup image.
+- [x] The page title remains `SERVICES`, with one clean rectangular media window.
+- [x] Hover, focus, click/tap, Home/End, and arrow-key interactions update the selected service.
+- [x] The selected outline and bullet are visible without relying on color alone.
+- [x] All six selected images come from the active `MEDIA/` library and are recorded in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`.
+- [x] Pricing uses the confirmed $50/$65/$75 starting-price guidance and project-quote language only.
+- [x] Desktop 1600×1000 and mobile 390×844 checks show no page-level horizontal overflow or console warnings.
+
+**Files changed:** `services.html`, `services-page.css`, `services-page.js`, `inner-pages.js`, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, `START_HERE/PROJECT_STATE.md`, the active study README, the approved wide baseline, and this change log.
+
+**Outcome and validation:** The selected design is implemented as responsive HTML/CSS/SVG with an accessible tab interface. The six service states switch their correct photograph, text, price guidance, and destination; mobile keeps the service list vertical and makes the top process diagram an intentional horizontal strip. Baseline: `2026-08-26-services-signal-path-layout-wide.png`.
+
+**Open questions / follow-up:** Production placement and Artist Media's final public service role remain subject to the approved page-intent map. This implementation retains their existing Services-page presence but does not authorize new standalone URLs, final packages, or launch.
+
+## 2026-08-26 — Sitewide / unified navigation header
+
+**Status:** Selected and implemented by Bridget
+
+**Change:** Replace page-specific header treatments with one shared website navigation system. Use the protected homepage's official Checkmark microphone logo and Josefin Sans `CHECKMARK AUDIO` wordmark on every page, increase the spacing between page titles, retain a clear gold active-page marker, and standardize the filled metallic-gold `BOOK A FREE CONSULTATION` button with its star detail.
+
+**Preserve:** Navigation order and destinations, Services dropdown behavior, responsive mobile menu, development draft bar on the homepage, fixed inner-page header behavior, root canonical site, `noindex`, EmailJS, Cal.com, and all approved page-specific body designs.
+
+**Reference:** Bridget's three 2026-08-26 header screenshots and her instruction to keep the Checkmark logo, font, spacious navigation layout, and consultation button consistent throughout the website.
+
+**Acceptance criteria:**
+
+- [x] Home, Services, Studio A, Team, and Community use the same logo, wordmark, navigation spacing, CTA dimensions, and responsive breakpoint system.
+- [x] Desktop inspection at 1600×900 returns the same 1528×96 navigation geometry, 62×66 logo, 32-pixel link gap, and 243×52 CTA on all five representative pages.
+- [x] Mobile inspection at 390×844 returns the same 364×76 navigation geometry, 47×50 logo, wordmark, and menu control on all five representative pages.
+- [x] The desktop consultation CTA is filled metallic gold; mobile intentionally hides it in favor of the shared menu.
+- [x] No representative page introduces horizontal overflow.
+
+**Files changed:** `checkmark-header-brand.css`, `inner-pages.js`, `index.html`, `services-page.css`, `START_HERE/PROJECT_STATE.md`, the refreshed Services baseline and its README entry, and this change log.
+
+**Outcome and validation:** The header no longer changes visual identity between pages. The homepage sits below its development notice while inner pages remain fixed at the viewport top, but the navigation's internal proportions and brand treatment are identical. The Services approved baseline was refreshed after the shared header implementation.
+
+**Open questions / follow-up:** None for header consistency. This implementation does not change the site's development or launch-approval status.
+
+## 2026-08-27 — Sitewide / warm rich gold palette
+
+**Status:** Implemented at Bridget's direction; final visual approval pending
+
+**Change:** Replace the remaining orange accent and display-type treatment with one warm, rich gold family. Apply the shared gold to brand typography, major display headings, eyebrow labels, active navigation, process diagrams, outlines, icons, rules, hover/focus states, and consultation-calendar branding. Keep long-form body copy cream or charcoal for readability and retain small red LEDs only where they communicate an actual recording/status state.
+
+**Preserve:** Approved page layouts, authentic media, header geometry, Services interactions, Studio A/B cohesion, navigation order, pricing and content facts, EmailJS and Cal.com behavior, development `noindex`, and all launch gates.
+
+**Reference:** Bridget's 2026-08-27 instruction to “change the orange coloration and make the font color consistent warm rich gold throughout the whole website.”
+
+**Acceptance criteria:**
+
+- [x] One shared `#d6a85e` gold token drives representative brand, display, label, and active-navigation typography.
+- [x] Services signal-path line art, selector states, media frame, and supporting typography no longer render orange.
+- [x] Homepage, Services, Recording, Studio A, Team, Community, and Q & A return the shared computed gold for representative display and label text.
+- [x] Service-detail pages highlight both the Services section and current dropdown destination in the same gold family.
+- [x] Desktop and 390-pixel mobile checks introduce no horizontal overflow.
+- [x] `noindex` remains unchanged.
+
+**Files changed:** `checkmark-gold-theme.css`, `checkmark-header-brand.css`, `services-page.css`, `inner-pages.js`, `index.html`, `404.html`, `START_HERE/PROJECT_STATE.md`, the approved-baseline note, and this change log.
+
+**Outcome and validation:** Browser inspection confirms `rgb(214, 168, 94)` for the wordmark, active navigation, eyebrow labels, and representative display headings across the tested pages. The Services illustration and Studio title treatment now share that same visual temperature. Functional red recording LEDs remain intentionally distinct.
+
+**Open questions / follow-up:** Bridget should review the rendered palette before a new screenshot is admitted to `APPROVED_VISUAL_BASELINES/`; the prior Services screenshot remains a layout reference whose orange color is explicitly superseded.
+
+## 2026-08-28 — Team / equal five-person editorial grid
+
+**Status:** Selected and implemented by Bridget
+
+**Change:** Replace the generic dark Team hero and approval-gate panels with the selected light editorial contact-sheet direction. Present Gavin Hammond, Bridget Reinhard, Richard Baca, Matt Bow, and Tony Rivera as five equally weighted cards with identical portrait proportions, frame labels, typography, spacing, and responsive behavior.
+
+**Preserve:** Shared website navigation and footer, official Checkmark logo and wordmark, warm-rich-gold palette, restrained red micro-accents, confirmed public names and roles, authentic `MEDIA/` files, development `noindex`, protected homepage, and all existing booking paths.
+
+**Reference:** Bridget's selected double-portrait editorial concept and her 2026-08-28 instruction that all five team members be treated as equals rather than giving some people more or larger imagery.
+
+**Acceptance criteria:**
+
+- [x] All five confirmed team members appear in the approved order and with confirmed titles only.
+- [x] Every card uses the same portrait dimensions, name/title hierarchy, rules, and spacing.
+- [x] Gavin, Bridget, and Richard use safely attributable Checkmark media recorded in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`.
+- [x] Matt and Tony use equal-sized designed placeholders rather than incorrectly attributed photography.
+- [x] Desktop and current narrow-screen checks show equal card geometry and no horizontal overflow.
+- [x] Shared navigation, footer, media editor integration, and `noindex` remain intact.
+
+**Files changed:** `team.html`, `team-page.css`, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, `SEO/BUSINESS_FACTS.md`, `SEO/OPEN_QUESTIONS_FOR_LAUNCH.md`, `START_HERE/PROJECT_STATE.md`, the approved baseline PNG and README entry, and this change log.
+
+**Outcome and validation:** Root `team.html` now contains the approved responsive five-person composition. Browser validation confirmed the active Team navigation state, five exact names, all confirmed images loaded, equal frame dimensions, no page-level overflow, and no console warnings. Baseline: `2026-08-28-team-editorial-five-person-wide.png`.
+
+**Open questions / follow-up:** Individual portrait files for Matt Bow and Tony Rivera remain pending approval. Their placeholders must be replaced one-for-one without changing card dimensions or hierarchy.
+
+## 2026-09-01 — Homepage / cinematic lower-third hero
+
+**Status:** Selected and implemented by Bridget; rendered baseline review pending
+
+**Change:** Implement the fourth homepage-hero study: keep the duplicate large `CHECKMARK AUDIO` heading visually hidden, strengthen and color-match the navigation logo/wordmark lockup, and organize the existing location, tagline, supporting copy, and calls to action as one cinematic editorial lower-third panel.
+
+**Preserve:** The four approved homepage hero photographs and their recorded crops, carousel behavior, shared navigation destinations, existing homepage copy, consultation and work links, development controls, `noindex`, EmailJS, Cal.com, and the remainder of the protected homepage.
+
+**Reference:** Bridget's 2026-09-01 selection of visual Draft 4, the “Cinematic Lower-Third” study.
+
+**Acceptance criteria:**
+
+- [x] The navigation is the only visible `CHECKMARK AUDIO` name treatment in the hero viewport.
+- [x] The microphone logo and wordmark use a coordinated warm metallic-gold treatment and stronger editorial proportions.
+- [x] The location, tagline, supporting sentence, and both actions share one aligned lower-third composition.
+- [x] The existing authentic hero carousel media and file-backed selections remain unchanged.
+- [x] Desktop, 1440-pixel, and 390-pixel checks show no page-level horizontal overflow.
+- [x] Mobile keeps the complete tagline, copy, and actions readable without changing their order.
+
+**Files changed:** `index.html`, `checkmark-home-hero.css`, `START_HERE/PROJECT_STATE.md`, and this change log.
+
+**Outcome and validation:** The selected direction is implemented as homepage-specific responsive HTML/CSS. Browser inspection confirmed a 390-pixel viewport and scroll width of 390 pixels, a 1440-pixel viewport and scroll width of 1440 pixels, and the desktop consultation CTA remaining inside the shared navigation bounds.
+
+**Open questions / follow-up:** Bridget should review the live render before a new screenshot is admitted to `START_HERE/APPROVED_VISUAL_BASELINES/`.
+
+## 2026-09-01 — Community / cinematic broadcast wall
+
+**Status:** Selected and implemented by Bridget; rendered baseline review pending
+
+**Change:** Replace the generic Community hero and informational panels with the selected dark cinematic broadcast-wall direction: a monumental gold `COMMUNITY` masthead, one large authentic studio-session image, and a numbered feature rail for Checkmark Tonight, Artist Stories, and Produced at Checkmark.
+
+**Preserve:** Shared navigation and footer, official Checkmark logo and wordmark, warm-rich-gold palette, restrained red micro-accents, authentic `MEDIA/` assets, existing Community page intent, consultation path, development `noindex`, and all launch gates.
+
+**Reference:** Bridget's selected 2026-09-01 Community Draft 2, generated as `exec-bc0c99da-1b5d-4b44-956e-d69ddef1f564.png`.
+
+**Acceptance criteria:**
+
+- [x] The root page reproduces the selected asymmetric dark broadcast-wall composition in responsive HTML/CSS rather than embedding the mockup as a flat image.
+- [x] All visible photographs come from the active Checkmark `MEDIA/` library and are recorded in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`.
+- [x] The three approved Community categories remain Checkmark Tonight, Artist Stories, and Produced at Checkmark.
+- [x] The page does not invent artist names, project credits, testimonials, pricing, or a false live-broadcast state.
+- [ ] A new wide screenshot is admitted to `START_HERE/APPROVED_VISUAL_BASELINES/` after Bridget reviews the live render.
+
+**Files changed:** `community.html`, `community-page.css`, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, `START_HERE/PROJECT_STATE.md`, and this change log.
+
+**Open questions / follow-up:** Final public project names, credits, captions, outbound links, and permissions remain subject to the existing media and launch review gates.

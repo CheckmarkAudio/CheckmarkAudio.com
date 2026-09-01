@@ -1,1 +1,28 @@
-#book .contactbox .calendar{display:none}.home-calendar{padding-top:0}.home-calendar .calendar-frame{min-height:620px}.home-calendar .calendar-info{background:#fffaf3}.home-calendar .calendar-schedule{background:#fff}.home-calendar .btn:not(.primary){color:#6b4a24}.home-calendar .btn:not(.primary):hover{color:#171511}
+#book .contactbox .calendar {
+  display: none;
+}
+
+.home-calendar {
+  padding-top: 0;
+}
+
+.service-calendar.home-calendar .calendar-frame {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+}
+
+.home-calendar .calendar-info {
+  background: #fffaf3;
+}
+
+.home-calendar .calendar-schedule {
+  background: #fff;
+}
+
+.home-calendar .btn:not(.primary) {
+  color: #6b4a24;
+}
+
+.home-calendar .btn:not(.primary):hover {
+  color: #171511;
+}

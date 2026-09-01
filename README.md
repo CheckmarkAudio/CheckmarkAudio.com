@@ -10,6 +10,7 @@ The only active website is at the repository root:
 - `services.html` — service overview and approved starting-price guidance
 - `recording.html`, `mixing-mastering.html`, `live-recordings.html` — detailed service pages
 - `studio-a.html`, `studio-b.html`, `team.html`, `community.html` — supporting pages
+- `faq.html` — public-facing questions and answers currently under review
 - `site.css` and the root `checkmark-*.css` / `checkmark-*.js` files — canonical website support files
 
 The root site remains `noindex` and visibly marked as in development. It is not the public CheckmarkAudio.com site yet.

@@ -1,0 +1,84 @@
+:root {
+  --bevel-radius: 7px;
+}
+
+/* Bring the existing yellow-gold logo gradient into the site's champagne bronze palette. */
+img[src*="checkmark-audio-logo-official-gold-gradient-transparent"] {
+  filter: saturate(.52) hue-rotate(-8deg) brightness(.9) contrast(1.03);
+}
+
+/* Give the homepage calls to action room before the following light section. */
+.hero .actions {
+  margin-bottom: 52px;
+}
+
+/* A defined, lightly dimensional edge keeps buttons from blending into panels. */
+body :is(
+  .btn,
+  .menu,
+  .tab,
+  .cal-time
+) {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, .34),
+    inset -1px -2px 0 rgba(33, 20, 8, .28),
+    0 7px 16px rgba(0, 0, 0, .16);
+}
+
+body .btn.primary {
+  border-color: #f1d39e #a87538 #875824 #efd09a;
+}
+
+body :is(
+  .btn:not(.primary),
+  .menu,
+  .tab,
+  .cal-time
+) {
+  border-color: #dfb66e #8f6838 #704a22 #d8aa5e;
+}
+
+/* Shared panel treatment: a soft bevel, not a heavy rounded-card redesign. */
+body :is(
+  .proofbox,
+  .panel,
+  .card,
+  .service-card,
+  .service-overview-card,
+  .formbox,
+  .contactbox,
+  .console,
+  .studio-shot,
+  .rate,
+  .homepage-media-card,
+  .calendar-frame
+) {
+  border-radius: var(--bevel-radius);
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, .32),
+    inset -2px -2px 0 rgba(61, 39, 16, .16),
+    0 14px 30px rgba(28, 18, 8, .12);
+  overflow: hidden;
+}
+
+body :is(
+  .formbox,
+  .contactbox,
+  .console,
+  .rate,
+  .homepage-media-card
+) {
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, .12),
+    inset -2px -2px 0 rgba(0, 0, 0, .42),
+    0 16px 34px rgba(0, 0, 0, .24);
+}
+
+@media (max-width: 660px) {
+  .hero .actions {
+    margin-bottom: 30px;
+  }
+}

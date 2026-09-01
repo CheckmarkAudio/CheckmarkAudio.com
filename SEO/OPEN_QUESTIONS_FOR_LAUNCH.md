@@ -23,18 +23,18 @@ Nothing in this file should be treated as fact or published. It is a question li
 - [ ] Roughly **how much studio time does a song usually require**? (`FAQ_BANK.md` — even a rough range is useful)
 - [x] **Pricing answered as-is, per Gavin's direction (2026-08-10, Bridget): just lay out the prices as already stated.** No separate inclusions breakdown or list of cost factors — the confirmed rates in `BUSINESS_FACTS.md` (vocal $50/hr, general $65/hr, band $75/hr, project work quoted) are the full answer.
 - [x] What's the plain-language **difference between mixing and mastering**? — answered 2026-08-10, draft copy in `FAQ_BANK.md`, pending final approval
-- [ ] What's the required **file/stem prep** for a mix, and **how do remote mixing projects work**? (`FAQ_BANK.md`)
-- [ ] Confirm: **can Checkmark Audio record full bands, drums, podcasts, and voice-over** as currently drafted, or does anything need to be pulled back?
+- [x] **File/stem prep and remote mixing direction** confirmed 2026-08-21 (Bridget): WAV stems are recommended; clients may send stems or a download link by email; project-specific preparation, price, and delivery details are confirmed before work begins. Full workflow detail remains open.
+- [x] Checkmark Audio can record **full bands, drums, podcasts, and voice-over** — yes to all, confirmed 2026-08-21 (Bridget).
 - [ ] What **happens after someone submits an inquiry** — response time, next steps? (`FAQ_BANK.md`)
 - [x] **Production / Music Production**: not their own page for now (resolved 2026-08-10, Bridget). Where that content lives (folded into another page, or shelved) is still open.
 - [x] **Band Recording** and **Voice-Over** stay as sub-services under one general **Recording Services** page, not their own pages — resolved 2026-08-10, see `SERVICE_DESCRIPTIONS.md`.
-- [x] **Podcast** removed from the page plan for now (not an active service currently) — resolved 2026-08-10, Bridget. Revisit if it becomes active again.
+- [x] **Podcast recording is active as a Recording sub-service**, reconfirmed 2026-08-21 (Bridget), superseding the 2026-08-10 removal. A separate podcast page is not authorized until the page-intent map is approved.
 - [x] **Nav bar proposed 2026-08-10 (Bridget):** Home, Services, Studio A, Studio B, Artist Promotion, Team, Events, Shop.
 - [x] **"Services" is a nav dropdown** (confirmed 2026-08-10) revealing three separate pages — Recording, Mixing & Mastering, Live Recordings — each its own SEO-optimized page.
-- [x] **Nav restructured 2026-08-10 (Bridget):** "Events" and "Artist Promotion" are gone as separate items. Live Recordings (band/musician shoots with lighting and audio) moved into **Services** as a bookable offering. A new **Community** tab holds artist-promotion content, Checkmark Tonight interviews, and artists Checkmark Audio has produced for (using their already rights-cleared promotional images from the media library). Final nav: Home, Services, Studio A, Studio B, Team, Community.
+- [x] **Nav restructured 2026-08-10 and extended 2026-08-21 (Bridget):** "Events" and "Artist Promotion" are gone as separate items. Live Recordings moved into **Services**. **Community** holds artist-promotion content, Checkmark Tonight interviews, and artists Checkmark Audio has produced for. The current review nav is Home, Services, Studio A, Studio B, Team, Community, Q & A.
 - [x] **"Shop"** — confirmed 2026-08-10, Bridget: a real merch shop (mugs, t-shirts, etc.) is wanted but not built yet. Dropped from the nav for now so it doesn't promise something that isn't there — added to the build to-do list instead, see `NEXT_STEPS.md` "Later." For now the site should have a **gift card** space instead; placement still open (homepage section, footer, elsewhere).
 - [ ] Where does **Production/Music Production** content go now that it's not its own page?
-- [ ] Deliverable specifics for every service: **file formats, revision counts, delivery method/turnaround** — none of this is documented anywhere yet.
+- [ ] Deliverable specifics for every service: **high-resolution WAV and MP3 are confirmed for mixing/mastering** as of 2026-08-21; revision counts, delivery method/turnaround, stem counts, archive period, and service-by-service exceptions remain open.
 - [x] **Homepage layout, reconfirmed 2026-08-10 (Bridget):** social-proof review carousel at the very top, then the mixed-samples/before-after listening section — matches the existing direction in `PROJECT_STATE.md`.
 - [x] **Studio A and Studio B each get their own photo gallery** on their respective pages (2026-08-10, Bridget).
 
@@ -63,7 +63,7 @@ Nothing in this file should be treated as fact or published. It is a question li
 
 ### 4. Team
 
-- [x] Final list of **public team members** to feature — confirmed 2026-08-10, see `BUSINESS_FACTS.md`: Gavin Hammond, Bridget Reinhard, Richard (Baca), Matthan Bow, Tony Rivera
+- [x] Final list of **public team members** to feature — corrected by Bridget 2026-08-28, see `BUSINESS_FACTS.md`: Gavin Hammond, Bridget Reinhard, Richard Baca, Matt Bow, Tony Rivera
 - [x] **Titles** — confirmed 2026-08-10, see `BUSINESS_FACTS.md`
 - [ ] **Bios**
 - [ ] **Photos** (placeholders only right now, per `PROJECT_STATE.md`)

@@ -1,6 +1,6 @@
 # FAQ Bank
 
-**Public Q&A/FAQ section: reversed 2026-08-11 (Bridget) — building it after all.** Gavin's earlier "no dedicated Q&A page" call (2026-08-10) is overridden; a real `faq.html` page and nav item are being built. Only the answered questions below go on the public page — unanswered ones stay off it, not filled with invented answers.
+**Public Q&A/FAQ section: active as of 2026-08-21 (Bridget).** Gavin's earlier "no dedicated Q&A page" call (2026-08-10) is overridden. The canonical root site now has `faq.html` and a shared `Q & A` navigation item. Only answered questions go on the review page; unanswered items stay off it rather than being filled with invented answers.
 
 Questions must be answered from confirmed facts before publication.
 
@@ -8,7 +8,17 @@ Questions must be answered from confirmed facts before publication.
 
 Facts are confirmed; the exact wording below is a draft per `APPROVED_COPY.md` and has not been signed off as final public copy.
 
-- ~~How should I prepare for a recording session?~~ / ~~What should I bring?~~ — answered 2026-08-10, see `BUSINESS_FACTS.md` "Session prep and equipment": bring anything relevant to the project (reference tracks, stems, DAW project files, prior work, instruments, unique gear).
+- ~~What is included in a free consultation?~~ — confirmed for the review page 2026-08-21 (Bridget): a one-hour meeting that can include a studio tour, project conversation, and pricing guidance. The directly selectable Cal.com calendar is the booking path.
+
+- ~~Do you work with first-time or beginner artists?~~ — confirmed for the review page 2026-08-21 (Bridget): yes, Checkmark Audio works with artists at all experience levels.
+
+- ~~What file formats do I get back after mixing or mastering?~~ — confirmed for the review page 2026-08-21 (Bridget): high-resolution WAV and MP3. Stem or raw-file delivery may be included in the quote or approved as an additional service under `POLICIES/01_STUDIO_CLIENT/POLICY_SET.md`; do not infer delivery timing, retention, or included stem counts.
+
+- ~~Do you offer remote mixing and mastering?~~ — confirmed for the review page 2026-08-21 (Bridget): yes. A client may send stems or a download link by email and the work can be completed remotely. File preparation, price, and delivery details must be confirmed for the project.
+
+- ~~How should I prepare for a recording session?~~ / ~~What should I bring?~~ — answered 2026-08-10 and expanded for the review page 2026-08-21. Bring anything relevant to the project (reference tracks, stems, DAW project files, prior work, instruments, unique gear). WAV stems are recommended when work begins from existing recordings.
+
+- ~~Can you record full bands, drums, podcasts, or voice-over?~~ — confirmed for the review page 2026-08-21 (Bridget): yes to all four.
 
 - ~~What is the difference between mixing and mastering?~~ — answered 2026-08-10 (Bridget), reworded into original copy 2026-08-10:
 
@@ -44,9 +54,7 @@ Facts are confirmed; the exact wording below is a draft per `APPROVED_COPY.md` a
 ## Still open
 
 - How much studio time does a song usually require?
-- How should I prepare files or stems?
-- How do remote mixing projects work?
-- Can you record full bands, drums, podcasts, or voice-over?
 - What happens after I submit an inquiry?
+- What delivery turnaround, revision count, stem count, archive period, and retrieval terms apply to each service?
 
 Unknown answers remain TODO until approved.

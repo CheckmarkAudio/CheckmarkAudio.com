@@ -1,4 +1,4 @@
-(() => {
+(async () => {
   'use strict';
 
   const storageKey = 'checkmark-home-hero-v1';
@@ -52,8 +52,10 @@
   };
 
   let config;
-  try { config = safeConfig(JSON.parse(localStorage.getItem(storageKey) || localStorage.getItem(legacyStorageKey))); }
-  catch { config = clone(defaults); }
+  let canonicalHero;
+  try { canonicalHero = (await (window.CheckmarkMediaSelectionsPromise || fetch('MEDIA/WEBSITE_MEDIA_SELECTIONS.json',{cache:'no-store'}).then(response=>response.json())))?.homepageHero; } catch {}
+  try { config = safeConfig(JSON.parse(localStorage.getItem(storageKey) || localStorage.getItem(legacyStorageKey)) || canonicalHero); }
+  catch { config = safeConfig(canonicalHero); }
 
   const hero = document.getElementById('homeHero');
   const media = document.getElementById('heroMedia');
@@ -64,6 +66,8 @@
   const pauseButton = document.getElementById('heroPause');
   const launchButton = document.getElementById('heroEditLaunch');
   const saveState = document.getElementById('heroSaveState');
+  const localEditorHost = ['localhost','127.0.0.1','0.0.0.0'].includes(location.hostname);
+  if (!localEditorHost) { launchButton.style.display = 'none'; editor.style.display = 'none'; scrim.hidden = true; }
   const ranges = {
     x: document.getElementById('heroX'),
     y: document.getElementById('heroY'),
@@ -98,7 +102,8 @@
     saveState.textContent = 'Saving website settings…';
     saveTimer = setTimeout(() => {
       localStorage.setItem(storageKey, JSON.stringify(config));
-      saveState.textContent = message || 'Draft settings saved on this device.';
+      saveState.textContent = message || 'Unsaved project change. Use Export media JSON to finish saving.';
+      window.dispatchEvent(new CustomEvent('checkmark:media-dirty'));
     }, 180);
   };
 

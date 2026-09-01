@@ -1,0 +1,191 @@
+/* Homepage hero direction selected 2026-09-01: cinematic editorial lower third. */
+body[data-page="home"] .hero--cinematic-lower-third {
+  min-height: clamp(680px, 74vh, 860px);
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .hero-inner {
+  width: min(1760px, calc(100% - 72px));
+  margin-right: auto;
+  margin-left: 0;
+  min-height: clamp(680px, 74vh, 860px);
+  align-items: flex-end;
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .hero-copy {
+  width: min(58%, 920px);
+  padding: 0 0 126px;
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .hero-title-panel {
+  width: 100%;
+  padding: clamp(27px, 2.2vw, 36px) clamp(30px, 3vw, 50px) clamp(29px, 2.4vw, 39px);
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .eyebrow {
+  display: block;
+  margin: 0;
+  color: var(--brand-gold-bright, #e4bf7a);
+  font-size: .82rem;
+  letter-spacing: .23em;
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .eyebrow::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 1px;
+  margin-top: 16px;
+  background: #9f2923;
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .tagline {
+  max-width: 760px;
+  margin: clamp(15px, 1.6vw, 23px) 0 0;
+  color: var(--brand-gold, #d6a85e);
+  font-size: clamp(2.65rem, 3.5vw, 4.1rem);
+  font-weight: 500;
+  line-height: .98;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .tagline b {
+  color: #a82e26;
+  font-weight: inherit;
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .local {
+  max-width: 720px;
+  margin: clamp(14px, 1.3vw, 20px) 0 0;
+  color: #eee6da;
+  font-size: clamp(.96rem, 1.02vw, 1.08rem);
+  line-height: 1.52;
+  letter-spacing: -.01em;
+  text-wrap: pretty;
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .actions {
+  margin-top: clamp(20px, 1.8vw, 28px);
+  gap: 14px;
+}
+
+body[data-page="home"] .hero--cinematic-lower-third .actions .btn {
+  min-height: 50px;
+  padding-inline: clamp(20px, 2vw, 30px);
+}
+
+/* Match the metallic logo art with the wordmark and give the lockup editorial weight. */
+body[data-page="home"] .header .logo {
+  gap: 17px;
+}
+
+body[data-page="home"] .header .logo img {
+  width: 68px;
+  height: 72px;
+}
+
+body[data-page="home"] .header .logo span {
+  font-size: clamp(1.72rem, 2vw, 2.12rem);
+  letter-spacing: .065em;
+}
+
+@media (max-width: 1680px) {
+  body[data-page="home"] .header nav.wrap {
+    gap: 20px;
+  }
+
+  body[data-page="home"] .header .logo {
+    gap: 14px;
+  }
+
+  body[data-page="home"] .header .logo img {
+    width: 60px;
+    height: 64px;
+  }
+
+  body[data-page="home"] .header .logo span {
+    font-size: clamp(1.48rem, 1.7vw, 1.78rem);
+  }
+
+  body[data-page="home"] .header .navlinks {
+    gap: clamp(16px, 1.45vw, 24px);
+  }
+}
+
+@media (max-width: 1320px) {
+  body[data-page="home"] .hero--cinematic-lower-third .hero-inner {
+    width: min(100% - 40px, 1760px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  body[data-page="home"] .header .logo img {
+    width: 57px;
+    height: 61px;
+  }
+
+  body[data-page="home"] .header .logo span {
+    font-size: clamp(1.35rem, 1.7vw, 1.68rem);
+  }
+
+  body[data-page="home"] .hero--cinematic-lower-third .hero-copy {
+    width: min(68%, 800px);
+  }
+}
+
+@media (max-width: 900px) {
+  body[data-page="home"] .hero--cinematic-lower-third .hero-copy {
+    width: min(78%, 720px);
+  }
+}
+
+@media (max-width: 660px) {
+  body[data-page="home"] .hero--cinematic-lower-third .hero-inner {
+    width: min(100% - 26px, 1760px);
+  }
+
+  body[data-page="home"] .header .logo {
+    gap: 10px;
+  }
+
+  body[data-page="home"] .header .logo img {
+    width: 47px;
+    height: 50px;
+  }
+
+  body[data-page="home"] .header .logo span {
+    font-size: clamp(1rem, 5.1vw, 1.3rem);
+    letter-spacing: .052em;
+  }
+
+  body[data-page="home"] .hero--cinematic-lower-third,
+  body[data-page="home"] .hero--cinematic-lower-third .hero-inner {
+    min-height: 720px;
+  }
+
+  body[data-page="home"] .hero--cinematic-lower-third .hero-copy {
+    width: 100%;
+    padding: 0 0 72px;
+  }
+
+  body[data-page="home"] .hero--cinematic-lower-third .hero-title-panel {
+    padding: 26px 22px 28px;
+  }
+
+  body[data-page="home"] .hero--cinematic-lower-third .tagline {
+    font-size: clamp(2.55rem, 13vw, 4rem);
+  }
+
+  body[data-page="home"] .hero--cinematic-lower-third .local {
+    font-size: .98rem;
+    line-height: 1.52;
+  }
+
+  body[data-page="home"] .hero--cinematic-lower-third .actions {
+    display: grid;
+  }
+
+  body[data-page="home"] .hero--cinematic-lower-third .actions .btn {
+    width: 100%;
+  }
+}

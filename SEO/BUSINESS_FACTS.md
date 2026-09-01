@@ -8,10 +8,19 @@ This file is a fact router, not permission to invent missing data. The Source of
 - Hours: 11 AM – 6 PM, Tuesday – Sunday. Closed Monday. (Final, confirmed 2026-08-10 per Gavin, relayed by Bridget — this matches the live Google Business Profile listing exactly, no GBP edit needed. This corrects Bridget's own earlier statement the same day that Sunday should be closed; Gavin's answer is the one that stands.)
 - Primary market: Albuquerque, New Mexico
 - Website objective: independent replacement for the current Wix site
-- Studio-site services: recording, vocal production, mixing, mastering, music production, band recording, podcast/voice work where approved
+- Studio-site services: recording, vocal production, mixing, mastering, music production, band recording, podcast recording, and voice-over work
 - Approved starting prices: vocal recording $50/hour; general studio/engineering $65/hour; band recording $75/hour; project work quoted. Rates do not differ by room — the same pricing applies to Studio A and Studio B (confirmed 2026-08-10, Bridget).
-- New-client path: inquiry first; public Cal.com display is read-only
+- New-client path: a directly selectable Cal.com calendar for the free one-hour consultation, with the EmailJS inquiry form as an alternative
 - School: separate website and separate SEO ownership — confirmed URL 2026-08-10: checkmarkaudioschool.com ("New Mexico School of Music")
+
+## Public Q & A facts confirmed for review (2026-08-21, Bridget)
+
+- A free consultation is one hour and can include a studio tour, a project conversation, and pricing guidance.
+- Checkmark Audio works with first-time and beginner artists as well as experienced artists.
+- Mixing/mastering deliverables include high-resolution WAV and MP3 files. Stem or raw-file delivery must be included in the quote or approved as an additional service; no standard delivery timing, included stem count, archive period, or retrieval term has been approved.
+- Remote mixing and mastering are available. Clients may send stems or a download link by email; project-specific file preparation, price, and delivery details are confirmed before work begins.
+- Clients should bring relevant reference tracks, stems or DAW project files, prior work, instruments, and unique gear. WAV stems are recommended for work beginning from existing recordings.
+- Checkmark Audio can record full bands, drums, podcasts, and voice-over projects.
 
 ## Social (confirmed 2026-08-10, Bridget)
 
@@ -102,7 +111,7 @@ This matches Bridget's earlier physical description of Studio B as the smaller, 
 - Gavin Hammond — Owner, Lead Engineer, Mixer, Masterer
 - Bridget Reinhard — Director of Operations, Marketing
 - Richard (Baca) — Studio Director, Audio Engineer
-- Matthan Bow — Audio Engineer
+- Matt Bow — Audio Engineer
 - Tony Rivera — Engineering Intern
 
 Names and titles only. Bios, photos, specialties, credits, and social links are still pending — see `SEO/OPEN_QUESTIONS_FOR_LAUNCH.md` (deferred until after the build, per Bridget).

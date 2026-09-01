@@ -24,7 +24,7 @@ Every field below is labeled with a confidence tag. This file is a **draft prepa
 - **Price logic** ✅ Vocal recording from $50/hour (confirmed, `BUSINESS_FACTS.md`). Band recording from $75/hour (confirmed). Project work is quoted (confirmed).
 - **Inclusions** ✅ Top-of-line recording, mixing, and mastering gear, plus service and talent (confirmed 2026-08-10, `BUSINESS_FACTS.md`); Ableton is the primary DAW, Gavin fluent in all DAWs. Specific gear list likely won't be published (2026-08-10, Bridget) — keep gear language generic. 📝 Per-sub-service inclusions below remain drafted, not confirmed.
 - **Boundaries** ❓ Not stated anywhere (e.g. does hourly rate include an engineer, how many takes/hours typical for a given deliverable).
-- **Deliverables** ❓ File formats, stem counts, and delivery method are not documented anywhere.
+- **Deliverables** ✅ High-resolution WAV and MP3 confirmed 2026-08-21. Stem or raw-file delivery may be included in the quote or approved as an additional service. ❓ Stem counts, delivery method/timing, and retention remain open.
 - **Proof** 📝 The client/band gallery (Studio B vocal booth photos, `MEDIA/IMAGES/GALLERY/`) is the intended proof source; no specific case studies written yet.
 - **FAQs** ❓ See the unanswered questions in `FAQ_BANK.md`.
 - **Next action** 📝 "Book a Recording Consult" → inquiry form (drafted, functional in `MOCKUP/`).
@@ -39,8 +39,9 @@ Every field below is labeled with a confidence tag. This file is a **draft prepa
 | Band Recording | Drums, guitars, bass, keys, and vocals. | Bands · Live projects · From $75/hr ✅ |
 | Acoustic Recording | Natural capture for instruments and intimate performances. | Guitar · Piano · Strings · Acoustic vocals |
 | Voice-Over | Narration, ads, and video voice work. | Creators · Brands · Narration |
+| Podcast Recording | Spoken-word recording for podcast and interview projects. | Podcasters · Interviews · Creator projects |
 
-Podcast is no longer a Recording sub-service — see "Page structure" above, it has its own page now.
+Podcast recording is active as a Recording sub-service, reconfirmed by Bridget on 2026-08-21. It does not need a separate page unless the final page-intent map later approves one.
 
 ---
 
@@ -63,11 +64,11 @@ Podcast is no longer a Recording sub-service — see "Page structure" above, it 
 
 - **Audience** 📝 Anyone with recorded material needing final polish.
 - **Problem** ❓ Not written.
-- **Process** ❓ Not written — `FAQ_BANK.md` flags "How should I prepare files or stems?" and "How do remote mixing projects work?" as unanswered.
+- **Process** ✅ Remote mixing and mastering are available; clients may send stems or a download link by email. WAV stems are recommended. Project-specific preparation, price, and delivery details are confirmed before work begins. ❓ A complete step-by-step workflow remains unwritten.
 - **Price logic** ✅ From $65/hour (confirmed). 📝 "Full package: recording through master — custom quote" (drafted framing, not a confirmed policy).
 - **Inclusions** 📝 Mixing (balance, tone, space, dynamics, impact); Mastering (final loudness, tone, spacing, quality control); Editing/Tuning/Mix Prep (timing, noise cleanup, tuning, organized stems). Drafted, not confirmed.
 - **Boundaries** ❓ Revision count/policy not documented (`FAQ_BANK.md`: "What are the approved cancellation, revision, delivery, and payment policies?" — unanswered).
-- **Deliverables** ❓ Not documented (file formats, loudness targets, number of masters/versions).
+- **Deliverables** ✅ High-resolution WAV and MP3 confirmed 2026-08-21. Stem or raw-file delivery may be included in the quote or approved as an additional service. ❓ Loudness targets, number of versions, turnaround, and retention remain open.
 - **Proof** 📝 The homepage's planned synchronized raw/mixed before-after player (`START_HERE/PROJECT_STATE.md`) is the intended flagship proof piece — still needs "a time-aligned raw/mixed audio pair, with track credits and permission" (open per `NEXT_STEPS.md`).
 - **FAQs** 📝 "What is the difference between mixing and mastering?" answered 2026-08-10 — full draft copy in `FAQ_BANK.md`, pending final approval.
 - **Next action** 📝 "Book a Mix & Master Consult" → inquiry form (drafted, functional).
@@ -82,11 +83,11 @@ Podcast is no longer a Recording sub-service — see "Page structure" above, it 
 
 ## Nav bar and page structure — final, 2026-08-10 (Bridget)
 
-**Nav: Home, Services, Studio A, Studio B, Team, Community.**
+**Nav: Home, Services, Studio A, Studio B, Team, Community, Q & A.** The Q & A item was added by Bridget's 2026-08-21 direction.
 
 - **Services** is a nav dropdown (confirmed 2026-08-10, Bridget) revealing three separate pages, each with its own SEO-focused title/content: **Recording** (vocal, rap, singer-songwriter, band, acoustic, voice-over as sub-services on one page — not separate URLs), **Mixing & Mastering**, and **Live Recordings** (band/musician live shoots with lighting and audio, moved here as a bookable service).
 - **Community** (new, replaces the earlier "Events" and "Artist Promotion" ideas): artist-promotion content, Checkmark Tonight (a program where Checkmark Audio hosts, records, and interviews different musicians and bands in Albuquerque — confirmed 2026-08-10, see `BUSINESS_FACTS.md`), and artists Checkmark Audio has produced for, using their already rights-cleared promotional images from the media library.
-- **Podcast**: not an active service currently, dropped from the plan. Revisit if it becomes active again.
+- **Podcast**: active as a Recording sub-service, reconfirmed 2026-08-21. No separate podcast page is authorized yet.
 - **Production vs. Music Production**: not their own page for now. Where that content goes (folded into Services, or shelved) is still open.
 - **Shop**: dropped from the nav until the merch shop is actually built — see `START_HERE/NEXT_STEPS.md` "Later." Interim: a gift-card space on the site, placement not yet decided.
 

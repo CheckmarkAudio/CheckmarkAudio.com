@@ -17,6 +17,45 @@
     ],
     "note": "Recovered from Chrome local storage, approved by Bridget, and promoted to the root website. This file is the canonical backup of the homepage media selections and crop positions."
   },
+  "mediaEditor": {
+    "version": 1,
+    "updatedAt": "2026-08-29T06:45:33.375Z",
+    "slots": {
+      "home-studio-photo-1": { "slot": "home-studio-photo-1", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp" },
+      "home-studio-photo-2": { "slot": "home-studio-photo-2", "kind": "image", "src": "MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp" },
+      "home-feature-video-1": { "slot": "home-feature-video-1", "kind": "video", "src": "MEDIA/VIDEO/cma-music-studio-demo.mp4" },
+      "home-feature-video-2": { "slot": "home-feature-video-2", "kind": "video", "src": "MEDIA/VIDEO/intro-richard-music-studio-checkmark-audio-recording.mp4" },
+      "services-recording": { "slot": "services-recording", "kind": "dataset", "src": "MEDIA/IMAGES/jjune-vocal-recording-session.webp" },
+      "services-production": { "slot": "services-production", "kind": "dataset", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp" },
+      "services-mixing-mastering": { "slot": "services-mixing-mastering", "kind": "dataset", "src": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp" },
+      "services-live-recordings": { "slot": "services-live-recordings", "kind": "dataset", "src": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp" },
+      "services-podcast-voice-over": { "slot": "services-podcast-voice-over", "kind": "dataset", "src": "MEDIA/IMAGES/artist-interview-checkmark-audio-studio-episode-thumbnail.webp" },
+      "services-artist-media": { "slot": "services-artist-media", "kind": "dataset", "src": "MEDIA/IMAGES/marz-artist-photography-promo.webp" },
+      "recording-hero": { "slot": "recording-hero", "kind": "background", "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone.webp", "cssVar": "--page-image" },
+      "mixing-hero": { "slot": "mixing-hero", "kind": "background", "src": "MEDIA/IMAGES/mixing-console-close-up-view-02.webp", "cssVar": "--page-image" },
+      "live-hero": { "slot": "live-hero", "kind": "background", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp", "cssVar": "--page-image" },
+      "team-hero": { "slot": "team-hero", "kind": "background", "src": "MEDIA/IMAGES/gavin-hammond-studio-console-portrait-view-01.webp", "cssVar": "--page-image" },
+      "team-gavin": { "slot": "team-gavin", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp", "desktop": { "x": 53, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "team-bridget": { "slot": "team-bridget", "kind": "image", "src": "MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "team-richard": { "slot": "team-richard", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-guitar-lesson.webp", "desktop": { "x": 48, "y": 49.85511363636363, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "community-hero": { "slot": "community-hero", "kind": "background", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-view-02.webp", "cssVar": "--page-image" },
+      "community-lead": { "slot": "community-lead", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/recording-studio-engineer-and-clients-session.webp" },
+      "community-tonight-1": { "slot": "community-tonight-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/kai-warrior-interview-checkmark-audio-studio.webp" },
+      "community-tonight-2": { "slot": "community-tonight-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/male-vocalist-microphone-portrait.webp" },
+      "community-tonight-3": { "slot": "community-tonight-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/male-musician-studio-interview-speaking.webp" },
+      "community-stories": { "slot": "community-stories", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-and-marz-studio-session.webp" },
+      "community-produced": { "slot": "community-produced", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/artist-purple-silhouette-view-05.webp" },
+      "faq-hero": { "slot": "faq-hero", "kind": "background", "src": "MEDIA/IMAGES/studio-microphone-and-sign.webp", "cssVar": "--page-image" },
+      "studioA-primary": { "slot": "studioA-primary", "kind": "background", "src": "MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp", "cssVar": "--studio-image" },
+      "studioA-rail-1": { "slot": "studioA-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp" },
+      "studioA-rail-2": { "slot": "studioA-rail-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp" },
+      "studioA-rail-3": { "slot": "studioA-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp" },
+      "studioB-primary": { "slot": "studioB-primary", "kind": "background", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp", "cssVar": "--studio-image" },
+      "studioB-rail-1": { "slot": "studioB-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp" },
+      "studioB-rail-2": { "slot": "studioB-rail-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp" },
+      "studioB-rail-3": { "slot": "studioB-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp" }
+    }
+  },
   "homepageHero": {
     "interval": 8000,
     "transition": "crossfade",
@@ -143,6 +182,39 @@
     }
   },
   "innerPageMedia": {
+    "services": {
+      "status": "Selected interactive signal-path layout implemented 2026-08-26",
+      "default": "MEDIA/IMAGES/jjune-vocal-recording-session.webp",
+      "serviceImages": {
+        "recording": "MEDIA/IMAGES/jjune-vocal-recording-session.webp",
+        "production": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp",
+        "mixingMastering": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp",
+        "liveRecordings": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp",
+        "podcastVoiceOver": "MEDIA/IMAGES/artist-interview-checkmark-audio-studio-episode-thumbnail.webp",
+        "artistMedia": "MEDIA/IMAGES/marz-artist-photography-promo.webp"
+      }
+    },
+    "team": {
+      "status": "Selected equal five-person editorial grid implemented 2026-08-28",
+      "portraits": {
+        "gavinHammond": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp",
+        "bridgetReinhard": "MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp",
+        "richardBaca": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-guitar-lesson.webp",
+        "mattBow": null,
+        "tonyRivera": null
+      }
+    },
+    "community": {
+      "status": "Selected cinematic broadcast-wall layout implemented 2026-09-01",
+      "lead": "MEDIA/IMAGES/GALLERY/recording-studio-engineer-and-clients-session.webp",
+      "checkmarkTonight": [
+        "MEDIA/IMAGES/BY_PAGE/community/kai-warrior-interview-checkmark-audio-studio.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/male-vocalist-microphone-portrait.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/male-musician-studio-interview-speaking.webp"
+      ],
+      "artistStories": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-and-marz-studio-session.webp",
+      "producedAtCheckmark": "MEDIA/IMAGES/BY_PAGE/community/artist-purple-silhouette-view-05.webp"
+    },
     "studioA": {
       "status": "Selected cinematic split layout implemented 2026-08-26",
       "hero": "MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp",
