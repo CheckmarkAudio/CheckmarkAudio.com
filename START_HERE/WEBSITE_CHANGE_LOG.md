@@ -684,3 +684,9 @@ Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored
 **Change:** The sound demo now plays 30-second demo clips from `MEDIA/AUDIO/demo-clips/` instead of the full songs. `MEDIA/AUDIO/make-demo-clips.py` (requires ffmpeg) finds each song's most active 30 seconds by loudness, cuts it with fades, and strips metadata; rerunning it clips any newly added mp3. The full masters are never referenced by the website and stay out of Git per the `MEDIA/README.md` storage boundary; the small clips (~0.55 MB each) are committed and are the only audio the deployed site exposes.
 
 **Files changed:** `checkmark-demo-playlist.js`, new `MEDIA/AUDIO/make-demo-clips.py`, new `MEDIA/AUDIO/demo-clips/` (11 clips), and this change log.
+
+## 2026-09-01 — Sound demo play affordance
+
+**Change:** The paused sound demo now shows a centered white play arrow over the full-brightness logo, with a warm glow and slight scale-up on hover. Replaces the small gold arrow that sat below the logo; an earlier red treatment was rejected as too dark.
+
+**Files changed:** `checkmark-home-media.css`, `index.html` (stylesheet cache version), and this change log.
