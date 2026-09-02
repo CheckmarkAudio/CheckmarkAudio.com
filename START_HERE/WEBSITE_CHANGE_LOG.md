@@ -808,3 +808,13 @@ Measured composited brightness over the screen fell from a mean of 29.8 to 14.1.
 **Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
 
 **Validation:** Canvas pixels measured during playback; confirmed in-browser with no console errors.
+
+## 2026-09-02 — Studio B photo selections saved from the media editor
+
+**Change:** Persisted Bridget's Studio B photo edits from the browser media editor into `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`. Twelve `studioB-gallery-*` slots were added (the gallery had never been recorded in the project file) and the four existing `studioB-*` slots gained their default crop/zoom values. All sixteen Studio B images verified loading on the page.
+
+**Deliberately not applied:** The export is a full snapshot of the browser's state, so it was merged selectively rather than replacing the file. Only `studioB-*` slots were taken. Verified afterwards that `recovery`, `homepageHero`, `homepageSectionMedia`, and `innerPageMedia` are byte-identical to before, that no non-`studioB` slot changed, and that `community-lead-depth` still points at the brightened banner asset.
+
+**Open question for Bridget:** The export's `homepageHero` differs from the project file — it leads with `checkmark-audio-studio-sign-png.webp` where the project leads with `vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp`, and slide labels/alt text differ. That was left untouched pending Bridget's decision, since it is unclear whether it is a newer intentional hero edit or stale browser state that would revert approved work.
+
+**Files changed:** `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` and this change log.
