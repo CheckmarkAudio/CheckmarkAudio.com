@@ -12,7 +12,7 @@ body[data-page="community"]{background:var(--community-black)}
 .community-lead-image::before,.community-lead-image::after{content:"";position:absolute;z-index:1;pointer-events:none}
 .community-lead-image::before{inset:0;background:linear-gradient(180deg,rgba(5,6,5,.5) 0%,rgba(5,6,5,.16) 6%,transparent 15%),linear-gradient(90deg,rgba(5,6,5,.34),transparent 17%,transparent 84%,rgba(5,6,5,.14))}
 .community-lead-image::after{inset:auto 0 0;height:25%;background:linear-gradient(transparent,rgba(5,6,5,.6))}
-.community-lead-image img,.community-depth img{display:block;width:100%;height:100%;object-fit:cover;object-position:36% 51%;filter:saturate(1.04) contrast(1.01) brightness(1.22)}
+.community-lead-image img,.community-depth img{display:block;width:100%;height:100%;object-fit:cover;object-position:36% 51%;filter:saturate(1.05) contrast(1.02) brightness(1.34)}
 /* Foreground subjects lifted above the COMMUNITY title (iPhone-lock-screen depth). Same source crop and filter as the photo below, so the two layers register exactly; the bottom fade hands off to the darkened original. */
 .community-depth{position:absolute;inset:var(--lead-inset-top) 0 0;z-index:3;margin:0;overflow:hidden;pointer-events:none;visibility:hidden;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent 88%);mask-image:linear-gradient(180deg,#000 60%,transparent 88%)}
 .community-feed{position:relative;padding:44px 30px 32px 52px}

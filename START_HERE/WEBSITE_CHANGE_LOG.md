@@ -722,3 +722,11 @@ Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored
 **Files changed:** `community-page.css`, `community.html` (stylesheet cache version), and this change log.
 
 **Validation:** Desktop (1680x980) and mobile (390px) renders captured against the LAN address, bypassing the localhost-only media editor. Title contrast confirmed against the previously blown-out wall art; foreground subjects unaffected. At 375px the title measures 321px wide inside the viewport with Bebas Neue loaded and page scroll width equals viewport width, so there is no overflow.
+
+## 2026-09-02 — Community lead photo exposure
+
+**Change:** Lifted the Community lead photo's brightness a further step (1.22 to 1.34) at Bridget's request. The title contrast scrim and the hero vignettes are deliberately unchanged, so the letters keep the contrast added the previous day. The lead photo and the foreground cutout share a single filter declaration, so both layers brighten together and stay registered.
+
+**Files changed:** `community-page.css`, `community.html` (stylesheet cache version), and this change log.
+
+**Validation:** Desktop render captured at 1680x980 against the LAN address; room and subjects read brighter with the scrim and title contrast held.
