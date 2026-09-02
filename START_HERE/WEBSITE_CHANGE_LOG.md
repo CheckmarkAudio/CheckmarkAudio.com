@@ -730,3 +730,18 @@ Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored
 **Files changed:** `community-page.css`, `community.html` (stylesheet cache version), and this change log.
 
 **Validation:** Desktop render captured at 1680x980 against the LAN address; room and subjects read brighter with the scrim and title contrast held.
+
+## 2026-09-02 — Community lead photo genuinely brightened
+
+**Change:** Bridget reported the banner photo still reading dark. Two real causes, both fixed.
+
+1. The contrast scrim added the previous day covered the whole feature panel, not just the title, so it was darkening the room down to roughly two-thirds height. It is now an ellipse concentrated behind the `COMMUNITY` letters plus a short top band, so the letters keep their contrast and the rest of the photo is free.
+2. The source photo is severely underexposed — median luminance 17 of 255, 75th percentile 41 — so a CSS `brightness()` multiply could not lift it without washing the highlights. Baked a gamma-plus-S-curve lift into new derivative assets, raising median luminance to 55 and the mean from 33 to 69 while leaving white at white.
+
+New assets: `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.webp` and its matching `-brightened-foreground-cutout.webp`, generated with the identical curve (cutout alpha untouched) so the two layers stay visually and geometrically identical. The originals are unchanged and still available for other uses. The CSS filter is back to near-neutral now that the lift lives in the asset.
+
+**Files changed:** `community.html`, `community-page.css`, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, the two new GALLERY assets, and this change log.
+
+**Validation:** Desktop render captured at 1680x980 against the LAN address. In-browser check confirms the depth layer visible, lead and cutout layers pixel-aligned, both brightened assets loading, and no console errors.
+
+**Open questions / follow-up:** If Bridget re-picks the original unbrightened photo in the media editor, the depth layer will hide itself by design (`data-depth-for` guard); regenerate the pair to re-enable it.
