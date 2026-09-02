@@ -155,7 +155,7 @@
     const pattern = noisePatterns[(noiseTick >> 1) % NOISE_FRAMES];
     if (!pattern) return;
     ctx.save();
-    ctx.globalAlpha = 0.055 + energyLevel * 0.05;
+    ctx.globalAlpha = 0.2 + energyLevel * 0.1;
     ctx.fillStyle = pattern;
     // Jitter the origin so the tile seams never settle into a visible grid.
     ctx.translate(-Math.floor(Math.random() * NOISE_TILE), -Math.floor(Math.random() * NOISE_TILE));

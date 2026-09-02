@@ -763,3 +763,11 @@ New assets: `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.we
 **Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
 
 **Validation:** Verified in-browser paused and playing; grain uniform across the screen with no punch-out hole, halo and logo unaffected, no console errors.
+
+## 2026-09-02 — Sound demo static made visible
+
+**Change:** Bridget could not see the TV static. It was drawing correctly but at 0.055 alpha it composited to roughly 12 of 255 above the black screen — present in the pixel data, invisible in practice. Raised to 0.2 (plus up to 0.1 more with track energy), which reads as real fuzz while still sitting under the gold halo and logo.
+
+**Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
+
+**Validation:** Confirmed in-browser paused and playing; grain clearly visible across the screen, halo and logo still dominant, no console errors.
