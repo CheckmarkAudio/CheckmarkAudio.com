@@ -714,3 +714,11 @@ Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored
 **Files changed:** `community-page.css`, `community.html` (stylesheet cache version), new `MEDIA/IMAGES/TEXTURES/APPROVED/community-title-grit.webp`, `MEDIA/IMAGES/TEXTURES/APPROVED/SOURCES.md`, and this change log.
 
 **Validation:** Desktop render captured at 1680x980 against the LAN address, which bypasses the localhost-only media editor and so reflects production. Depth effect, grit, and re-crop all confirmed; no console errors.
+
+## 2026-09-02 — Community title contrast scrim
+
+**Change:** Added a directional dark scrim behind the `COMMUNITY` title, following the homepage `.hero::before` treatment (same `rgba(5,6,6,…)` ramp plus the warm radial). Studio wall lighting and the framed picture behind the letters were washing out the gold and flattening the grit. The scrim sits above the photo and below the title, and the foreground cutout layer stays above it — so the depth subjects keep their full brightness and read more strongly in front of the darkened letters.
+
+**Files changed:** `community-page.css`, `community.html` (stylesheet cache version), and this change log.
+
+**Validation:** Desktop (1680x980) and mobile (390px) renders captured against the LAN address, bypassing the localhost-only media editor. Title contrast confirmed against the previously blown-out wall art; foreground subjects unaffected. At 375px the title measures 321px wide inside the viewport with Bebas Neue loaded and page scroll width equals viewport width, so there is no overflow.
