@@ -745,3 +745,11 @@ New assets: `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.we
 **Validation:** Desktop render captured at 1680x980 against the LAN address. In-browser check confirms the depth layer visible, lead and cutout layers pixel-aligned, both brightened assets loading, and no console errors.
 
 **Open questions / follow-up:** If Bridget re-picks the original unbrightened photo in the media editor, the depth layer will hide itself by design (`data-depth-for` guard); regenerate the pair to re-enable it.
+
+## 2026-09-02 — Community lead photo lifted further
+
+**Change:** Bridget asked for lighter still. Regenerated the brightened pair at a stronger curve (exponent 0.42), taking the source from median luminance 17/255 to 79 and mean 33 to 90, with white still held at white. The lift work is now a reusable, measurable tool at `MEDIA/IMAGES/make-brightened-photo.py` rather than a one-off, so the strength can be dialled either way and reports before/after luminance.
+
+**Files changed:** `community.html` (stylesheet cache version), the two regenerated GALLERY assets, new `MEDIA/IMAGES/make-brightened-photo.py`, and this change log.
+
+**Validation:** Desktop render captured at 1680x980 against the LAN address. In-browser check confirms the depth layer visible, lead and cutout layers pixel-aligned, cutout loaded, and no console errors.
