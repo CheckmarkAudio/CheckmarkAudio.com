@@ -771,3 +771,14 @@ New assets: `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.we
 **Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
 
 **Validation:** Confirmed in-browser paused and playing; grain clearly visible across the screen, halo and logo still dominant, no console errors.
+
+## 2026-09-02 — Sound demo static pacing and logo disc restored
+
+**Change:** Two corrections to the static, both from Bridget's review.
+
+1. **Calmer.** Each noise frame is now held for six render frames, so the static settles at roughly 10fps instead of churning at the display's 60. The tile and its offset change together on that beat; re-randomising the offset every frame was what made it read as frantic.
+2. **Dark disc behind the logo restored.** The grain is drawn before the halo again, so the halo's feathered punch-out carves it back out behind the logo, leaving the clean black disc the approved draft had. Drawing the grain last had filled that disc in and cost the logo its pop.
+
+**Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
+
+**Validation:** Confirmed in-browser paused and playing; static calmer, dark disc present behind the logo, halo and play-arrow states correct, no console errors.

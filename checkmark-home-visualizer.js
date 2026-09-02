@@ -148,17 +148,28 @@
       noisePatterns.push(ctx.createPattern(c, 'repeat'));
     }
   })();
-  let noiseTick = 0;
+  // Each noise frame is held for NOISE_HOLD render frames, so the static
+  // settles at roughly 10fps instead of churning at the display's 60. The
+  // tile and its offset both change only on that beat — re-randomising the
+  // offset every frame is what made it read as frantic.
+  const NOISE_HOLD = 6;
+  let noiseTick = 0, noiseStep = -1, noiseIndex = 0, noiseOffX = 0, noiseOffY = 0;
 
   function drawStatic() {
-    noiseTick++;
-    const pattern = noisePatterns[(noiseTick >> 1) % NOISE_FRAMES];
+    const step = (noiseTick++ / NOISE_HOLD) | 0;
+    if (step !== noiseStep) {
+      noiseStep = step;
+      noiseIndex = (noiseIndex + 1) % NOISE_FRAMES;
+      noiseOffX = -Math.floor(Math.random() * NOISE_TILE);
+      noiseOffY = -Math.floor(Math.random() * NOISE_TILE);
+    }
+    const pattern = noisePatterns[noiseIndex];
     if (!pattern) return;
     ctx.save();
     ctx.globalAlpha = 0.2 + energyLevel * 0.1;
     ctx.fillStyle = pattern;
-    // Jitter the origin so the tile seams never settle into a visible grid.
-    ctx.translate(-Math.floor(Math.random() * NOISE_TILE), -Math.floor(Math.random() * NOISE_TILE));
+    // Offset keeps the tile seams from settling into a visible grid.
+    ctx.translate(noiseOffX, noiseOffY);
     ctx.fillRect(0, 0, W + NOISE_TILE, H + NOISE_TILE);
     ctx.restore();
   }
@@ -186,7 +197,10 @@
     requestAnimationFrame(draw);
     if (!onScreen || document.hidden) return;
     ctx.clearRect(0, 0, W, H);
-    if (!analyser) { drawStatic(); return; }
+    // Static goes down first so the halo's feathered punch-out carves it back
+    // out behind the logo, leaving the clean dark disc the logo reads against.
+    drawStatic();
+    if (!analyser) return;
 
     analyser.getByteFrequencyData(freqData);
 
@@ -299,10 +313,6 @@
     ctx.strokeStyle = 'rgba(214, 168, 94,' + (0.14 + bassLevel * 0.30).toFixed(3) + ')';
     ctx.lineWidth = 1;
     ctx.stroke();
-
-    // Grain last, so the halo's punch-out cannot erase a hole in it. The logo
-    // is an HTML element above the canvas, so it still sits over the static.
-    drawStatic();
 
     // Logo pulse + glow.
     const scale = 1 + bassLevel * 0.085;
