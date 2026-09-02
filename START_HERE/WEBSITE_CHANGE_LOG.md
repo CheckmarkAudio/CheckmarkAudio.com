@@ -753,3 +753,13 @@ New assets: `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.we
 **Files changed:** `community.html` (stylesheet cache version), the two regenerated GALLERY assets, new `MEDIA/IMAGES/make-brightened-photo.py`, and this change log.
 
 **Validation:** Desktop render captured at 1680x980 against the LAN address. In-browser check confirms the depth layer visible, lead and cutout layers pixel-aligned, cutout loaded, and no console errors.
+
+## 2026-09-02 — Sound demo TV static
+
+**Change:** Added subtle white TV static behind the pulsing logo in the homepage sound demo. The screen was black on a black bezel and read as sunk in; the grain lifts the panel so it looks lit. It shows while paused (a no-signal look) and continues under the visualizer during playback, brightening slightly with track energy.
+
+**Implementation:** Eight noise tiles are pre-rendered once into canvas repeat patterns, so each frame costs a single `fillRect` rather than per-pixel work; the pattern origin jitters per frame so tile seams never settle into a visible grid. The grain is drawn last, after the halo's `destination-out` punch-out, which would otherwise erase a hole in it behind the logo. The logo is an HTML element above the canvas, so it still sits over the static. Reduced-motion visitors get one still noise frame instead of the animation.
+
+**Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
+
+**Validation:** Verified in-browser paused and playing; grain uniform across the screen with no punch-out hole, halo and logo unaffected, no console errors.

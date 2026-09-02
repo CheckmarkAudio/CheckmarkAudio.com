@@ -126,6 +126,43 @@
   }
 
   // ---- Spectrum model (locked baseline values) ------------------------
+  // ---- TV static -------------------------------------------------------
+  // Lifts the screen off the console's black bezel so the panel reads lit
+  // rather than sunk in. Pre-rendered tiles cycled as a repeat pattern: one
+  // fillRect per frame instead of per-pixel work every frame.
+  const NOISE_TILE = 128, NOISE_FRAMES = 8;
+  const noisePatterns = [];
+  (function buildNoise() {
+    for (let f = 0; f < NOISE_FRAMES; f++) {
+      const c = document.createElement('canvas');
+      c.width = c.height = NOISE_TILE;
+      const nctx = c.getContext('2d');
+      const img = nctx.createImageData(NOISE_TILE, NOISE_TILE);
+      const d = img.data;
+      for (let i = 0; i < d.length; i += 4) {
+        const v = 200 + Math.random() * 55;
+        d[i] = d[i + 1] = d[i + 2] = v;
+        d[i + 3] = Math.random() * 255;
+      }
+      nctx.putImageData(img, 0, 0);
+      noisePatterns.push(ctx.createPattern(c, 'repeat'));
+    }
+  })();
+  let noiseTick = 0;
+
+  function drawStatic() {
+    noiseTick++;
+    const pattern = noisePatterns[(noiseTick >> 1) % NOISE_FRAMES];
+    if (!pattern) return;
+    ctx.save();
+    ctx.globalAlpha = 0.055 + energyLevel * 0.05;
+    ctx.fillStyle = pattern;
+    // Jitter the origin so the tile seams never settle into a visible grid.
+    ctx.translate(-Math.floor(Math.random() * NOISE_TILE), -Math.floor(Math.random() * NOISE_TILE));
+    ctx.fillRect(0, 0, W + NOISE_TILE, H + NOISE_TILE);
+    ctx.restore();
+  }
+
   const BAR_COUNT = 32;
   const ANGLE_ORDER = new Array(BAR_COUNT);
   for (let i = 0; i < BAR_COUNT; i++) ANGLE_ORDER[i] = (i * 13) % BAR_COUNT;
@@ -149,7 +186,7 @@
     requestAnimationFrame(draw);
     if (!onScreen || document.hidden) return;
     ctx.clearRect(0, 0, W, H);
-    if (!analyser) return;
+    if (!analyser) { drawStatic(); return; }
 
     analyser.getByteFrequencyData(freqData);
 
@@ -263,6 +300,10 @@
     ctx.lineWidth = 1;
     ctx.stroke();
 
+    // Grain last, so the halo's punch-out cannot erase a hole in it. The logo
+    // is an HTML element above the canvas, so it still sits over the static.
+    drawStatic();
+
     // Logo pulse + glow.
     const scale = 1 + bassLevel * 0.085;
     logoBtn.style.transform = 'translate(-50%, -50%) scale(' + scale.toFixed(4) + ')';
@@ -270,8 +311,9 @@
   }
   if (!reducedMotion) {
     requestAnimationFrame(draw);
-  } else if (glow) {
-    // Reduced motion: static soft glow, audio still plays.
-    glow.style.opacity = '0.3';
+  } else {
+    // Reduced motion: one still noise frame and a soft glow, audio still plays.
+    drawStatic();
+    if (glow) glow.style.opacity = '0.3';
   }
 })();
