@@ -142,7 +142,7 @@
       for (let i = 0; i < d.length; i += 4) {
         // Narrow value and alpha spreads keep the grain soft: a wide spread
         // reads as harsh on/off speckle rather than a haze.
-        const v = 208 + Math.random() * 34;
+        const v = 185 + Math.random() * 35;
         d[i] = d[i + 1] = d[i + 2] = v;
         d[i + 3] = 80 + Math.random() * 100;
       }
@@ -169,7 +169,9 @@
     const pattern = noisePatterns[noiseIndex];
     if (!pattern) return;
     ctx.save();
-    ctx.globalAlpha = 0.2 + energyLevel * 0.1;
+    // Barely coupled to energy on purpose: a big energy boost brightened the
+    // grain exactly when the waveform peaks, which is when it competes.
+    ctx.globalAlpha = 0.12 + energyLevel * 0.03;
     ctx.fillStyle = pattern;
     // Offset keeps the tile seams from settling into a visible grid.
     ctx.translate(noiseOffX, noiseOffY);

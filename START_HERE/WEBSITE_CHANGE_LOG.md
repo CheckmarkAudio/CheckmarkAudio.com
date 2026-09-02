@@ -798,3 +798,13 @@ New assets: `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.we
 **Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
 
 **Validation:** Canvas pixels measured in all three states — before play mean 0, playing mean 29.8, after pause mean 0 with logo glow back to 0. No console errors.
+
+## 2026-09-02 — Sound demo static dimmed behind the waveform
+
+**Change:** Darkened the static so it reads as texture rather than competing with the reactive halo. Two adjustments: the grain's grey value was lowered (it was near-white), and its opacity roughly halved. The energy coupling was also cut back sharply — it had been brightening the grain in proportion to track energy, which meant the fuzz peaked at exactly the moments the waveform is most active.
+
+Measured composited brightness over the screen fell from a mean of 29.8 to 14.1. For reference, an earlier pass at a mean near 12 was reported as invisible, so this sits just above the perceptual floor: subtle, still clearly present, and no longer contending with the halo.
+
+**Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
+
+**Validation:** Canvas pixels measured during playback; confirmed in-browser with no console errors.
