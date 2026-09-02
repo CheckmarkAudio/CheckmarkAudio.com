@@ -790,3 +790,11 @@ New assets: `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.we
 **Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
 
 **Validation:** Measured canvas pixels directly rather than judging by eye; confirmed in-browser with no console errors.
+
+## 2026-09-02 — Sound demo static only while playing
+
+**Change:** The static now runs only during playback. Previously it ran whenever the section was on screen, so a stopped demo still showed a live screen. Paused and pre-play now clear the canvas completely and return the logo to rest with its glow off, so off reads as genuinely off. Reduced-motion visitors get the same behaviour: the soft glow appears on play and clears on pause.
+
+**Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
+
+**Validation:** Canvas pixels measured in all three states — before play mean 0, playing mean 29.8, after pause mean 0 with logo glow back to 0. No console errors.

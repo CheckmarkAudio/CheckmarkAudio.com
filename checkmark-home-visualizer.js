@@ -156,6 +156,7 @@
   // offset every frame is what made it read as frantic.
   const NOISE_HOLD = 6;
   let noiseTick = 0, noiseStep = -1, noiseIndex = 0, noiseOffX = 0, noiseOffY = 0;
+  let atRest = false;
 
   function drawStatic() {
     const step = (noiseTick++ / NOISE_HOLD) | 0;
@@ -199,10 +200,19 @@
     requestAnimationFrame(draw);
     if (!onScreen || document.hidden) return;
     ctx.clearRect(0, 0, W, H);
+    // Off means off: no static, no halo, logo back at rest.
+    if (!analyser || audio.paused) {
+      if (!atRest) {
+        atRest = true;
+        logoBtn.style.transform = 'translate(-50%, -50%)';
+        if (glow) glow.style.opacity = '0';
+      }
+      return;
+    }
+    atRest = false;
     // Static goes down first so the halo's feathered punch-out carves it back
     // out behind the logo, leaving the clean dark disc the logo reads against.
     drawStatic();
-    if (!analyser) return;
 
     analyser.getByteFrequencyData(freqData);
 
@@ -323,9 +333,9 @@
   }
   if (!reducedMotion) {
     requestAnimationFrame(draw);
-  } else {
-    // Reduced motion: one still noise frame and a soft glow, audio still plays.
-    drawStatic();
-    if (glow) glow.style.opacity = '0.3';
+  } else if (glow) {
+    // Reduced motion: soft glow only while playing, audio otherwise unaffected.
+    audio.addEventListener('play', () => { glow.style.opacity = '0.3'; });
+    audio.addEventListener('pause', () => { glow.style.opacity = '0'; });
   }
 })();
