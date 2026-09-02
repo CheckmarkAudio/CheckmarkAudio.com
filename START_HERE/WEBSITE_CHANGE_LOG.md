@@ -782,3 +782,11 @@ New assets: `MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.we
 **Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
 
 **Validation:** Confirmed in-browser paused and playing; static calmer, dark disc present behind the logo, halo and play-arrow states correct, no console errors.
+
+## 2026-09-02 — Sound demo static contrast lowered
+
+**Change:** Softened the static's grain. The per-pixel value and alpha spreads were wide, which reads as harsh on/off speckle; both are now narrow, so it renders as a smooth haze. Measured composited range across the screen went from roughly 0-51 to 15-31 (contrast spread 51 to 16) while mean brightness held near 23, so the panel still sits clear of the black bezel without the speckle being aggressive.
+
+**Files changed:** `checkmark-home-visualizer.js`, `index.html` (script cache version), and this change log.
+
+**Validation:** Measured canvas pixels directly rather than judging by eye; confirmed in-browser with no console errors.

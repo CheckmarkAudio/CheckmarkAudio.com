@@ -140,9 +140,11 @@
       const img = nctx.createImageData(NOISE_TILE, NOISE_TILE);
       const d = img.data;
       for (let i = 0; i < d.length; i += 4) {
-        const v = 200 + Math.random() * 55;
+        // Narrow value and alpha spreads keep the grain soft: a wide spread
+        // reads as harsh on/off speckle rather than a haze.
+        const v = 208 + Math.random() * 34;
         d[i] = d[i + 1] = d[i + 2] = v;
-        d[i + 3] = Math.random() * 255;
+        d[i + 3] = 80 + Math.random() * 100;
       }
       nctx.putImageData(img, 0, 0);
       noisePatterns.push(ctx.createPattern(c, 'repeat'));
