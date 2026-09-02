@@ -704,3 +704,13 @@ Bridget's follow-up screenshot exposed a horizontal seam where the copy-anchored
 **Validation:** Lead and cutout layers measured pixel-identical at desktop, 1150px, and 390px, including the mobile 1.15 zoom transform; verified both with the localhost media editor active and with it simulated off (production behaviour); no console errors; no horizontal overflow at 390px.
 
 **Open questions / follow-up:** The distressed/textured gold treatment on the `COMMUNITY` letters in the concept art is not implemented — the title still uses the smooth gold gradient. Bridget to review the live render and approve a baseline screenshot.
+
+## 2026-09-01 — Community title grit and hero exposure
+
+**Change:** The `COMMUNITY` title now carries the distressed gold finish from Bridget's selected concept. A procedurally generated greyscale wear map (`MEDIA/IMAGES/TEXTURES/APPROVED/community-title-grit.webp`) is multiplied into the existing gold gradient with `background-blend-mode` and clipped to the letterforms, so the approved typography, size, and gradient are unchanged — only the surface is textured. Hero and rail photography exposure raised further toward the concept, and the "Produced at Checkmark" silhouette re-cropped so the figure's head and shoulders are visible instead of a band of empty purple.
+
+**Licensing note:** The grit map is generated from noise in-repo, not sourced stock, so nothing new needs a third-party licence. The unlicensed screenshots in `MEDIA/IMAGES/TEXTURES/REFERENCE/` were deliberately not used and remain uncommitted.
+
+**Files changed:** `community-page.css`, `community.html` (stylesheet cache version), new `MEDIA/IMAGES/TEXTURES/APPROVED/community-title-grit.webp`, `MEDIA/IMAGES/TEXTURES/APPROVED/SOURCES.md`, and this change log.
+
+**Validation:** Desktop render captured at 1680x980 against the LAN address, which bypasses the localhost-only media editor and so reflects production. Depth effect, grit, and re-crop all confirmed; no console errors.

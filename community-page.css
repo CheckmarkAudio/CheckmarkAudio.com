@@ -4,13 +4,13 @@ body[data-page="community"]{background:var(--community-black)}
 .community-shell{width:min(1920px,100%);min-height:calc(100vh - 96px);margin-inline:auto;display:grid;grid-template-columns:minmax(0,1.62fr) minmax(510px,1fr);border-bottom:1px solid rgba(214,168,94,.32)}
 .community-feature{--lead-inset-top:0px;position:relative;min-height:max(800px,calc(100vh - 96px));overflow:hidden;border-right:1px solid rgba(214,168,94,.38)}
 .community-heading{position:absolute;inset:0;z-index:2;pointer-events:none}
-.community-heading h1{position:absolute;top:clamp(26px,2.7vw,50px);left:clamp(28px,3.4vw,68px);z-index:2;margin:0;font:400 clamp(15.5rem,19vw,22rem)/.75 "Bebas Neue","Barlow Condensed",sans-serif;letter-spacing:.012em;text-transform:uppercase;white-space:nowrap;transform:scaleX(.57);transform-origin:left top;background:linear-gradient(180deg,#f3d69b 0%,#d9ac62 47%,#a6793d 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 rgba(255,255,255,.08)) drop-shadow(0 8px 24px rgba(0,0,0,.24))}
+.community-heading h1{position:absolute;top:clamp(26px,2.7vw,50px);left:clamp(28px,3.4vw,68px);z-index:2;margin:0;font:400 clamp(15.5rem,19vw,22rem)/.75 "Bebas Neue","Barlow Condensed",sans-serif;letter-spacing:.012em;text-transform:uppercase;white-space:nowrap;transform:scaleX(.57);transform-origin:left top;background-image:url("MEDIA/IMAGES/TEXTURES/APPROVED/community-title-grit.webp"),linear-gradient(180deg,#f3d69b 0%,#d9ac62 47%,#a6793d 100%);background-size:118% 128%,100% 100%;background-position:14% 34%,0 0;background-repeat:no-repeat;background-blend-mode:multiply;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 rgba(255,255,255,.08)) drop-shadow(0 8px 24px rgba(0,0,0,.24))}
 .community-heading p{position:absolute;top:clamp(118px,9.5vw,166px);left:76%;z-index:5;margin:0;color:var(--community-gold-bright);font:500 clamp(.86rem,1.02vw,1.08rem)/1.58 "DM Sans",sans-serif;letter-spacing:.28em;text-transform:uppercase;white-space:nowrap}
 .community-lead-image{position:absolute;inset:var(--lead-inset-top) 0 0;z-index:1;margin:0;overflow:hidden}
 .community-lead-image::before,.community-lead-image::after{content:"";position:absolute;z-index:1;pointer-events:none}
-.community-lead-image::before{inset:0;background:linear-gradient(180deg,rgba(5,6,5,.6) 0%,rgba(5,6,5,.22) 6%,transparent 17%),linear-gradient(90deg,rgba(5,6,5,.34),transparent 17%,transparent 84%,rgba(5,6,5,.14))}
-.community-lead-image::after{inset:auto 0 0;height:25%;background:linear-gradient(transparent,rgba(5,6,5,.72))}
-.community-lead-image img,.community-depth img{display:block;width:100%;height:100%;object-fit:cover;object-position:36% 51%;filter:saturate(.95) contrast(1.03) brightness(1.05)}
+.community-lead-image::before{inset:0;background:linear-gradient(180deg,rgba(5,6,5,.5) 0%,rgba(5,6,5,.16) 6%,transparent 15%),linear-gradient(90deg,rgba(5,6,5,.34),transparent 17%,transparent 84%,rgba(5,6,5,.14))}
+.community-lead-image::after{inset:auto 0 0;height:25%;background:linear-gradient(transparent,rgba(5,6,5,.6))}
+.community-lead-image img,.community-depth img{display:block;width:100%;height:100%;object-fit:cover;object-position:36% 51%;filter:saturate(1.04) contrast(1.01) brightness(1.22)}
 /* Foreground subjects lifted above the COMMUNITY title (iPhone-lock-screen depth). Same source crop and filter as the photo below, so the two layers register exactly; the bottom fade hands off to the darkened original. */
 .community-depth{position:absolute;inset:var(--lead-inset-top) 0 0;z-index:3;margin:0;overflow:hidden;pointer-events:none;visibility:hidden;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent 88%);mask-image:linear-gradient(180deg,#000 60%,transparent 88%)}
 .community-feed{position:relative;padding:44px 30px 32px 52px}
@@ -27,10 +27,10 @@ body[data-page="community"]{background:var(--community-black)}
 .chapter-status i{width:8px;height:8px;border-radius:50%;background:var(--community-red);box-shadow:0 0 10px rgba(207,51,42,.46)}
 .tonight-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;height:168px;margin-top:12px}
 .tonight-shot{display:block;min-width:0;overflow:hidden;background:#090a09}
-.tonight-strip img,.chapter-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.04) brightness(1)}
+.tonight-strip img,.chapter-image img{width:100%;height:100%;object-fit:cover;filter:saturate(1) contrast(1.02) brightness(1.1)}
 .tonight-shot img{object-position:center 42%}.tonight-shot:last-child img{object-position:center 26%}
 .chapter-image{height:174px;margin:12px 0 0;overflow:hidden;border:1px solid rgba(214,168,94,.2);background:#090a09}
-.chapter-image--wide img{object-position:center 44%}.community-chapter:last-child .chapter-image img{object-position:center 35%}
+.chapter-image--wide img{object-position:center 44%}.community-chapter:last-child .chapter-image img{object-position:center 20%}
 .community-cta{display:grid;grid-template-columns:1fr minmax(320px,1.5fr) auto;gap:32px;align-items:center;width:min(1760px,calc(100% - 72px));margin-inline:auto;padding:52px 0 58px}
 .community-cta p,.community-cta h2{margin:0}.community-cta p{color:var(--community-gold);font:500 .82rem/1.4 "Barlow Condensed",sans-serif;letter-spacing:.19em;text-transform:uppercase}.community-cta h2{color:var(--community-cream);font:500 clamp(2rem,3.2vw,3.7rem)/.95 "Playfair Display",serif;letter-spacing:-.035em}
 body[data-page="community"] .footer{background:#090a09}
