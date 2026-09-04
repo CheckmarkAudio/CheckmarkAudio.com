@@ -15,3 +15,6 @@ migration/public-pages/
 # Full-resolution source photos (~2GB). Master library for color edits —
 # only the exported MEDIA/IMAGES/*.webp outputs are meant to be tracked.
 MEDIA/ORIGINALS/
+
+# Timestamped backups written before each media-editor save (local safety net).
+.media-backups/

@@ -818,3 +818,25 @@ Measured composited brightness over the screen fell from a mean of 29.8 to 14.1.
 **Open question for Bridget:** The export's `homepageHero` differs from the project file — it leads with `checkmark-audio-studio-sign-png.webp` where the project leads with `vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp`, and slide labels/alt text differ. That was left untouched pending Bridget's decision, since it is unclear whether it is a newer intentional hero edit or stale browser state that would revert approved work.
 
 **Files changed:** `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` and this change log.
+
+## 2026-09-03 — Media editor saves directly to the project
+
+**Change:** The website media editor now writes its selections straight into `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`. Previously edits lived only in browser localStorage and had to be exported and hand-merged, which is how the Studio B gallery ended up unrecorded in the project for so long. The button now reads "Save photo changes" and saving is one click.
+
+**How it works:** `scripts/dev-server.py` replaces the bare `python3 -m http.server` preview (wired through `.claude/launch.json`). It serves the repository as before and adds one endpoint, `POST /__save-media-selections`.
+
+**Safeguards, because this overwrites a tracked file:**
+
+- Writes are accepted only from this computer. Pages are still served to the local network, but nothing on the network can write.
+- The payload must parse as JSON and carry a `mediaEditor.slots` object.
+- The previous file is copied into `.media-backups/` (gitignored) before every write; the newest 40 are kept.
+- A save that would drop more than 20% of existing slots is refused, since that usually means a stale tab was loaded before recent changes. `?force=1` overrides deliberately.
+- Writes are atomic, so an interrupted save cannot leave a half-written file.
+- The response reports exactly which slots and sections changed, and the editor displays it, so a save states what it actually did.
+- The writer reproduces the file's existing one-line-per-slot shape. A plain pretty-print turned a single photo change into a 425-line diff; it is now 17.
+
+**Fallback:** If the endpoint is unreachable (for example the old plain static server), the button reverts to the previous download-and-merge behaviour rather than failing.
+
+**Files changed:** new `scripts/dev-server.py`, `checkmark-site-media-editor.js`, `.claude/launch.json`, `.gitignore`, `index.html` and `inner-pages.js` (editor cache version), `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` (Studio B slot lines normalised to the file's dominant formatting), and this change log.
+
+**Validation:** Endpoint probe, garbage body, payload without slots, and a stale snapshot dropping every slot were each exercised — all three bad saves refused with the file left byte-identical. A real save from the editor UI confirmed the file rewritten with all 45 slots and every section unchanged, a backup created, and the status line reporting the result.

@@ -4,7 +4,7 @@
     {
       "name": "static-preview",
       "runtimeExecutable": "sh",
-      "runtimeArgs": ["-c", "exec python3 -m http.server \"$PORT\""],
+      "runtimeArgs": ["-c", "exec python3 scripts/dev-server.py"],
       "autoPort": true
     }
   ]
