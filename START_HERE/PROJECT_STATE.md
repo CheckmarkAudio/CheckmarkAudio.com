@@ -20,6 +20,8 @@ GitHub Pages already publishes `main` at https://checkmarkaudio.github.io/Checkm
 
 Ten content pages are active: Home, Services, Recording, Mixing & Mastering, Live Recordings, Studio A, Studio B, Team, Community, and Q & A. `404.html` is the error page. There is no second active website tree.
 
+September 5 navigation decision: the header's Services item links directly to `services.html`, the selected six-state Services page. The Recording / Mixing & Mastering / Live Recordings header dropdown and toggle are removed on desktop and phones. Existing detail-page files and non-header links remain available; this change does not retire their URLs.
+
 The August 21 recovered homepage is the protected baseline, with later explicitly selected refinements recorded in `WEBSITE_CHANGE_LOG.md`. Current features include:
 
 - The selected cinematic homepage with the same four hero photographs, the September 1 lower-third treatment, and Claude's September 4–5 champagne palette, matching buttons, contact bar, alternating section tones, and shorter copy.

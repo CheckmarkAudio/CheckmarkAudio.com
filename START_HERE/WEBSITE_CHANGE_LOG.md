@@ -1117,3 +1117,12 @@ Caught during verification: the form labels were failing at 3.11:1. The label co
 **Change:** Added a homepage-only diagonal overlay, darkest at the bottom-left and fading toward the upper-right. The stronger middle stops keep the headline and supporting copy on a dark field across the four existing slides. The reduced-transparency preference uses a more opaque version. Image files, order, crops, typography, and layout are unchanged; inner-page hero overlays retain their existing styling. Refreshed the homepage hero stylesheet cache key.
 
 **Validation:** All four photographs checked at 320, 390, 660, 768, and 1440px with no horizontal page overflow. Reviewed all four phone screenshots and the desktop microphone view. Confirmed the overlay leaves pointer events available, both CTA destinations stay intact, and noindex remains present. Chrome media emulation verifies the reduced-transparency variant. No inquiry or booking was submitted. Whitespace check passes.
+
+
+## 2026-09-05 — Link the header directly to the main Services page
+
+**Request:** Bridget selected the existing Services page in her screenshot and asked to remove the overhead Services dropdown and its separate service entries.
+
+**Change:** Replaced the dropdown markup with one direct `services.html` link in the homepage and shared inner-page headers. Removed submenu handling from the navigation script; the phone menu retains its open/close behavior, Escape focus return, and keyboard focus containment. Services remains highlighted on the main and related detail pages. Refreshed navigation and inner-page loader cache keys. The six-state Services composition, media, and interactions are unchanged. Existing detail-page URLs and non-header links are retained; no page deletion or redirect was part of this header change.
+
+**Validation:** All ten content pages checked at 390px and 1440px: exactly one direct Services header link, no dropdown markup, no horizontal overflow, noindex retained. The phone menu opens across all ten pages; Escape closes it and returns focus to Menu. Clicking Services from desktop and phone navigation opens the selected main page. All six service options retain their selected state when clicked at both widths. JavaScript syntax and whitespace checks pass. No inquiry or booking was submitted.
