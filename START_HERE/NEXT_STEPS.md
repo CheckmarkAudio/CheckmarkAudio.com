@@ -15,7 +15,8 @@ This is an action-routing list, not a replacement completion checklist. Approval
 3. Review the four individual phone crops saved in the September 5 polish follow-up and the preserved export's proposed hero order/labels/alt text in `DRAFTS/reference/media-selection-export-2026-09-02/`. Its Studio B slots are already saved; do not reapply the whole export.
 4. Decide whether/where to restore the parked consultation panel and Call the studio button from `DRAFTS/active/calendar-info-panel-2026-09-03/`.
 5. Review demo playlist titles/order, phone behavior, and new homepage/Community/Team screenshots. Confirm the consultation sentence ending in a comma (preserved from supplied copy).
-6. Review the complete root site with Bridget/Gavin and record newly approved visual baselines. Route finished studies out of `DRAFTS/active/` only after checking their remaining purpose.
+6. Review the September 5 site-wide rounded bevel rollout (approved study committed as `f94fa60`), including the Outline demo console, photo frames, and inquiry/calendar panels.
+7. Review the complete root site with Bridget/Gavin and record newly approved visual baselines. Route finished studies out of `DRAFTS/active/` only after checking their remaining purpose.
 
 ## Migration preparation
 

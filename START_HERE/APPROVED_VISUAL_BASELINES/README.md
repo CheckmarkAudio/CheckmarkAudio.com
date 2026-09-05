@@ -82,3 +82,7 @@ The four screenshots below show the approved homepage hero carousel in the root 
 - Acceptance criteria met: Responsive layout, keyboard/touch/pointer switching, exact shared-header geometry across representative pages, no page-level mobile overflow, no console errors, `noindex` retained
 - Conditions or exclusions: Final production/Artist Media page intent remains approval-gated; this does not authorize launch
 - Supersedes: The previous cream Services filter-card first viewport
+
+## September 5 rounded bevel direction
+
+`2026-09-05-rounded-window-corner-reference.png` is Bridget’s supplied corner-detail screenshot from 1:38 PM. She then approved the revised rounded-bevel mockup for site-wide application. This is a corner-shape reference, not blanket approval of newly rendered root-page screenshots. The retained component comparison is `../../DRAFTS/active/service-line-style-2026-09-05/`; implementation is `../../checkmark-rounded-bevels.css`.

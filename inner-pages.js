@@ -26,3 +26,5 @@ if(['recording','mixing','live'].includes(page)){
 const goldThemeStyles=document.createElement('link');goldThemeStyles.rel='stylesheet';goldThemeStyles.href='checkmark-gold-theme.css?v=20260905-2';document.head.appendChild(goldThemeStyles);
 const mediaLoader=document.createElement('script');mediaLoader.src='checkmark-media-loader.js?v=20260827-1';document.body.appendChild(mediaLoader);
 if(['localhost','127.0.0.1','0.0.0.0'].includes(location.hostname)){const editorStyles=document.createElement('link');editorStyles.rel='stylesheet';editorStyles.href='checkmark-site-media-editor.css?v=20260827-1';document.head.appendChild(editorStyles);mediaLoader.addEventListener('load',()=>{const editor=document.createElement('script');editor.src='checkmark-site-media-editor.js?v=20260902-1';document.body.appendChild(editor)})}
+
+const roundedBevelStyles=document.createElement("link");roundedBevelStyles.rel="stylesheet";roundedBevelStyles.href="checkmark-rounded-bevels.css?v=20260905-1";document.head.appendChild(roundedBevelStyles);

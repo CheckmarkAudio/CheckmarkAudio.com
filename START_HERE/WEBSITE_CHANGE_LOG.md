@@ -16,6 +16,20 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Open questions / follow-up:** Bridget approved the rounded bevel direction and requested commit/push followed by site-wide application. Proceed with Outline console for the demo and coordinated larger-frame curves.
 
+## 2026-09-05 — Root website — Rounded champagne bevel rollout
+
+**Status:** Implemented from Bridget’s approved mockup direction
+
+**Change:** Applied the approved rounded, lightly raised frame system across all ten content pages. The homepage demo now uses the Outline console, including its vertical beveled fader. Shared panels, inquiry fields, calendar frames, media frames, Team portraits, Q & A container, comparison controls, and Services controls have matching edge treatment. On phones the selected Services option, photograph, and description form one continuous window with rounded outer corners.
+
+**Preserve:** Page composition, approved media/crops, copy, typography, section alternation, logo and visualizer behavior, booking/inquiry behavior, noindex, and Wix hosting. The Community title finish remains a separate open choice.
+
+**Reference:** `../DRAFTS/active/service-line-style-2026-09-05/` and `APPROVED_VISUAL_BASELINES/2026-09-05-rounded-window-corner-reference.png` (Bridget’s supplied corner reference, not a screenshot approving the entire new site).
+
+**Outcome and validation:** All ten root pages loaded the new shared stylesheet and retained noindex without horizontal overflow at 1440px and 390px. Reviewed the demo and Team at desktop/phone sizes; checked narrow-phone homepage and tablet Services fit. All six Services states, mobile menu, demo track navigation, raw/mixed selection, and FAQ expansion behavior were checked. Existing mobile horizontal-fader overrides were explicitly reconciled with the approved vertical fader. No email or calendar transaction was submitted. JavaScript syntax and whitespace checks passed. The studio-tour asset’s pre-existing availability issue remains in the project migration record.
+
+**Files changed:** New `checkmark-rounded-bevels.css`, homepage stylesheet reference, inner-page loader and its nine HTML cache versions, plus supporting project records. Media selections and player scripts were not changed.
+
 ## Entry template
 
 ```markdown

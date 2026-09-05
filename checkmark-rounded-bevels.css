@@ -1,0 +1,157 @@
+/* Approved September 5: Services line art with shallow champagne bevels.
+   Final shared layer; layout, media crops, typography, and section colors stay local. */
+:root {
+  --bevel-radius:18px;
+  --bevel-inner:9px;
+  --bevel-control:5px;
+  --bevel-champagne:#e6c997;
+  --bevel-dark-edge:#f0d8ae #9b8057 #806844 #d5b989;
+  --bevel-light-edge:#d1bb97 #aa9270 #98815e #c6b18f;
+  --bevel-dark-shadow:inset 0 0 0 2px #e6c99722,inset 0 3px 1px #fff0c533,inset 0 -3px 1px #0009,0 4px 0 #332b1e,0 12px 24px #0003;
+  --bevel-light-shadow:inset 0 2px 0 #fffdf1cc,inset 0 -2px 0 #947e582b,0 3px 0 #c6b79f,0 9px 20px #30200c12;
+}
+
+/* Existing large windows share a curve and a restrained, directional rim. */
+body :is(.proofbox,.panel,.card,.service-card,.service-overview-card,.formbox,.contactbox,.console,.rate,.homepage-media-card,.calendar-frame,.service-stage,.studio-info-deck,.team-editorial,.qa-list,.ab-player) {
+  border-radius:var(--bevel-radius);
+  border-style:solid;
+  border-width:1px;
+  border-color:var(--bevel-light-edge);
+  box-shadow:var(--bevel-light-shadow);
+  overflow:hidden;
+}
+body :is(.service-stage,.console,.homepage-media-card) {
+  border-width:2px;
+  border-color:var(--bevel-dark-edge);
+  box-shadow:var(--bevel-dark-shadow);
+}
+body .homepage-media:not(.demo-reel-section) .homepage-media-card{border-radius:var(--bevel-radius);box-shadow:var(--bevel-dark-shadow)}
+body .service-window-bar {
+  background:linear-gradient(180deg,#26261e,#10110d);
+  box-shadow:inset 0 2px 0 #fff0c529,inset 0 -1px 0 #0009;
+}
+
+/* Frame photographs at their existing bounds so focal positions are retained. */
+body :is(.studio-shot,.photo-gallery figure,.chapter-image,.tonight-shot,.studio-filmstrip figure) {
+  border:2px solid;
+  border-color:var(--bevel-dark-edge);
+  border-radius:var(--bevel-radius);
+  box-shadow:var(--bevel-dark-shadow);
+  overflow:hidden;
+}
+body .equal-portrait {
+  border-radius:var(--bevel-inner);
+  outline:1px solid #b5996c;
+  box-shadow:0 3px 0 #b2a18a,0 9px 20px #30200c20;
+}
+body .ab-side{border-radius:var(--bevel-inner);border-color:var(--bevel-dark-edge);box-shadow:inset 0 1px 0 #fff0cf26,inset 0 -2px 0 #0006,0 3px 0 #332b1e}
+body .ab-toggle{border-radius:7px;box-shadow:inset 0 2px 4px #62503320,0 1px 0 #fff9eb66}
+body .ab-play{box-shadow:inset 0 2px 1px #fff0cf88,inset 0 -2px 1px #78603a66,0 3px 0 #77654a66,0 5px 12px #0002}
+body .qa-list details:last-child{border-bottom:0}
+body .qa-list details[open]{box-shadow:inset 0 2px 4px #62503312}
+
+/* Small controls retain precise edges; raised highlights carry the same finish. */
+body :is(.btn,.menu,.tab,.cal-time,.review-controls button,.ab-toggle button) {
+  border-radius:var(--bevel-control);
+  box-shadow:inset 0 1px 0 #fff0cf55,inset 0 -1px 0 #0005,0 2px 0 #77654a66,0 5px 12px #0002;
+}
+body .btn.primary{border-color:var(--bevel-dark-edge)}
+body :is(.btn:not(.primary),.menu,.tab,.cal-time){border-color:#ead2a9 #a58a61 #8d7048 #c9ac7d}
+body :is(.btn,.menu,.tab,.cal-time,.review-controls button,.ab-toggle button):active {
+  box-shadow:inset 0 2px 4px #0005;
+}
+body .studio-use-list li{border-radius:7px;box-shadow:inset 0 1px 0 #fff0cf26,inset 0 -1px 0 #0006,0 2px 0 #0005}
+body .service-option{border-radius:7px}
+body .service-option:is(:hover,:focus-visible,.is-active){box-shadow:inset 0 1px 0 #fff0cf26,inset 0 -1px 0 #0006,0 2px 0 #0004}
+body .field :is(input,select,textarea) {
+  border-radius:var(--bevel-control);
+  box-shadow:inset 0 2px 4px #62503320,0 1px 0 #fff9eb66;
+}
+
+/* The approved Outline console: line-art frame around the existing audio player. */
+body .demo-reel-section .video-console-card{border:0;background:transparent;box-shadow:none;overflow:visible;border-radius:0}
+body .demo-reel-section .video-console {
+  --console-gold:var(--bevel-champagne);
+  padding:0;border:2px solid;border-color:var(--bevel-dark-edge);
+  border-radius:var(--bevel-radius);
+  background:linear-gradient(135deg,#24231d 0%,#11120e 38%,#080907 100%);
+  box-shadow:var(--bevel-dark-shadow);
+}
+body .demo-reel-section .video-console::before{display:none}
+body .demo-reel-section .video-console-head {
+  min-height:50px;padding:12px 22px;border-bottom:1px solid var(--bevel-champagne);
+  font:500 20px "Barlow Condensed",sans-serif;letter-spacing:.13em;color:var(--bevel-champagne);
+  background:linear-gradient(180deg,#e6c99712,transparent 65%);
+  box-shadow:inset 0 2px 0 #fff1cd35,inset 0 -2px 0 #0009;
+  text-shadow:0 1px 1px #000;
+}
+body .demo-reel-section .video-console-mode{color:var(--bevel-champagne);font-size:11px}
+body .demo-reel-section .video-console-mode i{width:7px;height:7px;background:var(--bevel-champagne);box-shadow:none}
+body .demo-reel-section .video-console-body{grid-template-columns:minmax(0,1fr) 96px}
+body .demo-reel-section .video-console-screen {
+  margin:22px;padding:0;border:1px solid;
+  border-color:#776343 #e6c99799 #e6c997aa #776343;
+  border-radius:var(--bevel-inner);background:#080907;
+  box-shadow:0 1px 0 #f5dfb533,0 -1px 0 #000,inset 0 2px 7px #000;
+}
+body .demo-reel-section .viz-stage{min-height:290px;border-radius:calc(var(--bevel-inner) - 1px)}
+body .demo-reel-section .video-console-channel {
+  display:grid;min-height:100%;border-top:0;
+  border-left:1px solid #e6c99780;padding:40px 12px 24px;
+  background:linear-gradient(90deg,#e6c9970d,transparent 22%,#0002);
+  box-shadow:inset 2px 0 0 #f4dbae16,inset -2px 0 0 #0006;
+}
+body .demo-reel-section .console-screw{display:none}
+body .demo-reel-section .console-led{display:block;top:23px;width:10px;height:10px;border:2px solid var(--bevel-champagne);background:none;box-shadow:none}
+body .demo-reel-section .volume-fader{display:grid;grid-template:auto 1fr auto / 1fr;justify-items:center;width:auto;height:245px;margin-top:20px;color:var(--bevel-champagne);font-family:"Barlow Condensed",sans-serif;letter-spacing:.12em}
+body .demo-reel-section .volume-fader input{width:44px;height:175px;writing-mode:vertical-lr;direction:rtl;cursor:ns-resize}
+body .demo-reel-section .volume-fader input::-webkit-slider-runnable-track{width:2px;height:100%;border:0;border-radius:0;background:var(--bevel-champagne);box-shadow:none}
+body .demo-reel-section .volume-fader input::-webkit-slider-thumb {
+  width:28px;height:10px;margin-left:-13px;margin-top:0;border:2px solid;border-radius:2px;
+  border-color:#f4deb6 #ae9162 #8c7049 #d9be91;
+  background:linear-gradient(#77684c,#332e21);box-shadow:inset 0 1px 0 #fff1d044,0 2px 2px #0008;
+}
+body .demo-reel-section .volume-fader input::-moz-range-track{width:2px;height:100%;border:0;border-radius:0;background:var(--bevel-champagne);box-shadow:none}
+body .demo-reel-section .volume-fader input::-moz-range-progress{width:2px;background:var(--bevel-champagne)}
+body .demo-reel-section .volume-fader input::-moz-range-thumb {
+  width:28px;height:10px;border:2px solid;border-radius:2px;
+  border-color:#f4deb6 #ae9162 #8c7049 #d9be91;
+  background:linear-gradient(#77684c,#332e21);box-shadow:inset 0 1px 0 #fff1d044,0 2px 2px #0008;
+}
+body .demo-reel-section .video-console-cues {
+  margin:0;padding:14px 22px;border-top:1px solid var(--bevel-champagne);
+  grid-template-columns:48px minmax(0,1fr) 48px;
+  background:linear-gradient(180deg,#e6c99709,transparent);
+  box-shadow:inset 0 1px 0 #fff0c524,inset 0 -2px 0 #0007;
+}
+body .demo-reel-section .video-console-cues button {
+  width:48px;height:44px;border:1px solid;border-radius:var(--bevel-control);
+  border-color:#ead2a9 #a58a61 #8d7048 #c9ac7d;
+  background:linear-gradient(165deg,#39362c,#191a14 70%);color:var(--bevel-champagne);
+  box-shadow:inset 0 1px 0 #fff0cf35,inset 0 -1px 0 #0008,0 2px 0 #0009;
+}
+body .demo-reel-section .video-console-cues button:is(:hover,:focus-visible){background:var(--bevel-champagne);color:#080907}
+body .demo-reel-section .video-console-cues button:active{transform:translateY(1px);box-shadow:inset 0 2px 4px #0008}
+body .demo-reel-section .video-console-cues b{font-size:12px;color:var(--bevel-champagne)}
+body .demo-reel-section .video-console-cues small{font-size:12px;color:#b3a995}
+
+/* On phones the active Services item, photograph, and detail form one window. */
+@media(max-width:740px) {
+  body .service-selector>.service-option.is-active{border-radius:var(--bevel-radius) var(--bevel-radius) 0 0;transform:none}
+  body .service-selector>.service-stage{border-width:0 2px;border-color:var(--bevel-dark-edge);border-radius:0;box-shadow:inset 2px 0 0 #f4dbae16,inset -2px 0 0 #0006}
+  body .service-selector>.service-stage .service-window-bar{background:linear-gradient(180deg,#26261e,#10110d)}
+  body .service-selector>.service-detail{border-width:0 2px 2px;border-style:solid;border-color:var(--bevel-dark-edge);border-radius:0 0 var(--bevel-radius) var(--bevel-radius);box-shadow:inset 0 -2px 0 #0007,0 3px 0 #332b1e}
+}
+@media(max-width:620px) {
+  :root{--bevel-radius:14px;--bevel-inner:7px}
+  body .demo-reel-section .video-console-head{padding:12px;font-size:17px}
+  body .demo-reel-section .video-console-body{grid-template-columns:minmax(0,1fr) 58px}
+  body .demo-reel-section .video-console-screen{margin:12px}
+  body .demo-reel-section .video-console-channel{padding-inline:7px}
+  body .demo-reel-section .volume-fader{height:190px}
+  body .demo-reel-section .volume-fader input{height:120px}
+  body .demo-reel-section .viz-stage{min-height:226px}
+  body .demo-reel-section .video-console-cues{padding:12px;gap:8px}
+  body .demo-reel-section .video-console-cues small{font-size:11px}
+  body .demo-reel-section .video-console-mode{letter-spacing:.04em}
+}
