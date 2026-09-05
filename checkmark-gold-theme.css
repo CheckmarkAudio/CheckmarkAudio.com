@@ -107,9 +107,9 @@ body[data-page="services"] {
    heading 1px tall, so clipping a gradient to it produced no visible sheen and
    left the real title on a flat, washed-out champagne. */
 body :is(.hero .tagline, .hero .tagline.display, .pagehero .pagehero-title) {
-  background-image: linear-gradient(174deg,
-    #f4e2c2 0%, #dcc096 20%, #f2ddba 38%,
-    #ac8552 66%, #d9bf97 84%, #e7d2ad 100%);
+  background-image: linear-gradient(178deg,
+    #fff7df 0%, #f2cf9b 24%, #f8e9d5 42%,
+    #b99262 68%, #e8d5b9 86%, #f8e9d5 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

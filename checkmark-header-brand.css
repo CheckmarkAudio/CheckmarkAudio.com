@@ -49,10 +49,8 @@
 
 .header .logo span {
   color: #e6cba1;
-  background: linear-gradient(102deg, #d9bd93 0%, #f6e6c8 46%, #cfae82 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  -webkit-text-fill-color: #e6cba1;
   text-shadow: 0 0 18px rgba(242, 207, 155, .1);
   font: 300 clamp(1.48rem, 1.9vw, 2rem)/1 "Josefin Sans", "Avenir Next", sans-serif;
   letter-spacing: .075em;

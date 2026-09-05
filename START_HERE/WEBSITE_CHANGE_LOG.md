@@ -884,3 +884,17 @@ The red full stop in the tagline is explicitly protected from the gradient clip,
 **Change:** The header button is champagne again, matching the palette. It had been reverted to the old gold on a misreading of "make the button look like it did before" — Bridget meant the champagne version from the first pass, not the pre-champagne gold. Gradient, border and shadows all back to the champagne values.
 
 **Files changed:** `checkmark-header-brand.css`, `index.html` and `inner-pages.js` (cache version), and this change log.
+
+## 2026-09-03 — Live colours matched to the approved draft exactly
+
+**Change:** Aligned the implementation to the approved draft's literal values instead of hand-tuned approximations of them.
+
+- Title sheen restored to the draft's stops and angle: `linear-gradient(178deg, #fff7df 0%, #f2cf9b 24%, #f8e9d5 42%, #b99262 68%, #e8d5b9 86%, #f8e9d5 100%)`. It had been re-tuned to six different values while trying to fix a "too light" report whose real cause was the gradient being clipped to a hidden element and never rendering at all.
+- Header wordmark restored to the draft's flat `#e6cba1`, replacing an invented gradient.
+- Header CTA stays champagne, as confirmed.
+
+**Process note:** The drift happened because each round of feedback was answered by adjusting colour values rather than by checking the implementation against the approved draft. The draft folder holds the agreed values; diffing against it is the reliable check, and computed styles are now asserted equal to it rather than judged by eye.
+
+**Files changed:** `checkmark-gold-theme.css`, `checkmark-header-brand.css`, `index.html` and `inner-pages.js` (cache versions), and this change log.
+
+**Validation:** Computed styles asserted against the draft: title gradient string equal, wordmark fill equal to `rgb(230, 203, 161)`, eyebrow `rgb(241, 218, 184)`, red full stop `rgb(168, 46, 38)`, CTA on the champagne ramp.
