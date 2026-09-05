@@ -1,0 +1,260 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "railOverflow": false,
+    "people": [
+      {
+        "name": "Gavin Hammond",
+        "top": 240.515625,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Bridget Reinhard",
+        "top": 442.875,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Richard Baca",
+        "top": 645.234375,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Matt Bow",
+        "top": 847.59375,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Tony Rivera",
+        "top": 1049.953125,
+        "height": 161.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      }
+    ],
+    "carouselControls": 0
+  },
+  {
+    "width": 375,
+    "overflow": false,
+    "railOverflow": false,
+    "people": [
+      {
+        "name": "Gavin Hammond",
+        "top": 247.71875,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Bridget Reinhard",
+        "top": 450.078125,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Richard Baca",
+        "top": 652.4375,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Matt Bow",
+        "top": 854.796875,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Tony Rivera",
+        "top": 1057.15625,
+        "height": 161.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      }
+    ],
+    "carouselControls": 0
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "railOverflow": false,
+    "people": [
+      {
+        "name": "Gavin Hammond",
+        "top": 249.703125,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Bridget Reinhard",
+        "top": 452.0625,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Richard Baca",
+        "top": 654.421875,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Matt Bow",
+        "top": 856.78125,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Tony Rivera",
+        "top": 1059.140625,
+        "height": 161.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      }
+    ],
+    "carouselControls": 0
+  },
+  {
+    "width": 620,
+    "overflow": false,
+    "railOverflow": false,
+    "people": [
+      {
+        "name": "Gavin Hammond",
+        "top": 257.5625,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Bridget Reinhard",
+        "top": 459.921875,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Richard Baca",
+        "top": 662.28125,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Matt Bow",
+        "top": 864.640625,
+        "height": 182.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      },
+      {
+        "name": "Tony Rivera",
+        "top": 1067,
+        "height": 161.359375,
+        "nameOpacity": "1",
+        "portraitWidth": 112
+      }
+    ],
+    "carouselControls": 0
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "railOverflow": false,
+    "people": [
+      {
+        "name": "Gavin Hammond",
+        "top": 269,
+        "height": 537.109375,
+        "nameOpacity": "1",
+        "portraitWidth": 286
+      },
+      {
+        "name": "Bridget Reinhard",
+        "top": 269,
+        "height": 537.109375,
+        "nameOpacity": "1",
+        "portraitWidth": 287
+      },
+      {
+        "name": "Richard Baca",
+        "top": 806.109375,
+        "height": 537.109375,
+        "nameOpacity": "1",
+        "portraitWidth": 286
+      },
+      {
+        "name": "Matt Bow",
+        "top": 806.109375,
+        "height": 537.109375,
+        "nameOpacity": "1",
+        "portraitWidth": 287
+      },
+      {
+        "name": "Tony Rivera",
+        "top": 1343.21875,
+        "height": 534.609375,
+        "nameOpacity": "1",
+        "portraitWidth": 285
+      }
+    ],
+    "carouselControls": 0
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "railOverflow": false,
+    "people": [
+      {
+        "name": "Gavin Hammond",
+        "top": 281,
+        "height": 653.671875,
+        "nameOpacity": "1",
+        "portraitWidth": 393.65625
+      },
+      {
+        "name": "Bridget Reinhard",
+        "top": 281,
+        "height": 653.671875,
+        "nameOpacity": "1",
+        "portraitWidth": 393.671875
+      },
+      {
+        "name": "Richard Baca",
+        "top": 281,
+        "height": 653.671875,
+        "nameOpacity": "1",
+        "portraitWidth": 394.65625
+      },
+      {
+        "name": "Matt Bow",
+        "top": 934.671875,
+        "height": 677.6875,
+        "nameOpacity": "1",
+        "portraitWidth": 393.65625
+      },
+      {
+        "name": "Tony Rivera",
+        "top": 934.671875,
+        "height": 677.6875,
+        "nameOpacity": "1",
+        "portraitWidth": 394.671875
+      }
+    ],
+    "carouselControls": 0
+  }
+]

@@ -8,7 +8,11 @@ updated: 2026-08-02
 
 This plan applies the SEO Master Plan and SEO Training Manual to the actual Checkmark Audio media library while preserving the repository rules in `MEDIA/README.md`.
 
-## Current Inventory
+## Inventory snapshot and September 5 update
+
+The counts below describe the August media qualification snapshot. The September 5 Git audit found 20 local-only root audio masters and 62 local-only videos; Git now also includes 11 short demo clips and the M4A comparison pair. Approved microphone/Community textures are implemented. See `../MEDIA/README.md` and `../MIGRATION/STATUS_2026-09-05.md` for deployment boundaries and the unverified tour permission. Folder placement and historical photo approval do not establish video clearance.
+
+### August inventory
 
 - Flat active library: 506 readable, byte-unique images in `MEDIA/IMAGES/`, 20 readable audio files in `MEDIA/AUDIO/`, and 41 readable videos in `MEDIA/VIDEO/`.
 - Unreadable library: 107 zero-byte placeholders in `MEDIA/UNREADABLE/` for Bridget's later deletion decision.

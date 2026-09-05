@@ -21,3 +21,13 @@ MEDIA/ORIGINALS/
 
 # Python bytecode from scripts/.
 __pycache__/
+
+# Existing local-only masters: storage/permission decisions are still pending.
+# Optimized demo-clips/*.mp3 and the comparison .m4a files remain tracked.
+/MEDIA/AUDIO/*.mp3
+/MEDIA/AUDIO/*.wav
+/MEDIA/VIDEO/
+
+# Unlicensed texture inspiration and transient Affinity lock files are not web assets.
+/MEDIA/IMAGES/TEXTURES/REFERENCE/
+*.af~lock~

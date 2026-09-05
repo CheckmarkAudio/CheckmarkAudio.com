@@ -47,7 +47,7 @@ Other possible service targets, including artist photography or artist media, re
 
 1. Reconcile the SEO Master Plan and SEO Training Manual against the Source of Truth and confirmed current decisions using `DOCUMENT_MAP.md`.
 2. Build a page-intent map showing the audience need, primary query theme, canonical page, supporting proof, and conversion action for each proposed page.
-3. Compare the proposed map with the current Wix URLs and all nine replacement-site root pages.
+3. Compare the proposed map with the current Wix URLs and all ten replacement-site root content pages.
 4. Approve the final page list and URL convention.
 5. Create a complete old-to-new redirect map before renaming or removing public pages.
 6. Rename or create pages in one controlled pass, updating all references at the same time.

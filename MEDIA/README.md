@@ -84,3 +84,9 @@ Google describes filenames as a light clue. Alt text and relevant page context c
 All recovered readable images were inspected in contact sheets on July 31, 2026. Camera-number, hash-only, sentence-length, misleading-format, workflow-noise, one-word, project-shorthand, and underspecified filenames were corrected from visible content. Clearly local studio, room, service, and exterior images use `albuquerque-nm` where it adds truthful context. Logos, album covers, third-party marks, and unrelated artwork do not receive artificial location keywords. `IMAGE_VISUAL_REVIEW_MANIFEST.csv` records the review passes. Files that already had concise, factual names were retained.
 
 This visual review does not establish copyright ownership, model releases, client approval, or permission to publish. Those fields remain pending in `MEDIA_METADATA.csv` and must be confirmed before an image is placed on a public page.
+
+## September 5 storage and deployment audit
+
+In addition to the comparison M4A pair, Git now protects 11 optimized 30-second MP3 demo clips and their generator. The existing local-only master boundary is explicitly recorded in `.gitignore`: 20 root audio masters (~384 MiB), 62 video files (~8.04 GiB), 14 unlicensed texture references, and one Affinity lock file were excluded from the synchronization. They were not deleted.
+
+The selected studio-tour MP4 (~45.50 MiB) and two optional WAV fallback paths are still absent from Git, so the tour cannot play from the GitHub Pages preview. Its catalog entry VID-0027 remains unverified for permission; resolve that before creating/publishing a web copy. `node MIGRATION/check-site-links.mjs --tracked` detects these gaps even when a local existence check passes. Historical inventory totals above are dated snapshots, not current filesystem counts.

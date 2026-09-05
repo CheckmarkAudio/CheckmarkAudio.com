@@ -1,7 +1,7 @@
 ---
 title: Document Map and Conflict Rules
 status: active
-updated: 2026-08-21
+updated: 2026-09-05
 ---
 
 # Document Map and Conflict Rules
@@ -21,6 +21,7 @@ The following short names may be used in chats, notes, and task instructions:
 | **Platform Architecture** | `PLATFORM_ARCHITECTURE.md` | Current cross-repository, Supabase, client-account, inquiry, and calendar architecture |
 | **Policy Library** | `../POLICIES/README.md` | Working register for studio, Checkmark Tonight, school/lesson, and website-policy documents; entries are not approved merely because they are filed there |
 | **Website Change Log** | `WEBSITE_CHANGE_LOG.md` | Chronological visual decisions and approval status |
+| **September 5 Audit** | `../MIGRATION/STATUS_2026-09-05.md` | Dated Git, contributor, QA, and migration evidence; not a second completion checklist |
 | **Approved Baselines** | `APPROVED_VISUAL_BASELINES/` | Screenshots explicitly approved as visual references |
 
 “Review the three website documents” means review the **Source of Truth**, **SEO Master Plan**, and **SEO Training Manual**. An AI coder should not require Bridget to repeat their full filenames.

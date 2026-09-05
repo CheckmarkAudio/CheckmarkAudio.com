@@ -1063,3 +1063,15 @@ Caught during verification: the form labels were failing at 3.11:1. The label co
 **Files changed:** `index.html`, `checkmark-gold-theme.css`, new `DRAFTS/active/calendar-info-panel-2026-09-03/README.md`, and this change log.
 
 **Validation:** Checked at both origins. On localhost the counter shows and the edit flag is set; over the LAN address, which does not load the editors, the counter is hidden, the flag is absent, and no contrast failures remain in the inquiry section.
+
+## 2026-09-05 — Reconcile Claude/Codex handoff and finish Team phone layout
+
+**Request and attribution:** Bridget requested a local/GitHub audit, synchronization, migration diagnostics, and current context. She supplied Claude's final `6eab017` report and interrupted Team request. Session metadata identifies earlier Codex work as GPT-5.6 Sol and this session as GPT-6 Astra; Claude model names are preserved from Git co-author trailers. The latest earlier headings dated September 3 describe commits actually recorded September 4–5; Git timestamps govern commit chronology, while original headings remain intact.
+
+**Change:** The Team phone layout no longer uses a horizontal snap rail or hides inactive names. At up to 620px all five members follow normal vertical scrolling in equal compact rows with 112px portrait boxes and visible names/roles. Removed the carousel controls and stopped loading the obsolete Team carousel script. Tablet/desktop layout and canonical portrait/crop selections are unchanged. Preserved the uncommitted inner-page theme version update to `20260903-14` and refreshed the shared script cache key on all nine inner pages.
+
+**Validation:** All ten content pages checked at 390/768/1440px with no page overflow, broken loaded images, or JavaScript exceptions; one H1 and development noindex on each. Mobile menus opened and closed with Escape. Team additionally checked at 320/375/390/620px: all five profiles vertically ordered, all names visible, no rail/page overflow; 768/1440px retain multi-column layouts. Phone screenshot visually reviewed. New layout awaits Bridget's approval; no new approved-baseline claim. JavaScript syntax and expanded literal file checks pass; tracked-file check intentionally identifies the existing tour/WAV deployment gaps.
+
+**Handoff:** Affiliates layout remains queued exactly as requested: five centered logos, three over two on phones, no box separators, banner-style desktop. Parked consultation markup remains available. The loose media export's slots were already canonical; its differing hero order/labels/alt text were preserved as a reference without applying them.
+
+**Records:** Current state, next actions, cross-model handoff, design questions, README/Claude entry points, stale architecture/SEO notes, media storage documentation, and migration diagnostics reconciled. Wix URL inventory captured. No domain/DNS or production indexing changes, external messages, or test bookings were made. Raw masters/reference media remain local-only.

@@ -13,7 +13,9 @@ The only active website is at the repository root:
 - `faq.html` — public-facing questions and answers currently under review
 - `site.css` and the root `checkmark-*.css` / `checkmark-*.js` files — canonical website support files
 
-The root site remains `noindex` and visibly marked as in development. It is not the public CheckmarkAudio.com site yet.
+The root site remains `noindex` and visibly marked as in development. GitHub Pages publishes a public [development preview](https://checkmarkaudio.github.io/CheckmarkAudio.com/) from `main`; it is not the production CheckmarkAudio.com domain. Pushing updates that preview while Wix remains live.
+
+Current reconciliation, contributor history, diagnostics, and launch gaps: [`MIGRATION/STATUS_2026-09-05.md`](MIGRATION/STATUS_2026-09-05.md). Next design task: affiliates grid; the unfinished Team phone layout is now implemented for review.
 
 ## Folder map
 
@@ -38,7 +40,7 @@ Visual editor changes stored in a browser are working changes only. An approved 
 
 ## Local preview
 
-From the repository root, run a local web server and open `http://localhost:4173/`. Do not open HTML files directly from Finder because the media index and interactive tools require HTTP.
+From the repository root, run `python3 scripts/dev-server.py` and open `http://localhost:4173/`. This server enables direct media-editor saving with local backups; a generic static server only supports export fallback. If the port is occupied, pass a free port, for example `python3 scripts/dev-server.py 4187`. Do not open HTML files directly from Finder because the media index and interactive tools require HTTP.
 
 ## Production boundary
 

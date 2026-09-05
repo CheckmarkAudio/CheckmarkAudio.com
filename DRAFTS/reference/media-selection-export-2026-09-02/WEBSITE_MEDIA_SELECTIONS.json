@@ -1,0 +1,628 @@
+{
+  "recovery": {
+    "recoveredOn": "2026-08-21",
+    "status": "Approved working homepage direction",
+    "approvedBy": "Bridget",
+    "approvedOn": "2026-08-21",
+    "canonicalPage": "index.html",
+    "sourceOrigin": "http://localhost:4173",
+    "sourcePreview": "index.html",
+    "sourceStorageKeys": [
+      "checkmark-home-hero-v1",
+      "checkmark-site-media-v1"
+    ],
+    "legacyStorageKeys": [
+      "checkmark-draft-home-hero-v1",
+      "checkmark-draft-site-media-v1"
+    ],
+    "note": "Recovered from Chrome local storage, approved by Bridget, and promoted to the root website. This file is the canonical backup of the homepage media selections and crop positions."
+  },
+  "mediaEditor": {
+    "version": 1,
+    "updatedAt": "2026-09-02T19:29:15.813Z",
+    "slots": {
+      "home-studio-photo-1": {
+        "slot": "home-studio-photo-1",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp"
+      },
+      "home-studio-photo-2": {
+        "slot": "home-studio-photo-2",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp"
+      },
+      "home-feature-video-1": {
+        "slot": "home-feature-video-1",
+        "kind": "audio-visualizer",
+        "src": "checkmark-demo-playlist.js",
+        "note": "2026-09-01: demo reel video replaced by the approved logo sound visualizer (baseline DRAFTS/active/logo-audio-visualizer-2026-09-01/APPROVED-LOCKED-2026-09-01.html); tracks listed in checkmark-demo-playlist.js; prior video retained at MEDIA/VIDEO/cma-music-studio-demo.mp4"
+      },
+      "home-feature-video-2": {
+        "slot": "home-feature-video-2",
+        "kind": "video",
+        "src": "MEDIA/VIDEO/intro-richard-music-studio-checkmark-audio-recording.mp4"
+      },
+      "services-recording": {
+        "slot": "services-recording",
+        "kind": "dataset",
+        "src": "MEDIA/IMAGES/jjune-vocal-recording-session.webp"
+      },
+      "services-production": {
+        "slot": "services-production",
+        "kind": "dataset",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp"
+      },
+      "services-mixing-mastering": {
+        "slot": "services-mixing-mastering",
+        "kind": "dataset",
+        "src": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp"
+      },
+      "services-live-recordings": {
+        "slot": "services-live-recordings",
+        "kind": "dataset",
+        "src": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp"
+      },
+      "services-podcast-voice-over": {
+        "slot": "services-podcast-voice-over",
+        "kind": "dataset",
+        "src": "MEDIA/IMAGES/artist-interview-checkmark-audio-studio-episode-thumbnail.webp"
+      },
+      "services-artist-media": {
+        "slot": "services-artist-media",
+        "kind": "dataset",
+        "src": "MEDIA/IMAGES/marz-artist-photography-promo.webp"
+      },
+      "recording-hero": {
+        "slot": "recording-hero",
+        "kind": "background",
+        "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone.webp",
+        "cssVar": "--page-image"
+      },
+      "mixing-hero": {
+        "slot": "mixing-hero",
+        "kind": "background",
+        "src": "MEDIA/IMAGES/mixing-console-close-up-view-02.webp",
+        "cssVar": "--page-image"
+      },
+      "live-hero": {
+        "slot": "live-hero",
+        "kind": "background",
+        "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp",
+        "cssVar": "--page-image"
+      },
+      "team-hero": {
+        "slot": "team-hero",
+        "kind": "background",
+        "src": "MEDIA/IMAGES/gavin-hammond-studio-console-portrait-view-01.webp",
+        "cssVar": "--page-image"
+      },
+      "team-gavin": {
+        "slot": "team-gavin",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp",
+        "desktop": {
+          "x": 53,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "team-bridget": {
+        "slot": "team-bridget",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "team-richard": {
+        "slot": "team-richard",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-guitar-lesson.webp",
+        "desktop": {
+          "x": 48,
+          "y": 49.85511363636363,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "community-hero": {
+        "slot": "community-hero",
+        "kind": "background",
+        "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-view-02.webp",
+        "cssVar": "--page-image"
+      },
+      "community-lead-depth": {
+        "slot": "community-lead-depth",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b-brightened.webp"
+      },
+      "community-tonight-1": {
+        "slot": "community-tonight-1",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/community/unchained-male-vocalist-checkmark-tonight.webp"
+      },
+      "community-tonight-2": {
+        "slot": "community-tonight-2",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/community/unchained-female-vocalist-checkmark-tonight.webp"
+      },
+      "community-tonight-3": {
+        "slot": "community-tonight-3",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/community/male-musician-studio-interview-speaking.webp"
+      },
+      "community-stories": {
+        "slot": "community-stories",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-and-marz-studio-session.webp"
+      },
+      "community-produced": {
+        "slot": "community-produced",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/community/artist-purple-silhouette-view-05.webp"
+      },
+      "faq-hero": {
+        "slot": "faq-hero",
+        "kind": "background",
+        "src": "MEDIA/IMAGES/studio-microphone-and-sign.webp",
+        "cssVar": "--page-image"
+      },
+      "studioA-primary": {
+        "slot": "studioA-primary",
+        "kind": "background",
+        "src": "MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp",
+        "cssVar": "--studio-image"
+      },
+      "studioA-rail-1": {
+        "slot": "studioA-rail-1",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp"
+      },
+      "studioA-rail-2": {
+        "slot": "studioA-rail-2",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp"
+      },
+      "studioA-rail-3": {
+        "slot": "studioA-rail-3",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp"
+      },
+      "studioB-primary": {
+        "slot": "studioB-primary",
+        "kind": "background",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp",
+        "cssVar": "--studio-image",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-rail-1": {
+        "slot": "studioB-rail-1",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-rail-2": {
+        "slot": "studioB-rail-2",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-rail-3": {
+        "slot": "studioB-rail-3",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-5": {
+        "slot": "studioB-gallery-5",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/richard-baca-and-marz-studio-session-view-02.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-8": {
+        "slot": "studioB-gallery-8",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/milli_booth_warm_natural_fabric_landscape.jpg",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-4": {
+        "slot": "studioB-gallery-4",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-mixing-workstation-view-05.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-6": {
+        "slot": "studioB-gallery-6",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/male-artist-blue-cap-studio-headshot.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-10": {
+        "slot": "studioB-gallery-10",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-09.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-1": {
+        "slot": "studioB-gallery-1",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-2": {
+        "slot": "studioB-gallery-2",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-3": {
+        "slot": "studioB-gallery-3",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-03.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-7": {
+        "slot": "studioB-gallery-7",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-black-and-white.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-9": {
+        "slot": "studioB-gallery-9",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/drum-recording-cymbal-detail.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-11": {
+        "slot": "studioB-gallery-11",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-microphone-blue-green-light.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      },
+      "studioB-gallery-12": {
+        "slot": "studioB-gallery-12",
+        "kind": "image",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-b/checkmark-audio-vocal-recording-booth-view-02.webp",
+        "desktop": {
+          "x": 50,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        }
+      }
+    }
+  },
+  "homepageHero": {
+    "interval": 8000,
+    "transition": "crossfade",
+    "slides": [
+      {
+        "id": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
+        "label": "Checkmark studio sign",
+        "src": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
+        "alt": "Checkmark Audio recording studio sign in Albuquerque, New Mexico",
+        "desktop": {
+          "x": 0,
+          "y": 30,
+          "zoom": 110
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        },
+        "enabled": true,
+        "added": 1787162771907
+      },
+      {
+        "id": "MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp",
+        "label": "Electric guitarist action portrait",
+        "src": "MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp",
+        "alt": "Musician playing a red electric guitar",
+        "desktop": {
+          "x": 51,
+          "y": 71,
+          "zoom": 100
+        },
+        "mobile": {
+          "x": 50,
+          "y": 44,
+          "zoom": 115
+        },
+        "enabled": true,
+        "added": 1787162590318
+      },
+      {
+        "id": "microphone-room",
+        "label": "Control room microphone",
+        "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp",
+        "alt": "Recording microphone and control room at Checkmark Audio in Albuquerque",
+        "desktop": {
+          "x": 0,
+          "y": 56,
+          "zoom": 118
+        },
+        "mobile": {
+          "x": 68,
+          "y": 50,
+          "zoom": 125
+        },
+        "enabled": true,
+        "added": 2
+      },
+      {
+        "id": "MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp",
+        "label": "Studio patch bay and rack gear",
+        "src": "MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp",
+        "alt": "Studio patch bay and rack gear at Checkmark Audio",
+        "desktop": {
+          "x": 0,
+          "y": 46,
+          "zoom": 113
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50,
+          "zoom": 115
+        },
+        "enabled": true,
+        "added": 1787163533066
+      }
+    ]
+  },
+  "homepageSectionMedia": {
+    "home-studio-photo-1": {
+      "slot": "home-studio-photo-1",
+      "kind": "image",
+      "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp",
+      "desktop": {
+        "x": 57,
+        "y": 26,
+        "zoom": 100
+      },
+      "mobile": {
+        "x": 50,
+        "y": 50,
+        "zoom": 115
+      }
+    },
+    "home-studio-photo-2": {
+      "slot": "home-studio-photo-2",
+      "kind": "image",
+      "src": "MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp",
+      "desktop": {
+        "x": 62.55129419191919,
+        "y": 48.22758838383838,
+        "zoom": 100
+      },
+      "mobile": {
+        "x": 50,
+        "y": 50,
+        "zoom": 115
+      }
+    },
+    "home-studio-photo-3": {
+      "slot": "home-studio-photo-3",
+      "kind": "image",
+      "src": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp",
+      "desktop": {
+        "x": 50,
+        "y": 62,
+        "zoom": 100
+      },
+      "mobile": {
+        "x": 50,
+        "y": 50,
+        "zoom": 115
+      }
+    }
+  },
+  "innerPageMedia": {
+    "services": {
+      "status": "Selected interactive signal-path layout implemented 2026-08-26",
+      "default": "MEDIA/IMAGES/jjune-vocal-recording-session.webp",
+      "serviceImages": {
+        "recording": "MEDIA/IMAGES/jjune-vocal-recording-session.webp",
+        "production": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp",
+        "mixingMastering": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp",
+        "liveRecordings": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp",
+        "podcastVoiceOver": "MEDIA/IMAGES/artist-interview-checkmark-audio-studio-episode-thumbnail.webp",
+        "artistMedia": "MEDIA/IMAGES/marz-artist-photography-promo.webp"
+      }
+    },
+    "team": {
+      "status": "Selected equal five-person editorial grid implemented 2026-08-28",
+      "portraits": {
+        "gavinHammond": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp",
+        "bridgetReinhard": "MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp",
+        "richardBaca": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-guitar-lesson.webp",
+        "mattBow": null,
+        "tonyRivera": null
+      }
+    },
+    "community": {
+      "status": "Selected cinematic broadcast-wall layout implemented 2026-09-01",
+      "lead": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp",
+      "checkmarkTonight": [
+        "MEDIA/IMAGES/BY_PAGE/community/unchained-male-vocalist-checkmark-tonight.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/unchained-female-vocalist-checkmark-tonight.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/male-musician-studio-interview-speaking.webp"
+      ],
+      "artistStories": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-and-marz-studio-session.webp",
+      "producedAtCheckmark": "MEDIA/IMAGES/BY_PAGE/community/artist-purple-silhouette-view-05.webp"
+    },
+    "studioA": {
+      "status": "Selected cinematic split layout implemented 2026-08-26",
+      "hero": "MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp",
+      "detailRail": [
+        "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp"
+      ]
+    },
+    "studioB": {
+      "status": "Selected cinematic split layout implemented 2026-08-26",
+      "hero": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp",
+      "detailRail": [
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp"
+      ]
+    }
+  }
+}

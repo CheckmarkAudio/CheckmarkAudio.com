@@ -1,35 +1,28 @@
 ---
 title: Codex Handoff Queue
 status: active
-updated: 2026-09-01
+updated: 2026-09-05
 ---
 
 # Codex Handoff Queue
 
-A running checklist of build/frontend tasks for Codex, worked out with Claude first so each one is precise before it gets queued up. Claude stays off the actual page-building files (Codex's active build) — this list is where that handoff happens instead.
+This is the cross-session handoff register. `NEXT_STEPS.md` owns action routing and the Source of Truth DOCX owns completion acceptance. Claude and Codex have both edited the root site at Bridget's direction; the former blanket statement that Claude stays off page files is obsolete.
 
-Check items off once Bridget has actually given them to Codex, not once Codex has finished them — that way this file tracks "handed off," and the actual build status lives wherever Codex is tracking its own work.
+## Ready for the next design session
 
-## Ready to hand off
+- **Affiliates grid:** five logos centered, three over two on phones, no box separators, banner-style on desktop. Queued by Bridget/Claude before switching to Team; reaffirmed by Bridget's September 5 transcript. Still unimplemented. Confirm public trademark use before launch.
+- **Team mobile review:** Claude diagnosed the horizontal snap rail and hidden inactive names but hit his session limit before making the fix. Codex GPT-6 Astra completed compact vertical profiles on September 5. All five appear while scrolling normally; 112px portraits, visible names and roles, tablet/desktop retained. Awaiting Bridget's visual review.
+- **Hero export decision:** media slots from the loose export are already persisted. Differing homepage order/labels/alt text are preserved in `DRAFTS/reference/media-selection-export-2026-09-02/` and remain unapplied.
+- **Consultation sidebar:** exact parked markup and Call the studio button are retained in `DRAFTS/active/calendar-info-panel-2026-09-03/` for a placement decision.
 
-- [x] **Review carousel — continuous pan.** Change the 5-star review carousel from a discrete slide-switch to a continuous horizontal marquee pan — reviews scroll steadily sideways in a loop, never pausing/holding on one card, no jump-cut between them. Pause the pan on hover (so someone stopping to read a review actually stops it), and resume automatically as soon as the mouse moves off. Also pause on keyboard focus for accessibility, and respect `prefers-reduced-motion` by falling back to a static or slow-fade state instead of animating.
+## Implemented history
 
-- [ ] **Background textures on light (and dark) sections.** Add subtle layered texture to the site's background fields — especially the flat cream sections — so the site reads high-quality and deliberately designed rather than flat. Full direction, folder layout, sourcing rules, and layering technique are in `MEDIA/IMAGES/TEXTURES/README.md`. Implementation summary: keep the brand color as the base layer; stack texture above it via CSS background stacking or a pseudo-element using `mix-blend-mode` (`multiply` / `overlay` / `soft-light`) at low opacity (~4–15%) so the texture is felt, not seen; tint everything warm to the cream/gold palette (no off-palette or cold hues); preserve WCAG AA text contrast; use tiled seamless WebP files, not huge images. **Gated on assets:** use only files in `MEDIA/IMAGES/TEXTURES/APPROVED/` — do not pull textures from the reference screenshots or grab unlicensed stock. If `APPROVED/` is empty, the sourcing step (below) comes first.
+- **Reviews:** continuous desktop pan with pause on hover/focus and reduced-motion support; later phone refinements reduce empty space. Counter hidden publicly while retained for assistive technology and localhost editing.
+- **Site-wide media editor:** canonical selection loader and shared local editor added by Codex; Claude Opus 5 added direct project save, backups, atomic write, and stale-slot protection in `b2d4c25`. Use `python3 scripts/dev-server.py`; a generic static server falls back to export.
+- **Textures:** microphone diagram web texture is approved and implemented; procedural Community title grit is also implemented. Sources recorded in `MEDIA/IMAGES/TEXTURES/APPROVED/SOURCES.md`. The August 27 empty-folder blocker is resolved.
+- **Community foreground depth:** implemented by Claude Fable 5 in `afafba4`, followed by matched brightened photo/cutout and title grit. The old revisit-depth item is superseded.
+- **Sound demo:** 11 tracked 30-second clips, logo visualizer, track controls and gain; playlist naming/order and final baseline still need review.
 
-  - **Codex note, 2026-08-27:** Blocked by the stated asset gate. `MEDIA/IMAGES/TEXTURES/APPROVED/` is empty. Texture sourcing is in “Backlog / still being refined,” so it was intentionally not started and this item remains unchecked.
+## Optional backlog
 
-- [x] **Site-wide media editor — durable, integrated, redesign-proof.** Bridget wants to swap/update the site's photos herself on *every* page, not just the homepage. Current state: the photo editor (`checkmark-hero-editor.js` + `checkmark-site-media-editor.js`) is only loaded by `index.html`; inner pages load only `visual-edit-mode.js`, which has no media swapping — so the edit button disappears off the homepage. Requirements:
-  1. **Every page gets the media editor** — same picker (browse the `MEDIA/` library), same crop/position controls, on all heroes, section images, filmstrips, and galleries across all ten pages.
-  2. **Durable persistence, not localStorage-only.** Selections must land in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` (already the canonical record per `PROJECT_STATE.md`) — the browser-local-only saving that nearly lost the homepage edits on 2026-08-21 is exactly what this must eliminate. If a dev-time file-write bridge isn't feasible, the editor must at minimum produce an explicit export (copy/download of the updated JSON) with a clear unsaved-changes indicator — never silently hold edits in one browser.
-  3. **Architecturally separate from cosmetics.** Pages should *reference* media through the selection layer (JSON + a small loader) rather than hard-coding image paths in markup, so any future redesign/re-styling of a page cannot break or orphan the editor. The editor is its own wired-in module — one script/CSS pair shared by all pages — not per-page copies that drift.
-  4. Stays a localhost/dev-only tool (as now), invisible on the public site.
-
-  - **Codex note, 2026-08-27:** Completed. All ten pages now load the canonical JSON selection layer and share the same localhost-only media editor. Current heroes, homepage feature videos/section images, Services media states, Studio A/B primary images, rails, and galleries are editable. Browser-only changes show a prominent unsaved state and download a complete replacement `WEBSITE_MEDIA_SELECTIONS.json`; the editor never presents localStorage as a finished save.
-
-## Backlog / still being refined
-
-- [ ] **Texture sourcing (precondition for the texture handoff above).** Find and download real, properly licensed (or CC0/free) texture files matching the three reference families — warm brown/gold grunge, B&W industrial (to be warm-tinted), fine geometric linework — at 2000px+ resolution, save them into `MEDIA/IMAGES/TEXTURES/APPROVED/`, and record each file's source + license in a `SOURCES.md` there. Reference screenshots go in `MEDIA/IMAGES/TEXTURES/REFERENCE/`.
-
-- [x] **Community hero — foreground depth effect (done 2026-09-01).** Implemented with a real transparent cutout traced from the selected lead photo by `MEDIA/IMAGES/make-subject-cutout.swift` (macOS Vision subject isolation), layered above the `COMMUNITY` title by `community-page.js`, which mirrors the photo's live layout box and crop onto the cutout so the two register exactly through re-crops, resizes, and media-edit mode. The layer hides itself if the lead photo is swapped. Original note follows.
-
-- [ ] ~~**Community hero — revisit the foreground depth effect.**~~ Preserve the current improved `COMMUNITY` typography, current consultation button, and selected lead photo. The intended effect is a real person in the foreground overlapping the `COMMUNITY` title like the depth effect on an iPhone lock screen—not a floating cap/logo, ellipse, simulated CSS mask, or unrelated cutout. The temporary depth overlay was removed because its subject alignment was visibly wrong. Revisit only after a clean transparent cutout can be made from the exact selected lead photo and aligned naturally with the source image; keep the photo rail restrained and close to the approved community draft.
+Additional warm grunge, industrial, or geometric texture families require actual licensed/owned files and source records. Unlicensed screenshots in `MEDIA/IMAGES/TEXTURES/REFERENCE/` are local inspiration only, not approved assets. New uploads/shared publishing and a separate client portal remain future work.

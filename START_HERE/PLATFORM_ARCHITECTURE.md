@@ -1,12 +1,12 @@
 ---
 title: Platform Architecture
 status: active
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 # Platform Architecture
 
-This file records the cross-system decisions made starting 2026-07-26 about how `checkmarkaudio.com` (this repo) relates to Checkmark Audio's internal staff tool, and the plan for client accounts and established-client self-booking. Updated 2026-08 once Gavin decided the client portal should be a fully separate site rather than embedded here. Nothing described here is built yet unless a section says so explicitly.
+This file records the cross-system decisions made starting 2026-07-26 about how `checkmarkaudio.com` (this repo) relates to Checkmark Audio's internal staff tool, and the plan for client accounts and established-client self-booking. Updated 2026-08 once Gavin decided the client portal should be a fully separate site rather than embedded here. Implementation claims about the separate Supabase backend below are historical reports, not reverified by the September 5 website audit. The current public conversion UI is implemented as described below.
 
 ## Two Repos, One Shared Backend
 
@@ -29,9 +29,9 @@ Supabase org is on the **free plan**; a third project would cost $0/mo per Supab
 
 ## The Public Calendar Books Free Consultations Directly
 
-The `#book` section on `checkmarkaudio.com` embeds a real, fully clickable Cal.com calendar (director decision, 2026-08, superseding an earlier "read-only" version — see history below). It books the **free consultation only** — a fixed 1-hour meeting, open to anyone, no login required.
+The homepage `#consultation` section embeds a real, fully clickable Cal.com calendar (director decision, 2026-08, superseding an earlier "read-only" version — see history below). It books the **free consultation only** — a fixed 1-hour meeting, open to anyone, no login required.
 
-The earlier concern (new clients self-booking mismatched session scope/length) was about actual **paid project sessions**, which this calendar was never for. A fixed-length consultation doesn't carry that risk, so gating it added friction without a real reason to. The inquiry form (`#inq`) stays as the second path for anyone not ready to pick a time yet.
+The earlier concern (new clients self-booking mismatched session scope/length) was about actual **paid project sessions**, which this calendar was never for. A fixed-length consultation doesn't carry that risk, so gating it added friction without a real reason to. The inquiry form (`#inquiryForm` in `#book`) stays as the second path for anyone not ready to pick a time yet.
 
 Established-client self-booking of *real* project sessions is a separate, later capability — see the client portal section below. It does not live on this page.
 
@@ -43,9 +43,9 @@ Full plan, phased build order, and non-negotiables live in the staff-tool repo: 
 
 ### The client portal is a separate site (director decision, 2026-08)
 
-Gavin decided the client portal should be its **own site**, not a login area embedded in `checkmarkaudio.com`. This matches the same logic already applied to the staff tool: anything behind a login stays off the SEO-indexed public surface, and `checkmarkaudio.com` stays static/JS-light, which matters for the site's Core Web Vitals and search ranking. No portal repo/domain exists yet — that's unbuilt, not blocking this week's public-site launch.
+Gavin decided the client portal should be its **own site**, not a login area embedded in `checkmarkaudio.com`. This matches the same logic already applied to the staff tool: anything behind a login stays off the SEO-indexed public surface, and `checkmarkaudio.com` stays static/JS-light, which matters for the site's Core Web Vitals and search ranking. No portal repo/domain exists yet — that is unbuilt and separate from the public-site launch.
 
-Until the portal exists, `checkmarkaudio.com` shows a **"Client Portal — Coming Soon"** email-capture box in `#book` (reuses the already-wired internal EmailJS template — no new service, no new client-facing template needed) so interested clients can be emailed the moment it ships. Swap that box for a real "Log in" link once the portal is live.
+The earlier "Client Portal — Coming Soon" email-capture box is absent from the current root homepage (verified 2026-09-05). Treat it as historical, not a live feature. A portal CTA requires a separate approved implementation and eventual portal destination.
 
 ### Backend — LIVE, portal-agnostic (built 2026-08-01, while Codex was on the SEO media pass)
 

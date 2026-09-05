@@ -55,3 +55,9 @@ From the repository root:
 ```sh
 node MIGRATION/audit-assets.mjs
 ```
+
+## September 5 migration readiness
+
+Read [`STATUS_2026-09-05.md`](STATUS_2026-09-05.md) for the synchronization audit, contributor history, known deployment gaps, and controlled-cutover sequence. [`WIX_URL_INVENTORY_2026-09-05.csv`](WIX_URL_INVENTORY_2026-09-05.csv) captures 21 current URLs from Wix's three public sitemap children. Replacement destinations are deliberately blank pending page-intent/URL approval; this is an inventory, not executable redirects.
+
+Run `node MIGRATION/check-site-links.mjs` for literal local references across root HTML/CSS/JS plus canonical selections. Run `node MIGRATION/check-site-links.mjs --tracked` to expose assets a fresh Git checkout cannot reproduce. Dynamic URLs, external services, accessibility, and live transactions still require browser/launch QA.

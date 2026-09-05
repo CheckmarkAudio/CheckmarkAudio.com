@@ -50,7 +50,7 @@ Nothing in this file should be treated as fact or published. It is a question li
 - [x] What is **"Lesmen's Pro Audio, Lighting, & Video"**? — answered 2026-08-10: Checkmark Audio rents a room inside their building, GBP's "Located in" tag is accurate. See `BUSINESS_FACTS.md`.
 - [ ] Is there a **distinct exterior sign/entrance** for Checkmark Audio at 5413 Lomas Blvd NE, or a shared/unmarked entry? Needed to write accurate "how to find us" copy.
 - [x] **"How to find us" wording** — arrival procedure confirmed 2026-08-10 (Bridget): call on arrival, staff comes to let you in. Draft copy finalized in `BUSINESS_FACTS.md`, pending final approval per `APPROVED_COPY.md`.
-- [x] **Cal.com self-booking + Google Calendar sync — fully resolved 2026-08-10.** Gavin approved self-booking directly (reversing the old read-only direction); hours are Tuesday–Sunday 11 AM–6 PM; two-way Google Calendar sync confirmed working (bookings write to `checkmarkaudio@gmail.com`, and "Check for conflicts" is on, blocking existing busy slots). Only remaining piece: removing `inert` from the `MOCKUP/index.html` embed, pending Bridget's go-ahead to touch the mockup.
+- [x] **Cal.com self-booking + Google Calendar sync — fully resolved 2026-08-10.** Gavin approved self-booking directly (reversing the old read-only direction); hours are Tuesday–Sunday 11 AM–6 PM; two-way Google Calendar sync confirmed working (bookings write to `checkmarkaudio@gmail.com`, and "Check for conflicts" is on, blocking existing busy slots). The root homepage and service-page calendars are selectable. MOCKUP is archived. Reverify booking and notification behavior in the intended production environment before launch.
 - [ ] Verified **Google review text and attribution** — 3 captured 2026-08-10 (Alvaro Perez-Carmona, Dead Pay Phones Official, Aaron Tyree, all ★★★★★, see `BUSINESS_FACTS.md`); still need more to fully fill the carousel
 
 ### 3. Studio A / Studio B facts
@@ -66,7 +66,7 @@ Nothing in this file should be treated as fact or published. It is a question li
 - [x] Final list of **public team members** to feature — corrected by Bridget 2026-08-28, see `BUSINESS_FACTS.md`: Gavin Hammond, Bridget Reinhard, Richard Baca, Matt Bow, Tony Rivera
 - [x] **Titles** — confirmed 2026-08-10, see `BUSINESS_FACTS.md`
 - [ ] **Bios**
-- [ ] **Photos** (placeholders only right now, per `PROJECT_STATE.md`)
+- [ ] **Photos** — Gavin, Bridget, and Richard have assigned images; Matt and Tony retain placeholders (verified 2026-09-05).
 - [ ] **Specialties**
 - [ ] **Credits**
 - [ ] **Social links**
@@ -87,6 +87,14 @@ Nothing in this file should be treated as fact or published. It is a question li
 These are settled and live in `BUSINESS_FACTS.md` / `NEXT_STEPS.md` already — listed here only so this file stays a complete map of the topic, not because they're open:
 
 - Starting prices: vocal $50/hr, general studio/engineering $65/hr, band $75/hr, project work quoted ✅
-- New-client path is inquiry-first; Cal.com is intentionally read-only ✅
+- Cal.com directly books the free one-hour consultation; EmailJS inquiries are the alternative. The old read-only direction is superseded.
 - School is a separate site/SEO ownership ✅
 - Media rights, credits, and usage scope for the photo library ✅ (complete as of 2026-08-08, see `NEXT_STEPS.md`) — except the 13 third-party trademark logos (BBB, NAMM, Los Angeles Film School, Library of Congress, Workforce Connection), which still need a separate trademark-use review
+
+## September 5 reconciliation
+
+The homepage now uses 11 short audio clips with a reactive visualizer in place of the demo-reel video. Studio selections are in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, including saved Studio B gallery slots. Five reviews are implemented; final text/attribution review is distinct from filling the carousel.
+
+The historical photo-library clearance does not establish video rights. In the current asset-level catalog, the selected tour `VID-0027` is still `permission_status: unverified`, despite `usage_scope: public-website` and approved people consent. Reconcile the actual rights/source evidence before publishing its web copy. Do not infer video rights approval from a folder assignment or the fact that work was recorded in the studio.
+
+See `../MIGRATION/STATUS_2026-09-05.md` for current technical gaps and `../START_HERE/NEXT_STEPS.md` for action routing. Historical source notes do not override this reconciliation or newer confirmed decisions.

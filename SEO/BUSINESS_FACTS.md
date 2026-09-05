@@ -75,7 +75,7 @@ Note: this describes Studio A as a multi-room suite (its own vocal booth, contro
 
   > "Recorded some vocals here a while back and Gavin, Richard, and Bridgette made me feel right at home. Absolute pros all around and very knowledgable, accommodating, and efficient. I couldn't recommend this team any more!"
 
-  Bridget's stated design intent (2026-08-10): a review carousel showing 2–3 reviews at once, click/scroll to reveal the next 2–3, pulling from Google's 5-star reviews (now 3 captured — Alvaro Perez-Carmona, Dead Pay Phones Official, Aaron Tyree). Not yet built — see `PROJECT_STATE.md`, the carousel currently uses Yelp/BBB excerpts only.
+  Bridget's stated design intent (2026-08-10): a review carousel showing 2–3 reviews at once, click/scroll to reveal the next 2–3, pulling from Google's 5-star reviews (now 3 captured — Alvaro Perez-Carmona, Dead Pay Phones Official, Aaron Tyree). Historical direction: superseded by the implemented five-review carousel, with continuous desktop movement and compact phone controls. Final public text/attribution still requires review; see `PROJECT_STATE.md` (2026-09-05).
 
 ## Checkmark Tonight (confirmed 2026-08-10, Bridget)
 
@@ -114,6 +114,6 @@ This matches Bridget's earlier physical description of Studio B as the smaller, 
 - Matt Bow — Audio Engineer
 - Tony Rivera — Engineering Intern
 
-Names and titles only. Bios, photos, specialties, credits, and social links are still pending — see `SEO/OPEN_QUESTIONS_FOR_LAUNCH.md` (deferred until after the build, per Bridget).
+Names and titles are confirmed. As of 2026-09-05 Gavin, Bridget, and Richard have assigned portraits; Matt and Tony portraits, biographies, specialties, credits, and social links remain pending — see `SEO/OPEN_QUESTIONS_FOR_LAUNCH.md` (deferred until after the build, per Bridget).
 
 Address format, hours, policies, credits, permissions, and other unresolved facts remain pending their authorized owner.
