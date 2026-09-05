@@ -908,3 +908,24 @@ The ramp keeps dark text and a light border, so it stays legible on the cream se
 **Files changed:** `checkmark-gold-theme.css`, `index.html` and `inner-pages.js` (cache version), and this change log.
 
 **Validation:** Rendered against the LAN address; header and hero buttons confirmed identical.
+
+## 2026-09-03 — Section subtext removed
+
+**Change:** Removed subtext that sat under a section title without adding information, per Bridget's standing rule that titles carry the section and the images do the talking. Section titles and eyebrows are unchanged.
+
+Removed from `index.html`: "Switch between the raw recording and Checkmark's finished master without losing your place.", "A listen through finished Checkmark Audio work.", "Choose the room built for what you're making.", "A short walkthrough inside Checkmark Audio."
+
+Removed from `inner-pages.js`: the gallery intro paragraph in `.gallery-head`, which dropped the "A varied exploratory gallery from the approved Studio A/B media assignment…" line from both studio pages.
+
+**Deliberately kept, pending Bridget's call.** These are subtext by position but carry information rather than restating a heading:
+
+- The hero paragraph ("Recording, production, mixing, and mastering for artists, bands, and creators…") — the site's primary value proposition and its main indexable copy.
+- The inquiry section's explainer, which distinguishes the inquiry form from the bookable calendar below it.
+- The Studio A and Studio B info cards (Best uses / The rooms / Plan your session) — room specifics a visitor is choosing between.
+- Service descriptions and the hourly rates on the services pages.
+- FAQ answers, which are the content of that page.
+- The Community chapter descriptions, which are already screen-reader-only and carry no visual weight.
+
+**Files changed:** `index.html`, `inner-pages.js`, all page HTML (cache version), and this change log.
+
+**Validation:** Studio A confirmed in-browser: gallery intro absent, eyebrow and heading intact, all 12 gallery images present.
