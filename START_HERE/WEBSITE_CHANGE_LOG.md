@@ -943,3 +943,23 @@ Measured on a 375px viewport: slides were all forced to 238px; they now measure 
 **Desktop is unchanged:** above 700px the inline height is cleared and the continuous marquee runs as before, confirmed at 1200px with the animation active across all ten slides.
 
 **Files changed:** `checkmark-responsive.css`, `index.html`, page HTML (cache version), and this change log.
+
+## 2026-09-03 — Homepage copy and studio card adjustments
+
+**Change:** Bridget's homepage text pass.
+
+- Hero subtext shortened to "Recording, production, mixing, and mastering for a release-ready sound."
+- Deleted the affiliate line "Connected to the people and organizations that strengthen creative work." The "Affiliates & recognition" heading and the logos remain.
+- Deleted the affiliate note "Exploratory placement. Third-party trademark-use review remains open before launch."
+- Moved the track credit ("Love All of Me" · Millie · raw and mastered comparison) from below the A/B player to directly under the "Hear the difference." heading.
+- Inquiry lead changed to "Send project details here, or book now with our consultation calendar below."
+- Deleted the calendar explainer beginning "This is Checkmark Audio's live, directly bookable calendar…".
+- Consultation blurb changed to "See the studio & discuss what you are making," and the paired sentence "The consultation is free. Paid studio-session scheduling is a separate future workflow." removed with it.
+
+**Studio cards.** The hierarchy was inverted: the room name was a 0.78rem label while the description was 1.35rem white serif, so the description drowned the title. The name is now the large serif element and the description a small letter-spaced uppercase line beneath it. The link text drops the repeated room name — "Studio A" then "View →" rather than "View Studio A". The Studio A description no longer names a single engineer, since Gavin is not the only engineer working in the room; the line now reads "Bands, instruments, drums, mixing and mastering." No replacement team facts were invented.
+
+**Files changed:** `index.html` and this change log.
+
+**Validation:** Verified in-browser that all ten removed strings are absent from the rendered page and the three rewrites are present, with no console errors.
+
+**Open question:** The new consultation blurb ends on a comma as supplied ("…what you are making,"). Left exactly as written pending Bridget's confirmation.
