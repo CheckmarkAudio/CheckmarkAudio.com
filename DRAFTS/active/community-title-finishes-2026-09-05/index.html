@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Community title finishes — Checkmark Audio</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#10100e;color:#f0e4d2;font:16px/1.5 system-ui,sans-serif}header{position:sticky;top:0;z-index:2;padding:22px 28px;border-bottom:1px solid #514636;background:#171612}h1{margin:0 0 6px;font-size:22px;font-weight:600}p{margin:0;color:#c2b9ad;font-size:14px}.controls{display:flex;flex-wrap:wrap;align-items:end;gap:20px;margin-top:18px}.finishes{display:flex;flex-wrap:wrap;gap:8px}button,select{min-height:44px;padding:10px 15px;border:1px solid #79684e;border-radius:4px;background:#171612;color:#f0e4d2;font:inherit;cursor:pointer}button[aria-pressed="true"]{background:#e8d5b9;color:#17120a;border-color:#e8d5b9}button:focus-visible,select:focus-visible{outline:2px solid #fff7df;outline-offset:3px}label{display:grid;gap:4px;font-size:13px}.preview{padding:22px 16px}.stage{position:relative;margin:auto;background:#050605;overflow:hidden;box-shadow:0 0 0 1px #514636}iframe{display:block;border:0;transform-origin:left top;background:#050605}.caption{max-width:1440px;margin:0 auto 14px;min-height:22px;color:#e8d5b9}small{font-size:12px} @media(max-width:600px){header{padding:18px 16px}.controls{gap:12px}.finishes{gap:6px}button{font-size:14px;padding:10px}.preview{padding:18px 8px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Community title finishes</h1>
+    <p>Compare the lettering over the current Community photograph.</p>
+    <div class="controls">
+      <div class="finishes" role="group" aria-label="Title finish">
+        <button type="button" data-finish="champagne" aria-pressed="true">1 · Clean champagne</button>
+        <button type="button" data-finish="metallic" aria-pressed="false">2 · Soft metallic</button>
+        <button type="button" data-finish="ivory" aria-pressed="false">3 · Warm ivory</button>
+        <button type="button" data-finish="current" aria-pressed="false">Current texture</button>
+      </div>
+      <label for="size">Preview size<select id="size"><option value="1440">Desktop</option><option value="390">Phone</option></select></label>
+    </div>
+  </header>
+  <main class="preview">
+    <p class="caption" id="description" aria-live="polite">Clean champagne — a flat, warm gold with crisp edges. Recommended.</p>
+    <div class="stage" id="stage"><iframe id="page" title="Community page with selected title finish" src="../../../community.html"></iframe></div>
+  </main>
+  <script>
+    const page=document.getElementById('page'),stage=document.getElementById('stage'),size=document.getElementById('size'),description=document.getElementById('description');
+    let selected='champagne';
+    const finishes={
+      champagne:{text:'Clean champagne — a flat, warm gold with crisp edges. Recommended.',css:'background:none;color:#e8d5b9;-webkit-text-fill-color:#e8d5b9;filter:drop-shadow(0 3px 12px rgba(0,0,0,.3));'},
+      metallic:{text:'Soft metallic — a gentle champagne highlight, with no distressed texture.',css:'background-image:linear-gradient(180deg,#fff7df 0%,#e8d5b9 48%,#c8a471 100%);background-size:100% 100%;background-position:0 0;background-blend-mode:normal;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 3px 12px rgba(0,0,0,.3));'},
+      ivory:{text:'Warm ivory — a solid cream finish with the clearest contrast against the photograph.',css:'background:none;color:#f0e4d2;-webkit-text-fill-color:#f0e4d2;filter:drop-shadow(0 3px 12px rgba(0,0,0,.3));'},
+      current:{text:'Current texture — the existing distressed gold treatment, for comparison.',css:''}
+    };
+    function applyFinish(){
+      const doc=page.contentDocument;if(!doc?.querySelector('.community-heading h1'))return;
+      let style=doc.getElementById('community-finish-study');if(!style){style=doc.createElement('style');style.id='community-finish-study';doc.head.append(style)}
+      style.textContent=selected==='current'?'':`.community-heading h1{${finishes[selected].css}}`;
+      description.textContent=finishes[selected].text;
+      document.querySelectorAll('[data-finish]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.finish===selected)));
+    }
+    function fitPreview(){const width=Number(size.value),height=width===390?844:1000,available=document.querySelector('.preview').clientWidth-32,scale=Math.min(1,available/width);page.style.width=width+'px';page.style.height=height+'px';page.style.transform=`scale(${scale})`;stage.style.width=width*scale+'px';stage.style.height=height*scale+'px'}
+    document.querySelectorAll('[data-finish]').forEach(button=>button.addEventListener('click',()=>{selected=button.dataset.finish;applyFinish()}));
+    size.addEventListener('change',fitPreview);new ResizeObserver(fitPreview).observe(document.querySelector('.preview'));page.addEventListener('load',applyFinish);fitPreview();
+  </script>
+</body>
+</html>

@@ -1126,3 +1126,21 @@ Caught during verification: the form labels were failing at 3.11:1. The label co
 **Change:** Replaced the dropdown markup with one direct `services.html` link in the homepage and shared inner-page headers. Removed submenu handling from the navigation script; the phone menu retains its open/close behavior, Escape focus return, and keyboard focus containment. Services remains highlighted on the main and related detail pages. Refreshed navigation and inner-page loader cache keys. The six-state Services composition, media, and interactions are unchanged. Existing detail-page URLs and non-header links are retained; no page deletion or redirect was part of this header change.
 
 **Validation:** All ten content pages checked at 390px and 1440px: exactly one direct Services header link, no dropdown markup, no horizontal overflow, noindex retained. The phone menu opens across all ten pages; Escape closes it and returns focus to Menu. Clicking Services from desktop and phone navigation opens the selected main page. All six service options retain their selected state when clicked at both widths. JavaScript syntax and whitespace checks pass. No inquiry or booking was submitted.
+
+
+## 2026-09-05 — Compare cleaner Community title finishes
+
+**Request:** After confirming the navigation fix was committed and pushed, Bridget asked to try other Community title styles because she dislikes the current texture.
+
+**Study:** `DRAFTS/active/community-title-finishes-2026-09-05/` embeds the root Community page and switches only its title finish between clean champagne, soft metallic, warm ivory, and the current distressed treatment. Desktop and phone previews retain the current photo, foreground depth, typography, and layout. Clean champagne is the recommendation; no candidate has been applied to root or recorded as approved.
+
+**Validation:** All four controls update the actual title fill at 1440px and 390px. Only the current treatment loads the grit as a title background. Reviewed the alternatives over the real page imagery. The study is saved locally for selection; the published website remains at `b6b825e`.
+
+
+## 2026-09-05 — Restore the darker Community photograph and reduce title overlap
+
+**Request:** While reviewing the title finishes, Bridget asked to move the photo down so only the tip of the man's head overlaps the title and to return to an earlier darker appearance.
+
+**Change:** Restored the original `group-recording-session-studio-b.webp` and matching foreground cutout, plus the shared `saturate(1.04) contrast(1.01) brightness(1.22)` treatment from before the September 2 brightening passes. Updated the canonical media slot, HTML fallback, and cutout source guard together. Existing brightened derivatives remain in the library. The depth synchronizer now translates both photo layers together based on the original cutout's cap position and the title's lower edge. Only a small cap tip overlaps at desktop/tablet sizes; phones retain their photo-below-title arrangement. The local media editor now preserves the same absolute photo box as the public page. Community stylesheet/script cache keys are refreshed.
+
+**Validation:** At 390, 768, 1121, 1440, and 1920px, the photo and cutout load from their original sources, use identical filters, and align within one pixel with no horizontal page overflow. Desktop screenshot reviewed for the small cap overlap and darker tone. JavaScript syntax and whitespace checks pass. The title-finish study remains active and uses the updated photo; no title finish is selected or applied to root yet. No inquiry or booking was submitted.

@@ -4,6 +4,8 @@ Updated 2026-09-05. This register contains pending visual decisions for the cano
 
 ## Pending review
 
+- Choose the Community title finish from `../DRAFTS/active/community-title-finishes-2026-09-05/`: clean champagne (recommended), soft metallic, or warm ivory. Bridget requested alternatives to the distressed texture; the root treatment remains unchanged pending selection.
+
 - Approve the compact vertical Team phone layout completed September 5. Supply Matt and Tony portraits and remaining approved profile details.
 - Review the completed September 5 five-logo affiliates layout: centered, three over two on phones/tablets, no cell separators, one banner row on desktop. Public trademark clearance remains a distinct approval.
 - Review the September 5 individual phone crops for the existing four hero images. The loader now preserves `mobileFramed` across reload/export; desktop crops remain unchanged. Decide whether to use the hero order/labels/alt text in the preserved September 2 reference export; all its editor slots already match canonical.

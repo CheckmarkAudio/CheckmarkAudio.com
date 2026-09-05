@@ -15,6 +15,7 @@
   const lead = document.querySelector('.community-lead-image img');
   const depthWrap = document.querySelector('.community-depth');
   const depth = depthWrap && depthWrap.querySelector('img');
+  const title = document.getElementById('community-title');
   if (!feature || !lead || !depthWrap || !depth) return;
 
   // Untransformed layout box of `el` relative to `ancestor`.
@@ -39,6 +40,8 @@
     queued = false;
     if (!lead.offsetWidth || !lead.offsetHeight || (expected && leadFile() !== expected)) {
       depthWrap.style.visibility = 'hidden';
+      lead.parentElement.style.transform = '';
+      depthWrap.style.transform = '';
       return;
     }
     const box = layoutBox(lead, feature);
@@ -51,6 +54,22 @@
     depthWrap.style.visibility = 'visible';
 
     const cs = getComputedStyle(lead);
+    // The matching cutout's cap begins at y=222 in the 2400×1606 source.
+    // Move both layers together so only its tip crosses the title's lower edge.
+    // Phones already place the photograph below the title and keep that layout.
+    let shift = 0;
+    if (title && innerWidth > 650 && lead.naturalWidth && lead.naturalHeight) {
+      const scale = Math.max(box.w / lead.naturalWidth, box.h / lead.naturalHeight);
+      const positionY = parseFloat(cs.objectPosition.split(' ')[1]) / 100;
+      const headY = (box.h - lead.naturalHeight * scale) * positionY + 222 * scale;
+      const zoom = cs.transform === 'none' ? 1 : new DOMMatrixReadOnly(cs.transform).a;
+      const originY = parseFloat(cs.transformOrigin.split(' ')[1]);
+      const renderedHeadY = box.y + originY + (headY - originY) * zoom;
+      const titleBottom = title.getBoundingClientRect().bottom - feature.getBoundingClientRect().top;
+      shift = Math.max(0, titleBottom - 38 - renderedHeadY);
+    }
+    lead.parentElement.style.transform = shift ? `translateY(${shift}px)` : '';
+    depthWrap.style.transform = shift ? `translateY(${shift}px)` : '';
     depth.style.objectFit = cs.objectFit;
     depth.style.objectPosition = cs.objectPosition;
     depth.style.transform = cs.transform === 'none' ? '' : cs.transform;
@@ -67,6 +86,7 @@
   if (!depth.complete) depth.addEventListener('load', schedule, { once: true });
   window.addEventListener('resize', schedule);
   window.addEventListener('load', schedule);
+  document.fonts?.ready.then(schedule);
 
   // The media editor rewrites the photo's class, inline crop vars, and src.
   new MutationObserver(schedule).observe(lead, {
@@ -77,5 +97,6 @@
     const ro = new ResizeObserver(schedule);
     ro.observe(lead);
     ro.observe(feature);
+    if (title) ro.observe(title);
   }
 })();
