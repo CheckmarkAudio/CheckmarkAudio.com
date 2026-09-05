@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="inner-pages.css">
-  <link rel="stylesheet" href="team-page.css?v=20260828-1">
+  <link rel="stylesheet" href="team-page.css?v=20260903-3">
 </head>
 <body data-page="team">
   <div id="site-header"></div>
@@ -45,10 +45,16 @@
           <div class="person-name"><h2>Tony Rivera</h2><p>Engineering Intern</p></div>
         </article>
       </div>
+      <nav class="team-mobile-controls" aria-label="Team member carousel controls">
+        <button type="button" data-team-direction="previous" aria-label="Previous team member">←</button>
+        <span id="teamCarouselStatus" aria-live="polite">01 / 05</span>
+        <button type="button" data-team-direction="next" aria-label="Next team member">→</button>
+      </nav>
     </section>
   </main>
   <div id="site-footer"></div>
-  <script src="inner-pages.js"></script>
+  <script src="inner-pages.js?v=20260903-8"></script>
+  <script src="team-page.js?v=20260903-2" defer></script>
   <script src="visual-edit-mode.js" defer></script>
 </body>
 </html>

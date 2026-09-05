@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="inner-pages.css">
-  <link rel="stylesheet" href="services-page.css">
+  <link rel="stylesheet" href="services-page.css?v=20260904-6">
 </head>
 <body data-page="services">
   <div id="site-header"></div>
@@ -18,29 +18,23 @@
     <section class="services-hero" aria-labelledby="services-title">
       <div class="services-shell">
         <ol class="signal-path" aria-label="From an initial idea through recording, production, mixing, mastering, and release">
-          <li class="signal-step signal-idea">
-            <span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 130 82"><rect x="2" y="2" width="126" height="78" rx="5"/><path d="M4 18h122M13 10h2m7 0h2m7 0h2M12 54c8-28 13 28 21 0s14 28 22 0 14 28 22 0 14 28 22 0 10 13 17 2"/></svg></span>
-            <b>Idea</b>
+          <li class="signal-step signal-idea" data-service-index="1">
+            <button class="signal-action" type="button" aria-label="Show production service"><span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 130 82"><rect x="2" y="2" width="126" height="78" rx="5"/><path d="M4 18h122M13 10h2m7 0h2m7 0h2M12 54c8-28 13 28 21 0s14 28 22 0 14 28 22 0 14 28 22 0 10 13 17 2"/></svg></span><b>Idea</b></button>
           </li>
-          <li class="signal-step signal-record">
-            <span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 108 82"><rect x="2" y="2" width="104" height="78" rx="5"/><circle cx="54" cy="42" r="19"/><circle class="signal-led" cx="54" cy="42" r="12"/><path d="M12 13h3m7 0h3m7 0h3M87 17l7-6m-3 2 4 5"/></svg></span>
-            <b>Record</b>
+          <li class="signal-step signal-record" data-service-index="0">
+            <button class="signal-action" type="button" aria-label="Show recording service"><span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 108 82"><rect x="2" y="2" width="104" height="78" rx="5"/><circle cx="54" cy="42" r="19"/><circle class="signal-led" cx="54" cy="42" r="12"/><path d="M12 13h3m7 0h3m7 0h3M87 17l7-6m-3 2 4 5"/></svg></span><b>Record</b></button>
           </li>
-          <li class="signal-step signal-produce">
-            <span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 130 82"><rect x="2" y="2" width="126" height="78" rx="5"/><path d="M4 18h122M13 10h2m7 0h2m7 0h2M15 33h28m-28 10h38m-38 10h24m15-22h56v34H54zM60 54c5-18 9 17 14 0s9 17 14 0 9 17 14 0"/></svg></span>
-            <b>Produce</b>
+          <li class="signal-step signal-produce" data-service-index="1">
+            <button class="signal-action" type="button" aria-label="Show production service"><span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 130 82"><rect x="2" y="2" width="126" height="78" rx="5"/><path d="M4 18h122M13 10h2m7 0h2m7 0h2M15 33h28m-28 10h38m-38 10h24m15-22h56v34H54zM60 54c5-18 9 17 14 0s9 17 14 0 9 17 14 0"/></svg></span><b>Produce</b></button>
           </li>
-          <li class="signal-step signal-mix">
-            <span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 116 82"><rect x="2" y="2" width="112" height="78" rx="5"/><circle cx="24" cy="18" r="5"/><circle cx="47" cy="18" r="5"/><circle cx="70" cy="18" r="5"/><circle cx="93" cy="18" r="5"/><path d="M24 29v39m23-39v39m23-39v39m23-39v39M18 48h12m11 8h12m11-17h12m11 14h12"/></svg></span>
-            <b>Mix</b>
+          <li class="signal-step signal-mix" data-service-index="2">
+            <button class="signal-action" type="button" aria-label="Show mixing and mastering service"><span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 116 82"><rect x="2" y="2" width="112" height="78" rx="5"/><circle cx="24" cy="18" r="5"/><circle cx="47" cy="18" r="5"/><circle cx="70" cy="18" r="5"/><circle cx="93" cy="18" r="5"/><path d="M24 29v39m23-39v39m23-39v39m23-39v39M18 48h12m11 8h12m11-17h12m11 14h12"/></svg></span><b>Mix</b></button>
           </li>
-          <li class="signal-step signal-master">
-            <span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 130 82"><rect x="2" y="2" width="126" height="78" rx="5"/><path d="M17 57a48 48 0 0 1 96 0M26 52l-6-3m17-10-5-5m20-3-2-7m22 7 2-7m18 15 5-5m8 18 6-3M65 57l28-23"/><circle cx="65" cy="57" r="4"/><circle class="signal-led" cx="113" cy="16" r="5"/></svg></span>
-            <b>Master</b>
+          <li class="signal-step signal-master" data-service-index="2">
+            <button class="signal-action" type="button" aria-label="Show mixing and mastering service"><span class="signal-screen" aria-hidden="true"><svg viewBox="0 0 130 82"><rect x="2" y="2" width="126" height="78" rx="5"/><path d="M17 57a48 48 0 0 1 96 0M26 52l-6-3m17-10-5-5m20-3-2-7m22 7 2-7m18 15 5-5m8 18 6-3M65 57l28-23"/><circle cx="65" cy="57" r="4"/><circle class="signal-led" cx="113" cy="16" r="5"/></svg></span><b>Master</b></button>
           </li>
-          <li class="signal-step signal-release">
-            <span class="signal-screen signal-globe" aria-hidden="true"><svg viewBox="0 0 92 82"><circle cx="42" cy="40" r="35"/><path d="M7 40h70M42 5c-17 15-17 55 0 70M42 5c17 15 17 55 0 70M14 21h56M14 59h56M77 40h13m-7-7 7 7-7 7"/></svg></span>
-            <b>Release</b>
+          <li class="signal-step signal-release" data-service-index="5">
+            <button class="signal-action" type="button" aria-label="Show artist media service"><span class="signal-screen signal-globe" aria-hidden="true"><svg viewBox="0 0 92 82"><circle cx="42" cy="40" r="35"/><path d="M7 40h70M42 5c-17 15-17 55 0 70M42 5c17 15 17 55 0 70M14 21h56M14 59h56M77 40h13m-7-7 7 7-7 7"/></svg></span><b>Release</b></button>
           </li>
         </ol>
 
@@ -57,7 +51,7 @@
                 <button class="service-option" id="service-voice" type="button" role="tab" aria-selected="false" aria-controls="service-stage" tabindex="-1" data-label="Podcast + Voice-over" data-rate="Project guidance through consultation" data-summary="Clean spoken-word capture for interviews, narration, podcasts, and creator projects." data-image="MEDIA/IMAGES/artist-interview-checkmark-audio-studio-episode-thumbnail.webp" data-alt="Interview recording setup at Checkmark Audio" data-link="recording.html"><span class="service-bullet" aria-hidden="true"></span><span>Podcast + Voice-over</span></button>
                 <button class="service-option" id="service-media" type="button" role="tab" aria-selected="false" aria-controls="service-stage" tabindex="-1" data-label="Artist Media" data-rate="Project work quoted" data-summary="Photography, cover art, lyric-video, visualizer, and EPK support for presenting the work." data-image="MEDIA/IMAGES/marz-artist-photography-promo.webp" data-alt="Artist photography created for a Checkmark Audio media project" data-link="index.html?service=Artist%20Media#book"><span class="service-bullet" aria-hidden="true"></span><span>Artist Media</span></button>
               </div>
-              <div class="service-detail" aria-live="polite">
+              <div class="service-detail" id="service-detail" aria-live="polite">
                 <p class="service-rate"><span aria-hidden="true"></span><strong id="service-rate">Vocal recording from $50 / hour</strong></p>
                 <p id="service-summary">Focused vocal sessions and performance-led recording. Band recording starts at $75 / hour.</p>
                 <a id="service-link" href="recording.html">Explore recording <span aria-hidden="true">→</span></a>
@@ -80,8 +74,8 @@
     </section>
   </main>
   <div id="site-footer"></div>
-  <script src="inner-pages.js"></script>
-  <script src="services-page.js"></script>
+  <script src="inner-pages.js?v=20260903-8"></script>
+  <script src="services-page.js?v=20260904-7"></script>
   <script src="visual-edit-mode.js" defer></script>
 </body>
 </html>

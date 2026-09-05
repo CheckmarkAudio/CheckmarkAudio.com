@@ -15,6 +15,7 @@ Do not expose private EmailJS or Cal.com credentials beyond the public key, whic
 It is a single responsive, no-logo HTML template that works for both phone and desktop email views. Template variables:
 
 - `{{name}}`
+- `{{email}}`
 - `{{time}}`
 - `{{message}}`
 - `{{reply_to}}`
@@ -31,7 +32,7 @@ New Checkmark Audio request from {{name}}
 
 ## Client Inquiry / Booking Received
 
-`client-inquiry-received.html` is the outbound confirmation email for clients — after they submit the inquiry form, or after they book a Cal.com consultation. The wording was made generic on purpose ("here's your receipt... if you booked a specific time, we'll see you then; if this was a general inquiry, we'll follow up soon") so the same template reads correctly either way.
+`client-inquiry-received.html` is the outbound confirmation email for clients — after they submit the inquiry form, or after they book a Cal.com consultation. The wording was made generic on purpose ("here's your receipt... if you booked a specific time, we'll see you then; if this was a general inquiry, we'll follow up soon") so the same template reads correctly either way. Configure this template's **To Email** field as `{{email}}`; keep `{{reply_to}}` available for displaying the client's submitted address and for the internal notification flow.
 
 Same variables as the internal template above. On Cal.com bookings, `{{message}}` is populated with a full confirmation sentence (date, time, studio address).
 
