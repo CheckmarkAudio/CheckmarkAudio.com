@@ -104,16 +104,26 @@
   // the player's head out. A tall phone frame fits the whole image height, so
   // `y` has no slack and the head returns no matter what `x` says. Scaling up
   // restores vertical overflow, letting the same `y` frame the same subject.
-  // A floor rather than a multiplier: multiplying a slide that already carries
-  // zoom compounds it (1.18 became 2.12) and reduced that photo to unreadable
-  // background blur. The floor gives every slide just enough vertical overflow
-  // for `y` to bite, without over-cropping the ones already tight.
+  // Focal anchor.
+  //
+  // `object-position: X% Y%` aligns the image's X%/Y% point with the same
+  // point of the frame, so the values tuned on desktop already behave as a
+  // focal anchor. A phone shows a much narrower slice of the same photo, so
+  // by default it reuses that anchor rather than a separate centred crop.
+  //
+  // The zoom floor exists because the two viewports crop along different
+  // axes: a wide desktop frame overflows vertically so `y` frames the shot,
+  // while a tall phone frame fits the whole image height and leaves `y` no
+  // slack. The floor restores enough overflow for the same anchor to apply.
+  // `x` is pulled off the extremes because an edge anchor is fine across a
+  // wide frame but lands on the very edge of a narrow slice.
+  //
+  // Once a slide is framed by hand on the mobile breakpoint, that wins — the
+  // editor is then authoritative, so what the mobile preview shows is exactly
+  // what a phone renders.
   const MOBILE_ZOOM_FLOOR = 138;
-  // An edge-anchored focal point is fine across a wide desktop frame but lands
-  // on the extreme edge of a narrow phone slice, so it is pulled inward.
   const MOBILE_X_MIN = 18, MOBILE_X_MAX = 82;
-  const currentProfile = slide => {
-    if (breakpoint !== 'mobile') return slide[breakpoint];
+  const derivedMobile = slide => {
     const desktop = slide.desktop || slide.mobile;
     if (!desktop) return slide.mobile;
     return {
@@ -121,6 +131,10 @@
       y: desktop.y,
       zoom: Math.max(desktop.zoom, MOBILE_ZOOM_FLOOR)
     };
+  };
+  const currentProfile = slide => {
+    if (breakpoint !== 'mobile') return slide[breakpoint];
+    return slide.mobileFramed ? slide.mobile : derivedMobile(slide);
   };
   const save = message => {
     clearTimeout(saveTimer);
@@ -241,6 +255,12 @@
 
   function updateProfile(key, value) {
     const slide = selectedSlide();
+    if (breakpoint === 'mobile' && !slide.mobileFramed) {
+      // Seed from what the phone is actually showing, so the first adjustment
+      // moves from the visible framing rather than jumping to a stale crop.
+      slide.mobile = { ...derivedMobile(slide) };
+      slide.mobileFramed = true;
+    }
     slide[breakpoint][key] = clamp(value, key === 'zoom' ? 100 : 0, key === 'zoom' ? 170 : 100);
     outputs[key].textContent = `${slide[breakpoint][key]}%`;
     const frame = [...media.children].find(item => item.dataset.slideId === slide.id);

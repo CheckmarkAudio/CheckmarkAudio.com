@@ -1035,3 +1035,17 @@ The durable fix is per-slide mobile framing rather than a derived rule. The hero
 **Files changed:** `checkmark-hero-editor.js`, `index.html` (cache version), and this change log.
 
 **Validation:** All four slides confirmed at zoom 1.38 with x 18/51/18/18 at a 375px viewport; each rendered and inspected.
+
+## 2026-09-03 — Hero focal anchor, and the mobile editor made accurate
+
+**Why the mobile editor looked wrong.** Its controls wrote to `slide.mobile`, but after the previous change a phone rendered a profile derived from the desktop values. The mobile preview was therefore showing a crop the site never used — adjusting it appeared to do nothing.
+
+**Change.** The desktop `x`/`y` act as the slide's focal anchor: `object-position: X% Y%` aligns the image's X%/Y% point with the same point of the frame, so a subject placed to the right of the text on desktop stays anchored there. A phone reuses that anchor by default.
+
+Once a slide is framed by hand on the mobile breakpoint it is marked `mobileFramed` and its own values win, so the editor is authoritative from the first nudge and the preview matches the phone exactly. The first adjustment seeds `slide.mobile` from what the phone is currently showing, so the framing moves from the visible position rather than jumping to a stale crop.
+
+The zoom floor (138) and the `x` clamp (18–82) still apply to the derived default, for the reasons recorded in the previous entry: a tall phone frame leaves `y` no slack without extra zoom, and an edge anchor lands on the extreme edge of a narrow slice.
+
+**Files changed:** `checkmark-hero-editor.js`, `index.html` (cache version), and this change log.
+
+**Validation:** At 375px the four slides derive to 18/56/1.38, 51/71/1.38, 18/30/1.38 and 18/46/1.38. Opening the editor, switching to the mobile breakpoint and changing zoom moved the rendered slide from 1.38 to 1.65 immediately, confirming the editor now drives what a phone shows. Test state was cleared afterwards.
