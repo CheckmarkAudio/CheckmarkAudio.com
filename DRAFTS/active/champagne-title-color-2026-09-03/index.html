@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Champagne title colour — visual draft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Sampled from the CD in checkmark-home-interactions.css (.comparison-disc) */
+  --disc: conic-gradient(from 35deg,#f8e9d5,#b99262,#f2cf9b,#fff7df,#8c6a45,#e8d5b9,#f8e9d5);
+  --disc-highlight:#fff7df;
+  --disc-light:#f8e9d5;
+  --disc-cream:#e8d5b9;
+  --disc-gold:#f2cf9b;
+  --disc-bronze:#b99262;
+  --disc-deep:#8c6a45;
+
+  /* Proposed champagne solids, averaged from the disc's lighter arc */
+  --champagne-light:#f1dab8;
+  --champagne:#e6cba1;
+  --champagne-deep:#c9a878;
+
+  /* What the site uses today */
+  --current-gold:#d6a85e;
+  --current-eyebrow:#e4bf7a;
+
+  --ink:#f3ece1;
+  --bg:#0b0a08;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 "DM Sans",system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:44px 26px 90px}
+.kicker{margin:0 0 6px;color:var(--disc-bronze);font:700 .7rem/1 "Barlow Condensed",sans-serif;letter-spacing:.24em;text-transform:uppercase}
+h1.page{margin:0 0 8px;font:600 2rem/1.15 "Playfair Display",serif;color:var(--ink);letter-spacing:-.02em}
+p.lede{margin:0 0 34px;max-width:64ch;color:#b9b0a2}
+.note{margin:0;color:#8d8478;font-size:.86rem}
+
+.panel{margin:0 0 26px;padding:26px 26px 30px;border:1px solid rgba(214,168,94,.22);border-radius:14px;background:linear-gradient(180deg,#121110,#0d0c0a)}
+.panel h2{margin:0 0 4px;font:600 1.02rem/1.2 "Barlow Condensed",sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--disc-cream)}
+.panel .sub{margin:0 0 22px;color:#9a9184;font-size:.85rem}
+
+/* ---- The comparison rig ---- */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:860px){.compare{grid-template-columns:1fr}}
+.side{padding:22px;border:1px solid rgba(255,255,255,.07);border-radius:11px;background:#0a0908}
+.side.is-proposed{border-color:rgba(242,207,155,.34)}
+.tag{display:inline-block;margin:0 0 16px;padding:4px 10px;border-radius:99px;font:700 .6rem/1 "Barlow Condensed",sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.tag.now{background:rgba(214,168,94,.14);color:var(--current-gold)}
+.tag.new{background:rgba(242,207,155,.16);color:var(--disc-gold)}
+
+/* Current treatment: flat amber */
+.now-wordmark{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.now-wordmark img{width:46px;height:46px;object-fit:contain}
+.now-wordmark span{font:400 1.42rem/1 "DM Sans",sans-serif;letter-spacing:.11em;color:var(--current-gold)}
+.now-title{margin:0 0 10px;font:500 clamp(1.9rem,3.4vw,2.9rem)/1.04 "Playfair Display",serif;font-style:italic;letter-spacing:-.02em;color:var(--current-gold)}
+.now-eyebrow{font:700 .68rem/1 "Barlow Condensed",sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--current-eyebrow)}
+
+/* Proposed treatment: the disc's sheen, mapped onto type */
+.sheen{
+  background-image:linear-gradient(178deg,
+    var(--disc-highlight) 0%,
+    var(--disc-gold) 24%,
+    var(--disc-light) 42%,
+    var(--disc-bronze) 68%,
+    var(--disc-cream) 86%,
+    var(--disc-light) 100%);
+  background-clip:text;-webkit-background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+}
+.new-wordmark{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.new-wordmark img{width:46px;height:46px;object-fit:contain}
+.new-wordmark span{font:400 1.42rem/1 "DM Sans",sans-serif;letter-spacing:.11em;color:var(--champagne)}
+.new-title{margin:0 0 10px;font:500 clamp(1.9rem,3.4vw,2.9rem)/1.04 "Playfair Display",serif;font-style:italic;letter-spacing:-.02em}
+.new-eyebrow{font:700 .68rem/1 "Barlow Condensed",sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne-light)}
+
+/* ---- Disc + type side by side, so the match can be judged directly ---- */
+.match{display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.disc{position:relative;width:132px;height:132px;flex:none;border-radius:50%;background:var(--disc);border:1px solid rgba(255,255,255,.34);box-shadow:0 10px 30px rgba(0,0,0,.6)}
+.disc::before{content:"";position:absolute;inset:47%;border-radius:50%;background:#151411;border:2px solid rgba(255,255,255,.72)}
+.disc::after{content:"MIXED";position:absolute;inset:38px;display:grid;place-items:center;border-radius:50%;background:var(--champagne);color:#17130e;font:800 .5rem/1 "DM Sans",sans-serif;letter-spacing:.1em}
+.match-type{font:500 clamp(2rem,4.4vw,3.5rem)/1 "Playfair Display",serif;font-style:italic;letter-spacing:-.02em}
+
+/* ---- Swatches ---- */
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:12px;margin-top:6px}
+.sw{border:1px solid rgba(255,255,255,.08);border-radius:9px;overflow:hidden;background:#0a0908}
+.sw .chip{height:56px}
+.sw .meta{padding:8px 10px}
+.sw b{display:block;font:600 .74rem/1.3 "DM Sans",sans-serif;color:#ded4c5}
+.sw code{font-size:.68rem;color:#8d8478}
+
+/* ---- Scale check: does the sheen survive small sizes? ---- */
+.scale-row{display:flex;align-items:baseline;gap:26px;flex-wrap:wrap;margin-bottom:14px}
+.scale-row .lbl{min-width:76px;color:#7f776c;font:700 .6rem/1 "Barlow Condensed",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.s-48{font:500 3rem/1.1 "Playfair Display",serif;font-style:italic}
+.s-28{font:500 1.75rem/1.2 "Playfair Display",serif;font-style:italic}
+.s-18{font:500 1.12rem/1.3 "DM Sans",sans-serif;letter-spacing:.08em}
+.s-13{font:700 .8rem/1.3 "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.on-light{margin-top:16px;padding:20px;border-radius:10px;background:linear-gradient(180deg,#efe7db,#e4dace)}
+.on-light .s-28{color:var(--champagne-deep)}
+.on-light .lbl{color:#6d6459}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">Visual draft · 2026-09-03</p>
+  <h1 class="page">Matching the title colour to the CD</h1>
+  <p class="lede">The mix-comparison disc reads as champagne/pearl gold; the wordmark and headings are currently a flatter, brassier amber. This draft maps the disc's own colours onto type. Nothing on the live site is changed — this page only exists to look at.</p>
+
+  <section class="panel">
+    <h2>Current vs proposed</h2>
+    <p class="sub">Same words, same fonts. Only the colour treatment differs.</p>
+    <div class="compare">
+      <div class="side">
+        <span class="tag now">Now · flat #d6a85e</span>
+        <div class="now-wordmark">
+          <img src="../../../MEDIA/IMAGES/checkmark-audio-logo-official-gold-gradient-transparent.png" alt="">
+          <span>CHECKMARK AUDIO</span>
+        </div>
+        <p class="now-eyebrow">Albuquerque, New Mexico</p>
+        <h3 class="now-title">Your sound,<br>fully realized.</h3>
+      </div>
+      <div class="side is-proposed">
+        <span class="tag new">Proposed · disc sheen</span>
+        <div class="new-wordmark">
+          <img src="../../../MEDIA/IMAGES/checkmark-audio-logo-official-gold-gradient-transparent.png" alt="">
+          <span>CHECKMARK AUDIO</span>
+        </div>
+        <p class="new-eyebrow">Albuquerque, New Mexico</p>
+        <h3 class="new-title sheen">Your sound,<br>fully realized.</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Straight against the disc</h2>
+    <p class="sub">The real disc gradient, next to type carrying the same colours.</p>
+    <div class="match">
+      <div class="disc" aria-hidden="true"></div>
+      <div class="match-type sheen">Checkmark mix</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Does it hold at small sizes?</h2>
+    <p class="sub">A gradient on small text can turn muddy. Large type takes the sheen; small type is better on a flat champagne, which is why two values are proposed rather than one.</p>
+    <div class="scale-row"><span class="lbl">48px</span><span class="s-48 sheen">Checkmark</span></div>
+    <div class="scale-row"><span class="lbl">28px</span><span class="s-28 sheen">Checkmark Audio</span></div>
+    <div class="scale-row"><span class="lbl">18px flat</span><span class="s-18" style="color:var(--champagne)">CHECKMARK AUDIO</span></div>
+    <div class="scale-row"><span class="lbl">13px flat</span><span class="s-13" style="color:var(--champagne-light)">Albuquerque, New Mexico</span></div>
+    <div class="on-light">
+      <div class="scale-row" style="margin:0"><span class="lbl">On cream</span><span class="s-28">Checkmark Audio</span></div>
+      <p class="note" style="margin-top:8px">On light sections the champagne needs the deeper value (<code>#c9a878</code>); the pale tones disappear.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>The values</h2>
+    <p class="sub">Sampled from <code>.comparison-disc</code>, plus flat champagnes averaged from the disc's lighter arc.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#fff7df"></div><div class="meta"><b>Disc highlight</b><code>#fff7df</code></div></div>
+      <div class="sw"><div class="chip" style="background:#f8e9d5"></div><div class="meta"><b>Disc light</b><code>#f8e9d5</code></div></div>
+      <div class="sw"><div class="chip" style="background:#f2cf9b"></div><div class="meta"><b>Disc gold</b><code>#f2cf9b</code></div></div>
+      <div class="sw"><div class="chip" style="background:#e8d5b9"></div><div class="meta"><b>Disc cream</b><code>#e8d5b9</code></div></div>
+      <div class="sw"><div class="chip" style="background:#b99262"></div><div class="meta"><b>Disc bronze</b><code>#b99262</code></div></div>
+      <div class="sw"><div class="chip" style="background:#8c6a45"></div><div class="meta"><b>Disc deep</b><code>#8c6a45</code></div></div>
+      <div class="sw"><div class="chip" style="background:#f1dab8"></div><div class="meta"><b>Champagne light</b><code>#f1dab8</code></div></div>
+      <div class="sw"><div class="chip" style="background:#e6cba1"></div><div class="meta"><b>Champagne</b><code>#e6cba1</code></div></div>
+      <div class="sw"><div class="chip" style="background:#c9a878"></div><div class="meta"><b>Champagne deep</b><code>#c9a878</code></div></div>
+      <div class="sw"><div class="chip" style="background:#d6a85e"></div><div class="meta"><b>Current gold</b><code>#d6a85e</code></div></div>
+    </div>
+  </section>
+
+  <p class="note">Draft only. No root files touched, so this cannot collide with Codex's work. When approved, the change is a colour-token swap plus the sheen gradient on large headings.</p>
+</div>
+</body>
+</html>

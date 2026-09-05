@@ -1,8 +1,15 @@
 :root {
-  --brand-gold: #d6a85e;
-  --brand-gold-bright: #e4bf7a;
-  --brand-gold-deep: #875b25;
-  --brand-gold-rgb: 214, 168, 94;
+  /* Champagne palette sampled from the mix-comparison disc
+     (.comparison-disc in checkmark-home-interactions.css). Replaces the
+     previous brassy amber; approved 2026-09-03 from the draft in
+     DRAFTS/active/champagne-title-color-2026-09-03/. */
+  --brand-gold: #e6cba1;
+  --brand-gold-bright: #f1dab8;
+  --brand-gold-deep: #7a5a33;
+  --brand-gold-rgb: 230, 203, 161;
+  /* Deeper champagne for type sitting on cream and other light sections,
+     where the pale tones above wash out. */
+  --brand-gold-on-light: #7a5a33;
   --gold: var(--brand-gold);
   --gold2: var(--brand-gold);
   --red: var(--brand-gold);
@@ -90,4 +97,45 @@ body[data-page="services"] {
 
 :where(a, button, input, select, textarea):focus-visible {
   outline-color: var(--brand-gold-bright);
+}
+
+/* Metallic sheen for display headings, mapped from the disc's own stops.
+   Deliberately limited to large type: at label sizes the gradient reads as
+   muddy, which the 2026-09-03 draft's scale test showed. */
+body :is(.hero h1, .pagehero h1) {
+  background-image: linear-gradient(178deg,
+    #fff7df 0%, #f2cf9b 24%, #f8e9d5 42%,
+    #b99262 68%, #e8d5b9 86%, #f8e9d5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* On cream and other light grounds the pale champagne washes out (the eyebrow
+   measured 1.08:1 against the proof panel), so label and display type there
+   takes the deeper bronze from the same disc palette.
+
+   Two deliberate exclusions:
+   - .homepage-media ships in a dark (.demo-reel-section) and a light variant,
+     so the light one is matched by exclusion rather than by class.
+   - .studio-label and other .caption text sit over photographs inside these
+     light sections, not on the cream itself, so they keep the pale champagne. */
+:is(
+  .proofbox,
+  .section.sound-proof,
+  .section.light,
+  .section.homepage-media:not(.demo-reel-section),
+  .service-calendar,
+  .calendar-info
+) :is(.eyebrow, .media-number, .feature, .amount, .gallery-head h2, .contactbox b):not(.caption *) {
+  color: var(--brand-gold-on-light);
+}
+
+/* The proof panel's cream is darker than the other light sections, so the
+   shared on-light bronze lands at 4.35:1 there. A scoped token override lifts
+   its label and link type over the 4.5:1 line without darkening the rest. */
+.proofbox {
+  --brand-gold-on-light: #6d5030;
+  --brand-gold-deep: #6d5030;
 }

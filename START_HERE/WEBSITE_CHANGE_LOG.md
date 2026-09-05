@@ -840,3 +840,26 @@ Measured composited brightness over the screen fell from a mean of 29.8 to 14.1.
 **Files changed:** new `scripts/dev-server.py`, `checkmark-site-media-editor.js`, `.claude/launch.json`, `.gitignore`, `index.html` and `inner-pages.js` (editor cache version), `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` (Studio B slot lines normalised to the file's dominant formatting), and this change log.
 
 **Validation:** Endpoint probe, garbage body, payload without slots, and a stale snapshot dropping every slot were each exercised — all three bad saves refused with the file left byte-identical. A real save from the editor UI confirmed the file rewritten with all 45 slots and every section unchanged, a backup created, and the status line reporting the result.
+
+## 2026-09-03 — Champagne palette replaces the brassy gold
+
+**Change:** Site-wide colour retune. Bridget preferred the coloration of the mix-comparison CD to the flatter amber used for the wordmark and headings, so the disc's own palette is now the brand's. Typography is untouched — fonts, sizes, and weights are all unchanged; only colour moved.
+
+**Approved from:** `DRAFTS/active/champagne-title-color-2026-09-03/`, a visual draft comparing the two treatments. Bridget then asked to drop the old gold entirely while keeping the small red details.
+
+**Tokens** (in `checkmark-gold-theme.css`, which both `index.html` and `inner-pages.js` load, so it drives the whole site):
+
+- `--brand-gold` `#d6a85e` → `#e6cba1`
+- `--brand-gold-bright` `#e4bf7a` → `#f1dab8`
+- `--brand-gold-deep` `#875b25` → `#7a5a33`
+- new `--brand-gold-on-light` `#7a5a33` for type on cream
+
+Display headings (`.hero h1`, `.pagehero h1`) now carry a metallic sheen gradient built from the disc's stops. It is deliberately restricted to large type: the draft's scale test showed the gradient turning muddy at label sizes, so labels and navigation take the flat champagne. The header wordmark and primary CTA gradients in `checkmark-header-brand.css` were remapped to the same palette.
+
+**Red is preserved.** The small red details — the hero's full stop, the eyebrow rule, the console LEDs, the "Live" indicators — are hardcoded reds and were left untouched, as Bridget asked.
+
+**Contrast work:** the pale champagne washed out badly on light sections; the proof panel's eyebrow measured 1.08:1. Light grounds now use the deeper bronze, applied to `.proofbox`, `.sound-proof`, `.section.light`, the light `.homepage-media` variant, `.service-calendar` and `.calendar-info`. Two refinements were needed: `.studio-label` and other `.caption` text sit over photographs inside those light sections rather than on the cream, so they are excluded and keep the pale champagne; and `.proofbox` has a darker cream than the rest, so it carries a scoped token override. All ten light-ground elements measured now clear WCAG AA at 4.5:1, up from a worst case of 1.08:1.
+
+**Files changed:** `checkmark-gold-theme.css`, `checkmark-header-brand.css`, `index.html` and `inner-pages.js` (stylesheet cache versions), `.gitignore`, the new draft folder, and this change log.
+
+**Validation:** Homepage and Studio A rendered against the LAN address, which bypasses the localhost-only media editor. Contrast measured programmatically across every eyebrow, label, figure and link on a light ground rather than judged by eye.
