@@ -63,10 +63,10 @@ Nothing in this file should be treated as fact or published. It is a question li
 
 ### 4. Team
 
-- [x] Final list of **public team members** to feature — corrected by Bridget 2026-08-28, see `BUSINESS_FACTS.md`: Gavin Hammond, Bridget Reinhard, Richard Baca, Matt Bow, Tony Rivera
+- [x] Final list of **public team members** to feature — updated by Bridget 2026-09-05, see `BUSINESS_FACTS.md`: Gavin Hammond, Bridget Reinhard, Richard Baca, Tony Rivera
 - [x] **Titles** — confirmed 2026-08-10, see `BUSINESS_FACTS.md`
 - [ ] **Bios**
-- [ ] **Photos** — Gavin, Bridget, and Richard have assigned images; Matt and Tony retain placeholders (verified 2026-09-05).
+- [ ] **Photos** — Gavin, Bridget, and Richard have assigned images; Tony retains a placeholder (verified 2026-09-05).
 - [ ] **Specialties**
 - [ ] **Credits**
 - [ ] **Social links**

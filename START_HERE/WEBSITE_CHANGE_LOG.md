@@ -30,6 +30,16 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Files changed:** New `checkmark-rounded-bevels.css`, homepage stylesheet reference, inner-page loader and its nine HTML cache versions, plus supporting project records. Media selections and player scripts were not changed.
 
+## 2026-09-05 — Team — Four-member roster
+
+**Status:** User-directed update
+
+**Change:** Removed Matt Bow from the public Team page and its description at Bridget’s request. Rebalanced the remaining four profiles into four equal desktop columns, two tablet columns, and compact vertical phone rows. Tony’s frame is now 04. Removed the unused Matt portrait placeholder from canonical media metadata and reconciled current roster references.
+
+**Preserve:** Other members’ names, roles, imagery, focal selections, rounded bevels, and development noindex. Earlier five-member change-log entries and approved screenshots remain historical records.
+
+**Validation:** Browser checks at 1440, 768, 390, and 320px confirmed exactly the four remaining names, equal column widths, four/two/one-column arrangements, no horizontal overflow, correct metadata, loaded portraits, and retained noindex. Phone layout visually reviewed; JSON and whitespace checks passed.
+
 ## Entry template
 
 ```markdown

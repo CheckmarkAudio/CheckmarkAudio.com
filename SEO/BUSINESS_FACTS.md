@@ -106,14 +106,13 @@ This matches Bridget's earlier physical description of Studio B as the smaller, 
 
 **Best use, confirmed 2026-08-10 (Bridget):** ideal for vocals and independent rentals.
 
-## Team (confirmed 2026-08-10, Bridget)
+## Team (roster updated 2026-09-05, Bridget)
 
 - Gavin Hammond — Owner, Lead Engineer, Mixer, Masterer
 - Bridget Reinhard — Director of Operations, Marketing
 - Richard (Baca) — Studio Director, Audio Engineer
-- Matt Bow — Audio Engineer
 - Tony Rivera — Engineering Intern
 
-Names and titles are confirmed. As of 2026-09-05 Gavin, Bridget, and Richard have assigned portraits; Matt and Tony portraits, biographies, specialties, credits, and social links remain pending — see `SEO/OPEN_QUESTIONS_FOR_LAUNCH.md` (deferred until after the build, per Bridget).
+Names and titles are confirmed. As of 2026-09-05 Gavin, Bridget, and Richard have assigned portraits; Tony’s portrait and remaining biographies, specialties, credits, and social links remain pending — see `SEO/OPEN_QUESTIONS_FOR_LAUNCH.md` (deferred until after the build, per Bridget).
 
 Address format, hours, policies, credits, permissions, and other unresolved facts remain pending their authorized owner.

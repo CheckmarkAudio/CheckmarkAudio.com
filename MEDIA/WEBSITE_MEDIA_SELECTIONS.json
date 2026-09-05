@@ -211,12 +211,11 @@
       }
     },
     "team": {
-      "status": "Selected equal five-person editorial grid implemented 2026-08-28",
+      "status": "Equal four-person editorial grid updated 2026-09-05 per Bridget",
       "portraits": {
         "gavinHammond": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp",
         "bridgetReinhard": "MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp",
         "richardBaca": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-guitar-lesson.webp",
-        "mattBow": null,
         "tonyRivera": null
       }
     },
