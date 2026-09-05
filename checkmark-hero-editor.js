@@ -29,6 +29,7 @@
       return {
         ...clone(known),
         enabled: slide.enabled !== false,
+        mobileFramed: slide.mobileFramed === true,
         added: Number.isFinite(slide.added) ? slide.added : index,
         desktop: {
           x: clamp(slide.desktop?.x ?? known.desktop.x, 0, 100),

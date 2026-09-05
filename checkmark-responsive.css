@@ -135,14 +135,19 @@ textarea {
     min-height: 54px;
     margin-top: 10px;
     justify-content: center;
-    border: 1px solid #f0cf88;
+    border: 1px solid #f2cf9b;
     border-radius: 4px;
     color: #17120a;
-    background: linear-gradient(105deg, #a96c22 0%, #e5bd6d 23%, #f5dc9b 52%, #d6a34f 78%, #95601d 100%);
+    background: var(--brand-cta-fill);
     font: 600 .94rem/1 "Barlow Condensed", sans-serif;
     letter-spacing: .1em;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  .header .navlinks.open .nav-mobile-cta:hover,
+  .header .navlinks.open .nav-mobile-cta:focus-visible {
+    background: var(--brand-cta-hover);
   }
 }
 

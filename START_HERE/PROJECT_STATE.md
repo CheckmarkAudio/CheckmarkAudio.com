@@ -29,13 +29,15 @@ The August 21 recovered homepage is the protected baseline, with later explicitl
 - A selectable Cal.com calendar for the free one-hour consultation, plus the branded EmailJS inquiry path. The homepage consultation sidebar is parked in `DRAFTS/active/calendar-info-panel-2026-09-03/`; its Call the studio button is preserved there. The inquiry section is light, and its contact card moves below the calendar on phones.
 - The September 5 Team fix: at widths up to 620px, all five profiles appear in a compact vertical list with 112px portraits and visible names/roles. The former horizontal carousel and its script are no longer loaded. Tablet and desktop arrangements are retained. Matt and Tony still need approved portraits.
 
+The September 5 polish follow-up keeps Claude's latest direction and the completed Team layout. It unifies the phone-menu CTA with the champagne buttons, improves inquiry placeholder/focus contrast, removes the contact card's misleading “below” wording, aligns shared cache versions, and keeps the desktop Services title on one line.
+
 The Team layout implements Bridget's last request to Claude, supplied again on September 5; it is ready for visual review, not recorded as a newly approved screenshot baseline. The affiliates grid is still queued.
 
 ## Durable media editing
 
 `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` is canonical. Claude's `b2d4c25` added direct saving through `python3 scripts/dev-server.py`, with backups in `.media-backups/`, atomic replacement, validation, and protection against large slot deletions. A generic static server only offers export fallback. During this audit port 4173 ran a generic server; the correct server was verified separately on port 4187 with a successful save-capability probe. No canonical selections were overwritten by the audit.
 
-Hero mobile crops now inherit the desktop focal anchor by default; manually framing a phone slide sets `mobileFramed` and takes precedence. The intermediate note saying mobile controls are inert is superseded by `e175f1d`.
+Hero mobile crops inherit the desktop focal anchor when no explicit phone framing exists. The September 5 follow-up fixes a loader omission in `e175f1d`: `mobileFramed` now survives browser reload and exported canonical JSON loading. All four existing photographs now have individual phone profiles in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`; desktop profiles, image choices, ordering, and the separate reference export remain unchanged. The new phone framing awaits visual review.
 
 The loose media export is preserved under `DRAFTS/reference/media-selection-export-2026-09-02/`. Its slots already match canonical; differing hero order/labels/alt text remain unapplied for Bridget's review.
 

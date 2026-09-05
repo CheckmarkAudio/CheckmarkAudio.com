@@ -17,7 +17,7 @@ body[data-page="services"]{background:#070807}
 .signal-screen svg{width:100%;height:100%;overflow:visible;fill:none;stroke:currentColor;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 7px rgba(214,168,94,.08))}
 .signal-screen .signal-led{fill:currentColor;stroke:currentColor}.signal-globe{width:clamp(86px,7vw,120px)}
 .services-main{display:grid;grid-template-columns:minmax(360px,.72fr) minmax(560px,1.28fr);gap:clamp(48px,6vw,106px);align-items:center;padding:clamp(38px,5vw,76px) clamp(8px,2vw,30px) 0}
-.services-copy h1{margin:0;color:var(--service-cream);font:600 clamp(5.8rem,11.5vw,11.6rem)/.77 "Barlow Condensed",sans-serif;letter-spacing:-.035em;text-transform:uppercase;text-shadow:0 1px rgba(255,255,255,.16)}
+.services-copy h1{margin:0;color:var(--service-cream);font:600 clamp(5.8rem,8.5vw,11.6rem)/.77 "Barlow Condensed",sans-serif;letter-spacing:-.035em;text-transform:uppercase;text-shadow:0 1px rgba(255,255,255,.16)}
 .services-kicker{display:flex;align-items:center;gap:18px;margin:28px 0 34px;color:var(--service-gold);font:500 clamp(1rem,1.45vw,1.38rem)/1 "Barlow Condensed",sans-serif;letter-spacing:.055em;text-transform:uppercase}
 .services-kicker>span{width:58px;height:2px;background:currentColor}
 .service-selector-wrap{display:grid;grid-template-columns:minmax(270px,390px) minmax(190px,1fr);gap:clamp(18px,2.2vw,36px);align-items:start}.service-selector{display:grid}

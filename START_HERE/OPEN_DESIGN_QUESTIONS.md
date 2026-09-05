@@ -6,7 +6,7 @@ Updated 2026-09-05. This register contains pending visual decisions for the cano
 
 - Approve the compact vertical Team phone layout completed September 5. Supply Matt and Tony portraits and remaining approved profile details.
 - Complete the queued five-logo affiliates layout: centered, three over two on phones, no separators, banner-like on desktop. Public trademark clearance remains a distinct approval.
-- Fine-tune each hero slide on phones. `mobileFramed` now makes manual mobile crops authoritative. Decide whether to use the hero order/labels/alt text in the preserved September 2 reference export; all its editor slots already match canonical.
+- Review the September 5 individual phone crops for the existing four hero images. The loader now preserves `mobileFramed` across reload/export; desktop crops remain unchanged. Decide whether to use the hero order/labels/alt text in the preserved September 2 reference export; all its editor slots already match canonical.
 - Decide whether and where to restore the parked consultation sidebar and Call the studio button. Keep the current calendar reachable without that panel until directed otherwise.
 - Review current champagne palette, homepage section alternation, Community depth/brightness, and demo visualizer on devices; approve updated screenshot baselines.
 - Confirm playlist titles/order and the consultation sentence ending in a comma. Additional verified proof or artist stories may need new design treatment once supplied.

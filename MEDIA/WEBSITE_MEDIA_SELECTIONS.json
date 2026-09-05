@@ -85,8 +85,9 @@
         "mobile": {
           "x": 68,
           "y": 50,
-          "zoom": 125
+          "zoom": 110
         },
+        "mobileFramed": true,
         "enabled": true,
         "added": 2
       },
@@ -101,10 +102,11 @@
           "zoom": 100
         },
         "mobile": {
-          "x": 50,
-          "y": 44,
-          "zoom": 115
+          "x": 0,
+          "y": 75,
+          "zoom": 170
         },
+        "mobileFramed": true,
         "enabled": true,
         "added": 1787162590318
       },
@@ -119,10 +121,11 @@
           "zoom": 110
         },
         "mobile": {
-          "x": 50,
+          "x": 74,
           "y": 50,
-          "zoom": 115
+          "zoom": 100
         },
+        "mobileFramed": true,
         "enabled": true,
         "added": 1787162771907
       },
@@ -139,8 +142,9 @@
         "mobile": {
           "x": 50,
           "y": 50,
-          "zoom": 115
+          "zoom": 100
         },
+        "mobileFramed": true,
         "enabled": true,
         "added": 1787163533066
       }
