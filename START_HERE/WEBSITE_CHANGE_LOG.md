@@ -985,3 +985,15 @@ The mobile hero scrim was also heavier than desktop, holding 0.91 opacity out to
 **Files changed:** `index.html` and this change log.
 
 **Validation:** Rendered order confirmed in-browser as Photos & videos, In their own words, Inside the work, Hear the difference, Two studios, Tour the rooms. The sound demo stage and the A/B player both initialise, with the demo preceding the player in the document, and no console errors.
+
+## 2026-09-03 — Contact bar, phone contact placement, studio caption legibility
+
+**Contact bar.** A slim bar sits directly below the header carrying only the phone number and the street address, so the essentials read at a glance without competing with the navigation. The number is a `tel:` link. On phones it wraps and centres rather than shrinking further.
+
+**Contact card on phones.** The contact card (`.contactbox`) previously sat beside the inquiry form, which pushed it well above the booking calendar on a narrow screen. It now moves below the calendar on phones and returns to the inquiry section on wider screens. The two live in different sections, so CSS `order` could not do this; a small script relocates the element and follows breakpoint changes.
+
+**Studio caption legibility.** The room name, supporting line and link are all white now, the caption scrim starts higher and ramps to 92% at the base, and each line carries a text shadow. The captions therefore hold up if a lighter photo is swapped into either card.
+
+**Files changed:** `index.html`, `checkmark-gold-theme.css`, and this change log.
+
+**Validation:** Contact bar renders at 29px with "505-267-0558 · 5413 Lomas Blvd NE, Albuquerque, NM". Contact card placement asserted at both widths — at 1200px it stays inside `#book`, at 375px it follows the calendar. No console errors.
