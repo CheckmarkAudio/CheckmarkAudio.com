@@ -977,3 +977,11 @@ The mobile hero scrim was also heavier than desktop, holding 0.91 opacity out to
 **Files changed:** `checkmark-hero-editor.js`, `checkmark-title-panels.css`, `index.html` and page HTML (cache versions), and this change log.
 
 **Validation:** At a 375px viewport the four slides report x 82% with y/zoom of 56%/1.18, 71%/1.00, 30%/1.10 and 46%/1.13 — matching their desktop values. Rendered at 390px with no console errors.
+
+## 2026-09-03 — "Inside the work" moved ahead of the comparison player
+
+**Change:** The sound demo section ("Inside the work.") now precedes the raw/mastered comparison section ("Hear the difference.") on the homepage. Section markup moved intact; no content altered.
+
+**Files changed:** `index.html` and this change log.
+
+**Validation:** Rendered order confirmed in-browser as Photos & videos, In their own words, Inside the work, Hear the difference, Two studios, Tour the rooms. The sound demo stage and the A/B player both initialise, with the demo preceding the player in the document, and no console errors.
