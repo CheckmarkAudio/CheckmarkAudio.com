@@ -10,7 +10,7 @@ This is the cross-session handoff register. `NEXT_STEPS.md` owns action routing 
 
 ## Ready for the next design session
 
-- **Affiliates grid:** five logos centered, three over two on phones, no box separators, banner-style on desktop. Queued by Bridget/Claude before switching to Team; reaffirmed by Bridget's September 5 transcript. Still unimplemented. Confirm public trademark use before launch.
+- **Affiliates grid:** five logos centered, three over two on phones, no box separators, banner-style on desktop. Queued by Bridget/Claude before switching to Team; reaffirmed by Bridget's September 5 transcript. Implemented September 5 after Bridget's screenshot follow-up; responsive screenshots and nine widths checked. Visual review remains open. Confirm public trademark use before launch.
 - **Team mobile review:** Claude diagnosed the horizontal snap rail and hidden inactive names but hit his session limit before making the fix. Codex GPT-6 Astra completed compact vertical profiles on September 5. All five appear while scrolling normally; 112px portraits, visible names and roles, tablet/desktop retained. Awaiting Bridget's visual review.
 - **Hero export decision:** media slots from the loose export are already persisted. Differing homepage order/labels/alt text are preserved in `DRAFTS/reference/media-selection-export-2026-09-02/` and remain unapplied.
 - **Consultation sidebar:** exact parked markup and Call the studio button are retained in `DRAFTS/active/calendar-info-panel-2026-09-03/` for a placement decision.

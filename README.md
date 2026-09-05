@@ -15,7 +15,7 @@ The only active website is at the repository root:
 
 The root site remains `noindex` and visibly marked as in development. GitHub Pages publishes a public [development preview](https://checkmarkaudio.github.io/CheckmarkAudio.com/) from `main`; it is not the production CheckmarkAudio.com domain. Pushing updates that preview while Wix remains live.
 
-Current reconciliation, contributor history, diagnostics, and launch gaps: [`MIGRATION/STATUS_2026-09-05.md`](MIGRATION/STATUS_2026-09-05.md). Next design task: affiliates grid; the unfinished Team phone layout is now implemented for review.
+Current reconciliation, contributor history, diagnostics, and launch gaps: [`MIGRATION/STATUS_2026-09-05.md`](MIGRATION/STATUS_2026-09-05.md). The affiliates grid and unfinished Team phone layout are now implemented for review; see `START_HERE/NEXT_STEPS.md` for remaining decisions.
 
 ## Folder map
 

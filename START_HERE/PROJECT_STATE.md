@@ -31,7 +31,7 @@ The August 21 recovered homepage is the protected baseline, with later explicitl
 
 The September 5 polish follow-up keeps Claude's latest direction and the completed Team layout. It unifies the phone-menu CTA with the champagne buttons, improves inquiry placeholder/focus contrast, removes the contact card's misleading “below” wording, aligns shared cache versions, and keeps the desktop Services title on one line.
 
-The Team layout implements Bridget's last request to Claude, supplied again on September 5; it is ready for visual review, not recorded as a newly approved screenshot baseline. The affiliates grid is still queued.
+The Team layout implements Bridget's last request to Claude, supplied again on September 5; it is ready for visual review, not recorded as a newly approved screenshot baseline. The September 5 affiliates fix is implemented for review: five existing logos form one centered desktop banner and three over two at widths up to 900px, without cell borders or an empty sixth cell.
 
 ## Durable media editing
 

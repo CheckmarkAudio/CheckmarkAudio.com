@@ -3,7 +3,7 @@ const navStyles=document.createElement('link');navStyles.rel='stylesheet';navSty
 const brandStyles=document.createElement('link');brandStyles.rel='stylesheet';brandStyles.href='checkmark-header-brand.css?v=20260905-2';document.head.appendChild(brandStyles);
 const titlePanelStyles=document.createElement('link');titlePanelStyles.rel='stylesheet';titlePanelStyles.href='checkmark-title-panels.css?v=20260905-2';document.head.appendChild(titlePanelStyles);
 const bevelStyles=document.createElement('link');bevelStyles.rel='stylesheet';bevelStyles.href='checkmark-bevels.css?v=20260826-3';document.head.appendChild(bevelStyles);
-const responsiveStyles=document.createElement('link');responsiveStyles.rel='stylesheet';responsiveStyles.href='checkmark-responsive.css?v=20260905-2';document.head.appendChild(responsiveStyles);
+const responsiveStyles=document.createElement('link');responsiveStyles.rel='stylesheet';responsiveStyles.href='checkmark-responsive.css?v=20260905-3';document.head.appendChild(responsiveStyles);
 const links={home:'index.html',services:'services.html',recording:'recording.html',mixing:'mixing-mastering.html',live:'live-recordings.html',studioA:'studio-a.html',studioB:'studio-b.html',team:'team.html',community:'community.html',faq:'faq.html'};
 const current=name=>page===name?' aria-current="page"':'';
 const serviceSectionCurrent=['services','recording','mixing','live'].includes(page)?' aria-current="page"':'';

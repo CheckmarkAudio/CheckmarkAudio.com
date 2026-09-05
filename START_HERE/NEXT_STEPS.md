@@ -11,7 +11,7 @@ This is an action-routing list, not a replacement completion checklist. Approval
 ## Next design session
 
 1. Bridget: review the new compact vertical Team phone layout. All five names/roles are visible; Matt and Tony still need approved portraits. Confirm remaining bios, specialties, credits, and social links without reopening the confirmed roster.
-2. Implement the queued affiliates grid: five logos, centered, three over two on phones, no box separators, banner-style on desktop. This is Bridget's September 5 handoff of her last Claude conversation; final trademark/public-use review remains separate.
+2. Review the completed affiliates layout: five existing logos centered in a desktop banner, three over two on phones/tablets, with no box separators or empty cell. This implements Bridget's September 5 Claude handoff and screenshot follow-up; final trademark/public-use review remains separate.
 3. Review the four individual phone crops saved in the September 5 polish follow-up and the preserved export's proposed hero order/labels/alt text in `DRAFTS/reference/media-selection-export-2026-09-02/`. Its Studio B slots are already saved; do not reapply the whole export.
 4. Decide whether/where to restore the parked consultation panel and Call the studio button from `DRAFTS/active/calendar-info-panel-2026-09-03/`.
 5. Review demo playlist titles/order, phone behavior, and new homepage/Community/Team screenshots. Confirm the consultation sentence ending in a comma (preserved from supplied copy).
