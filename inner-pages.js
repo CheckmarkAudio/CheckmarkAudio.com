@@ -1,6 +1,6 @@
 const page=document.body.dataset.page;
 const navStyles=document.createElement('link');navStyles.rel='stylesheet';navStyles.href='checkmark-nav-update.css';document.head.appendChild(navStyles);
-const brandStyles=document.createElement('link');brandStyles.rel='stylesheet';brandStyles.href='checkmark-header-brand.css?v=20260903-2';document.head.appendChild(brandStyles);
+const brandStyles=document.createElement('link');brandStyles.rel='stylesheet';brandStyles.href='checkmark-header-brand.css?v=20260903-3';document.head.appendChild(brandStyles);
 const titlePanelStyles=document.createElement('link');titlePanelStyles.rel='stylesheet';titlePanelStyles.href='checkmark-title-panels.css?v=20260823-2';document.head.appendChild(titlePanelStyles);
 const bevelStyles=document.createElement('link');bevelStyles.rel='stylesheet';bevelStyles.href='checkmark-bevels.css?v=20260826-3';document.head.appendChild(bevelStyles);
 const responsiveStyles=document.createElement('link');responsiveStyles.rel='stylesheet';responsiveStyles.href='checkmark-responsive.css?v=20260903-8';document.head.appendChild(responsiveStyles);

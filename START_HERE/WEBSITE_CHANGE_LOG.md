@@ -878,3 +878,9 @@ The red full stop in the tagline is explicitly protected from the gradient clip,
 **Files changed:** `checkmark-gold-theme.css`, `checkmark-header-brand.css`, `index.html` and `inner-pages.js` (cache versions), and this change log.
 
 **Validation:** Verified on a cache-busted load: tagline carries the gradient, red full stop holds at rgb(168,46,38), logo filter at saturate(.55), CTA back to the original gold ramp. All light-ground elements still clear WCAG AA. Note that a stale tab briefly reported the gradient as absent while the files were already correct — the cache-busted reload is the reliable check.
+
+## 2026-09-03 — Header CTA returned to champagne
+
+**Change:** The header button is champagne again, matching the palette. It had been reverted to the old gold on a misreading of "make the button look like it did before" — Bridget meant the champagne version from the first pass, not the pre-champagne gold. Gradient, border and shadows all back to the champagne values.
+
+**Files changed:** `checkmark-header-brand.css`, `index.html` and `inner-pages.js` (cache version), and this change log.
