@@ -12,7 +12,7 @@ The Source of Truth DOCX remains the only active completion checklist. This file
 
 ## Git and hosting
 
-The September 5 audit began with local `main` at `6eab017`, 15 commits ahead of `origin/main` at `5c6a282`. All 15 were attributed to Claude Opus 5. One additional uncommitted change updated the inner-page champagne stylesheet cache version. This synchronization checkpoint includes that change, the unfinished Team phone-layout fix, expanded diagnostics, and reconciled project records.
+The September 5 audit began with local `main` at `6eab017`, 15 commits ahead of `origin/main` at `5c6a282`. All 15 were attributed to Claude Opus 5. One additional uncommitted change updated the inner-page champagne stylesheet cache version. This synchronization checkpoint includes that change, the unfinished Team phone-layout fix, expanded diagnostics, and reconciled project records. The completed implementation checkpoint `7b5a38c128a1d8de38e75dbe18f173e75cd1b5aa` was pushed and verified: local/remote matched, the tree was clean, GitHub Pages build 33964659571 succeeded, and the deployed Team phone layout passed its browser check. This documentation follow-up records the verified outcome.
 
 GitHub Pages already publishes `main` at https://checkmarkaudio.github.io/CheckmarkAudio.com/. It is a public development preview, not the production domain. The GitHub Pages API reported no custom domain, HTTPS enforced, and a successful previous build. Pushing `main` updates this preview. It does not redirect the Wix domain. All ten content pages retain `noindex,nofollow`; `robots.txt` remains `Disallow: /`.
 
