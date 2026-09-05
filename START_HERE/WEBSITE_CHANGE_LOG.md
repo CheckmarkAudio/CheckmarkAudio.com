@@ -929,3 +929,17 @@ Removed from `inner-pages.js`: the gallery intro paragraph in `.gallery-head`, w
 **Files changed:** `index.html`, `inner-pages.js`, all page HTML (cache version), and this change log.
 
 **Validation:** Studio A confirmed in-browser: gallery intro absent, eyebrow and heading intact, all 12 gallery images present.
+
+## 2026-09-03 — Review carousel dead space removed
+
+**Change:** On phone and narrow widths the quote card carried a large empty gap between the attribution and the prev/next controls. Cause was a hardcoded `min-height: 238px` on `.review-track .review` in the 700px breakpoint, sized for the longest quote, so every short review was padded out to match.
+
+Slides now size to their own content (`align-self: flex-start`), and `syncReviewHeight()` sets the rail's height to the active slide on navigation, swipe settle, resize, breakpoint change, load, and font settle. A height transition keeps swipes from snapping between long and short quotes.
+
+Measured on a 375px viewport: slides were all forced to 238px; they now measure 151/152/152/204/204, and the card fell from 402px to 315px. At 700px the card is 292px with no gap.
+
+**Note:** The height is applied to `.review-track`, not `.review-carousel`. The controls live inside the carousel, so setting the height there clipped the arrows out of the card — caught during verification.
+
+**Desktop is unchanged:** above 700px the inline height is cleared and the continuous marquee runs as before, confirmed at 1200px with the animation active across all ten slides.
+
+**Files changed:** `checkmark-responsive.css`, `index.html`, page HTML (cache version), and this change log.

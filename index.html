@@ -19,7 +19,7 @@
 </style>
 <link rel="stylesheet" href="checkmark-header-brand.css?v=20260903-4">
 <link rel="stylesheet" href="checkmark-gold-theme.css?v=20260903-7">
-<link rel="stylesheet" href="checkmark-responsive.css?v=20260903-8">
+<link rel="stylesheet" href="checkmark-responsive.css?v=20260903-2">
 </head>
 <body data-page="home">
 <div class="draftbar">Active replacement website · in development · not yet live</div>
@@ -62,19 +62,24 @@ const reviewControls=document.querySelector('.review-controls'),reviewPrev=docum
 let activeReview=0,reviewTimer=null,reviewRestartTimer=null,reviewScrollTimer=null,reviewVisible=false;
 function updateReviewDescription(){reviewCarousel.setAttribute('aria-description',reviewPhone.matches?'One review at a time. Swipe or use the previous and next buttons.':'Reviews move continuously and pause while hovered or focused.')}
 function updateReviewStatus(){if(reviewStatus)reviewStatus.textContent=`${String(activeReview+1).padStart(2,'0')} / ${String(reviewOriginals.length).padStart(2,'0')}`}
-function showReview(index,{smooth=true}={}){activeReview=(index+reviewOriginals.length)%reviewOriginals.length;reviewTrack.scrollTo({left:reviewOriginals[activeReview].offsetLeft,behavior:smooth&&!reviewReducedMotion.matches?'smooth':'auto'});updateReviewStatus()}
+function syncReviewHeight(){if(!reviewPhone.matches){reviewTrack.style.height='';return}const slide=reviewOriginals[activeReview];if(!slide)return;const h=slide.getBoundingClientRect().height;if(h)reviewTrack.style.height=`${Math.ceil(h)}px`}
+function showReview(index,{smooth=true}={}){activeReview=(index+reviewOriginals.length)%reviewOriginals.length;reviewTrack.scrollTo({left:reviewOriginals[activeReview].offsetLeft,behavior:smooth&&!reviewReducedMotion.matches?'smooth':'auto'});updateReviewStatus();syncReviewHeight()}
 function stopReviewRotation(){clearInterval(reviewTimer);clearTimeout(reviewRestartTimer);reviewTimer=null;reviewRestartTimer=null}
 function startReviewRotation(){stopReviewRotation();if(!reviewPhone.matches||reviewReducedMotion.matches||document.hidden||!reviewVisible)return;reviewTimer=setInterval(()=>showReview(activeReview+1),6500)}
 function restartReviewRotation(){stopReviewRotation();reviewRestartTimer=window.setTimeout(startReviewRotation,8000)}
 reviewPrev?.addEventListener('click',()=>{showReview(activeReview-1);restartReviewRotation()});
 reviewNext?.addEventListener('click',()=>{showReview(activeReview+1);restartReviewRotation()});
-reviewTrack.addEventListener('scroll',()=>{if(!reviewPhone.matches)return;clearTimeout(reviewScrollTimer);reviewScrollTimer=setTimeout(()=>{const left=reviewTrack.scrollLeft;activeReview=reviewOriginals.reduce((best,review,index)=>Math.abs(review.offsetLeft-left)<Math.abs(reviewOriginals[best].offsetLeft-left)?index:best,0);updateReviewStatus()},100)},{passive:true});
+reviewTrack.addEventListener('scroll',()=>{if(!reviewPhone.matches)return;clearTimeout(reviewScrollTimer);reviewScrollTimer=setTimeout(()=>{const left=reviewTrack.scrollLeft;activeReview=reviewOriginals.reduce((best,review,index)=>Math.abs(review.offsetLeft-left)<Math.abs(reviewOriginals[best].offsetLeft-left)?index:best,0);updateReviewStatus();syncReviewHeight()},100)},{passive:true});
 reviewTrack.addEventListener('pointerdown',stopReviewRotation,{passive:true});
 reviewTrack.addEventListener('pointerup',restartReviewRotation,{passive:true});
 reviewCarousel.addEventListener('focusin',stopReviewRotation);
 reviewCarousel.addEventListener('focusout',restartReviewRotation);
 document.addEventListener('visibilitychange',()=>document.hidden?stopReviewRotation():startReviewRotation());
-reviewPhone.addEventListener?.('change',()=>{updateReviewDescription();showReview(0,{smooth:false});startReviewRotation()});
+reviewPhone.addEventListener?.('change',()=>{updateReviewDescription();showReview(0,{smooth:false});startReviewRotation();syncReviewHeight()});
+addEventListener('resize',()=>{clearTimeout(window.__reviewResize);window.__reviewResize=setTimeout(syncReviewHeight,120)});
+addEventListener('load',syncReviewHeight);
+if(document.fonts?.ready)document.fonts.ready.then(syncReviewHeight);
+syncReviewHeight();
 reviewReducedMotion.addEventListener?.('change',startReviewRotation);
 new IntersectionObserver(entries=>{reviewVisible=entries[0]?.isIntersecting===true;reviewVisible?startReviewRotation():stopReviewRotation()},{threshold:.35}).observe(reviewCarousel);
 updateReviewDescription();updateReviewStatus();

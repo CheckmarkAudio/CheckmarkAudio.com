@@ -337,6 +337,10 @@ textarea {
 
   .review-track {
     width: auto;
+    /* Height is set per active slide in script so a short quote does not
+       leave dead space; the transition keeps swipes from snapping. */
+    transition: height .28s ease;
+    overflow-y: hidden;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     overscroll-behavior-inline: contain;
@@ -353,10 +357,13 @@ textarea {
 
   .review-track .review {
     flex: 0 0 100%;
-    min-height: 238px;
     padding: 12px 4px 4px;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    /* Size to this quote, not to the tallest one in the rail. A fixed
+       238px min-height left short reviews with dead space above the
+       controls. */
+    align-self: flex-start;
   }
 
   .review .stars {
