@@ -1049,3 +1049,17 @@ The zoom floor (138) and the `x` clamp (18–82) still apply to the derived defa
 **Files changed:** `checkmark-hero-editor.js`, `index.html` (cache version), and this change log.
 
 **Validation:** At 375px the four slides derive to 18/56/1.38, 51/71/1.38, 18/30/1.38 and 18/46/1.38. Opening the editor, switching to the mobile breakpoint and changing zoom moved the rendered slide from 1.38 to 1.65 immediately, confirming the editor now drives what a phone shows. Test state was cleared afterwards.
+
+## 2026-09-03 — Consultation panel parked, inquiry section lightened, counter hidden publicly
+
+**Consultation panel removed.** The "Free consultation · 1 hour" aside sat above the booking calendar and pushed it down the page. Removed so the calendar is reachable sooner. Bridget liked the look and particularly the "Call the studio" button, so the markup is preserved verbatim in `DRAFTS/active/calendar-info-panel-2026-09-03/` with its insertion point recorded; its styles were left in place, so pasting it back restores it as it looked.
+
+**Inquiry section on the light ground.** It follows the now-dark "Tour the rooms.", so it takes the light band in the stagger. Its form, fields, contact card and success message were written for a dark ground and were flipped to suit.
+
+Caught during verification: the form labels were failing at 3.11:1. The label colour was correct — the wrapper behind them was still dark, because the override targeted `.formcard` when the element is `.formbox`. Retargeted, after which every label, field, contact line and heading in the section clears 4.5:1.
+
+**Review counter hidden from visitors.** The "02 / 05" readout is working scaffolding. It is now visually hidden in public but kept in the accessibility tree, since it is the `aria-live` region that tells a screen-reader user which review is showing. It stays visible on localhost, where the editors run, via an `is-edit-view` class set from the same hostname test the editors use.
+
+**Files changed:** `index.html`, `checkmark-gold-theme.css`, new `DRAFTS/active/calendar-info-panel-2026-09-03/README.md`, and this change log.
+
+**Validation:** Checked at both origins. On localhost the counter shows and the edit flag is set; over the LAN address, which does not load the editors, the counter is hidden, the flag is absent, and no contrast failures remain in the inquiry section.

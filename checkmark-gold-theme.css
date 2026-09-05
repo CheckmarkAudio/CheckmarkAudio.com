@@ -267,3 +267,71 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 .demo-reel-section .volume-fader { color: #cbab7d; }
 .demo-reel-section .volume-fader output { color: #f1dab8; }
 .demo-reel-section .video-console-cues button { color: #e6cba1; }
+
+/* ---- Inquiry section on the light ground --------------------------------
+   It follows the now-dark "Tour the rooms." section, so it takes the light
+   band in the stagger. Its form, contact card and success message were all
+   written for a dark ground and need flipping to stay legible. */
+.section.light#book .formbox {
+  background: #fbf7f0;
+  border-color: rgba(185, 146, 98, .3);
+  color: #1a1713;
+}
+
+.section.light#book .field label { color: #6a6157; }
+
+.section.light#book .field input,
+.section.light#book .field select,
+.section.light#book .field textarea {
+  background: #fff;
+  color: #1a1713;
+  border-color: rgba(122, 90, 51, .34);
+}
+
+.section.light#book .field input::placeholder,
+.section.light#book .field textarea::placeholder { color: #8d8478; }
+
+.section.light#book .field input:focus-visible,
+.section.light#book .field select:focus-visible,
+.section.light#book .field textarea:focus-visible {
+  outline: 2px solid #b99262;
+  outline-offset: 1px;
+}
+
+.section.light#book .contactbox {
+  background: #fbf7f0;
+  border-color: rgba(185, 146, 98, .3);
+  color: #1a1713;
+}
+
+.section.light#book .contactbox li { border-bottom-color: rgba(122, 90, 51, .22); }
+.section.light#book .contactbox b { color: #7a5a33; }
+.section.light#book .contactbox a { color: #1a1713; }
+.section.light#book .success { color: #4a6b3f; }
+
+/* ---- Review counter -----------------------------------------------------
+   The "02 / 05" readout is working scaffolding, not something a visitor needs.
+   It is hidden from sight in public but left in the accessibility tree, since
+   it is the aria-live region that tells a screen-reader user which review is
+   showing. It stays visible on localhost, where the editors run. */
+.review-counter {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body.is-edit-view .review-counter {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
