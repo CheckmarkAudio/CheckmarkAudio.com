@@ -997,3 +997,22 @@ The mobile hero scrim was also heavier than desktop, holding 0.91 opacity out to
 **Files changed:** `index.html`, `checkmark-gold-theme.css`, and this change log.
 
 **Validation:** Contact bar renders at 29px with "505-267-0558 · 5413 Lomas Blvd NE, Albuquerque, NM". Contact card placement asserted at both widths — at 1200px it stays inside `#book`, at 375px it follows the calendar. No console errors.
+
+## 2026-09-03 — Section stagger and champagne sound demo
+
+**Change:** Sections now alternate light and dark down the homepage instead of running three light bands together.
+
+- "Inside the work." flipped from dark to the paper ground, keeping its microphone-diagram texture at a light opacity.
+- "Hear the difference." flipped from paper to dark.
+- "Two studios. One standard." stays light.
+- "Tour the rooms." flipped to dark.
+
+**Sound demo console.** The console keeps its dark body against the now-light section, and its type moved from the old gold to champagne: header, mode label, track name and number, gain label and readout, and the cue buttons.
+
+**Root cause caught during verification.** An earlier rule listed `.section.sound-proof` and `.section.homepage-media:not(.demo-reel-section)` among the light grounds that take the deeper on-light bronze. Inverting those sections left three eyebrow labels rendering dark bronze on dark backgrounds at 3.13:1 and 3.68:1. Rather than adding overrides, the selector list was realigned to the new tones and its comment updated to record the inversion.
+
+**Known measurement artifact:** an automated contrast sweep reports the console's own labels at 1.35:1. The console's background is a gradient rather than a background colour, so the checker falls through to the section behind it. The labels are champagne on the dark console and read normally.
+
+**Files changed:** `checkmark-gold-theme.css`, `index.html` and `inner-pages.js` (cache version), and this change log.
+
+**Validation:** All section eyebrows and headings now clear 4.5:1 against their actual grounds; no console errors.

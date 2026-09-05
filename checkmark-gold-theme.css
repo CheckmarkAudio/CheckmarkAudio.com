@@ -129,15 +129,15 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
    takes the deeper bronze from the same disc palette.
 
    Two deliberate exclusions:
-   - .homepage-media ships in a dark (.demo-reel-section) and a light variant,
-     so the light one is matched by exclusion rather than by class.
+   - .homepage-media ships in a light (.demo-reel-section) and a dark variant.
+     The tones were inverted on 2026-09-03 for the section stagger, so the
+     light one is now named by class rather than by exclusion.
    - .studio-label and other .caption text sit over photographs inside these
      light sections, not on the cream itself, so they keep the pale champagne. */
 :is(
   .proofbox,
-  .section.sound-proof,
   .section.light,
-  .section.homepage-media:not(.demo-reel-section),
+  .section.homepage-media.demo-reel-section,
   .service-calendar,
   .calendar-info
 ) :is(.eyebrow, .media-number, .feature, .amount, .gallery-head h2, .contactbox b):not(.caption *) {
@@ -214,3 +214,56 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
     text-align: center;
   }
 }
+
+/* ---- Section rhythm -----------------------------------------------------
+   Alternate light and dark down the page so sections read as distinct bands
+   rather than one long dark run. Ordered: Inside the work (light), Hear the
+   difference (dark), Two studios (light), Tour the rooms (dark). */
+
+/* Inside the work — was dark; keep its microphone-diagram texture but on the
+   paper ground, and flip the type that was written for a dark backdrop. */
+.demo-reel-section {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(243, 238, 230, .9), rgba(243, 238, 230, .94)),
+    url("MEDIA/IMAGES/TEXTURES/APPROVED/microphone-diagram-pattern-gold-black.webp");
+  color: var(--ink);
+  border-block: 1px solid rgba(185, 146, 98, .28);
+  box-shadow: none;
+}
+
+.demo-reel-section .homepage-media-head h2 { color: var(--ink); text-shadow: none; }
+.demo-reel-section .homepage-media-head .lead { color: #696158; }
+
+/* Hear the difference — was light, now the dark band between two light ones. */
+.sound-proof { background: #0c0b09; color: #f3ece1; }
+.sound-proof .eyebrow { color: #e6cba1; }
+.sound-proof h2 { color: #f6eee3; }
+.sound-proof .lead,
+.sound-proof .audio-credit { color: #b3a99a; }
+
+/* Tour the rooms — dark, so it does not sit light-on-light after Two studios. */
+.homepage-media:not(.demo-reel-section) {
+  background: #0c0b09;
+  color: #f3ece1;
+}
+
+.homepage-media:not(.demo-reel-section) .homepage-media-head .eyebrow { color: #e6cba1; }
+.homepage-media:not(.demo-reel-section) .homepage-media-head h2 { color: #f6eee3; }
+.homepage-media:not(.demo-reel-section) figcaption h3 { color: #f6eee3; }
+.homepage-media:not(.demo-reel-section) figcaption p { color: #b3a99a; }
+
+/* ---- Sound demo console in the champagne palette ------------------------ */
+.demo-reel-section .video-console {
+  --console-gold: #cbab7d;
+}
+
+/* The console box stays dark against the light section, so its own type has
+   to be champagne rather than the darker values a light panel would take. */
+.demo-reel-section .video-console-head { color: #e6cba1; }
+.demo-reel-section .video-console-mode { color: #cbab7d; }
+.demo-reel-section .video-console-cues b { color: #e6cba1; }
+.demo-reel-section .video-console-cues small { color: #9c8f7c; }
+.demo-reel-section .volume-fader { color: #cbab7d; }
+.demo-reel-section .volume-fader output { color: #f1dab8; }
+.demo-reel-section .video-console-cues button { color: #e6cba1; }
