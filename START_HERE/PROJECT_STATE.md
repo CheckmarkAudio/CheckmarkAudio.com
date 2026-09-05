@@ -18,6 +18,8 @@ GitHub Pages already publishes `main` at https://checkmarkaudio.github.io/Checkm
 
 ## Current website
 
+September 5 design exploration: Bridget requested carrying the Services icons' champagne line art and edges across the site, starting with the homepage demo unit. `../DRAFTS/active/service-line-style-2026-09-05/` compares an outline console, studio window, and line-art rack, plus matching photo and inquiry samples. Bridget’s follow-up adds subtle bevels and raised controls to the proposals. Bridget approved the rounded bevel direction for site-wide implementation and asked to commit/push the study first. The recommended Outline console guides the demo frame; root rollout is the next step.
+
 Ten content pages are active: Home, Services, Recording, Mixing & Mastering, Live Recordings, Studio A, Studio B, Team, Community, and Q & A. `404.html` is the error page. There is no second active website tree.
 
 September 5 navigation decision: the header's Services item links directly to `services.html`, the selected six-state Services page. The Recording / Mixing & Mastering / Live Recordings header dropdown and toggle are removed on desktop and phones. Existing detail-page files and non-header links remain available; this change does not retire their URLs.

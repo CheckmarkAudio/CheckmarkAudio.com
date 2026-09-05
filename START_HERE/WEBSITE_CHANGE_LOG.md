@@ -2,6 +2,20 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-09-05 — Services-inspired component mockups
+
+**Status:** Approved direction for site-wide rollout
+
+**Change:** Created three demo-unit frame treatments based on the existing Services SVG line art: Outline console, Studio window, and Line-art rack. A comparison control restores the current console frame. Matching photo and inquiry samples demonstrate the proposed edges, typography, and controls on a light section. Bridget’s follow-up requested more bevel: all three proposals now have shallow raised rims, top/left highlights, lower edge shadows, beveled controls, and recessed fields. A further user-requested refinement softens large window corners to 16–18px on desktop and 14px on phones, with coordinated inset screen and photo corners.
+
+**Preserve:** Root website, approved imagery, official logo, existing demo playlist and visualizer behavior, Community's separate pending title choice, and noindex status. The inquiry sample does not submit.
+
+**Files changed:** `DRAFTS/active/service-line-style-2026-09-05/` and supporting project records only.
+
+**Outcome and validation:** Browser checks at 1120px and 390px found no horizontal overflow in any of the four comparison states; both images loaded. Next/previous track controls updated and restored the track title with audio paused. All three new frames were visually reviewed. JavaScript syntax validation passed.
+
+**Open questions / follow-up:** Bridget approved the rounded bevel direction and requested commit/push followed by site-wide application. Proceed with Outline console for the demo and coordinated larger-frame curves.
+
 ## Entry template
 
 ```markdown

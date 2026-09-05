@@ -4,6 +4,7 @@ Updated 2026-09-05. This register contains pending visual decisions for the cano
 
 ## Pending review
 
+
 - Choose the Community title finish from `../DRAFTS/active/community-title-finishes-2026-09-05/`: clean champagne (recommended), soft metallic, or warm ivory. Bridget requested alternatives to the distressed texture; the root treatment remains unchanged pending selection.
 
 - Approve the compact vertical Team phone layout completed September 5. Supply Matt and Tony portraits and remaining approved profile details.
