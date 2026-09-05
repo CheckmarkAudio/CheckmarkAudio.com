@@ -1016,3 +1016,22 @@ The mobile hero scrim was also heavier than desktop, holding 0.91 opacity out to
 **Files changed:** `checkmark-gold-theme.css`, `index.html` and `inner-pages.js` (cache version), and this change log.
 
 **Validation:** All section eyebrows and headings now clear 4.5:1 against their actual grounds; no console errors.
+
+## 2026-09-03 — Phone banner framing corrected
+
+**Change:** The phone banner now takes the desktop focal point (`x` and `y`) with a zoom floor of 138 and `x` clamped to 18–82.
+
+**What was wrong.** The previous pass panned every slide to a fixed x of 82%. On the guitar slide the guitar is the subject and the player's face sits to the right, so a fixed rightward pan framed exactly the wrong thing.
+
+**Why the two viewports cannot share a crop literally.** They crop along different axes. A wide desktop frame overflows vertically, so `y` is what pulls the view down onto the guitar and cuts the head out. A tall phone frame fits the whole image height, leaving `y` no slack, so the head returns regardless of `x`. The zoom floor restores enough vertical overflow for `y` to take effect. The `x` clamp exists because an edge-anchored focal point (slide 0 sits at x 0) is fine across a wide frame but lands on the extreme edge of a narrow phone slice.
+
+**Known limitation — recommend per-slide phone framing.** A single global rule cannot frame four differently-composed photos. Measured during verification:
+
+- The guitar slide wants roughly 1.8 zoom to push the face out of frame.
+- Slide 0 (`vocal-recording-albuquerque-nm-control-room-microphone`) breaks above about 1.2; at 1.8 its own 1.18 compounded to 2.12 and the photo reduced to unreadable background blur, and even at the current floor its microphone subject falls outside the narrow phone slice.
+
+The durable fix is per-slide mobile framing rather than a derived rule. The hero editor already has mobile crop controls, currently inert because the phone profile is derived; restoring them and tuning each slide would let the guitar slide crop tight while slide 0 stays legible. Left for Bridget's decision rather than hardcoding per-photo values.
+
+**Files changed:** `checkmark-hero-editor.js`, `index.html` (cache version), and this change log.
+
+**Validation:** All four slides confirmed at zoom 1.38 with x 18/51/18/18 at a 375px viewport; each rendered and inspected.

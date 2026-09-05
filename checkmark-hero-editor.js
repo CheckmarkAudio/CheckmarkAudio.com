@@ -96,16 +96,31 @@
   const enabledSlides = () => config.slides.filter(slide => slide.enabled);
   const selectedSlide = () => config.slides.find(slide => slide.id === selectedId) || config.slides[0];
   const activeIndex = () => Math.max(0, enabledSlides().findIndex(slide => slide.id === activeId));
-  // Phone banner keeps the crop set for desktop — same zoom and vertical
-  // framing — but pans toward the right of the frame. Previously the phone
-  // used its own centred crop, so a banner composed on desktop was re-framed
-  // and the intended subject drifted out of view on a narrow screen.
-  const MOBILE_PAN_X = 82;
+  // Phone banner keeps the desktop focal point, with extra zoom so that focal
+  // point can actually take effect.
+  //
+  // The two viewports crop along different axes. A wide desktop frame crops
+  // vertically, so `y` is what pulls the view down onto the guitar and cuts
+  // the player's head out. A tall phone frame fits the whole image height, so
+  // `y` has no slack and the head returns no matter what `x` says. Scaling up
+  // restores vertical overflow, letting the same `y` frame the same subject.
+  // A floor rather than a multiplier: multiplying a slide that already carries
+  // zoom compounds it (1.18 became 2.12) and reduced that photo to unreadable
+  // background blur. The floor gives every slide just enough vertical overflow
+  // for `y` to bite, without over-cropping the ones already tight.
+  const MOBILE_ZOOM_FLOOR = 138;
+  // An edge-anchored focal point is fine across a wide desktop frame but lands
+  // on the extreme edge of a narrow phone slice, so it is pulled inward.
+  const MOBILE_X_MIN = 18, MOBILE_X_MAX = 82;
   const currentProfile = slide => {
     if (breakpoint !== 'mobile') return slide[breakpoint];
     const desktop = slide.desktop || slide.mobile;
     if (!desktop) return slide.mobile;
-    return { x: MOBILE_PAN_X, y: desktop.y, zoom: desktop.zoom };
+    return {
+      x: Math.min(Math.max(desktop.x, MOBILE_X_MIN), MOBILE_X_MAX),
+      y: desktop.y,
+      zoom: Math.max(desktop.zoom, MOBILE_ZOOM_FLOOR)
+    };
   };
   const save = message => {
     clearTimeout(saveTimer);
