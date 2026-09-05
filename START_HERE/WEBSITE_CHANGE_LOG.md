@@ -1109,3 +1109,11 @@ Caught during verification: the form labels were failing at 3.11:1. The label co
 **Change:** The homepage submit button now uses the available form width up to 24rem (384px at the default font size). On narrow phones it fills the form's content width. Existing height, gradient, typography, and submit behavior are retained; other buttons are unchanged.
 
 **Validation:** Browser checks at 320, 390, 768, and 1440px confirm the button stays within the form, reaches the intended width, retains its gradient and minimum 48px height, and causes no page overflow. Phone screenshot visually reviewed. No form was submitted. Whitespace check passes.
+
+## 2026-09-05 — Anchor hero shading behind the lower-left copy
+
+**Request:** Bridget showed the rack-equipment hero slide and asked for the dark gradient to run from the bottom-left toward the right because the text was blending into the photograph.
+
+**Change:** Added a homepage-only diagonal overlay, darkest at the bottom-left and fading toward the upper-right. The stronger middle stops keep the headline and supporting copy on a dark field across the four existing slides. The reduced-transparency preference uses a more opaque version. Image files, order, crops, typography, and layout are unchanged; inner-page hero overlays retain their existing styling. Refreshed the homepage hero stylesheet cache key.
+
+**Validation:** All four photographs checked at 320, 390, 660, 768, and 1440px with no horizontal page overflow. Reviewed all four phone screenshots and the desktop microphone view. Confirmed the overlay leaves pointer events available, both CTA destinations stay intact, and noindex remains present. Chrome media emulation verifies the reduced-transparency variant. No inquiry or booking was submitted. Whitespace check passes.

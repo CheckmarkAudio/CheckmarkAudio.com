@@ -3,6 +3,17 @@ body[data-page="home"] .hero--cinematic-lower-third {
   min-height: clamp(680px, 74vh, 860px);
 }
 
+/* Keep the lower-left copy on a dark field, feathering toward the upper right. */
+body[data-page="home"] .hero--cinematic-lower-third::before {
+  background: linear-gradient(to top right,
+    rgba(5, 6, 6, .98) 0%,
+    rgba(5, 6, 6, .94) 32%,
+    rgba(5, 6, 6, .80) 56%,
+    rgba(5, 6, 6, .45) 76%,
+    rgba(5, 6, 6, .12) 92%,
+    rgba(5, 6, 6, 0) 100%);
+}
+
 body[data-page="home"] .hero--cinematic-lower-third .hero-inner {
   width: min(1760px, calc(100% - 72px));
   margin-right: auto;
@@ -187,5 +198,11 @@ body[data-page="home"] .header .logo span {
 
   body[data-page="home"] .hero--cinematic-lower-third .actions .btn {
     width: 100%;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  body[data-page="home"] .hero--cinematic-lower-third::before {
+    background: linear-gradient(to top right, #050606 0%, rgba(5, 6, 6, .96) 56%, rgba(5, 6, 6, .55) 100%);
   }
 }
