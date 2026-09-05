@@ -109,11 +109,11 @@
     background:
       radial-gradient(circle at 25% 56%, rgba(156, 91, 31, 0.1), transparent 28%),
       linear-gradient(90deg,
-        rgba(5, 6, 6, 0.97) 0%,
-        rgba(5, 6, 6, 0.91) 52%,
-        rgba(5, 6, 6, 0.62) 76%,
-        rgba(5, 6, 6, 0.2) 94%,
-        rgba(5, 6, 6, 0.08) 100%);
+        rgba(5, 6, 6, 0.86) 0%,
+        rgba(5, 6, 6, 0.64) 42%,
+        rgba(5, 6, 6, 0.32) 66%,
+        rgba(5, 6, 6, 0.1) 86%,
+        rgba(5, 6, 6, 0) 100%);
   }
 
   .hero-title-panel {

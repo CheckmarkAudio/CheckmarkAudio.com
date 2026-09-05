@@ -96,7 +96,17 @@
   const enabledSlides = () => config.slides.filter(slide => slide.enabled);
   const selectedSlide = () => config.slides.find(slide => slide.id === selectedId) || config.slides[0];
   const activeIndex = () => Math.max(0, enabledSlides().findIndex(slide => slide.id === activeId));
-  const currentProfile = slide => slide[breakpoint];
+  // Phone banner keeps the crop set for desktop — same zoom and vertical
+  // framing — but pans toward the right of the frame. Previously the phone
+  // used its own centred crop, so a banner composed on desktop was re-framed
+  // and the intended subject drifted out of view on a narrow screen.
+  const MOBILE_PAN_X = 82;
+  const currentProfile = slide => {
+    if (breakpoint !== 'mobile') return slide[breakpoint];
+    const desktop = slide.desktop || slide.mobile;
+    if (!desktop) return slide.mobile;
+    return { x: MOBILE_PAN_X, y: desktop.y, zoom: desktop.zoom };
+  };
   const save = message => {
     clearTimeout(saveTimer);
     saveState.textContent = 'Saving website settings…';

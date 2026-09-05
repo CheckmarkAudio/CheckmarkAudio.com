@@ -963,3 +963,17 @@ Measured on a 375px viewport: slides were all forced to 238px; they now measure 
 **Validation:** Verified in-browser that all ten removed strings are absent from the rendered page and the three rewrites are present, with no console errors.
 
 **Open question:** The new consultation blurb ends on a comma as supplied ("…what you are making,"). Left exactly as written pending Bridget's confirmation.
+
+## 2026-09-03 — Phone banner inherits the desktop crop
+
+**Change:** The phone hero now uses the crop set for desktop — same zoom and vertical framing — panned toward the right of the frame, and sits under a lighter scrim.
+
+Previously `currentProfile` returned the slide's own `mobile` profile, which for most slides was the editor default (centred, 115% zoom). A banner composed on desktop was therefore re-framed on a phone and its intended subject drifted out of view. Mobile now derives `y` and `zoom` from the desktop profile and sets `x` to 82%.
+
+The mobile hero scrim was also heavier than desktop, holding 0.91 opacity out to 52% of the width. It now falls from 0.86 to transparent well before the right edge, so it is lighter than the desktop treatment while keeping the headline legible.
+
+**Trade-off to note:** because the phone profile is now derived, the hero editor's mobile crop controls no longer affect the banner — the desktop crop drives both. Per-slide mobile control can be restored if Bridget wants to frame a specific slide differently on phones.
+
+**Files changed:** `checkmark-hero-editor.js`, `checkmark-title-panels.css`, `index.html` and page HTML (cache versions), and this change log.
+
+**Validation:** At a 375px viewport the four slides report x 82% with y/zoom of 56%/1.18, 71%/1.00, 30%/1.10 and 46%/1.13 — matching their desktop values. Rendered at 390px with no console errors.
