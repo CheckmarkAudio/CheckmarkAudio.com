@@ -1101,3 +1101,11 @@ Caught during verification: the form labels were failing at 3.11:1. The label co
 **Change:** Consolidated affiliate styling in `checkmark-home-media.css` and removed the conflicting phone rules from `checkmark-responsive.css`. The heading is centered above the logos. Above 900px, all five logos share one row; at 900px and below, a six-track grid positions three logos on top and two centered beneath. Removed individual borders and the tinted grid background that made the unused sixth cell visible. Existing logo files, order, alt text, colors, and media selections are retained. Refreshed the affected stylesheet and inner-page loader cache keys.
 
 **Validation:** Browser checks at 320, 390, 700, 768, 900, 901, 1024, 1440, and 1920px passed: all five logos load, rows match the intended breakpoint, lower-row centering is within one pixel, no cell/grid borders or grid fill, and no page overflow. Phone and desktop screenshots visually reviewed. JavaScript syntax and whitespace checks pass. This is implemented for Bridget's visual review, not recorded as an approved screenshot baseline. Production Wix, noindex, inquiry, and calendar behavior remain unchanged.
+
+## 2026-09-05 — Give the Send inquiry gradient more width
+
+**Request:** Bridget asked to lengthen the Send inquiry button because its gradient looked distracting and condensed.
+
+**Change:** The homepage submit button now uses the available form width up to 24rem (384px at the default font size). On narrow phones it fills the form's content width. Existing height, gradient, typography, and submit behavior are retained; other buttons are unchanged.
+
+**Validation:** Browser checks at 320, 390, 768, and 1440px confirm the button stays within the form, reaches the intended width, retains its gradient and minimum 48px height, and causes no page overflow. Phone screenshot visually reviewed. No form was submitted. Whitespace check passes.
