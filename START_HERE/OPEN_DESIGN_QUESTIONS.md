@@ -18,6 +18,6 @@ Updated 2026-09-05. This register contains pending visual decisions for the cano
 
 ## Resolved direction
 
-The root website is the active replacement; it is not production. Preserve the approved four hero photographs and subsequent recorded user-directed changes. Services uses the six-state signal-path composition. Studio A/B share the cinematic system. Team features Gavin Hammond, Bridget Reinhard, Richard Baca, and Tony Rivera equally. Community uses the implemented broadcast-wall/depth direction.
+The root website is the active replacement; it is not production. Preserve the approved four hero photographs and subsequent recorded user-directed changes. Services uses the six-state signal-path composition. Studio A/B share the cinematic system. Team features Gavin Hammond, Bridget Reinhard, and Tony Rivera equally. Community uses the implemented broadcast-wall/depth direction.
 
 Desktop reviews pan continuously and pause on hover/focus; phones use manual controls. The free one-hour Cal.com consultation is directly selectable; inquiries remain available through EmailJS. The inquiry precedes the calendar and its contact card moves below the calendar on phones. The old demo video has been replaced by the music-reactive sound demo; the tour and Millie comparison remain. Detailed rates belong under Services. No production/domain change is authorized by a design decision.

@@ -40,6 +40,16 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Validation:** Browser checks at 1440, 768, 390, and 320px confirmed exactly the four remaining names, equal column widths, four/two/one-column arrangements, no horizontal overflow, correct metadata, loaded portraits, and retained noindex. Phone layout visually reviewed; JSON and whitespace checks passed.
 
+## 2026-09-05 — Team — Three-member roster follow-up
+
+**Status:** User-directed update
+
+**Change:** Removed Richard Baca’s Team profile and page-description entry after Bridget’s follow-up. Current roster: Gavin Hammond, Bridget Reinhard, and Tony Rivera. Rebalanced desktop to three equal columns, tablet to two over one, and retained compact vertical phone rows. Tony is Frame 03.
+
+**Preserve:** Bridget explicitly allowed Richard to remain in photographs. No media assets, gallery selections, Services images, Community images, or historical testimonial quotations were removed. Only Richard’s retired Team slot and roster metadata were removed from canonical media configuration.
+
+**Validation:** At 1440, 768, 390, and 320px the browser showed exactly Gavin, Bridget, and Tony, equal profile widths, the intended three/two-over-one/one-column arrangements, no horizontal overflow, and development noindex. Verified the media configuration changed only the retired Team references and roster status; all other image/crop selections are unchanged. JSON and whitespace checks passed.
+
 ## Entry template
 
 ```markdown
