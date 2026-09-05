@@ -863,3 +863,18 @@ Display headings (`.hero h1`, `.pagehero h1`) now carry a metallic sheen gradien
 **Files changed:** `checkmark-gold-theme.css`, `checkmark-header-brand.css`, `index.html` and `inner-pages.js` (stylesheet cache versions), `.gitignore`, the new draft folder, and this change log.
 
 **Validation:** Homepage and Studio A rendered against the LAN address, which bypasses the localhost-only media editor. Contrast measured programmatically across every eyebrow, label, figure and link on a light ground rather than judged by eye.
+
+## 2026-09-03 — Champagne palette corrections
+
+**Change:** Four corrections after Bridget's review of the champagne retune.
+
+1. **The sheen was on the wrong element.** `.hero h1` is a `visually-hidden` screen-reader heading one pixel tall. Clipping a gradient to it produced no visible sheen at all, and the real title — `p.tagline.display` — was left on the flat pale champagne. That is why the gradient appeared to be missing and the type read as washed out. The sheen now targets the tagline.
+2. **Gradient deepened.** The stops were weighted toward near-white; they now run through mid champagne and a deeper bronze so the type has body rather than reading bleached.
+3. **Primary CTA restored.** The header button is back to its original gold gradient, borders and shadows included, at Bridget's request.
+4. **Logo mark brought into the palette.** The header logo carried `saturate(.96)`, keeping the PNG fully gold beside champagne text — the mismatch Bridget flagged. It is now `saturate(.55)` so the mark and wordmark read as one.
+
+The red full stop in the tagline is explicitly protected from the gradient clip, since `background-clip: text` on the parent would otherwise swallow it.
+
+**Files changed:** `checkmark-gold-theme.css`, `checkmark-header-brand.css`, `index.html` and `inner-pages.js` (cache versions), and this change log.
+
+**Validation:** Verified on a cache-busted load: tagline carries the gradient, red full stop holds at rgb(168,46,38), logo filter at saturate(.55), CTA back to the original gold ramp. All light-ground elements still clear WCAG AA. Note that a stale tab briefly reported the gradient as absent while the files were already correct — the cache-busted reload is the reliable check.
