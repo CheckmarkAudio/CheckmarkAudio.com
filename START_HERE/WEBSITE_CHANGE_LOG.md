@@ -898,3 +898,13 @@ The red full stop in the tagline is explicitly protected from the gradient clip,
 **Files changed:** `checkmark-gold-theme.css`, `checkmark-header-brand.css`, `index.html` and `inner-pages.js` (cache versions), and this change log.
 
 **Validation:** Computed styles asserted against the draft: title gradient string equal, wordmark fill equal to `rgb(230, 203, 161)`, eyebrow `rgb(241, 218, 184)`, red full stop `rgb(168, 46, 38)`, CTA on the champagne ramp.
+
+## 2026-09-03 — Primary buttons unified
+
+**Change:** All `.btn.primary` buttons now carry the header CTA's champagne ramp, border and shadow. Previously only the header button had it while the hero's call to action and four others were a flat champagne fill, so the same component read two different ways. Applied centrally in the theme file rather than per-button.
+
+The ramp keeps dark text and a light border, so it stays legible on the cream sections as well as on black — one of the six sits on a light ground.
+
+**Files changed:** `checkmark-gold-theme.css`, `index.html` and `inner-pages.js` (cache version), and this change log.
+
+**Validation:** Rendered against the LAN address; header and hero buttons confirmed identical.
