@@ -171,8 +171,7 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
   box-shadow: inset 0 1px rgba(255, 255, 255, .6), 0 15px 38px rgba(185, 146, 98, .3);
 }
 
-/* Slim contact bar under the header: phone and location, nothing else, so it
-   reads at a glance instead of competing with the navigation above it. */
+/* Readable phone and location strip beneath the navigation. */
 .contact-bar {
   border-bottom: 1px solid rgba(242, 207, 155, .16);
   background: #0c0b09;
@@ -182,15 +181,19 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 9px 20px;
+  gap: 20px;
+  min-height: 60px;
+  padding: 8px 20px;
   color: #e6cba1;
-  font: 600 .74rem/1 "Barlow Condensed", sans-serif;
-  letter-spacing: .16em;
+  font: 600 clamp(1.05rem, 1.3vw, 1.3rem)/1.35 "Barlow Condensed", sans-serif;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 
 .contact-bar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: #f1dab8;
   text-decoration: none;
   border-bottom: 1px solid rgba(241, 218, 184, .38);
@@ -206,13 +209,15 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 
 @media (max-width: 700px) {
   .contact-bar .wrap {
-    gap: 4px 10px;
-    flex-wrap: wrap;
-    padding: 8px 14px;
-    font-size: .66rem;
-    letter-spacing: .12em;
+    gap: 0;
+    flex-direction: column;
+    padding: 4px 16px 12px;
+    font-size: 1.2rem;
+    letter-spacing: .07em;
     text-align: center;
   }
+  .contact-bar .where { font-size: .95rem; line-height: 1.4; }
+  .contact-bar .sep { display: none; }
 }
 
 /* ---- Section rhythm -----------------------------------------------------

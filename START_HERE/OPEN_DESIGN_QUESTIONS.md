@@ -4,6 +4,8 @@ Updated 2026-09-05. This register contains pending visual decisions for the cano
 
 ## Pending review
 
+- Choose or combine the four homepage music-tech directions in `../DRAFTS/active/home-music-tech-2026-09-05/`: Signal flow (recommended), Studio schematics, Session windows, and Patchbay. These extend the Services icon vocabulary into the opening, transition strip, studio-photo frames, and inquiry; the contact-text enlargement is already a root-site fix.
+
 
 - Choose the Community title finish from `../DRAFTS/active/community-title-finishes-2026-09-05/`: clean champagne (recommended), soft metallic, or warm ivory. Bridget requested alternatives to the distressed texture; the root treatment remains unchanged pending selection.
 

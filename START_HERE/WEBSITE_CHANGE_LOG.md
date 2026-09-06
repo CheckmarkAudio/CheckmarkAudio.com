@@ -50,6 +50,18 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Validation:** At 1440, 768, 390, and 320px the browser showed exactly Gavin, Bridget, and Tony, equal profile widths, the intended three/two-over-one/one-column arrangements, no horizontal overflow, and development noindex. Verified the media configuration changed only the retired Team references and roster status; all other image/crop selections are unchanged. JSON and whitespace checks passed.
 
+## 2026-09-05 — Homepage — Contact readability and four music-tech studies
+
+**Status:** Contact fix implemented; homepage artwork exploratory
+
+**Change:** Enlarged the phone/address strip from its former 11.84px desktop and 10.56px phone typography. Desktop now uses a 16.8–20.8px responsive scale; phones stack a 19.2px phone link over a 15.2px address. The telephone link has a 44px target. Created four homepage comparisons: Signal flow, Studio schematics, Session windows, and Patchbay. Each applies code-native line art to the opening, a transition strip, studio photo frames, and inquiry area.
+
+**Preserve:** Existing Services page, approved demo console and audio code, actual contact details, all media selections, root page content, and noindex. Only the contact strip changes in root; additional artwork is injected by the dated draft comparison. Draft inquiry submission is intercepted. No messages or bookings were sent.
+
+**Validation:** Contact typography and no horizontal overflow checked at 1440, 390, and 320px. All four draft states checked at desktop and phone widths, including consistent added-element counts, one inquiry header, two photo headers, and the unchanged 18px/14px demo frame. The illustration/review boundary was adjusted in the draft stylesheet to avoid the root review panel overlapping the added strip. Desktop and phone visual checks and JavaScript syntax/whitespace checks passed.
+
+**Reference:** `../DRAFTS/active/home-music-tech-2026-09-05/`. Homepage art remains pending Bridget’s selection.
+
 ## Entry template
 
 ```markdown

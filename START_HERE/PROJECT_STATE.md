@@ -18,6 +18,8 @@ GitHub Pages already publishes `main` at https://checkmarkaudio.github.io/Checkm
 
 ## Current website
 
+September 5 evening follow-up: the homepage contact strip now uses larger type (18.72px at a 1440px viewport; 19.2px phone number and 15.2px address on phones) with a 44px phone-link target. Four music-tech homepage drafts are available in `../DRAFTS/active/home-music-tech-2026-09-05/`: Signal flow, Studio schematics, Session windows, and Patchbay. Their added artwork remains confined to the comparison pending Bridget’s choice; the existing Services and demo designs are preserved.
+
 September 5 design exploration: Bridget requested carrying the Services icons' champagne line art and edges across the site, starting with the homepage demo unit. `../DRAFTS/active/service-line-style-2026-09-05/` compares an outline console, studio window, and line-art rack, plus matching photo and inquiry samples. Bridget’s follow-up adds subtle bevels and raised controls to the proposals. Bridget approved the rounded bevel direction for site-wide implementation and asked to commit/push the study first. Study commit `f94fa60` was pushed first. The rounded champagne bevels are now applied across all ten root pages via `checkmark-rounded-bevels.css`: large frames use 18px corners (14px on phones), compact controls use smaller curves, and the homepage demo uses the approved Outline console. Layouts, media selections, section colors, and the separate Community title decision remain intact.
 
 Ten content pages are active: Home, Services, Recording, Mixing & Mastering, Live Recordings, Studio A, Studio B, Team, Community, and Q & A. `404.html` is the error page. There is no second active website tree.
