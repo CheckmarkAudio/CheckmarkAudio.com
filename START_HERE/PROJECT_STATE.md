@@ -12,7 +12,7 @@ The Source of Truth DOCX remains the only active completion checklist. This file
 
 ## September 23 — Fifteen-second website audio samples
 
-**Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes (`01a07160-a400-7e73-8f7c-bf2aac8a5f49`). **Status:** Bridget authorized commit and push on September 23 ("push it"); publication in progress. Automated excerpt choices remain adjustable after listening.
+**Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes (`01a07160-a400-7e73-8f7c-bf2aac8a5f49`). **Status:** Pushed and remote-verified on September 23: `89bbe33adb49f8546676da8f5a6e1ee8999e8889`. GitHub Pages reported that matching commit building without a reported error. Automated excerpt choices remain adjustable after listening.
 
 Bridget requested 15-second highlights. Re-exported all 11 active demo-reel clips and both active comparison pairs (15 audio files total) directly from the original sources. Selected the strongest sustained RMS-energy window inside the previously featured 30-second segment, with 0.12-second fade-in and 0.45-second fade-out. This is an automated activity-based selection, not a claim of listening-based or chorus selection. Preserve original artist/title/rights uncertainties. No normalization, EQ, compression, or source gain changes were introduced beyond the short fades and output encoding.
 
