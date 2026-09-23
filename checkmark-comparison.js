@@ -11,7 +11,7 @@
   const buttons=[...player.querySelectorAll('[data-audio-mode]')];
   let trackIndex=0,mode='mix',playing=false,pending=false,timer=null,generation=0;
   const active=()=>mode==='raw'?raw:mix;
-  const duration=()=>Math.min(...[raw.duration,mix.duration].map(v=>Number.isFinite(v)?v:30));
+  const duration=()=>Math.min(...[raw.duration,mix.duration].map(v=>Number.isFinite(v)?v:15));
   const time=v=>`${Math.floor(v/60)}:${String(Math.floor(v%60)).padStart(2,'0')}`;
   function draw(){const d=duration(),t=Math.min(active().currentTime,d);progress.value=d?t/d*1000:0;current.textContent=time(t);durationLabel.textContent=time(d);}
   function setMode(next){mode=next;raw.muted=mode!=='raw';mix.muted=mode!=='mix';player.dataset.mode=mode;status.textContent=mode==='raw'?'Unmixed active':'Mixed active';buttons.forEach(b=>{const on=b.dataset.audioMode===mode;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});}
@@ -27,8 +27,8 @@
   function changeTrack(direction){
     stop();trackIndex=(trackIndex+direction+tracks.length)%tracks.length;
     const track=tracks[trackIndex];
-    raw.src=`MEDIA/AUDIO/mix-comparisons/${track.id}-unmixed.m4a`;
-    mix.src=`MEDIA/AUDIO/mix-comparisons/${track.id}-mixed.m4a`;
+    raw.src=`MEDIA/AUDIO/mix-comparisons/${track.id}-unmixed.m4a?v=20260923-15s`;
+    mix.src=`MEDIA/AUDIO/mix-comparisons/${track.id}-mixed.m4a?v=20260923-15s`;
     raw.load();mix.load();
     document.getElementById('comparison-title').textContent=track.title;
     document.getElementById('comparison-count').textContent=`Track ${String(trackIndex+1).padStart(2,'0')} / ${String(tracks.length).padStart(2,'0')}`;

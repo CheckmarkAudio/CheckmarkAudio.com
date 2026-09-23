@@ -30,6 +30,8 @@ Codex implements and verifies; Bridget/Gavin review one coherent desktop/phone p
 
 ## 2. Finish the music and media
 
+- September 23 update — OpenAI Codex (GPT-6), task “Astra audit Claude website changes”: all active website samples are now 15 seconds; Bridget authorized commit and push on September 23 ("push it"). Review the automatically selected high-activity passages, particularly phrase boundaries, in the demo reel and both comparisons. Original masters and 30-second backups are preserved. Publish this current audio update and supporting records only; do not include raw projects, old clips, or unrelated new files.
+
 - “Hear the difference” now has previous/next arrows; Love All of Me was removed because it is Richard’s work. Do not re-add it from older notes or assets.
 - Current comparisons: Song of Solomon and provisionally titled Tape. Confirm Tape’s title and engineer before launch.
 - GavinMaster contains Solo, Song of Solomon, Hyper4, IgneusRocks and Anthill. Only Song of Solomon has an identified unmixed partner. Bridget/Gavin provide or identify the other unmixed exports. Never fake an unmixed version or pair unrelated renders.

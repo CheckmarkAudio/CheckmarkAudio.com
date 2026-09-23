@@ -1,0 +1,152 @@
+{
+  "author": "OpenAI Codex (GPT-6)",
+  "task": "Astra audit Claude website changes",
+  "date": "2026-09-23",
+  "durationSeconds": 15,
+  "selectionMethod": "Strongest sustained RMS-energy 15-second window within each previously featured 30-second source segment. Automated selection, not a claimed listening/chorus assessment; musical edit points remain reviewable.",
+  "fadeInSeconds": 0.12,
+  "fadeOutSeconds": 0.45,
+  "demoTracks": [
+    {
+      "title": "Hearts With Fire",
+      "file": "MEDIA/AUDIO/demo-clips/01-hearts-with-fire-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/01-hearts-with-fire.mp3",
+      "sourceSha256": "5b41dca3615957cbe769fd3907412fa2cd29988c740f862ff4b5e0b19cd5afb7",
+      "previousSourceStartSeconds": 98.0,
+      "offsetWithinPreviousExcerpt": 1.0,
+      "sourceStartSeconds": 99.0,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Prolly in the Club",
+      "file": "MEDIA/AUDIO/demo-clips/prollyintheclub-98-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/prollyintheclub-98.mp3",
+      "sourceSha256": "4f6dd6fc493eba73d78063febf4d67f25f43833623e3f00bd95d4003da172815",
+      "previousSourceStartSeconds": 36.5,
+      "offsetWithinPreviousExcerpt": 3.0,
+      "sourceStartSeconds": 39.5,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Solo (ft. Yung Gualli)",
+      "file": "MEDIA/AUDIO/demo-clips/solo-ft-yung-gualli-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/solo-ft-yung-gualli.mp3",
+      "sourceSha256": "89d8bae55fe57fa828269c6c8eed95c96d6b4596a3f8c372354e1cccbc5a302b",
+      "previousSourceStartSeconds": 140.5,
+      "offsetWithinPreviousExcerpt": 1.0,
+      "sourceStartSeconds": 141.5,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Save You",
+      "file": "MEDIA/AUDIO/demo-clips/save-you-master-1-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/save-you-master-1.mp3",
+      "sourceSha256": "6541f656d9d583b62aec8034cf602660ce52e7fe3f66ba95f02f980cc577d7c8",
+      "previousSourceStartSeconds": 40.0,
+      "offsetWithinPreviousExcerpt": 11.5,
+      "sourceStartSeconds": 51.5,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Memories",
+      "file": "MEDIA/AUDIO/demo-clips/memories-8-notag-master-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/memories-8-notag-master.mp3",
+      "sourceSha256": "d993397750775f02a9fc9e0d53fffcd5f00bca0b632e0198e7e4f9b3945315a6",
+      "previousSourceStartSeconds": 39.0,
+      "offsetWithinPreviousExcerpt": 0.0,
+      "sourceStartSeconds": 39.0,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Sabrina",
+      "file": "MEDIA/AUDIO/demo-clips/sabrina-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/sabrina.mp3",
+      "sourceSha256": "7b3e2484ee31ba26b0e748f8e8927e9b8b9047408a41f267037d2561ed857a7e",
+      "previousSourceStartSeconds": 106.5,
+      "offsetWithinPreviousExcerpt": 9.5,
+      "sourceStartSeconds": 116.0,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Hope",
+      "file": "MEDIA/AUDIO/demo-clips/hope-2untagged-master-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/hope-2untagged-master.mp3",
+      "sourceSha256": "96a82ab3fb0a7d47efd9e7ed9264350c80fd23c00c823e89884d8f94c1ee14b7",
+      "previousSourceStartSeconds": 52.5,
+      "offsetWithinPreviousExcerpt": 12.0,
+      "sourceStartSeconds": 64.5,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Hurting",
+      "file": "MEDIA/AUDIO/demo-clips/hurting-untagged2-master-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/hurting-untagged2-master.mp3",
+      "sourceSha256": "02458df7f85581cb82a2ed633e60a971dcb10e2e52a014bfb24be528a21d46e9",
+      "previousSourceStartSeconds": 96.0,
+      "offsetWithinPreviousExcerpt": 2.0,
+      "sourceStartSeconds": 98.0,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Greif",
+      "file": "MEDIA/AUDIO/demo-clips/greif-untagged-master-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/greif-untagged-master.mp3",
+      "sourceSha256": "ffcdfd004b13f9ac19279b907b8088f03d4394f9cf45ed2f84ec13c891c94578",
+      "previousSourceStartSeconds": 119.0,
+      "offsetWithinPreviousExcerpt": 14.0,
+      "sourceStartSeconds": 133.0,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Anthill",
+      "file": "MEDIA/AUDIO/demo-clips/anthill-100-41020-13-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/anthill-100-41020-13.mp3",
+      "sourceSha256": "1bfbbeaa07e9e7373c52358debb09a8d4f7fc0f404643909b2c410413d29e491",
+      "previousSourceStartSeconds": 74.0,
+      "offsetWithinPreviousExcerpt": 9.5,
+      "sourceStartSeconds": 83.5,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    },
+    {
+      "title": "Hoops",
+      "file": "MEDIA/AUDIO/demo-clips/ontiva-com-hoops-320k-demo-clip.mp3",
+      "source": "MEDIA/AUDIO/ontiva-com-hoops-320k.mp3",
+      "sourceSha256": "357e1c1260a18ab96ba07bffa7621442b7d6a10e40d0c26b5aba72ff14f62486",
+      "previousSourceStartSeconds": 42.5,
+      "offsetWithinPreviousExcerpt": 0.0,
+      "sourceStartSeconds": 42.5,
+      "durationSeconds": 15,
+      "encodedDurationSeconds": 15.0
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "song-of-solomon",
+      "offsetWithinPreviousExcerpt": 13.5,
+      "durationSeconds": 15,
+      "sourceStarts": {
+        "raw": 33.5,
+        "mix": 33.51275
+      }
+    },
+    {
+      "id": "tape",
+      "offsetWithinPreviousExcerpt": 6.5,
+      "durationSeconds": 15,
+      "sourceStarts": {
+        "raw": 126.5,
+        "mix": 1765.229009406522
+      }
+    }
+  ]
+}

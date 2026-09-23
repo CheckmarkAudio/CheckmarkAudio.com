@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Cut 30-second demo clips for the homepage sound demo.
+"""Cut 15-second demo clips for the homepage sound demo.
 
-Scans MEDIA/AUDIO/ for .mp3 files, finds each song's most active 30 seconds
+Scans MEDIA/AUDIO/ for .mp3 files, finds each song's most active 15 seconds
 (by RMS loudness), and writes a faded, metadata-stripped clip to
 MEDIA/AUDIO/demo-clips/<name>-demo-clip.mp3. Songs that already have a clip
 are skipped, so it is safe to rerun after dropping in new mp3s.
@@ -18,7 +18,7 @@ import os, struct, subprocess, sys
 
 AUDIO_DIR = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(AUDIO_DIR, 'demo-clips')
-CLIP_LEN = 30.0
+CLIP_LEN = 15.0
 SR = 8000       # analysis sample rate (RMS only)
 FRAME = 0.5     # seconds per RMS frame
 FORCE = '--force' in sys.argv
@@ -63,7 +63,7 @@ for name in sorted(os.listdir(AUDIO_DIR)):
     subprocess.run(
         ['ffmpeg', '-v', 'error', '-y', '-ss', f'{start:.2f}', '-t', str(CLIP_LEN),
          '-i', src, '-map_metadata', '-1',
-         '-af', f'afade=t=in:st=0:d=0.7,afade=t=out:st={CLIP_LEN-1.5}:d=1.5',
+         '-af', f'afade=t=in:st=0:d=0.12,afade=t=out:st={CLIP_LEN-0.45}:d=0.45',
          '-codec:a', 'libmp3lame', '-q:a', '4', out], check=True)
     print(f'{name}: {start:.1f}s-{start+CLIP_LEN:.1f}s of {dur:.0f}s -> {os.path.basename(out)}')
 print('done')

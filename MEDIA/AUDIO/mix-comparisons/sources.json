@@ -4,40 +4,60 @@
     {
       "id": "song-of-solomon",
       "title": "Song of Solomon",
-      "duration": 30,
+      "duration": 15,
       "sources": {
         "raw": {
           "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Imported/SongOfSolomon_140_unmixed.wav",
-          "startSeconds": 20
+          "startSeconds": 33.5
         },
         "mix": {
           "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Imported/SongOfSolomon_140_4_Master.wav",
-          "startSeconds": 20.01275
+          "startSeconds": 33.51275
         }
       },
       "files": {
         "raw": "MEDIA/AUDIO/mix-comparisons/song-of-solomon-unmixed.m4a",
         "mix": "MEDIA/AUDIO/mix-comparisons/song-of-solomon-mixed.m4a"
-      }
+      },
+      "previous30SecondSourceStarts": {
+        "raw": 20,
+        "mix": 20.01275
+      },
+      "selectionOffsetWithinPreviousExcerpt": 13.5
     },
     {
       "id": "tape",
       "title": "Tape",
-      "duration": 30,
+      "duration": 15,
       "sources": {
         "raw": {
           "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Processed/Consolidate/tapel1unmixed [2023-06-29 155316].wav",
-          "startSeconds": 120
+          "startSeconds": 126.5
         },
         "mix": {
           "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
-          "startSeconds": 1758.729009406522
+          "startSeconds": 1765.229009406522
         }
       },
       "files": {
         "raw": "MEDIA/AUDIO/mix-comparisons/tape-unmixed.m4a",
         "mix": "MEDIA/AUDIO/mix-comparisons/tape-mixed.m4a"
-      }
+      },
+      "previous30SecondSourceStarts": {
+        "raw": 120,
+        "mix": 1758.729009406522
+      },
+      "selectionOffsetWithinPreviousExcerpt": 6.5
     }
-  ]
+  ],
+  "excerptUpdate": {
+    "author": "OpenAI Codex (GPT-6)",
+    "task": "Astra audit Claude website changes",
+    "date": "2026-09-23",
+    "durationSeconds": 15,
+    "selectionMethod": "Strongest sustained RMS-energy 15-second window within each previously featured 30-second source segment. Automated selection, not a claimed listening/chorus assessment; musical edit points remain reviewable.",
+    "fadeInSeconds": 0.12,
+    "fadeOutSeconds": 0.45,
+    "status": "Implemented; Bridget authorized publication on 2026-09-23. Automated musical selections remain adjustable after listening."
+  }
 }
