@@ -18,13 +18,13 @@ Bridget now authorizes committing and pushing the current main checkout. Earlier
 
 Before-checkpoint backup: `/Users/bridges/GITHUB/CheckmarkAudio-backups/2026-09-23-before-checkpoint/`. Newly pending raw audio/DAW sources are saved there as well as in their original directory, and excluded from normal Git because of oversized files and the source-media boundary. Previously ignored originals/video remain local. The hosted studio-tour video is still a known pending asset, not silently fixed by this checkpoint. The two unique older-worktree visual boards and all new draft/rejected galleries are preserved locally but excluded from this checkpoint. Existing history is not deleted.
 
-**Delivery status:** Preparing and validating the requested checkpoint; confirm pushed commit in the subsequent handoff record. The correct local working source remains this main checkout on port 4191.
+**Delivery status (OpenAI Codex / GPT-6):** Website checkpoint `18bd0f964cc2abbcbeac05c1d0f89289addd7ec8` was pushed to `origin/main` and the remote hash verified on September 23. The final delta from the previous remote contains 71 current-site/support files (about 14 MB); no new draft/archive/audit galleries or oversized raw sources. GitHub Pages reported the matching build in progress, with no reported error, at handoff-record preparation. This documentation follow-up records that verified push. The correct local working source remains this main checkout on port 4191; no Wix/DNS cutover occurred.
 
 ## September 23 — Current checkout and preview recovery
 
 Standing session instruction: Bridget requires a context review at every new chat/resumption and proactive updates as work changes and before handoff. The enforceable workflow is in `../AGENTS.md` and `RULES.md`; future sessions must verify the current checkout/preview before presenting a website.
 
-The current working website is `/Users/bridges/GITHUB/CheckmarkAudio.com`, with local preview `http://127.0.0.1:4191/`. The `48c9` worktree on `codex/finish-claude-polish` is an older September 5 snapshot and must not be used as the current website or merged wholesale over this checkout. GitHub Pages also lacks the newer unpublished work; it is not the current local design reference.
+The current working website is `/Users/bridges/GITHUB/CheckmarkAudio.com`, with local preview `http://127.0.0.1:4191/`. The `48c9` worktree on `codex/finish-claude-polish` is an older September 5 snapshot and must not be used as the current website or merged wholesale over this checkout. At recovery time GitHub Pages also lacked the newer work. The later authorized checkpoint above updates GitHub; confirm its deployment status before treating that public preview as current.
 
 On September 23, the older preview was mistakenly opened and its missing designs were initially misdiagnosed as regressions. The newer main checkout was then inspected and the correct previews opened. No design rollback or main-site source replacement was needed. The redundant photo-bevel correction made in the old worktree must not overwrite this checkout's September 10 correction.
 

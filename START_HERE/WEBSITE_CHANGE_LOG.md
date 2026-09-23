@@ -1373,3 +1373,12 @@ Full-length raw audio/DAW project files remain local: roughly 3.1 GB, including 
 **Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes. Bridget clarified: commit only the current version and necessary files, not older versions. The broad local checkpoint had already been created; its push was interrupted and GitHub was verified still at `b7e10fc`. The unpublished checkpoint is being amended to exclude all newly added draft/archive galleries, photo-audit renders, superseded microphone exports, duplicate source paper, and unused Love All of Me excerpts. Files remain on disk and in the pre-checkpoint backup. Existing Git history is unchanged; the earlier unpublished fader commit remains valid current-site work. Active extracted artwork and its provenance, current source assets, and four selected comparison excerpts remain included.
 
 Oversized raw source files: `Tape13_Master.wav` (about 562 MB), `tapel1unmixed.wav` (about 355 MB), and `Samples/Imported/Track 1.wav` (about 290 MB), under `MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/`. Exact file sizes can be checked in the local archive; these are not website playback assets.
+
+
+### Verified checkpoint delivery — September 23
+
+**Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes (`01a07160-a400-7e73-8f7c-bf2aac8a5f49`).
+
+Pushed website checkpoint `18bd0f964cc2abbcbeac05c1d0f89289addd7ec8` to origin/main; GitHub's main ref matches exactly. Before pushing, fetched origin and verified it was an ancestor; no force push or overwrite of remote history. Final delta is 71 current-website/support files, about 14 MB. No newly added DRAFTS, ARCHIVE, or MIGRATION galleries remain in the final commit. The initial broad local checkpoint was amended before any remote branch update. The earlier existing fader commit is included because it implements the current approved Services unit.
+
+JavaScript/Python/JSON validation and final diff whitespace checks passed. GitHub Pages reported the matching website commit building with no reported error at this observation. This is a development preview update, not Wix cutover or launch approval. Raw audio and excluded galleries remain local and backed up as described above. A documentation-only follow-up records delivery; no website source changes follow the website checkpoint.
