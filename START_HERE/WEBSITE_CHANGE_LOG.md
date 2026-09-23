@@ -1204,3 +1204,172 @@ Caught during verification: the form labels were failing at 3.11:1. The label co
 **Change:** Restored the original `group-recording-session-studio-b.webp` and matching foreground cutout, plus the shared `saturate(1.04) contrast(1.01) brightness(1.22)` treatment from before the September 2 brightening passes. Updated the canonical media slot, HTML fallback, and cutout source guard together. Existing brightened derivatives remain in the library. The depth synchronizer now translates both photo layers together based on the original cutout's cap position and the title's lower edge. Only a small cap tip overlaps at desktop/tablet sizes; phones retain their photo-below-title arrangement. The local media editor now preserves the same absolute photo box as the public page. Community stylesheet/script cache keys are refreshed.
 
 **Validation:** At 390, 768, 1121, 1440, and 1920px, the photo and cutout load from their original sources, use identical filters, and align within one pixel with no horizontal page overflow. Desktop screenshot reviewed for the small cap overlap and darker tone. JavaScript syntax and whitespace checks pass. The title-finish study remains active and uses the updated photo; no title finish is selected or applied to root yet. No inquiry or booking was submitted.
+
+
+## 2026-09-10 — Preview selected editorial critiques
+
+**Request:** Bridget asked to preview the website with the selected draft feedback.
+
+**Change:** Applied Team 07C's light layout and single black headphone illustration; added the Mixing/Mastering chapters from 03B below the existing Services composition; adapted 04A as Checkmark Live at the existing live-recordings.html URL; applied 10A's unplugged-cable 404. Selected raster illustration references are in MEDIA and recorded in the selection manifest. Homepage and unselected page concepts retain their existing direction.
+
+**Validation:** Local literal-reference check passes; existing Services hero composition is unchanged. Updated pages retain noindex. Chrome desktop checks found no horizontal overflow or broken images on the four changed pages. This is an uncommitted local preview, not a deployment or launch approval.
+
+
+## 2026-09-10 — Correct artwork fidelity and limit bevels to panels
+
+**Request:** Bridget rejected the screenshot boxes around the clip art and the use of gold bevels on photo collections. She explicitly authorized direct image processing to extract the exact original artwork after generated cutouts failed fidelity/transparency checks.
+
+**Change:** Replaced all six newly added screenshot/SVG crops with standalone RGBA PNGs extracted from the selected 07C, 10A, 04A and 03B artwork. Removed blend/filter/clip-path cover-ups and the false disc play lettering while preserving the disc rings. Restored the Mixing and Mastering headings and their intended serif font. Adjusted Team header spacing against 07C. Removed photo borders, gold rims, bevels and shadows from studio filmstrips, galleries, standalone photo cards and Team portrait outlines; retained the selected black Team film borders and functional equipment/form/player panels. Removed the extra bevel on the Team page container. Existing Services hero/selector and homepage media remain intact. Other content-page HTML changes are shared-loader cache updates only.
+
+**Validation:** All six PNGs have real alpha with completely transparent outer canvas edges. Desktop (1189px) and phone (390px) checks covered Team, Services, Checkmark Live, 404, Home, Studio A and Community: no horizontal overflow or broken images; tested photo wrappers have zero borders/shadows. Inspected artwork and page captures visually, plus Studio B's filmstrip. Literal local-reference and whitespace checks pass. Booking submission was not tested. This remains a local review, not a deployment or final design acceptance.
+
+**Assets:** `MEDIA/ARTWORK/ASSET_PROVENANCE.json` records original source crops and extraction steps. `MEDIA/ARTWORK/extract-approved-art.py` reproduces the cutouts. Failed generated replacements were not used.
+
+
+## 2026-09-10 — Flatten the review banner
+
+Bridget rejected rounded bevels on the homepage review banner. Removed the review wrapper from shared bevel selectors and explicitly removed its radius, border and shadow. Review content, carousel behavior, spacing and colors are preserved. Local preview only.
+
+
+## 2026-09-10 — Make the demo background artwork visible
+
+Bridget requested a much larger, less repetitive use of her microphone-diagram artwork. Replaced the tiny repeated tile and 90–94% cream cover with one large non-repeating background composition using a transparent bronze derivative of the supplied artwork. Kept the cream section, heading readability and existing sound console/player. Verified desktop and phone captures, no repeating background and no horizontal overflow. Source artwork preserved; local preview only.
+
+
+## 2026-09-10 — Use Bridget’s full-resolution -02 background
+
+Replaced the inadequate thumbnail-derived demo background with the explicitly selected `Microphone-diagram-02.png` source, 3840 × 2160. The cream/bronze presentation uses a same-resolution transparent derivative; original source unchanged. Large, non-repeating placement and player remain unchanged. No upscaling or generated replacement.
+
+
+## 2026-09-10 — Soften and lightly repeat the microphone backdrop
+
+After approving the full-resolution -02 artwork, Bridget requested a slightly smaller, more translucent pattern with some repetition. Reduced the artwork scale by about 20% (80% section width on desktop; 80% section height on phones), enabled repeating, and increased the cream overlay from 26–12% to 42–32%. Full-resolution asset, heading and player remain unchanged.
+
+
+## 2026-09-10 — Layer supplied vintage paper over the demo background
+
+Used Bridget’s supplied `paper vintage.jpeg` (1280 × 999), preserved unchanged and copied to the descriptive web filename `vintage-paper-background.jpeg`. Applied it once across the full demo-section background with a multiply blend over the existing microphone pattern. Pattern scale/translucency, text and sound-console controls are preserved. No generated substitute or tiled paper.
+
+
+## 2026-09-10 — Compare full-size microphones with approved paper
+
+Bridget approved the vintage paper treatment and requested the -02 microphone artwork at its previous full-size scale again. Changed only the microphone background layer from an 80% repeating pattern to a full-size non-repeating composition (cover on desktop; full section height on phones). Paper source, cover sizing, position, multiply blend, cream overlay and heading/player styling are unchanged. This is the requested local comparison.
+
+
+## 2026-09-10 — Restore preferred repeating background and remove its seam
+
+Bridget selected the 80% repeating microphone pattern over the full-size comparison and asked to remove a fine repeat seam. Inspection found nontransparent single-pixel columns along both vertical edges of the microphone derivative, while neighboring columns were fully transparent. Saved a same-resolution seamless derivative with only those two border columns cleared; all interior pixels are identical. Restored 80% repeating sizing. Paper layer, its blend and placement, and pattern translucency remain unchanged. Original source and previous derivative are preserved.
+
+
+## 2026-09-10 — Publish the updated studio development preview
+
+Bridget explicitly requested publication so the updated website is accessible from Gavin’s computer. Publish the selected page revisions, transparent artwork, full-resolution microphone/paper background, and narrowed bevel treatments through the existing main-branch GitHub Pages deployment. The destination is https://checkmarkaudio.github.io/CheckmarkAudio.com/; no Wix/domain change. Added project-path-aware 404 asset resolution for the shared preview.
+
+## 2026-09-10 — Homepage comparison audio
+
+- Replaced the single comparison with three selectable 30-second unmixed/mixed excerpts from the user-added CMA Demo Reels folder: Song of Solomon, Love All of Me, and provisionally titled Tape.
+- Used the Ableton project to identify source passages; compensated measured processing delay without normalization, EQ, dynamics, or time stretching. Original files remain unchanged. Source paths and offsets are recorded in MEDIA/AUDIO/mix-comparisons/sources.json.
+- Preserved the existing comparison design and the separate demo reel/paper background. Added a simple track selector.
+- Earlier publishing request was canceled before commit/push/deploy. This update is local only.
+
+### Comparison navigation and attribution correction
+- Replaced the dropdown with visible previous/next arrow buttons and a centered track title/count, following the demo reel navigation.
+- Removed Love All of Me from the comparison playlist at Bridget’s request because it is Richard’s work. Source files preserved.
+- GavinMaster contains additional masters but no identified unmixed partners beyond Song of Solomon. Requested the missing versions and confirmation of Tape’s attribution before adding further examples.
+- Verified both arrows in the actual in-app preview and refreshed the user’s tab.
+
+## 2026-09-12 — Finish and migration preparation
+
+Reconciled NEXT_STEPS.md with the latest aesthetic/music decisions and added an ordered Wix cutover runbook based on current Wix and Netlify documentation. Corrected stale Project State references to Millie, the bevel rollout, and the canceled publish request. Netlify is a recommendation, not a provisioned or approved host. No DNS changes, deployment, commit or push performed. Source of Truth remains the sole completion checklist.
+
+## 2026-09-12 — Rejected refinement batch; scope correction
+
+Bridget rejected the 24 renders for added text, layout drift and replacement clip art. Archived the batch intact under ARCHIVE/rejected-drafts/page-refinements-2026-09-12; none of its page designs were applied to root. Recorded the explicit zero-added-copy, exact-approved-artwork and existing-layout preservation requirements in RULES.md and PROJECT_STATE.md. No new generation or website changes in this correction.
+
+## 2026-09-12 — Subtle heading feather
+
+At Bridget’s request, reduced the ivory feather behind “Inside the work” from 97% maximum opacity to 12%, with a continuous fade to transparent. Preserved the paper, microphone pattern, layout and copy. Refreshed and visually checked the local preview; awaiting Bridget’s visual acceptance.
+
+## 2026-09-12 — Searchable photo library and computer browsing
+
+Removed 48/60-file paging from both local media pickers; all matching tiles are available with lazy-loaded thumbnails. The dev server indexes current MEDIA files, including newly added files. Added computer-file and folder pickers with filename/folder search; folder browsing stays browser-local, and only an explicitly selected image is copied unchanged into MEDIA/IMAGES/IMPORTS. Existing Save photo changes persists the selection. Imports support JPG/PNG/WebP/GIF up to 50 MB. Site layouts, copy, artwork and selections were not changed by this work.
+
+Verified both pickers (1,494 total files; 1,432 photos), a 139-result microphone search, JS/Python syntax, and isolated import checks for byte preservation, filename confinement, duplicate reuse, invalid-image and cross-origin rejection. New imports need the usual factual filename/alt-text review before production.
+
+## 2026-09-12 — Movable approved mixing-rack faders
+
+At Bridget’s request, made the seven faders in the Services Mixing illustration independently draggable using the exact approved rack artwork, extracted handles and a repaired stationary panel. Original PNG preserved. Native range inputs support touch/pointer and keyboard; values affect illustration positions only, not audio. No copy, page composition or other Services artwork changed. Verified independent values, pointer dragging and keyboard increment in the local browser.
+
+### Fader interaction finish
+Removed the fader selection outline at Bridget’s request. Cursor is grab when hovering and grabbing while pressed; movement and artwork remain unchanged.
+
+
+## 2026-09-12 — Photo quality audit
+
+Audited 73 referenced media files (62 photo/promo paths), including saved selections and fallback galleries, and inspected ten content pages at a 1440px desktop viewport. Evidence and limitations: `MIGRATION/photo-quality-2026-09-12/index.html`. JJUNE export closely matches the noisy/clipped saved original; cleaner original needed. Recovered the exact Recording banner photograph from its 4240×2384 source, exported WebP quality 92 at 2880×1618 (424,050 bytes), and versioned its URL to avoid stale cached previews. Updated the saved media selection and Recording page together; retained gallery-compatible copies. Removed Services photo saturation/contrast filter. No layout/copy changes, AI retouching, or unrelated photo substitutions. Source limitations and high-density display limits remain documented in the audit.
+
+
+## 2026-09-20 — One audio section at a time
+
+Starting the homepage demo reel pauses the mixed/unmixed comparison, and starting the comparison pauses the demo reel. Other native media is paused as well. Comparison tracks remain synchronized with only the selected version audible. Pending demo playback/retry is cancelled when another player takes over; play/pause UI follows actual state. Verified both directions in the browser, including Unmixed selection and demo track navigation. No visual or copy changes.
+
+## 2026-09-20 — Navigation calendar shortcut
+
+Added an outlined calendar icon between the navigation menu and consultation CTA through the shared navigation script. It links directly to the homepage consultation calendar, with hover, active and keyboard-focus feedback. Mobile spacing keeps the shortcut visible down to 320px; the existing consultation CTA remains in the mobile menu. Verified the calendar anchor and mobile fit. No page copy changes.
+
+
+## 2026-09-20 — Short section-link arrival scroll
+
+Same-page section links now jump to 80px above their destination and settle over 220ms, accounting for the header and section scroll margin. Modified clicks, downloads and other-page links keep normal navigation. Reduced-motion users jump directly. Wheel/touch/scroll keys cancel the animation. Calendar shortcut verified in browser, including destination focus. Services panel alignment uses an instant initial jump so CSS smooth scrolling cannot animate the entire distance.
+
+## 2026-09-22 — Expand navigation without scrolling
+
+Menu focus changes now use preventScroll, including opening, Escape and keyboard wrapping. Removed the mobile body overflow toggle's CSS scroll lock so expanding the menu does not change the page scroll container. Verified direct menu click and Escape retained the exact scroll position (4577.5px). Layout and navigation destinations unchanged.
+
+## 2026-09-22 — Navigation and interaction consistency pass
+
+Checked mobile menu expansion on all ten content pages at 390px: scroll positions remained unchanged. Checked all ten pages at 1024px: no horizontal overflow and exactly one calendar shortcut using the latest navigation script. Also checked Home, Services, Team and Community at 320px.
+
+Fixed the Services Mixing grid's minimum-content width, which pushed the adjustable rack 74px beyond the 390px viewport; the rack now fits without changing its artwork or behavior. Photo-editor focus changes use preventScroll; opening the homepage photo picker retained its exact 5466.5px position. Editor section reordering now shares the short-arrival helper. Cross-page hash arrivals use the same short settling scroll after load; user scrolling cancels pending arrival. Updated shared-loader/editor cache versions so inner pages receive the recent behavior changes. Calendar arrival verified below the header; playback exclusivity retested both ways. No copy or photo selection changes.
+
+
+## 2026-09-23 — Correct stale preview; preserve current designs and technical work
+
+**Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes (`01a07160-a400-7e73-8f7c-bf2aac8a5f49`). Attribution covers the recovery/documentation work in this entry, not the earlier designs or fixes.
+
+**Finding:** An older September 5 worktree was mistakenly presented as the current website. Its missing Services illustration and old demo texture were not evidence that the main checkout had lost the newer work. The main checkout `/Users/bridges/GITHUB/CheckmarkAudio.com` retains the seven-fader Services rack, large mastering CD, saved microphone/paper layers, flat photo collections, and later technical fixes.
+
+**Verification:** Opened Services and the homepage from port 4191. Confirmed seven faders and loaded rack/CD assets, changed one fader by keyboard and restored it, and inspected the rendered homepage layers: paper, cream 0.42/0.32 gradient, and seamless bronze microphone artwork at 80% desktop scale. Existing navigation/comparison/visualizer scripts are loaded. This was a targeted recovery check, not a new full QA or visual approval.
+
+**Action:** Opened the correct previews and added session-only routing from old port 8765 website paths to 4191, keeping local draft files accessible. No main-site source files were restored, replaced, or rolled back. The old worktree's redundant September 23 photo correction remains separate and must not be merged over the newer work. Updated the main Project State, Rules, and Next Steps to prevent a repeat.
+
+**Checkmark Live:** Confirmed `live-recordings.html` and its approved artwork still exist. The page is accessible from Services/the inner-page footer, but there is currently no top-navigation tab. The user's question was recorded; no tab was added.
+
+**Publication:** No commit, push, deployment, DNS change, or checklist completion approval. Existing staged and unstaged work remains intact.
+
+
+## 2026-09-23 — Mandatory context review and session handoff
+
+**Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes (`01a07160-a400-7e73-8f7c-bf2aac8a5f49`). Attribution covers the recovery/documentation work in this entry, not the earlier designs or fixes.
+
+Bridget explicitly requires reviewing project state and context at every chat start and keeping it updated without reminders. Added the mandatory startup/resumption and ongoing handoff workflow to AGENTS.md in both the current checkout and stale worktree, and to the current Rules and Project State. It requires verifying the actual working checkout and preview source, preserving newer work, and recording decisions, progress, verification limits, and remaining steps before handoff. No website source, Git staging, or publishing changes.
+
+
+## 2026-09-23 — Multi-assistant attribution and complete website checkpoint
+
+**Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes (`01a07160-a400-7e73-8f7c-bf2aac8a5f49`). **Role:** documentation, preservation, validation, and commit/push coordination. Existing September 9–22 implementation is preserved from the task “Create 90s audio clip art drafts” (`01a08746-c9e1-7e63-aac3-39e70c220654`); that task's exact model is unverified here. Earlier Claude and Codex attribution remains as previously documented.
+
+Bridget authorized committing and pushing the current work, including updated team rules. Added mandatory assistant/task attribution in AGENTS.md and Rules; dated recovery entries now identify their actual author. Preserved current main-checkout code, active artwork and optimized comparison audio, photo improvements, and necessary project records. Following Bridget’s clarification, draft/rejected render history, diagnostic render galleries, superseded derivatives and unused comparison clips are excluded from the final Git checkpoint. Copies of the two older-worktree draft boards remain local only. No stale website code or redundant fixes are merged.
+
+Full-length raw audio/DAW project files remain local: roughly 3.1 GB, including files exceeding normal GitHub file limits. Added their directory to .gitignore, preserving every original. A pre-checkpoint archive also preserves all pending work and those raw files at `/Users/bridges/GITHUB/CheckmarkAudio-backups/2026-09-23-before-checkpoint/pending-work-and-raw-audio.tar`; staged/working diff backups are alongside it. Previously ignored source photos/video/masters remain outside this Git checkpoint and were not newly backed up by that archive. The existing untracked tour video remains a hosted-preview limitation pending its separate media decision.
+
+**Status:** Checkpoint preparation authorized; publication confirmation will be recorded after push. Draft preservation does not approve draft designs for the homepage. No domain cutover or production launch authorization.
+
+**Checkpoint validation (OpenAI Codex / GPT-6, same task):** Syntax passed for 9 changed/new JavaScript files and 2 Python files; 26 changed/new JSON files parsed. Root HTML asset paths resolve locally. The sole root-HTML media asset excluded from Git is the already documented studio-tour MP4. Credential-pattern scan of pending text files found no recognized private-key/token patterns; this is not a full security audit. All candidate Git files are below 100 MiB. `git diff --check HEAD` passed. Pre-checkpoint archive was read back and contains 380 files (3,259,555,840 bytes).
+
+
+### Checkpoint scope correction — September 23
+
+**Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes. Bridget clarified: commit only the current version and necessary files, not older versions. The broad local checkpoint had already been created; its push was interrupted and GitHub was verified still at `b7e10fc`. The unpublished checkpoint is being amended to exclude all newly added draft/archive galleries, photo-audit renders, superseded microphone exports, duplicate source paper, and unused Love All of Me excerpts. Files remain on disk and in the pre-checkpoint backup. Existing Git history is unchanged; the earlier unpublished fader commit remains valid current-site work. Active extracted artwork and its provenance, current source assets, and four selected comparison excerpts remain included.
+
+Oversized raw source files: `Tape13_Master.wav` (about 562 MB), `tapel1unmixed.wav` (about 355 MB), and `Samples/Imported/Track 1.wav` (about 290 MB), under `MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/`. Exact file sizes can be checked in the local archive; these are not website playback assets.

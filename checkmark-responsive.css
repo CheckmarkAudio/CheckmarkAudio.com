@@ -40,9 +40,7 @@ textarea {
     scroll-padding-top: 92px;
   }
 
-  body.nav-open {
-    overflow: hidden;
-  }
+  /* Expanding navigation must not change the page scroll container. */
 
   .header .menu {
     display: inline-flex;

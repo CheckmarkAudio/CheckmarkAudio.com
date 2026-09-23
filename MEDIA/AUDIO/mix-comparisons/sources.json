@@ -1,0 +1,43 @@
+{
+  "note": "Song of Solomon and provisionally titled Tape remain. Love All of Me removed at Bridget\u2019s request: Richard\u2019s work. Additional Gavin comparisons require unmixed partners; Tape attribution awaiting confirmation. Original sources preserved.",
+  "tracks": [
+    {
+      "id": "song-of-solomon",
+      "title": "Song of Solomon",
+      "duration": 30,
+      "sources": {
+        "raw": {
+          "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Imported/SongOfSolomon_140_unmixed.wav",
+          "startSeconds": 20
+        },
+        "mix": {
+          "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Imported/SongOfSolomon_140_4_Master.wav",
+          "startSeconds": 20.01275
+        }
+      },
+      "files": {
+        "raw": "MEDIA/AUDIO/mix-comparisons/song-of-solomon-unmixed.m4a",
+        "mix": "MEDIA/AUDIO/mix-comparisons/song-of-solomon-mixed.m4a"
+      }
+    },
+    {
+      "id": "tape",
+      "title": "Tape",
+      "duration": 30,
+      "sources": {
+        "raw": {
+          "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Processed/Consolidate/tapel1unmixed [2023-06-29 155316].wav",
+          "startSeconds": 120
+        },
+        "mix": {
+          "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
+          "startSeconds": 1758.729009406522
+        }
+      },
+      "files": {
+        "raw": "MEDIA/AUDIO/mix-comparisons/tape-unmixed.m4a",
+        "mix": "MEDIA/AUDIO/mix-comparisons/tape-mixed.m4a"
+      }
+    }
+  ]
+}

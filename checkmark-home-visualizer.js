@@ -20,7 +20,14 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---- Track handling -------------------------------------------------
-  let trackIndex = 0;
+  let trackIndex = 0, playbackGeneration = 0;
+  let retryPlayback = null;
+  function stopPlayback() {
+    playbackGeneration++;
+    if (retryPlayback) audio.removeEventListener('canplay', retryPlayback);
+    retryPlayback = null;
+    audio.pause();
+  }
   const showTrack = () => {
     const b = cueStatus && cueStatus.querySelector('b');
     const small = cueStatus && cueStatus.querySelector('small');
@@ -28,6 +35,7 @@
     if (small) small.textContent = tracks[trackIndex].title;
   };
   const loadTrack = (index, andPlay) => {
+    stopPlayback();
     trackIndex = ((index % tracks.length) + tracks.length) % tracks.length;
     audio.src = tracks[trackIndex].src;
     audio.load();
@@ -54,21 +62,38 @@
   }
 
   async function startPlayback() {
+    document.dispatchEvent(new CustomEvent('checkmark:playback-request', { detail: audio }));
+    document.querySelectorAll('audio,video').forEach(media => {
+      if (media !== audio) media.pause();
+    });
+    const token = ++playbackGeneration;
     ensureAudio();
     if (audioCtx.state === 'suspended') await audioCtx.resume();
+    if (token !== playbackGeneration) return;
     if (!audio.src) audio.src = tracks[trackIndex].src;
     try {
       await audio.play();
     } catch (e) {
       // A src change can abort an in-flight play(); retry once the new track is ready.
-      audio.addEventListener('canplay', () => { audio.play().catch(() => {}); }, { once: true });
+      if (token !== playbackGeneration) return;
+      retryPlayback = () => {
+        retryPlayback = null;
+        if (token === playbackGeneration) audio.play().catch(() => {});
+      };
+      audio.addEventListener('canplay', retryPlayback, { once: true });
     }
   }
   function togglePlay() {
     if (audio.paused) startPlayback();
-    else audio.pause();
+    else stopPlayback();
   }
   logoBtn.addEventListener('click', togglePlay);
+  document.addEventListener('checkmark:playback-request', event => {
+    if (event.detail !== audio) stopPlayback();
+  });
+  document.addEventListener('play', event => {
+    if (event.target !== audio && !event.target.paused) stopPlayback();
+  }, true);
   audio.addEventListener('play', () => stage.classList.remove('is-paused'));
   audio.addEventListener('pause', () => stage.classList.add('is-paused'));
   audio.addEventListener('ended', () => loadTrack(trackIndex + 1, true));

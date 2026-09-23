@@ -31,3 +31,22 @@ __pycache__/
 # Unlicensed texture inspiration and transient Affinity lock files are not web assets.
 /MEDIA/IMAGES/TEXTURES/REFERENCE/
 *.af~lock~
+
+# Local DAW sessions and full-length masters; optimized comparison excerpts are tracked.
+/MEDIA/AUDIO/CMA Demo Reels/
+
+# September 23: keep old/rejected/unapproved studies, audit renders, and superseded exports local.
+/ARCHIVE/rejected-drafts/page-refinements-2026-09-12/
+/DRAFTS/active/audio-clip-art-2026-09-09/
+/DRAFTS/active/editorial-audio-art-pages-2026-09-09/
+/DRAFTS/active/members-community-2026-09-23/
+/DRAFTS/reference/patchbay-placement-board-2026-09-05/
+/DRAFTS/reference/microphone-texture-board-2026-09-06/
+/MIGRATION/photo-quality-2026-09-12/
+/MEDIA/ARTWORK/microphone-diagram-background-bronze-02.png
+/MEDIA/ARTWORK/microphone-diagram-background-bronze.png
+/MEDIA/AUDIO/mix-comparisons/love-all-of-me-mixed.m4a
+/MEDIA/AUDIO/mix-comparisons/love-all-of-me-unmixed.m4a
+/MEDIA/IMAGES/TEXTURES/Microphone-diagram-01.png
+/MEDIA/IMAGES/TEXTURES/Microphone-diagram.png
+/MEDIA/IMAGES/TEXTURES/paper vintage.jpeg

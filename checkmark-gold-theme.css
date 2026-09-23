@@ -225,16 +225,27 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
    rather than one long dark run. Ordered: Inside the work (light), Hear the
    difference (dark), Two studios (light), Tour the rooms (dark). */
 
-/* Inside the work — was dark; keep its microphone-diagram texture but on the
-   paper ground, and flip the type that was written for a dark backdrop. */
+/* Full-resolution microphone artwork with the approved full-section paper overlay. */
 .demo-reel-section {
   background-color: var(--paper);
   background-image:
-    linear-gradient(rgba(243, 238, 230, .9), rgba(243, 238, 230, .94)),
-    url("MEDIA/IMAGES/TEXTURES/APPROVED/microphone-diagram-pattern-gold-black.webp");
-  color: var(--ink);
-  border-block: 1px solid rgba(185, 146, 98, .28);
-  box-shadow: none;
+    url("MEDIA/IMAGES/TEXTURES/vintage-paper-background.jpeg"),
+    linear-gradient(rgba(243,238,230,.42),rgba(243,238,230,.32)),
+    url("MEDIA/ARTWORK/microphone-diagram-background-bronze-seamless.png");
+  background-size:cover,cover,80% auto;
+  background-repeat:no-repeat,no-repeat,repeat;
+  background-position:center,center,center;
+  background-blend-mode:multiply,normal,normal;
+  color:var(--ink);
+  border-block:1px solid rgba(185,146,98,.28);
+  box-shadow:none;
+}
+.demo-reel-section .homepage-media-head{
+  position:relative;
+  background:radial-gradient(ellipse closest-side at center,rgba(243,238,230,.12) 0%,rgba(243,238,230,.07) 40%,rgba(243,238,230,.025) 70%,rgba(243,238,230,0) 100%);
+}
+@media(max-width:650px){
+  .demo-reel-section{background-size:cover,cover,auto 80%;background-position:center,center,30% center}
 }
 
 .demo-reel-section .homepage-media-head h2 { color: var(--ink); text-shadow: none; }

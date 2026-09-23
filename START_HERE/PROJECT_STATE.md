@@ -1,7 +1,7 @@
 ---
 title: Project State
 status: active_development_not_launch_approved
-updated: 2026-09-05
+updated: 2026-09-23
 ---
 
 # Project State
@@ -10,6 +10,42 @@ Checkmark Audio's replacement is built in the repository root and is still in de
 
 The Source of Truth DOCX remains the only active completion checklist. This file summarizes implementation; `NEXT_STEPS.md` routes remaining work. The detailed dated diagnostics and contributor evidence are in `../MIGRATION/STATUS_2026-09-05.md`.
 
+## September 23 — Authorized checkpoint and contributor handoff
+
+**Updated by:** OpenAI Codex (GPT-6), task “Astra audit Claude website changes” (`01a07160-a400-7e73-8f7c-bf2aac8a5f49`). Scope: recovery notes, assistant-attribution rules, and checkpoint coordination; not authorship of all earlier implementation.
+
+Bridget now authorizes committing and pushing the current main checkout. Earlier no-push statements describe their historical phases and are superseded for this checkpoint. Implementation/design approval and Wix cutover remain separate. Checkpoint contents include only the current website and necessary supporting files: preserved Services faders/CD, layered microphone/paper background, flat photos, Checkmark Live artwork, active comparison excerpts, navigation/playback/editor fixes, source records, and team context. Bridget clarified that older versions and draft galleries must not be committed; these stay local in the backup. Team rules now require identifying each assistant's actual contribution; unknown model/author details must remain unknown.
+
+Before-checkpoint backup: `/Users/bridges/GITHUB/CheckmarkAudio-backups/2026-09-23-before-checkpoint/`. Newly pending raw audio/DAW sources are saved there as well as in their original directory, and excluded from normal Git because of oversized files and the source-media boundary. Previously ignored originals/video remain local. The hosted studio-tour video is still a known pending asset, not silently fixed by this checkpoint. The two unique older-worktree visual boards and all new draft/rejected galleries are preserved locally but excluded from this checkpoint. Existing history is not deleted.
+
+**Delivery status:** Preparing and validating the requested checkpoint; confirm pushed commit in the subsequent handoff record. The correct local working source remains this main checkout on port 4191.
+
+## September 23 — Current checkout and preview recovery
+
+Standing session instruction: Bridget requires a context review at every new chat/resumption and proactive updates as work changes and before handoff. The enforceable workflow is in `../AGENTS.md` and `RULES.md`; future sessions must verify the current checkout/preview before presenting a website.
+
+The current working website is `/Users/bridges/GITHUB/CheckmarkAudio.com`, with local preview `http://127.0.0.1:4191/`. The `48c9` worktree on `codex/finish-claude-polish` is an older September 5 snapshot and must not be used as the current website or merged wholesale over this checkout. GitHub Pages also lacks the newer unpublished work; it is not the current local design reference.
+
+On September 23, the older preview was mistakenly opened and its missing designs were initially misdiagnosed as regressions. The newer main checkout was then inspected and the correct previews opened. No design rollback or main-site source replacement was needed. The redundant photo-bevel correction made in the old worktree must not overwrite this checkout's September 10 correction.
+
+Confirmed intact in the newer preview:
+
+- Services `#mixing-mastering`: exact approved mixing-rack artwork with seven independently movable illustration faders, plus the large gold mastering CD. All seven controls and loaded artwork were checked; the first fader was keyboard-tested and returned to its starting value. These controls move artwork, not audio levels.
+- Homepage “Inside the work”: vintage paper overlay, cream gradient at 0.42/0.32 opacity, and seamless bronze microphone diagram. Desktop sizes are `cover, cover, 80% auto` with `multiply, normal, normal` blending; the phone rule retains `auto 80%` for the artwork. These are the saved layers, not the September 6 texture-board draft.
+- Photo collections retain flat edges; functional equipment panels retain their approved treatment.
+- Later technical work remains in place: comparison audio and playback exclusivity, calendar shortcut, navigation/scroll corrections, media-editor/photo-library improvements, and improved source-photo exports. This recovery did not modify those files or repeat full functional QA.
+- Checkmark Live exists at `live-recordings.html`, with approved microphone and guitar artwork. It is linked through Services/the inner-page footer but currently has no top-navigation tab. Bridget's question about a tab is recorded; no navigation change was made or approved by that question alone.
+
+At inspection, local `main` was `400d177b34823a4dbadd199d99913843bc415b90`, one commit ahead of the locally recorded `origin/main` (`b7e10fc`), with substantial staged, unstaged, and untracked newer work. Those states are preserved. No commit, push, deployment, or DNS change was performed during recovery.
+
+The old local port 8765 was given a temporary redirect to 4191 for website paths; `/DRAFTS/` still serves the older local draft files. This is session-only routing, not a deployed redirect or durable server configuration. If a preview stops, verify its serving directory and restart the main checkout's `scripts/dev-server.py` on 4191. Do not restart a generic server against the stale worktree as the current website.
+
+## September 10 local editorial preview
+
+September 12 latest correction: Bridget rejected the 24 page-refinement renders for added copy, substituted artwork and layout drift. They are archived under `../ARCHIVE/rejected-drafts/page-refinements-2026-09-12/` and are not implementation references. That generation pass did not modify root pages. Current design scope is exact approved clip-art refinement only, with ZERO added copy and preservation of existing layouts/content/media. See RULES.md. Do not generate another replacement-page batch.
+
+The selected Team 07C, 404 10A, Checkmark Live 04A, and additive Services Mixing/Mastering chapters are implemented locally for review. Bridget rejected the first implementation’s screenshot-box artwork and excessive photo bevels. The corrected pass uses six directly extracted transparent PNGs and removes bevels/gold rims from photo collections; actual form/player/equipment panels retain their treatment. This correction remains subject to visual review. The existing Services composition and homepage remain protected. See the September 10 change-log entry and media selection manifest. The September 10 publishing request was canceled before commit/push/deploy. On September 12 Bridget requested the finish-and-migration plan and preparation. The actual cutover follows final review; no DNS changes have been made. NEXT_STEPS.md now contains the execution order and Wix runbook.
+
 ## Git and hosting
 
 The September 5 audit began with local `main` at `6eab017`, 15 commits ahead of `origin/main` at `5c6a282`. All 15 were attributed to Claude Opus 5. One additional uncommitted change updated the inner-page champagne stylesheet cache version. This synchronization checkpoint includes that change, the unfinished Team phone-layout fix, expanded diagnostics, and reconciled project records. The completed implementation checkpoint `7b5a38c128a1d8de38e75dbe18f173e75cd1b5aa` was pushed and verified: local/remote matched, the tree was clean, GitHub Pages build 33964659571 succeeded, and the deployed Team phone layout passed its browser check. This documentation follow-up records the verified outcome.
@@ -17,6 +53,8 @@ The September 5 audit began with local `main` at `6eab017`, 15 commits ahead of 
 GitHub Pages already publishes `main` at https://checkmarkaudio.github.io/CheckmarkAudio.com/. It is a public development preview, not the production domain. The GitHub Pages API reported no custom domain, HTTPS enforced, and a successful previous build. Pushing `main` updates this preview. It does not redirect the Wix domain. All ten content pages retain `noindex,nofollow`; `robots.txt` remains `Disallow: /`.
 
 ## Current website
+
+September 12 correction: historical September 5 bevel descriptions below are superseded by the September 10 corrections: photo compilations and review banner are flat; dimensional styling is limited to suitable equipment/functional panels. Team 07C and the microphone-02/paper treatment are the current direction. See NEXT_STEPS.md for current remaining work.
 
 September 5 evening follow-up: the homepage contact strip now uses larger type (18.72px at a 1440px viewport; 19.2px phone number and 15.2px address on phones) with a 44px phone-link target. Four music-tech homepage drafts are available in `../DRAFTS/active/home-music-tech-2026-09-05/`: Signal flow, Studio schematics, Session windows, and Patchbay. Their added artwork remains confined to the comparison pending Bridget’s choice; the existing Services and demo designs are preserved.
 
@@ -30,7 +68,7 @@ The August 21 recovered homepage is the protected baseline, with later explicitl
 
 - The selected cinematic homepage with the same four hero photographs, the September 1 lower-third treatment, and Claude's September 4–5 champagne palette, matching buttons, contact bar, alternating section tones, and shorter copy.
 - Services' six-state signal-path selector, matched cinematic Studio A/B pages and galleries, the three-person editorial Team composition, and Community's broadcast-wall layout with an aligned foreground cutout and distressed title.
-- A music-reactive sound demo using 11 tracked 30-second MP3 clips, followed by the Millie raw/mastered comparison using tracked M4A files.
+- A music-reactive sound demo using 11 tracked 30-second MP3 clips, followed by Song of Solomon and provisionally titled Tape comparisons using local M4A excerpts and previous/next arrows. Love All of Me was removed at Bridget’s request because it is Richard’s work. Further Gavin examples need identified unmixed partners; Tape attribution is pending.
 - A continuous review marquee on desktop and compact manual review controls on phones. The review counter is visually hidden publicly but stays available to assistive technology and visible in localhost edit mode.
 - A selectable Cal.com calendar for the free one-hour consultation, plus the branded EmailJS inquiry path. The homepage consultation sidebar is parked in `DRAFTS/active/calendar-info-panel-2026-09-03/`; its Call the studio button is preserved there. The inquiry section is light, and its contact card moves below the calendar on phones.
 - The September 5 Team fix: at widths up to 620px, all three current profiles appear in a compact vertical list with 112px portraits and visible names/roles. The former horizontal carousel and its script are no longer loaded. The September 5 roster update removes Matt Bow and Richard Baca from the current roster at Bridget’s request: three equal desktop columns, a balanced two-over-one tablet layout, and one compact phone column. Richard’s existing appearances elsewhere in the photo library and site remain in place. Tony still needs an approved portrait.

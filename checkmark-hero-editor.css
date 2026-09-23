@@ -107,3 +107,6 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-slide,.hero-editor { transition: none; }
 }
+
+body:has(.media-browser.open) .sme-page-toolbar{visibility:hidden}
+.media-browser-tools input,.media-browser-tools select{font:16px Arial,sans-serif}

@@ -1,4 +1,4 @@
-/* Approved September 5: Services line art with shallow champagne bevels.
+/* September 10 correction: bevel functional panels, never photo collections.
    Final shared layer; layout, media crops, typography, and section colors stay local. */
 :root {
   --bevel-radius:18px;
@@ -12,7 +12,7 @@
 }
 
 /* Existing large windows share a curve and a restrained, directional rim. */
-body :is(.proofbox,.panel,.card,.service-card,.service-overview-card,.formbox,.contactbox,.console,.rate,.homepage-media-card,.calendar-frame,.service-stage,.studio-info-deck,.team-editorial,.qa-list,.ab-player) {
+body :is(.panel,.card,.service-card,.service-overview-card,.formbox,.contactbox,.console,.rate,.homepage-media-card,.calendar-frame,.service-stage,.studio-info-deck,.qa-list,.ab-player) {
   border-radius:var(--bevel-radius);
   border-style:solid;
   border-width:1px;
@@ -31,18 +31,24 @@ body .service-window-bar {
   box-shadow:inset 0 2px 0 #fff0c529,inset 0 -1px 0 #0009;
 }
 
-/* Frame photographs at their existing bounds so focal positions are retained. */
+/* Photographs are editorial content, not beveled interface panels. */
 body :is(.studio-shot,.photo-gallery figure,.chapter-image,.tonight-shot,.studio-filmstrip figure) {
-  border:2px solid;
-  border-color:var(--bevel-dark-edge);
-  border-radius:var(--bevel-radius);
-  box-shadow:var(--bevel-dark-shadow);
+  border:0;
+  border-radius:0;
+  outline:0;
+  box-shadow:none;
   overflow:hidden;
 }
+body :is(.studio-shot,.photo-gallery figure,.chapter-image,.tonight-shot,.studio-filmstrip figure) img {
+  border:0;
+  border-radius:0;
+  outline:0;
+  box-shadow:none;
+}
+/* Preserve the selected Team film border without an extra gold rim or bevel. */
 body .equal-portrait {
-  border-radius:var(--bevel-inner);
-  outline:1px solid #b5996c;
-  box-shadow:0 3px 0 #b2a18a,0 9px 20px #30200c20;
+  outline:0;
+  box-shadow:none;
 }
 body .ab-side{border-radius:var(--bevel-inner);border-color:var(--bevel-dark-edge);box-shadow:inset 0 1px 0 #fff0cf26,inset 0 -2px 0 #0006,0 3px 0 #332b1e}
 body .ab-toggle{border-radius:7px;box-shadow:inset 0 2px 4px #62503320,0 1px 0 #fff9eb66}
@@ -155,3 +161,6 @@ body .demo-reel-section .video-console-cues small{font-size:12px;color:#b3a995}
   body .demo-reel-section .video-console-cues small{font-size:11px}
   body .demo-reel-section .video-console-mode{letter-spacing:.04em}
 }
+
+/* Reviews read as a flat editorial banner, not a raised panel. */
+body .proofbox{border:0;border-radius:0;box-shadow:none}

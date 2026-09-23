@@ -31,7 +31,7 @@
       "services-live-recordings": { "slot": "services-live-recordings", "kind": "dataset", "src": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp" },
       "services-podcast-voice-over": { "slot": "services-podcast-voice-over", "kind": "dataset", "src": "MEDIA/IMAGES/artist-interview-checkmark-audio-studio-episode-thumbnail.webp" },
       "services-artist-media": { "slot": "services-artist-media", "kind": "dataset", "src": "MEDIA/IMAGES/marz-artist-photography-promo.webp" },
-      "recording-hero": { "slot": "recording-hero", "kind": "background", "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone.webp", "cssVar": "--page-image" },
+      "recording-hero": { "slot": "recording-hero", "kind": "background", "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-2880.webp", "cssVar": "--page-image" },
       "mixing-hero": { "slot": "mixing-hero", "kind": "background", "src": "MEDIA/IMAGES/mixing-console-close-up-view-02.webp", "cssVar": "--page-image" },
       "live-hero": { "slot": "live-hero", "kind": "background", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp", "cssVar": "--page-image" },
       "team-hero": { "slot": "team-hero", "kind": "background", "src": "MEDIA/IMAGES/gavin-hammond-studio-console-portrait-view-01.webp", "cssVar": "--page-image" },
@@ -246,5 +246,85 @@
         "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp"
       ]
     }
+  },
+  "editorialPreview20260910": {
+    "status": "Local working preview of selected critiques; not launch approval",
+    "team": {
+      "page": "team.html",
+      "reference": "07C",
+      "art": "MEDIA/ARTWORK/team-headphones-black.png"
+    },
+    "notFound": {
+      "page": "404.html",
+      "reference": "10A",
+      "art": "MEDIA/ARTWORK/not-found-patchbay-cable-gold.png"
+    },
+    "live": {
+      "page": "live-recordings.html",
+      "reference": "04A",
+      "art": "MEDIA/ARTWORK/live-recording-microphone-stand-gold.png"
+    },
+    "mixingMastering": {
+      "page": "services.html#mixing-mastering",
+      "reference": "03B middle chapters only",
+      "art": "MEDIA/ARTWORK/mixing-fader-rack-black-gold.png"
+    },
+    "note": "Original draft illustrations directly extracted as transparent PNGs with user authorization. Full asset inventory: MEDIA/ARTWORK/ASSET_PROVENANCE.json. Existing Services selector preserved; photo bevels removed per September 10 critique."
+  },
+  "demoBackground20260910": {
+    "page": "index.html",
+    "section": ".demo-reel-section",
+    "paperOverlay": "MEDIA/IMAGES/TEXTURES/vintage-paper-background.jpeg",
+    "paperSource": "MEDIA/IMAGES/TEXTURES/paper vintage.jpeg",
+    "paperTreatment": "Full-section cover, no repeat, multiply blend over microphone background",
+    "asset": "MEDIA/ARTWORK/microphone-diagram-background-bronze-seamless.png",
+    "source": "MEDIA/IMAGES/TEXTURES/Microphone-diagram-02.png",
+    "direction": "Preferred repeating version: 80% width on desktop, 80% height on phones; cream overlay 42% to 32%; approved paper unchanged. Removed only the one-pixel left/right source border to eliminate the repeat seam.",
+    "requestedOn": "2026-09-10"
+  },
+  "homepageMixComparisons": {
+    "note": "Song of Solomon and provisionally titled Tape remain. Love All of Me removed at Bridget\u2019s request: Richard\u2019s work. Additional Gavin comparisons require unmixed partners; Tape attribution awaiting confirmation. Original sources preserved.",
+    "tracks": [
+      {
+        "id": "song-of-solomon",
+        "title": "Song of Solomon",
+        "duration": 30,
+        "sources": {
+          "raw": {
+            "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Imported/SongOfSolomon_140_unmixed.wav",
+            "startSeconds": 20
+          },
+          "mix": {
+            "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Imported/SongOfSolomon_140_4_Master.wav",
+            "startSeconds": 20.01275
+          }
+        },
+        "files": {
+          "raw": "MEDIA/AUDIO/mix-comparisons/song-of-solomon-unmixed.m4a",
+          "mix": "MEDIA/AUDIO/mix-comparisons/song-of-solomon-mixed.m4a"
+        }
+      },
+      {
+        "id": "tape",
+        "title": "Tape",
+        "duration": 30,
+        "sources": {
+          "raw": {
+            "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Processed/Consolidate/tapel1unmixed [2023-06-29 155316].wav",
+            "startSeconds": 120
+          },
+          "mix": {
+            "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
+            "startSeconds": 1758.729009406522
+          }
+        },
+        "files": {
+          "raw": "MEDIA/AUDIO/mix-comparisons/tape-unmixed.m4a",
+          "mix": "MEDIA/AUDIO/mix-comparisons/tape-mixed.m4a"
+        }
+      }
+    ],
+    "updatedOn": "2026-09-10",
+    "section": "index.html#work"
   }
 }

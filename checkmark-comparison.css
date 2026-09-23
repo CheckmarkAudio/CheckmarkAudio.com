@@ -1,0 +1,10 @@
+.comparison-navigation{display:grid;grid-template-columns:64px minmax(0,1fr) 64px;align-items:center;gap:24px;max-width:650px;margin:28px auto 30px;text-align:center}
+.comparison-navigation>div{display:grid;gap:6px;min-width:0}
+.comparison-count{color:#d8bb8e;font:700 12px "Barlow Condensed",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+#comparison-title{font-size:clamp(20px,2.2vw,28px);font-weight:500;line-height:1.2;color:#f3eee6}
+.comparison-caption{font-size:12px;color:#b3a995}
+.comparison-navigation button{width:64px;height:58px;border:1px solid #b99262;border-radius:4px;background:linear-gradient(#292920,#11120f);color:#e6cba1;font:400 30px/1 sans-serif;cursor:pointer;box-shadow:inset 0 1px 0 #ffffff25;transition:background .15s,color .15s}
+.comparison-navigation button:hover{background:#d8bb8e;color:#10110e}
+.comparison-navigation button:focus-visible{outline:2px solid #e6cba1;outline-offset:5px}
+.comparison-navigation button:active{transform:translateY(1px)}
+@media(max-width:600px){.comparison-navigation{grid-template-columns:48px minmax(0,1fr) 48px;gap:12px}.comparison-navigation button{width:48px;height:50px}.comparison-caption{font-size:11px}}

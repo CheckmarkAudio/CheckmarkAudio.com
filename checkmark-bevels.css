@@ -43,7 +43,6 @@ body :is(
 
 /* Shared panel treatment: a soft bevel, not a heavy rounded-card redesign. */
 body :is(
-  .proofbox,
   .panel,
   .card,
   .service-card,
@@ -51,7 +50,6 @@ body :is(
   .formbox,
   .contactbox,
   .console,
-  .studio-shot,
   .rate,
   .homepage-media-card,
   .calendar-frame

@@ -25,3 +25,15 @@ body[data-page="team"]{background:#171614}.team-editorial{position:relative;widt
   .pending-copy{left:7px;right:7px;bottom:8px;font-size:.5rem;line-height:1.3}
   .corner{width:10px;height:10px}
 }
+
+/* 07C: selected light Team layout, September 10. One independent headset. */
+.team-title{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(170px,1fr) 230px;gap:32px;min-height:235px;padding:12px 36px 12px 74px}
+.team-title h1{font-size:clamp(3.6rem,6.7vw,7rem)}
+.team-title p{margin:0}
+.team-headphones{display:block;width:min(100%,230px);justify-self:end;height:auto}
+.team-board{padding-top:34px;padding-left:72px}
+@media(max-width:950px) and (min-width:621px){.team-title{grid-template-columns:1.6fr 1fr;gap:20px;padding-left:94px}.team-title h1{font-size:3.7rem}.team-title p{grid-column:1}.team-headphones{grid-column:2;grid-row:1/span 2;width:160px}}
+@media(max-width:620px){.team-title{grid-template-columns:minmax(0,1fr) 100px;min-height:0;gap:14px;padding:28px 16px 24px 37px}.team-title h1{font-size:clamp(2.7rem,10vw,3.6rem)}.team-title p{grid-column:1;font-size:.85rem;margin:0}.team-headphones{grid-column:2;grid-row:1/span 2;width:100px}.team-board{padding-top:24px}}
+
+@media(min-width:951px){.team-rail{left:56px}}
+@media(max-width:620px){.team-board{padding-left:37px}}

@@ -1,0 +1,106 @@
+{
+  "authorization": "2026-09-10: Bridget explicitly authorized direct extraction of exact original artwork.",
+  "assets": [
+    {
+      "file": "MEDIA/ARTWORK/team-headphones-black.png",
+      "source": "DRAFTS/active/editorial-audio-art-pages-2026-09-09/07c-team-black-ink-headphones.png",
+      "sourceCrop": [
+        880,
+        124,
+        1118,
+        333
+      ],
+      "width": 702,
+      "height": 639,
+      "method": "Original black linework isolated from cream; interior negative space transparent.",
+      "alphaZeroFraction": 0.827276415695821
+    },
+    {
+      "file": "MEDIA/ARTWORK/not-found-patchbay-cable-gold.png",
+      "source": "DRAFTS/active/editorial-audio-art-pages-2026-09-09/10a-404-reconnect.png",
+      "sourceCrop": [
+        255,
+        673,
+        760,
+        949
+      ],
+      "width": 1527,
+      "height": 855,
+      "method": "Original gold stroke coverage isolated from black; adjoining webpage lettering excluded.",
+      "alphaZeroFraction": 0.8875607486299245
+    },
+    {
+      "file": "MEDIA/ARTWORK/mastering-compact-disc-gold.png",
+      "source": "DRAFTS/active/editorial-audio-art-pages-2026-09-09/03b-mixing-mastering-the-record-in-two-chapters.png",
+      "sourceCrop": [
+        128,
+        931,
+        433,
+        1226
+      ],
+      "width": 906,
+      "height": 900,
+      "method": "Original complete disc strokes; draft-only play triangle and PLAY label removed, with rings preserved.",
+      "alphaZeroFraction": 0.9025226882511651
+    },
+    {
+      "file": "MEDIA/ARTWORK/live-recording-microphone-stand-gold.png",
+      "source": "DRAFTS/active/editorial-audio-art-pages-2026-09-09/04a-live-recordings-the-performance-frame.png",
+      "sourceCrop": [
+        18,
+        301,
+        118,
+        618
+      ],
+      "width": 303,
+      "height": 972,
+      "method": "Original microphone, stand and loose cable isolated from dark page; adjoining horizontal page rule excluded.",
+      "alphaZeroFraction": 0.8302197503700988
+    },
+    {
+      "file": "MEDIA/ARTWORK/live-recording-guitar-amplifier.png",
+      "source": "DRAFTS/active/editorial-audio-art-pages-2026-09-09/04a-live-recordings-the-performance-frame.png",
+      "sourceCrop": [
+        55,
+        901,
+        360,
+        1166
+      ],
+      "width": 918,
+      "height": 792,
+      "method": "Original black and gold guitar/amp; cream removed from exterior and enclosed negative spaces; edges unmatted.",
+      "alphaZeroFraction": 0.500378237714839
+    },
+    {
+      "file": "MEDIA/ARTWORK/mixing-fader-rack-black-gold.png",
+      "source": "DRAFTS/active/editorial-audio-art-pages-2026-09-09/03b-mixing-mastering-the-record-in-two-chapters.png",
+      "sourceCrop": [
+        52,
+        710,
+        496,
+        871
+      ],
+      "width": 1344,
+      "height": 492,
+      "method": "Original rack artwork and labels preserved; only surrounding cream removed, physical black panel retained.",
+      "alphaZeroFraction": 0.08306112078977933
+    }
+  ],
+  "movableFaders": {
+    "source": "MEDIA/ARTWORK/mixing-fader-rack-black-gold.png",
+    "script": "MEDIA/ARTWORK/extract-movable-faders.py",
+    "panel": "MEDIA/ARTWORK/mixing-fader-rack-panel.png",
+    "handles": [
+      "MEDIA/ARTWORK/mixing-fader-handle-1.png",
+      "MEDIA/ARTWORK/mixing-fader-handle-2.png",
+      "MEDIA/ARTWORK/mixing-fader-handle-3.png",
+      "MEDIA/ARTWORK/mixing-fader-handle-4.png",
+      "MEDIA/ARTWORK/mixing-fader-handle-5.png",
+      "MEDIA/ARTWORK/mixing-fader-handle-6.png",
+      "MEDIA/ARTWORK/mixing-fader-handle-7.png"
+    ],
+    "method": "Exact original handle crops with rounded transparency masks; original handle footprints on stationary panel continued from adjacent rail pixels. Original PNG preserved.",
+    "authorization": "2026-09-12: make the pictured faders adjustable; earlier direct extraction authorization retained."
+  },
+  "sourceAvailability": "September 23 checkpoint: original render references and superseded derivatives named here remain in the local backup/library; draft galleries are intentionally excluded from this Git checkpoint. Active extracted website assets are included."
+}

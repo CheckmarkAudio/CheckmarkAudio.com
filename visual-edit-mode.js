@@ -290,7 +290,8 @@
     if (direction < 0) section.parentNode.insertBefore(section, sibling);
     else section.parentNode.insertBefore(sibling, section);
     persistOrder();
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (window.checkmarkScrollToSection) window.checkmarkScrollToSection(section);
+    else section.scrollIntoView({ behavior: "instant", block: "start" });
   }
 
   function updateOrderList() {

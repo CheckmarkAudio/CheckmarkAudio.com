@@ -22,10 +22,10 @@
       const finalTop=Math.max(0,targetTop);
       const reducedMotion=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
       if(reducedMotion){
-        window.scrollTo({top:finalTop,left:0,behavior:'auto'});
+        window.scrollTo({top:finalTop,left:0,behavior:'instant'});
         return;
       }
-      window.scrollTo({top:Math.max(0,finalTop-10),left:0,behavior:'auto'});
+      window.scrollTo({top:Math.max(0,finalTop-10),left:0,behavior:'instant'});
       requestAnimationFrame(()=>window.scrollTo({top:finalTop,left:0,behavior:'smooth'}));
     }));
   }

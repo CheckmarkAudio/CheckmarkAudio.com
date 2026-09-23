@@ -34,8 +34,10 @@ import socketserver
 import sys
 import tempfile
 import time
+import hashlib
+import re
 from datetime import datetime, timezone
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, quote
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGET = os.path.join(REPO, 'MEDIA', 'WEBSITE_MEDIA_SELECTIONS.json')
@@ -134,6 +136,56 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def _is_local(self):
         return self.client_address[0] in ('127.0.0.1', '::1', 'localhost')
 
+    def do_GET(self):
+        if urlparse(self.path).path != '/__media-catalog':
+            return super().do_GET()
+        if not self._is_local():
+            return self._json(403, {'error': 'local editor only'})
+        entries = []
+        for root, dirs, files in os.walk(os.path.join(REPO, 'MEDIA')):
+            dirs[:] = sorted(d for d in dirs if not d.startswith('.'))
+            for name in sorted(files):
+                ext = os.path.splitext(name)[1].lower()
+                kind = 'image' if ext in ('.jpg', '.jpeg', '.png', '.webp', '.gif', '.avif') else 'video' if ext in ('.mp4', '.webm', '.mov') else None
+                path = os.path.join(root, name)
+                if not kind or os.path.islink(path):
+                    continue
+                relative = os.path.relpath(path, REPO).replace(os.sep, '/')
+                entries.append({'id': relative, 'name': name, 'label': name, 'folder': relative.rsplit('/', 1)[0], 'src': quote(relative, safe='/'), 'type': kind})
+        return self._json(200, {'entries': entries})
+
+    def import_photo(self):
+        if not self._is_local():
+            return self._json(403, {'error': 'imports are only accepted from this computer'})
+        origin = self.headers.get('Origin')
+        if self.headers.get('Sec-Fetch-Site') == 'cross-site' or (origin and urlparse(origin).netloc != self.headers.get('Host')):
+            return self._json(403, {'error': 'imports require the local editor'})
+        if self.headers.get('Content-Type') != 'application/octet-stream':
+            return self._json(415, {'error': 'unsupported upload'})
+        try:
+            length = int(self.headers.get('Content-Length', '0'))
+        except ValueError:
+            length = 0
+        if not 0 < length <= 50 * 1024 * 1024:
+            return self._json(413, {'error': 'Choose a photo smaller than 50 MB.'})
+        data = self.rfile.read(length)
+        ext = '.png' if data.startswith(b'\x89PNG\r\n\x1a\n') else '.jpg' if data.startswith(b'\xff\xd8\xff') else '.gif' if data[:6] in (b'GIF87a', b'GIF89a') else '.webp' if data[:4] == b'RIFF' and data[8:12] == b'WEBP' else None
+        if len(data) != length or not ext:
+            return self._json(415, {'error': 'Choose a JPG, PNG, WebP or GIF image.'})
+        name = parse_qs(urlparse(self.path).query).get('name', ['photo'])[0]
+        stem = re.sub(r'[^a-z0-9]+', '-', os.path.splitext(os.path.basename(name))[0].lower()).strip('-')[:90] or 'photo'
+        filename = stem + '-' + hashlib.sha256(data).hexdigest()[:12] + ext
+        folder = 'MEDIA/IMAGES/IMPORTS'
+        directory = os.path.join(REPO, folder)
+        os.makedirs(directory, exist_ok=True)
+        path = os.path.join(directory, filename)
+        try:
+            with open(path, 'xb') as output:
+                output.write(data)
+        except FileExistsError:
+            pass
+        return self._json(200, {'id': folder+'/'+filename, 'src': folder+'/'+filename, 'folder': folder, 'name': filename, 'label': stem, 'type': 'image'})
+
     def do_HEAD(self):
         # The editor probes this to decide between "Save" and "Export".
         if urlparse(self.path).path == SAVE_PATH:
@@ -148,6 +200,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         super().do_HEAD()
 
     def do_POST(self):
+        if urlparse(self.path).path == '/__import-photo':
+            return self.import_photo()
         if urlparse(self.path).path != SAVE_PATH:
             self._json(404, {'error': 'unknown endpoint'})
             return

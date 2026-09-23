@@ -90,7 +90,7 @@
   let dragStart = null;
   let mediaCatalog = [];
   let mediaFiltered = [];
-  let mediaVisible = 60;
+  let mediaVisible = Infinity;
   let mediaType = 'all';
   let mediaSelection = null;
 
@@ -278,11 +278,21 @@
   const mediaAddButton = document.getElementById('mediaAddToHero');
   const escapeHtml = value => String(value).replace(/[&<>"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
 
+  const photoLibrary = await import('./checkmark-photo-library.js?v=20260912-1');
+  photoLibrary.mountComputerPicker(mediaBrowser.querySelector('.media-browser-tools'), items => {
+    mediaCatalog = [...mediaCatalog, ...items.filter(item => !mediaCatalog.some(existing => existing.id === item.id))];
+    mediaFolder.innerHTML = '<option value="all">All folders</option>' + [...new Set(mediaCatalog.map(item => item.folder))].sort().map(folder => `<option value="${escapeHtml(folder)}">${escapeHtml(folder)}</option>`).join('');
+    mediaFolder.value='all'; mediaSearch.value=''; mediaType='image';
+    document.querySelectorAll('[data-media-type]').forEach(b=>b.classList.toggle('active',b.dataset.mediaType==='image'));
+    filterMedia();
+  }, document.getElementById('mediaResultsCount'));
+
   async function ensureMediaCatalog() {
     if (mediaCatalog.length) return true;
     document.getElementById('mediaResultsCount').textContent = 'Loading project media…';
     try {
-      const response = await fetch('checkmark-media-index.json?v=20260819-1', { cache: 'no-store' });
+      let response = await fetch('/__media-catalog', { cache: 'no-store' });
+      if (!response.ok) response = await fetch('checkmark-media-index.json', { cache: 'no-store' });
       if (!response.ok) throw new Error(`Media index returned ${response.status}`);
       const payload = await response.json();
       mediaCatalog = Array.isArray(payload.entries) ? payload.entries : [];
@@ -305,15 +315,16 @@
       const matchesQuery = !query || `${item.name} ${item.folder} ${item.label}`.toLowerCase().includes(query);
       return matchesType && matchesFolder && matchesQuery;
     });
-    mediaVisible = 60;
+    mediaVisible = Infinity;
     renderMediaGrid();
   }
 
   function renderMediaGrid() {
-    const visible = mediaFiltered.slice(0, mediaVisible);
+    const visible = mediaFiltered;
     document.getElementById('mediaResultsCount').textContent = `${mediaFiltered.length.toLocaleString()} matching file${mediaFiltered.length === 1 ? '' : 's'} · showing ${visible.length.toLocaleString()}`;
     mediaGrid.innerHTML = visible.map(item => `<button class="media-tile${mediaSelection?.id === item.id ? ' selected' : ''}" type="button" data-media-id="${escapeHtml(item.id)}" title="${escapeHtml(item.name)}"><span class="media-tile-visual">${item.type === 'image' ? `<img src="${escapeHtml(item.src)}" alt="" loading="lazy" decoding="async">` : '<span class="media-tile-video">▶ Video</span>'}</span><span class="media-tile-name">${escapeHtml(item.name)}</span></button>`).join('');
-    document.getElementById('mediaLoadMore').hidden = visible.length >= mediaFiltered.length;
+    document.getElementById('mediaLoadMore').hidden = true;
+    document.getElementById('mediaLoadMore').style.display = 'none';
   }
 
   function selectMedia(item) {
@@ -331,14 +342,14 @@
   async function openMediaBrowser() {
     mediaBrowser.classList.add('open'); mediaBrowserScrim.hidden = false; mediaBrowser.setAttribute('aria-hidden', 'false');
     await ensureMediaCatalog();
-    mediaSearch.focus();
+    mediaSearch.focus({preventScroll:true});
   }
 
   function closeMediaBrowser() {
     mediaBrowser.classList.remove('open'); mediaBrowserScrim.hidden = true; mediaBrowser.setAttribute('aria-hidden', 'true');
     const video = mediaPreviewStage.querySelector('video');
     if (video) video.pause();
-    document.getElementById('heroBrowseMedia').focus();
+    document.getElementById('heroBrowseMedia').focus({preventScroll:true});
   }
 
   function openEditor() {
@@ -347,7 +358,7 @@
     selectedId = activeId;
     document.querySelectorAll('[data-hero-breakpoint]').forEach(button => button.classList.toggle('active', button.dataset.heroBreakpoint === breakpoint));
     renderEditorList(); syncControls(); restartTimer();
-    document.getElementById('heroEditorClose').focus();
+    document.getElementById('heroEditorClose').focus({preventScroll:true});
   }
 
   function closeEditor() {
@@ -355,7 +366,7 @@
     editor.setAttribute('aria-hidden', 'true'); launchButton.setAttribute('aria-expanded', 'false');
     breakpoint = innerWidth <= 660 ? 'mobile' : 'desktop';
     document.querySelectorAll('[data-hero-breakpoint]').forEach(button => button.classList.toggle('active', button.dataset.heroBreakpoint === breakpoint));
-    renderHero(); launchButton.focus();
+    renderHero(); launchButton.focus({preventScroll:true});
   }
 
   Object.entries(ranges).forEach(([key, input]) => input.addEventListener('input', () => updateProfile(key, input.value)));
@@ -398,9 +409,11 @@
     filterMedia();
   }));
   document.getElementById('mediaLoadMore').addEventListener('click', () => { mediaVisible += 60; renderMediaGrid(); });
-  mediaAddButton.addEventListener('click', () => {
+  mediaAddButton.addEventListener('click', async () => {
     const item = mediaSelection;
     if (!item || item.type !== 'image' || config.slides.some(slide => slide.id === item.id)) return;
+    mediaAddButton.disabled=true;
+    try { await photoLibrary.importSelected(item); } catch(error) { document.getElementById('mediaPreviewPath').textContent=error.message; mediaAddButton.disabled=false; return; }
     const slide = { id: item.id, label: item.label, src: item.src, alt: '', enabled: true, added: Date.now(), desktop: { x: 50, y: 50, zoom: 100 }, mobile: { x: 50, y: 50, zoom: 115 } };
     config.slides.push(slide);
     selectedId = slide.id; activeId = slide.id;
