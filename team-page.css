@@ -1,39 +1,226 @@
-body[data-page="team"]{background:#171614}.team-editorial{position:relative;width:min(1580px,calc(100% - 28px));margin:14px auto 50px;border:1px solid #d1a970;border-radius:30px;background:#faf7f1;color:#151412;overflow:hidden}.team-rail{position:absolute;z-index:4;inset:0 auto 0 70px;width:1px;background:#d1a970;pointer-events:none}.rail-cross{position:absolute;left:-11px;width:22px;height:22px}.rail-cross:before,.rail-cross:after{content:"";position:absolute;background:#ff3d43}.rail-cross:before{left:10px;top:0;width:1px;height:22px}.rail-cross:after{left:0;top:10px;width:22px;height:1px}.rail-cross.top{top:24px}.rail-cross.bottom{bottom:24px}.team-title{min-height:150px;display:flex;align-items:center;gap:78px;padding:27px 36px 25px 94px;border-bottom:1px solid #d1a970}.team-title h1{margin:0;font:600 clamp(4.5rem,7vw,7rem)/.82 Arial,Helvetica,sans-serif;letter-spacing:-.055em;text-transform:uppercase}.team-title p{margin:18px 0 0;color:#b27b31;font:500 1rem/1.05 Arial,Helvetica,sans-serif;text-transform:uppercase}.team-board{padding:20px 24px 34px 94px}.equal-team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.equal-person{grid-column:auto;min-width:0;padding:0 18px 28px;border-right:1px solid #d1a970;border-bottom:1px solid #d1a970}.equal-person:last-child{border-right:0}.frame-label{margin:0 0 14px;color:#ff3139;font:600 .71rem/1 Arial,Helvetica,sans-serif;text-transform:uppercase}.equal-portrait{position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#0d0d0d}.equal-portrait img{display:block;width:100%;height:100%;object-fit:cover}.equal-person:nth-child(1) .equal-portrait img{object-position:50% 45%}.equal-person:nth-child(2) .equal-portrait img{object-position:55% 50%}.film-frame{border:7px solid #0b0b0a}.film-meta{position:absolute;z-index:2;left:0;right:0;top:0;display:flex;justify-content:space-between;padding:5px 7px;color:#c89548;background:#0b0b0a;font:500 .48rem monospace;letter-spacing:.1em}.film-meta b{font-weight:500}.person-name{min-height:88px;margin:18px 3px 0}.person-name h2{margin:0;font:500 clamp(1.6rem,2.2vw,2.35rem)/.95 Arial,Helvetica,sans-serif;letter-spacing:-.045em;text-transform:uppercase}.person-name p{max-width:30ch;margin:7px 0 0;color:#b77d2e;font:500 .82rem/1.15 Arial,Helvetica,sans-serif;text-transform:uppercase}.pending-portrait{display:grid;place-items:center;border:7px solid #10100f;background:repeating-linear-gradient(135deg,#ece5da 0,#ece5da 11px,#f8f4ed 11px,#f8f4ed 22px);color:#151412}.pending-portrait.reverse{background:repeating-linear-gradient(45deg,#f8f4ed 0,#f8f4ed 11px,#e8dfd2 11px,#e8dfd2 22px)}.pending-portrait strong{font:600 clamp(5rem,7vw,7.5rem)/1 Arial,Helvetica,sans-serif;letter-spacing:-.08em}.pending-index{position:absolute;left:14px;top:12px;color:#b77d2e;font:600 .68rem monospace}.pending-copy{position:absolute;left:14px;bottom:13px;font:600 .67rem Arial,Helvetica,sans-serif;text-transform:uppercase}.corner{position:absolute;width:18px;height:18px;border-color:#ff333a}.corner.tl{left:10px;top:10px;border-left:1px solid;border-top:1px solid}.corner.tr{right:10px;top:10px;border-right:1px solid;border-top:1px solid}.corner.bl{left:10px;bottom:10px;border-left:1px solid;border-bottom:1px solid}.corner.br{right:10px;bottom:10px;border-right:1px solid;border-bottom:1px solid}.team-mobile-controls{display:none}
-@media(max-width:950px){.team-editorial{width:calc(100% - 18px)}.equal-team-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.equal-person{grid-column:span 2;padding:22px 14px 24px;border-right:1px solid #d1a970}.equal-person:nth-child(2n){border-right:0}.equal-person:last-child{grid-column:2/span 2;border-left:1px solid #d1a970;border-right:1px solid #d1a970}}
-/* Phone profiles follow the document vertically; no sideways rail or hidden names. */
-@media(max-width:620px){
-  .team-editorial{width:calc(100% - 12px);margin:6px auto 24px;border-radius:20px}
-  .team-rail{left:24px}
-  .team-title{display:block;min-height:0;padding:28px 16px 24px 37px}
-  .team-title h1{font-size:3.6rem}
-  .team-title p{margin-top:14px;font-size:.85rem}
-  .team-board{padding:20px 16px 24px 37px}
-  .equal-team-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
-  .equal-person,.equal-person:last-child{
-    display:grid;grid-template-columns:minmax(90px,112px) minmax(0,1fr);gap:10px 14px;
-    grid-column:auto;width:100%;padding:0 0 20px;border:0;border-bottom:1px solid #d1a970;
-  }
-  .equal-person:last-child{border-bottom:0;padding-bottom:0}
-  .frame-label{grid-column:1/-1;margin:0}
-  .equal-portrait{aspect-ratio:4/5}
-  .film-frame,.pending-portrait{border-width:4px}
-  .person-name{align-self:center;min-height:0;margin:0}
-  .person-name h2{font-size:clamp(1.1rem,4.8vw,1.5rem);line-height:1.05;overflow-wrap:anywhere}
-  .person-name p{font-size:.7rem;line-height:1.4}
-  .pending-portrait strong{font-size:2.6rem}
-  .pending-index{left:7px;top:8px;font-size:.55rem}
-  .pending-copy{left:7px;right:7px;bottom:8px;font-size:.5rem;line-height:1.3}
-  .corner{width:10px;height:10px}
+/* Team page — Idea 03 cinematic dark cover + cream equal portraits (2026-09-25) */
+body[data-page="team"] {
+  background: #F0E1CF;
+  color: #171511;
 }
 
-/* 07C: selected light Team layout, September 10. One independent headset. */
-.team-title{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(170px,1fr) 230px;gap:32px;min-height:235px;padding:12px 36px 12px 74px}
-.team-title h1{font-size:clamp(3.6rem,6.7vw,7rem)}
-.team-title p{margin:0}
-.team-headphones{display:block;width:min(100%,230px);justify-self:end;height:auto}
-.team-board{padding-top:34px;padding-left:72px}
-@media(max-width:950px) and (min-width:621px){.team-title{grid-template-columns:1.6fr 1fr;gap:20px;padding-left:94px}.team-title h1{font-size:3.7rem}.team-title p{grid-column:1}.team-headphones{grid-column:2;grid-row:1/span 2;width:160px}}
-@media(max-width:620px){.team-title{grid-template-columns:minmax(0,1fr) 100px;min-height:0;gap:14px;padding:28px 16px 24px 37px}.team-title h1{font-size:clamp(2.7rem,10vw,3.6rem)}.team-title p{grid-column:1;font-size:.85rem;margin:0}.team-headphones{grid-column:2;grid-row:1/span 2;width:100px}.team-board{padding-top:24px}}
+.team-page {
+  --team-bg-dark: #080909;
+  --team-bg-soft: #11110F;
+  --team-cream: #F0E1CF;
+  --team-cream-hi: #F7ECDE;
+  --team-ink: #171511;
+  --team-champagne: #D2AA70;
+  --team-champagne-b: #DDB978;
+  --team-frame: #000000;
+  --team-content: 1000px;
+  --team-scrim: rgba(0, 0, 0, 0.45);
+}
 
-@media(min-width:951px){.team-rail{left:56px}}
-@media(max-width:620px){.team-board{padding-left:37px}}
+/* —— Dark cinematic top band —— */
+.team-stage {
+  position: relative;
+  background: var(--team-bg-soft);
+  min-height: clamp(240px, 38vw, 360px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.team-stage__bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--team-bg-soft);
+  background-image:
+    linear-gradient(var(--team-scrim), var(--team-scrim)),
+    url("MEDIA/IMAGES/checkmark-audio-albuquerque-music-studio-control-room-music-studio-1.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team-stage__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  max-width: 36rem;
+}
+
+.team-stage__eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  color: var(--team-champagne);
+}
+
+.team-stage__inner h1 {
+  margin: 0 0 0.5rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  color: var(--team-cream);
+  line-height: 1.05;
+}
+
+.team-stage__dek {
+  margin: 0 0 1.5rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: rgba(240, 225, 207, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.team-stage__cta {
+  display: inline-block;
+  border: 2px solid var(--team-champagne);
+  color: var(--team-champagne);
+  background: transparent;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.team-stage__cta:hover {
+  color: var(--team-cream);
+  border-color: var(--team-champagne-b);
+  background: rgba(210, 170, 112, 0.12);
+}
+
+.team-stage__cta:focus-visible {
+  outline: 2px solid var(--team-champagne-b);
+  outline-offset: 3px;
+}
+
+/* —— Cream breath + equal square portraits —— */
+.team-breath {
+  background: var(--team-cream);
+  padding: clamp(2.5rem, 7vw, 4.5rem) 1.5rem;
+}
+
+.team-breath__inner {
+  max-width: var(--team-content);
+  margin: 0 auto;
+}
+
+.team-breath__label {
+  margin: 0 0 1.75rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  color: var(--team-champagne);
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.team-card {
+  text-align: center;
+  min-width: 0;
+}
+
+.team-card__frame {
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--team-frame);
+  overflow: hidden;
+  background: var(--team-cream-hi);
+  margin-bottom: 0.8rem;
+}
+
+.team-card__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.team-card#gavin-hammond .team-card__frame img {
+  object-position: center 18%;
+}
+
+.team-card#bridget-reinhard .team-card__frame img {
+  object-position: center 30%;
+}
+
+.team-card__pending {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: var(--team-cream-hi);
+}
+
+.team-card__pending strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--team-ink);
+  line-height: 1;
+}
+
+.team-card__pending span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.62rem;
+  color: rgba(23, 21, 17, 0.5);
+}
+
+.team-card__name {
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.92rem;
+  color: var(--team-ink);
+  line-height: 1.2;
+}
+
+.team-card__role {
+  margin: 0.2rem auto 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: rgba(23, 21, 17, 0.62);
+  max-width: 22ch;
+  line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .team-stage {
+    min-height: clamp(220px, 52vw, 300px);
+  }
+
+  .team-stage__inner h1 {
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
+  }
+}

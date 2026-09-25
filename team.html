@@ -8,29 +8,52 @@
   <meta name="description" content="Meet Gavin Hammond, Bridget Reinhard, and Tony Rivera at Checkmark Audio in Albuquerque.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="inner-pages.css">
-  <link rel="stylesheet" href="team-page.css?v=20260910-3">
+  <link rel="stylesheet" href="team-page.css?v=20260925-cinematic03">
 </head>
 <body data-page="team">
   <div id="site-header"></div>
-  <main class="team-editorial">
-    <div class="team-rail" aria-hidden="true"></div>
-    <header class="team-title"><h1>The Team</h1><p>Expertise with<br>a human center.</p><img class="selected-art team-headphones" src="MEDIA/ARTWORK/team-headphones-black.png" width="702" height="639" alt="" aria-hidden="true"></header>
-    <section class="team-board" aria-label="Checkmark Audio team">
-      <div class="equal-team-grid">
-        <article class="equal-person" id="gavin-hammond">
-          <div class="equal-portrait film-frame"><img data-media-slot="team-gavin" src="MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp" alt="Gavin Hammond in the Checkmark Audio studio"><span class="film-meta"><b>01</b><b>CM 400</b><b>▸</b></span></div>
-          <div class="person-name"><h2>Gavin Hammond</h2><p>Owner + Lead Engineer + Mixer + Masterer</p></div>
-        </article>
-        <article class="equal-person" id="bridget-reinhard">
-          <div class="equal-portrait film-frame"><img data-media-slot="team-bridget" src="MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp" alt="Bridget Reinhard working in the Checkmark Audio control room"><span class="film-meta"><b>02</b><b>CM 400</b><b>▸</b></span></div>
-          <div class="person-name"><h2>Bridget Reinhard</h2><p>Director of Operations + Marketing</p></div>
-        </article>
-        <article class="equal-person" id="tony-rivera">
-          <div class="equal-portrait pending-portrait reverse" role="img" aria-label="Portrait selection pending for Tony Rivera"><span class="pending-index">03 / 03</span><strong>TR</strong><span class="pending-copy">Portrait selection pending</span><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
-          <div class="person-name"><h2>Tony Rivera</h2><p>Engineering Intern</p></div>
-        </article>
+  <main class="team-page">
+    <section class="team-stage" aria-label="Team introduction">
+      <div class="team-stage__bg" role="presentation"></div>
+      <div class="team-stage__inner">
+        <p class="team-stage__eyebrow">Checkmark Audio</p>
+        <h1>The Team</h1>
+        <p class="team-stage__dek">Expertise with a human center.</p>
+        <a class="team-stage__cta" href="index.html#book">Book a session</a>
+      </div>
+    </section>
+
+    <section class="team-breath" aria-label="Checkmark Audio team">
+      <div class="team-breath__inner">
+        <p class="team-breath__label">People</p>
+        <div class="team-grid">
+          <article class="team-card" id="gavin-hammond">
+            <div class="team-card__frame">
+              <img data-media-slot="team-gavin" src="MEDIA/IMAGES/gavin-hammond-albuquerque-nm-control-room-headshot.webp" width="480" height="480" alt="Gavin Hammond in the Checkmark Audio studio" loading="lazy">
+            </div>
+            <h2 class="team-card__name">Gavin Hammond</h2>
+            <p class="team-card__role">Owner + Lead Engineer + Mixer + Masterer</p>
+          </article>
+          <article class="team-card" id="bridget-reinhard">
+            <div class="team-card__frame">
+              <img data-media-slot="team-bridget" src="MEDIA/IMAGES/bridget-control-room-checkmark-audio-view-01.webp" width="480" height="480" alt="Bridget Reinhard in the Checkmark Audio control room" loading="lazy">
+            </div>
+            <h2 class="team-card__name">Bridget Reinhard</h2>
+            <p class="team-card__role">Director of Operations + Marketing</p>
+          </article>
+          <article class="team-card" id="tony-rivera">
+            <div class="team-card__frame">
+              <div class="team-card__pending" role="img" aria-label="Portrait selection pending for Tony Rivera">
+                <strong>TR</strong>
+                <span>Portrait pending</span>
+              </div>
+            </div>
+            <h2 class="team-card__name">Tony Rivera</h2>
+            <p class="team-card__role">Engineering Intern</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
