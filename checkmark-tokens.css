@@ -1,0 +1,127 @@
+/* Checkmark Audio design tokens.
+   The one place to change the site's brand colors, fonts, CTA washes and
+   bevels. Every root page loads this file before any other stylesheet, and
+   the page stylesheets refer to these values with var(--cm-...).
+
+   Values were lifted exactly from the stylesheets they replace (2026-09-25),
+   so the site renders the same as before. Near-duplicate shades are kept as
+   separate tokens for that reason; merging two of them is a visual change
+   and should be reviewed like one.
+
+   Canonical brand gold: champagne #e6cba1 (approved 2026-09-03, see
+   checkmark-gold-theme.css). The other golds are secondary accents that
+   individual sections still use. */
+
+:root {
+  /* Fonts. Family lists only; weights and sizes stay with each rule.
+     Google Fonts are still linked from each page's <head>. The fallback
+     lists match what each area used before, so pages render the same. */
+  --cm-font-display: "Barlow Condensed", sans-serif;   /* labels, nav, eyebrows */
+  --cm-font-body: "DM Sans", sans-serif;               /* running text */
+  --cm-font-ui: "DM Sans", system-ui, sans-serif;      /* edit-mode panels */
+  --cm-font-serif: "Playfair Display", serif;          /* headlines */
+  --cm-font-serif-georgia: "Playfair Display", Georgia, serif; /* studio headlines */
+  --cm-font-logo: "Josefin Sans", "Avenir Next", sans-serif;   /* header wordmark */
+  --cm-font-logo-plain: "Josefin Sans", sans-serif;    /* demo console title */
+
+  /* Brand gold (canonical) */
+  --cm-gold: #e6cba1;
+  --cm-gold-rgb: 230, 203, 161;
+  --cm-gold-bright: #f1dab8;
+  --cm-gold-deep: #7a5a33;       /* gold type on cream / light sections */
+  --cm-gold-deeper: #6d5030;
+
+  /* Secondary golds */
+  --cm-gold-warm: #d6a85e;       /* Services and Community accents */
+  --cm-gold-warm-rgb: 214, 168, 94;
+  --cm-gold-amber: #e2b26f;      /* homepage base and editor chrome */
+  --cm-gold-amber-rgb: 226, 178, 111;
+  --cm-gold-classic: #d2aa70;    /* original inner-page gold */
+  --cm-gold-classic-rgb: 210, 170, 112;
+  --cm-gold-classic-light: #ddb978;
+  --cm-gold-classic-light-rgb: 221, 185, 120;
+  --cm-gold-soft: #e2bc7d;
+  --cm-gold-soft-rgb: 226, 188, 125;
+  --cm-gold-console: #c8954e;    /* homepage demo console */
+  --cm-gold-console-rgb: 200, 149, 78;
+  --cm-gold-console-pale: #cbab7d;
+  --cm-gold-muted: #d1a970;
+  --cm-gold-glow: #f2cf9b;
+  --cm-gold-highlight: #f0cb82;
+  --cm-gold-studio: #d5a654;
+  --cm-gold-community: #e4bf7a;
+  --cm-gold-tonight: #e8cb93;
+
+  /* Bronze */
+  --cm-bronze-light: #b99262;
+  --cm-bronze: #9a6a32;
+  --cm-bronze-dark: #8d5b25;
+  --cm-bronze-darker: #8a5d2b;
+  --cm-bronze-deep: #50391d;
+
+  /* Blacks and dark backgrounds */
+  --cm-black: #050606;
+  --cm-black-rgb: 5, 6, 6;
+  --cm-black-alt: #050605;
+  --cm-black-warm: #050504;
+  --cm-black-soft: #080909;
+  --cm-black-soft-rgb: 8, 9, 9;
+  --cm-black-olive: #070807;
+  --cm-black-warm-soft: #080807;
+  --cm-coal: #11110f;
+  --cm-coal-warm: #0b0b0a;
+  --cm-coal-brown: #0c0b09;
+  --cm-espresso: #171008;
+  --cm-espresso-alt: #17120a;
+  --cm-ink: #1a1713;             /* dark type on paper */
+  --cm-ink-soft: #171511;
+  --cm-ink-tonight: #100f0c;
+
+  /* Paper and cream backgrounds */
+  --cm-paper: #f3eee6;
+  --cm-paper-rgb: 243, 238, 230;
+  --cm-paper-warm: #f6eee3;
+  --cm-paper-light: #f8f4ed;
+  --cm-paper-soft: #eee6da;
+  --cm-paper-shade: #e8ded0;
+  --cm-paper-tonight: #f3ede2;
+  --cm-cream: #f0e1cf;
+  --cm-cream-peach: #f8e9d5;
+  --cm-cream-glow: #fff7df;
+  --cm-cream-service: #eadfc9;
+  --cm-cream-community: #f0e4d2;
+
+  /* Muted text */
+  --cm-text-muted: #bcb4a8;
+  --cm-sand: #cfbea8;
+  --cm-sand-light: #d1c3b1;
+  --cm-taupe: #756a5c;
+  --cm-taupe-mid: #696158;
+  --cm-taupe-dark: #625a51;
+
+  /* Reds */
+  --cm-red: #d62e24;
+  --cm-red-studio: #e2352d;
+  --cm-red-community: #cf332a;
+
+  /* Primary booking CTA wash (Gradient 3 horizontal, 2026-09-25) */
+  --cm-cta-fill: linear-gradient(90deg, #d7bc93 0%, #ead7b6 50%, #d2b58a 100%);
+  --cm-cta-hover: linear-gradient(90deg, #e0c79f 0%, #f0e1c4 50%, #dcc49a 100%);
+
+  /* Rounded champagne bevels (approved 2026-09-05) */
+  --cm-bevel-radius: 18px;       /* large frames */
+  --cm-bevel-inner: 9px;         /* frames inside frames */
+  --cm-bevel-control: 5px;       /* buttons and small controls */
+  --cm-bevel-champagne: #e6c997;
+  --cm-bevel-dark-edge: #f0d8ae #9b8057 #806844 #d5b989;
+  --cm-bevel-light-edge: #d1bb97 #aa9270 #98815e #c6b18f;
+  --cm-bevel-dark-shadow: inset 0 0 0 2px #e6c99722, inset 0 3px 1px #fff0c533, inset 0 -3px 1px #0009, 0 4px 0 #332b1e, 0 12px 24px #0003;
+  --cm-bevel-light-shadow: inset 0 2px 0 #fffdf1cc, inset 0 -2px 0 #947e582b, 0 3px 0 #c6b79f, 0 9px 20px #30200c12;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --cm-bevel-radius: 14px;
+    --cm-bevel-inner: 7px;
+  }
+}

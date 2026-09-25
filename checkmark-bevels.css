@@ -100,7 +100,7 @@ body :is(
   box-shadow: none !important;
   background-image: var(--brand-cta-fill) !important;
   background-color: transparent !important;
-  color: #17120a !important;
+  color: var(--cm-espresso-alt) !important;
 }
 body :is(
   .btn.primary,

@@ -1,9 +1,9 @@
 :root {
   --ve-gold: #d6ad6b;
-  --ve-gold-bright: #e2bc7d;
-  --ve-ink: #0b0b0a;
+  --ve-gold-bright: var(--cm-gold-soft);
+  --ve-ink: var(--cm-coal-warm);
   --ve-paper: #f4eadc;
-  --ve-red: #d62e24;
+  --ve-red: var(--cm-red);
 }
 
 .ve-root,
@@ -15,7 +15,7 @@
   position: relative;
   z-index: 2147483640;
   color: #f8f2e8;
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: var(--cm-font-ui);
 }
 
 .ve-launch {
@@ -28,13 +28,13 @@
   gap: 9px;
   min-height: 48px;
   padding: 0 18px;
-  border: 1px solid rgba(226, 188, 125, 0.74);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.74);
   border-radius: 999px;
   background: rgba(11, 11, 10, 0.94);
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.42);
   color: var(--ve-gold-bright);
   cursor: pointer;
-  font: 700 12px/1 "DM Sans", system-ui, sans-serif;
+  font: 700 12px/1 var(--cm-font-ui);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   backdrop-filter: blur(12px);
@@ -55,7 +55,7 @@
   width: min(372px, calc(100vw - 36px));
   max-height: calc(100vh - 36px);
   overflow: auto;
-  border: 1px solid rgba(226, 188, 125, 0.34);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.34);
   border-radius: 18px;
   background: rgba(10, 10, 9, 0.97);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.58);
@@ -73,20 +73,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 18px 18px 15px;
-  border-bottom: 1px solid rgba(226, 188, 125, 0.2);
+  border-bottom: 1px solid rgba(var(--cm-gold-soft-rgb), 0.2);
 }
 
 .ve-panel-head strong {
   display: block;
   margin-top: 2px;
   color: var(--ve-paper);
-  font: 600 20px/1.2 "Playfair Display", Georgia, serif;
+  font: 600 20px/1.2 var(--cm-font-serif-georgia);
 }
 
 .ve-kicker {
   display: block;
   color: var(--ve-gold);
-  font: 700 10px/1.2 "Barlow Condensed", sans-serif;
+  font: 700 10px/1.2 var(--cm-font-display);
   letter-spacing: 0.19em;
   text-transform: uppercase;
 }
@@ -114,12 +114,12 @@
 .ve-inspector-actions button,
 .ve-panel-foot button,
 .ve-restorable button {
-  border: 1px solid rgba(226, 188, 125, 0.25);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.25);
   border-radius: 8px;
   background: #171614;
   color: #ded5c9;
   cursor: pointer;
-  font: 700 11px/1.2 "DM Sans", system-ui, sans-serif;
+  font: 700 11px/1.2 var(--cm-font-ui);
 }
 
 .ve-mode-group button {
@@ -180,7 +180,7 @@
   gap: 8px;
   min-height: 46px;
   padding: 6px 7px 6px 10px;
-  border: 1px solid rgba(226, 188, 125, 0.23);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.23);
   border-radius: 8px;
   background: #151412;
 }
@@ -221,12 +221,12 @@
 .ve-order-row button {
   width: 34px;
   height: 32px;
-  border: 1px solid rgba(226, 188, 125, 0.34);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.34);
   border-radius: 6px;
   background: #24211d;
   color: var(--ve-gold-bright);
   cursor: pointer;
-  font: 800 16px/1 "DM Sans", system-ui, sans-serif;
+  font: 800 16px/1 var(--cm-font-ui);
 }
 
 .ve-order-row button:hover:not(:disabled),
@@ -258,17 +258,17 @@
   width: 100%;
   min-height: 108px;
   resize: vertical;
-  border: 1px solid rgba(226, 188, 125, 0.25);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.25);
   border-radius: 8px;
   background: #f5ede3;
-  color: #1a1713;
+  color: var(--cm-ink);
   padding: 11px 12px;
-  font: 500 13px/1.5 "DM Sans", system-ui, sans-serif;
+  font: 500 13px/1.5 var(--cm-font-ui);
 }
 
 .ve-inspector textarea:focus {
   border-color: var(--ve-gold-bright);
-  outline: 2px solid rgba(226, 188, 125, 0.2);
+  outline: 2px solid rgba(var(--cm-gold-soft-rgb), 0.2);
 }
 
 .ve-inspector textarea:disabled {
@@ -304,7 +304,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 14px;
-  border: 1px solid rgba(226, 188, 125, 0.18);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.18);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -315,7 +315,7 @@
 }
 
 .ve-summary div + div {
-  border-left: 1px solid rgba(226, 188, 125, 0.18);
+  border-left: 1px solid rgba(var(--cm-gold-soft-rgb), 0.18);
 }
 
 .ve-summary span,
@@ -375,7 +375,7 @@
   z-index: 2147483641;
   max-width: min(360px, calc(100vw - 56px));
   padding: 11px 15px;
-  border: 1px solid rgba(226, 188, 125, 0.42);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.42);
   border-radius: 8px;
   background: #0d0c0b;
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.5);
@@ -401,7 +401,7 @@
   align-items: center;
   gap: 4px;
   padding: 5px;
-  border: 1px solid rgba(226, 188, 125, 0.65);
+  border: 1px solid rgba(var(--cm-gold-soft-rgb), 0.65);
   border-radius: 8px;
   background: rgba(10, 10, 9, 0.94);
   box-shadow: 0 9px 28px rgba(0, 0, 0, 0.44);
@@ -410,7 +410,7 @@
 
 .ve-active main > section {
   position: relative;
-  outline: 1px dashed rgba(226, 188, 125, 0.5);
+  outline: 1px dashed rgba(var(--cm-gold-soft-rgb), 0.5);
   outline-offset: -2px;
 }
 
@@ -424,7 +424,7 @@
   border: 0;
   background: transparent;
   color: #f2e8da;
-  font: 700 10px/1 "DM Sans", system-ui, sans-serif;
+  font: 700 10px/1 var(--cm-font-ui);
 }
 
 .ve-section-tools span {
@@ -449,7 +449,7 @@
 
 .ve-active[data-ve-mode="select"] [data-ve-key]:hover,
 .ve-active[data-ve-mode="text"] [data-ve-key]:hover {
-  outline: 2px solid rgba(226, 188, 125, 0.85);
+  outline: 2px solid rgba(var(--cm-gold-soft-rgb), 0.85);
   outline-offset: 3px;
   cursor: crosshair;
 }
@@ -474,7 +474,7 @@
   border-radius: 4px;
   background: var(--ve-red);
   color: #fff;
-  font: 800 8px/1 "DM Sans", system-ui, sans-serif;
+  font: 800 8px/1 var(--cm-font-ui);
   letter-spacing: 0.08em;
 }
 

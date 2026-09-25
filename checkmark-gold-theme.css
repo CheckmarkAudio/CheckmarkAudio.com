@@ -3,15 +3,15 @@
      (.comparison-disc in checkmark-home-interactions.css). Replaces the
      previous brassy amber; approved 2026-09-03 from the draft in
      DRAFTS/active/champagne-title-color-2026-09-03/. */
-  --brand-gold: #e6cba1;
-  --brand-gold-bright: #f1dab8;
-  --brand-gold-deep: #7a5a33;
-  --brand-gold-rgb: 230, 203, 161;
+  --brand-gold: var(--cm-gold);
+  --brand-gold-bright: var(--cm-gold-bright);
+  --brand-gold-deep: var(--cm-gold-deep);
+  --brand-gold-rgb: var(--cm-gold-rgb);
   /* Deeper champagne for type sitting on cream and other light sections,
      where the pale tones above wash out. */
-  --brand-gold-on-light: #7a5a33;
-  --brand-cta-fill: linear-gradient(90deg, #d7bc93 0%, #ead7b6 50%, #d2b58a 100%); /* Gradient 3 horizontal wash 2026-09-25 */
-  --brand-cta-hover: linear-gradient(90deg, #e0c79f 0%, #f0e1c4 50%, #dcc49a 100%);
+  --brand-gold-on-light: var(--cm-gold-deep);
+  --brand-cta-fill: var(--cm-cta-fill); /* Gradient 3 horizontal wash 2026-09-25 */
+  --brand-cta-hover: var(--cm-cta-hover);
   --gold: var(--brand-gold);
   --gold2: var(--brand-gold);
   --red: var(--brand-gold);
@@ -110,8 +110,8 @@ body[data-page="services"] {
    left the real title on a flat, washed-out champagne. */
 body :is(.hero .tagline, .hero .tagline.display, .pagehero .pagehero-title) {
   background-image: linear-gradient(178deg,
-    #fff7df 0%, #f2cf9b 24%, #f8e9d5 42%,
-    #b99262 68%, #e8d5b9 86%, #f8e9d5 100%);
+    var(--cm-cream-glow) 0%, var(--cm-gold-glow) 24%, var(--cm-cream-peach) 42%,
+    var(--cm-bronze-light) 68%, #e8d5b9 86%, var(--cm-cream-peach) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -150,8 +150,8 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
    shared on-light bronze lands at 4.35:1 there. A scoped token override lifts
    its label and link type over the 4.5:1 line without darkening the rest. */
 .proofbox {
-  --brand-gold-on-light: #6d5030;
-  --brand-gold-deep: #6d5030;
+  --brand-gold-on-light: var(--cm-gold-deeper);
+  --brand-gold-deep: var(--cm-gold-deeper);
 }
 
 /* Primary buttons all carry the header CTA's champagne ramp, so the hero's
@@ -162,7 +162,7 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
   background-image: var(--brand-cta-fill);
   border: 0;
   border-radius: 2px;
-  color: #17120a;
+  color: var(--cm-espresso-alt);
   box-shadow: none;
 }
 
@@ -177,7 +177,7 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 /* Readable phone and location strip beneath the navigation. */
 .contact-bar {
   border-bottom: 1px solid rgba(242, 207, 155, .16);
-  background: #0c0b09;
+  background: var(--cm-coal-brown);
 }
 
 .contact-bar .wrap {
@@ -187,8 +187,8 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
   gap: 20px;
   min-height: 60px;
   padding: 8px 20px;
-  color: #e6cba1;
-  font: 600 clamp(1.05rem, 1.3vw, 1.3rem)/1.35 "Barlow Condensed", sans-serif;
+  color: var(--cm-gold);
+  font: 600 clamp(1.05rem, 1.3vw, 1.3rem)/1.35 var(--cm-font-display);
   letter-spacing: .1em;
   text-transform: uppercase;
 }
@@ -197,15 +197,15 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  color: #f1dab8;
+  color: var(--cm-gold-bright);
   text-decoration: none;
   border-bottom: 1px solid rgba(241, 218, 184, .38);
 }
 
 .contact-bar a:hover,
 .contact-bar a:focus-visible {
-  color: #fff7df;
-  border-bottom-color: #fff7df;
+  color: var(--cm-cream-glow);
+  border-bottom-color: var(--cm-cream-glow);
 }
 
 .contact-bar .sep { opacity: .5; }
@@ -233,7 +233,7 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
   background-color: var(--paper);
   background-image:
     url("MEDIA/IMAGES/TEXTURES/vintage-paper-background.jpeg"),
-    linear-gradient(rgba(243,238,230,.42),rgba(243,238,230,.32)),
+    linear-gradient(rgba(var(--cm-paper-rgb),.42),rgba(var(--cm-paper-rgb),.32)),
     url("MEDIA/ARTWORK/microphone-diagram-background-bronze-seamless.png");
   background-size:cover,cover,80% auto;
   background-repeat:no-repeat,no-repeat,repeat;
@@ -245,47 +245,47 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 }
 .demo-reel-section .homepage-media-head{
   position:relative;
-  background:radial-gradient(ellipse closest-side at center,rgba(243,238,230,.12) 0%,rgba(243,238,230,.07) 40%,rgba(243,238,230,.025) 70%,rgba(243,238,230,0) 100%);
+  background:radial-gradient(ellipse closest-side at center,rgba(var(--cm-paper-rgb),.12) 0%,rgba(var(--cm-paper-rgb),.07) 40%,rgba(var(--cm-paper-rgb),.025) 70%,rgba(var(--cm-paper-rgb),0) 100%);
 }
 @media(max-width:650px){
   .demo-reel-section{background-size:cover,cover,auto 80%;background-position:center,center,30% center}
 }
 
 .demo-reel-section .homepage-media-head h2 { color: var(--ink); text-shadow: none; }
-.demo-reel-section .homepage-media-head .lead { color: #696158; }
+.demo-reel-section .homepage-media-head .lead { color: var(--cm-taupe-mid); }
 
 /* Hear the difference — was light, now the dark band between two light ones. */
-.sound-proof { background: #0c0b09; color: #f3ece1; }
-.sound-proof .eyebrow { color: #e6cba1; }
-.sound-proof h2 { color: #f6eee3; }
+.sound-proof { background: var(--cm-coal-brown); color: #f3ece1; }
+.sound-proof .eyebrow { color: var(--cm-gold); }
+.sound-proof h2 { color: var(--cm-paper-warm); }
 .sound-proof .lead,
 .sound-proof .audio-credit { color: #b3a99a; }
 
 /* Tour the rooms — dark, so it does not sit light-on-light after Two studios. */
 .homepage-media:not(.demo-reel-section) {
-  background: #0c0b09;
+  background: var(--cm-coal-brown);
   color: #f3ece1;
 }
 
-.homepage-media:not(.demo-reel-section) .homepage-media-head .eyebrow { color: #e6cba1; }
-.homepage-media:not(.demo-reel-section) .homepage-media-head h2 { color: #f6eee3; }
-.homepage-media:not(.demo-reel-section) figcaption h3 { color: #f6eee3; }
+.homepage-media:not(.demo-reel-section) .homepage-media-head .eyebrow { color: var(--cm-gold); }
+.homepage-media:not(.demo-reel-section) .homepage-media-head h2 { color: var(--cm-paper-warm); }
+.homepage-media:not(.demo-reel-section) figcaption h3 { color: var(--cm-paper-warm); }
 .homepage-media:not(.demo-reel-section) figcaption p { color: #b3a99a; }
 
 /* ---- Sound demo console in the champagne palette ------------------------ */
 .demo-reel-section .video-console {
-  --console-gold: #cbab7d;
+  --console-gold: var(--cm-gold-console-pale);
 }
 
 /* The console box stays dark against the light section, so its own type has
    to be champagne rather than the darker values a light panel would take. */
-.demo-reel-section .video-console-head { color: #e6cba1; }
-.demo-reel-section .video-console-mode { color: #cbab7d; }
-.demo-reel-section .video-console-cues b { color: #e6cba1; }
+.demo-reel-section .video-console-head { color: var(--cm-gold); }
+.demo-reel-section .video-console-mode { color: var(--cm-gold-console-pale); }
+.demo-reel-section .video-console-cues b { color: var(--cm-gold); }
 .demo-reel-section .video-console-cues small { color: #9c8f7c; }
-.demo-reel-section .volume-fader { color: #cbab7d; }
-.demo-reel-section .volume-fader output { color: #f1dab8; }
-.demo-reel-section .video-console-cues button { color: #e6cba1; }
+.demo-reel-section .volume-fader { color: var(--cm-gold-console-pale); }
+.demo-reel-section .volume-fader output { color: var(--cm-gold-bright); }
+.demo-reel-section .video-console-cues button { color: var(--cm-gold); }
 
 /* ---- Inquiry section on the light ground --------------------------------
    It follows the now-dark "Tour the rooms." section, so it takes the light
@@ -294,7 +294,7 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 .section.light#book .formbox {
   background: #fbf7f0;
   border-color: rgba(185, 146, 98, .3);
-  color: #1a1713;
+  color: var(--cm-ink);
 }
 
 .section.light#book .field label { color: #6a6157; }
@@ -303,7 +303,7 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 .section.light#book .field select,
 .section.light#book .field textarea {
   background: #fff;
-  color: #1a1713;
+  color: var(--cm-ink);
   border-color: rgba(122, 90, 51, .34);
 }
 
@@ -313,19 +313,19 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 .section.light#book .field input:focus-visible,
 .section.light#book .field select:focus-visible,
 .section.light#book .field textarea:focus-visible {
-  outline: 2px solid #7a5a33;
+  outline: 2px solid var(--cm-gold-deep);
   outline-offset: 1px;
 }
 
 .section.light#book .contactbox {
   background: #fbf7f0;
   border-color: rgba(185, 146, 98, .3);
-  color: #1a1713;
+  color: var(--cm-ink);
 }
 
 .section.light#book .contactbox li { border-bottom-color: rgba(122, 90, 51, .22); }
-.section.light#book .contactbox b { color: #7a5a33; }
-.section.light#book .contactbox a { color: #1a1713; }
+.section.light#book .contactbox b { color: var(--cm-gold-deep); }
+.section.light#book .contactbox a { color: var(--cm-ink); }
 .section.light#book .success { color: #4a6b3f; }
 
 /* ---- Review counter -----------------------------------------------------

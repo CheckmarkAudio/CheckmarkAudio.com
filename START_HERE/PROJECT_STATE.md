@@ -10,6 +10,13 @@ Checkmark Audio's replacement is built in the repository root and is still in de
 
 The Source of Truth DOCX remains the only active completion checklist. This file summarizes implementation; `NEXT_STEPS.md` routes remaining work. The detailed dated diagnostics and contributor evidence are in `../MIGRATION/STATUS_2026-09-05.md`.
 
+## September 25 — Shared design tokens
+
+Author: Anthropic Claude (Claude Code); model not recorded in repository files.
+Task: project thread "Unify brand colors and fonts" (requested by Gavin).
+
+`checkmark-tokens.css` now holds the site's brand colors, fonts, CTA wash and bevels, and every root page loads it first. Edit a token there to change that value everywhere it is used. Status: draft PR from `claude/project-thread-rhac7o`, rendering verified unchanged; not merged. Canonical gold recorded as champagne `#e6cba1` pending Gavin's confirmation. See the September 25 change-log entry.
+
 ## September 23 — Fifteen-second website audio samples
 
 **Author:** OpenAI Codex (GPT-6). **Task:** Astra audit Claude website changes (`01a07160-a400-7e73-8f7c-bf2aac8a5f49`). **Status:** Pushed and remote-verified on September 23: `89bbe33adb49f8546676da8f5a6e1ee8999e8889`. GitHub Pages reported that matching commit building without a reported error. Automated excerpt choices remain adjustable after listening.
