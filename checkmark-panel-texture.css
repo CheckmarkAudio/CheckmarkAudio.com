@@ -1,5 +1,5 @@
 /* Panel textures for cream/dark bands ("tab" surfaces).
-   Music-tech / industrial — no microphone diagram. 2026-09-25-goldpaper2 */
+   Music-tech / industrial — no microphone diagram. 2026-09-25-goldpaper3 */
 :root {
   --tex-sawdust: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-sawdust-press-neutral.webp");
   --tex-foam: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-acoustic-foam-neutral.webp");
@@ -71,11 +71,11 @@
 }
 .section.light::before {
   background-image: var(--tex-paper-gold);
-  /* Asset already composites gold on white — no multiply (that muddy-grey’d B&W). */
-  opacity: .72;
+  /* Gold-on-white asset; tile so champagne grain fills the band (cover hid a white center). */
+  opacity: .88;
   mix-blend-mode: normal;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 320px auto;
+  background-repeat: repeat;
   background-position: center;
 }
 
