@@ -1,5 +1,5 @@
 /* Panel textures for cream/dark bands ("tab" surfaces).
-   Music-tech / industrial — no microphone diagram. 2026-09-25-foam18 */
+   Music-tech / industrial — no microphone diagram. 2026-09-25-goldpaper2 */
 :root {
   --tex-sawdust: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-sawdust-press-neutral.webp");
   --tex-foam: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-acoustic-foam-neutral.webp");
@@ -9,6 +9,7 @@
   --tex-console: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-brushed-console-neutral.webp");
   --tex-paper: url("MEDIA/IMAGES/TEXTURES/vintage-paper-background.jpeg");
   --tex-paper-grey: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-paper-grey-on-white.webp");
+  --tex-paper-gold: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-paper-gold-on-white.webp");
 
   --panel-texture-size: 240px auto;
   --panel-texture-size-foam: 220px auto;
@@ -63,15 +64,16 @@
   background-size: 240px auto;
 }
 
-/* Light sections — B&W try: light grey paper grain over white (no mic). */
+/* Light sections — champagne-gold grain over white (darks from title wash; white ground). */
 .section.light {
   background-color: #ffffff;
   background-image: none;
 }
 .section.light::before {
-  background-image: var(--tex-paper-grey);
-  opacity: .42;
-  mix-blend-mode: multiply;
+  background-image: var(--tex-paper-gold);
+  /* Asset already composites gold on white — no multiply (that muddy-grey’d B&W). */
+  opacity: .72;
+  mix-blend-mode: normal;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
