@@ -89,3 +89,10 @@ Author: OpenAI Codex; GPT-6.
 Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
 
 Bridget requested committing and pushing this task’s Checkmark Tonight work before Grok continues. Scope: Tonight page/CSS, Live navigation labels, hero media registration and this task’s records only. Other contributors’ edits, archives and draft galleries stay untouched and unstaged. Remote main fetched before checkpoint. Implementation commit `54fbf79fc6daea2f1a710e750eb4ab60ec044eea` was pushed to `origin/main` and verified with `git ls-remote`. Grok should start from that implementation plus this handoff record, preserving the remaining local changes. Hosted build completion was not checked. Wix/domain cutover is not part of this request.
+
+## September 25, 2026 — approved light grey reviews and transparent affiliate logo
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+
+Bridget approved the light grey review-banner draft and removal of “Built on trust,” and requested commit/push. Implemented a scoped `checkmark-review-grey.css` override (#eeeeec with existing texture desaturated at .18 opacity), removed that eyebrow in `index.html`, and replaced the film-school logo reference with `MEDIA/IMAGES/BY_PAGE/home/los-angeles-film-school-logo-transparent.png`. Extracted original light lettering from the existing 1024×238 logo into RGBA with antialiased alpha; original source retained. Browser verified the grey banner, absent eyebrow, retained reviews/stars and clean logo on black. PNG alpha spans 0–255. Concurrent checkpoint `24dafa5` captured this task’s index.html references while this work was underway; Codex implemented those review/logo references. This follow-up supplies their CSS/PNG dependencies. Other contributors’ remaining texture/media/cleanup changes are preserved. Status: approved implementation, commit/push authorized; delivery verification follows. No Wix cutover. Next: Grok may continue from this checkpoint while preserving remaining local work.

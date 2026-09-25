@@ -1,0 +1,3 @@
+/* Approved September 25 review-banner color study; preserve the existing texture. */
+body #reviews .proofbox{background:#eeeeec}
+body #reviews .proofbox::before{filter:grayscale(1);opacity:.18}
