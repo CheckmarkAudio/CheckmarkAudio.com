@@ -36,3 +36,9 @@ User-supplied JPG stills processed into repeating WebP tiles for flat cream/dark
 | `panel-perforated-mesh-neutral.webp` | `panel-perforated-mesh-neutral.jpg` | Cream `.section.light` (subtle multiply) |
 
 Derivation: center/aligned crop → large-scale lighting flatten (Gaussian subtract) → half-tile offset + edge crossfade (sawdust/felt/mesh) or panel-aligned crop (foam) → WebP quality ~82, long side ≤1280. Originals kept alongside in APPROVED.
+
+## September 25 — Mesh seamless retile (foam10)
+
+- Web asset: `panel-perforated-mesh-seamless.webp` (+ `.jpg`)
+- Replaces `panel-perforated-mesh-neutral.webp` as `--tex-mesh` for cream `.section.light`.
+- Derivation from `panel-perforated-mesh-neutral.jpg`: large-scale lighting flatten → period-aligned center crop → multipass half/quarter-offset OpenCV Navier–Stokes inpaint across crossed seams → edge luminance equalize for multiply-on-cream → 1280 WebP. Original neutral webp/jpg retained.
