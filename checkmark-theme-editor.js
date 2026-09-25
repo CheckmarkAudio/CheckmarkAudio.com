@@ -43,7 +43,7 @@ function optionMarkup(control, option) {
   let visual = '';
   if (control.kind === 'swatch') visual = `<span class="cte-swatch" style="background:${esc(option.swatch)}"></span>`;
   else if (control.kind === 'font') {
-    const t = option.tokens, p = { display: t['--cm-font-display'], label: t['--cm-font-label'], body: t['--cm-font-body'] };
+    const t = option.tokens, p = { display: t['--cm-font-serif'], label: t['--cm-font-display'], body: t['--cm-font-body'] };
     visual = `<span class="cte-font"><b style="font-family:${esc(p.display)}">Checkmark Audio</b><i style="font-family:${esc(p.label)}">Book a session</i><small style="font-family:${esc(p.body)}">Recording, mixing and mastering.</small></span>`;
   } else if (control.kind === 'texture') visual = option.src
     ? `<span class="cte-texture" style="background-image:url('${esc(option.src)}')"></span>`
