@@ -1,3 +1,2 @@
-/* Approved September 25 review-banner color study; preserve the existing texture. */
-body #reviews .proofbox{background:#eeeeec}
-body #reviews .proofbox::before{filter:grayscale(1);opacity:.18}
+/* Reviews banner now uses sitewide gold-on-white paper (checkmark-panel-texture.css).
+   Prior grey study disabled 2026-09-25 so the gold paper reads. */

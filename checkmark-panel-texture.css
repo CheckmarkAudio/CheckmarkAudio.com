@@ -1,5 +1,5 @@
 /* Panel textures for cream/dark bands ("tab" surfaces).
-   Music-tech / industrial — no microphone diagram. 2026-09-25-goldpaper2 */
+   Music-tech / industrial — no microphone diagram. 2026-09-25-goldpaper-banners */
 :root {
   --tex-sawdust: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-sawdust-press-neutral.webp");
   --tex-foam: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-acoustic-foam-neutral.webp");
@@ -22,6 +22,8 @@
 /* Shared positioning / stacking for textured bands */
 .proofbox,
 .section.light,
+.pagebody,
+.demo-reel-section,
 .pagecta,
 .formbox,
 .contactbox,
@@ -32,6 +34,8 @@
 
 .proofbox::before,
 .section.light::before,
+.pagebody::before,
+.demo-reel-section::before,
 .pagecta::before,
 .formbox::before,
 .contactbox::before,
@@ -47,6 +51,8 @@
 
 .proofbox > *,
 .section.light > *,
+.pagebody > *,
+.demo-reel-section > *,
 .pagecta > *,
 .formbox > *,
 .contactbox > *,
@@ -55,21 +61,20 @@
   z-index: 1;
 }
 
-/* Reviews carousel — wooden pressing sawdust (cream) */
-.proofbox::before,
-#reviews .proofbox::before {
-  background-image: var(--tex-sawdust);
-  opacity: var(--panel-texture-opacity-reviews);
-  mix-blend-mode: multiply;
-  background-size: 240px auto;
-}
-
-/* Light sections — champagne-gold grain over white (darks from title wash; white ground). */
-.section.light {
+/* Light banners — same champagne-gold grain over white as .section.light */
+.section.light,
+.pagebody,
+.demo-reel-section,
+.proofbox,
+#reviews .proofbox {
   background-color: #ffffff;
   background-image: none;
 }
-.section.light::before {
+.section.light::before,
+.pagebody::before,
+.demo-reel-section::before,
+.proofbox::before,
+#reviews .proofbox::before {
   background-image: var(--tex-paper-gold);
   /* Asset already composites gold on white — no multiply (that muddy-grey’d B&W). */
   opacity: .72;
@@ -77,6 +82,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  filter: none;
 }
 
 /* Dark page CTAs (default) — industrial felt */
