@@ -12,7 +12,7 @@ This is the execution order and migration runbook, not a second completion check
 
 - Continue in `/Users/bridges/GITHUB/CheckmarkAudio.com`, preview port 4191. Read its current records and inspect staged/unstaged/untracked work before editing. The older `48c9` worktree and GitHub Pages preview are not the latest design baseline.
 - Preserve the Services seven-fader rack and large CD, the exact layered microphone/paper demo background, and flat photo collections. Preserve all later navigation, audio, and editor work. The September 23 recovery found these intact; do not recreate them from older drafts or perform a whole-site rollback.
-- Checkmark Live's page is present, but no top-navigation tab exists. Await an explicit navigation direction before adding or moving a tab; retain its current Services/footer access meanwhile.
+- September 25 supersedes the earlier navigation hold: Live opens Checkmark Tonight at `community.html`; the separate paid Checkmark Live service retains Services/footer access.
 - September 23 update — OpenAI Codex (GPT-6), task “Astra audit Claude website changes”: Bridget now authorizes the current main-checkout checkpoint and push, limited to the current website and necessary files. Older versions, draft galleries, and superseded exports must remain local. Website checkpoint `18bd0f964cc2abbcbeac05c1d0f89289addd7ec8` was pushed and remote-verified; confirm the matching GitHub Pages build finishes. Do not merge stale website code or include oversized raw audio/DAW sources; preserve those in the documented local backup. No domain cutover is authorized.
 
 ## 1. Finish the approved aesthetic
@@ -25,7 +25,7 @@ Codex implements and verifies; Bridget/Gavin review one coherent desktop/phone p
 - Keep 404 10A (patchbay/disconnected cable) and dedicated Checkmark Live 04A. Checkmark Live and the Community/Checkmark Tonight page have different purposes.
 - Audit all visible art for true transparency, sharpness and integration. Photo compilations and review banner stay flat, without rounded gold bevels. Use dimensional treatment only on appropriate equipment/functional controls.
 - Final pass across Home, Services, Recording, Mixing & Mastering, Checkmark Live, Studio A, Studio B, Team, Community, Q&A and 404: spacing, readable typography, mobile crops, menus, tap targets, keyboard focus, reduced motion, and image loading.
-- Settle Community title finish and any remaining optional consultation-panel placement only if still wanted. They are not permission to redesign the site.
+- Review the September 25 Checkmark Tonight implementation; the older Community title-finish exploration is superseded.
 - Record approved screenshots after Bridget accepts the rendered pages. Existing implementation is not automatic visual approval.
 
 ## 2. Finish the music and media
@@ -75,3 +75,17 @@ Netlify supports external DNS and server-side redirects. Create the production d
 ## First work block
 
 Codex: prepare page-by-page fidelity review, audit music attribution/reference use, and draft the URL mapping/public deployment boundary. Bridget/Gavin: supply Tony’s portrait or approve initials, confirm Tape and the main reel’s Gavin selections, and identify additional unmixed exports. Choose the production host/account before deployment setup. No need to decide portal, merch expansion or paid-session automation to finish the public site unless an existing Wix workflow depends on it.
+
+## September 25, 2026 — current visual review
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+
+Review implemented Checkmark Tonight at `http://127.0.0.1:4191/community.html`. Live replaces Community in navigation and follows Bridget's selected 04A reference with original assets. Desktop/mobile and syntax checks passed; local/uncommitted, not published. Earlier Team/Community draft batches were rejected; do not continue them. Preserve Services and the separate paid live-recording service page. Remaining launch and Grok cleanup work stays separate.
+
+### September 25 — authorized Git handoff
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+
+Bridget requested committing and pushing this task’s Checkmark Tonight work before Grok continues. Scope: Tonight page/CSS, Live navigation labels, hero media registration and this task’s records only. Other contributors’ edits, archives and draft galleries stay untouched and unstaged. Remote main fetched before checkpoint; delivery verification follows. Wix/domain cutover is not part of this request.

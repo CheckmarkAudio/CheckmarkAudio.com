@@ -116,3 +116,28 @@ GitHub cannot reproduce the entire local media library. Twenty audio masters (~3
 - Codex GPT-6 Astra: September 5 audit, Team phone-layout completion, cache fix preservation, diagnostic tooling, Git reconciliation, and current documentation. Exact model attribution is not inferred for older work without session or Git evidence.
 
 Historical records remain in Git, `WEBSITE_CHANGE_LOG.md`, `DRAFTS/reference/`, and `ARCHIVE/`. Existing studies under `DRAFTS/active/` need a later routing review; that folder is not empty. Do not revive them automatically.
+
+## September 24, 2026 — musician-site Team / Community visual drafts
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+
+Bridget explicitly requested new Team and Community visual mockups using her Eminem, Gregory Porter and Sharam screenshots plus the Bandzoogle musician-design article. This authorizes draft layout/color exploration for these two pages only; Home and Services remain protected. Eight built-in imagegen drafts (T1–T4, C1–C4) are saved in `DRAFTS/active/members-community-2026-09-23/musician-sites.html`, with PNGs and `musician-sites-prompts.json`. Existing headings/roles and the approved headphone/microphone art were supplied as references; no new business copy was requested. These raster outputs approximate source photography/art and are not replacement production assets. Original media, shared logo/navigation and exact approved artwork must be used if a direction is selected.
+
+Status: local unapproved visual drafts; no root HTML/CSS/JS/MEDIA edits, commit, push, deployment or cutover. Validation: inspected all eight renders; corrected repeated caption/invented logo and unrelated small photo inserts; gallery, prompt JSON and all eight PNGs returned HTTP 200. Verified main checkout `fcadc89` and port 4191 process cwd at `/Users/bridges/GITHUB/CheckmarkAudio.com`; existing Grok/documentation changes preserved. Next: Bridget selects or critiques numbered drafts before any implementation.
+
+## September 25, 2026 — Checkmark Tonight / Live
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+
+Bridget selected draft 04A as the implementation reference for Checkmark Tonight and explicitly replaced the Community tab with Live. Implemented in `community.html` with scoped `checkmark-tonight.css`, original transparent microphone/guitar artwork and original studio photography. Shared navigation and homepage navigation now read Live; the stable URL remains `community.html`. Registered the new hero media slot. Main Services and the separate paid `live-recordings.html` page are unchanged.
+
+Status: implemented locally for visual review; no commit, push, publication or Wix cutover. Verified main checkout `fcadc89`, port 4191 serving this repository, desktop rendering and 390px mobile rendering, all three images loaded, CTA destinations, no mobile horizontal overflow, JS syntax, media JSON and diff whitespace. Existing Grok changes preserved. Next: Bridget reviews the implemented Tonight page. September 24 Team/Community draft batches were rejected and are superseded for this page; do not resume those batches.
+
+### September 25 — authorized Git handoff
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+
+Bridget requested committing and pushing this task’s Checkmark Tonight work before Grok continues. Scope: Tonight page/CSS, Live navigation labels, hero media registration and this task’s records only. Other contributors’ edits, archives and draft galleries stay untouched and unstaged. Remote main fetched before checkpoint; delivery verification follows. Wix/domain cutover is not part of this request.

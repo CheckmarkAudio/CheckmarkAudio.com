@@ -21,6 +21,7 @@
     "version": 1,
     "updatedAt": "2026-09-04T05:53:23.583Z",
     "slots": {
+      "tonight-hero": { "slot": "tonight-hero", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp" },
       "home-studio-photo-1": { "slot": "home-studio-photo-1", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp" },
       "home-studio-photo-2": { "slot": "home-studio-photo-2", "kind": "image", "src": "MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp" },
       "home-feature-video-1": { "slot": "home-feature-video-1", "kind": "audio-visualizer", "src": "checkmark-demo-playlist.js", "note": "2026-09-01: demo reel video replaced by the approved logo sound visualizer (baseline DRAFTS/active/logo-audio-visualizer-2026-09-01/APPROVED-LOCKED-2026-09-01.html); tracks listed in checkmark-demo-playlist.js; prior video retained at MEDIA/VIDEO/cma-music-studio-demo.mp4" },

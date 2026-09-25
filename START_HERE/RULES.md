@@ -90,3 +90,23 @@ Standing instruction from Bridget, September 23, 2026. Applies to Codex, Claude,
 - Before committing, review the exact changed-file list.
 - Before pushing `main`, sync with `origin/main` and report the final commit hash.
 - Current state belongs in the short active records, not only in a branch name, chat, or browser cache.
+
+## September 24, 2026 — illustrated cables
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+Scope: Bridget's standing clip-art direction. Illustrated cables must visibly connect to something at both ends or be omitted. No dangling, broken-looking, snipped or arbitrarily cropped cable ends. Current draft correction removes headphone cables; this is not authorization to redesign unrelated art. Status: instruction recorded; draft revisions underway.
+
+## September 25, 2026 — selected Checkmark Tonight page
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+
+Bridget explicitly selected draft 04A (`exec-c57ba2c2-a8ef-48d5-b336-ea3731533a91.png`) for Checkmark Tonight, replacing Community with Live in navigation. Match its layout, copy and original microphone/guitar art closely. This supersedes prior Community draft directions; Services remains protected. Implemented locally in `community.html`; implementation awaits visual review and is not published.
+
+### September 25 — authorized Git handoff
+
+Author: OpenAI Codex; GPT-6.
+Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
+
+Bridget requested committing and pushing this task’s Checkmark Tonight work before Grok continues. Scope: Tonight page/CSS, Live navigation labels, hero media registration and this task’s records only. Other contributors’ edits, archives and draft galleries stay untouched and unstaged. Remote main fetched before checkpoint; delivery verification follows. Wix/domain cutover is not part of this request.
