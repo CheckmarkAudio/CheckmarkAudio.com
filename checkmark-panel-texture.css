@@ -1,10 +1,14 @@
 /* Panel textures for cream/dark bands ("tab" surfaces).
-   Music-tech / industrial — no microphone diagram. 2026-09-25-foam11 */
+   Music-tech / industrial — no microphone diagram. 2026-09-25-foam18 */
 :root {
   --tex-sawdust: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-sawdust-press-neutral.webp");
   --tex-foam: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-acoustic-foam-neutral.webp");
   --tex-felt: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-industrial-felt-neutral.webp");
   --tex-mesh: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-perforated-mesh-seamless.webp");
+  --tex-grit: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-grit-fine-neutral.webp");
+  --tex-console: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-brushed-console-neutral.webp");
+  --tex-paper: url("MEDIA/IMAGES/TEXTURES/vintage-paper-background.jpeg");
+  --tex-paper-grey: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-paper-grey-on-white.webp");
 
   --panel-texture-size: 240px auto;
   --panel-texture-size-foam: 220px auto;
@@ -59,11 +63,18 @@
   background-size: 240px auto;
 }
 
-/* Cream light sections — perforated metal mesh */
+/* Light sections — B&W try: light grey paper grain over white (no mic). */
+.section.light {
+  background-color: #ffffff;
+  background-image: none;
+}
 .section.light::before {
-  background-image: var(--tex-mesh);
-  opacity: var(--panel-texture-opacity-light);
+  background-image: var(--tex-paper-grey);
+  opacity: .42;
   mix-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Dark page CTAs (default) — industrial felt */
