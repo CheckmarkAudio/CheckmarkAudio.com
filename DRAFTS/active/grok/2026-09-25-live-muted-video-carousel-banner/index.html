@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Mock · Live muted video carousel | Checkmark Audio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mock.css">
+</head>
+<body>
+  <div class="mock-chrome">
+    <strong>Draft mock · Grok</strong>
+    <span>Muted video carousel for Checkmark Live / Tonight — not live on community.html</span>
+    <a href="../../../community.html">Open current Live page</a>
+  </div>
+
+  <section class="live-cover" data-live-carousel aria-labelledby="live-cover-title">
+    <div class="live-cover__media" aria-hidden="true">
+      <div class="live-cover__slide is-active" data-label="Gregorio · Unknown Bird">
+        <video muted playsinline loop preload="auto" poster="">
+          <source src="../../../MEDIA/VIDEO/gregorio-and-the-unknown-bird-without-wings-music-video-checkmark-audio.mp4" type="video/mp4">
+          <source src="../../../MEDIA/VIDEO/gregorio-and-the-unknown-bird-without-wings-music-video-checkmark-audio.mov" type="video/quicktime">
+        </video>
+      </div>
+      <div class="live-cover__slide" data-label="Sharlet · alternate 02">
+        <video muted playsinline loop preload="metadata">
+          <source src="../../../MEDIA/VIDEO/05-sharlet-alternate-02.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="live-cover__slide" data-label="John &amp; Elizabeth">
+        <video muted playsinline loop preload="metadata">
+          <source src="../../../MEDIA/VIDEO/john-and-elizabeth-song.mp4" type="video/mp4">
+          <source src="../../../MEDIA/VIDEO/john-and-elizabeth-song.mov" type="video/quicktime">
+        </video>
+      </div>
+      <div class="live-cover__slide" data-label="Recording artist · live view 01">
+        <video muted playsinline loop preload="metadata">
+          <source src="../../../MEDIA/VIDEO/recording-artist-live-performance-checkmark-audio-view-01.mp4" type="video/mp4">
+          <source src="../../../MEDIA/VIDEO/recording-artist-live-performance-checkmark-audio-view-01.mov" type="video/quicktime">
+        </video>
+      </div>
+    </div>
+
+    <div class="live-cover__scrim" aria-hidden="true"></div>
+
+    <div class="live-cover__copy">
+      <p class="live-cover__kicker">Checkmark Tonight</p>
+      <h1 id="live-cover-title">Performance,<br>captured <em>live.</em></h1>
+      <a class="live-cover__cta" href="../../../index.html#book">Discuss a live recording</a>
+    </div>
+  </section>
+
+  <aside class="mock-note">
+    <h2>Mock notes</h2>
+    <p>Studio A/B overlay language (larger kicker, Playfair title, outlined CTA, dual scrim; no tagline, chips, or carousel chrome) over a four-clip muted carousel. Audio is off. Each clip shows 4 seconds then hard-cuts to the next.</p>
+    <ul>
+      <li>Target page when approved: <code>community.html</code> (nav: Live).</li>
+      <li>Sharlet master is very large; first load may be slow until a short web proxy is cut.</li>
+      <li>Nothing on the live site was changed.</li>
+    </ul>
+  </aside>
+
+  <script src="mock.js"></script>
+</body>
+</html>

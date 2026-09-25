@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Layout check · Live cover overlay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mock.css">
+  <style>
+    .live-cover__slide.is-active {
+      background: #080909 center/cover no-repeat;
+      background-image: url("posters/group.webp");
+      filter: brightness(.62) contrast(1.04) saturate(1.05);
+    }
+    .live-cover__slide.is-active video { display: none; }
+    .mock-chrome span::after { content: " · layout check (still, not video)"; }
+  </style>
+</head>
+<body>
+  <div class="mock-chrome">
+    <strong>Layout check</strong>
+    <span>Studio A/B overlay on Live banner framing</span>
+  </div>
+  <section class="live-cover" aria-labelledby="live-cover-title">
+    <div class="live-cover__media" aria-hidden="true">
+      <div class="live-cover__slide is-active"></div>
+    </div>
+    <div class="live-cover__scrim" aria-hidden="true"></div>
+    <div class="live-cover__copy">
+      <p class="live-cover__kicker">Checkmark Tonight</p>
+      <h1 id="live-cover-title">Performance,<br>captured <em>live.</em></h1>
+      <a class="live-cover__cta" href="#">Discuss a live recording</a>
+    </div>
+  </section>
+</body>
+</html>
