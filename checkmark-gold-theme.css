@@ -1,3 +1,11 @@
+/* 2026-09-25: hero tagline → Bebas Neue (board option E · Radical Face / Druk-adjacent) */
+body :is(.hero .tagline, .hero .tagline.display) {
+  font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal; /* Bebas has no italic; override Playfair italic */
+  letter-spacing: 0.04em;
+}
+
 :root {
   /* Champagne palette sampled from the mix-comparison disc
      (.comparison-disc in checkmark-home-interactions.css). Replaces the
@@ -109,9 +117,8 @@ body[data-page="services"] {
    heading 1px tall, so clipping a gradient to it produced no visible sheen and
    left the real title on a flat, washed-out champagne. */
 body :is(.hero .tagline, .hero .tagline.display, .pagehero .pagehero-title) {
-  background-image: linear-gradient(178deg,
-    #fff7df 0%, #f2cf9b 24%, #f8e9d5 42%,
-    #b99262 68%, #e8d5b9 86%, #f8e9d5 100%);
+  /* Softened 2026-09-25: horizontal Gradient-3-style wash (was steep 178deg sheen) */
+  background-image: linear-gradient(90deg, #d2b58a 0%, #ead7b6 42%, #f0e1c4 55%, #d7bc93 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
