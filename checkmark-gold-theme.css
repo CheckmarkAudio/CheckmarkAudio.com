@@ -233,7 +233,7 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
   background-color: var(--paper);
   background-image:
     url("MEDIA/IMAGES/TEXTURES/vintage-paper-background.jpeg"),
-    linear-gradient(rgba(243,238,230,.42),rgba(243,238,230,.32)),
+    linear-gradient(rgba(243,238,230,.74),rgba(243,238,230,.68)),
     url("MEDIA/ARTWORK/microphone-diagram-background-bronze-seamless.png");
   background-size:cover,cover,80% auto;
   background-repeat:no-repeat,no-repeat,repeat;
