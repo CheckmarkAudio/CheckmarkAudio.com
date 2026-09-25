@@ -8,35 +8,46 @@
   <meta name="description" content="Explore Checkmark Audio Studio A, the larger Albuquerque recording space for bands, instruments, drums, mixing, and mastering.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="inner-pages.css">
-  <link rel="stylesheet" href="studio-pages.css">
+  <link rel="stylesheet" href="studio-pages.css?v=20260925-champagne1">
 </head>
 <body data-page="studioA" class="studio-page">
   <div id="site-header"></div>
   <main>
-    <section class="studio-showcase studio-showcase--a" aria-labelledby="studio-title">
+    <!-- Editorial cover — approved direction 2026-09-25 (keep rest of page below) -->
+    <section class="studio-cover" aria-labelledby="studio-title">
+      <div class="studio-cover__media" data-media-slot="studioA-primary" data-media-kind="background" data-media-css-var="--studio-image" style="--studio-image:url('MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp');--studio-cover-image:url('MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp')"></div>
+      <div class="studio-cover__scrim" aria-hidden="true"></div>
+      <div class="studio-cover__copy">
+        <p class="studio-cover__kicker">The rooms</p>
+        <h1 id="studio-title">Studio A</h1>
+        <p class="studio-cover__tagline">Built for the bigger session.</p>
+        <a class="studio-cover__cta" href="#studio-rooms">Learn more</a>
+        <ul class="studio-cover__chips" aria-label="Studio A best uses">
+          <li>Bands</li>
+          <li>Instruments</li>
+          <li>Mix + master</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="studio-showcase studio-showcase--a studio-showcase--after-cover" id="studio-rooms" aria-label="Studio A details">
       <div class="studio-showcase__inner">
-        <div class="studio-cinematic">
-          <div class="studio-cinematic__primary" data-media-slot="studioA-primary" data-media-kind="background" data-media-css-var="--studio-image" style="--studio-image:url('MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp')">
-            <div class="studio-cinematic__copy">
-              <p class="studio-kicker">The rooms</p>
-              <h1 id="studio-title">Studio A</h1>
-              <div class="studio-flourish" aria-hidden="true"><span></span><b>✦</b><span></span></div>
-              <p class="studio-tagline">Built for the bigger session<span aria-hidden="true">.</span></p>
-              <ul class="studio-use-list" aria-label="Studio A best uses">
-                <li><span class="studio-use-icon studio-use-icon--disc" aria-hidden="true"></span><span>Bands</span></li>
-                <li><span class="studio-use-icon studio-use-icon--faders" aria-hidden="true"><i></i><i></i><i></i></span><span>Instruments</span></li>
-                <li><span class="studio-use-icon studio-use-icon--wave" aria-hidden="true"></span><span>Mix + master</span></li>
-              </ul>
-            </div>
-          </div>
-          <aside class="studio-filmstrip" aria-label="Studio A room details">
-            <figure><img data-media-slot="studioA-rail-1" src="MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp" alt="Checkmark Audio recording-studio sign"></figure>
-            <figure><img data-media-slot="studioA-rail-2" src="MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp" alt="Studio A control-room workstation"></figure>
-            <figure><img data-media-slot="studioA-rail-3" src="MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp" alt="Studio A patch bay and rack equipment"></figure>
-          </aside>
-        </div>
+        <aside class="studio-filmstrip studio-filmstrip--row" aria-label="Studio A room details">
+          <figure>
+            <img data-media-slot="studioA-rail-1" src="MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp" alt="Checkmark Audio recording-studio sign">
+            <figcaption>Studio sign</figcaption>
+          </figure>
+          <figure>
+            <img data-media-slot="studioA-rail-2" src="MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp" alt="Studio A control-room workstation">
+            <figcaption>Control-room desk</figcaption>
+          </figure>
+          <figure>
+            <img data-media-slot="studioA-rail-3" src="MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp" alt="Studio A patch bay and rack equipment">
+            <figcaption>Patch bay &amp; rack</figcaption>
+          </figure>
+        </aside>
 
         <div class="studio-info-deck">
           <article class="studio-info-card">
@@ -58,13 +69,14 @@
         </div>
       </div>
     </section>
+
     <section class="pagecta">
       <h2>Make room for the whole idea.</h2>
       <a class="btn primary" href="index.html#book">Start an inquiry</a>
     </section>
   </main>
   <div id="site-footer"></div>
-  <script src="inner-pages.js?v=20260922-2"></script>
-  <script src="visual-edit-mode.js?v=20260922-2" defer></script>
+  <script src="inner-pages.js?v=20260925-cover"></script>
+  <script src="visual-edit-mode.js?v=20260925-cover" defer></script>
 </body>
 </html>

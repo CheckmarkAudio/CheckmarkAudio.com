@@ -8,41 +8,52 @@
   <meta name="description" content="Explore Checkmark Audio Studio B, a focused Albuquerque studio for vocals, demos, writing sessions, rap, and acoustic projects.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="inner-pages.css">
-  <link rel="stylesheet" href="studio-pages.css">
+  <link rel="stylesheet" href="studio-pages.css?v=20260925-champagne1">
 </head>
 <body data-page="studioB" class="studio-page">
   <div id="site-header"></div>
   <main>
-    <section class="studio-showcase studio-showcase--b" aria-labelledby="studio-title">
+    <!-- Editorial cover — same treatment as Studio A; distinct photo 2026-09-25 -->
+    <section class="studio-cover" aria-labelledby="studio-title">
+      <div class="studio-cover__media" data-media-slot="studioB-primary" data-media-kind="background" data-media-css-var="--studio-image" style="--studio-image:url('MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp');--studio-cover-image:url('MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp')"></div>
+      <div class="studio-cover__scrim" aria-hidden="true"></div>
+      <div class="studio-cover__copy">
+        <p class="studio-cover__kicker">The rooms</p>
+        <h1 id="studio-title">Studio B</h1>
+        <p class="studio-cover__tagline">Focused room. Direct workflow.</p>
+        <a class="studio-cover__cta" href="#studio-rooms">Learn more</a>
+        <ul class="studio-cover__chips" aria-label="Studio B best uses">
+          <li>Vocals</li>
+          <li>Demos</li>
+          <li>Acoustic</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="studio-showcase studio-showcase--b studio-showcase--after-cover" id="studio-rooms" aria-label="Studio B details">
       <div class="studio-showcase__inner">
-        <div class="studio-cinematic">
-          <div class="studio-cinematic__primary" data-media-slot="studioB-primary" data-media-kind="background" data-media-css-var="--studio-image" style="--studio-image:url('MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp')">
-            <div class="studio-cinematic__copy">
-              <p class="studio-kicker">The rooms</p>
-              <h1 id="studio-title">Studio B</h1>
-              <div class="studio-flourish" aria-hidden="true"><span></span><b>✦</b><span></span></div>
-              <p class="studio-tagline">Focused room. Direct workflow<span aria-hidden="true">.</span></p>
-              <ul class="studio-use-list" aria-label="Studio B best uses">
-                <li><span class="studio-use-icon studio-use-icon--disc" aria-hidden="true"></span><span>Vocals</span></li>
-                <li><span class="studio-use-icon studio-use-icon--faders" aria-hidden="true"><i></i><i></i><i></i></span><span>Demos</span></li>
-                <li><span class="studio-use-icon studio-use-icon--wave" aria-hidden="true"></span><span>Acoustic</span></li>
-              </ul>
-            </div>
-          </div>
-          <aside class="studio-filmstrip" aria-label="Studio B room details">
-            <figure><img data-media-slot="studioB-rail-1" src="MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp" alt="Studio B instrument and recording room"></figure>
-            <figure><img data-media-slot="studioB-rail-2" src="MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp" alt="Studio B workstation and synthesizer"></figure>
-            <figure><img data-media-slot="studioB-rail-3" src="MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp" alt="Studio B acoustic treatment and recording equipment"></figure>
-          </aside>
-        </div>
+        <aside class="studio-filmstrip studio-filmstrip--row" aria-label="Studio B room details">
+          <figure>
+            <img data-media-slot="studioB-rail-1" src="MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp" alt="Studio B instrument and recording room">
+            <figcaption>Instrument room</figcaption>
+          </figure>
+          <figure>
+            <img data-media-slot="studioB-rail-2" src="MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp" alt="Studio B workstation and synthesizer">
+            <figcaption>Control desk</figcaption>
+          </figure>
+          <figure>
+            <img data-media-slot="studioB-rail-3" src="MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp" alt="Studio B acoustic treatment and recording equipment">
+            <figcaption>Treated room</figcaption>
+          </figure>
+        </aside>
 
         <div class="studio-info-deck">
           <article class="studio-info-card">
             <div class="studio-info-heading"><span class="studio-info-icon" aria-hidden="true">★</span><h2>Best uses</h2></div>
             <div class="studio-info-rule" aria-hidden="true"></div>
-            <p>A focused studio environment for vocals, demos, writing sessions, rap sessions, acoustic instruments, and smaller projects.</p>
+            <p>Vocals, demos, writing sessions, rap sessions, acoustic instruments, and smaller focused projects.</p>
           </article>
           <article class="studio-info-card">
             <div class="studio-info-heading"><span class="studio-info-icon" aria-hidden="true">▥</span><h2>The rooms</h2></div>
@@ -58,13 +69,14 @@
         </div>
       </div>
     </section>
+
     <section class="pagecta">
       <h2>Keep the focus on the performance.</h2>
       <a class="btn primary" href="index.html#book">Start an inquiry</a>
     </section>
   </main>
   <div id="site-footer"></div>
-  <script src="inner-pages.js?v=20260922-2"></script>
-  <script src="visual-edit-mode.js?v=20260922-2" defer></script>
+  <script src="inner-pages.js?v=20260925-cover"></script>
+  <script src="visual-edit-mode.js?v=20260925-cover" defer></script>
 </body>
 </html>

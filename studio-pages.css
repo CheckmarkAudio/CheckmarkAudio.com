@@ -3,3 +3,178 @@
 @media(max-width:900px){.studio-showcase{padding-bottom:70px}.studio-showcase__inner{width:min(100% - 30px,1600px)}.studio-cinematic{grid-template-columns:1fr}.studio-cinematic__primary{min-height:680px}.studio-cinematic__copy{width:min(610px,78%)}.studio-filmstrip{grid-template:180px/repeat(3,1fr)}.studio-info-deck{grid-template-columns:1fr;width:calc(100% - 24px);margin-top:-18px}.studio-info-card{min-height:auto;padding:30px 34px}.studio-info-card+.studio-info-card{border-left:0;border-top:1px solid rgba(177,128,60,.4)}.studio-info-rule{width:180px}}
 @media(max-width:650px){.studio-showcase{padding-bottom:52px}.studio-showcase__inner{width:100%}.studio-cinematic__primary{min-height:610px;align-items:end}.studio-cinematic__primary::after{background:linear-gradient(90deg,rgba(5,6,6,.98),rgba(5,6,6,.72) 58%,rgba(5,6,6,.26))}.studio-cinematic__copy{width:100%;padding:56px 24px 36px}.studio-cinematic h1{font-size:clamp(4.5rem,23vw,6.7rem)}.studio-tagline{margin-bottom:28px;font-size:.96rem;white-space:normal}.studio-use-list{width:min(270px,88vw);gap:9px}.studio-use-list li{min-height:58px}.studio-filmstrip{grid-template-rows:132px}.studio-info-deck{width:calc(100% - 26px);margin-top:14px}.studio-info-card{padding:27px 25px}.studio-info-heading{gap:15px}.studio-info-icon{flex-basis:46px;width:46px;height:46px}.studio-info-rule{margin-left:61px}.studio-info-card p{font-size:.94rem}.studio-page .gallery-section{padding-top:62px}}
 @media(prefers-reduced-motion:reduce){.studio-filmstrip img{transition:none}}
+
+/* === Studio A/B editorial cover 2026-09-25 === */
+.studio-cover{
+  position:relative;
+  isolation:isolate;
+  min-height:min(92vh,920px);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:#080909;
+  color:#F0E1CF;
+}
+/* sme-host sets position:relative!important and collapses this layer — keep it filling the cover */
+.studio-cover__media,
+.studio-cover__media.sme-host{
+  position:absolute !important;
+  inset:0;
+  z-index:0;
+  width:100%;
+  height:100%;
+  min-height:100%;
+  overflow:hidden;
+  isolation:isolate;
+  background:var(--studio-image, var(--studio-cover-image)) center/cover no-repeat;
+}
+.studio-cover__media > .sme-background-image{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:var(--sme-x, 50%) var(--sme-y, 50%);
+  transform:scale(var(--sme-zoom, 1.02));
+  transform-origin:var(--sme-x, 50%) var(--sme-y, 50%);
+  filter:brightness(.62) contrast(1.04) saturate(1.05);
+  pointer-events:none;
+}
+.studio-cover__media > .sme-edit-button{
+  z-index:5;
+}
+.studio-cover__scrim{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  background:
+    linear-gradient(180deg,rgba(8,9,9,.42) 0%,rgba(8,9,9,.28) 42%,rgba(8,9,9,.78) 100%),
+    radial-gradient(ellipse at 50% 42%,transparent 0%,rgba(8,9,9,.5) 100%);
+  pointer-events:none;
+}
+.studio-cover__copy{
+  position:relative;
+  z-index:3;
+  width:min(820px,calc(100% - 48px));
+  padding:120px 24px 96px;
+  text-align:center;
+}
+.studio-cover__kicker{
+  margin:0 0 22px;
+  color:#e6cba1;
+  font:600 .78rem/1 "Barlow Condensed",sans-serif;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+}
+.studio-cover h1{
+  margin:0 0 18px;
+  color:#F0E1CF;
+  font:600 clamp(4rem,9vw,7rem)/.92 "Playfair Display",Georgia,serif;
+  letter-spacing:.01em;
+  text-shadow:0 10px 40px rgba(0,0,0,.45);
+}
+.studio-cover__tagline{
+  margin:0 0 34px;
+  color:rgba(240,225,207,.9);
+  font:italic 500 clamp(1.15rem,2.1vw,1.7rem)/1.35 "Playfair Display",Georgia,serif;
+}
+.studio-cover__cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:168px;
+  margin:0 0 36px;
+  padding:12px 22px;
+  border:1px solid #e6cba1;
+  color:#e6cba1;
+  background:transparent;
+  font:600 .82rem/1 "Barlow Condensed",sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:background .2s ease,color .2s ease;
+}
+.studio-cover__cta:hover,
+.studio-cover__cta:focus-visible{
+  background:#e6cba1;
+  color:#080909;
+  outline:none;
+}
+.studio-cover__chips{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.studio-cover__chips li{
+  padding:10px 18px;
+  border:1px solid rgba(230,203,161,.50);
+  border-radius:999px;
+  color:rgba(240,225,207,.88);
+  font:600 .78rem/1 "Barlow Condensed",sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+/* After cover: filmstrip becomes a row under the cover; info deck stays */
+.studio-showcase--after-cover{
+  padding-top:28px;
+  background:#080909;
+}
+.studio-showcase--after-cover .studio-filmstrip--row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:none;
+  gap:18px;
+  margin:0 auto 28px;
+  padding:0 0 8px;
+  background:transparent;
+}
+.studio-showcase--after-cover .studio-filmstrip--row figure{
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+  margin:0;
+  border:1px solid rgba(230,203,161,.28);
+  background:#111;
+  overflow:hidden;
+}
+.studio-showcase--after-cover .studio-filmstrip--row img{
+  aspect-ratio:16/10;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+.studio-showcase--after-cover .studio-filmstrip--row figcaption{
+  padding:12px 14px 14px;
+  color:rgba(240,225,207,.62);
+  font:600 .72rem/1 "Barlow Condensed",sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.studio-showcase--after-cover .studio-info-deck{
+  margin-top:8px;
+}
+
+@media(max-width:900px){
+  .studio-cover{min-height:min(88vh,780px)}
+  .studio-cover__copy{padding:96px 20px 72px}
+  .studio-showcase--after-cover .studio-filmstrip--row{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .studio-showcase--after-cover .studio-filmstrip--row img{aspect-ratio:16/9}
+}
+@media(max-width:650px){
+  .studio-cover h1{font-size:clamp(3.2rem,16vw,4.6rem)}
+  .studio-cover__chips{gap:8px}
+  .studio-cover__chips li{padding:8px 14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .studio-cover__cta{transition:none}
+}

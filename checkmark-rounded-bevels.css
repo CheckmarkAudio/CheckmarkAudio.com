@@ -164,3 +164,41 @@ body .demo-reel-section .video-console-cues small{font-size:12px;color:#b3a995}
 
 /* Reviews read as a flat editorial banner, not a raised panel. */
 body .proofbox{border:0;border-radius:0;box-shadow:none}
+
+/* 2026-09-25: primary booking CTAs — horizontal wash, unbeveled (Gradient 3) */
+body :is(
+  .btn.primary,
+  a.btn.primary,
+  .header .header-cta,
+  a.header-cta,
+  .nav-mobile-cta,
+  a.nav-mobile-cta,
+  .mobile-cta.btn.primary,
+  .pagecta .btn.primary,
+  .page-cta .btn.primary,
+  .actions .btn.primary
+) {
+  border: 0 !important;
+  border-radius: 2px !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  background-image: var(--brand-cta-fill) !important;
+  background-color: transparent !important;
+  color: #17120a !important;
+}
+body :is(
+  .btn.primary,
+  a.btn.primary,
+  .header .header-cta,
+  a.header-cta,
+  .nav-mobile-cta,
+  a.nav-mobile-cta,
+  .mobile-cta.btn.primary,
+  .pagecta .btn.primary,
+  .page-cta .btn.primary,
+  .actions .btn.primary
+):is(:hover, :focus-visible) {
+  box-shadow: none !important;
+  background-image: var(--brand-cta-hover) !important;
+  filter: brightness(1.03);
+}
