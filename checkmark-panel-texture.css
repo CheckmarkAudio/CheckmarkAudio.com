@@ -1,16 +1,16 @@
 /* Panel textures for cream/dark bands ("tab" surfaces).
-   Music-tech / industrial — no microphone diagram. 2026-09-25-foam8 */
+   Music-tech / industrial — no microphone diagram. 2026-09-25-foam9 */
 :root {
   --tex-sawdust: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-sawdust-press-neutral.webp");
   --tex-foam: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-acoustic-foam-neutral.webp");
   --tex-felt: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-industrial-felt-neutral.webp");
   --tex-mesh: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-perforated-mesh-neutral.webp");
 
-  --panel-texture-size: 420px auto;
+  --panel-texture-size: 240px auto;
   --panel-texture-size-foam: 220px auto;
-  --panel-texture-opacity-light: .16;
-  --panel-texture-opacity-dark: .14;
-  --panel-texture-opacity-reviews: .22;
+  --panel-texture-opacity-light: .42;
+  --panel-texture-opacity-dark: .34;
+  --panel-texture-opacity-reviews: .48;
   --panel-texture-opacity-foam: .28;
 }
 
@@ -56,10 +56,10 @@
   background-image: var(--tex-sawdust);
   opacity: var(--panel-texture-opacity-reviews);
   mix-blend-mode: multiply;
-  background-size: 480px auto;
+  background-size: 240px auto;
 }
 
-/* Cream light sections — perforated metal mesh (subtle) */
+/* Cream light sections — perforated metal mesh */
 .section.light::before {
   background-image: var(--tex-mesh);
   opacity: var(--panel-texture-opacity-light);
@@ -70,7 +70,7 @@
 .pagecta::before {
   background-image: var(--tex-felt);
   opacity: var(--panel-texture-opacity-dark);
-  mix-blend-mode: soft-light;
+  mix-blend-mode: overlay;
 }
 
 /* Studio A/B black CTAs only — acoustic foam */
@@ -82,17 +82,18 @@
   mix-blend-mode: screen;
 }
 
-/* Dark form / contact panels — industrial felt */
+/* Form / contact panels — industrial felt.
+   Site formbox sits on cream: multiply so grain reads (soft-light/overlay vanish on light). */
 .formbox::before,
 .contactbox::before {
   background-image: var(--tex-felt);
-  opacity: var(--panel-texture-opacity-dark);
-  mix-blend-mode: soft-light;
+  opacity: .24;
+  mix-blend-mode: multiply;
 }
 
 /* Listen / sound-proof dark band — industrial felt */
 .sound-proof::before {
   background-image: var(--tex-felt);
   opacity: var(--panel-texture-opacity-dark);
-  mix-blend-mode: soft-light;
+  mix-blend-mode: overlay;
 }
