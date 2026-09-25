@@ -1,5 +1,5 @@
 /* Panel textures for cream/dark bands ("tab" surfaces).
-   Music-tech / industrial — no microphone diagram. 2026-09-25-foam6 */
+   Music-tech / industrial — no microphone diagram. 2026-09-25-foam8 */
 :root {
   --tex-sawdust: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-sawdust-press-neutral.webp");
   --tex-foam: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-acoustic-foam-neutral.webp");
@@ -7,7 +7,7 @@
   --tex-mesh: url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-perforated-mesh-neutral.webp");
 
   --panel-texture-size: 420px auto;
-  --panel-texture-size-foam: 520px auto;
+  --panel-texture-size-foam: 220px auto;
   --panel-texture-opacity-light: .16;
   --panel-texture-opacity-dark: .14;
   --panel-texture-opacity-reviews: .22;
