@@ -1,8 +1,8 @@
-.header .calendar-shortcut{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;color:var(--gold,#e2b26f);border:1px solid transparent;background:transparent;text-decoration:none;cursor:pointer;transition:background .18s,border-color .18s,color .18s}
+.header .calendar-shortcut{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;color:var(--gold,var(--cm-gold-amber));border:1px solid transparent;background:transparent;text-decoration:none;cursor:pointer;transition:background .18s,border-color .18s,color .18s}
 .header .calendar-shortcut svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.header .calendar-shortcut:hover{background:rgba(226,178,111,.12);border-color:rgba(226,178,111,.5);color:#f2cf9b}
-.header .calendar-shortcut:focus-visible{outline:2px solid #f2cf9b;outline-offset:3px;background:rgba(226,178,111,.12)}
-.header .calendar-shortcut:active{background:rgba(226,178,111,.22)}
+.header .calendar-shortcut:hover{background:rgba(var(--cm-gold-amber-rgb),.12);border-color:rgba(var(--cm-gold-amber-rgb),.5);color:var(--cm-gold-glow)}
+.header .calendar-shortcut:focus-visible{outline:2px solid var(--cm-gold-glow);outline-offset:3px;background:rgba(var(--cm-gold-amber-rgb),.12)}
+.header .calendar-shortcut:active{background:rgba(var(--cm-gold-amber-rgb),.22)}
 #consultation-calendar{scroll-margin-top:110px}
 @media(prefers-reduced-motion:reduce){.header .calendar-shortcut{transition:none}}
 @media(max-width:690px){

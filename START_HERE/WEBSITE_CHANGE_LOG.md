@@ -1418,3 +1418,17 @@ Author: OpenAI Codex; GPT-6.
 Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
 
 Bridget requested committing and pushing this task’s Checkmark Tonight work before Grok continues. Scope: Tonight page/CSS, Live navigation labels, hero media registration and this task’s records only. Other contributors’ edits, archives and draft galleries stay untouched and unstaged. Remote main fetched before checkpoint. Implementation commit `54fbf79fc6daea2f1a710e750eb4ab60ec044eea` was pushed to `origin/main` and verified with `git ls-remote`. Grok should start from that implementation plus this handoff record, preserving the remaining local changes. Hosted build completion was not checked. Wix/domain cutover is not part of this request.
+
+
+## 2026-09-25 — Root website — Shared design tokens (`checkmark-tokens.css`)
+
+Author: Anthropic Claude (Claude Code); model not recorded in repository files.
+Task: project thread "Unify brand colors and fonts" (requested by Gavin).
+
+**Status:** Implemented on branch `claude/project-thread-rhac7o` for review in a draft PR; not merged or approved.
+
+**Change:** Added `checkmark-tokens.css`, the single place for brand colors, font families, the primary CTA wash and the rounded-bevel radii/edges/shadows. All eleven root pages load it before any other stylesheet. 27 root stylesheets and the homepage inline style now use `var(--cm-...)` instead of repeated hardcoded values (282 hex colors, 143 rgba triplets, 151 font-family lists). `checkmark-gold-theme.css` and `checkmark-rounded-bevels.css` keep their existing variable names as aliases of the tokens. Champagne `#e6cba1` is recorded as the canonical brand gold pending Gavin's confirmation; the other golds stay as named secondary tokens.
+
+**Preserve:** Every visible value. Near-duplicate shades and each area's font fallback list are kept as separate tokens so nothing shifts; merging them is a separate visual decision. One-off gradient stops, 8-digit alpha colors, white/black and SVG/data-URI colors stay literal. Email templates, drafts and archives are untouched.
+
+**Outcome and validation:** Before/after capture of all 11 pages at 1440px and 390px compared 19 computed style properties (including ::before/::after) on every element: no differences. Full-page screenshots were byte-identical on 20 of 22 captures; FAQ desktop (40 pixels) and Services phone (6 pixels) differ by at most 2/255 in anti-aliasing. `check-site-links.mjs` reports only the known missing studio-tour video.

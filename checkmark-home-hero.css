@@ -6,12 +6,12 @@ body[data-page="home"] .hero--cinematic-lower-third {
 /* Keep the lower-left copy on a dark field, feathering toward the upper right. */
 body[data-page="home"] .hero--cinematic-lower-third::before {
   background: linear-gradient(to top right,
-    rgba(5, 6, 6, .98) 0%,
-    rgba(5, 6, 6, .94) 32%,
-    rgba(5, 6, 6, .80) 56%,
-    rgba(5, 6, 6, .45) 76%,
-    rgba(5, 6, 6, .12) 92%,
-    rgba(5, 6, 6, 0) 100%);
+    rgba(var(--cm-black-rgb), .98) 0%,
+    rgba(var(--cm-black-rgb), .94) 32%,
+    rgba(var(--cm-black-rgb), .80) 56%,
+    rgba(var(--cm-black-rgb), .45) 76%,
+    rgba(var(--cm-black-rgb), .12) 92%,
+    rgba(var(--cm-black-rgb), 0) 100%);
 }
 
 body[data-page="home"] .hero--cinematic-lower-third .hero-inner {
@@ -35,7 +35,7 @@ body[data-page="home"] .hero--cinematic-lower-third .hero-title-panel {
 body[data-page="home"] .hero--cinematic-lower-third .eyebrow {
   display: block;
   margin: 0;
-  color: var(--brand-gold-bright, #e4bf7a);
+  color: var(--brand-gold-bright, var(--cm-gold-community));
   font-size: .82rem;
   letter-spacing: .23em;
 }
@@ -52,7 +52,7 @@ body[data-page="home"] .hero--cinematic-lower-third .eyebrow::after {
 body[data-page="home"] .hero--cinematic-lower-third .tagline {
   max-width: 760px;
   margin: clamp(15px, 1.6vw, 23px) 0 0;
-  color: var(--brand-gold, #d6a85e);
+  color: var(--brand-gold, var(--cm-gold-warm));
   font-size: clamp(2.65rem, 3.5vw, 4.1rem);
   font-weight: 500;
   line-height: .98;
@@ -68,7 +68,7 @@ body[data-page="home"] .hero--cinematic-lower-third .tagline b {
 body[data-page="home"] .hero--cinematic-lower-third .local {
   max-width: 720px;
   margin: clamp(14px, 1.3vw, 20px) 0 0;
-  color: #eee6da;
+  color: var(--cm-paper-soft);
   font-size: clamp(.96rem, 1.02vw, 1.08rem);
   line-height: 1.52;
   letter-spacing: -.01em;
@@ -203,6 +203,6 @@ body[data-page="home"] .header .logo span {
 
 @media (prefers-reduced-transparency: reduce) {
   body[data-page="home"] .hero--cinematic-lower-third::before {
-    background: linear-gradient(to top right, #050606 0%, rgba(5, 6, 6, .96) 56%, rgba(5, 6, 6, .55) 100%);
+    background: linear-gradient(to top right, var(--cm-black) 0%, rgba(var(--cm-black-rgb), .96) 56%, rgba(var(--cm-black-rgb), .55) 100%);
   }
 }

@@ -82,8 +82,8 @@ textarea {
     overflow-y: auto;
     overscroll-behavior: contain;
     transform: translateX(-50%);
-    border-top: 1px solid rgba(221, 185, 120, .18);
-    border-bottom: 1px solid rgba(221, 185, 120, .36);
+    border-top: 1px solid rgba(var(--cm-gold-classic-light-rgb), .18);
+    border-bottom: 1px solid rgba(var(--cm-gold-classic-light-rgb), .36);
     background: rgba(7, 8, 7, .995);
     box-shadow: 0 28px 60px rgba(0, 0, 0, .68);
   }
@@ -92,7 +92,7 @@ textarea {
   .header .navlinks.open .services-link {
     min-height: 52px;
     padding-inline: 14px;
-    border-bottom: 1px solid rgba(221, 185, 120, .12);
+    border-bottom: 1px solid rgba(var(--cm-gold-classic-light-rgb), .12);
     font-size: 1rem;
   }
 
@@ -104,7 +104,7 @@ textarea {
     min-width: 52px;
     min-height: 52px;
     height: 52px;
-    border-bottom: 1px solid rgba(221, 185, 120, .12);
+    border-bottom: 1px solid rgba(var(--cm-gold-classic-light-rgb), .12);
   }
 
   .header .navlinks.open .navdrop-menu {
@@ -124,7 +124,7 @@ textarea {
   .header .navlinks.open .navdrop-menu a {
     min-height: 48px;
     padding-inline: 14px;
-    border-left: 1px solid rgba(221, 185, 120, .32);
+    border-left: 1px solid rgba(var(--cm-gold-classic-light-rgb), .32);
   }
 
   .header .navlinks.open .nav-mobile-cta {
@@ -133,11 +133,11 @@ textarea {
     min-height: 54px;
     margin-top: 10px;
     justify-content: center;
-    border: 1px solid #f2cf9b;
+    border: 1px solid var(--cm-gold-glow);
     border-radius: 4px;
-    color: #17120a;
+    color: var(--cm-espresso-alt);
     background: var(--brand-cta-fill);
-    font: 600 .94rem/1 "Barlow Condensed", sans-serif;
+    font: 600 .94rem/1 var(--cm-font-display);
     letter-spacing: .1em;
     text-decoration: none;
     text-transform: uppercase;
@@ -504,7 +504,7 @@ textarea {
     display: flex;
     min-height: 0;
     padding: 11px 14px;
-    border-top: 1px solid rgba(200, 149, 78, .45);
+    border-top: 1px solid rgba(var(--cm-gold-console-rgb), .45);
     border-left: 0;
   }
 

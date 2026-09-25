@@ -14,6 +14,7 @@ This is the execution order and migration runbook, not a second completion check
 - Preserve the Services seven-fader rack and large CD, the exact layered microphone/paper demo background, and flat photo collections. Preserve all later navigation, audio, and editor work. The September 23 recovery found these intact; do not recreate them from older drafts or perform a whole-site rollback.
 - September 25 supersedes the earlier navigation hold: Live opens Checkmark Tonight at `community.html`; the separate paid Checkmark Live service retains Services/footer access.
 - September 23 update — OpenAI Codex (GPT-6), task “Astra audit Claude website changes”: Bridget now authorizes the current main-checkout checkpoint and push, limited to the current website and necessary files. Older versions, draft galleries, and superseded exports must remain local. Website checkpoint `18bd0f964cc2abbcbeac05c1d0f89289addd7ec8` was pushed and remote-verified; confirm the matching GitHub Pages build finishes. Do not merge stale website code or include oversized raw audio/DAW sources; preserve those in the documented local backup. No domain cutover is authorized.
+- September 25 — Anthropic Claude (Claude Code), thread "Unify brand colors and fonts": new color, font, CTA or bevel changes go in `checkmark-tokens.css`, not as new hardcoded values. Pending: Gavin confirms the canonical gold, then review the draft PR. Optional later pass: merge near-duplicate blacks/creams into fewer tokens (a visual change needing review).
 
 ## 1. Finish the approved aesthetic
 
