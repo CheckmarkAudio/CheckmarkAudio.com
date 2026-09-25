@@ -6,6 +6,7 @@ endpoint so the in-browser media editor can write its selections straight into
 the project instead of downloading a file for someone to merge by hand:
 
     POST /__save-media-selections   ->  MEDIA/WEBSITE_MEDIA_SELECTIONS.json
+    POST /__save-theme              ->  the `theme` section of that same file
 
 Safety, because this endpoint overwrites a tracked project file:
 
@@ -19,6 +20,11 @@ Safety, because this endpoint overwrites a tracked project file:
   snapshot is the likely cause, and silently accepting it would delete work.
 * The write is atomic (temp file, then rename), so an interrupted save cannot
   leave a half-written selections file.
+
+The theme endpoint accepts only option ids listed in checkmark-theme-options.json
+and writes the resolved token values itself, so a browser can never save a
+colour, font or texture that is not an approved brand choice. The `theme`
+section belongs to that endpoint: a media save keeps whatever theme is on disk.
 
 The response reports exactly which slots and which top-level sections changed,
 so the editor can show what a save actually did rather than claiming success.
@@ -43,6 +49,8 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGET = os.path.join(REPO, 'MEDIA', 'WEBSITE_MEDIA_SELECTIONS.json')
 BACKUP_DIR = os.path.join(REPO, '.media-backups')
 SAVE_PATH = '/__save-media-selections'
+THEME_PATH = '/__save-theme'
+THEME_OPTIONS = os.path.join(REPO, 'checkmark-theme-options.json')
 MAX_BACKUPS = 40
 DROP_LIMIT = 0.2          # refuse a save losing more than 20% of slots
 MAX_BODY = 8 * 1024 * 1024
@@ -63,7 +71,7 @@ def summarise(before, after):
     added = sorted(set(a) - set(b))
     removed = sorted(set(b) - set(a))
     changed = sorted(k for k in set(a) & set(b) if a[k] != b[k])
-    sections = [s for s in ('recovery', 'homepageHero', 'homepageSectionMedia', 'innerPageMedia')
+    sections = [s for s in ('recovery', 'homepageHero', 'homepageSectionMedia', 'innerPageMedia', 'theme')
                 if before.get(s) != after.get(s)]
     bits = []
     if added:
@@ -104,6 +112,59 @@ def dumps_repo_style(doc):
             for k, v in slots.items()]
     block = '{\n' + ',\n'.join(rows) + '\n    }' if rows else '{}'
     return text.replace('"@@SLOTS@@"', block) + '\n'
+
+
+def resolve_theme(choices):
+    """Validate chosen option ids and return (theme section, error)."""
+    try:
+        with open(THEME_OPTIONS, encoding='utf-8') as fh:
+            controls = json.load(fh)['controls']
+    except (OSError, ValueError, KeyError) as exc:
+        return None, f'could not read checkmark-theme-options.json ({exc})'
+    if not isinstance(choices, dict):
+        return None, 'payload needs a choices object'
+    known = {c['id']: c for c in controls}
+    unknown = sorted(set(choices) - set(known))
+    if unknown:
+        return None, f'unknown theme controls: {", ".join(unknown)}'
+    resolved, tokens = {}, {}
+    for control in controls:
+        options = {o['id']: o for o in control['options']}
+        choice = choices.get(control['id'], control['default'])
+        if choice not in options:
+            return None, f'"{choice}" is not an approved {control["label"].lower()}'
+        resolved[control['id']] = choice
+        # A default choice defers to the stylesheets, so the site keeps following
+        # checkmark-tokens.css if its values change later.
+        if choice != control['default']:
+            tokens.update(options[choice]['tokens'])
+    return {'version': 1,
+            'updatedAt': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+            'choices': resolved, 'tokens': tokens}, None
+
+
+def write_selections(doc):
+    """Back up the current file, then atomically replace it. Returns an error."""
+    os.makedirs(BACKUP_DIR, exist_ok=True)
+    if os.path.exists(TARGET):
+        stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+        shutil.copy2(TARGET, os.path.join(
+            BACKUP_DIR, f'WEBSITE_MEDIA_SELECTIONS-{stamp}.json'))
+        rotate_backups()
+
+    text = dumps_repo_style(doc)
+    handle, tmp = tempfile.mkstemp(dir=os.path.dirname(TARGET), suffix='.tmp')
+    try:
+        with os.fdopen(handle, 'w', encoding='utf-8') as fh:
+            fh.write(text)
+        os.replace(tmp, TARGET)
+    except OSError as exc:
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass
+        return f'could not write the file ({exc})'
+    return None
 
 
 def rotate_backups():
@@ -188,7 +249,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_HEAD(self):
         # The editor probes this to decide between "Save" and "Export".
-        if urlparse(self.path).path == SAVE_PATH:
+        if urlparse(self.path).path in (SAVE_PATH, THEME_PATH):
             if not self._is_local():
                 self.send_response(403)
                 self.end_headers()
@@ -202,6 +263,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_POST(self):
         if urlparse(self.path).path == '/__import-photo':
             return self.import_photo()
+        if urlparse(self.path).path == THEME_PATH:
+            return self.save_theme()
         if urlparse(self.path).path != SAVE_PATH:
             self._json(404, {'error': 'unknown endpoint'})
             return
@@ -243,31 +306,51 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 })
                 return
 
-        os.makedirs(BACKUP_DIR, exist_ok=True)
-        if os.path.exists(TARGET):
-            stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-            shutil.copy2(TARGET, os.path.join(
-                BACKUP_DIR, f'WEBSITE_MEDIA_SELECTIONS-{stamp}.json'))
-            rotate_backups()
+        # The Theme panel owns this section; a tab opened before a theme save
+        # must not roll it back.
+        incoming.pop('theme', None)
+        if 'theme' in current:
+            incoming['theme'] = current['theme']
 
-        text = dumps_repo_style(incoming)
-        handle, tmp = tempfile.mkstemp(dir=os.path.dirname(TARGET), suffix='.tmp')
-        try:
-            with os.fdopen(handle, 'w', encoding='utf-8') as fh:
-                fh.write(text)
-            os.replace(tmp, TARGET)
-        except OSError as exc:
-            try:
-                os.unlink(tmp)
-            except OSError:
-                pass
-            self._json(500, {'error': f'could not write the file ({exc})'})
+        error = write_selections(incoming)
+        if error:
+            self._json(500, {'error': error})
             return
 
         result = summarise(current, incoming)
         result['ok'] = True
         result['path'] = os.path.relpath(TARGET, REPO)
         self._json(200, result)
+
+
+    def save_theme(self):
+        if not self._is_local():
+            return self._json(403, {'error': 'saves are only accepted from this computer'})
+        try:
+            length = int(self.headers.get('Content-Length') or 0)
+        except ValueError:
+            length = 0
+        if length <= 0 or length > 64 * 1024:
+            return self._json(413, {'error': 'missing or oversized body'})
+        try:
+            incoming = json.loads(self.rfile.read(length).decode('utf-8'))
+        except (ValueError, UnicodeDecodeError) as exc:
+            return self._json(400, {'error': f'body is not valid JSON ({exc})'})
+        theme, error = resolve_theme((incoming or {}).get('choices'))
+        if error:
+            return self._json(400, {'error': error})
+        current = load_current()
+        if not (current.get('mediaEditor') or {}).get('slots'):
+            return self._json(409, {'error': 'refused: the selections file is missing or unreadable'})
+        before = current.get('theme')
+        current['theme'] = theme
+        error = write_selections(current)
+        if error:
+            return self._json(500, {'error': error})
+        changed = sorted(k for k in theme['choices']
+                         if (before or {}).get('choices', {}).get(k) != theme['choices'][k])
+        return self._json(200, {'ok': True, 'path': os.path.relpath(TARGET, REPO),
+                                'theme': theme, 'changed': changed})
 
 
 class Server(socketserver.ThreadingTCPServer):

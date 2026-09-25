@@ -1,0 +1,37 @@
+/* Local-only Theme panel, styled to match the media editor drawer. Loaded inside
+   the panel's shadow root, so these rules neither leak out nor get overridden. */
+:host{all:initial}
+*,*::before,*::after{box-sizing:border-box}
+.cte-panel{position:fixed;z-index:170;top:0;right:0;bottom:0;width:min(440px,100%);overflow-y:auto;padding:22px 22px 28px;background:#f3eee6;color:#1a1713;font:400 .92rem/1.45 "DM Sans",sans-serif;transform:translateX(104%);visibility:hidden;transition:transform .24s ease,visibility .24s}
+.cte-panel.open{transform:none;visibility:visible;box-shadow:-24px 0 80px rgba(0,0,0,.55)}
+.cte-scrim{position:fixed;z-index:165;inset:0;background:rgba(0,0,0,.35)}
+.cte-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.cte-kicker{font:700 .72rem "Barlow Condensed",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7a5a33}
+.cte-head h2{margin:2px 0 0;font:600 1.9rem/1 "Playfair Display",serif}
+.cte-close{width:44px;height:44px;border:1px solid #cfbea8;background:#fff;color:#1a1713;font-size:1.4rem;cursor:pointer}
+.cte-intro{margin:12px 0 6px;color:#5f564c}
+.cte-group{min-width:0;margin:18px 0 0;padding:0;border:0}
+.cte-group legend{margin-bottom:8px;font:700 .8rem "Barlow Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.cte-options{display:grid;gap:8px}
+.cte-option{position:relative;display:flex;align-items:center;gap:12px;min-height:56px;padding:10px 12px;border:1px solid #d4c6b5;background:#fff;cursor:pointer}
+.cte-option input{position:absolute;opacity:0;pointer-events:none}
+.cte-option:has(input:checked){border-color:#7a5a33;box-shadow:inset 0 0 0 1px #7a5a33}
+.cte-option:has(input:focus-visible){outline:3px solid #7a5a33;outline-offset:2px}
+.cte-option-text{display:grid;min-width:0}
+.cte-option-text strong{font-weight:600}
+.cte-option-text em{margin-left:6px;font:600 .68rem "Barlow Condensed",sans-serif;font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:#7a5a33}
+.cte-option-text small{color:#6a6157;overflow-wrap:anywhere}
+.cte-swatch{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid rgba(0,0,0,.18)}
+.cte-font{flex:none;display:grid;width:150px;padding:6px 8px;background:#11110f;color:#e6cba1;line-height:1.15}
+.cte-font b{font-size:1.05rem;font-weight:500}
+.cte-font i{font-style:normal;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.cte-font small{color:#d9d0c5;font-size:.68rem}
+.cte-texture{flex:none;width:72px;height:48px;border:1px solid #d4c6b5;background:#080909 center/cover}
+.cte-texture-none{display:grid;place-items:center;color:#bcb4a8;font-size:.72rem}
+.cte-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.cte-actions button{flex:1 1 auto;min-height:46px;padding:10px 14px;border:1px solid #cfbea8;background:#fff;color:#1a1713;cursor:pointer;font:700 .75rem "Barlow Condensed",sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.cte-actions button.primary{background:#1a1713;border-color:#1a1713;color:#f3eee6}
+.cte-actions button:disabled{opacity:.45;cursor:not-allowed}
+.cte-status{min-height:1.5em;margin:12px 0 0;color:#5f564c}
+@media(max-width:520px){.cte-font{width:120px}.cte-panel{padding:18px 16px 24px}}
+@media(prefers-reduced-motion:reduce){.cte-panel{transition:none}}
