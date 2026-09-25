@@ -6,3 +6,4 @@
 
 /* Keep filename searches readable in the local media picker. */
 .sme-library-tools input,.sme-library-tools select{font:16px Arial,sans-serif}
+.sme-page-toolbar button.sme-theme-launch.unsaved{background:#8f251f;border-color:#ff7a68;color:#fff}

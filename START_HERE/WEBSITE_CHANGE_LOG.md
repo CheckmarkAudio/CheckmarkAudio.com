@@ -2,6 +2,19 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-09-25 — Local editor — Brand Theme panel
+
+Author: Claude (Anthropic), Claude Code; model not recorded here.
+Task: "Add a brand Theme panel" project thread, branch `claude/project-thread-o7l3y6`.
+
+**Status:** Implemented on a branch for review (draft PR). Not merged, not approved, no visual change to the site by default.
+
+**Change:** The local media editor toolbar gains a Theme button. It opens a panel offering only the approved choices listed in the new `checkmark-theme-options.json`: accent color (champagne, current; warm rich gold, the Aug 27 palette), light section tone (the three creams already used on the site), font pairing (Editorial, current; Condensed; Wordmark, all from the four already-loaded families) and background texture (none, current; the approved microphone pattern; vintage paper). Choices preview live on the open page. Save posts option ids to a new `POST /__save-theme` endpoint in `scripts/dev-server.py`, which rejects anything not in the options file, resolves ids to token values itself, backs up and atomically writes the `theme` section of `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`. `checkmark-media-loader.js` applies saved tokens on every page. A default choice writes no tokens, so the site keeps following its stylesheets. A photo save now keeps the theme on disk, so an older tab cannot roll it back.
+
+**Scope today:** Accent and light tone take effect now through the existing `--brand-gold*`, `--brand-cta-*` and `--paper` variables. Font pairing and texture set `--cm-*` tokens that only take effect once the "Unify brand colors and fonts" work (`checkmark-tokens.css`) points pages at them. Display-heading sheen gradients remain hardcoded champagne.
+
+**Validation:** Browser checks at 1440px and 390px on Home, Services and Team: panel renders without overflow, preview changes `--brand-gold`, revert and "use current site" restore it, save persists across reload on Home and Services, and unapproved ids or controls are refused by the server. The theme survived a stale full media save. No test choice was committed.
+
 ## 2026-09-05 — Services-inspired component mockups
 
 **Status:** Approved direction for site-wide rollout

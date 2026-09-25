@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "about": "Approved brand choices for the local Theme panel. The panel and scripts/dev-server.py only accept option ids listed here, so adding a swatch, pairing or texture is a deliberate edit to this file after Bridget or Gavin approves it. Each option sets the CSS custom properties in its tokens map on :root. Legacy names (--brand-gold, --paper) keep today's pages working; --cm-* names match checkmark-tokens.css from the Unify brand colors and fonts work; --cm-texture is this panel's own token.",
+  "controls": [
+    {
+      "id": "accent",
+      "label": "Accent color",
+      "kind": "swatch",
+      "default": "champagne",
+      "options": [
+        {
+          "id": "champagne",
+          "label": "Champagne",
+          "note": "Approved 2026-09-03 from the mix-comparison disc.",
+          "swatch": "#e6cba1",
+          "tokens": {
+            "--cm-gold": "#e6cba1",
+            "--cm-gold-rgb": "230, 203, 161",
+            "--cm-gold-bright": "#f1dab8",
+            "--cm-gold-deep": "#7a5a33",
+            "--brand-gold": "#e6cba1",
+            "--brand-gold-bright": "#f1dab8",
+            "--brand-gold-deep": "#7a5a33",
+            "--brand-gold-on-light": "#7a5a33",
+            "--brand-gold-rgb": "230, 203, 161",
+            "--brand-cta-fill": "linear-gradient(90deg, #d7bc93 0%, #ead7b6 50%, #d2b58a 100%)",
+            "--brand-cta-hover": "linear-gradient(90deg, #e0c79f 0%, #f0e1c4 50%, #dcc49a 100%)"
+          }
+        },
+        {
+          "id": "warm-rich-gold",
+          "label": "Warm rich gold",
+          "note": "Previous palette, approved 2026-08-27 and replaced by champagne on 2026-09-03.",
+          "swatch": "#d6a85e",
+          "tokens": {
+            "--cm-gold": "#d6a85e",
+            "--cm-gold-rgb": "214, 168, 94",
+            "--cm-gold-bright": "#e4bf7a",
+            "--cm-gold-deep": "#875b25",
+            "--brand-gold": "#d6a85e",
+            "--brand-gold-bright": "#e4bf7a",
+            "--brand-gold-deep": "#875b25",
+            "--brand-gold-on-light": "#875b25",
+            "--brand-gold-rgb": "214, 168, 94",
+            "--brand-cta-fill": "linear-gradient(102deg, #e8b251 0%, #f6d486 46%, #efba5c 100%)",
+            "--brand-cta-hover": "linear-gradient(102deg, #efba5c 0%, #f6d486 46%, #e8b251 100%)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lightTone",
+      "label": "Light section tone",
+      "kind": "swatch",
+      "default": "paper",
+      "options": [
+        {
+          "id": "paper",
+          "label": "Paper",
+          "note": "Today's light sections.",
+          "swatch": "#f3eee6",
+          "tokens": { "--cm-paper": "#f3eee6", "--cm-paper-rgb": "243, 238, 230", "--paper": "#f3eee6" }
+        },
+        {
+          "id": "warm-cream",
+          "label": "Warm cream",
+          "note": "The inner-page cream already used on the site.",
+          "swatch": "#f0e1cf",
+          "tokens": { "--cm-paper": "#f0e1cf", "--cm-paper-rgb": "240, 225, 207", "--paper": "#f0e1cf" }
+        },
+        {
+          "id": "services-cream",
+          "label": "Services cream",
+          "note": "The Services page cream already used on the site.",
+          "swatch": "#eadfc9",
+          "tokens": { "--cm-paper": "#eadfc9", "--cm-paper-rgb": "234, 223, 201", "--paper": "#eadfc9" }
+        }
+      ]
+    },
+    {
+      "id": "fonts",
+      "label": "Font pairing",
+      "kind": "font",
+      "default": "editorial",
+      "options": [
+        {
+          "id": "editorial",
+          "label": "Editorial",
+          "note": "Playfair Display headings, Barlow Condensed labels, DM Sans text.",
+          "tokens": {
+            "--cm-font-serif": "\"Playfair Display\", serif",
+            "--cm-font-display": "\"Barlow Condensed\", sans-serif",
+            "--cm-font-body": "\"DM Sans\", sans-serif"
+          }
+        },
+        {
+          "id": "condensed",
+          "label": "Condensed",
+          "note": "Barlow Condensed headings like the Services title, DM Sans text.",
+          "tokens": {
+            "--cm-font-serif": "\"Barlow Condensed\", sans-serif",
+            "--cm-font-display": "\"Barlow Condensed\", sans-serif",
+            "--cm-font-body": "\"DM Sans\", sans-serif"
+          }
+        },
+        {
+          "id": "wordmark",
+          "label": "Wordmark",
+          "note": "Josefin Sans headings matching the CHECKMARK AUDIO wordmark, DM Sans text.",
+          "tokens": {
+            "--cm-font-serif": "\"Josefin Sans\", sans-serif",
+            "--cm-font-display": "\"Barlow Condensed\", sans-serif",
+            "--cm-font-body": "\"DM Sans\", sans-serif"
+          }
+        }
+      ]
+    },
+    {
+      "id": "texture",
+      "label": "Background texture",
+      "kind": "texture",
+      "default": "none",
+      "options": [
+        {
+          "id": "none",
+          "label": "None",
+          "note": "Plain section backgrounds.",
+          "tokens": { "--cm-texture": "none" }
+        },
+        {
+          "id": "microphone-pattern",
+          "label": "Microphone pattern",
+          "note": "From the approved texture folder (see its SOURCES.md).",
+          "src": "MEDIA/IMAGES/TEXTURES/APPROVED/microphone-diagram-pattern-gold-black.webp",
+          "tokens": { "--cm-texture": "url(\"MEDIA/IMAGES/TEXTURES/APPROVED/microphone-diagram-pattern-gold-black.webp\")" }
+        },
+        {
+          "id": "vintage-paper",
+          "label": "Vintage paper",
+          "note": "The paper overlay used behind Inside the work.",
+          "src": "MEDIA/IMAGES/TEXTURES/vintage-paper-background.jpeg",
+          "tokens": { "--cm-texture": "url(\"MEDIA/IMAGES/TEXTURES/vintage-paper-background.jpeg\")" }
+        }
+      ]
+    }
+  ]
+}

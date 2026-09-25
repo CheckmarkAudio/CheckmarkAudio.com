@@ -89,3 +89,10 @@ Author: OpenAI Codex; GPT-6.
 Task: 01a08746-c9e1-7e63-aac3-39e70c220654.
 
 Bridget requested committing and pushing this task’s Checkmark Tonight work before Grok continues. Scope: Tonight page/CSS, Live navigation labels, hero media registration and this task’s records only. Other contributors’ edits, archives and draft galleries stay untouched and unstaged. Remote main fetched before checkpoint. Implementation commit `54fbf79fc6daea2f1a710e750eb4ab60ec044eea` was pushed to `origin/main` and verified with `git ls-remote`. Grok should start from that implementation plus this handoff record, preserving the remaining local changes. Hosted build completion was not checked. Wix/domain cutover is not part of this request.
+
+## September 25, 2026 — Brand Theme panel (branch, draft PR)
+
+Author: Claude (Anthropic), Claude Code; model not recorded here.
+Task: "Add a brand Theme panel" project thread, branch `claude/project-thread-o7l3y6`.
+
+A Theme button in the local media editor offers only the approved swatches, font pairings and textures in `checkmark-theme-options.json` and saves through `python3 scripts/dev-server.py` into the `theme` section of `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`. Default choices change nothing. Font and texture choices depend on the separate `checkmark-tokens.css` work. Status: draft PR for Gavin/Bridget review; not merged or approved. Details in `WEBSITE_CHANGE_LOG.md`.

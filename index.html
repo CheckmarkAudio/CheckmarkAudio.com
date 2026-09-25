@@ -100,9 +100,9 @@ Cal.ns.consultation('inline',{elementOrSelector:'#cal-inline',config:{layout:'mo
 Cal.ns.consultation('ui',{theme:'light',styles:{branding:{brandColor:'#D6A85E'}},hideEventTypeDetails:false,layout:'month_view'});
 Cal.ns.consultation('on',{action:'bookingSuccessful',callback:async event=>{const data=event.detail?.data||{},booking=data.booking||data,attendee=booking.attendees?.[0]||{},start=booking.startTime||data.startTime,startDate=start?new Date(start):null,when=startDate?`${startDate.toLocaleDateString('en-US',{dateStyle:'full'})} at ${startDate.toLocaleTimeString('en-US',{timeStyle:'short'})}`:'the time selected',summary=`Your free Checkmark Audio consultation is booked for ${when} at 5413 Lomas Blvd NE, Albuquerque, NM 87110.`;const client={name:attendee.name||'',email:attendee.email||'',reply_to:attendee.email||'',phone:attendee.phoneNumber||attendee.phone||'',time:new Date().toLocaleString(),style:'Consultation Booking',message:summary},internal={...client,message:`New consultation booked for ${when}.`};if(window.emailjs){try{await emailjs.send(EMAILJS_SERVICE,EMAILJS_CLIENT_TEMPLATE,client)}catch(error){console.error('Client booking email failed',error)}await waitForEmailJSRateLimit();try{await emailjs.send(EMAILJS_SERVICE,EMAILJS_INTERNAL_TEMPLATE,internal)}catch(error){console.error('Internal booking email failed',error)}}}});
 </script>
-<script src="checkmark-media-loader.js?v=20260827-1"></script>
+<script src="checkmark-media-loader.js?v=20260925-theme"></script>
 <script src="checkmark-hero-editor.js?v=20260922-2"></script>
-<script src="checkmark-site-media-editor.js?v=20260922-2"></script>
+<script src="checkmark-site-media-editor.js?v=20260925-theme"></script>
 <script src="checkmark-demo-playlist.js?v=20260923-15s"></script>
 <script src="checkmark-home-visualizer.js?v=20260920-1"></script>
 <script src="checkmark-comparison.js?v=20260923-15s"></script>
