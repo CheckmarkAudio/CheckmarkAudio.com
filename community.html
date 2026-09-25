@@ -10,20 +10,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="inner-pages.css">
-  <link rel="stylesheet" href="checkmark-tonight.css?v=20260925-1">
+  <link rel="stylesheet" href="checkmark-tonight.css?v=20260925-livecover1">
 </head>
 <body data-page="community" class="tonight-page">
   <div id="site-header"></div>
   <main class="tonight">
-    <section class="tonight-hero" aria-labelledby="tonight-title">
-      <img class="tonight-photo" data-media-slot="tonight-hero" src="MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp" alt="Musicians gathered for a Checkmark Audio studio session" width="2400" height="1606" fetchpriority="high">
-      <div class="tonight-heading">
-        <p class="tonight-label">Checkmark Tonight</p>
-        <h1 id="tonight-title">Performance,<br>captured <em>live.</em></h1>
-        <p>Live band or musician recording with audio<br class="wide-break"> and lighting support.</p>
+    <section class="live-cover" data-live-carousel aria-labelledby="tonight-title">
+      <div class="live-cover__media" aria-hidden="true">
+        <div class="live-cover__slide is-active">
+          <video muted playsinline loop preload="auto">
+            <source src="MEDIA/SITE-CLIPS/live-banner/01-gregorio.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="live-cover__slide">
+          <video muted playsinline loop preload="metadata">
+            <source src="MEDIA/SITE-CLIPS/live-banner/02-sharlet.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="live-cover__slide">
+          <video muted playsinline loop preload="metadata">
+            <source src="MEDIA/SITE-CLIPS/live-banner/03-john-elizabeth.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="live-cover__slide">
+          <video muted playsinline loop preload="metadata">
+            <source src="MEDIA/SITE-CLIPS/live-banner/04-recording-artist.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-      <img class="tonight-mic" src="MEDIA/ARTWORK/live-recording-microphone-stand-gold.png" width="303" height="972" alt="" aria-hidden="true">
-      <div class="tonight-action"><span aria-hidden="true"></span><a class="btn primary" href="index.html#book">Discuss a live recording</a><span aria-hidden="true"></span></div>
+      <div class="live-cover__scrim" aria-hidden="true"></div>
+      <div class="live-cover__copy">
+        <p class="live-cover__kicker">Checkmark Tonight</p>
+        <h1 id="tonight-title">Performance,<br>captured <em>live.</em></h1>
+        <a class="live-cover__cta" href="index.html#book">Discuss a live recording</a>
+      </div>
     </section>
     <section class="tonight-story" aria-labelledby="tonight-story-title">
       <div class="tonight-intro">
@@ -46,6 +66,7 @@
   </main>
   <div id="site-footer"></div>
   <script src="inner-pages.js?v=20260925-1"></script>
+  <script src="checkmark-live-cover.js?v=20260925-1"></script>
   <script src="visual-edit-mode.js?v=20260922-2" defer></script>
 </body>
 </html>
