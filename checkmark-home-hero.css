@@ -50,13 +50,14 @@ body[data-page="home"] .hero--cinematic-lower-third .eyebrow::after {
 }
 
 body[data-page="home"] .hero--cinematic-lower-third .tagline {
-  max-width: 760px;
+  max-width: 920px;
   margin: clamp(15px, 1.6vw, 23px) 0 0;
   color: var(--brand-gold, #d6a85e);
-  font-size: clamp(2.65rem, 3.5vw, 4.1rem);
+  /* 2026-09-25: +~25% for Bebas Neue condensed display */
+  font-size: clamp(3.25rem, 4.5vw, 5.2rem);
   font-weight: 500;
-  line-height: .98;
-  letter-spacing: -.045em;
+  line-height: .92;
+  letter-spacing: 0.04em; /* Bebas wants open tracking (was -.045em for Playfair) */
   text-wrap: balance;
 }
 
@@ -184,7 +185,7 @@ body[data-page="home"] .header .logo span {
   }
 
   body[data-page="home"] .hero--cinematic-lower-third .tagline {
-    font-size: clamp(2.55rem, 13vw, 4rem);
+    font-size: clamp(3.1rem, 15vw, 5rem);
   }
 
   body[data-page="home"] .hero--cinematic-lower-third .local {
