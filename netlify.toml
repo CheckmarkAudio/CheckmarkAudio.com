@@ -1,0 +1,12 @@
+# Netlify hosting for CheckmarkAudio.com.
+# GitHub stays the source of truth: Netlify watches this repo, runs the build
+# below, and publishes only the generated public/ folder (site files, no docs,
+# drafts or archives). Every pull request gets its own preview link.
+
+[build]
+  command = "node scripts/build-public.mjs"
+  publish = "public"
+
+# Search engines stay blocked on every deploy until launch day, when Gavin sets
+# the SITE_LAUNCHED=true environment variable for production in Netlify.
+# Previews and branch deploys are never indexed, whatever that variable says.

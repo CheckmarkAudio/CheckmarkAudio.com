@@ -50,3 +50,6 @@ __pycache__/
 /MEDIA/IMAGES/TEXTURES/Microphone-diagram-01.png
 /MEDIA/IMAGES/TEXTURES/Microphone-diagram.png
 /MEDIA/IMAGES/TEXTURES/paper vintage.jpeg
+
+# Netlify build output (scripts/build-public.mjs).
+/public/
