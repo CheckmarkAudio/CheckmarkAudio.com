@@ -1,0 +1,27 @@
+# Old Wix addresses -> new pages (Netlify only; GitHub Pages ignores this file).
+# Source list: MIGRATION/WIX_URL_INVENTORY_2026-09-05.csv. 301 = permanent, so
+# Google moves each old page's ranking to the new one. "!" makes the rule win
+# even if a file with that name ever exists.
+#
+# Lines marked REVIEW are Claude's best guess and need Gavin's confirmation.
+
+/about                        /team.html               301!
+/our-team                     /team.html               301!
+/services                     /services.html           301!
+/services-4                   /services.html           301!
+/recording-mixing-mastering   /services.html           301!
+/studio-a                     /studio-a.html           301!
+/studio-b                     /studio-b.html           301!
+/copy-of-studios              /studio-a.html           301!  # REVIEW: old duplicate studios page
+/book-online                  /#book                   301!
+/service-page/consultation    /#book                   301!
+/artist-photography           /services.html           301!  # REVIEW: no photography page on the new site
+/artist-promotion             /services.html           301!  # REVIEW: no promotion page on the new site
+/challenges                   /community.html          301!  # REVIEW: guessing this was a community page
+/marz                         /                        301!  # REVIEW: unknown page, sent home
+
+# Store, gift cards and payments: keep, replace or retire is still Gavin's call.
+# Until then these land on the home page instead of a 404.
+/gift-card                    /                        302!  # REVIEW: decision pending
+/payment-request-page         /                        302!  # REVIEW: decision pending
+/category/*                   /                        302!  # REVIEW: Wix store (all-products, beats, merchandise, mixing-tools)
