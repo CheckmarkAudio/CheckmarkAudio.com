@@ -1,55 +1,54 @@
+/* Team page profile modal (2026-09-30) */
 (() => {
-  const rail = document.querySelector('.equal-team-grid');
-  const people = [...document.querySelectorAll('.equal-person')];
-  const controls = document.querySelector('.team-mobile-controls');
-  const status = document.getElementById('teamCarouselStatus');
-  const phone = window.matchMedia('(max-width: 620px)');
+  const dialog = document.getElementById('team-profile');
+  if (!dialog) return;
+  const panel = dialog.querySelector('.team-profile__panel');
+  const img = document.getElementById('team-profile-img');
+  const nameEl = document.getElementById('team-profile-name');
+  const roleEl = document.getElementById('team-profile-role');
+  const bioEl = document.getElementById('team-profile-bio');
+  const closeBtn = dialog.querySelector('.team-profile__close');
+  let lastTrigger = null;
+  let hideTimer = null;
 
-  if (!rail || !people.length || !controls || !status) return;
+  function open(card) {
+    clearTimeout(hideTimer);
+    lastTrigger = card;
+    const photo = card.querySelector('img');
+    img.src = photo.currentSrc || photo.src;
+    img.alt = photo.alt;
+    nameEl.textContent = card.dataset.name;
+    roleEl.textContent = card.dataset.role;
+    bioEl.textContent = card.dataset.bio;
+    dialog.hidden = false;
+    panel.scrollTop = 0;
+    document.documentElement.style.overflow = 'hidden';
+    requestAnimationFrame(() => dialog.classList.add('is-open'));
+    closeBtn.focus();
+  }
 
-  let activeIndex = 0;
-  let scrollTimer;
+  function close() {
+    if (dialog.hidden) return;
+    dialog.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
+    hideTimer = setTimeout(() => { dialog.hidden = true; }, 220);
+    if (lastTrigger) lastTrigger.focus();
+  }
 
-  const update = index => {
-    activeIndex = Math.max(0, Math.min(people.length - 1, index));
-    status.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(people.length).padStart(2, '0')}`;
-    people.forEach((person, personIndex) => {
-      person.setAttribute('aria-current', personIndex === activeIndex ? 'true' : 'false');
-    });
-  };
-
-  const nearestIndex = () => {
-    const railLeft = rail.getBoundingClientRect().left;
-    return people.reduce((closest, person, index) => {
-      const distance = Math.abs(person.getBoundingClientRect().left - railLeft);
-      return distance < closest.distance ? { index, distance } : closest;
-    }, { index: 0, distance: Infinity }).index;
-  };
-
-  const show = index => {
-    const nextIndex = (index + people.length) % people.length;
-    rail.scrollTo({
-      left: people[nextIndex].offsetLeft - people[0].offsetLeft,
-      behavior: 'smooth'
-    });
-    update(nextIndex);
-  };
-
-  controls.addEventListener('click', event => {
-    const button = event.target.closest('[data-team-direction]');
-    if (!button) return;
-    show(activeIndex + (button.dataset.teamDirection === 'next' ? 1 : -1));
+  document.querySelectorAll('.team-card[data-profile]').forEach((card) => {
+    card.addEventListener('click', () => open(card));
   });
+  dialog.querySelectorAll('[data-profile-close]').forEach((el) => el.addEventListener('click', close));
 
-  rail.addEventListener('scroll', () => {
-    window.clearTimeout(scrollTimer);
-    scrollTimer = window.setTimeout(() => update(nearestIndex()), 90);
-  }, { passive: true });
-
-  phone.addEventListener?.('change', () => {
-    rail.scrollTo({ left: 0, behavior: 'auto' });
-    update(0);
+  document.addEventListener('keydown', (e) => {
+    if (dialog.hidden) return;
+    if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+    if (e.key === 'Tab') {
+      const focusable = [...panel.querySelectorAll('button, a[href]')];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
-
-  update(0);
 })();
