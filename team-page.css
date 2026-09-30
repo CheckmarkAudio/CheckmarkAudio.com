@@ -153,12 +153,10 @@ body[data-page="team"] {
   object-position: center 20%;
 }
 
-.team-card#gavin-hammond .team-card__frame img {
-  object-position: center 18%;
-}
-
-.team-card#bridget-reinhard .team-card__frame img {
-  object-position: center 30%;
+.team-card#gavin-hammond .team-card__frame img,
+.team-card#bridget-reinhard .team-card__frame img,
+.team-card#tony-rivera .team-card__frame img {
+  object-position: center 22%;
 }
 
 .team-card__pending {
