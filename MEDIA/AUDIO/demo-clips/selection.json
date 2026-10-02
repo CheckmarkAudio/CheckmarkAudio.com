@@ -148,5 +148,189 @@
         "mix": 1765.229009406522
       }
     }
-  ]
+  ],
+  "playlistUpdate": {
+    "author": "OpenAI Codex; GPT-6",
+    "task": "adding music tracks",
+    "date": "2026-10-02",
+    "status": "Current reel approved for commit/push on 2026-10-02; VALAO, BOOM and Bloodshot identification pending.",
+    "removedOriginalTrackNumbers": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11
+    ],
+    "retainedOriginalTrackNumbers": [
+      2,
+      3,
+      4,
+      9
+    ],
+    "note": "Historical export records below preserved; active playlist is checkmark-demo-playlist.js. Original audio files remain untouched.",
+    "activeTracks": [
+      {
+        "title": "Song of Solomon",
+        "file": "MEDIA/AUDIO/demo-clips/song-of-solomon-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/GavinMaster/SongOfSolomon_140_4_Master.wav",
+        "sourceSha256": "96252862797c4cf3a69f8937165b13379a6974457975eef398cc85721890edfe",
+        "sourceStartSeconds": 33.51275,
+        "durationSeconds": 15,
+        "selectionMethod": "Reuse the current Song of Solomon comparison source position; listening review pending.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45
+      },
+      {
+        "title": "Solo (ft. Yung Gualli)",
+        "file": "MEDIA/AUDIO/demo-clips/solo-ft-yung-gualli-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/solo-ft-yung-gualli.mp3",
+        "sourceSha256": "89d8bae55fe57fa828269c6c8eed95c96d6b4596a3f8c372354e1cccbc5a302b",
+        "previousSourceStartSeconds": 140.5,
+        "offsetWithinPreviousExcerpt": 1.0,
+        "sourceStartSeconds": 141.5,
+        "durationSeconds": 15,
+        "encodedDurationSeconds": 15.0
+      },
+      {
+        "title": "Anthill",
+        "file": "MEDIA/AUDIO/demo-clips/anthill-100-41020-13-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/anthill-100-41020-13.mp3",
+        "sourceSha256": "1bfbbeaa07e9e7373c52358debb09a8d4f7fc0f404643909b2c410413d29e491",
+        "previousSourceStartSeconds": 74.0,
+        "offsetWithinPreviousExcerpt": 9.5,
+        "sourceStartSeconds": 83.5,
+        "durationSeconds": 15,
+        "encodedDurationSeconds": 15.0
+      },
+      {
+        "title": "Igneous Rocks",
+        "file": "MEDIA/AUDIO/demo-clips/igneous-rocks-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/GavinMaster/IgneusRocks.wav",
+        "sourceSha256": "fdf9ec731e1fb962b5d0e03c95dfe7a959899c89e7d98b8b5f96df90f274272f",
+        "sourceStartSeconds": 151.0,
+        "durationSeconds": 15,
+        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45
+      },
+      {
+        "title": "The Wave",
+        "file": "MEDIA/AUDIO/demo-clips/the-wave-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/The Wave_122Master2_48.wav",
+        "sourceSha256": "1401453ee2a053046727761dbd3f604fe7994864aafa51979ef996a8158df575",
+        "sourceStartSeconds": 56.0,
+        "durationSeconds": 15,
+        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45
+      },
+      {
+        "title": "BULLSHIT (trap drill) — Gavin Hammond",
+        "file": "MEDIA/AUDIO/demo-clips/bullshit-gavin-hammond-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/TrapDrill_vocal_Master.wav",
+        "sourceSha256": "55e02805adf4099ef65a99685a0bfdaee7f4dbabf2dadaa4546ac35c2345cffc",
+        "sourceStartSeconds": 124.0,
+        "durationSeconds": 15,
+        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45
+      },
+      {
+        "title": "Up Next",
+        "file": "MEDIA/AUDIO/demo-clips/up-next-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/Up Next5.wav",
+        "sourceSha256": "2c2d3eb47270d3ec676b3023ced8373fed8f9ae11eee3c043d60b11a939adc72",
+        "sourceStartSeconds": 42.0,
+        "durationSeconds": 15,
+        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45
+      },
+      {
+        "title": "Hyper",
+        "file": "MEDIA/AUDIO/demo-clips/hyper-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/GavinMaster/Hyper4.wav",
+        "sourceSha256": "6704bdc3f54034c275cc5fe06c7130c0cd96761d430968f7d29bdcc34fec93ea",
+        "sourceStartSeconds": 141.5,
+        "durationSeconds": 15,
+        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45
+      },
+      {
+        "title": "Prolly in the Club",
+        "file": "MEDIA/AUDIO/demo-clips/prollyintheclub-98-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/prollyintheclub-98.mp3",
+        "sourceSha256": "4f6dd6fc493eba73d78063febf4d67f25f43833623e3f00bd95d4003da172815",
+        "previousSourceStartSeconds": 36.5,
+        "offsetWithinPreviousExcerpt": 3.0,
+        "sourceStartSeconds": 39.5,
+        "durationSeconds": 15,
+        "encodedDurationSeconds": 15.0
+      },
+      {
+        "title": "Save You",
+        "file": "MEDIA/AUDIO/demo-clips/save-you-master-1-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/save-you-master-1.mp3",
+        "sourceSha256": "6541f656d9d583b62aec8034cf602660ce52e7fe3f66ba95f02f980cc577d7c8",
+        "previousSourceStartSeconds": 40.0,
+        "offsetWithinPreviousExcerpt": 11.5,
+        "sourceStartSeconds": 51.5,
+        "durationSeconds": 15,
+        "encodedDurationSeconds": 15.0
+      },
+      {
+        "title": "Greif",
+        "file": "MEDIA/AUDIO/demo-clips/greif-untagged-master-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/greif-untagged-master.mp3",
+        "sourceSha256": "ffcdfd004b13f9ac19279b907b8088f03d4394f9cf45ed2f84ec13c891c94578",
+        "previousSourceStartSeconds": 119.0,
+        "offsetWithinPreviousExcerpt": 14.0,
+        "sourceStartSeconds": 133.0,
+        "durationSeconds": 15,
+        "encodedDurationSeconds": 15.0
+      }
+    ],
+    "requestedOrder": [
+      "VALAO",
+      "Song of Solomon",
+      "Solo",
+      "Anthill",
+      "Igneous Rocks",
+      "The Wave",
+      "BULLSHIT (trap drill) — Gavin Hammond",
+      "BOOM — Gavin Hammond",
+      "Up Next",
+      "Hyper",
+      "Bloodshot (Tape 13, mixed) — Love never Dies"
+    ],
+    "pending": [
+      {
+        "title": "VALAO",
+        "sourceStartSeconds": 44,
+        "sourceEndSecondsOptions": [
+          56,
+          58
+        ],
+        "reason": "No named source located yet; do not substitute another recording."
+      },
+      {
+        "title": "BOOM — Gavin Hammond",
+        "reason": "User says file is unnamed; source identification pending."
+      },
+      {
+        "title": "Bloodshot (Tape 13, mixed) — Love never Dies",
+        "candidateSource": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
+        "reason": "32:32 source contains multiple passages; Bloodshot position needs identification."
+      }
+    ],
+    "retainedAfterNewList": [
+      "Prolly in the Club",
+      "Save You",
+      "Greif"
+    ],
+    "tape1Unmixed": "Recommended for existing before/after comparison only; user asked for recommendation. Comparison unchanged."
+  }
 }

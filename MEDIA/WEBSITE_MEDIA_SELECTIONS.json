@@ -328,5 +328,36 @@
     ],
     "updatedOn": "2026-09-10",
     "section": "index.html#work"
+  },
+  "demoPlaylist20261002": {
+    "date": "2026-10-02",
+    "author": "OpenAI Codex; GPT-6",
+    "task": "adding music tracks",
+    "playlist": "checkmark-demo-playlist.js",
+    "manifest": "MEDIA/AUDIO/demo-clips/selection.json",
+    "status": "Current reel approved for commit/push on 2026-10-02; VALAO, BOOM and Bloodshot identification pending.",
+    "removedOriginalTrackNumbers": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11
+    ],
+    "activeOrder": [
+      "Song of Solomon",
+      "Solo (ft. Yung Gualli)",
+      "Anthill",
+      "Igneous Rocks",
+      "The Wave",
+      "BULLSHIT (trap drill) — Gavin Hammond",
+      "Up Next",
+      "Hyper",
+      "Prolly in the Club",
+      "Save You",
+      "Greif"
+    ],
+    "note": "Anthill is re-added in requested position from the located GavinMaster source, matching the previous original by SHA-256. Solo appears once; retained songs follow new selections. Existing before/after comparisons unchanged."
   }
 }

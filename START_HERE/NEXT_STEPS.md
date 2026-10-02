@@ -1,10 +1,20 @@
 ---
 title: Next Steps
 status: finishing_and_migration_preparation
-updated: 2026-09-23
+updated: 2026-10-02
 ---
 
 # Finish and migrate CheckmarkAudio.com
+
+## October 2, 2026 — finish requested demo reel updates
+
+Author: OpenAI Codex; GPT-6.
+Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`).
+Scope/status: requested original numbered removals and eight available selections are implemented locally; Prolly in the Club, Save You and Greif follow the new selections per Bridget, Solo appears once. Source/master files and prior contributors' work remain intact. See Project State and `MEDIA/AUDIO/demo-clips/selection.json` for current order/source positions and verification. All 11 active clips decode to 15 seconds; browser navigation and playback exclusivity, syntax/JSON and scoped diff checks passed. No commit, push, staging or deployment changes.
+
+Next: locate named VALAO (cut 0:44–0:56 or 0:58), identify unnamed BOOM, and identify the Bloodshot / Love never Dies passage in the 32:32 Tape13 master. Insert these at their requested positions, then review the automated excerpt cuts by listening. Codex recommends Tape 1 unmixed stay in the existing comparison only; Bridget asked for a recommendation, not yet an explicit final placement decision. The located source folder is `MEDIA/AUDIO/CMA Demo Reels/`; recent AirDrop provenance is unverified. Keep root `main` at `f26243e`, preview 4191, current design and existing Services changes. This supersedes the older unspecific 11-track curation instruction below; publication work remains separate.
+October 2 approval update — Author: OpenAI Codex; GPT-6. Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`). Bridget approved the current reel and explicitly authorized committing and pushing this task’s changes. Missing-track work remains pending; this does not approve Wix/domain cutover. Commit scope excludes other contributors’ pending website, Services, media and draft work. Remote history fetched and matches the starting local HEAD; scoped checks passed. Delivery verification follows the push.
+
 
 This is the execution order and migration runbook, not a second completion checklist. `CHECKMARK_AUDIO_WEBSITE_SOURCE_OF_TRUTH.docx` remains the acceptance authority. September 12 request: finish the aesthetics, music, outstanding corrections, then migrate from Wix. Preparation is authorized; perform the actual domain cutover after the final review. No DNS changes have been made in this pass.
 

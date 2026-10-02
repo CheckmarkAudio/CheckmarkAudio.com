@@ -1,10 +1,24 @@
 ---
 title: Project State
 status: active_development_not_launch_approved
-updated: 2026-09-23
+updated: 2026-10-02
 ---
 
 # Project State
+
+## October 2, 2026 — demo reel curation in progress
+
+Author: OpenAI Codex; GPT-6.
+Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`).
+Scope/status: removed original playlist entries 1, 5, 6, 7, 8, 10 and 11, preserving source/clip files. Added available selections in Bridget's relative order: Song of Solomon, Solo, Anthill, Igneous Rocks, The Wave, BULLSHIT (trap drill) — Gavin Hammond, Up Next, Hyper. Per her follow-up, Prolly in the Club, Save You and Greif follow; Solo appears once. Anthill is intentionally re-added in its new position. Located sources in `MEDIA/AUDIO/CMA Demo Reels/`; recent AirDrop provenance is unverified.
+
+Updated playlist, homepage initial title/cache reference, canonical media manifest, audio selection manifest, and six new MP3 excerpts. All 11 active clips are 15 seconds; new cuts use original gain and established short fades/RMS selection, with Song of Solomon reusing its comparison source position. Musical cuts await listening review. Source positions/current order are in `MEDIA/AUDIO/demo-clips/selection.json` under `playlistUpdate`; historical authorship/records are preserved.
+
+Validation: all 11 clips fully decode with signal to 15.000 seconds and all source hashes match; JavaScript/JSON/scoped whitespace checks pass. Browser checked all titles/next-wrap navigation, Song of Solomon playback, both directions of demo/comparison exclusivity and desktop long-title layout. No phone/full listening QA claimed. Root `main` remains `f26243e`; port 4191 serves `/Users/bridges/GITHUB/CheckmarkAudio.com`. Existing work/staging preserved. Local/uncommitted, incomplete additions; nothing published.
+
+Remaining: locate VALAO (0:44–0:56 or 0:58), identify unnamed BOOM, and identify Bloodshot / Love never Dies within the 32:32 Tape13 master. Home/download/cloud filename searches and 221 Downloads/Desktop ZIP listings found no VALAO/Bloodshot match; some macOS Music directories were unreadable. Codex recommends Tape 1 unmixed stay in the existing before/after comparison; Bridget requested a recommendation, not an explicit placement decision. Comparisons remain unchanged. Add the missing selections at their recorded positions, then listen/review before release.
+October 2 approval update — Author: OpenAI Codex; GPT-6. Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`). Bridget approved the current reel and explicitly authorized committing and pushing this task’s changes. Missing-track work remains pending; this does not approve Wix/domain cutover. Commit scope excludes other contributors’ pending website, Services, media and draft work. Remote history fetched and matches the starting local HEAD; scoped checks passed. Delivery verification follows the push.
+
 
 Checkmark Audio's replacement is built in the repository root and is still in development. Wix remains the production website at CheckmarkAudio.com. Domain cutover requires Bridget's explicit approval after launch QA.
 
