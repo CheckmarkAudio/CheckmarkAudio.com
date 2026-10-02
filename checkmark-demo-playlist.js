@@ -11,14 +11,19 @@
 // Order here is the order on the site. Delete a line to remove a song.
 // Titles are what visitors see — edit freely.
 window.CHECKMARK_DEMO_TRACKS = [
+  { title: "VALAO", src: "MEDIA/AUDIO/demo-clips/valao-demo-clip.mp3?v=20261002-valao-boom" },
   { title: "Song of Solomon", src: "MEDIA/AUDIO/demo-clips/song-of-solomon-demo-clip.mp3?v=20261002-curation" },
   { title: "Solo (ft. Yung Gualli)", src: "MEDIA/AUDIO/demo-clips/solo-ft-yung-gualli-demo-clip.mp3?v=20261002-curation" },
   { title: "Anthill", src: "MEDIA/AUDIO/demo-clips/anthill-100-41020-13-demo-clip.mp3?v=20261002-curation" },
   { title: "Igneous Rocks", src: "MEDIA/AUDIO/demo-clips/igneous-rocks-demo-clip.mp3?v=20261002-curation" },
   { title: "The Wave", src: "MEDIA/AUDIO/demo-clips/the-wave-demo-clip.mp3?v=20261002-curation" },
   { title: "BULLSHIT (trap drill) — Gavin Hammond", src: "MEDIA/AUDIO/demo-clips/bullshit-gavin-hammond-demo-clip.mp3?v=20261002-curation" },
+  { title: "BOOM", src: "MEDIA/AUDIO/demo-clips/boom-demo-clip.mp3?v=20261002-valao-boom" },
   { title: "Up Next", src: "MEDIA/AUDIO/demo-clips/up-next-demo-clip.mp3?v=20261002-curation" },
   { title: "Hyper", src: "MEDIA/AUDIO/demo-clips/hyper-demo-clip.mp3?v=20261002-curation" },
+  { title: "Are You Alright", src: "MEDIA/AUDIO/demo-clips/are-you-alright-demo-clip.mp3?v=20261002-three-more" },
+  { title: "MAI", src: "MEDIA/AUDIO/demo-clips/mai-demo-clip.mp3?v=20261002-three-more" },
+  { title: "Raudo", src: "MEDIA/AUDIO/demo-clips/raudo-demo-clip.mp3?v=20261002-three-more" },
   { title: "Prolly in the Club", src: "MEDIA/AUDIO/demo-clips/prollyintheclub-98-demo-clip.mp3?v=20261002-curation" },
   { title: "Save You", src: "MEDIA/AUDIO/demo-clips/save-you-master-1-demo-clip.mp3?v=20261002-curation" },
   { title: "Greif", src: "MEDIA/AUDIO/demo-clips/greif-untagged-master-demo-clip.mp3?v=20261002-curation" }

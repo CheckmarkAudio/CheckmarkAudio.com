@@ -153,7 +153,7 @@
     "author": "OpenAI Codex; GPT-6",
     "task": "adding music tracks",
     "date": "2026-10-02",
-    "status": "Approved reel committed and pushed in d04807ea3aad52b3143a05861e69599088fda407; origin/main verified 2026-10-02. VALAO, BOOM and Bloodshot identification pending; hosted build not checked.",
+    "status": "16-track reel implemented locally, including VALAO, BOOM, Are You Alright, MAI and Raudo additions since 9b97485; Bloodshot passage identification pending. No new commit/push.",
     "removedOriginalTrackNumbers": [
       1,
       5,
@@ -171,6 +171,18 @@
     ],
     "note": "Historical export records below preserved; active playlist is checkmark-demo-playlist.js. Original audio files remain untouched.",
     "activeTracks": [
+      {
+        "title": "VALAO",
+        "file": "MEDIA/AUDIO/demo-clips/valao-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/valao-master.wav",
+        "sourceSha256": "4ef2bec5ae33681e62e087a6d29a3f884f797361a914995744a6e844fa5a74d1",
+        "sourceStartSeconds": 44,
+        "sourceEndSeconds": 58,
+        "durationSeconds": 14,
+        "selectionMethod": "Owner-specified exact source interval 00:44–00:58.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45
+      },
       {
         "title": "Song of Solomon",
         "file": "MEDIA/AUDIO/demo-clips/song-of-solomon-demo-clip.mp3",
@@ -238,6 +250,19 @@
         "fadeOutSeconds": 0.45
       },
       {
+        "title": "BOOM",
+        "file": "MEDIA/AUDIO/demo-clips/boom-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/Bagpipebeat_vox._2wav.mp3",
+        "sourceSha256": "77d92a462b5065898e107cf1e37dec15df375b5786ebd5deae446894e1b579e3",
+        "sourceStartSeconds": 40.0,
+        "sourceEndSeconds": 55.0,
+        "durationSeconds": 15,
+        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending. Owner identifies Bagpipebeat as BOOM.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45,
+        "artist": "Gavin Hammond"
+      },
+      {
         "title": "Up Next",
         "file": "MEDIA/AUDIO/demo-clips/up-next-demo-clip.mp3",
         "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/Up Next5.wav",
@@ -258,6 +283,44 @@
         "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
         "fadeInSeconds": 0.12,
         "fadeOutSeconds": 0.45
+      },
+      {
+        "title": "Are You Alright",
+        "file": "MEDIA/AUDIO/demo-clips/are-you-alright-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/are-you-alright-master.wav",
+        "sourceSha256": "e90b922c4343d304ef5dbfff77c17ba8c6c7a0405d0378e18fe5230ee48a3788",
+        "sourceStartSeconds": 122.25,
+        "sourceEndSeconds": 137.25,
+        "durationSeconds": 15,
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45,
+        "selectionMethod": "Strongest sustained 15-second mean RMS window across the master at quarter-second resolution; candidate for the requested impactful passage. Musical impact/phrasing pending listening review."
+      },
+      {
+        "title": "MAI",
+        "file": "MEDIA/AUDIO/demo-clips/mai-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/mai-master.mp3",
+        "sourceSha256": "f72ceae28bc58190612253ec04921038a03e03e2f88a94b58b6ea30984537aeb",
+        "sourceStartSeconds": 10.8,
+        "sourceEndSeconds": 25.8,
+        "durationSeconds": 15,
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45,
+        "selectionMethod": "Starts approximately two seconds before the first strong sustained bass entry, inferred from quarter-second full-band/bass/treble energy analysis. Musical drop/phrase placement pending listening review.",
+        "estimatedFirstDropSeconds": 12.8
+      },
+      {
+        "title": "Raudo",
+        "file": "MEDIA/AUDIO/demo-clips/raudo-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/raudo-master.mp3",
+        "sourceSha256": "b6286c804c3323235de83f259c6aed0dd1ea938ec5c90db007894f799c9f7207",
+        "sourceStartSeconds": 14.8,
+        "sourceEndSeconds": 29.8,
+        "durationSeconds": 15,
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45,
+        "selectionMethod": "Starts approximately two seconds before the first strong sustained bass entry, inferred from quarter-second full-band/bass/treble energy analysis. Musical drop/phrase placement pending listening review.",
+        "estimatedFirstDropSeconds": 16.8
       },
       {
         "title": "Prolly in the Club",
@@ -301,25 +364,12 @@
       "Igneous Rocks",
       "The Wave",
       "BULLSHIT (trap drill) — Gavin Hammond",
-      "BOOM — Gavin Hammond",
+      "BOOM",
       "Up Next",
       "Hyper",
       "Bloodshot (Tape 13, mixed) — Love never Dies"
     ],
     "pending": [
-      {
-        "title": "VALAO",
-        "sourceStartSeconds": 44,
-        "sourceEndSecondsOptions": [
-          56,
-          58
-        ],
-        "reason": "No named source located yet; do not substitute another recording."
-      },
-      {
-        "title": "BOOM — Gavin Hammond",
-        "reason": "User says file is unnamed; source identification pending."
-      },
       {
         "title": "Bloodshot (Tape 13, mixed) — Love never Dies",
         "candidateSource": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
@@ -331,6 +381,30 @@
       "Save You",
       "Greif"
     ],
-    "tape1Unmixed": "Recommended for existing before/after comparison only; user asked for recommendation. Comparison unchanged."
+    "tape1Unmixed": "Recommended for existing before/after comparison only; user asked for recommendation. Comparison unchanged.",
+    "previousPublishedStatus": "Approved reel committed and pushed in d04807ea3aad52b3143a05861e69599088fda407; origin/main verified 2026-10-02. VALAO, BOOM and Bloodshot identification pending; hosted build not checked.",
+    "sourceResolution20261002": {
+      "author": "OpenAI Codex; GPT-6",
+      "task": "adding music tracks",
+      "valao": "Bridget supplied VALAO_STEMS_Master.wav and specified 00:44–00:58; byte-identical local-only master retained at MEDIA/AUDIO/valao-master.wav.",
+      "boom": "Bridget confirmed Bagpipebeat is BOOM; display title is exactly BOOM.",
+      "status": "Implemented locally; no new commit/push."
+    },
+    "additionalSelections20261002": {
+      "author": "OpenAI Codex; GPT-6",
+      "task": "adding music tracks",
+      "tracks": [
+        "Are You Alright",
+        "MAI",
+        "Raudo"
+      ],
+      "placement": "After Hyper, before the three retained original songs. Existing relative order preserved.",
+      "sourceFiles": [
+        "Are You Alrighrt_Master.wav",
+        "MAI.mp3",
+        "Raudo.mp3"
+      ],
+      "note": "Master denotes mastering status and is excluded from the public title. Owner confirmed the display spelling Are You Alright. Drop and impact selections use signal analysis, not a claimed listening assessment."
+    }
   }
 }

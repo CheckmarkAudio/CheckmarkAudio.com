@@ -6,6 +6,24 @@ updated: 2026-10-02
 
 # Finish and migrate CheckmarkAudio.com
 
+## October 2, 2026 — three additional demos ready for listening review
+
+Author: OpenAI Codex; GPT-6.
+Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`).
+Scope/status: added owner-confirmed Are You Alright (without Master), MAI and Raudo after Hyper and before the three retained original songs. There are now 16 demos. Selected 15-second cuts: Are You Alright 02:02.25; MAI 00:10.8; Raudo 00:14.8. MAI/Raudo start about two seconds before the first sustained bass entrances inferred from audio analysis. All three decode/play to 15 seconds; source hashes, title/order/path, JS/JSON and scoped whitespace checks pass. Source masters preserved locally and Git-ignored.
+
+Next: listen/review musical cut boundaries and the impactful-passage choice; identify Bloodshot / Love never Dies in Tape13. Current additions plus VALAO/BOOM remain local/uncommitted on `9b97485`, preview 4191. No staging, push or deployment in this follow-up. Existing ordering, styling and comparisons are preserved; exact source records are in the audio selection manifest.
+
+## October 2, 2026 — VALAO and BOOM source matches resolved
+
+Author: OpenAI Codex; GPT-6.
+Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`).
+Scope/status: implemented VALAO first at the owner-specified 00:44–00:58 (14 seconds), and renamed the identified Bagpipebeat selection BOOM, placed after BULLSHIT / before Up Next with a 00:40–00:55 excerpt. Source manifests updated; original masters preserved. Both clips decode, play and show correct durations; JS/JSON/scoped diff checks pass. New work is local/uncommitted on `9b97485`, preview 4191; prior reel push remains intact.
+
+Next: review BOOM’s automatically selected passage and identify Bloodshot / Love never Dies within Tape13. VALAO and BOOM no longer need locating. Existing comparisons, remaining tracks, design and other contributors’ work remain unchanged. See Project State and audio selection manifest for source details. No commit, push, staging or deployment changes in this follow-up.
+
+October 2 publication authorization — Author: OpenAI Codex; GPT-6. Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`). Bridget approved these five added clips and requested commit/push before the separate map, consultation and studio-tour fixes. Original source masters remain local-only; unrelated work is excluded. Remote synchronization and scoped validation precede the push.
+
 ## October 2, 2026 — finish requested demo reel updates
 
 Author: OpenAI Codex; GPT-6.

@@ -6,6 +6,34 @@ updated: 2026-10-02
 
 # Project State
 
+## October 2, 2026 — Are You Alright, MAI and Raudo demos
+
+Author: OpenAI Codex; GPT-6.
+Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`).
+Scope: Bridget requested these three additions and confirmed the display title “Are You Alright”; Master is a mastering label, not part of the title. Added Are You Alright, MAI and Raudo after Hyper / before the retained Prolly in the Club, Save You and Greif, preserving all earlier relative ordering. The reel now contains 16 tracks.
+
+Cuts: Are You Alright 02:02.25–02:17.25, selected as the strongest sustained 15-second RMS passage; MAI 00:10.8–00:25.8 and Raudo 00:14.8–00:29.8, each starting about two seconds before the first strong sustained bass entrance (estimated 00:12.8 / 00:16.8). Used quarter-second full-band, bass and treble analysis to distinguish the intro/drop transition. These are signal-analysis selections for listening review, not claims of perceptual listening or verified phrase boundaries. Original source gain and existing short fades are preserved.
+
+Files: three new optimized demo MP3s, playlist, homepage playlist cache reference, and both audio/canonical media manifests. Byte-identical source copies are retained as local-only `MEDIA/AUDIO/are-you-alright-master.wav`, `mai-master.mp3` and `raudo-master.mp3`; Downloads originals remain untouched. Existing ignore rules exclude all three full masters. Source hashes, timestamps and selection methods are in `MEDIA/AUDIO/demo-clips/selection.json`.
+
+Validation: all three new clips fully decode with signal to 15.000 seconds and source hashes match; all 16 titles are unique, contain no Master label and match the manifest/order with valid files. Browser playback verifies tracks 11–13, 15-second durations and no media errors. JS syntax, JSON and scoped whitespace checks pass. Local/uncommitted on `main` at `9b97485`, preview port 4191; no staging, commit, push, deployment or Wix cutover. Prior VALAO/BOOM additions remain local too.
+
+Next: listen to these selected musical edits; identify Bloodshot / Love never Dies within Tape13. Other tracks, visual design and comparisons are preserved.
+
+## October 2, 2026 — VALAO and BOOM added
+
+Author: OpenAI Codex; GPT-6.
+Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`).
+Scope: Bridget supplied `VALAO_STEMS_Master.wav` from Downloads and specified 00:44–00:58. Added VALAO first as an exact 14-second excerpt. She identified `Bagpipebeat_vox._2wav.mp3` as BOOM; its display title is exactly BOOM, placed after BULLSHIT and before Up Next. BOOM uses an automated 15-second RMS-selected cut at 00:40–00:55, awaiting listening review. The reel now has 13 tracks. Original gain and established short fades are retained; other excerpts/design/comparisons are unchanged.
+
+Files: two new optimized MP3s in `MEDIA/AUDIO/demo-clips/`, playlist, homepage initial title/cache reference, audio selection manifest and canonical media manifest. Preserved a byte-identical VALAO master at `MEDIA/AUDIO/valao-master.wav`, excluded from Git by the existing raw-master rule; Downloads original is untouched. Source hashes, cut positions, title resolution and current order are recorded in `selection.json`.
+
+Validation: full decode and signal checks confirm VALAO at 14.000 seconds and BOOM at 15.000; source hashes match; JS syntax, both JSON files and scoped diff whitespace pass. Browser verifies VALAO at Track 01 and BOOM at Track 08, correct durations and successful playback. Local root `main` remains `9b97485`, port 4191 serving this checkout. Status: new additions implemented locally/uncommitted; earlier 11-track reel remains the last verified pushed version. No staging, push, deployment or Wix cutover in this follow-up.
+
+Next: review BOOM’s excerpt and identify the Bloodshot / Love never Dies passage in Tape13. VALAO and BOOM source-search blockers are resolved; earlier pending-search notes below are historical. Tape 1 comparison remains unchanged.
+
+October 2 publication authorization — Author: OpenAI Codex; GPT-6. Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`). Bridget approved these five added clips and requested commit/push before the separate map, consultation and studio-tour fixes. Original source masters remain local-only; unrelated work is excluded. Remote synchronization and scoped validation precede the push.
+
 ## October 2, 2026 — demo reel curation in progress
 
 Author: OpenAI Codex; GPT-6.
