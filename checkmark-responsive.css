@@ -44,6 +44,7 @@ textarea {
 
   .header .menu {
     display: inline-flex;
+    flex: 0 0 auto;
     align-items: center;
     justify-content: center;
     gap: 9px;
@@ -51,9 +52,16 @@ textarea {
   }
 
   .menu-icon {
+    display: block;
+    flex: 0 0 19px;
     position: relative;
     width: 19px;
     height: 13px;
+  }
+
+  /* The collapsed menu already contains this consultation action. */
+  .header nav > .header-cta {
+    display: none;
   }
 
   .menu-icon i {

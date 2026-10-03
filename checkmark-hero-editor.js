@@ -4,9 +4,9 @@
   const storageKey = 'checkmark-home-hero-v1';
   const legacyStorageKey = 'checkmark-draft-home-hero-v1';
   const starterMedia = [
+    { id: 'MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp', label: 'Checkmark studio sign', src: 'MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp', alt: 'Checkmark Audio recording studio sign in Albuquerque, New Mexico', desktop: { x: 0, y: 30, zoom: 110 }, mobile: { x: 50, y: 50, zoom: 115 } },
     { id: 'microphone-room', label: 'Control room microphone', src: 'MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp', alt: 'Recording microphone and control room at Checkmark Audio in Albuquerque', desktop: { x: 0, y: 56, zoom: 118 }, mobile: { x: 68, y: 50, zoom: 125 } },
     { id: 'MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp', label: 'Electric guitarist action portrait', src: 'MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp', alt: 'Musician playing a red electric guitar', desktop: { x: 51, y: 71, zoom: 100 }, mobile: { x: 50, y: 44, zoom: 115 } },
-    { id: 'MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp', label: 'Checkmark studio sign', src: 'MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp', alt: 'Checkmark Audio recording studio sign in Albuquerque, New Mexico', desktop: { x: 0, y: 30, zoom: 110 }, mobile: { x: 50, y: 50, zoom: 115 } },
     { id: 'MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp', label: 'Studio patch bay and rack gear', src: 'MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp', alt: 'Studio patch bay and rack gear at Checkmark Audio', desktop: { x: 0, y: 46, zoom: 113 }, mobile: { x: 50, y: 50, zoom: 115 } }
   ];
   const defaults = {
@@ -57,6 +57,12 @@
   try { canonicalHero = (await (window.CheckmarkMediaSelectionsPromise || fetch('MEDIA/WEBSITE_MEDIA_SELECTIONS.json',{cache:'no-store'}).then(response=>response.json())))?.homepageHero; } catch {}
   try { config = safeConfig(JSON.parse(localStorage.getItem(storageKey) || localStorage.getItem(legacyStorageKey)) || canonicalHero); }
   catch { config = safeConfig(canonicalHero); }
+
+  // File-backed order is authoritative; retain any browser-saved crop details.
+  if (canonicalHero?.slides?.length) {
+    const canonicalOrder = new Map(canonicalHero.slides.map((slide, index) => [slide.id, index]));
+    config.slides.sort((a, b) => (canonicalOrder.get(a.id) ?? Infinity) - (canonicalOrder.get(b.id) ?? Infinity));
+  }
 
   const hero = document.getElementById('homeHero');
   const media = document.getElementById('heroMedia');

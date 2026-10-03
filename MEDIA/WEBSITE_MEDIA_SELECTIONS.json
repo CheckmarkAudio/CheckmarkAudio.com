@@ -74,6 +74,25 @@
     "transition": "crossfade",
     "slides": [
       {
+        "id": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
+        "label": "checkmark audio studio sign png",
+        "src": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
+        "alt": "",
+        "desktop": {
+          "x": 0,
+          "y": 30,
+          "zoom": 110
+        },
+        "mobile": {
+          "x": 74,
+          "y": 50,
+          "zoom": 100
+        },
+        "mobileFramed": true,
+        "enabled": true,
+        "added": 1787162771907
+      },
+      {
         "id": "microphone-room",
         "label": "Control room microphone",
         "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp",
@@ -110,25 +129,6 @@
         "mobileFramed": true,
         "enabled": true,
         "added": 1787162590318
-      },
-      {
-        "id": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
-        "label": "checkmark audio studio sign png",
-        "src": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
-        "alt": "",
-        "desktop": {
-          "x": 0,
-          "y": 30,
-          "zoom": 110
-        },
-        "mobile": {
-          "x": 74,
-          "y": 50,
-          "zoom": 100
-        },
-        "mobileFramed": true,
-        "enabled": true,
-        "added": 1787162771907
       },
       {
         "id": "MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp",
