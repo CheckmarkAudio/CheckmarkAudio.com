@@ -232,8 +232,8 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 
 /* ---- Section rhythm -----------------------------------------------------
    Alternate light and dark down the page so sections read as distinct bands
-   rather than one long dark run. Ordered: Inside the work (light), Hear the
-   difference (dark), Two studios (light), Tour the rooms (dark). */
+   rather than one long dark run. Ordered: Hear the difference (light), Inside the
+   work (dark), Two studios (light), Tour the rooms (dark). */
 
 /* Full-resolution microphone artwork with the approved full-section paper overlay. */
 .demo-reel-section {
@@ -280,19 +280,19 @@ body :is(.hero .tagline, .pagehero .pagehero-title) b {
 .homepage-media:not(.demo-reel-section) figcaption p { color: #b3a99a; }
 
 /* ---- Sound demo console in the champagne palette ------------------------ */
-.demo-reel-section .video-console {
+:is(.demo-reel-section,.demo-player-section) .video-console {
   --console-gold: #cbab7d;
 }
 
 /* The console box stays dark against the light section, so its own type has
    to be champagne rather than the darker values a light panel would take. */
-.demo-reel-section .video-console-head { color: #e6cba1; }
-.demo-reel-section .video-console-mode { color: #cbab7d; }
-.demo-reel-section .video-console-cues b { color: #e6cba1; }
-.demo-reel-section .video-console-cues small { color: #9c8f7c; }
-.demo-reel-section .volume-fader { color: #cbab7d; }
-.demo-reel-section .volume-fader output { color: #f1dab8; }
-.demo-reel-section .video-console-cues button { color: #e6cba1; }
+:is(.demo-reel-section,.demo-player-section) .video-console-head { color: #e6cba1; }
+:is(.demo-reel-section,.demo-player-section) .video-console-mode { color: #cbab7d; }
+:is(.demo-reel-section,.demo-player-section) .video-console-cues b { color: #e6cba1; }
+:is(.demo-reel-section,.demo-player-section) .video-console-cues small { color: #9c8f7c; }
+:is(.demo-reel-section,.demo-player-section) .volume-fader { color: #cbab7d; }
+:is(.demo-reel-section,.demo-player-section) .volume-fader output { color: #f1dab8; }
+:is(.demo-reel-section,.demo-player-section) .video-console-cues button { color: #e6cba1; }
 
 /* ---- Inquiry section on the light ground --------------------------------
    It follows the now-dark "Tour the rooms." section, so it takes the light

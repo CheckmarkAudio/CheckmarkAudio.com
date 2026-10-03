@@ -6,6 +6,19 @@ updated: 2026-10-02
 
 # Project State
 
+## October 3, 2026 — swap demo and comparison positions
+
+Author: OpenAI Codex; GPT-6.
+Task: adding music tracks (`01a0fdad-2931-7ca0-aa72-34edc50734c9`), listening-player position trial.
+Scope: Bridget requested swapping the demo and before/after comparison while keeping the backgrounds where they were. The first, light paper section now contains Hear the difference and its comparison; the second, dark felt section contains Inside the work and the existing demo console. Headings follow their players; `#work` continues to target the comparison and `#homepage-reel-title` follows the demo. The four visual drafts remain unselected; no new unit design was promoted.
+
+Changed `index.html`, narrowly extended console selectors in `checkmark-rounded-bevels.css` and `checkmark-gold-theme.css` so the existing console style follows its new parent, and added light-ground comparison title/caption colors in `checkmark-comparison.css`. Recorded placement in `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`. Background images, base colors, blend/overlay treatment and order are preserved; no audio, playlist, logo or playback script changed. The newer header/transparency fix from the other task is preserved.
+
+Validation: browser computed styles before/after match both backgrounds exactly (paper overlay 0.72; dark felt overlay 0.34). Visually reviewed both players at 1440px and 390px; settled 320px layout has no page overflow or out-of-bounds player elements. Verified mixed/unmixed selection, Song of Solomon/Tape navigation, demo track navigation, and playback exclusivity in both directions. Confirmed unique player/anchor IDs, valid media JSON, scoped whitespace checks, and byte-identical unrelated homepage markup after excluding the two swapped sections and three CSS cache versions.
+
+Status/next: Bridget approved this player placement on October 3 and requested a scoped commit/push. This entry accompanies that approved commit; remote delivery is verified after push. Preview port 4191 serves the root checkout. Next: simplify the smartphone comparison with Before and After side by side. Previous contact/map/tour/header work and visual drafts remain local and outside this commit; Wix remains production.
+
+
 ## October 2, 2026 — Are You Alright, MAI and Raudo demos
 
 Author: OpenAI Codex; GPT-6.

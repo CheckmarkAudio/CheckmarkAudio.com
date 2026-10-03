@@ -388,5 +388,14 @@
       ],
       "note": "Master denotes mastering status and is excluded from the public title. Owner confirmed the display spelling Are You Alright. Drop and impact selections use signal analysis, not a claimed listening assessment."
     }
+  },
+  "listeningPlayerPlacement20261003": {
+    "date": "2026-10-03",
+    "author": "OpenAI Codex; GPT-6",
+    "task": "adding music tracks — swap listening players",
+    "status": "Approved by Bridget on 2026-10-03; included in the scoped player-swap commit",
+    "firstSection": "Existing light paper background now holds Hear the difference comparison; #work follows the comparison.",
+    "secondSection": "Existing dark felt background now holds the current demo console and Inside the work heading.",
+    "preserved": "Original background files/layers/order, current player designs, playlists, audio, logo and unrelated changes. Four demo visual drafts remain unselected."
   }
 }
