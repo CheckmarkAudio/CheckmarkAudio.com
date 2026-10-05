@@ -1480,3 +1480,12 @@ Changed `index.html`, narrowly extended console selectors in `checkmark-rounded-
 Validation: browser computed styles before/after match both backgrounds exactly (paper overlay 0.72; dark felt overlay 0.34). Visually reviewed both players at 1440px and 390px; settled 320px layout has no page overflow or out-of-bounds player elements. Verified mixed/unmixed selection, Song of Solomon/Tape navigation, demo track navigation, and playback exclusivity in both directions. Confirmed unique player/anchor IDs, valid media JSON, scoped whitespace checks, and byte-identical unrelated homepage markup after excluding the two swapped sections and three CSS cache versions.
 
 Status/next: Bridget approved this player placement on October 3 and requested a scoped commit/push. This entry accompanies that approved commit; remote delivery is verified after push. Preview port 4191 serves the root checkout. Next: simplify the smartphone comparison with Before and After side by side. Previous contact/map/tour/header work and visual drafts remain local and outside this commit; Wix remains production.
+
+## October 5, 2026 — metadata, Bloodshot demo, and affiliate-link release
+
+Author: OpenAI Codex; GPT-5.
+Task: Commit and push approved October 5 metadata corrections and affiliate links.
+
+Implemented owner-confirmed public metadata for King de Leone, Mai (King), BULLSHIT by Gavin Hammond, Are You Alright by NEH, and Love never Dies by Bloodshot. Added the optimized 15-second Bloodshot final-song excerpt to the 17-track reel, replaced the provisional Tape display in the comparison, updated canonical audio/media records, and linked all five affiliate badges to official sites with accessible interaction styling. Changed eight implementation/media paths; the original album master remains untouched and excluded from the website payload.
+
+Validation: both JavaScript files pass syntax checks; all edited JSON parses; scoped whitespace passes; the new MP3 checksum is `1d103f1f09c86af9bf646f08d3f3e9044e9a40f96383e53cbd8ac7bfba2f9e20` and full decode succeeds at 15 seconds. Browser review confirmed all corrected labels, comparison/demo playback, five links, and responsive badge layout. Implementation commit `f30e5a6eaa8aa0b26e589611f1d2a915e1cccf01` was pushed and `origin/main` verified at that hash. Hosted deployment was not checked; no Wix, DNS, domain, or launch action occurred. Unrelated local work was preserved.

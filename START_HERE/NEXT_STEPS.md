@@ -1,10 +1,18 @@
 ---
 title: Next Steps
 status: finishing_and_migration_preparation
-updated: 2026-10-02
+updated: 2026-10-05
 ---
 
 # Finish and migrate CheckmarkAudio.com
+
+## October 5, 2026 — listening metadata release complete
+
+Author: OpenAI Codex; GPT-5.
+Task: Commit and push approved October 5 metadata corrections and affiliate links.
+Scope/status: the five owner-confirmed title/artist corrections, the 15-second `Love never Dies — Bloodshot` final-song demo excerpt, matching comparison label, and five official affiliate badge links are pushed to `origin/main` in `f30e5a6eaa8aa0b26e589611f1d2a915e1cccf01`. Validation covered syntax, JSON, whitespace, full MP3 decode/checksum, browser metadata/playback, external links, and responsive badge layout. Unrelated local work was preserved and excluded.
+
+Next: listen-review the Bloodshot excerpt and corrected reel labels, then continue the existing website completion list. Hosted deployment remains unchecked; keep the replacement noindex and keep Wix live. No DNS/domain work is authorized by this release.
 
 ## October 3, 2026 — swap demo and comparison positions
 

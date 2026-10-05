@@ -1,10 +1,20 @@
 ---
 title: Project State
 status: active_development_not_launch_approved
-updated: 2026-10-02
+updated: 2026-10-05
 ---
 
 # Project State
+
+## October 5, 2026 — corrected music credits, Bloodshot excerpt, and affiliate links pushed
+
+Author: OpenAI Codex; GPT-5.
+Task: Commit and push approved October 5 metadata corrections and affiliate links.
+Scope: Published the owner-confirmed public metadata `Song of Solomon — King de Leone`, `Mai (King) — King de Leone`, `BULLSHIT — Gavin Hammond`, `Are You Alright — NEH`, and `Love never Dies — Bloodshot`. Added the 15-second final-song Bloodshot excerpt from the preserved 32:32 album master to the demo reel and labeled the existing comparison accordingly. Linked the five homepage affiliate/recognition badges to their official destinations with keyboard focus, hover feedback, and reduced-motion support. Implementation commit: `f30e5a6eaa8aa0b26e589611f1d2a915e1cccf01`.
+
+Validation: JavaScript syntax, JSON parsing, scoped whitespace, 17-track order, MP3 checksum/full decode, browser labels/playback, affiliate destinations, and the responsive badge grid passed. `origin/main` was fetched before the commit and the remote main ref was verified at the exact implementation hash after push. Unrelated local contact, tour, Services, archive, media, and draft work remains outside the commit.
+
+Status/next: committed and pushed; hosted deployment was not checked. Review the Bloodshot musical cut and all owner-confirmed labels in the next shared preview. The replacement remains a noindex development site; Wix is still production and no deployment, DNS, or domain cutover occurred.
 
 ## October 3, 2026 — swap demo and comparison positions
 
