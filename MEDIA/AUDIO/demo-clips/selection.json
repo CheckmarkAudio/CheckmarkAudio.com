@@ -173,6 +173,7 @@
     "activeTracks": [
       {
         "title": "VALAO",
+        "artist": "Mira Como Suena",
         "file": "MEDIA/AUDIO/demo-clips/valao-demo-clip.mp3",
         "source": "MEDIA/AUDIO/valao-master.wav",
         "sourceSha256": "4ef2bec5ae33681e62e087a6d29a3f884f797361a914995744a6e844fa5a74d1",
@@ -185,6 +186,7 @@
       },
       {
         "title": "Song of Solomon",
+        "artist": "King De Lionne",
         "file": "MEDIA/AUDIO/demo-clips/song-of-solomon-demo-clip.mp3",
         "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/GavinMaster/SongOfSolomon_140_4_Master.wav",
         "sourceSha256": "96252862797c4cf3a69f8937165b13379a6974457975eef398cc85721890edfe",
@@ -298,6 +300,7 @@
       },
       {
         "title": "MAI",
+        "artist": "King De Lionne",
         "file": "MEDIA/AUDIO/demo-clips/mai-demo-clip.mp3",
         "source": "MEDIA/AUDIO/mai-master.mp3",
         "sourceSha256": "f72ceae28bc58190612253ec04921038a03e03e2f88a94b58b6ea30984537aeb",

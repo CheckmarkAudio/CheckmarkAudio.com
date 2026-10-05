@@ -22,6 +22,7 @@
   // ---- Track handling -------------------------------------------------
   let trackIndex = 0, playbackGeneration = 0;
   let retryPlayback = null;
+  const trackLabel = track => track.artist ? `${track.title} — ${track.artist}` : track.title;
   function stopPlayback() {
     playbackGeneration++;
     if (retryPlayback) audio.removeEventListener('canplay', retryPlayback);
@@ -32,7 +33,7 @@
     const b = cueStatus && cueStatus.querySelector('b');
     const small = cueStatus && cueStatus.querySelector('small');
     if (b) b.textContent = `Track ${String(trackIndex + 1).padStart(2, '0')}`;
-    if (small) small.textContent = tracks[trackIndex].title;
+    if (small) small.textContent = trackLabel(tracks[trackIndex]);
   };
   const loadTrack = (index, andPlay) => {
     stopPlayback();

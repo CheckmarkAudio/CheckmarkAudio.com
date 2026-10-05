@@ -364,6 +364,11 @@
       "Save You",
       "Greif"
     ],
+    "artistCredits20261005": {
+      "VALAO": "Mira Como Suena",
+      "Song of Solomon": "King De Lionne",
+      "MAI": "King De Lionne"
+    },
     "note": "Anthill is re-added in requested position from the located GavinMaster source, matching the previous original by SHA-256. Solo appears once; retained songs follow new selections. Existing before/after comparisons unchanged. VALAO is first (00:44–00:58; 14 seconds). BOOM follows BULLSHIT and precedes Up Next (15 seconds).",
     "previousPublishedStatus": "Approved reel committed and pushed in d04807ea3aad52b3143a05861e69599088fda407; origin/main verified 2026-10-02. VALAO, BOOM and Bloodshot identification pending; hosted build not checked.",
     "sourceResolution20261002": {
