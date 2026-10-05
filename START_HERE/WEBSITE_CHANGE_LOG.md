@@ -2,6 +2,20 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-10-05 — Sitewide — Netlify review package
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Prepare clean Netlify review release.
+
+**Status:** Implemented and committed for hosted review; not launch-approved
+
+**Change:** Consolidated the audited current public website changes in isolated branch `codex/netlify-review-release` without modifying the original dirty checkout. Reused Claude's Netlify configuration from commits `040405f` and `e6a48b7`; implementation commit `af82ca9` contains the active page changes, optimized referenced assets, corrected Studio A/B media, studio-tour derivative, and a tighter generated-public allowlist.
+
+**Preserve:** Wix production hosting, custom-domain DNS, development `noindex`, the Source of Truth as the only completion checklist, and all unrelated local work. No inquiry or booking transaction was submitted.
+
+**Validation:** The generated package contains 175 files / approximately 61 MB. All ten pages passed 1440px and 390px browser checks with no horizontal overflow or broken sourced images. Comparison/demo playback and studio-tour loading passed; syntax, JSON, whitespace, robots, and response-header artifacts passed.
+
+**Next:** Use the pull request's Netlify Deploy Preview for Bridget/Gavin review. Do not merge, enable indexing, or cut over DNS without explicit approval.
+
 ## 2026-09-05 — Services-inspired component mockups
 
 **Status:** Approved direction for site-wide rollout

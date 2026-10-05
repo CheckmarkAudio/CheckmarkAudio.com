@@ -6,6 +6,16 @@ updated: 2026-10-05
 
 # Project State
 
+## October 5, 2026 — clean Netlify review release prepared
+
+Author: OpenAI Codex; GPT-5.
+Task: Prepare clean Netlify review release.
+Scope: Created isolated branch `codex/netlify-review-release` from pushed `main` at `7331139`, preserving the original dirty checkout. Reused Claude's existing Netlify hosting work from commits `040405f` and `e6a48b7`, then added only the audited active website changes and their referenced public media. Implementation commit: `af82ca9`. The generated deploy artifact now allowlists root pages/runtime code, canonical media selections, explicitly referenced media, and the seven dynamic Services fader handles; it excludes internal documents, drafts, archives, source masters, and unrelated media-library files. The package contains 175 generated files and is approximately 61 MB rather than publishing the roughly 525 MB tracked media library.
+
+Validation/status: Generated the Netlify `public/` artifact locally and reviewed all ten active pages at 1440x900 and 390x844. Every checked page retained `noindex,nofollow`, matched its viewport width, and rendered without broken sourced images. The mixed/unmixed comparison and demo player played successfully; the optimized studio-tour MP4 loaded with no media error. JavaScript syntax, media-selection JSON, staged whitespace, deploy headers, and `robots.txt` checks pass. No inquiry was sent and no Cal.com booking was created. Implemented and committed on the review branch; Wix, DNS, the custom domain, and `main` are unchanged.
+
+Next: push the review branch, open its pull request, and use the Netlify Deploy Preview for Bridget and Gavin's visual/listening review. Do not merge to `main`, enable `SITE_LAUNCHED`, or change DNS without explicit approval.
+
 ## October 5, 2026 — corrected music credits, Bloodshot excerpt, and affiliate links pushed
 
 Author: OpenAI Codex; GPT-5.
