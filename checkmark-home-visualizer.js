@@ -1,5 +1,5 @@
 // Checkmark Audio — homepage sound demo visualizer.
-// Locked visual baseline: DRAFTS/active/logo-audio-visualizer-2026-09-01/APPROVED-LOCKED-2026-09-01.html
+// Locked visual baseline: ARCHIVE/ignored-local/paused-uncommitted-2026-09-29/DRAFTS/active/shared-or-uncertain/logo-audio-visualizer-2026-09-01/APPROVED-LOCKED-2026-09-01.html
 // Plays the tracks from checkmark-demo-playlist.js inside the gear console,
 // with the official gold logo pulsing inside an ambient reactive halo.
 (() => {

@@ -26,7 +26,8 @@ __pycache__/
 # Optimized demo-clips/*.mp3 and the comparison .m4a files remain tracked.
 /MEDIA/AUDIO/*.mp3
 /MEDIA/AUDIO/*.wav
-/MEDIA/VIDEO/
+/MEDIA/VIDEO/*
+!/MEDIA/VIDEO/web/
 
 # Unlicensed texture inspiration and transient Affinity lock files are not web assets.
 /MEDIA/IMAGES/TEXTURES/REFERENCE/

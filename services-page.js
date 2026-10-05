@@ -9,9 +9,11 @@
   const rate=document.getElementById('service-rate');
   const summary=document.getElementById('service-summary');
   const link=document.getElementById('service-link');
+  const consultLink=document.getElementById('service-consult-link');
+  const formServices={recording:'Vocal Recording',production:'Music Production',mixing:'Mixing / Mastering',live:'Band Recording',voice:'Podcast / Voice-over',media:'Artist Media'};
   const detail=document.querySelector('.service-detail');
   const mobileLayout=window.matchMedia('(max-width:740px)');
-  let active=0;
+  let active=options.findIndex(option=>option.classList.contains('is-active'));
   let changeTimer;
 
   function alignDetailsBelowHeader(option){
@@ -66,7 +68,14 @@
     rate.textContent=option.dataset.rate;
     summary.textContent=option.dataset.summary;
     link.href=option.dataset.link;
-    link.innerHTML=`Explore ${option.dataset.label.toLowerCase()} <span aria-hidden="true">→</span>`;
+    const service=formServices[option.id.replace('service-','')];
+    consultLink.hidden=!service;
+    consultLink.href=service?`index.html?service=${encodeURIComponent(service)}#book`:'index.html#book';
+    link.textContent=option.dataset.linkLabel||`Explore ${option.dataset.label.toLowerCase()}`;
+    const arrow=document.createElement('span');
+    arrow.setAttribute('aria-hidden','true');
+    arrow.textContent='→';
+    link.append(' ',arrow);
     detail.classList.add('is-changing');
     clearTimeout(changeTimer);
     changeTimer=setTimeout(()=>detail.classList.remove('is-changing'),150);
@@ -91,9 +100,6 @@
 
   options.forEach((option,index)=>{
     option.setAttribute('aria-controls','service-detail service-stage');
-    option.addEventListener('pointerenter',event=>{
-      if(event.pointerType!=='touch'&&!mobileLayout.matches) activate(index);
-    });
     option.addEventListener('focus',()=>{if(!mobileLayout.matches) activate(index)});
     option.addEventListener('click',()=>activate(index,false,true));
     option.addEventListener('keydown',event=>{
@@ -115,5 +121,5 @@
   });
 
   mobileLayout.addEventListener('change',()=>activate(active));
-  activate(0);
+  activate(active);
 })();

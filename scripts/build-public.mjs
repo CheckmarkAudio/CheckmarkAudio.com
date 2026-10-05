@@ -15,9 +15,13 @@ const out = path.join(root, 'public');
 const launched = process.env.CONTEXT === 'production' && process.env.SITE_LAUNCHED === 'true';
 const siteUrl = 'https://www.checkmarkaudio.com';
 
-const ROOT_FILE = /^(?:[^/]+\.(?:html|css|js)|checkmark-media-index\.json|sitemap\.xml|_redirects)$/;
-const MEDIA_FILE = /^MEDIA\/.+\.(?:webp|avif|png|jpe?g|gif|svg|mp3|m4a|mp4|webm)$/i;
+const ROOT_FILE = /^(?:[^/]+\.(?:html|css|js)|sitemap\.xml|_redirects)$/;
+const MEDIA_REFERENCE = /MEDIA\/[A-Za-z0-9_.\/-]+\.(?:webp|avif|png|jpe?g|gif|svg|mp3|m4a|mp4|webm)/gi;
 const MEDIA_DATA = new Set(['MEDIA/WEBSITE_MEDIA_SELECTIONS.json']);
+const STATIC_MEDIA = Array.from(
+  { length: 7 },
+  (_, index) => `MEDIA/ARTWORK/mixing-fader-handle-${index + 1}.png`,
+);
 
 // Git-tracked files only, so a deploy never depends on something that exists
 // on one person's computer. Falls back to the folder listing outside Git.
@@ -38,7 +42,14 @@ async function walk(dir, prefix = '') {
   return found;
 }
 const all = listFiles() ?? [...(await readdir(root)), ...(await walk(path.join(root, 'MEDIA'), 'MEDIA/'))];
-const selected = all.filter(file => ROOT_FILE.test(file) || MEDIA_FILE.test(file) || MEDIA_DATA.has(file));
+const rootFiles = all.filter(file => ROOT_FILE.test(file));
+const referencedMedia = new Set();
+for (const file of [...rootFiles, ...MEDIA_DATA]) {
+  const source = await readFile(path.join(root, file), 'utf8');
+  for (const match of source.matchAll(MEDIA_REFERENCE)) referencedMedia.add(match[0]);
+}
+const selected = [...new Set([...rootFiles, ...MEDIA_DATA, ...STATIC_MEDIA, ...referencedMedia])]
+  .filter(file => all.includes(file));
 
 await rm(out, { recursive: true, force: true });
 for (const file of selected) {

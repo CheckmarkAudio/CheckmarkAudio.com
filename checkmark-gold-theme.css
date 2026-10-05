@@ -10,7 +10,7 @@ body :is(.hero .tagline, .hero .tagline.display) {
   /* Champagne palette sampled from the mix-comparison disc
      (.comparison-disc in checkmark-home-interactions.css). Replaces the
      previous brassy amber; approved 2026-09-03 from the draft in
-     DRAFTS/active/champagne-title-color-2026-09-03/. */
+     ARCHIVE/ignored-local/paused-uncommitted-2026-09-29/DRAFTS/active/shared-or-uncertain/champagne-title-color-2026-09-03/. */
   --brand-gold: #e6cba1;
   --brand-gold-bright: #f1dab8;
   --brand-gold-deep: #7a5a33;

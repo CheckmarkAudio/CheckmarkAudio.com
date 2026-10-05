@@ -1,0 +1,18 @@
+/* Owner-requested contact, map and tour updates — October 2, 2026. */
+body #book.section.light{background:#f0e1cf;color:#1a1713}
+body #book.section.light .formbox,body .contactbox.home-contact{background:#fff8ec;color:#1a1713}
+.home-contact a{color:inherit;text-underline-offset:3px}
+.contact-bar a.where{text-decoration:underline;text-underline-offset:4px}
+.contact-map{display:block;width:100%;height:280px;margin-top:24px;border:0;border-radius:12px;background:#f0e1cf}
+.service-actions{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.service-actions [hidden]{display:none}
+.studio-tour-player{position:relative}
+.studio-tour-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:76px;height:76px;padding:0;border:2px solid #f0e1cf;border-radius:50%;background:rgba(26,23,19,.88);color:#f0e1cf;font-size:28px;cursor:pointer;box-shadow:0 4px 20px #0006}
+.studio-tour-play span{margin-left:4px}
+.studio-tour-play[hidden]{display:none}
+.studio-tour-play:focus-visible{outline:3px solid #f0e1cf;outline-offset:5px}
+.studio-tour-open{display:inline-block;margin-top:12px;color:inherit;text-underline-offset:4px}
+/* Replace the grey felt on consultation panels with the existing gold paper. */
+#book .formbox::before,.home-contact::before{background-image:var(--tex-paper-gold);background-size:cover;background-position:center;opacity:.22;mix-blend-mode:multiply}
+body .home-contact b{color:#7a5a33!important}
+body .home-contact li{border-bottom-color:rgba(122,90,51,.22)}

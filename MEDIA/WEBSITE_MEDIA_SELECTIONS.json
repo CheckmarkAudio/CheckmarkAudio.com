@@ -19,19 +19,20 @@
   },
   "mediaEditor": {
     "version": 1,
-    "updatedAt": "2026-09-04T05:53:23.583Z",
+    "updatedAt": "2026-10-01T17:33:45.643Z",
     "slots": {
       "tonight-hero": { "slot": "tonight-hero", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp" },
       "home-studio-photo-1": { "slot": "home-studio-photo-1", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp" },
       "home-studio-photo-2": { "slot": "home-studio-photo-2", "kind": "image", "src": "MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp" },
       "home-feature-video-1": { "slot": "home-feature-video-1", "kind": "audio-visualizer", "src": "checkmark-demo-playlist.js", "note": "2026-09-01: demo reel video replaced by the approved logo sound visualizer (baseline DRAFTS/active/logo-audio-visualizer-2026-09-01/APPROVED-LOCKED-2026-09-01.html); tracks listed in checkmark-demo-playlist.js; prior video retained at MEDIA/VIDEO/cma-music-studio-demo.mp4" },
-      "home-feature-video-2": { "slot": "home-feature-video-2", "kind": "video", "src": "MEDIA/VIDEO/intro-richard-music-studio-checkmark-audio-recording.mp4" },
-      "services-recording": { "slot": "services-recording", "kind": "dataset", "src": "MEDIA/IMAGES/jjune-vocal-recording-session.webp" },
-      "services-production": { "slot": "services-production", "kind": "dataset", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp" },
-      "services-mixing-mastering": { "slot": "services-mixing-mastering", "kind": "dataset", "src": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp" },
-      "services-live-recordings": { "slot": "services-live-recordings", "kind": "dataset", "src": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp" },
-      "services-podcast-voice-over": { "slot": "services-podcast-voice-over", "kind": "dataset", "src": "MEDIA/IMAGES/artist-interview-checkmark-audio-studio-episode-thumbnail.webp" },
-      "services-artist-media": { "slot": "services-artist-media", "kind": "dataset", "src": "MEDIA/IMAGES/marz-artist-photography-promo.webp" },
+      "home-feature-video-2": { "slot": "home-feature-video-2", "kind": "video", "src": "MEDIA/VIDEO/web/recording-studio-checkmark-audio-tour.mp4" },
+      "services-consultation": { "slot": "services-consultation", "kind": "dataset", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 100 } },
+      "services-recording": { "slot": "services-recording", "kind": "dataset", "src": "MEDIA/IMAGES/GALLERY/country-meds-singer-vocal-recording-microphone.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "services-production": { "slot": "services-production", "kind": "dataset", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "services-mixing-mastering": { "slot": "services-mixing-mastering", "kind": "dataset", "src": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "services-live-recordings": { "slot": "services-live-recordings", "kind": "dataset", "src": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "services-podcast-voice-over": { "slot": "services-podcast-voice-over", "kind": "dataset", "src": "MEDIA/IMAGES/artist-interview-checkmark-audio-studio-episode-thumbnail.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "services-artist-media": { "slot": "services-artist-media", "kind": "dataset", "src": "MEDIA/IMAGES/marz-artist-photography-promo.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "recording-hero": { "slot": "recording-hero", "kind": "background", "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-2880.webp", "cssVar": "--page-image" },
       "mixing-hero": { "slot": "mixing-hero", "kind": "background", "src": "MEDIA/IMAGES/mixing-console-close-up-view-02.webp", "cssVar": "--page-image" },
       "live-hero": { "slot": "live-hero", "kind": "background", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp", "cssVar": "--page-image" },
@@ -51,22 +52,22 @@
       "studioA-rail-1": { "slot": "studioA-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp" },
       "studioA-rail-2": { "slot": "studioA-rail-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp" },
       "studioA-rail-3": { "slot": "studioA-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp" },
+      "studioA-gallery-13": { "slot": "studioA-gallery-13", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/drum-recording-cymbal-detail.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-primary": { "slot": "studioB-primary", "kind": "background", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp", "cssVar": "--studio-image", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-rail-1": { "slot": "studioB-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-rail-1": { "slot": "studioB-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-window-vocal-booth.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-rail-2": { "slot": "studioB-rail-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-rail-3": { "slot": "studioB-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-1": { "slot": "studioB-gallery-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-rail-3": { "slot": "studioB-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-05.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-gallery-1": { "slot": "studioB-gallery-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-artist-back-green-light-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-gallery-2": { "slot": "studioB-gallery-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-gallery-3": { "slot": "studioB-gallery-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-03.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-gallery-4": { "slot": "studioB-gallery-4", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-mixing-workstation-view-05.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-gallery-5": { "slot": "studioB-gallery-5", "kind": "image", "src": "MEDIA/IMAGES/richard-baca-and-marz-studio-session-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-gallery-6": { "slot": "studioB-gallery-6", "kind": "image", "src": "MEDIA/IMAGES/male-artist-blue-cap-studio-headshot.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-7": { "slot": "studioB-gallery-7", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-black-and-white.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-gallery-7": { "slot": "studioB-gallery-7", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-blue-light-view-04.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-gallery-8": { "slot": "studioB-gallery-8", "kind": "image", "src": "MEDIA/IMAGES/milli_booth_warm_natural_fabric_landscape.jpg", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-9": { "slot": "studioB-gallery-9", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/drum-recording-cymbal-detail.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-10": { "slot": "studioB-gallery-10", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-09.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-11": { "slot": "studioB-gallery-11", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-microphone-blue-green-light.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-12": { "slot": "studioB-gallery-12", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/checkmark-audio-vocal-recording-booth-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } }
+      "studioB-gallery-9": { "slot": "studioB-gallery-9", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-09.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-gallery-10": { "slot": "studioB-gallery-10", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-microphone-blue-green-light.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-gallery-11": { "slot": "studioB-gallery-11", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/checkmark-audio-vocal-recording-booth-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } }
     }
   },
   "homepageHero": {
@@ -201,9 +202,10 @@
   "innerPageMedia": {
     "services": {
       "status": "Selected interactive signal-path layout implemented 2026-08-26",
-      "default": "MEDIA/IMAGES/jjune-vocal-recording-session.webp",
+      "default": "MEDIA/IMAGES/GALLERY/country-meds-singer-vocal-recording-microphone.webp",
       "serviceImages": {
-        "recording": "MEDIA/IMAGES/jjune-vocal-recording-session.webp",
+        "consultation": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp",
+        "recording": "MEDIA/IMAGES/GALLERY/country-meds-singer-vocal-recording-microphone.webp",
         "production": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp",
         "mixingMastering": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp",
         "liveRecordings": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp",
@@ -243,9 +245,9 @@
       "status": "Selected cinematic split layout implemented 2026-08-26",
       "hero": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp",
       "detailRail": [
-        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-01.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-window-vocal-booth.webp",
         "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp",
-        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-instrument-room-view-02.webp"
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-05.webp"
       ]
     }
   },
@@ -285,7 +287,7 @@
     "requestedOn": "2026-09-10"
   },
   "homepageMixComparisons": {
-    "note": "Song of Solomon and Love never Dies by Bloodshot remain. Love All of Me was removed at Bridget's request because it is Richard's work. Tape13_Master.wav is a 32:32 album master; only its final-song excerpt is used. Original sources are preserved.",
+    "note": "Song of Solomon and Love never Dies by Bloodshot remain. Love All of Me was removed at Bridget’s request because it is Richard’s work. Tape13_Master.wav is a 32:32 album master; only its final-song excerpt is used. Original sources are preserved.",
     "tracks": [
       {
         "id": "song-of-solomon",
@@ -338,7 +340,7 @@
     "task": "adding music tracks",
     "playlist": "checkmark-demo-playlist.js",
     "manifest": "MEDIA/AUDIO/demo-clips/selection.json",
-    "status": "16-track reel implemented locally, including VALAO, BOOM, Are You Alright, MAI and Raudo additions since 9b97485; Bloodshot passage identification pending. No new commit/push.",
+    "status": "Owner-approved five additions committed and pushed in 7ded14283e2c62734d550603cc38714cb242614f; origin/main verified 2026-10-02. Hosted build not checked.",
     "removedOriginalTrackNumbers": [
       1,
       5,
@@ -382,12 +384,12 @@
       "task": "adding music tracks",
       "valao": "Bridget supplied VALAO_STEMS_Master.wav and specified 00:44–00:58; byte-identical local-only master retained at MEDIA/AUDIO/valao-master.wav.",
       "boom": "Bridget confirmed Bagpipebeat is BOOM; display title is exactly BOOM.",
-      "status": "Implemented locally; no new commit/push."
+      "status": "Approved, committed and pushed in 7ded14283e2c62734d550603cc38714cb242614f."
     },
     "bloodshotResolution20261005": {
       "author": "OpenAI Codex; GPT-5",
       "task": "Identify Tape 13 and use only the album's last song",
-      "status": "Approved for scoped commit and push by Bridget on 2026-10-05.",
+      "status": "Implemented locally; uncommitted",
       "title": "Love never Dies",
       "artist": "Bloodshot",
       "source": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
@@ -411,13 +413,31 @@
         "Raudo.mp3"
       ],
       "note": "Master denotes mastering status and is excluded from the public title. Owner confirmed the display spelling Are You Alright and the artist credit NEH. Drop and impact selections use signal analysis, not a claimed listening assessment."
+    },
+    "delivery20261002": {
+      "author": "OpenAI Codex; GPT-6",
+      "task": "adding music tracks",
+      "commit": "7ded14283e2c62734d550603cc38714cb242614f",
+      "remote": "origin/main",
+      "verified": true
     }
+  },
+  "studioTour20261002": {
+    "author": "OpenAI Codex; GPT-6",
+    "task": "adding music tracks — screenshot follow-up",
+    "status": "Implemented locally; uncommitted, awaiting visual review",
+    "source": "MEDIA/VIDEO/intro-richard-music-studio-checkmark-audio-recording.mp4",
+    "web": "MEDIA/VIDEO/web/recording-studio-checkmark-audio-tour.mp4",
+    "durationSeconds": 51.634917,
+    "bytes": 8844629,
+    "encoding": "H.264 1280x720 yuv420p CRF23; AAC 128kbps; faststart",
+    "validation": "Full decode passed; browser playback verified; original master preserved"
   },
   "listeningPlayerPlacement20261003": {
     "date": "2026-10-03",
     "author": "OpenAI Codex; GPT-6",
     "task": "adding music tracks — swap listening players",
-    "status": "Approved by Bridget on 2026-10-03; included in the scoped player-swap commit",
+    "status": "Approved and pushed to origin/main as 3f50fff on 2026-10-03",
     "firstSection": "Existing light paper background now holds Hear the difference comparison; #work follows the comparison.",
     "secondSection": "Existing dark felt background now holds the current demo console and Inside the work heading.",
     "preserved": "Original background files/layers/order, current player designs, playlists, audio, logo and unrelated changes. Four demo visual drafts remain unselected."
@@ -425,8 +445,8 @@
   "mobileComparisonPresentation20261003": {
     "date": "2026-10-03",
     "author": "OpenAI Codex; GPT-6",
-    "task": "adding music tracks — smartphone comparison",
-    "status": "Approved for commit/push by Bridget on 2026-10-05",
+    "task": "adding music tracks \u2014 smartphone comparison",
+    "status": "Superseded locally by direct Unmixed/Mixed playback cards; uncommitted",
     "presentation": "Two side-by-side Unmixed/Mixed cards directly play, switch or pause audio; shared timeline. Removed middle controls and redundant labels on all sizes. Phone player is 210px tall. Both cards and discs share identical raised, hover, selected and pressed effects; Unmixed uses slate-blue/silver and Mixed uses warm gold.",
     "validation": "Browser 320/390/1440px; direct playback, synchronized switching, pause, keyboard, timeline end/replay, navigation and demo exclusivity."
   }
