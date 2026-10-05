@@ -1,7 +1,7 @@
 (() => {
   const tracks = [
-    {id:'song-of-solomon',title:'Song of Solomon',artist:'King De Lionne'},
-    {id:'tape',title:'Tape'}
+    {id:'song-of-solomon',title:'Song of Solomon',artist:'King de Leone'},
+    {id:'tape',title:'Love never Dies',artist:'Bloodshot'}
   ];
   const player=document.getElementById('abplayer');
   if(!player)return;

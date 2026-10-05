@@ -1,10 +1,10 @@
 {
-  "note": "Song of Solomon and provisionally titled Tape remain. Love All of Me removed at Bridget\u2019s request: Richard\u2019s work. Additional Gavin comparisons require unmixed partners; Tape attribution awaiting confirmation. Original sources preserved.",
+  "note": "Song of Solomon and Love never Dies by Bloodshot remain. Love All of Me was removed at Bridget\u2019s request because it is Richard\u2019s work. Tape13_Master.wav is a 32:32 album master; only its final-song excerpt is used. Original sources are preserved.",
   "tracks": [
     {
       "id": "song-of-solomon",
       "title": "Song of Solomon",
-      "artist": "King De Lionne",
+      "artist": "King de Leone",
       "duration": 15,
       "sources": {
         "raw": {
@@ -28,8 +28,10 @@
     },
     {
       "id": "tape",
-      "title": "Tape",
+      "title": "Love never Dies",
+      "artist": "Bloodshot",
       "duration": 15,
+      "sourceContext": "Tape13_Master.wav is the full 32:32 album master; this excerpt comes from the final song.",
       "sources": {
         "raw": {
           "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Processed/Consolidate/tapel1unmixed [2023-06-29 155316].wav",

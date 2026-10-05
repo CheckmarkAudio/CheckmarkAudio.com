@@ -141,8 +141,11 @@
     },
     {
       "id": "tape",
+      "title": "Love never Dies",
+      "artist": "Bloodshot",
       "offsetWithinPreviousExcerpt": 6.5,
       "durationSeconds": 15,
+      "sourceContext": "Tape13_Master.wav is the full 32:32 album master; only the final-song excerpt is used.",
       "sourceStarts": {
         "raw": 126.5,
         "mix": 1765.229009406522
@@ -153,7 +156,7 @@
     "author": "OpenAI Codex; GPT-6",
     "task": "adding music tracks",
     "date": "2026-10-02",
-    "status": "16-track reel implemented locally, including VALAO, BOOM, Are You Alright, MAI and Raudo additions since 9b97485; Bloodshot passage identification pending. No new commit/push.",
+    "status": "17-track reel implemented locally. Bridget identified the final song in the 32:32 Tape13 album master as Love never Dies by Bloodshot; the existing 15-second final-song comparison excerpt is reused in the demo reel. No new commit/push.",
     "removedOriginalTrackNumbers": [
       1,
       5,
@@ -186,7 +189,7 @@
       },
       {
         "title": "Song of Solomon",
-        "artist": "King De Lionne",
+        "artist": "King de Leone",
         "file": "MEDIA/AUDIO/demo-clips/song-of-solomon-demo-clip.mp3",
         "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/GavinMaster/SongOfSolomon_140_4_Master.wav",
         "sourceSha256": "96252862797c4cf3a69f8937165b13379a6974457975eef398cc85721890edfe",
@@ -241,7 +244,8 @@
         "fadeOutSeconds": 0.45
       },
       {
-        "title": "BULLSHIT (trap drill) — Gavin Hammond",
+        "title": "BULLSHIT",
+        "artist": "Gavin Hammond",
         "file": "MEDIA/AUDIO/demo-clips/bullshit-gavin-hammond-demo-clip.mp3",
         "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/TrapDrill_vocal_Master.wav",
         "sourceSha256": "55e02805adf4099ef65a99685a0bfdaee7f4dbabf2dadaa4546ac35c2345cffc",
@@ -287,7 +291,24 @@
         "fadeOutSeconds": 0.45
       },
       {
+        "title": "Love never Dies",
+        "artist": "Bloodshot",
+        "file": "MEDIA/AUDIO/demo-clips/love-never-dies-bloodshot-demo-clip.mp3",
+        "source": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
+        "sourceSha256": "b8a401d0e3dd39c590a2e1f1e8ecc7ef96eeb390bb0fa17fbdcb9c39cb6593e4",
+        "sourceContext": "The source is a 32:32 album master; this clip uses only the final song.",
+        "sourceStartSeconds": 1765.229009406522,
+        "sourceEndSeconds": 1780.229009406522,
+        "durationSeconds": 15,
+        "encodedDurationSeconds": 15,
+        "encodedSha256": "1d103f1f09c86af9bf646f08d3f3e9044e9a40f96383e53cbd8ac7bfba2f9e20",
+        "selectionMethod": "Reuses the existing curated mixed-comparison excerpt inside the album's final song; owner confirmed title, artist, and final-song location.",
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45
+      },
+      {
         "title": "Are You Alright",
+        "artist": "NEH",
         "file": "MEDIA/AUDIO/demo-clips/are-you-alright-demo-clip.mp3",
         "source": "MEDIA/AUDIO/are-you-alright-master.wav",
         "sourceSha256": "e90b922c4343d304ef5dbfff77c17ba8c6c7a0405d0378e18fe5230ee48a3788",
@@ -299,8 +320,8 @@
         "selectionMethod": "Strongest sustained 15-second mean RMS window across the master at quarter-second resolution; candidate for the requested impactful passage. Musical impact/phrasing pending listening review."
       },
       {
-        "title": "MAI",
-        "artist": "King De Lionne",
+        "title": "Mai (King)",
+        "artist": "King de Leone",
         "file": "MEDIA/AUDIO/demo-clips/mai-demo-clip.mp3",
         "source": "MEDIA/AUDIO/mai-master.mp3",
         "sourceSha256": "f72ceae28bc58190612253ec04921038a03e03e2f88a94b58b6ea30984537aeb",
@@ -366,19 +387,23 @@
       "Anthill",
       "Igneous Rocks",
       "The Wave",
-      "BULLSHIT (trap drill) — Gavin Hammond",
+      "BULLSHIT — Gavin Hammond",
       "BOOM",
       "Up Next",
       "Hyper",
-      "Bloodshot (Tape 13, mixed) — Love never Dies"
+      "Love never Dies — Bloodshot"
     ],
-    "pending": [
-      {
-        "title": "Bloodshot (Tape 13, mixed) — Love never Dies",
-        "candidateSource": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
-        "reason": "32:32 source contains multiple passages; Bloodshot position needs identification."
-      }
-    ],
+    "pending": [],
+    "bloodshotResolution20261005": {
+      "author": "OpenAI Codex; GPT-5",
+      "task": "Identify Tape 13 and use only the album's last song",
+      "ownerConfirmedTitle": "Love never Dies",
+      "ownerConfirmedArtist": "Bloodshot",
+      "source": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
+      "sourceDurationSeconds": 1952,
+      "sourceStartSeconds": 1765.229009406522,
+      "note": "The source is the full album master. Only the established 15-second excerpt from the final song is used for the website demo and comparison."
+    },
     "retainedAfterNewList": [
       "Prolly in the Club",
       "Save You",
@@ -398,7 +423,7 @@
       "task": "adding music tracks",
       "tracks": [
         "Are You Alright",
-        "MAI",
+        "Mai (King)",
         "Raudo"
       ],
       "placement": "After Hyper, before the three retained original songs. Existing relative order preserved.",
@@ -407,7 +432,7 @@
         "MAI.mp3",
         "Raudo.mp3"
       ],
-      "note": "Master denotes mastering status and is excluded from the public title. Owner confirmed the display spelling Are You Alright. Drop and impact selections use signal analysis, not a claimed listening assessment."
+      "note": "Master denotes mastering status and is excluded from the public title. Owner confirmed the display spelling Are You Alright and the artist credit NEH. Drop and impact selections use signal analysis, not a claimed listening assessment."
     }
   }
 }

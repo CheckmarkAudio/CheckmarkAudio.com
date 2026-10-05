@@ -285,12 +285,12 @@
     "requestedOn": "2026-09-10"
   },
   "homepageMixComparisons": {
-    "note": "Song of Solomon and provisionally titled Tape remain. Love All of Me removed at Bridget\u2019s request: Richard\u2019s work. Additional Gavin comparisons require unmixed partners; Tape attribution awaiting confirmation. Original sources preserved.",
+    "note": "Song of Solomon and Love never Dies by Bloodshot remain. Love All of Me was removed at Bridget's request because it is Richard's work. Tape13_Master.wav is a 32:32 album master; only its final-song excerpt is used. Original sources are preserved.",
     "tracks": [
       {
         "id": "song-of-solomon",
         "title": "Song of Solomon",
-        "artist": "King De Lionne",
+        "artist": "King de Leone",
         "duration": 30,
         "sources": {
           "raw": {
@@ -309,16 +309,18 @@
       },
       {
         "id": "tape",
-        "title": "Tape",
-        "duration": 30,
+        "title": "Love never Dies",
+        "artist": "Bloodshot",
+        "duration": 15,
+        "sourceContext": "Tape13_Master.wav is the full 32:32 album master; only the final-song excerpt is used.",
         "sources": {
           "raw": {
             "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Samples/Processed/Consolidate/tapel1unmixed [2023-06-29 155316].wav",
-            "startSeconds": 120
+            "startSeconds": 126.5
           },
           "mix": {
             "path": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
-            "startSeconds": 1758.729009406522
+            "startSeconds": 1765.229009406522
           }
         },
         "files": {
@@ -353,12 +355,13 @@
       "Anthill",
       "Igneous Rocks",
       "The Wave",
-      "BULLSHIT (trap drill) — Gavin Hammond",
+      "BULLSHIT",
       "BOOM",
       "Up Next",
       "Hyper",
+      "Love never Dies",
       "Are You Alright",
-      "MAI",
+      "Mai (King)",
       "Raudo",
       "Prolly in the Club",
       "Save You",
@@ -366,8 +369,11 @@
     ],
     "artistCredits20261005": {
       "VALAO": "Mira Como Suena",
-      "Song of Solomon": "King De Lionne",
-      "MAI": "King De Lionne"
+      "Song of Solomon": "King de Leone",
+      "BULLSHIT": "Gavin Hammond",
+      "Love never Dies": "Bloodshot",
+      "Are You Alright": "NEH",
+      "Mai (King)": "King de Leone"
     },
     "note": "Anthill is re-added in requested position from the located GavinMaster source, matching the previous original by SHA-256. Solo appears once; retained songs follow new selections. Existing before/after comparisons unchanged. VALAO is first (00:44–00:58; 14 seconds). BOOM follows BULLSHIT and precedes Up Next (15 seconds).",
     "previousPublishedStatus": "Approved reel committed and pushed in d04807ea3aad52b3143a05861e69599088fda407; origin/main verified 2026-10-02. VALAO, BOOM and Bloodshot identification pending; hosted build not checked.",
@@ -378,12 +384,24 @@
       "boom": "Bridget confirmed Bagpipebeat is BOOM; display title is exactly BOOM.",
       "status": "Implemented locally; no new commit/push."
     },
+    "bloodshotResolution20261005": {
+      "author": "OpenAI Codex; GPT-5",
+      "task": "Identify Tape 13 and use only the album's last song",
+      "status": "Approved for scoped commit and push by Bridget on 2026-10-05.",
+      "title": "Love never Dies",
+      "artist": "Bloodshot",
+      "source": "MEDIA/AUDIO/CMA Demo Reels/CMADemo Project/Tape13_Master.wav",
+      "sourceDurationSeconds": 1952,
+      "sourceStartSeconds": 1765.229009406522,
+      "demoFile": "MEDIA/AUDIO/demo-clips/love-never-dies-bloodshot-demo-clip.mp3",
+      "note": "Only the final-song excerpt is used from the full album master; the same established passage remains in the before/after comparison."
+    },
     "additionalSelections20261002": {
       "author": "OpenAI Codex; GPT-6",
       "task": "adding music tracks",
       "tracks": [
         "Are You Alright",
-        "MAI",
+        "Mai (King)",
         "Raudo"
       ],
       "placement": "After Hyper, before the three retained original songs. Existing relative order preserved.",
@@ -392,7 +410,7 @@
         "MAI.mp3",
         "Raudo.mp3"
       ],
-      "note": "Master denotes mastering status and is excluded from the public title. Owner confirmed the display spelling Are You Alright. Drop and impact selections use signal analysis, not a claimed listening assessment."
+      "note": "Master denotes mastering status and is excluded from the public title. Owner confirmed the display spelling Are You Alright and the artist credit NEH. Drop and impact selections use signal analysis, not a claimed listening assessment."
     }
   },
   "listeningPlayerPlacement20261003": {
