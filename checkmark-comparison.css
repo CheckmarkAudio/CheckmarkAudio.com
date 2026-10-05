@@ -14,5 +14,50 @@
 .comparison-player-section .comparison-count{color:#715438}
 .comparison-player-section .comparison-caption{color:#62594f}
 .comparison-player-section h2{color:#1a1713;text-shadow:none}
-.comparison-player-section .ab-player{margin-top:26px}
+.comparison-player-section .ab-player{max-width:810px;margin:26px auto 0}
 .demo-player-section .homepage-media-grid{max-width:900px}
+
+/* Direct playback: tap either version; tap the playing version to pause. */
+.comparison-player-section .ab-layout{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px;margin-inline:auto}
+.comparison-player-section .ab-side{justify-content:center;gap:18px;order:initial;transform:none}
+.comparison-player-section .ab-side-copy strong{margin:0}
+.comparison-player-section .comparison-art{position:relative;display:grid;place-items:center;flex:none}
+.comparison-player-section .comparison-disc{display:block;width:72px;height:72px}
+.comparison-player-section .comparison-disc::after,.comparison-player-section .comparison-disc::before{display:none}
+.comparison-player-section .ab-card-icon{position:absolute;color:#21190f;font:700 22px/1 sans-serif;padding-left:2px}
+.comparison-player-section .ab-player:not(.playing) .comparison-disc{animation-play-state:paused}
+.comparison-player-section .ab-player[data-mode="raw"] .mix-disc,.comparison-player-section .ab-player[data-mode="mix"] .raw-disc{animation-play-state:paused}
+.comparison-player-section .ab-timeline{max-width:760px;margin-inline:auto}
+.comparison-player-section .ab-feedback{margin:12px 0 0;text-align:center;color:#62594f;font-size:13px}
+.comparison-player-section .ab-feedback:empty{display:none}
+.comparison-player-section .ab-side:focus-visible{outline:3px solid #715438;outline-offset:3px}
+
+/* Phone comparison: equal, compact play cards and one shared timeline. */
+@media(max-width:600px){
+  .comparison-player-section .comparison-navigation{grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;margin:24px auto 18px}
+  .comparison-player-section .comparison-navigation button{width:44px;height:44px;font-size:24px;border-radius:8px}
+  .comparison-player-section #comparison-title{font-size:20px;line-height:1.25}
+  .comparison-player-section .comparison-count{font-size:11px}
+  .comparison-player-section .comparison-caption{font-size:11px;line-height:1.4}
+  .comparison-player-section .ab-player{margin-top:18px;padding:12px;border-color:#c9bdac;border-radius:16px;box-shadow:0 4px 16px #30200c12}
+  .comparison-player-section .ab-layout{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 10px}
+  .comparison-player-section .ab-side{position:relative;flex-direction:column;justify-content:center;gap:12px;min-height:132px;padding:18px 8px;text-align:center;border:2px solid transparent;border-radius:10px;box-shadow:none;transform:none}
+  .comparison-player-section .raw-side{grid-column:1;grid-row:1}
+  .comparison-player-section .mix-side{grid-column:2;grid-row:1}
+  .comparison-player-section .ab-side.active{border-color:#b99262;box-shadow:inset 0 0 0 1px #e6cba1}
+  .comparison-player-section .comparison-disc{width:54px;height:54px;box-shadow:0 4px 10px #0003}
+  .comparison-player-section .ab-side-copy{gap:4px;width:100%}
+  .comparison-player-section .ab-side-copy strong{font-size:clamp(16px,4.5vw,20px);line-height:1.25;margin:0}
+  .comparison-player-section .ab-timeline{margin-top:4px;font-size:12px;grid-template-columns:32px minmax(0,1fr) 32px;gap:6px}
+}
+
+/* Both versions share identical button effects, with their own color palette. */
+.comparison-player-section .raw-side{--button-top:#4c6069;--button-bottom:#34434b;--button-edge:#849ba6 #455c68 #283943 #6f8793;--button-highlight:#d8edf04d;--button-base:#24343d;--button-shadow:#17263026;--button-selected:#adcdda;--button-ring:#bdd8e5;--button-hover-edge:#c5dfe9;--button-hover-top:#597480;--button-hover-bottom:#3b515d;--button-pressed:#14273366;--disc-edge:#d5e5eb;--disc-base:#22323d;--disc-shadow:#10232c40}
+.comparison-player-section .mix-side{--button-top:#393329;--button-bottom:#211d16;--button-edge:#b49a70 #756044 #463822 #a38b63;--button-highlight:#fff0cf4d;--button-base:#392c19;--button-shadow:#30200c26;--button-selected:#d6b983;--button-ring:#e6cba1;--button-hover-edge:#f1dab8;--button-hover-top:#504633;--button-hover-bottom:#352c1e;--button-pressed:#2c1e0c66;--disc-edge:#f1dab8;--disc-base:#635035;--disc-shadow:#30200c40}
+.comparison-player-section .ab-side{background:linear-gradient(155deg,var(--button-top),var(--button-bottom));border-color:var(--button-edge);box-shadow:inset 0 1px 0 var(--button-highlight),0 3px 0 var(--button-base),0 5px 10px var(--button-shadow)}
+.comparison-player-section .ab-side .comparison-disc{border-color:var(--disc-edge);box-shadow:inset 0 1px 0 #fff9,0 3px 0 var(--disc-base),0 5px 10px var(--disc-shadow)}
+.comparison-player-section .raw-side .raw-disc{background:conic-gradient(from 35deg,#d5e6ec,#94aebc,#bfd5df,#e2edf1,#9ab5c3,#c5dae4,#d5e6ec)}
+.comparison-player-section .raw-side .ab-card-icon{color:#233a48}
+.comparison-player-section .ab-side.active{border-color:var(--button-selected);box-shadow:inset 0 0 0 1px var(--button-ring),0 3px 0 var(--button-base),0 5px 10px var(--button-shadow)}
+.comparison-player-section .ab-side:hover{border-color:var(--button-hover-edge);background:linear-gradient(155deg,var(--button-hover-top),var(--button-hover-bottom))}
+.comparison-player-section .ab-side:active{transform:translateY(2px);box-shadow:inset 0 2px 5px var(--button-pressed),0 1px 0 var(--button-base)}

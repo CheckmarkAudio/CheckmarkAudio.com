@@ -290,6 +290,7 @@
       {
         "id": "song-of-solomon",
         "title": "Song of Solomon",
+        "artist": "King De Lionne",
         "duration": 30,
         "sources": {
           "raw": {
@@ -397,5 +398,13 @@
     "firstSection": "Existing light paper background now holds Hear the difference comparison; #work follows the comparison.",
     "secondSection": "Existing dark felt background now holds the current demo console and Inside the work heading.",
     "preserved": "Original background files/layers/order, current player designs, playlists, audio, logo and unrelated changes. Four demo visual drafts remain unselected."
+  },
+  "mobileComparisonPresentation20261003": {
+    "date": "2026-10-03",
+    "author": "OpenAI Codex; GPT-6",
+    "task": "adding music tracks — smartphone comparison",
+    "status": "Approved for commit/push by Bridget on 2026-10-05",
+    "presentation": "Two side-by-side Unmixed/Mixed cards directly play, switch or pause audio; shared timeline. Removed middle controls and redundant labels on all sizes. Phone player is 210px tall. Both cards and discs share identical raised, hover, selected and pressed effects; Unmixed uses slate-blue/silver and Mixed uses warm gold.",
+    "validation": "Browser 320/390/1440px; direct playback, synchronized switching, pause, keyboard, timeline end/replay, navigation and demo exclusivity."
   }
 }
