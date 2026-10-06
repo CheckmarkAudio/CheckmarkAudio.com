@@ -14,7 +14,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Validation:** The generated package contains 175 files / approximately 61 MB. All ten pages passed 1440px and 390px browser checks with no horizontal overflow or broken sourced images. Comparison/demo playback and studio-tour loading passed; syntax, JSON, whitespace, robots, and response-header artifacts passed.
 
-**Next:** Use the pull request's Netlify Deploy Preview for Bridget/Gavin review. Do not merge, enable indexing, or cut over DNS without explicit approval.
+**Delivery/next:** Branch pushed in pull request #4; Netlify deploy-preview, header, and redirect checks pass. Review `https://deploy-preview-4--checkmarkaudio.netlify.app/`. Do not merge, enable indexing, or cut over DNS without explicit approval.
 
 ## 2026-09-05 — Services-inspired component mockups
 

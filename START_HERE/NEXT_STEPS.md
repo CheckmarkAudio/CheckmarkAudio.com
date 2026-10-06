@@ -10,9 +10,9 @@ updated: 2026-10-05
 
 Author: OpenAI Codex; GPT-5.
 Task: Prepare clean Netlify review release.
-Scope/status: Isolated branch `codex/netlify-review-release` contains the existing Claude-authored Netlify configuration plus audited active website changes in implementation commit `af82ca9`. The generated non-indexed artifact is 175 files / approximately 61 MB and excludes internal planning, drafts, archives, raw masters, and unused media-library material. Desktop and phone QA passed across the ten active pages, including rendered media and the homepage audio/video players. Wix production and DNS remain untouched.
+Scope/status: Isolated branch `codex/netlify-review-release` contains the existing Claude-authored Netlify configuration plus audited active website changes in implementation commit `af82ca9`. The generated non-indexed artifact is 175 files / approximately 61 MB and excludes internal planning, drafts, archives, raw masters, and unused media-library material. Desktop and phone QA passed across the ten active pages, including rendered media and the homepage audio/video players. Pull request #4 and its Netlify Deploy Preview are live; Wix production and DNS remain untouched.
 
-Next: review the Netlify Deploy Preview on desktop and phone, listen through the comparison/demo samples, and confirm the studio media and Services content. Keep the pull request unmerged during review. Merging to `main`, enabling production indexing, or changing the custom-domain DNS each require a later explicit approval.
+Next: review `https://deploy-preview-4--checkmarkaudio.netlify.app/` on desktop and phone, listen through the comparison/demo samples, and confirm the studio media and Services content. Keep pull request #4 unmerged during review. Merging to `main`, enabling production indexing, or changing the custom-domain DNS each require a later explicit approval.
 
 ## October 5, 2026 — listening metadata release complete
 
