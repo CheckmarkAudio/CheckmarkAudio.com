@@ -6,21 +6,29 @@ updated: 2026-10-07
 
 # Finish and migrate CheckmarkAudio.com
 
+## October 7, 2026 — continue from the shared main baseline
+
+Author: OpenAI Codex; GPT-5.
+Task: Hand the complete current website state to Claude and Codex through `main`.
+Scope/status: Bridget authorized all current review-branch image and editorial work for commit and push to `main`. The implementation line now includes every October 6 owner-tagged page-media update, Studio B correction, Featured Artists expansion, the October 7 Studio A editorial story, and the shared header alignment through implementation commit `59eceb2`. Wix production, DNS, domain routing, launch approval, and indexing were not changed.
+
+Next: Claude or any incoming assistant should fetch `origin/main`, verify the reported final remote hash, and read Project State, Rules, Document Map, Next Steps, and the recent Change Log before editing. Continue visual refinement from this shared baseline; do not revive stale worktrees or overwrite the separate dirty primary checkout.
+
 ## October 7, 2026 — review the revised Studio A editorial story
 
 Author: OpenAI Codex; GPT-5.
 Task: Integrate Studio A text and gallery images into an editorial scrolling narrative.
-Scope/status: Studio A now moves from its unchanged hero and three-photo detail rail into three image-led editorial chapters. `Production` is a full-bleed photograph with overlaid copy, `Artist interview` uses the same approved black acoustic-panel texture as the inquiry banner, and `Behind the scenes` now carries the planning copy as a photographic overlay. A cymbal detail and a wider unidentified-guitarist session image form the final asymmetrical image pair before the closing banner. Bridget confirmed that the guitarist is not dontcallkody, so the active page and media selection remain deliberately generic rather than guessing the artist. The rejected flat red/cream draft and the subsequent white-and-gold Studio A treatment have both been removed. White-and-gold texture remains a homepage-only direction and should not appear on Studio A or Studio B. This work is local, uncommitted, and unpushed; the hosted Netlify review remains on the prior pushed version.
+Scope/status: Studio A now moves from its unchanged hero and three-photo detail rail into three image-led editorial chapters. `Production` is a full-bleed photograph with overlaid copy, `Artist interview` uses the same approved black acoustic-panel texture as the inquiry banner, and `Behind the scenes` now carries the planning copy as a photographic overlay. A cymbal detail and a wider unidentified-guitarist session image form the final asymmetrical image pair before the closing banner. Bridget confirmed that the guitarist is not dontcallkody, so the active page and media selection remain deliberately generic rather than guessing the artist. The rejected flat red/cream draft and the subsequent white-and-gold Studio A treatment have both been removed. White-and-gold texture remains a homepage-only direction and should not appear on Studio A or Studio B. Implemented in `59eceb2` and included in the owner-authorized `main` handoff.
 
-Next: Review `http://127.0.0.1:4193/studio-a.html` at desktop and phone width. If this direction is approved for hosted review, authorize a scoped commit and push to pull request #4. Do not merge or alter Wix, DNS, the custom domain, or indexing as part of this refinement.
+Next: Continue review from `origin/main`; preserve this approved image structure unless Bridget requests another change. Do not alter Wix, DNS, the custom domain, or indexing as part of ordinary visual refinement.
 
 ## October 7, 2026 — review the centered header wordmark
 
 Author: OpenAI Codex; GPT-5.
 Task: Center the `Checkmark Audio` wordmark against the logo.
-Scope/status: The shared header title now has a small proportional optical offset that aligns its visible letterforms with the logo center on desktop and responsive layouts. The change is local, uncommitted, and unpushed; the hosted Netlify review remains on the prior pushed version.
+Scope/status: The shared header title now has a small proportional optical offset that aligns its visible letterforms with the logo center on desktop and responsive layouts. Implemented in `59eceb2` and included in the owner-authorized `main` handoff.
 
-Next: Review the header on `http://127.0.0.1:4193/studio-b.html`. If approved for the hosted review, authorize a scoped commit and push to pull request #4. Do not merge or alter Wix/DNS/indexing as part of this refinement.
+Next: Preserve the optical alignment while continuing from `origin/main`. Do not alter Wix, DNS, or indexing as part of ordinary visual refinement.
 
 ## October 7, 2026 — review the corrected Studio B rail
 

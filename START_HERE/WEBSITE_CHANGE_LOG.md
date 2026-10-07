@@ -2,11 +2,21 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-10-07 — Sitewide — Shared main handoff for Claude and Codex
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Commit and push all current page-image work to `main` for cross-assistant continuation.
+
+**Status:** Owner-authorized source handoff to `main`; Wix production and launch state unchanged
+
+**Change:** Consolidated the full `codex/netlify-review-release` line into the shared source baseline. This includes the October 6 owner-tagged media placements and corrections across Home, Services, Featured Artists, Checkmark Tonight, Studio A, and Studio B; the expanded artist roster; Studio B hero/rail/gallery corrections; the October 7 Studio A editorial story; and shared wordmark alignment. The latest implementation commit is `59eceb2`. The dirty primary checkout was not staged, reset, or modified.
+
+**Validation:** Fetched `origin/main` at `7331139` and verified it is a direct ancestor of the review branch with no remote-only commits. JavaScript syntax, canonical media JSON, whitespace, responsive desktop/mobile rendering, and the regenerated 215-file noindex Netlify artifact pass. Literal-reference auditing retains only the already documented source-only intro-video warning. No inquiry, booking, deployment, domain, DNS, or indexing action was performed.
+
 ## 2026-10-07 — Studio A — Editorial scroll story
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Integrate Studio A text and selected gallery media into the page narrative.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Implemented in `59eceb2` and included in the owner-authorized `main` handoff
 
 **Change:** Kept the Studio A cover and all three upper detail photographs exactly in place. Removed the detached three-card information deck and the JavaScript-injected Studio A gallery. Reused the existing copy and paired it with the selected labeled media: `Best uses` with `Production`, `The rooms` with `Artist interview`, and `Plan your session` with `Behind the scenes`. The resulting page reads as three consecutive editorial chapters instead of a text block followed by a photo grid.
 
@@ -20,7 +30,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Center the `Checkmark Audio` wordmark against the logo.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Implemented in `59eceb2` and included in the owner-authorized `main` handoff
 
 **Change:** Shifted only the shared wordmark down by `.125em` so the visible uppercase title is optically centered against the official logo. Bumped the shared stylesheet cache key on the homepage and inner-page loader. Preserved header size, logo dimensions, navigation, booking control, responsive breakpoints, and all page content.
 
