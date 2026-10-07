@@ -10,27 +10,27 @@ updated: 2026-10-07
 
 Author: OpenAI Codex; GPT-5.
 Task: Correct the third Studio B detail photo.
-Scope/status: The third image beneath the Studio B cover now uses the confirmed blue-tagged Zardex recording-session photograph instead of the incorrect bright control-room image, and the canonical media record marks it as placed. All three Studio A/B detail-rail photos now display at their natural full-image ratio when stacked, replacing the unreadable narrow-strip crop. The local 214-file release artifact is rebuilt and remains `noindex`, uncommitted, and unpushed.
+Scope/status: The third image beneath the Studio B cover now uses the confirmed blue-tagged Zardex recording-session photograph instead of the incorrect bright control-room image, and the canonical media record marks it as placed. All three Studio A/B detail-rail photos now display at their natural full-image ratio when stacked, replacing the unreadable narrow-strip crop. The 214-file release artifact remains `noindex`; implementation commit `8d3ed8e` is pushed to `codex/netlify-review-release` and pull request #4 is rebuilding its Netlify preview.
 
 Owner correction: the red sound-booth image is restored as Studio B's hero and should remain there unless Bridget requests another change. The console close-up now appears only once, as a regular-size third gallery tile rather than the hero or oversized gallery lead.
 
 Gallery correction: the redundant large `Artist session` tile is removed. The six remaining Studio B gallery sources and captions now match the canonical media slots; preserve the one-instance blue-booth treatment unless Bridget requests another change.
 
-Next: Review `http://127.0.0.1:4193/studio-b.html#studio-rooms`. If the three-photo rail is approved for hosted review, explicitly authorize a scoped commit and push to `codex/netlify-review-release`; otherwise identify the next preferred blue-tagged Studio B photograph. Do not merge pull request #4 or alter Wix/DNS/indexing.
+Next: Wait for pull request #4's Netlify checks, then review `https://deploy-preview-4--checkmarkaudio.netlify.app/studio-b.html` and the other changed pages on desktop and phone. Do not merge pull request #4 or alter Wix/DNS/indexing without a separate explicit approval.
 
 ## October 6, 2026 — review the expanded artist roster
 
 Author: OpenAI Codex; GPT-5.
 Task: Expand the Featured Artists gallery and add the full NEH band.
-Scope/status: The local review page now presents Diego, Lobo, Millie, Vohn, Kai Warrior, dontcallkody + zardex, NEH, Daniel / Mira Como Suena, Gregorio and the Unknown, and Christian in a deliberately mixed grid. NEH and Kai Warrior are the only paired-photo treatments; the other entries use one strong image each. The local page passes desktop and phone layout/image checks, and the 214-file generated artifact remains uncommitted, unpushed, and `noindex`.
+Scope/status: The review page now presents Diego, Lobo, Millie, Vohn, Kai Warrior, dontcallkody + zardex, NEH, Daniel / Mira Como Suena, Gregorio and the Unknown, and Christian in a deliberately mixed grid. NEH and Kai Warrior are the only paired-photo treatments; the other entries use one strong image each. The page passes desktop and phone layout/image checks, and the 214-file `noindex` artifact is included in pushed implementation commit `8d3ed8e`.
 
-Next: Bridget and Gavin review the artist names, ordering, image permissions, NEH pairing, and Daniel / Mira Como Suena label in the local preview. Preserve the outside-the-studio, performance, and promotional emphasis unless they request a different balance. An explicit commit/push authorization is still required before pull request #4 and its hosted Netlify preview change.
+Next: Bridget and Gavin review the artist names, ordering, image permissions, NEH pairing, and Daniel / Mira Como Suena label in pull request #4's hosted preview. Preserve the outside-the-studio, performance, and promotional emphasis unless they request a different balance.
 
 ## October 6, 2026 — review the Featured Artists and tagged-media update
 
 Author: OpenAI Codex; GPT-5.
 Task: Featured Artists page and owner-tagged media placement.
-Scope/status: The isolated Netlify review worktree now contains an uncommitted Featured Artists page, a homepage artist teaser, shared Artists navigation, and owner-selected color-graded image replacements across Home, Services, Studio A, Studio B, and Checkmark Tonight. Local desktop/mobile rendering, syntax, media JSON, metadata shape, links, whitespace, and the 214-file generated Netlify artifact pass. The artifact includes the renamed dontcallkody/zardex assets and remains `noindex,nofollow`. Local preview: `http://127.0.0.1:4193/featured-artists.html`. The hosted deploy preview has not changed.
+Scope/status: Pushed implementation commit `8d3ed8e` contains the Featured Artists page, homepage artist teaser, shared Artists navigation, and owner-selected color-graded image replacements across Home, Services, Studio A, Studio B, and Checkmark Tonight. Local desktop/mobile rendering, syntax, media JSON, metadata shape, links, whitespace, and the 214-file generated Netlify artifact pass. The artifact includes the renamed dontcallkody/zardex assets and remains `noindex,nofollow`. Local preview: `http://127.0.0.1:4193/featured-artists.html`; pull request #4 is rebuilding the hosted deploy preview.
 
 October 6 owner correction: the mistakenly blue-tagged old vocal-booth snapshot was removed from every active placement and replaced with the Studio B console/current booth imagery. Its source file remains preserved but unused.
 
@@ -46,7 +46,7 @@ October 6 Services correction: preserve the restored collaborative Production ph
 
 October 6 homepage banner correction: preserve the approved order of studio sign, airborne red-electric-guitar pose, and control-room microphone. Keep Richard out of the banner and keep the guitarist's face outside the visible crop on desktop and phone.
 
-Next: Bridget and Gavin review the Featured Artists wording, image order, Studio A/B placement, and Checkmark Tonight gallery; supply any missing artist names and confirm public-use permission. If approved for hosted review, Bridget explicitly authorizes a scoped commit and push to `codex/netlify-review-release`, which will update pull request #4's Netlify preview. Keep the pull request unmerged, keep `SITE_LAUNCHED` off, and leave Wix/DNS untouched until later launch approval.
+Next: After Netlify's checks finish, Bridget and Gavin review the Featured Artists wording, image order, Studio A/B placement, and Checkmark Tonight gallery in the hosted preview; supply any missing artist names and confirm public-use permission. Keep the pull request unmerged, keep `SITE_LAUNCHED` off, and leave Wix/DNS untouched until later launch approval.
 
 ## October 5, 2026 — Netlify review release ready for hosted review
 

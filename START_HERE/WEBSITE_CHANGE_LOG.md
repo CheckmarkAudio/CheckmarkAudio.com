@@ -6,7 +6,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Correct the third Studio B detail photo.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Implemented, committed, and pushed for hosted review in `8d3ed8e`; not launch-approved
 
 **Change:** Replaced the incorrect third detail-rail image with the confirmed blue-tagged photograph of Zardex beside the Studio B recording rack. Updated the slot's factual alt text and `Artist session` caption, and reconciled `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` so the asset is recorded as placed rather than unplaced. After Bridget flagged the stacked photos as unreadable narrow crops, changed the responsive Studio A/B rail treatment to show every complete photograph at its natural aspect ratio.
 
@@ -14,7 +14,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Redundancy correction:** Removed the large gallery tile labeled `Artist session`, which repeated the blue-booth scene and carried a mismatched caption. Reduced the Studio B gallery to six distinct images and reconciled all six DOM slots, canonical sources, alt text, and captions.
 
-**Preserve:** The first two Studio B rail images, the lower Studio B gallery, the original source image in `MEDIA/`, development `noindex`, Wix production, DNS, `main`, and the unchanged hosted Netlify preview.
+**Preserve:** The first two Studio B rail images, the lower Studio B gallery, the original source image in `MEDIA/`, development `noindex`, Wix production, DNS, and `main`. Pull request #4's hosted preview is the only remote site being updated.
 
 **Validation:** Visually checked the full three-photo row at 1440×900 and the uncropped stacked presentation, with each photo's subject visible and no overlap. Also verified the restored red hero and that the console is the regular third gallery tile rather than the oversized lead. Canonical/public JSON parsing, public asset inclusion, `git diff --check`, and the generated 214-file Netlify artifact pass. The link audit has only the known source-only intro-video warning.
 
@@ -22,7 +22,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Expand the Featured Artists gallery and add the full NEH band.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Implemented, committed, and pushed for hosted review in `8d3ed8e`; not launch-approved
 
 **Change:** Replaced the seven-card gallery with ten named editorial presentations. NEH now pairs the retained performance-space portrait with the full four-member band image in the same side-by-side, single-caption language used for Kai Warrior. Added Diego, dontcallkody + zardex, Daniel / Mira Como Suena, Gregorio and the Unknown, and Christian; retained Lobo, Millie, Vohn, and Kai Warrior. Removed the anonymous teal-jacket tile and duplicate second Millie tile. `Mira Como Suena` matches the confirmed demo-player credit.
 
@@ -32,13 +32,13 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Validation:** At 1440×900 and 390×844, all ten figures load, the page has no horizontal overflow, captions fit, and both NEH images remain visibly legible. The canonical media-selection JSON records the exact roster and both paired features. The 214-file local Netlify artifact rebuild passes with indexing off. Local preview: `http://127.0.0.1:4193/featured-artists.html#artist-neh`.
 
-**Preserve:** Development `noindex`, the existing homepage Featured Artists strip, the Kai Warrior pair, unknown-identity safeguards, Wix production, DNS, and the unmodified hosted Netlify preview.
+**Preserve:** Development `noindex`, the existing homepage Featured Artists strip, the Kai Warrior pair, unknown-identity safeguards, Wix production, DNS, and `main`.
 
 ## 2026-10-06 — Sitewide — Featured Artists and owner-tagged media
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Featured Artists page and owner-tagged media placement.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Implemented, committed, and pushed for hosted review in `8d3ed8e`; not launch-approved
 
 **Change:** Added a dedicated Featured Artists page and homepage teaser using Bridget's green-tagged selections, plus a concise statement about helping artists carry songs from early development through final master, visuals, and live presentation. Added Artists to shared navigation/footer. Replaced older media where context matched Bridget's Finder tags: gray on Home, yellow on Services, purple in Studio A, blue in Studio B, and red in a new Checkmark Tonight gallery. Canonical media selections now record these choices and the broader gray overall-Checkmark pool.
 
@@ -64,7 +64,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Outcome and validation:** Visually reviewed all affected pages at 1440px and narrow phone width with no horizontal page overflow or broken loaded images. The restored Production photograph loads at its full 2400×1800 dimensions in the selected Services panel with the confirmed Gavin/Richard alt text. JavaScript syntax, canonical JSON, metadata row shape, whitespace, site-reference links, and a generated 214-file Netlify artifact passed. The release artifact includes the active renamed dontcallkody images and all three newly cataloged dontcallkody/zardex assets, retains `noindex,nofollow`, and contains no obsolete public Country Medicine filename. Historical source names remain only in provenance/audit records. The known missing source-video audit reference remains documented; its public tour derivative is included. Local review URL: `http://127.0.0.1:4193/services.html`.
 
-**Open questions / follow-up:** Bridget/Gavin review image order and copy, identify unnamed artists without guessing, and confirm usage permissions. A later explicit commit/push authorization is required to update pull request #4 and its Netlify preview.
+**Delivery / follow-up:** Pushed to pull request #4 on `codex/netlify-review-release`; Netlify is rebuilding `https://deploy-preview-4--checkmarkaudio.netlify.app/`. Bridget/Gavin review image order and copy, identify unnamed artists without guessing, and confirm usage permissions. Merging, production deployment, indexing, and DNS cutover remain separately gated.
 
 ## 2026-10-05 — Sitewide — Netlify review package
 
