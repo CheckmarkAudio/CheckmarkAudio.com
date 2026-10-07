@@ -6,6 +6,22 @@ updated: 2026-10-07
 
 # Project State
 
+## October 7, 2026 — Studio A editorial scroll story revised
+
+Author: OpenAI Codex; GPT-5.
+Task: Integrate Studio A text and gallery images into an editorial scrolling narrative.
+Scope: Preserved the Studio A hero and its three existing upper detail photographs. Replaced the separate cream information deck and lower gallery with three image-led chapters pairing the existing `Best uses`, `The rooms`, and `Plan your session` copy with the selected `Production`, `Artist interview`, and `Behind the scenes` media. Bridget rejected the first flat red/cream treatment, then clarified that the white-and-gold paper treatment belongs on the homepage only and must not be used on Studio A or Studio B. The current direction uses a full-bleed production photograph with type over the image, the same approved black acoustic-panel texture used by the inquiry banner behind the interview composition, and a full photographic overlay for the final planning chapter. A smaller cymbal detail and a wider image of an unidentified artist playing guitar form an asymmetrical closing pair before the inquiry banner. Bridget confirmed that the guitarist is not dontcallkody; the page and active media selection use neutral artist language and do not carry that unsupported identity. No solid red, cream, or white-and-gold studio-page backgrounds remain; red is limited to a thin editorial rule. Studio B is unchanged.
+
+Validation/status: Visually checked the complete page at 1280px desktop and 390×844 mobile widths. All five story images load at real dimensions, the page has no horizontal overflow, the old Studio A gallery is absent, the three upper photos remain, and the generated 215-file Netlify artifact retains `noindex`. Source JavaScript, media JSON, and whitespace checks pass. The existing site-link audit still reports only the documented source-only intro-video reference. Implemented locally in the isolated Netlify review worktree; uncommitted and unpushed. Pull request #4's hosted preview, Wix, DNS, `main`, and indexing remain unchanged.
+
+## October 7, 2026 — Header wordmark optically centered
+
+Author: OpenAI Codex; GPT-5.
+Task: Center the `Checkmark Audio` wordmark against the logo.
+Scope: Added a proportional `.125em` downward optical offset to the shared header wordmark so the visible uppercase letters align with the logo's horizontal center. Updated the homepage and inner-page stylesheet cache references together; header dimensions, logo size, navigation, and responsive structure are unchanged.
+
+Validation/status: Visually checked the shared header at 1440×900 and the normal responsive preview. At desktop width the correction resolves to 2.1 pixels and the logo/title remain contained without overlap. Implemented locally in the isolated Netlify review worktree; uncommitted and unpushed. Pull request #4, its hosted preview, Wix, DNS, `main`, and indexing remain unchanged.
+
 ## October 7, 2026 — Studio B third detail photo corrected
 
 Author: OpenAI Codex; GPT-5.

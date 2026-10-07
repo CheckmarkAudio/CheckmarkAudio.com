@@ -52,7 +52,11 @@
       "studioA-rail-1": { "slot": "studioA-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/studio-compressor-rack-close-up-view-01.webp" },
       "studioA-rail-2": { "slot": "studioA-rail-2", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/dontcallkody-studio-a-headphones-session.webp" },
       "studioA-rail-3": { "slot": "studioA-rail-3", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-05.webp" },
-      "studioA-gallery-13": { "slot": "studioA-gallery-13", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/drum-recording-cymbal-detail.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioA-story-production": { "slot": "studioA-story-production", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-behind-the-scenes-checkmark-audio-view-03.webp" },
+      "studioA-story-interview": { "slot": "studioA-story-interview", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/daniel-interview-checkmark-audio-studio-thumbnail-view-01.webp" },
+      "studioA-story-behind-scenes": { "slot": "studioA-story-behind-scenes", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-behind-the-scenes-checkmark-audio-view-05.webp" },
+      "studioA-story-cymbal": { "slot": "studioA-story-cymbal", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/drum-recording-cymbal-detail.webp" },
+      "studioA-story-instrument-performance": { "slot": "studioA-story-instrument-performance", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/recording-artist-acoustic-guitar-session-view-03.webp" },
       "studioB-primary": { "slot": "studioB-primary", "kind": "background", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp", "cssVar": "--studio-image", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-rail-1": { "slot": "studioB-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-recording-artist-booth-purple-light.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-rail-2": { "slot": "studioB-rail-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
@@ -196,21 +200,19 @@
       "producedAtCheckmark": "MEDIA/IMAGES/BY_PAGE/community/artist-purple-silhouette-view-05.webp"
     },
     "studioA": {
-      "status": "Owner-tagged purple Studio A media implemented for review 2026-10-06",
+      "status": "Editorial Studio A story implemented for review 2026-10-07",
       "hero": "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp",
       "detailRail": [
         "MEDIA/IMAGES/BY_PAGE/studio-a/studio-compressor-rack-close-up-view-01.webp",
         "MEDIA/IMAGES/GALLERY/dontcallkody-studio-a-headphones-session.webp",
         "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-05.webp"
       ],
-      "gallery": [
-        "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp",
-        "MEDIA/IMAGES/BY_PAGE/studio-a/daniel-interview-checkmark-audio-studio-thumbnail-view-01.webp",
-        "MEDIA/IMAGES/BY_PAGE/studio-a/studio-compressor-rack-close-up-view-01.webp",
-        "MEDIA/IMAGES/GALLERY/dontcallkody-studio-a-headphones-session.webp",
+      "editorialStory": [
         "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-behind-the-scenes-checkmark-audio-view-03.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-a/daniel-interview-checkmark-audio-studio-thumbnail-view-01.webp",
         "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-behind-the-scenes-checkmark-audio-view-05.webp",
-        "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-05.webp"
+        "MEDIA/IMAGES/BY_PAGE/studio-a/drum-recording-cymbal-detail.webp",
+        "MEDIA/IMAGES/GALLERY/recording-artist-acoustic-guitar-session-view-03.webp"
       ]
     },
     "studioB": {

@@ -6,6 +6,22 @@ updated: 2026-10-07
 
 # Finish and migrate CheckmarkAudio.com
 
+## October 7, 2026 — review the revised Studio A editorial story
+
+Author: OpenAI Codex; GPT-5.
+Task: Integrate Studio A text and gallery images into an editorial scrolling narrative.
+Scope/status: Studio A now moves from its unchanged hero and three-photo detail rail into three image-led editorial chapters. `Production` is a full-bleed photograph with overlaid copy, `Artist interview` uses the same approved black acoustic-panel texture as the inquiry banner, and `Behind the scenes` now carries the planning copy as a photographic overlay. A cymbal detail and a wider unidentified-guitarist session image form the final asymmetrical image pair before the closing banner. Bridget confirmed that the guitarist is not dontcallkody, so the active page and media selection remain deliberately generic rather than guessing the artist. The rejected flat red/cream draft and the subsequent white-and-gold Studio A treatment have both been removed. White-and-gold texture remains a homepage-only direction and should not appear on Studio A or Studio B. This work is local, uncommitted, and unpushed; the hosted Netlify review remains on the prior pushed version.
+
+Next: Review `http://127.0.0.1:4193/studio-a.html` at desktop and phone width. If this direction is approved for hosted review, authorize a scoped commit and push to pull request #4. Do not merge or alter Wix, DNS, the custom domain, or indexing as part of this refinement.
+
+## October 7, 2026 — review the centered header wordmark
+
+Author: OpenAI Codex; GPT-5.
+Task: Center the `Checkmark Audio` wordmark against the logo.
+Scope/status: The shared header title now has a small proportional optical offset that aligns its visible letterforms with the logo center on desktop and responsive layouts. The change is local, uncommitted, and unpushed; the hosted Netlify review remains on the prior pushed version.
+
+Next: Review the header on `http://127.0.0.1:4193/studio-b.html`. If approved for the hosted review, authorize a scoped commit and push to pull request #4. Do not merge or alter Wix/DNS/indexing as part of this refinement.
+
 ## October 7, 2026 — review the corrected Studio B rail
 
 Author: OpenAI Codex; GPT-5.

@@ -2,6 +2,30 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-10-07 — Studio A — Editorial scroll story
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Integrate Studio A text and selected gallery media into the page narrative.
+
+**Status:** Implemented locally for review; uncommitted and unpushed
+
+**Change:** Kept the Studio A cover and all three upper detail photographs exactly in place. Removed the detached three-card information deck and the JavaScript-injected Studio A gallery. Reused the existing copy and paired it with the selected labeled media: `Best uses` with `Production`, `The rooms` with `Artist interview`, and `Plan your session` with `Behind the scenes`. The resulting page reads as three consecutive editorial chapters instead of a text block followed by a photo grid.
+
+**Owner corrections:** Bridget rejected the initial solid red and cream chapter backgrounds as insufficiently artistic/editorial. Reworked the production chapter as a full-bleed photographic spread and retained black as the final chapter surface. Bridget then clarified that the white-and-gold paper treatment belongs on the homepage only, not Studio A or Studio B. At Bridget's direction, the rooms chapter now uses the same approved black acoustic-panel texture and screen blend as the inquiry banner. The planning copy now overlays the retained `Behind the scenes` photograph, followed by an asymmetrical pair using the Studio A cymbal detail and an unidentified artist playing guitar. Bridget confirmed that the guitarist is not dontcallkody; removed the incorrectly attributed image from the page and active selections, used neutral factual text for the replacement, and did not invent the artist's identity. There are no solid red, cream, or white-and-gold studio-page backgrounds; red remains only as a narrow graphic rule.
+
+**Files changed:** `studio-a.html`, `studio-pages.css`, `inner-pages.js`, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, and the current handoff records. The shared header optical-centering edit remains a separate local change in the same worktree. Studio B markup, media, and gallery behavior are unchanged.
+
+**Validation:** Reviewed the full scroll at 1280px desktop and 390×844 mobile widths. The page contains three story chapters, three unchanged upper detail figures, five loaded story images with real dimensions, no injected Studio A gallery, no broken loaded images, and no horizontal overflow. JavaScript syntax, media JSON, and `git diff --check` pass. The 215-file local Netlify artifact rebuild passes with indexing off; the only site-link warning is the already documented source-only intro-video reference.
+
+## 2026-10-07 — Shared header — Wordmark optical alignment
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Center the `Checkmark Audio` wordmark against the logo.
+
+**Status:** Implemented locally for review; uncommitted and unpushed
+
+**Change:** Shifted only the shared wordmark down by `.125em` so the visible uppercase title is optically centered against the official logo. Bumped the shared stylesheet cache key on the homepage and inner-page loader. Preserved header size, logo dimensions, navigation, booking control, responsive breakpoints, and all page content.
+
+**Validation:** Visually checked at 1440×900 and the normal responsive viewport. The desktop offset resolves to 2.1 pixels, remains proportional at smaller sizes, and introduces no overlap.
+
 ## 2026-10-07 — Studio B — Third detail photo correction
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Correct the third Studio B detail photo.

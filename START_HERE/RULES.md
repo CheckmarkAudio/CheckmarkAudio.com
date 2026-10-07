@@ -38,6 +38,18 @@ When sources conflict, record the newer confirmed decision in `PROJECT_STATE.md`
 
 ## Content and behavior
 
+### October 7, 2026 — homepage-only white-and-gold texture
+
+Author: OpenAI Codex; GPT-5.
+Task: Keep the white-and-gold texture off Studio A and Studio B.
+Scope: Preserve the existing white-and-gold texture treatment on the homepage, but do not use it on Studio A or Studio B. Studio pages should use black, photography, video, or a context-appropriate non-white texture instead. This is a lasting owner direction for future studio-page refinements.
+
+### October 7, 2026 — unidentified guitarist is not dontcallkody
+
+Author: OpenAI Codex; GPT-5.
+Task: Preserve Bridget's artist-identity correction for Studio A media.
+Scope: Bridget confirmed that the guitarist previously associated with `dontcallkody-acoustic-performance-checkmark-audio.webp` is not dontcallkody. Do not credit that person or image to dontcallkody. Treat the identity as unresolved until Bridget or Gavin supplies a supported name; use neutral factual wording or leave the asset unplaced rather than guessing.
+
 - September 12 design scope: ZERO added subtext or other copy. Preserve existing wording, headings, navigation, page structure, photographs, and approved layouts. A request for clip-art aesthetic refinement is not permission to redesign a page or write content.
 - Reuse the exact approved clip-art assets. Change only their requested placement, scale, integration, or meaningful interaction; do not regenerate or substitute artwork without Bridget requesting it.
 - Home and the main Services page are excluded from new draft explorations. Preserve approved additive Services details. A separate Checkmark Tonight page does not replace Services.

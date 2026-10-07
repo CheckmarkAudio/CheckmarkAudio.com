@@ -55,6 +55,7 @@
   font: 300 clamp(1.48rem, 1.9vw, 2rem)/1 "Josefin Sans", "Avenir Next", sans-serif;
   letter-spacing: .075em;
   text-transform: uppercase;
+  transform: translateY(.125em);
 }
 
 .header .navlinks {
