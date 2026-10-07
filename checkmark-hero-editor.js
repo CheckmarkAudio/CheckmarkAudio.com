@@ -58,9 +58,13 @@
   try { config = safeConfig(JSON.parse(localStorage.getItem(storageKey) || localStorage.getItem(legacyStorageKey)) || canonicalHero); }
   catch { config = safeConfig(canonicalHero); }
 
-  // File-backed order is authoritative; retain any browser-saved crop details.
+  // File-backed membership and order are authoritative; retain browser-saved
+  // crop details only for slides that still exist in the canonical set.
   if (canonicalHero?.slides?.length) {
     const canonicalOrder = new Map(canonicalHero.slides.map((slide, index) => [slide.id, index]));
+    const savedSlides = new Map(config.slides.map(slide => [slide.id, slide]));
+    const canonicalConfig = safeConfig(canonicalHero);
+    config.slides = canonicalConfig.slides.map(slide => savedSlides.get(slide.id) || slide);
     config.slides.sort((a, b) => (canonicalOrder.get(a.id) ?? Infinity) - (canonicalOrder.get(b.id) ?? Infinity));
   }
 

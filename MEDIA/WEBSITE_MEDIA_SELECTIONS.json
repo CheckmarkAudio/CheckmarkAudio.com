@@ -22,12 +22,12 @@
     "updatedAt": "2026-10-01T17:33:45.643Z",
     "slots": {
       "tonight-hero": { "slot": "tonight-hero", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp" },
-      "home-studio-photo-1": { "slot": "home-studio-photo-1", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp" },
-      "home-studio-photo-2": { "slot": "home-studio-photo-2", "kind": "image", "src": "MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp" },
+      "home-studio-photo-1": { "slot": "home-studio-photo-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp" },
+      "home-studio-photo-2": { "slot": "home-studio-photo-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-mixing-console-close-up.webp" },
       "home-feature-video-1": { "slot": "home-feature-video-1", "kind": "audio-visualizer", "src": "checkmark-demo-playlist.js", "note": "2026-09-01: demo reel video replaced by the approved logo sound visualizer (baseline DRAFTS/active/logo-audio-visualizer-2026-09-01/APPROVED-LOCKED-2026-09-01.html); tracks listed in checkmark-demo-playlist.js; prior video retained at MEDIA/VIDEO/cma-music-studio-demo.mp4" },
       "home-feature-video-2": { "slot": "home-feature-video-2", "kind": "video", "src": "MEDIA/VIDEO/web/recording-studio-checkmark-audio-tour.mp4" },
       "services-consultation": { "slot": "services-consultation", "kind": "dataset", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 100 } },
-      "services-recording": { "slot": "services-recording", "kind": "dataset", "src": "MEDIA/IMAGES/GALLERY/country-meds-singer-vocal-recording-microphone.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "services-recording": { "slot": "services-recording", "kind": "dataset", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-microphone-close-up.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "services-production": { "slot": "services-production", "kind": "dataset", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "services-mixing-mastering": { "slot": "services-mixing-mastering", "kind": "dataset", "src": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "services-live-recordings": { "slot": "services-live-recordings", "kind": "dataset", "src": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
@@ -48,26 +48,21 @@
       "community-stories": { "slot": "community-stories", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-and-marz-studio-session.webp" },
       "community-produced": { "slot": "community-produced", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/community/artist-purple-silhouette-view-05.webp" },
       "faq-hero": { "slot": "faq-hero", "kind": "background", "src": "MEDIA/IMAGES/studio-microphone-and-sign.webp", "cssVar": "--page-image" },
-      "studioA-primary": { "slot": "studioA-primary", "kind": "background", "src": "MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp", "cssVar": "--studio-image" },
-      "studioA-rail-1": { "slot": "studioA-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp" },
-      "studioA-rail-2": { "slot": "studioA-rail-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp" },
-      "studioA-rail-3": { "slot": "studioA-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp" },
+      "studioA-primary": { "slot": "studioA-primary", "kind": "background", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp", "cssVar": "--studio-image" },
+      "studioA-rail-1": { "slot": "studioA-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/studio-compressor-rack-close-up-view-01.webp" },
+      "studioA-rail-2": { "slot": "studioA-rail-2", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/dontcallkody-studio-a-headphones-session.webp" },
+      "studioA-rail-3": { "slot": "studioA-rail-3", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-05.webp" },
       "studioA-gallery-13": { "slot": "studioA-gallery-13", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/drum-recording-cymbal-detail.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-primary": { "slot": "studioB-primary", "kind": "background", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp", "cssVar": "--studio-image", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-rail-1": { "slot": "studioB-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-window-vocal-booth.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-rail-1": { "slot": "studioB-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-recording-artist-booth-purple-light.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-rail-2": { "slot": "studioB-rail-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-rail-3": { "slot": "studioB-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-05.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-1": { "slot": "studioB-gallery-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-artist-back-green-light-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-rail-3": { "slot": "studioB-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/zardex-recording-session-studio-b-checkmark-audio.webp", "desktop": { "x": 50, "y": 60, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 100 } },
+      "studioB-gallery-1": { "slot": "studioB-gallery-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/checkmark-audio-vocal-recording-booth-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-gallery-2": { "slot": "studioB-gallery-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-3": { "slot": "studioB-gallery-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-03.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-4": { "slot": "studioB-gallery-4", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-mixing-workstation-view-05.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-5": { "slot": "studioB-gallery-5", "kind": "image", "src": "MEDIA/IMAGES/richard-baca-and-marz-studio-session-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-6": { "slot": "studioB-gallery-6", "kind": "image", "src": "MEDIA/IMAGES/male-artist-blue-cap-studio-headshot.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-7": { "slot": "studioB-gallery-7", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-blue-light-view-04.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-8": { "slot": "studioB-gallery-8", "kind": "image", "src": "MEDIA/IMAGES/milli_booth_warm_natural_fabric_landscape.jpg", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-9": { "slot": "studioB-gallery-9", "kind": "image", "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-09.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-10": { "slot": "studioB-gallery-10", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-microphone-blue-green-light.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "studioB-gallery-11": { "slot": "studioB-gallery-11", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/checkmark-audio-vocal-recording-booth-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } }
+      "studioB-gallery-3": { "slot": "studioB-gallery-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-mixing-console-close-up.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-gallery-4": { "slot": "studioB-gallery-4", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-03.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-gallery-5": { "slot": "studioB-gallery-5", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-blue-light-view-04.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "studioB-gallery-6": { "slot": "studioB-gallery-6", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-microphone-blue-green-light.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } }
     }
   },
   "homepageHero": {
@@ -75,80 +70,37 @@
     "transition": "crossfade",
     "slides": [
       {
-        "id": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
-        "label": "checkmark audio studio sign png",
-        "src": "MEDIA/IMAGES/checkmark-audio-studio-sign-png.webp",
+        "id": "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-jpg.webp",
+        "label": "Checkmark Audio studio identity",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-jpg.webp",
         "alt": "",
-        "desktop": {
-          "x": 0,
-          "y": 30,
-          "zoom": 110
-        },
-        "mobile": {
-          "x": 74,
-          "y": 50,
-          "zoom": 100
-        },
+        "desktop": { "x": 50, "y": 48, "zoom": 100 },
+        "mobile": { "x": 58, "y": 50, "zoom": 125 },
         "mobileFramed": true,
         "enabled": true,
-        "added": 1787162771907
+        "added": 1791252000001
       },
       {
-        "id": "microphone-room",
+        "id": "MEDIA/IMAGES/BY_PAGE/community/antoine-electric-guitarist-action-portrait.webp",
+        "label": "Electric guitarist action pose",
+        "src": "MEDIA/IMAGES/BY_PAGE/community/antoine-electric-guitarist-action-portrait.webp",
+        "alt": "Red electric guitar in an airborne performance pose",
+        "desktop": { "x": 55, "y": 74, "zoom": 100 },
+        "mobile": { "x": 20, "y": 90, "zoom": 170 },
+        "mobileFramed": true,
+        "enabled": true,
+        "added": 1791252000002
+      },
+      {
+        "id": "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp",
         "label": "Control room microphone",
-        "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp",
+        "src": "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp",
         "alt": "Recording microphone and control room at Checkmark Audio in Albuquerque",
-        "desktop": {
-          "x": 0,
-          "y": 56,
-          "zoom": 118
-        },
-        "mobile": {
-          "x": 68,
-          "y": 50,
-          "zoom": 110
-        },
+        "desktop": { "x": 50, "y": 50, "zoom": 100 },
+        "mobile": { "x": 63, "y": 50, "zoom": 118 },
         "mobileFramed": true,
         "enabled": true,
-        "added": 2
-      },
-      {
-        "id": "MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp",
-        "label": "antoine electric guitarist action portrait",
-        "src": "MEDIA/IMAGES/antoine-electric-guitarist-action-portrait.webp",
-        "alt": "",
-        "desktop": {
-          "x": 51,
-          "y": 71,
-          "zoom": 100
-        },
-        "mobile": {
-          "x": 0,
-          "y": 75,
-          "zoom": 170
-        },
-        "mobileFramed": true,
-        "enabled": true,
-        "added": 1787162590318
-      },
-      {
-        "id": "MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp",
-        "label": "studio patch bay and rack gear",
-        "src": "MEDIA/IMAGES/studio-patch-bay-and-rack-gear.webp",
-        "alt": "",
-        "desktop": {
-          "x": 0,
-          "y": 46,
-          "zoom": 113
-        },
-        "mobile": {
-          "x": 50,
-          "y": 50,
-          "zoom": 100
-        },
-        "mobileFramed": true,
-        "enabled": true,
-        "added": 1787163533066
+        "added": 1791252000003
       }
     ]
   },
@@ -156,7 +108,7 @@
     "home-studio-photo-1": {
       "slot": "home-studio-photo-1",
       "kind": "image",
-      "src": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-03.webp",
+      "src": "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp",
       "desktop": {
         "x": 57,
         "y": 26,
@@ -171,7 +123,7 @@
     "home-studio-photo-2": {
       "slot": "home-studio-photo-2",
       "kind": "image",
-      "src": "MEDIA/IMAGES/vocal-booth-microphone-blue-light-view-03.webp",
+      "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-mixing-console-close-up.webp",
       "desktop": {
         "x": 62.55129419191919,
         "y": 48.22758838383838,
@@ -202,10 +154,10 @@
   "innerPageMedia": {
     "services": {
       "status": "Selected interactive signal-path layout implemented 2026-08-26",
-      "default": "MEDIA/IMAGES/GALLERY/country-meds-singer-vocal-recording-microphone.webp",
+      "default": "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-microphone-close-up.webp",
       "serviceImages": {
         "consultation": "MEDIA/IMAGES/engineers-at-control-room-workstation-view-10.webp",
-        "recording": "MEDIA/IMAGES/GALLERY/country-meds-singer-vocal-recording-microphone.webp",
+        "recording": "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-microphone-close-up.webp",
         "production": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp",
         "mixingMastering": "MEDIA/IMAGES/richard-baca-mixing-workstation-view-05.webp",
         "liveRecordings": "MEDIA/IMAGES/christian-recording-artist-live-performance-checkmark-audio.webp",
@@ -225,31 +177,147 @@
       "status": "Selected cinematic broadcast-wall layout implemented 2026-09-01",
       "lead": "MEDIA/IMAGES/GALLERY/group-recording-session-studio-b.webp",
       "checkmarkTonight": [
-        "MEDIA/IMAGES/BY_PAGE/community/unchained-male-vocalist-checkmark-tonight.webp",
-        "MEDIA/IMAGES/BY_PAGE/community/unchained-female-vocalist-checkmark-tonight.webp",
-        "MEDIA/IMAGES/BY_PAGE/community/male-musician-studio-interview-speaking.webp"
+        "MEDIA/IMAGES/BY_PAGE/community/artist-cafe-gregorio-footer-picture-2-jpeg.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/artist-purple-line-portrait-view-03.webp",
+        "MEDIA/IMAGES/GALLERY/dontcallkody-checkmark-tonight-performance-portrait.webp",
+        "MEDIA/IMAGES/GALLERY/diego-recording-artist-behind-the-scenes-checkmark-audio-view-01.webp",
+        "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-1.webp",
+        "MEDIA/IMAGES/GALLERY/recording-session-behind-the-scenes-checkmark-audio-view-07.webp"
       ],
+      "checkmarkTonightArtists": {
+        "MEDIA/IMAGES/BY_PAGE/community/artist-cafe-gregorio-footer-picture-2-jpeg.webp": "Gregorio and the Unknown",
+        "MEDIA/IMAGES/BY_PAGE/community/artist-purple-line-portrait-view-03.webp": null,
+        "MEDIA/IMAGES/GALLERY/dontcallkody-checkmark-tonight-performance-portrait.webp": "dontcallkody",
+        "MEDIA/IMAGES/GALLERY/diego-recording-artist-behind-the-scenes-checkmark-audio-view-01.webp": "Diego",
+        "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-1.webp": "Gregorio and the Unknown",
+        "MEDIA/IMAGES/GALLERY/recording-session-behind-the-scenes-checkmark-audio-view-07.webp": null
+      },
       "artistStories": "MEDIA/IMAGES/BY_PAGE/team/richard-baca-and-marz-studio-session.webp",
       "producedAtCheckmark": "MEDIA/IMAGES/BY_PAGE/community/artist-purple-silhouette-view-05.webp"
     },
     "studioA": {
-      "status": "Selected cinematic split layout implemented 2026-08-26",
-      "hero": "MEDIA/IMAGES/gavin-hammond-mixing-workstation.webp",
+      "status": "Owner-tagged purple Studio A media implemented for review 2026-10-06",
+      "hero": "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp",
       "detailRail": [
-        "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-png.webp",
-        "MEDIA/IMAGES/BY_PAGE/studio-a/music-studio-desk-checkmark-audio-view-03.webp",
-        "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp"
+        "MEDIA/IMAGES/BY_PAGE/studio-a/studio-compressor-rack-close-up-view-01.webp",
+        "MEDIA/IMAGES/GALLERY/dontcallkody-studio-a-headphones-session.webp",
+        "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-05.webp"
+      ],
+      "gallery": [
+        "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-a/daniel-interview-checkmark-audio-studio-thumbnail-view-01.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-a/studio-compressor-rack-close-up-view-01.webp",
+        "MEDIA/IMAGES/GALLERY/dontcallkody-studio-a-headphones-session.webp",
+        "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-behind-the-scenes-checkmark-audio-view-03.webp",
+        "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-behind-the-scenes-checkmark-audio-view-05.webp",
+        "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-05.webp"
       ]
     },
     "studioB": {
-      "status": "Selected cinematic split layout implemented 2026-08-26",
+      "status": "Owner-tagged blue Studio B media implemented for review 2026-10-06",
       "hero": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-red-light.webp",
       "detailRail": [
-        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-window-vocal-booth.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-recording-artist-booth-purple-light.webp",
         "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp",
-        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-05.webp"
+        "MEDIA/IMAGES/BY_PAGE/studio-b/zardex-recording-session-studio-b-checkmark-audio.webp"
+      ],
+      "gallery": [
+        "MEDIA/IMAGES/BY_PAGE/studio-b/checkmark-audio-vocal-recording-booth-view-02.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-mixing-console-close-up.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-window-recording-engineer-checkmark-audio-view-03.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-vocal-booth-blue-light-view-04.webp",
+        "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-microphone-blue-green-light.webp"
+      ]
+    },
+    "featuredArtists": {
+      "status": "Expanded mixed-layout artist roster implemented for review 2026-10-06",
+      "hero": "MEDIA/IMAGES/BY_PAGE/community/marz-studio-side-profile.webp",
+      "homepageTeaser": [
+        "MEDIA/IMAGES/BY_PAGE/community/artist-black-and-white-headshot.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/millie-black-and-white-album-cover-background.webp",
+        "MEDIA/IMAGES/GALLERY/kai-warrior-albuquerque-music-scene-checkmark-audio-client-view-04.webp"
+      ],
+      "gallery": [
+        "MEDIA/IMAGES/BY_PAGE/community/diego-headshot-view-01.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/lobo-rap-group-black-and-white-group-portrait.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/millie-album-cover-2.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/vohn-live-singer-microphone-performance.webp",
+        "MEDIA/IMAGES/GALLERY/kai-warrior-albuquerque-music-scene-checkmark-audio-client-view-03.webp",
+        "MEDIA/IMAGES/GALLERY/kai-warrior-albuquerque-music-scene-checkmark-audio-client-view-04.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/dontcallkody-zardex-artist-duo-portrait.webp",
+        "MEDIA/IMAGES/GALLERY/neh-albuquerque-music-scene-checkmark-audio-client-view-09.webp",
+        "MEDIA/IMAGES/GALLERY/neh-albuquerque-music-scene-checkmark-audio-client-view-06.webp",
+        "MEDIA/IMAGES/GALLERY/daniel-albuquerque-music-scene-checkmark-audio-client-view-02.webp",
+        "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-1.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/christian-recording-artist-live-performance-checkmark-audio.webp"
+      ],
+      "pairedFeatures": [
+        {
+          "artist": "Kai Warrior",
+          "layout": "side-by-side",
+          "images": [
+            "MEDIA/IMAGES/GALLERY/kai-warrior-albuquerque-music-scene-checkmark-audio-client-view-03.webp",
+            "MEDIA/IMAGES/GALLERY/kai-warrior-albuquerque-music-scene-checkmark-audio-client-view-04.webp"
+          ]
+        },
+        {
+          "artist": "NEH",
+          "layout": "side-by-side",
+          "images": [
+            "MEDIA/IMAGES/GALLERY/neh-albuquerque-music-scene-checkmark-audio-client-view-09.webp",
+            "MEDIA/IMAGES/GALLERY/neh-albuquerque-music-scene-checkmark-audio-client-view-06.webp"
+          ]
+        }
       ]
     }
+  },
+  "ownerMediaTags20261006": {
+    "status": "Owner-selected and color-graded; implemented locally for review",
+    "source": "Bridget Finder color tags in MEDIA on 2026-10-06",
+    "legend": {
+      "red": "Checkmark Tonight",
+      "yellow": "Services",
+      "blue": "Studio B",
+      "purple": "Studio A",
+      "green": "Featured Artists",
+      "gray": "Overall Checkmark"
+    },
+    "overallCheckmark": [
+      "MEDIA/IMAGES/BY_PAGE/community/female-guitarist-purple-motion-portrait-view-01.webp",
+      "MEDIA/IMAGES/BY_PAGE/community/guitar-instructor-acoustic-performance-portrait.webp",
+      "MEDIA/IMAGES/BY_PAGE/community/vohn-on-air-studio-portrait.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/acoustic-guitar-website-banner.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-on-air-interview-set-view-01.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-recording-studio-sign.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/checkmark-audio-studio-sign-jpg.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-daw-software-screenshot-checkmark-audio.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-drum-pad-controller-close-up.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/recording-studio-blue-patch-cables-close-up.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/studio-rack-gear-meters-view-02.webp",
+      "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp",
+      "MEDIA/IMAGES/GALLERY/dontcallkody-studio-headphones-black-and-white.webp",
+      "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-02.webp",
+      "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-03.webp",
+      "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-04.webp",
+      "MEDIA/IMAGES/GALLERY/recording-artist-acoustic-guitar-session-view-05.webp"
+    ],
+    "newlyNamedUnplaced": {
+      "blueStudioB": [],
+      "greenFeaturedArtists": [
+        "MEDIA/IMAGES/BY_PAGE/community/dontcallkody-zardex-studio-portrait-checkmark-audio.webp"
+      ]
+    },
+    "newlyPlaced": {
+      "blueStudioB": [
+        "MEDIA/IMAGES/BY_PAGE/studio-b/zardex-recording-session-studio-b-checkmark-audio.webp"
+      ],
+      "greenFeaturedArtists": [
+        "MEDIA/IMAGES/BY_PAGE/community/dontcallkody-zardex-artist-duo-portrait.webp"
+      ]
+    },
+    "note": "The remaining red, yellow, blue, purple, and green selections are preserved in their matching innerPageMedia records above. Newly named unplaced files retain their owner tag but are not active page selections. Finder tags are not the durable source of truth; this JSON record is."
   },
   "editorialPreview20260910": {
     "status": "Local working preview of selected critiques; not launch approval",

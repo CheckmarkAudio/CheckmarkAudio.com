@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="inner-pages.css">
-  <link rel="stylesheet" href="checkmark-tonight.css?v=20260925-livecover1">
+  <link rel="stylesheet" href="checkmark-tonight.css?v=20261006-gallery1">
 </head>
 <body data-page="community" class="tonight-page">
   <div id="site-header"></div>
@@ -58,6 +58,32 @@
         <div><dt><span>04</span>Intended use</dt><dd>Let us know the intended final use.</dd></div>
       </dl>
     </section>
+    <section class="tonight-gallery" aria-labelledby="tonight-gallery-title">
+      <div class="tonight-gallery__head">
+        <p class="eyebrow">Checkmark Tonight</p>
+        <h2 id="tonight-gallery-title">The room is part of the record.</h2>
+      </div>
+      <div class="tonight-gallery__grid" data-tonight-gallery>
+        <button class="tonight-gallery__item" type="button" data-artist="Gregorio and the Unknown" aria-label="View Gregorio and the Unknown photo"><img src="MEDIA/IMAGES/BY_PAGE/community/artist-cafe-gregorio-footer-picture-2-jpeg.webp" alt="Gregorio and the Unknown group portrait" loading="lazy" width="2400" height="1600"></button>
+        <button class="tonight-gallery__item" type="button" data-artist="" aria-label="View purple light-trail artist portrait"><img src="MEDIA/IMAGES/BY_PAGE/community/artist-purple-line-portrait-view-03.webp" alt="Artist portrait with purple light trails" loading="lazy" width="1349" height="2400"></button>
+        <button class="tonight-gallery__item" type="button" data-artist="dontcallkody" aria-label="View dontcallkody photo"><img src="MEDIA/IMAGES/GALLERY/dontcallkody-checkmark-tonight-performance-portrait.webp" alt="dontcallkody during a Checkmark Tonight session" loading="lazy" width="2400" height="1603"></button>
+        <button class="tonight-gallery__item" type="button" data-artist="Diego" aria-label="View Diego photo"><img src="MEDIA/IMAGES/GALLERY/diego-recording-artist-behind-the-scenes-checkmark-audio-view-01.webp" alt="Diego during a recorded artist session" loading="lazy" width="2377" height="2400"></button>
+        <button class="tonight-gallery__item" type="button" data-artist="Gregorio and the Unknown" aria-label="View Gregorio and the Unknown on-air photo"><img src="MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-1.webp" alt="Gregorio and the Unknown in an on-air interview" loading="lazy" width="1280" height="720"></button>
+        <button class="tonight-gallery__item" type="button" data-artist="" aria-label="View live recording preparation photo"><img src="MEDIA/IMAGES/GALLERY/recording-session-behind-the-scenes-checkmark-audio-view-07.webp" alt="Crew preparing a live music recording" loading="lazy" width="1807" height="2400"></button>
+      </div>
+    </section>
+    <div class="tonight-lightbox" data-tonight-lightbox role="dialog" aria-modal="true" aria-label="Checkmark Tonight photo viewer" hidden>
+      <button class="tonight-lightbox__close" type="button" data-lightbox-close aria-label="Close photo viewer">×</button>
+      <button class="tonight-lightbox__nav tonight-lightbox__nav--previous" type="button" data-lightbox-previous aria-label="Previous photo">←</button>
+      <figure class="tonight-lightbox__figure">
+        <img data-lightbox-image src="" alt="">
+        <figcaption class="tonight-lightbox__caption">
+          <span data-lightbox-count>01 / 06</span>
+          <strong data-lightbox-artist hidden></strong>
+        </figcaption>
+      </figure>
+      <button class="tonight-lightbox__nav tonight-lightbox__nav--next" type="button" data-lightbox-next aria-label="Next photo">→</button>
+    </div>
     <section class="tonight-quote" aria-labelledby="tonight-quote-title">
       <i class="screw tl" aria-hidden="true"></i><i class="screw tr" aria-hidden="true"></i><i class="screw bl" aria-hidden="true"></i><i class="screw br" aria-hidden="true"></i>
       <div><h2 id="tonight-quote-title">Custom quote</h2><p>Describe the performers, space, audio needs, and intended final use so the studio can plan the right approach.</p></div>
@@ -67,6 +93,7 @@
   <div id="site-footer"></div>
   <script src="inner-pages.js?v=20260925-1"></script>
   <script src="checkmark-live-cover.js?v=20260925-1"></script>
+  <script src="checkmark-tonight-gallery.js?v=20261006-2"></script>
   <script src="visual-edit-mode.js?v=20260922-2" defer></script>
 </body>
 </html>

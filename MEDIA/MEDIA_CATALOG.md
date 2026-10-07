@@ -69,7 +69,7 @@ This is the active catalog for Checkmark Audio website media. Public filenames f
 | -- | `artist-purple-silhouette-view-04.webp` | image | other | 0.175 MB |
 | -- | `artist-purple-silhouette-view-05.webp` | image | other | 0.216 MB |
 | -- | `artist-white-shirt-portrait.webp` | image | other | 0.269 MB |
-| -- | `artists-cafe-country-medicine-footer-picture-1.webp` | image | other | 0.389 MB |
+| -- | `dontcallkody-studio-headphones-black-and-white-square.webp` | image | other | 0.389 MB |
 | -- | `artists-cafe-richard-footer-picture-5-jpeg.webp` | image | other | 0.08 MB |
 | -- | `artists-cafe-richard-footer-picture-5-jpg.webp` | image | other | 0.069 MB |
 | -- | `artists-red-light-portrait.webp` | image | other | 0.273 MB |
@@ -239,7 +239,7 @@ This is the active catalog for Checkmark Audio website media. Public filenames f
 | -- | `control-room-desk-view-04.webp` | image | other | 0.497 MB |
 | -- | `control-room-speaker-mural-view-01.webp` | image | other | 1.197 MB |
 | -- | `control-room-speaker-mural.webp` | image | other | 1.339 MB |
-| -- | `country-medicine-interview-checkmark-audio-studio-thumbnail.webp` | image | other | 0.142 MB |
+| -- | `dontcallkody-performance-interview-thumbnail-checkmark-audio.webp` | image | other | 0.142 MB |
 | -- | `daniel-interview-checkmark-audio-studio-teaser-thumbnail.webp` | image | other | 0.233 MB |
 | -- | `daniel-interview-checkmark-audio-studio-thumbnail-view-01.webp` | image | other | 0.348 MB |
 | -- | `daniel-interview-checkmark-audio-studio-thumbnail-view-02.webp` | image | other | 0.642 MB |
@@ -463,12 +463,12 @@ This is the active catalog for Checkmark Audio website media. Public filenames f
 | -- | `ann-and-kqakqa-albuquerque-music-scene-checkmark-audio-client-view-05.webp` | image | other | 0.223 MB |
 | -- | `artists-discussing-recording-session-studio-lounge.webp` | image | other | 0.569 MB |
 | -- | `artists-in-recording-studio.webp` | image | other | 0.623 MB |
-| -- | `country-medicine-albuquerque-music-scene-checkmark-audio-client-view-01.webp` | image | other | 0.221 MB |
-| -- | `country-medicine-recording-session-checkmark-audio-view-01.webp` | image | other | 0.387 MB |
-| -- | `country-medicine-recording-session-checkmark-audio-view-02.webp` | image | other | 0.364 MB |
-| -- | `country-medicine-recording-session-checkmark-audio-view-03.webp` | image | other | 0.141 MB |
-| -- | `country-medicine-singer-studio-headphones-view-01.webp` | image | other | 0.334 MB |
-| -- | `country-medicine-singer-studio-headphones.webp` | image | other | 0.461 MB |
+| -- | `dontcallkody-acoustic-performance-checkmark-audio.webp` | image | other | 0.221 MB |
+| -- | `dontcallkody-checkmark-tonight-performance-portrait.webp` | image | other | 0.232 MB |
+| -- | `dontcallkody-studio-a-headphones-session.webp` | image | other | 0.233 MB |
+| -- | `dontcallkody-live-vocal-performance.webp` | image | other | 0.141 MB |
+| -- | `dontcallkody-studio-headphones-black-and-white.webp` | image | other | 0.244 MB |
+| -- | `dontcallkody-studio-headphones-color.webp` | image | other | 0.461 MB |
 | -- | `country-meds-singer-vocal-recording-microphone.webp` | image | other | 0.701 MB |
 | -- | `daniel-albuquerque-music-scene-checkmark-audio-client-view-01.webp` | image | other | 0.305 MB |
 | -- | `daniel-albuquerque-music-scene-checkmark-audio-client-view-02.webp` | image | other | 0.123 MB |
@@ -574,7 +574,7 @@ This is the active catalog for Checkmark Audio website media. Public filenames f
 | -- | `artist-purple-silhouette-view-04.webp` | image | other | 0.175 MB |
 | -- | `artist-purple-silhouette-view-05.webp` | image | other | 0.216 MB |
 | -- | `artist-white-shirt-portrait.webp` | image | other | 0.269 MB |
-| -- | `artists-cafe-country-medicine-footer-picture-1.webp` | image | other | 0.389 MB |
+| -- | `dontcallkody-studio-headphones-black-and-white-square.webp` | image | other | 0.389 MB |
 | -- | `artists-cafe-richard-footer-picture-5-jpeg.webp` | image | other | 0.08 MB |
 | -- | `artists-cafe-richard-footer-picture-5-jpg.webp` | image | other | 0.069 MB |
 | -- | `artists-red-light-portrait.webp` | image | other | 0.273 MB |
@@ -654,7 +654,7 @@ This is the active catalog for Checkmark Audio website media. Public filenames f
 | -- | `control-room-desk-view-04.webp` | image | other | 0.497 MB |
 | -- | `control-room-speaker-mural-view-01.webp` | image | other | 1.197 MB |
 | -- | `control-room-speaker-mural.webp` | image | other | 1.339 MB |
-| -- | `country-medicine-interview-checkmark-audio-studio-thumbnail.webp` | image | other | 0.142 MB |
+| -- | `dontcallkody-performance-interview-thumbnail-checkmark-audio.webp` | image | other | 0.142 MB |
 | -- | `daniel-interview-checkmark-audio-studio-teaser-thumbnail.webp` | image | other | 0.233 MB |
 | -- | `daniel-interview-checkmark-audio-studio-thumbnail-view-01.webp` | image | other | 0.348 MB |
 | -- | `daniel-interview-checkmark-audio-studio-thumbnail-view-02.webp` | image | other | 0.642 MB |

@@ -1,10 +1,54 @@
 ---
 title: Project State
 status: active_development_not_launch_approved
-updated: 2026-10-05
+updated: 2026-10-07
 ---
 
 # Project State
+
+## October 7, 2026 — Studio B third detail photo corrected
+
+Author: OpenAI Codex; GPT-5.
+Task: Correct the third Studio B detail photo.
+Scope: Replaced only `studioB-rail-3`, which was showing the owner-rejected bright control-room session image, with the owner-confirmed blue-tagged `zardex-recording-session-studio-b-checkmark-audio.webp`. Updated the factual alt text, caption, canonical slot, Studio B detail-rail record, and owner-tag placement status together. Bridget then identified that all three detail photos were unreadably cropped into narrow strips in the stacked layout; responsive Studio A/B detail rails now display each complete photograph at its natural ratio. The old source image remains preserved in `MEDIA/` and other Studio B gallery selections are unchanged.
+
+Owner correction: restored the prior red Studio B sound-booth photograph as the protected page hero after Bridget said the console image had replaced it without approval. The console close-up remains once in the lower `Inside Studio B` gallery, moved from the oversized lead tile to a regular-size third tile so the hero is not repeated.
+
+Gallery correction: removed the redundant large `Artist session` tile from `Inside Studio B`. Reconciled the six remaining gallery slots with their actual sources and captions, eliminating the stale slot overrides that had mislabeled booth images and repeated the blue-booth photograph.
+
+Validation/status: Implemented locally in the isolated Netlify review worktree and remains uncommitted/unpushed. The corrected three-photo rail was visually checked at 1440×900 and in the stacked responsive layout; the responsive cards now reveal the complete photographs rather than shallow crops. The restored red booth hero and regular-size console gallery tile were also verified in the browser. JSON parsing, public-asset inclusion, whitespace, and the generated 214-file noindex Netlify artifact pass. The site-link audit still reports only the already documented source-only intro-video reference. Pull request #4, its hosted deploy preview, Wix production, DNS, `main`, and indexing remain unchanged.
+
+## October 6, 2026 — Featured Artists roster expansion
+
+Author: OpenAI Codex; GPT-5.
+Task: Expand the Featured Artists gallery and add the full NEH band.
+Scope: Rebuilt the dedicated Featured Artists grid as ten named editorial presentations rather than a repeated portrait wall. NEH now uses one side-by-side feature combining the retained performance-space portrait with the full four-member band photograph and one shared caption. Preserved the approved Kai Warrior pair, added `Daniel / Mira Como Suena` using the exact artist spelling already confirmed in the demo playlist, and added Diego, dontcallkody + zardex, Gregorio and the Unknown, and Christian alongside the retained Lobo, Millie, and Vohn entries. Removed the anonymous teal-jacket tile and the second duplicate Millie tile. The selection favors outdoor portraits, live performance, band, and promotional imagery over additional studio-room photographs.
+
+Validation/status: Implemented only in the isolated Netlify review worktree and remains uncommitted/unpushed. Browser checks at 1440×900 and 390×844 show ten figures, no broken loaded images, no horizontal overflow, no caption overflow, and a readable NEH pair with both the individual and full-band image visible. The 214-file local Netlify artifact rebuild passes with indexing off. The hosted Netlify preview, Wix production, DNS, `main`, and indexing state remain unchanged.
+
+## October 6, 2026 — Featured Artists and owner-tagged media placement
+
+Author: OpenAI Codex; GPT-5.
+Task: Featured Artists page and owner-tagged media placement.
+Scope: Implemented a new noindex `featured-artists.html` page and shared navigation/footer entry, with an editorial artist gallery and concise artist-development statement grounded in the existing business direction. Applied Bridget's Finder tag system to the review release: red for Checkmark Tonight, yellow for Services, blue for Studio B, purple for Studio A, green for Featured Artists, and gray for overall Checkmark imagery. Color-graded selections now replace older images across Home, Services, Studio A, Studio B, and Checkmark Tonight; all six red Checkmark Tonight images and nine green artist images are used. Orange-tagged files were not assigned a meaning and remain untouched. `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` records the active selections and the gray overall-image pool. Unknown artist identities are not invented.
+
+Owner correction: Bridget identified `recording-session-behind-the-scenes-checkmark-audio-view-01.webp` as mistakenly blue-tagged and requested its removal. It now has no active website references. The homepage Studio B card uses the blue-tagged console close-up; Studio B's rail/gallery use current booth imagery instead. The source asset remains preserved in the media library.
+
+Homepage hero and artist-strip correction: Bridget removed the purple motion guitarist image from banner use. The canonical carousel now contains three stronger studio/performance photographs. The page-one Featured Artists strip now uses three native black-and-white portraits; this monochrome direction applies only to that homepage strip. The dedicated `featured-artists.html` gallery retains its original mix of color and black-and-white photographs, with no global grayscale filter. Hero loading treats canonical slide membership as authoritative, preventing a removed slide from returning through older browser-local editor data while retaining saved crops for slides that remain.
+
+Featured Artists gallery correction: the two Kai Warrior portraits are now one wide, side-by-side editorial feature with complementary focal crops and one shared `Kai Warrior` caption. The pair remains together at phone width; all other artist cards and their existing color treatment are unchanged. `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` records the paired presentation.
+
+Checkmark Tonight gallery correction: removed the permanent text captions from all six thumbnails and added a full-screen photo viewer with previous/next controls, keyboard arrows, Escape-to-close, swipe navigation, image count, focus restoration, and artist credits shown only where supported by existing records. Confirmed credits currently shown are Gregorio and the Unknown, dontcallkody, and Diego. Bridget corrected the blonde artist's provisional `Country Medicine` identification to the exact artist name `dontcallkody`; the active filename, alt text, viewer credit, Studio A reference, and media records now agree. The purple light-trail portrait and live-recording preparation photo remain deliberately unnamed pending owner identification; no artist identity was invented. `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` records the credit mapping.
+
+SEO media naming correction: Bridget identified the wavy-haired artist in newly tagged `_A7R1595.JPG` as `zardex` and the other artist as `dontcallkody`. Preserved the original camera files in the main checkout and created three optimized, lowercase kebab-case WebP copies in the isolated review branch: one blue-tagged Studio B portrait of zardex and two green-tagged dontcallkody/zardex artist portraits. These three new copies are cataloged but remain unplaced pending the next visual selection pass.
+
+Services Production owner correction: restored Bridget's protected collaborative production photograph showing Gavin Hammond recording a band with Richard Baca present. It replaces the temporary synthesizer-keyboard image in the Production selector and canonical media record. The keyboard photograph remains preserved in `MEDIA/` for a possible secondary use. Do not replace the collaborative production photograph without Bridget's explicit request.
+
+Homepage banner owner correction: the three-slide order is now the Checkmark Audio studio sign, the airborne red-electric-guitar pose, then the control-room microphone. Richard does not appear in this banner. The guitarist image uses a lower focal crop on desktop and a tighter explicit phone crop so the red guitar, arm, and airborne body angle remain visible while the face stays outside the frame. Browser verification passed at the default desktop viewport and 390×844 phone viewport.
+
+Validation/status: Implemented only in the isolated `/Users/bridges/.codex/worktrees/netlify-review-release/CheckmarkAudio.com` checkout on branch `codex/netlify-review-release`, based on commit `6bf6a2e22c4246f432b76489b0e867f6fb99f2cd`. Desktop 1440px and narrow 488px visual checks passed for Home, Featured Artists, Services, Studio A, Studio B, and Checkmark Tonight with no horizontal page overflow or broken loaded images. The corrected homepage strip, unchanged color treatment on the dedicated Featured Artists gallery, paired Kai Warrior feature, and Checkmark Tonight lightbox were visually checked at normal and 390px phone widths. The lightbox's click, arrow-button, keyboard-next, Escape-close, and focus-return behavior passed. The restored Production photograph was visually checked in the selected Services panel and loaded at its full 2400×1800 dimensions with the confirmed Gavin/Richard alt text. JavaScript syntax, media JSON, metadata row shape, whitespace, referenced-site links, and a 214-file generated Netlify artifact pass. The artifact includes the active renamed dontcallkody images and all three newly cataloged dontcallkody/zardex assets while retaining `noindex,nofollow`; the media index contains 12 dontcallkody paths, three zardex paths, and no obsolete public Country Medicine filename. Historical source names remain only in provenance/audit records. The only link-audit warning is the already documented local source-video reference, while its public web derivative is present. Local preview: `http://127.0.0.1:4193/services.html`.
+
+Current publication state: local and uncommitted/unpushed. Pull request #4 and `https://deploy-preview-4--checkmarkaudio.netlify.app/` still show the previous review release. Wix production, DNS, the custom domain, indexing state, and `main` are untouched. Next: Bridget/Gavin review the new page and media placements, confirm artist names/usage permissions, then explicitly authorize a scoped commit and push if the Netlify preview should update.
 
 ## October 5, 2026 — clean Netlify review release prepared
 

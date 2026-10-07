@@ -57,6 +57,24 @@ When sources conflict, record the newer confirmed decision in `PROJECT_STATE.md`
 - Update all references in the same pass when moving or renaming active media.
 - Keep large source media and optimized website media distinct according to `MEDIA_SEO_PLAN.md`.
 
+### October 6, 2026 — protected Services Production photograph
+
+Author: OpenAI Codex; GPT-5.
+Task: Restore Bridget's favorite Production photograph.
+Scope: Bridget reconfirmed that `MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp`, showing Gavin Hammond recording a band with Richard Baca present, is the protected Services Production image. Do not replace or remove it without Bridget's explicit request. The synthesizer-keyboard photograph remains available in `MEDIA/` for a future secondary placement but does not replace this Production scene. Status: implemented locally in the isolated Netlify review worktree; uncommitted and unpushed.
+
+### October 6, 2026 — protected homepage banner order
+
+Author: OpenAI Codex; GPT-5.
+Task: Correct homepage banner order and guitarist framing.
+Scope: The homepage banner order is Checkmark Audio studio sign first, airborne red-electric-guitar pose second, and control-room microphone third. Richard must not appear in the homepage banner. The guitarist slide must be framed around the guitar/body motion with the face outside the visible crop on desktop and phone. Do not reorder, replace, or reframe these slides without Bridget's explicit request. Status: implemented locally in the isolated Netlify review worktree; uncommitted and unpushed.
+
+### October 6, 2026 — Featured Artists image rhythm
+
+Author: OpenAI Codex; GPT-5.
+Task: Expand the Featured Artists roster without making the gallery repetitive.
+Scope: Favor outdoor portraits, live performance, band, and promotional imagery on the Featured Artists page; use studio-room photographs only when they add something the artist-world imagery does not. Keep a varied editorial rhythm of singles, wide band frames, and occasional paired features rather than giving every artist two photographs. NEH and Kai Warrior currently have approved side-by-side treatments with one shared caption each. Do not invent artist identities or affiliations. Status: implemented locally in the isolated Netlify review worktree; uncommitted and unpushed.
+
 ## SEO and launch
 
 - Use one authoritative page per approved major search intent.
