@@ -47,13 +47,7 @@
 <footer class="footer"><div class="wrap footgrid"><div><img src="MEDIA/IMAGES/checkmark-audio-logo-official-gold-gradient-transparent.png?v=20261003-transparent" alt="" width="58" height="58"><p>Recording, production, mixing, and mastering in Albuquerque, New Mexico.</p><p>Active replacement website · noindex · not yet live.</p></div><div><b class="condensed">Explore</b><ul><li><a href="services.html">Services</a></li><li><a href="featured-artists.html">Featured Artists</a></li><li><a href="#work">Our work</a></li><li><a href="#studios">Studios</a></li><li><a href="team.html">Team</a></li><li><a href="faq.html">Q &amp; A</a></li></ul></div><div><b class="condensed">Start</b><ul><li><a href="#book">Free consultation</a></li><li><a href="tel:+15052670558">Call or text</a></li><li><a href="mailto:CheckmarkAudio@gmail.com">Email</a></li></ul></div></div></footer>
 <a class="btn primary mobile-cta" href="#book">Start your inquiry</a>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-const EMAILJS_SERVICE = 'service_jdvioa3';
-const EMAILJS_INTERNAL_TEMPLATE = 'template_p5jpn2p';
-const EMAILJS_CLIENT_TEMPLATE = 'template_74v582p';
-const waitForEmailJSRateLimit = () => new Promise(resolve => window.setTimeout(resolve, 3000));
-if (window.emailjs) emailjs.init({ publicKey: 'N5UpWeOs8jdOTQitf' });
-</script>
+<script src="checkmark-emailjs.js?v=20261008-cal-embed"></script>
 <script src="checkmark-navigation.js?v=20260922-2"></script>
 <script>
 const reviewTrack=document.getElementById('reviewTrack');
@@ -97,13 +91,7 @@ const homeCalendar=document.createElement('section');homeCalendar.className='ser
 const requestedService=new URLSearchParams(location.search).get('service');if(requestedService){const serviceField=document.getElementById('service');if([...serviceField.options].some(option=>option.value===requestedService)){serviceField.value=requestedService;document.getElementById('message').value='I would like to talk about '+requestedService.toLowerCase()+'.'}}
 document.getElementById('inquiryForm').addEventListener('submit',async e=>{e.preventDefault();const form=e.currentTarget;if(form.company.value||!form.reportValidity())return;form.time.value=new Date().toLocaleString();const button=form.querySelector('button[type="submit"]');button.disabled=true;button.textContent='Sending…';const projectMessage=[form.message.value,form.preferred.value?`Preferred date / time: ${form.preferred.value}`:''].filter(Boolean).join('\n');const params={name:form.name.value,email:form.email.value,phone:form.phone.value,reply_to:form.email.value,style:form.service.value,message:projectMessage,time:form.time.value};try{if(!window.emailjs)throw new Error('Email service unavailable');await emailjs.send(EMAILJS_SERVICE,EMAILJS_CLIENT_TEMPLATE,params);await waitForEmailJSRateLimit();await emailjs.send(EMAILJS_SERVICE,EMAILJS_INTERNAL_TEMPLATE,params);document.getElementById('success').style.display='block';button.textContent='Sent ✓';form.reset()}catch(error){console.error('Inquiry email failed',error);button.disabled=false;button.textContent='Send inquiry';alert('Something went wrong sending your inquiry — please call or text 505-267-0558 instead.')}});
 </script>
-<script>
-(function(C,A,L){let p=(a,ar)=>a.q.push(ar),d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal,ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement('script')).src=A;cal.loaded=true}if(ar[0]===L){const api=function(){p(api,arguments)},namespace=ar[1];api.q=api.q||[];if(typeof namespace==='string'){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,['initNamespace',namespace])}else p(cal,ar);return}p(cal,ar)}})(window,'https://app.cal.com/embed/embed.js','init');
-Cal('init','consultation',{origin:'https://cal.com'});
-Cal.ns.consultation('inline',{elementOrSelector:'#cal-inline',config:{layout:'month_view',theme:'light'},calLink:'checkmarkaudio/consult'});
-Cal.ns.consultation('ui',{theme:'light',styles:{branding:{brandColor:'#D6A85E'}},hideEventTypeDetails:false,layout:'month_view'});
-Cal.ns.consultation('on',{action:'bookingSuccessful',callback:async event=>{const data=event.detail?.data||{},booking=data.booking||data,attendee=booking.attendees?.[0]||{},start=booking.startTime||data.startTime,startDate=start?new Date(start):null,when=startDate?`${startDate.toLocaleDateString('en-US',{dateStyle:'full'})} at ${startDate.toLocaleTimeString('en-US',{timeStyle:'short'})}`:'the time selected',summary=`Your free Checkmark Audio consultation is booked for ${when} at 5413 Lomas Blvd NE, Albuquerque, NM 87110.`;const client={name:attendee.name||'',email:attendee.email||'',reply_to:attendee.email||'',phone:attendee.phoneNumber||attendee.phone||'',time:new Date().toLocaleString(),style:'Consultation Booking',message:summary},internal={...client,message:`New consultation booked for ${when}.`};if(window.emailjs){try{await emailjs.send(EMAILJS_SERVICE,EMAILJS_CLIENT_TEMPLATE,client)}catch(error){console.error('Client booking email failed',error)}await waitForEmailJSRateLimit();try{await emailjs.send(EMAILJS_SERVICE,EMAILJS_INTERNAL_TEMPLATE,internal)}catch(error){console.error('Internal booking email failed',error)}}}});
-</script>
+<script src="checkmark-cal-booking.js?v=20261008-cal-embed"></script>
 <script src="checkmark-media-loader.js?v=20260827-1"></script>
 <script src="checkmark-hero-editor.js?v=20261003-sign-first"></script>
 <script src="checkmark-site-media-editor.js?v=20260922-2"></script>
