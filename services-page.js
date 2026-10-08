@@ -1,8 +1,9 @@
 (()=>{
-  const iconLayout=new URLSearchParams(window.location.search).get('mobile-icons');
-  if(['strip','index','chapters','accordion'].includes(iconLayout)){
-    document.body.dataset.mobileIconLayout=iconLayout;
-  }
+  const requestedIconLayout=new URLSearchParams(window.location.search).get('mobile-icons');
+  const iconLayout=['strip','index','chapters','accordion'].includes(requestedIconLayout)
+    ?requestedIconLayout
+    :'accordion';
+  document.body.dataset.mobileIconLayout=iconLayout;
   const options=[...document.querySelectorAll('.service-option')];
   const signalSteps=[...document.querySelectorAll('.signal-step[data-service-index]')];
   if(iconLayout==='accordion'){

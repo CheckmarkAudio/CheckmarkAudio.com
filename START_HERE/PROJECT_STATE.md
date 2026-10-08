@@ -6,13 +6,13 @@ updated: 2026-10-08
 
 # Project State
 
-## October 8, 2026 — four mobile Services icon-navigation concepts prepared
+## October 8, 2026 — Services mobile illustrated accordion approved
 
 Author: OpenAI Codex; GPT-5.
-Task: Draft less cramped, more editorial mobile treatments for the Services process-icon rail while preserving its behavior.
-Scope: Added four branch-only mobile presentations selected by the `mobile-icons` preview query: `strip` is a horizontal signal strip, `index` is a large two-column process index, `chapters` is a full-width numbered chapter list, and `accordion` combines the icon menu with the existing service rows so each large illustrated row opens its photo, copy, pricing, and links directly below. All four reuse the existing six SVG icon assets and the existing seven-service content and behavior. The ordinary Services URL remains visually unchanged.
+Task: Select and publish a less cramped, more editorial mobile treatment for the Services process icons while preserving service behavior and desktop layout.
+Scope: Bridget approved the combined illustrated accordion on October 8 and requested commit, push, and Netlify publication. The accordion is now the default Services presentation below 740px: each large illustrated service row opens its photo, copy, pricing, and links directly below. The separate process rail and redundant bullet are hidden on phones. Desktop remains unchanged; the earlier `strip`, `index`, and `chapters` query variants remain available only as review references.
 
-Validation/status: Visually reviewed all four concepts at phone width. Automated browser interaction confirmed every one of the seven illustrated accordion rows opens the correct service stage, all seven cloned icons render, the separate process rail is hidden in the combined treatment, and there is zero horizontal overflow. The earlier variants still map Idea to Consultation and Release to Artist Media, while the default URL retains its existing mobile grid/rail rules. Combined-accordion implementation commit `bf34794` is pushed in pull request #5; Netlify's hosted preview and checks pass. The branch was rebased on `23d7951` before live `main` advanced independently to calendar-loading commit `358c526`; synchronize again before any approved merge. No live-site publication is approved.
+Validation/status: Before approval, local and hosted phone testing confirmed every one of the seven illustrated rows opens the correct service, all seven icons render, the separate rail is hidden, and horizontal overflow is zero. The approved branch has been rebased onto current live-main commit `d83247d`, preserving newer SEO, redirect, calendar-loading, Team, homepage, and service-link updates. Publication validation is in progress.
 
 ## October 8, 2026 — Netlify production deploy and domain routing verified
 
