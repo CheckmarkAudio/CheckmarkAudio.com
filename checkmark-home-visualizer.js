@@ -34,6 +34,7 @@
     const small = cueStatus && cueStatus.querySelector('small');
     if (b) b.textContent = `Track ${String(trackIndex + 1).padStart(2, '0')}`;
     if (small) small.textContent = trackLabel(tracks[trackIndex]);
+    document.dispatchEvent(new CustomEvent('checkmark:demo-track', { detail: { index: trackIndex, track: tracks[trackIndex], label: trackLabel(tracks[trackIndex]) } }));
   };
   const loadTrack = (index, andPlay) => {
     stopPlayback();
@@ -89,6 +90,23 @@
     else stopPlayback();
   }
   logoBtn.addEventListener('click', togglePlay);
+
+  // Small control surface for the floating mini player (checkmark-reel-dock.js).
+  // Every action goes through the same functions as the console's own buttons.
+  window.CheckmarkDemoReel = {
+    audio,
+    tracks,
+    stage,
+    playButton: logoBtn,
+    get index() { return trackIndex; },
+    label: index => trackLabel(tracks[index == null ? trackIndex : index]),
+    play: startPlayback,
+    pause: stopPlayback,
+    toggle: togglePlay,
+    load: (index, andPlay) => loadTrack(index, andPlay),
+    step: delta => loadTrack(trackIndex + delta, !audio.paused)
+  };
+  document.dispatchEvent(new CustomEvent('checkmark:demo-reel-ready'));
   document.addEventListener('checkmark:playback-request', event => {
     if (event.detail !== audio) stopPlayback();
   });
