@@ -2,6 +2,48 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-10-08 — Home and Featured Artists — Teaser and Antoine portrait update
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Replace the first two homepage teaser photographs and use `antoine-musician-interview-headshot copy` on Antoine's dedicated card.
+
+**Status:** Implemented locally for review; uncommitted and unpushed
+
+**Change:** Replaced the homepage teaser's first image with the native black-and-white dontcallkody headphones portrait and moved Antoine's black-and-white headshot into the second slot. Preserved Kai Warrior as the third teaser image and retained the homepage-only monochrome direction. Replaced Antoine's dedicated Featured Artists card image with the existing optimized WebP of the owner-named 2400×1603 color interview-headshot source. No other artist cards, captions, order, or color treatments changed.
+
+**Validation:** Reviewed the homepage teaser and Antoine's dedicated card at desktop and 390×844 phone width. The new teaser images form three equal monochrome frames and load at their real dimensions; Antoine's color interview photo keeps his face and cap visible in the tall gallery card. Both pages have zero horizontal overflow. Source/public parity, canonical JSON, referenced public assets, whitespace, public `noindex`, and the regenerated 216-file artifact pass.
+
+## 2026-10-07 — Services — Four selector photo replacements
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Replace the four owner-identified Services selector photographs with marked media-library selections.
+
+**Status:** Implemented locally for review; uncommitted and unpushed
+
+**Change:** Changed only the Mixing + Mastering, Live Recordings, Podcast + Voice-over, and Artist Media selector sources and factual alt text. Selected the gold/gray-tagged illuminated rack meters for mixing, the gray-tagged live multi-instrument studio session for live recording, the gold-tagged close studio microphone for podcast and voice-over, and the exact `dontcalkody-zardex-albuquerque-artists-photo-shoot.webp` requested for Artist Media. Imported the existing optimized Artist Media WebP into the verified review worktree and reconciled both canonical Services records. Preserved the protected Production photograph of Gavin Hammond recording a band with Richard Baca, all other selectors, pricing, copy, links, and layout.
+
+**Validation:** Click-tested all four updated selectors at desktop and 390×844 mobile widths. Each selected state resolves to the intended image and correct alt text, all four assets report valid natural dimensions, key subjects remain visible in the responsive crop, and horizontal overflow is zero. Re-selected Production and confirmed its source and attribution are unchanged.
+
+## 2026-10-07 — Featured Artists — Protected roster extension
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Add Antione, Tiny House Elevator, and other clearly identified Community artists without redesigning the approved gallery.
+
+**Update (2026-10-08) author:** OpenAI Codex; GPT-5. **Task:** Apply Bridget's corrections to remove Gardenview and Unchained, select Antoine's black-and-white portrait, and move Jjune directly after Daniel / Mira Como Suena.
+
+**Status:** Implemented locally for review; uncommitted and unpushed
+
+**Change:** Christian's standalone card remains removed because Bridget confirmed he is already part of the existing NEH feature. Gardenview and Unchained were subsequently removed at Bridget's direction. Replaced Antoine's color guitar image with the existing black-and-white portrait that matches his curated interview and performance media, then moved Jjune directly after Daniel / Mira Como Suena. Antoine, Tiny House Elevator, Marz, and Jjune remain in the roster; every other artist image, caption, order, sizing class, color treatment, and the Kai Warrior/NEH paired layouts remain unchanged. Updated `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` to match the visible roster and removed Unchained from the paired-feature record. No media was renamed or deleted.
+
+**Validation:** Reviewed at desktop and 390×844 phone width. The page contains 13 artist presentations, Jjune directly follows Daniel in both the visible DOM and canonical list, all images load at real dimensions after exercising lazy loading, Antoine's portrait remains clearly framed, the requested artists are absent, captions fit, paired features remain readable, and horizontal overflow is zero. Source/public roster parity, referenced public assets, JavaScript syntax, whitespace, public `noindex`, and the regenerated 215-file artifact pass.
+
+## 2026-10-07 — Studio B — Editorial story replaces divided gallery
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Integrate Studio B's lower media and text using the Studio A editorial-story format.
+
+**Status:** Implemented locally for review; uncommitted and unpushed
+
+**Change:** Preserved the red-booth hero and all three upper detail photographs. Removed the separate cream information deck and JavaScript-injected `Inside Studio B` gallery. Recast the three existing information blocks as image-led chapters using the ZEDi control desk, the vocal-booth microphone setup, and `vocal-booth-microphone-warm-light-view-03.webp`. Removed the non-Studio-B booth-connection image, blue-light booth view, blue booth-atmosphere view, and duplicate workstation tile from Studio B's active lower-page media. Updated markup, shared editorial styling, script behavior, cache keys, and canonical media slots together.
+
+**Validation:** Reviewed at 1280×900 desktop and 390×844 phone width. The three story sources load at their real dimensions, the vocal setup displays at its full 3:4 portrait ratio instead of a narrow crop, the retired gallery and removed images are absent, the upper rail remains intact, and there is no horizontal overflow. JavaScript syntax, canonical and public JSON, whitespace, public `noindex`, and the regenerated 213-file artifact pass.
+
 ## 2026-10-07 — Sitewide — Shared main handoff for Claude and Codex
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Commit and push all current page-image work to `main` for cross-assistant continuation.

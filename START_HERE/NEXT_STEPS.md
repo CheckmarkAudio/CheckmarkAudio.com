@@ -6,6 +6,39 @@ updated: 2026-10-07
 
 # Finish and migrate CheckmarkAudio.com
 
+## October 8, 2026 — review the homepage artist teaser and Antoine portrait
+
+Author: OpenAI Codex; GPT-5.
+Task: Replace the first two homepage teaser images and move Antoine's black-and-white portrait into the second teaser slot.
+Scope/status: The homepage teaser now shows dontcallkody, Antoine, and Kai Warrior in black and white. Antoine's dedicated artist card uses the requested color interview headshot. All other Featured Artists cards and the teaser's third image remain unchanged. This refinement is local, uncommitted, and unpushed.
+
+Next: Review the teaser rhythm and Antoine crop at desktop and phone width. Commit and push only if Bridget requests publication; keep Wix, DNS, domain routing, and indexing unchanged.
+
+## October 7, 2026 — review the refreshed Services selector photos
+
+Author: OpenAI Codex; GPT-5.
+Task: Replace the four owner-identified Services images from the gold/yellow and gray Finder-tagged media pool.
+Scope/status: Mixing + Mastering now shows the illuminated analog rack, Live Recordings shows musicians recording guitar and keyboard together, Podcast + Voice-over shows the close studio microphone, and Artist Media shows dontcallkody and zardex in the requested Albuquerque photo shoot. The exact Artist Media source has been added as a web-ready WebP. Production and every other Services selection remain unchanged. This refinement is local, uncommitted, and unpushed.
+
+Next: Review the four selector states on `services.html`, especially the mobile crop of the vertical Artist Media photograph. Commit and push only if Bridget requests publication; keep Wix, DNS, domain routing, and indexing unchanged.
+
+## October 7, 2026 — review the extended Featured Artists roster
+
+Author: OpenAI Codex; GPT-5.
+Task: Add requested and clearly identified artists without changing the approved page design.
+Update (2026-10-08) author: OpenAI Codex; GPT-5. Task: Remove Gardenview and Unchained, replace Antoine's color image with his black-and-white portrait, and move Jjune after Daniel / Mira Como Suena.
+Scope/status: Christian's standalone card remains removed because he is represented in NEH. Antoine, Tiny House Elevator, Marz, and Jjune remain in the established mosaic styles. Gardenview and Unchained are no longer in the active roster, Antoine uses the existing black-and-white headshot, and Jjune now appears directly after Daniel / Mira Como Suena. Every other artist presentation remains unchanged. This refinement is local, uncommitted, and unpushed.
+
+Next: Review the corrected 13-artist roster at desktop and phone width, especially Antoine's new portrait crop. Commit and push only if Bridget requests publication; preserve the remaining artist entries and keep Wix, DNS, domain routing, and indexing unchanged.
+
+## October 7, 2026 — review the Studio B editorial story
+
+Author: OpenAI Codex; GPT-5.
+Task: Replace the detached Studio B gallery with integrated image-and-text chapters.
+Scope/status: The red-booth hero and upper three-photo detail rail remain unchanged. The lower page now pairs `Best uses` with the ZEDi control desk, `The room` with the vocal setup, and `Plan your session` with the warm golden microphone image. The non-Studio-B booth connection, blue-light booth media, and duplicate workstation tile are no longer active on Studio B. This refinement is local, uncommitted, and unpushed.
+
+Next: Review the complete Studio B story at desktop and phone width. Commit and push only if Bridget requests publication; keep Wix, DNS, domain routing, and indexing unchanged.
+
 ## October 7, 2026 — continue from the shared main baseline
 
 Author: OpenAI Codex; GPT-5.
