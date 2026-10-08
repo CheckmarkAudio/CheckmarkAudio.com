@@ -10,6 +10,11 @@
 /services                     /services.html           301!
 /services-4                   /services.html           301!
 /recording-mixing-mastering   /services.html           301!
+# Mixing & Mastering page retired 2026-10-08; its content lives in the
+# #mixing-mastering section of Services. Netlify matches these with or
+# without a trailing slash.
+/mixing-mastering.html        /services.html#mixing-mastering  301!
+/mixing-mastering             /services.html#mixing-mastering  301!
 /studio-a                     /studio-a.html           301!
 /studio-b                     /studio-b.html           301!
 /copy-of-studios              /studio-a.html           301!  # REVIEW: old duplicate studios page
