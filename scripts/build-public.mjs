@@ -57,7 +57,8 @@ for (const file of selected) {
   await mkdir(path.dirname(target), { recursive: true });
   if (file.endsWith('.html')) {
     let html = await readFile(path.join(root, file), 'utf8');
-    if (launched) html = html.replace(/<meta name="robots" content="noindex[^"]*">/gi, '');
+    // The 404 page keeps its noindex even after launch; it is never a search result.
+    if (launched && file !== '404.html') html = html.replace(/<meta name="robots" content="noindex[^"]*">/gi, '');
     // Netlify serves 404.html at the missing URL itself, so relative links
     // need an absolute base when the missing URL is in a subfolder.
     if (file === '404.html' && !/<base\s/i.test(html)) html = html.replace(/<head>/i, '<head><base href="/">');
