@@ -10,7 +10,7 @@ updated: 2026-10-08
 
 Author: OpenAI Codex; GPT-5.
 Task: Compare four mobile layouts for the Services process icons without changing live behavior.
-Scope/status: Pull request #5's Netlify preview supports `?mobile-icons=strip`, `?mobile-icons=index`, `?mobile-icons=chapters`, and the new blended `?mobile-icons=accordion`. The combined direction makes the existing icons the service menu itself: tapping one large illustrated row expands that service's complete content directly beneath it. The separate process rail and redundant bullet are hidden only in this variant. The live/default layout is unchanged.
+Scope/status: Pull request #5's passing Netlify preview supports `?mobile-icons=strip`, `?mobile-icons=index`, `?mobile-icons=chapters`, and the new blended `?mobile-icons=accordion`. The combined direction makes the existing icons the service menu itself: tapping one large illustrated row expands that service's complete content directly beneath it. The separate process rail and redundant bullet are hidden only in this variant. Hosted phone testing passed for all seven rows with zero horizontal overflow. The live/default layout is unchanged. Combined-accordion implementation commit: `bf34794`.
 
 Next: Review the combined accordion at `https://deploy-preview-5--checkmarkaudio.netlify.app/services.html?mobile-icons=accordion` on a phone. The other three variants remain available for comparison, but the accordion is the recommended blended direction. Only an explicitly approved treatment should replace the current mobile rail; desktop and all Services content/functionality remain protected.
 
