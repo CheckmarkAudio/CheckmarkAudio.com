@@ -12,7 +12,7 @@ Author: OpenAI Codex; GPT-5.
 Task: Draft less cramped, more editorial mobile treatments for the Services process-icon rail while preserving its behavior.
 Scope: Added three branch-only mobile presentations selected by the `mobile-icons` preview query: `strip` is a horizontal signal strip, `index` is a large two-column process index, and `chapters` is a full-width numbered chapter list. All three reuse the existing six SVG icon assets and the existing seven-service accordion, image swaps, links, copy, and signal-to-service mapping. The ordinary Services URL remains visually unchanged.
 
-Validation/status: Visually reviewed all three concepts at phone width. Automated browser interaction confirmed Idea opens Consultation and Release opens Artist Media in every concept, with the correct stage label and zero horizontal overflow. The default URL retains its existing mobile grid/rail rules. Draft implementation is local on `codex/services-mobile-icon-concepts`; no live-site publication is approved.
+Validation/status: Visually reviewed all three concepts at phone width. Automated browser interaction confirmed Idea opens Consultation and Release opens Artist Media in every concept, with the correct stage label and zero horizontal overflow. The default URL retains its existing mobile grid/rail rules. Draft implementation commit `ae71ced` is pushed in pull request #5 and the Netlify Deploy Preview passes. The branch was rebased onto live-main commit `e8d831e`; no live-site publication is approved.
 
 ## October 8, 2026 — Netlify production deploy and domain routing verified
 

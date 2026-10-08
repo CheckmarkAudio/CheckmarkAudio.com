@@ -6,11 +6,11 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Redesign the cramped phone-side icon rail as editorial mobile concepts while preserving its function.
 
-**Status:** Branch-only draft on `codex/services-mobile-icon-concepts`; not approved or published to the live site
+**Status:** Branch-only draft in implementation commit `ae71ced`, pushed in pull request #5 with a passing Netlify Deploy Preview; not approved or published to the live site
 
 **Change:** Added three query-selected phone treatments using the current icon artwork and service logic: a horizontally scrolling signal strip, a two-column icon index, and a full-width numbered process chapter list. No service name, rate, summary, image, link, desktop layout, or accordion behavior changed. The default URL keeps the current mobile rail until Bridget chooses a concept.
 
-**Validation:** Visually reviewed every concept at phone width. Click tests confirm Idea opens Consultation and Release opens Artist Media for all three; active labels update correctly and page overflow remains zero. JavaScript syntax and whitespace checks pass.
+**Validation:** Rebased onto current live-main commit `e8d831e` and preserved its on-page Mixing link and launch updates. Visually reviewed every concept at phone width. Click tests confirm Idea opens Consultation and Release opens Artist Media for all three; active labels update correctly and page overflow remains zero. JavaScript syntax, whitespace, the 217-file noindex artifact, and Netlify's deploy-preview/header/redirect checks pass.
 
 ## 2026-10-08 — Hosting — Netlify production and custom domain verified
 

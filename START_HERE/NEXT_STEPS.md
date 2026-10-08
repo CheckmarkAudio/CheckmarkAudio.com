@@ -10,9 +10,9 @@ updated: 2026-10-08
 
 Author: OpenAI Codex; GPT-5.
 Task: Compare three mobile layouts for the Services process icons without changing live behavior.
-Scope/status: The preview branch supports `?mobile-icons=strip`, `?mobile-icons=index`, and `?mobile-icons=chapters`. The live/default layout is unchanged. All concepts use the existing assets and open the same service accordion destinations.
+Scope/status: Pull request #5's Netlify preview supports `?mobile-icons=strip`, `?mobile-icons=index`, and `?mobile-icons=chapters`. The live/default layout is unchanged. All concepts use the existing assets and open the same service accordion destinations. Implementation commit: `ae71ced`.
 
-Next: Review the three Netlify Deploy Preview URLs on a phone and select one direction or request a blend. Only the selected treatment should replace the current mobile rail after explicit approval; desktop and all Services content/functionality remain protected.
+Next: Review the three variants at `https://deploy-preview-5--checkmarkaudio.netlify.app/services.html` on a phone and select one direction or request a blend. Only the selected treatment should replace the current mobile rail after explicit approval; desktop and all Services content/functionality remain protected.
 
 ## October 8, 2026 — finish the now-active Netlify domain launch
 
