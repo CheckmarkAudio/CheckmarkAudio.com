@@ -1,10 +1,18 @@
 ---
 title: Project State
 status: active_development_not_launch_approved
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # Project State
+
+## October 8, 2026 — Netlify migration baseline committed to shared main
+
+Author: OpenAI Codex; GPT-5.
+Task: Commit and push the completed website-image updates, validate the Netlify artifact, and prepare the controlled `checkmarkaudio.com` migration handoff.
+Scope: Consolidated the approved Home teaser, Featured Artists roster and Antoine portrait, Services selector photography, and Studio B editorial story into implementation commit `eaa68b0`. The commit was fast-forwarded to both `origin/codex/netlify-review-release` and `origin/main` after fetching and confirming that remote `main` was the release branch's direct ancestor. The repository remains configured for Netlify to run `node scripts/build-public.mjs` and publish only `public/`.
+
+Validation/status: JavaScript syntax, JSON parsing, whitespace, literal changed-page media references, source/public parity, responsive browser review, and the 215-file Netlify build pass. The generated site still emits page-level `noindex,nofollow` and the `X-Robots-Tag: noindex, nofollow` header. Source is committed and pushed; Wix production, DNS, Netlify custom-domain routing, and launch indexing remain unchanged and require a separate controlled cutover.
 
 ## October 8, 2026 — Homepage artist teaser and Antoine portrait refined
 
@@ -12,7 +20,7 @@ Author: OpenAI Codex; GPT-5.
 Task: Replace the first two homepage Featured Artists teaser photos and use `antoine-musician-interview-headshot copy` for Antoine's dedicated artist card.
 Scope: The homepage teaser remains limited to three native black-and-white images. Its first image is now the dontcallkody headphones portrait, its second is Antoine's black-and-white headshot moved from the dedicated artist page, and its third remains the approved Kai Warrior portrait. Antoine's card on `featured-artists.html` now uses the owner-named color interview headshot through the existing optimized WebP of that exact 2400×1603 source. The rest of the dedicated artist gallery is unchanged.
 
-Validation/status: Visually checked the homepage teaser and Antoine's dedicated card at desktop and 390×844 phone width. All four affected placements load at real dimensions, the teaser remains an even three-image monochrome composition, Antoine's interview portrait keeps his face and cap clearly framed in the tall card, and both pages have zero horizontal overflow. Source/public parity, canonical JSON, referenced public assets, whitespace, public `noindex`, and the regenerated 216-file artifact pass. Implemented locally; uncommitted and unpushed. Wix production, DNS, the custom domain, and indexing remain unchanged.
+Validation/status: Visually checked the homepage teaser and Antoine's dedicated card at desktop and 390×844 phone width. All four affected placements load at real dimensions, the teaser remains an even three-image monochrome composition, Antoine's interview portrait keeps his face and cap clearly framed in the tall card, and both pages have zero horizontal overflow. Source/public parity, canonical JSON, referenced public assets, whitespace, public `noindex`, and the regenerated artifact pass. Committed and pushed in `eaa68b0`. Wix production, DNS, the custom domain, and indexing remain unchanged.
 
 ## October 7, 2026 — Services selector photography refreshed
 
@@ -20,7 +28,7 @@ Author: OpenAI Codex; GPT-5.
 Task: Replace the four owner-identified Services selector photographs using the marked media library.
 Scope: Updated only `Mixing + Mastering`, `Live Recordings`, `Podcast + Voice-over`, and `Artist Media`. Mixing now uses the gold/gray-tagged illuminated rack meters; Live Recordings uses the gray-tagged multi-instrument guitar-and-keyboard session; Podcast + Voice-over uses the gold-tagged studio microphone close-up; Artist Media uses the exact owner-named `dontcalkody-zardex-albuquerque-artists-photo-shoot.webp`. The matching canonical slots and service-image record were updated. The Production selection remains the protected Gavin Hammond/Richard Baca band-production scene, and all copy, pricing, links, layout, and other selectors remain unchanged.
 
-Validation/status: Exercised all four updated tabs at the normal desktop viewport and 390×844 phone width. Every stage switches to the intended source, all assets load at real dimensions, the mobile crops keep the important subject visible, and the page has no horizontal overflow. Production was separately reselected and confirmed unchanged. Implemented locally; uncommitted and unpushed. Wix production, DNS, the custom domain, and indexing remain unchanged.
+Validation/status: Exercised all four updated tabs at the normal desktop viewport and 390×844 phone width. Every stage switches to the intended source, all assets load at real dimensions, the mobile crops keep the important subject visible, and the page has no horizontal overflow. Production was separately reselected and confirmed unchanged. Committed and pushed in `eaa68b0`. Wix production, DNS, the custom domain, and indexing remain unchanged.
 
 ## October 7, 2026 — Featured Artists roster extended without redesign
 
@@ -29,7 +37,7 @@ Task: Add Antione, Tiny House Elevator, and other clearly identified Community a
 Update (2026-10-08) author: OpenAI Codex; GPT-5. Task: Apply Bridget's owner corrections to remove Gardenview and Unchained, use Antoine's black-and-white portrait, and move Jjune directly after Daniel / Mira Como Suena.
 Scope: Preserved every remaining artist image, caption, layout class, color treatment, and the Kai Warrior and NEH paired features. Christian's standalone card remains removed because he is represented within NEH. The active additions are Antoine (library-supported spelling), Tiny House Elevator, Marz, and Jjune. Gardenview and Unchained were removed at Bridget's direction, Antoine's color guitar image was replaced with his existing black-and-white portrait, and Jjune now follows Daniel / Mira Como Suena. The canonical Featured Artists roster and paired-feature record match the page; no media files were deleted.
 
-Validation/status: Visually checked at desktop and 390×844 phone width. All 13 artist presentations load at real dimensions, Jjune follows Daniel in both layouts and the canonical record, Antoine's portrait crop remains clear, the requested removals are absent, captions fit, paired features remain legible, and there is no horizontal overflow. Source/public roster parity, referenced public assets, JavaScript syntax, whitespace, public `noindex`, and the regenerated 215-file artifact pass. Implemented locally; uncommitted and unpushed. The pending Studio B editorial-story changes remain in the same local worktree. Wix production, DNS, the custom domain, and indexing remain unchanged.
+Validation/status: Visually checked at desktop and 390×844 phone width. All 13 artist presentations load at real dimensions, Jjune follows Daniel in both layouts and the canonical record, Antoine's portrait crop remains clear, the requested removals are absent, captions fit, paired features remain legible, and there is no horizontal overflow. Source/public roster parity, referenced public assets, JavaScript syntax, whitespace, public `noindex`, and the regenerated artifact pass. Committed and pushed in `eaa68b0`. Wix production, DNS, the custom domain, and indexing remain unchanged.
 
 ## October 7, 2026 — Studio B editorial story replaces divided gallery
 
@@ -37,7 +45,7 @@ Author: OpenAI Codex; GPT-5.
 Task: Integrate Studio B's lower media with its text in the same editorial format as Studio A.
 Scope: Preserved the protected red-booth hero and all three upper detail photographs. Removed the detached `Inside Studio B` gallery and the separate cream information deck, then paired the three existing information blocks with the ZEDi control desk, the vocal-booth microphone setup, and the owner-selected warm golden microphone image. Removed the non-Studio-B booth-connection image, blue-light booth view, blue booth-atmosphere view, and duplicated workstation tile from Studio B's active lower-page selection. Canonical slots now describe the three editorial story images rather than the retired gallery.
 
-Validation/status: Visually checked at 1280×900 desktop and 390×844 phone width. All three story images load at real dimensions, the vocal setup keeps its full 3:4 portrait ratio, the detached gallery and removed sources are absent, the upper rail still contains its three photographs, and there is no horizontal overflow. JavaScript syntax, canonical and public JSON, whitespace, public noindex, and the regenerated 213-file artifact pass. Implemented locally; uncommitted and unpushed. Wix production, DNS, the custom domain, and indexing remain unchanged.
+Validation/status: Visually checked at 1280×900 desktop and 390×844 phone width. All three story images load at real dimensions, the vocal setup keeps its full 3:4 portrait ratio, the detached gallery and removed sources are absent, the upper rail still contains its three photographs, and there is no horizontal overflow. JavaScript syntax, canonical and public JSON, whitespace, public noindex, and the regenerated artifact pass. Committed and pushed in `eaa68b0`. Wix production, DNS, the custom domain, and indexing remain unchanged.
 
 ## October 7, 2026 — current review website authorized for main handoff
 

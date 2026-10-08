@@ -2,11 +2,21 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-10-08 — Sitewide — Netlify migration baseline pushed
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Validate, commit, and push the completed page-image updates before the controlled `checkmarkaudio.com` migration.
+
+**Status:** Implementation committed in `eaa68b0` and pushed to both `origin/codex/netlify-review-release` and `origin/main`; domain launch not yet performed
+
+**Change:** Consolidated the approved homepage teaser, Featured Artists corrections, four Services selector photographs, and Studio B editorial story into the shared source baseline. Preserved the protected Production image, existing Wix production site, DNS, email records, custom-domain routing, and development indexing state. Netlify remains configured to build `public/` from `main` with `node scripts/build-public.mjs`.
+
+**Validation:** Fetched GitHub immediately before release and confirmed remote `main` was the current branch's direct ancestor. JavaScript syntax, JSON parsing, whitespace, literal media references, source/public parity, and the 215-file Netlify artifact pass. The generated artifact still carries page-level and header-level `noindex,nofollow`. Domain attachment, DNS cutover, SSL acceptance, production inquiry/calendar checks, and search indexing remain explicit next steps.
+
 ## 2026-10-08 — Home and Featured Artists — Teaser and Antoine portrait update
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Replace the first two homepage teaser photographs and use `antoine-musician-interview-headshot copy` on Antoine's dedicated card.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Committed and pushed in `eaa68b0`; domain launch not yet performed
 
 **Change:** Replaced the homepage teaser's first image with the native black-and-white dontcallkody headphones portrait and moved Antoine's black-and-white headshot into the second slot. Preserved Kai Warrior as the third teaser image and retained the homepage-only monochrome direction. Replaced Antoine's dedicated Featured Artists card image with the existing optimized WebP of the owner-named 2400×1603 color interview-headshot source. No other artist cards, captions, order, or color treatments changed.
 
@@ -16,7 +26,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Replace the four owner-identified Services selector photographs with marked media-library selections.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Committed and pushed in `eaa68b0`; domain launch not yet performed
 
 **Change:** Changed only the Mixing + Mastering, Live Recordings, Podcast + Voice-over, and Artist Media selector sources and factual alt text. Selected the gold/gray-tagged illuminated rack meters for mixing, the gray-tagged live multi-instrument studio session for live recording, the gold-tagged close studio microphone for podcast and voice-over, and the exact `dontcalkody-zardex-albuquerque-artists-photo-shoot.webp` requested for Artist Media. Imported the existing optimized Artist Media WebP into the verified review worktree and reconciled both canonical Services records. Preserved the protected Production photograph of Gavin Hammond recording a band with Richard Baca, all other selectors, pricing, copy, links, and layout.
 
@@ -28,7 +38,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Update (2026-10-08) author:** OpenAI Codex; GPT-5. **Task:** Apply Bridget's corrections to remove Gardenview and Unchained, select Antoine's black-and-white portrait, and move Jjune directly after Daniel / Mira Como Suena.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Committed and pushed in `eaa68b0`; domain launch not yet performed
 
 **Change:** Christian's standalone card remains removed because Bridget confirmed he is already part of the existing NEH feature. Gardenview and Unchained were subsequently removed at Bridget's direction. Replaced Antoine's color guitar image with the existing black-and-white portrait that matches his curated interview and performance media, then moved Jjune directly after Daniel / Mira Como Suena. Antoine, Tiny House Elevator, Marz, and Jjune remain in the roster; every other artist image, caption, order, sizing class, color treatment, and the Kai Warrior/NEH paired layouts remain unchanged. Updated `MEDIA/WEBSITE_MEDIA_SELECTIONS.json` to match the visible roster and removed Unchained from the paired-feature record. No media was renamed or deleted.
 
@@ -38,7 +48,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Integrate Studio B's lower media and text using the Studio A editorial-story format.
 
-**Status:** Implemented locally for review; uncommitted and unpushed
+**Status:** Committed and pushed in `eaa68b0`; domain launch not yet performed
 
 **Change:** Preserved the red-booth hero and all three upper detail photographs. Removed the separate cream information deck and JavaScript-injected `Inside Studio B` gallery. Recast the three existing information blocks as image-led chapters using the ZEDi control desk, the vocal-booth microphone setup, and `vocal-booth-microphone-warm-light-view-03.webp`. Removed the non-Studio-B booth-connection image, blue-light booth view, blue booth-atmosphere view, and duplicate workstation tile from Studio B's active lower-page media. Updated markup, shared editorial styling, script behavior, cache keys, and canonical media slots together.
 
