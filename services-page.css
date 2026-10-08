@@ -214,6 +214,70 @@ body[data-page="services"]{background:#070807}
     box-shadow:inset 3px 0 var(--service-gold);
   }
   body[data-mobile-icon-layout="chapters"] .signal-step.is-active .signal-action::after{color:#f0cb82}
+
+  /* Concept 04: the service menu itself becomes the illustrated accordion. */
+  body[data-mobile-icon-layout="accordion"] .signal-path{display:none}
+  body[data-mobile-icon-layout="accordion"] .services-main{padding-top:8px}
+  body[data-mobile-icon-layout="accordion"] .service-selector{
+    border-top:1px solid rgba(214,168,94,.34);
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option{
+    display:grid;
+    grid-template-columns:96px 1fr;
+    gap:18px;
+    min-height:104px;
+    padding:12px 16px 12px 8px;
+    border:0;
+    border-bottom:1px solid rgba(214,168,94,.27);
+    border-radius:0;
+    background:transparent;
+    transform:none;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option:hover,
+  body[data-mobile-icon-layout="accordion"] .service-option:focus-visible,
+  body[data-mobile-icon-layout="accordion"] .service-option.is-active{
+    border-color:rgba(214,168,94,.42);
+    background:linear-gradient(90deg,rgba(214,168,94,.15),rgba(214,168,94,.02) 76%);
+    box-shadow:inset 3px 0 var(--service-gold);
+    transform:none;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option-icon{
+    display:grid;
+    place-items:center;
+    width:92px;
+    height:68px;
+    padding:2px;
+    color:var(--service-gold);
+    background:transparent;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option-icon svg{
+    width:100%;
+    height:100%;
+    overflow:visible;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2.1;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option-icon .signal-led{fill:currentColor;stroke:currentColor}
+  body[data-mobile-icon-layout="accordion"] .service-option>.service-bullet{display:none}
+  body[data-mobile-icon-layout="accordion"] .service-option>span:last-child{
+    align-self:center;
+    color:var(--service-cream);
+    font-size:1.04rem;
+    letter-spacing:.14em;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option.is-active .service-option-icon{
+    color:#f0cb82;
+    filter:drop-shadow(0 0 10px rgba(214,168,94,.3));
+  }
+  body[data-mobile-icon-layout="accordion"] .service-selector>.service-stage{
+    border-top:1px solid rgba(214,168,94,.62);
+  }
+  body[data-mobile-icon-layout="accordion"] .service-selector>.service-detail{
+    margin-bottom:0;
+  }
 }
 @media(max-width:380px){
   .services-shell{grid-template-columns:minmax(0,1fr) 62px;column-gap:8px}

@@ -6,13 +6,13 @@ updated: 2026-10-08
 
 # Project State
 
-## October 8, 2026 — three mobile Services icon-navigation concepts prepared
+## October 8, 2026 — four mobile Services icon-navigation concepts prepared
 
 Author: OpenAI Codex; GPT-5.
 Task: Draft less cramped, more editorial mobile treatments for the Services process-icon rail while preserving its behavior.
-Scope: Added three branch-only mobile presentations selected by the `mobile-icons` preview query: `strip` is a horizontal signal strip, `index` is a large two-column process index, and `chapters` is a full-width numbered chapter list. All three reuse the existing six SVG icon assets and the existing seven-service accordion, image swaps, links, copy, and signal-to-service mapping. The ordinary Services URL remains visually unchanged.
+Scope: Added four branch-only mobile presentations selected by the `mobile-icons` preview query: `strip` is a horizontal signal strip, `index` is a large two-column process index, `chapters` is a full-width numbered chapter list, and `accordion` combines the icon menu with the existing service rows so each large illustrated row opens its photo, copy, pricing, and links directly below. All four reuse the existing six SVG icon assets and the existing seven-service content and behavior. The ordinary Services URL remains visually unchanged.
 
-Validation/status: Visually reviewed all three concepts at phone width. Automated browser interaction confirmed Idea opens Consultation and Release opens Artist Media in every concept, with the correct stage label and zero horizontal overflow. The default URL retains its existing mobile grid/rail rules. Draft implementation commit `ae71ced` is pushed in pull request #5 and the Netlify Deploy Preview passes. The branch was rebased onto live-main commit `e8d831e`; no live-site publication is approved.
+Validation/status: Visually reviewed all four concepts at phone width. Automated browser interaction confirmed every one of the seven illustrated accordion rows opens the correct service stage, all seven cloned icons render, the separate process rail is hidden in the combined treatment, and there is zero horizontal overflow. The earlier variants still map Idea to Consultation and Release to Artist Media, while the default URL retains its existing mobile grid/rail rules. Pull request #5 remains the review vehicle and is being synchronized with current live-main commit `23d7951`; no live-site publication is approved.
 
 ## October 8, 2026 — Netlify production deploy and domain routing verified
 

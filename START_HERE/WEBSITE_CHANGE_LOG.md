@@ -1683,3 +1683,12 @@ Task: Commit and push approved October 5 metadata corrections and affiliate link
 Implemented owner-confirmed public metadata for King de Leone, Mai (King), BULLSHIT by Gavin Hammond, Are You Alright by NEH, and Love never Dies by Bloodshot. Added the optimized 15-second Bloodshot final-song excerpt to the 17-track reel, replaced the provisional Tape display in the comparison, updated canonical audio/media records, and linked all five affiliate badges to official sites with accessible interaction styling. Changed eight implementation/media paths; the original album master remains untouched and excluded from the website payload.
 
 Validation: both JavaScript files pass syntax checks; all edited JSON parses; scoped whitespace passes; the new MP3 checksum is `1d103f1f09c86af9bf646f08d3f3e9044e9a40f96383e53cbd8ac7bfba2f9e20` and full decode succeeds at 15 seconds. Browser review confirmed all corrected labels, comparison/demo playback, five links, and responsive badge layout. Implementation commit `f30e5a6eaa8aa0b26e589611f1d2a915e1cccf01` was pushed and `origin/main` verified at that hash. Hosted deployment was not checked; no Wix, DNS, domain, or launch action occurred. Unrelated local work was preserved.
+
+## October 8, 2026 — Services mobile illustrated accordion draft
+
+Author: OpenAI Codex; GPT-5.
+Task: Connect the mobile Services icon-menu and accordion ideas into one interaction.
+
+Added branch-only Concept 04 at `?mobile-icons=accordion`. At phone width, each of the seven service rows now carries a large existing process illustration and acts as the menu control; tapping it expands the original service image, rate, description, and links immediately beneath the active row. The separate right-side process rail and circular bullet are hidden in this concept, while the ordinary Services URL, desktop treatment, all content, and the first three draft concepts remain unchanged.
+
+Validation/status: visually reviewed at 390×844. Automated browser interaction exercised Consultation, Recording, Production, Mixing + Mastering, Live Recordings, Podcast + Voice-over, and Artist Media; every active row matched its stage label, all seven icons rendered, the separate rail was absent, and horizontal overflow was zero. Draft only in pull request #5 pending owner approval; not published to live `main`.
