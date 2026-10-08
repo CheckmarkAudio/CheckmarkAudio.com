@@ -5,6 +5,14 @@
 #
 # Lines marked REVIEW are Claude's best guess and need Gavin's confirmation.
 
+# The netlify.app address serves the same site; send it to the real domain so
+# only www.checkmarkaudio.com gets indexed. Deploy previews and branch deploys
+# use other hostnames and are not affected.
+https://checkmarkaudio.netlify.app/*  https://www.checkmarkaudio.com/:splat  301!
+
+# Browsers and crawlers ask for /favicon.ico even when the page names an icon.
+/favicon.ico                  /MEDIA/IMAGES/icons/checkmark-audio-icon-48.png  200
+
 /about                        /team.html               301!
 /our-team                     /team.html               301!
 /services                     /services.html           301!
@@ -30,3 +38,25 @@
 /gift-card                    /                        302!  # REVIEW: decision pending
 /payment-request-page         /                        302!  # REVIEW: decision pending
 /category/*                   /                        302!  # REVIEW: Wix store (all-products, beats, merchandise, mixing-tools)
+
+# More old Wix / WordPress addresses found in the Wayback Machine (2019-2025)
+# that 404ed on the new site. Added 2026-10-08 (SEO audit).
+/home                         /                        301!
+/about-3                      /team.html               301!
+/about-5                      /team.html               301!
+/contact                      /#book                   301!
+/checkmark-audio              /                        301!
+/booking-calendar/*           /#book                   301!
+/booking-rates                /services.html           301!
+/plans-pricing                /services.html           301!
+/services-and-pricing         /services.html           301!
+/mastering                    /services.html#mixing-mastering  301!
+/product-page/basic-mix-and-master     /services.html#mixing-mastering  301!
+/product-page/standard-mix-and-master  /services.html#mixing-mastering  301!
+/product-page/premium-mix-and-master   /services.html#mixing-mastering  301!
+/product-page/studio-time-at-checkmark-audio  /services.html  301!
+/service-page/*               /services.html           301!
+# Other old store pages: same pending decision as /category/* above.
+/product-page/*               /                        302!  # REVIEW: Wix store items (beats, add-ons)
+/shop                         /                        302!  # REVIEW: Wix store
+/cart-page                    /                        302!  # REVIEW: Wix store

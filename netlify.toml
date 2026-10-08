@@ -10,3 +10,9 @@
 # Search engines stay blocked on every deploy until launch day, when Gavin sets
 # the SITE_LAUNCHED=true environment variable for production in Netlify.
 # Previews and branch deploys are never indexed, whatever that variable says.
+
+# Netlify's legacy "Pretty URLs" post-processing was rewriting internal links
+# (services.html -> /services), so live links pointed at redirects and
+# duplicate addresses instead of the canonical .html pages. Keep links as written.
+[build.processing.html]
+  pretty_urls = false
