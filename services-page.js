@@ -1,6 +1,20 @@
 (()=>{
+  const requestedIconLayout=new URLSearchParams(window.location.search).get('mobile-icons');
+  const iconLayout=['strip','index','chapters','accordion'].includes(requestedIconLayout)
+    ?requestedIconLayout
+    :'accordion';
+  document.body.dataset.mobileIconLayout=iconLayout;
   const options=[...document.querySelectorAll('.service-option')];
   const signalSteps=[...document.querySelectorAll('.signal-step[data-service-index]')];
+  if(iconLayout==='accordion'){
+    const iconForService=[0,1,2,3,4,0,5];
+    options.forEach((option,index)=>{
+      const icon=signalSteps[iconForService[index]]?.querySelector('.signal-screen')?.cloneNode(true);
+      if(!icon) return;
+      icon.classList.add('service-option-icon');
+      option.prepend(icon);
+    });
+  }
   const selector=document.querySelector('.service-selector');
   const servicesMain=document.querySelector('.services-main');
   const stage=document.getElementById('service-stage');

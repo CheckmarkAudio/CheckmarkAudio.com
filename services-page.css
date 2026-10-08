@@ -22,6 +22,7 @@ body[data-page="services"]{background:#070807}
 .services-kicker>span{width:58px;height:2px;background:currentColor}
 .service-selector-wrap{display:grid;grid-template-columns:minmax(270px,390px) minmax(190px,1fr);gap:clamp(18px,2.2vw,36px);align-items:start}.service-selector{display:grid}
 .service-option{position:relative;display:flex;align-items:center;gap:18px;width:100%;min-height:54px;padding:10px 15px;border:1px solid transparent;border-bottom-color:rgba(234,223,201,.19);border-radius:4px;background:transparent;color:#d9cfbc;font:500 clamp(.98rem,1.2vw,1.18rem)/1 "Barlow Condensed",sans-serif;letter-spacing:.075em;text-align:left;text-transform:uppercase;cursor:pointer;transition:color .18s,border-color .18s,background .18s,transform .18s}
+.service-option-icon{display:none}
 .service-option:hover,.service-option:focus-visible,.service-option.is-active{z-index:1;border-color:var(--service-gold);background:rgba(214,168,94,.025);color:var(--service-cream);transform:translateX(3px)}
 .service-option:focus-visible{outline:2px solid #f0cb82;outline-offset:3px}
 .service-bullet{flex:0 0 auto;width:19px;height:19px;border:2px solid var(--service-gold);border-radius:50%;box-shadow:inset 0 0 0 4px #070807;transition:background .18s,box-shadow .18s}
@@ -104,6 +105,180 @@ body[data-page="services"]{background:#070807}
   .service-option.is-active{background:rgba(214,168,94,.065);box-shadow:inset 3px 0 var(--service-gold),0 0 18px rgba(214,168,94,.05)}
   .service-detail{min-height:0}
   .service-image-wrap{aspect-ratio:4/3}
+
+  body[data-mobile-icon-layout] .services-shell{
+    display:block;
+    width:min(100% - 26px,1760px);
+  }
+  body[data-mobile-icon-layout] .signal-path{
+    position:relative;
+    top:auto;
+    grid-column:auto;
+    grid-row:auto;
+    margin:0;
+  }
+  body[data-mobile-icon-layout] .signal-path::before{display:none}
+  body[data-mobile-icon-layout] .services-main{
+    grid-column:auto;
+    grid-row:auto;
+    padding-top:34px;
+  }
+
+  /* Concept 01: a compact horizontal signal strip. */
+  body[data-mobile-icon-layout="strip"] .signal-path{
+    display:flex;
+    gap:0;
+    padding:10px 0 13px;
+    overflow-x:auto;
+    border-top:1px solid rgba(214,168,94,.22);
+    border-bottom:1px solid rgba(214,168,94,.32);
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  body[data-mobile-icon-layout="strip"] .signal-path::-webkit-scrollbar{display:none}
+  body[data-mobile-icon-layout="strip"] .signal-step{
+    flex:0 0 112px;
+    min-width:112px;
+    padding:8px 10px 7px;
+    border-right:1px solid rgba(214,168,94,.16);
+    scroll-snap-align:start;
+  }
+  body[data-mobile-icon-layout="strip"] .signal-action{width:100%;gap:8px}
+  body[data-mobile-icon-layout="strip"] .signal-screen,
+  body[data-mobile-icon-layout="strip"] .signal-globe{width:78px;height:52px;padding:2px}
+  body[data-mobile-icon-layout="strip"] .signal-step b{font-size:.78rem;letter-spacing:.13em}
+  body[data-mobile-icon-layout="strip"] .signal-step.is-active{
+    background:linear-gradient(180deg,rgba(214,168,94,.13),rgba(214,168,94,.025));
+    box-shadow:inset 0 -2px var(--service-gold);
+  }
+
+  /* Concept 02: a two-column editorial process index. */
+  body[data-mobile-icon-layout="index"] .signal-path{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:0;
+    padding:0;
+    border-top:1px solid rgba(214,168,94,.34);
+    border-left:1px solid rgba(214,168,94,.34);
+  }
+  body[data-mobile-icon-layout="index"] .signal-step{
+    min-height:142px;
+    padding:17px 8px 14px;
+    border-right:1px solid rgba(214,168,94,.34);
+    border-bottom:1px solid rgba(214,168,94,.34);
+  }
+  body[data-mobile-icon-layout="index"] .signal-action{width:100%;gap:11px}
+  body[data-mobile-icon-layout="index"] .signal-screen,
+  body[data-mobile-icon-layout="index"] .signal-globe{width:min(118px,31vw);height:76px;padding:3px}
+  body[data-mobile-icon-layout="index"] .signal-step b{font-size:.96rem;letter-spacing:.16em}
+  body[data-mobile-icon-layout="index"] .signal-step.is-active{
+    background:linear-gradient(135deg,rgba(214,168,94,.16),rgba(214,168,94,.025) 72%);
+    box-shadow:inset 0 0 0 2px rgba(240,203,130,.72);
+  }
+
+  /* Concept 03: a full-width chapter list with oversized iconography. */
+  body[data-mobile-icon-layout="chapters"] .signal-path{
+    display:block;
+    padding:0;
+    border-top:1px solid rgba(214,168,94,.34);
+    counter-reset:signal-chapter;
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-step{
+    display:block;
+    min-height:102px;
+    border-bottom:1px solid rgba(214,168,94,.27);
+    counter-increment:signal-chapter;
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-action{
+    position:relative;
+    display:grid;
+    grid-template-columns:112px 1fr 42px;
+    align-items:center;
+    gap:14px;
+    width:100%;
+    min-height:102px;
+    padding:10px 8px 10px 0;
+    text-align:left;
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-action::after{
+    content:counter(signal-chapter,decimal-leading-zero);
+    color:rgba(214,168,94,.42);
+    font:500 1.2rem/1 "Barlow Condensed",sans-serif;
+    letter-spacing:.08em;
+    text-align:right;
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-screen,
+  body[data-mobile-icon-layout="chapters"] .signal-globe{width:104px;height:72px;padding:2px}
+  body[data-mobile-icon-layout="chapters"] .signal-step b{font-size:1.18rem;letter-spacing:.18em}
+  body[data-mobile-icon-layout="chapters"] .signal-step.is-active{
+    background:linear-gradient(90deg,rgba(214,168,94,.16),transparent 72%);
+    box-shadow:inset 3px 0 var(--service-gold);
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-step.is-active .signal-action::after{color:#f0cb82}
+
+  /* Concept 04: the service menu itself becomes the illustrated accordion. */
+  body[data-mobile-icon-layout="accordion"] .signal-path{display:none}
+  body[data-mobile-icon-layout="accordion"] .services-main{padding-top:8px}
+  body[data-mobile-icon-layout="accordion"] .service-selector{
+    border-top:1px solid rgba(214,168,94,.34);
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option{
+    display:grid;
+    grid-template-columns:96px 1fr;
+    gap:18px;
+    min-height:104px;
+    padding:12px 16px 12px 8px;
+    border:0;
+    border-bottom:1px solid rgba(214,168,94,.27);
+    border-radius:0;
+    background:transparent;
+    transform:none;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option:hover,
+  body[data-mobile-icon-layout="accordion"] .service-option:focus-visible,
+  body[data-mobile-icon-layout="accordion"] .service-option.is-active{
+    border-color:rgba(214,168,94,.42);
+    background:linear-gradient(90deg,rgba(214,168,94,.15),rgba(214,168,94,.02) 76%);
+    box-shadow:inset 3px 0 var(--service-gold);
+    transform:none;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option-icon{
+    display:grid;
+    place-items:center;
+    width:92px;
+    height:68px;
+    padding:2px;
+    color:var(--service-gold);
+    background:transparent;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option-icon svg{
+    width:100%;
+    height:100%;
+    overflow:visible;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2.1;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option-icon .signal-led{fill:currentColor;stroke:currentColor}
+  body[data-mobile-icon-layout="accordion"] .service-option>.service-bullet{display:none}
+  body[data-mobile-icon-layout="accordion"] .service-option>span:last-child{
+    align-self:center;
+    color:var(--service-cream);
+    font-size:1.04rem;
+    letter-spacing:.14em;
+  }
+  body[data-mobile-icon-layout="accordion"] .service-option.is-active .service-option-icon{
+    color:#f0cb82;
+    filter:drop-shadow(0 0 10px rgba(214,168,94,.3));
+  }
+  body[data-mobile-icon-layout="accordion"] .service-selector>.service-stage{
+    border-top:1px solid rgba(214,168,94,.62);
+  }
+  body[data-mobile-icon-layout="accordion"] .service-selector>.service-detail{
+    margin-bottom:0;
+  }
 }
 @media(max-width:380px){
   .services-shell{grid-template-columns:minmax(0,1fr) 62px;column-gap:8px}

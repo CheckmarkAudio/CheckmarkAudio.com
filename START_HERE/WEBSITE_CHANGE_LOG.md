@@ -2,6 +2,26 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-10-08 — Services — Three mobile icon-navigation concepts
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Redesign the cramped phone-side icon rail as editorial mobile concepts while preserving its function.
+
+**Status:** Branch-only draft in implementation commit `ae71ced`, pushed in pull request #5 with a passing Netlify Deploy Preview; not approved or published to the live site
+
+**Change:** Added three query-selected phone treatments using the current icon artwork and service logic: a horizontally scrolling signal strip, a two-column icon index, and a full-width numbered process chapter list. No service name, rate, summary, image, link, desktop layout, or accordion behavior changed. The default URL keeps the current mobile rail until Bridget chooses a concept.
+
+**Validation:** Rebased onto current live-main commit `e8d831e` and preserved its on-page Mixing link and launch updates. Visually reviewed every concept at phone width. Click tests confirm Idea opens Consultation and Release opens Artist Media for all three; active labels update correctly and page overflow remains zero. JavaScript syntax, whitespace, the 217-file noindex artifact, and Netlify's deploy-preview/header/redirect checks pass.
+
+## 2026-10-08 — Hosting — Netlify production and custom domain verified
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Verify whether the latest shared-main website is ready on Netlify during domain transfer.
+
+**Status:** Read-only verification complete; no deployment, DNS, Wix, registrar, or indexing change made
+
+**Finding:** Netlify's public site API reports production deploy `6ac74ed1fa5593000822d8e1` ready on commit `6a95cec503acffa9ffd92920082752ce6d9a97bc`. The current hosted HTML contains the Country Medicine correction. Live DNS and HTTPS checks show `checkmarkaudio.com` served by Netlify and `www.checkmarkaudio.com` redirecting to the apex domain, superseding older Wix-active notes.
+
+**Remaining launch gate:** The live response still sends `X-Robots-Tag: noindex, nofollow`. Production EmailJS inquiry delivery and Cal.com booking have not been exercised in this verification. Preserve Netlify and email DNS records during registrar transfer; enable `SITE_LAUNCHED=true` and redeploy only after final owner acceptance and production workflow checks.
+
 ## 2026-10-08 — Artists — Country Medicine identity correction
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Correct the blonde headphones portrait's identity and add Country Medicine to Featured Artists.
@@ -1663,3 +1683,12 @@ Task: Commit and push approved October 5 metadata corrections and affiliate link
 Implemented owner-confirmed public metadata for King de Leone, Mai (King), BULLSHIT by Gavin Hammond, Are You Alright by NEH, and Love never Dies by Bloodshot. Added the optimized 15-second Bloodshot final-song excerpt to the 17-track reel, replaced the provisional Tape display in the comparison, updated canonical audio/media records, and linked all five affiliate badges to official sites with accessible interaction styling. Changed eight implementation/media paths; the original album master remains untouched and excluded from the website payload.
 
 Validation: both JavaScript files pass syntax checks; all edited JSON parses; scoped whitespace passes; the new MP3 checksum is `1d103f1f09c86af9bf646f08d3f3e9044e9a40f96383e53cbd8ac7bfba2f9e20` and full decode succeeds at 15 seconds. Browser review confirmed all corrected labels, comparison/demo playback, five links, and responsive badge layout. Implementation commit `f30e5a6eaa8aa0b26e589611f1d2a915e1cccf01` was pushed and `origin/main` verified at that hash. Hosted deployment was not checked; no Wix, DNS, domain, or launch action occurred. Unrelated local work was preserved.
+
+## October 8, 2026 — Services mobile illustrated accordion
+
+Author: OpenAI Codex; GPT-5.
+Task: Connect the mobile Services icon-menu and accordion ideas into one interaction.
+
+Added Concept 04 at `?mobile-icons=accordion`. At phone width, each of the seven service rows carries a large existing process illustration and acts as the menu control; tapping it expands the original service image, rate, description, and links immediately beneath the active row. The separate right-side process rail and circular bullet are hidden in this concept. Bridget approved this treatment on October 8 and requested publication, so the accordion is now the default phone layout; desktop, service content, and behavior remain unchanged.
+
+Validation/status: visually reviewed locally and on Netlify's hosted deploy preview at 390×844. Automated browser interaction exercised Consultation, Recording, Production, Mixing + Mastering, Live Recordings, Podcast + Voice-over, and Artist Media; every active row matched its service, all seven icons rendered, the separate rail was absent, and horizontal overflow was zero. JavaScript syntax, whitespace, the 217-file noindex Netlify build, and preview checks passed before approval. The approved work is rebased on live-main commit `d83247d`; final production validation and publication are in progress.

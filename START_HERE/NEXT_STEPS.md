@@ -6,6 +6,22 @@ updated: 2026-10-08
 
 # Finish and migrate CheckmarkAudio.com
 
+## October 8, 2026 — publish the approved mobile Services accordion
+
+Author: OpenAI Codex; GPT-5.
+Task: Promote the owner-approved combined icon-menu and accordion to the live phone layout.
+Scope/status: Bridget approved the combined direction and explicitly requested commit, push, and Netlify publication. The default Services URL now selects `accordion`; the CSS change remains phone-only, so desktop stays unchanged. Hosted preview testing previously passed for all seven rows with zero horizontal overflow. The branch is rebased on `d83247d`; production build, final PR checks, merge, and live verification are in progress.
+
+Next: Complete the production artifact and default-URL phone checks, merge pull request #5, wait for Netlify's production deploy, and verify `https://www.checkmarkaudio.com/services.html` serves the accordion without a query parameter. Keep desktop and all Services content/functionality protected.
+
+## October 8, 2026 — finish the now-active Netlify domain launch
+
+Author: OpenAI Codex; GPT-5.
+Task: Reconcile the live hosting state during the domain-transfer process.
+Scope/status: Netlify reports production deploy `6ac74ed1fa5593000822d8e1` ready on shared-main commit `6a95cec503acffa9ffd92920082752ce6d9a97bc`. Both the apex domain and `www` now route through Netlify with HTTPS, and `www` redirects to `https://checkmarkaudio.com/`. The site remains intentionally `noindex,nofollow`.
+
+Next: Preserve the current Netlify A/CNAME records and every email MX/TXT record during the registrar transfer. Before search launch, run a real production EmailJS inquiry test and a Cal.com consultation test, complete final desktop/phone acceptance review, then set `SITE_LAUNCHED=true` in Netlify's Production context and redeploy. Confirm the resulting robots, sitemap, canonical URLs, SSL, redirects, forms, and calendar before treating launch as complete.
+
 ## October 8, 2026 — review Country Medicine identity correction
 
 Author: OpenAI Codex; GPT-5.
