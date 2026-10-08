@@ -10,9 +10,9 @@ updated: 2026-10-08
 
 Author: OpenAI Codex; GPT-5.
 Task: Promote the owner-approved combined icon-menu and accordion to the live phone layout.
-Scope/status: Bridget approved the combined direction and explicitly requested commit, push, and Netlify publication. The default Services URL now selects `accordion`; the CSS change remains phone-only, so desktop stays unchanged. Hosted preview testing previously passed for all seven rows with zero horizontal overflow. The branch is rebased on `d83247d`; production build, final PR checks, merge, and live verification are in progress.
+Scope/status: Bridget approved the combined direction and explicitly requested commit, push, and Netlify publication. Pull request #5 merged as `313e8db`, and Netlify production serves the accordion on the ordinary Services URL. Live phone testing passed for all seven rows with zero horizontal overflow; desktop remains unchanged. Search-indexing configuration was not changed.
 
-Next: Complete the production artifact and default-URL phone checks, merge pull request #5, wait for Netlify's production deploy, and verify `https://www.checkmarkaudio.com/services.html` serves the accordion without a query parameter. Keep desktop and all Services content/functionality protected.
+Next: No Services publication work remains for this approved change. Preserve the live accordion and desktop presentation during future edits; continue the separate sitewide launch/indexing checklist below.
 
 ## October 8, 2026 — finish the now-active Netlify domain launch
 
