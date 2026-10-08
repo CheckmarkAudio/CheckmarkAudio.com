@@ -6,7 +6,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Correct the blonde headphones portrait's identity and add Country Medicine to Featured Artists.
 
-**Status:** Implemented and validated in the isolated release worktree; pending commit and push
+**Status:** Implemented in `b0c44e8`, validated, and pushed to both `origin/codex/netlify-review-release` and `origin/main`; domain launch not yet performed
 
 **Change:** Kept the selected homepage image but corrected its identity from dontcallkody to Country Medicine. Added Country Medicine to the existing artist mosaic with the approved black-and-white portrait. Renamed the related Country Medicine web variants and corrected Studio A, Checkmark Tonight, canonical media selections, metadata, catalog, and media-index records. Preserved the confirmed dontcallkody + zardex imagery, all other artist cards, and the current layout.
 

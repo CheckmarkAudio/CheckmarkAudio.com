@@ -10,7 +10,7 @@ updated: 2026-10-08
 
 Author: OpenAI Codex; GPT-5.
 Task: Correct the selected blonde artist's identity and add Country Medicine to Featured Artists.
-Scope/status: The retained homepage headphones portrait, related Studio A image, Checkmark Tonight credit, filenames, and media records now identify Country Medicine. dontcallkody remains attributed only to the confirmed Austin + zardex imagery. Country Medicine is added to the existing artist mosaic without removing or reformatting another artist. Desktop and phone review, media-reference checks, canonical JSON, metadata shape, regenerated media index, source/public parity, and the 212-file noindex artifact pass; pending commit and push.
+Scope/status: The retained homepage headphones portrait, related Studio A image, Checkmark Tonight credit, filenames, and media records now identify Country Medicine. dontcallkody remains attributed only to the confirmed Austin + zardex imagery. Country Medicine is added to the existing artist mosaic without removing or reformatting another artist. Desktop and phone review, media-reference checks, canonical JSON, metadata shape, regenerated media index, source/public parity, and the 212-file noindex artifact pass. Implementation commit `b0c44e8` is pushed to both the review branch and shared `main`.
 
 Next: Include Country Medicine's Featured Artists card and corrected credits in final Netlify acceptance review. Preserve all other artist entries and keep Wix, DNS, domain routing, and indexing unchanged until cutover approval.
 
