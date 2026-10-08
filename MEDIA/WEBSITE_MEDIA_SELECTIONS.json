@@ -50,7 +50,7 @@
       "faq-hero": { "slot": "faq-hero", "kind": "background", "src": "MEDIA/IMAGES/studio-microphone-and-sign.webp", "cssVar": "--page-image" },
       "studioA-primary": { "slot": "studioA-primary", "kind": "background", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp", "cssVar": "--studio-image" },
       "studioA-rail-1": { "slot": "studioA-rail-1", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/studio-compressor-rack-close-up-view-01.webp" },
-      "studioA-rail-2": { "slot": "studioA-rail-2", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/dontcallkody-studio-a-headphones-session.webp" },
+      "studioA-rail-2": { "slot": "studioA-rail-2", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/country-medicine-studio-a-headphones-session.webp" },
       "studioA-rail-3": { "slot": "studioA-rail-3", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-05.webp" },
       "studioA-story-production": { "slot": "studioA-story-production", "kind": "image", "src": "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-behind-the-scenes-checkmark-audio-view-03.webp" },
       "studioA-story-interview": { "slot": "studioA-story-interview", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/daniel-interview-checkmark-audio-studio-thumbnail-view-01.webp" },
@@ -180,7 +180,7 @@
       "checkmarkTonight": [
         "MEDIA/IMAGES/BY_PAGE/community/artist-cafe-gregorio-footer-picture-2-jpeg.webp",
         "MEDIA/IMAGES/BY_PAGE/community/artist-purple-line-portrait-view-03.webp",
-        "MEDIA/IMAGES/GALLERY/dontcallkody-checkmark-tonight-performance-portrait.webp",
+        "MEDIA/IMAGES/GALLERY/country-medicine-checkmark-tonight-performance-portrait.webp",
         "MEDIA/IMAGES/GALLERY/diego-recording-artist-behind-the-scenes-checkmark-audio-view-01.webp",
         "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-1.webp",
         "MEDIA/IMAGES/GALLERY/recording-session-behind-the-scenes-checkmark-audio-view-07.webp"
@@ -188,7 +188,7 @@
       "checkmarkTonightArtists": {
         "MEDIA/IMAGES/BY_PAGE/community/artist-cafe-gregorio-footer-picture-2-jpeg.webp": "Gregorio and the Unknown",
         "MEDIA/IMAGES/BY_PAGE/community/artist-purple-line-portrait-view-03.webp": null,
-        "MEDIA/IMAGES/GALLERY/dontcallkody-checkmark-tonight-performance-portrait.webp": "dontcallkody",
+        "MEDIA/IMAGES/GALLERY/country-medicine-checkmark-tonight-performance-portrait.webp": "Country Medicine",
         "MEDIA/IMAGES/GALLERY/diego-recording-artist-behind-the-scenes-checkmark-audio-view-01.webp": "Diego",
         "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-1.webp": "Gregorio and the Unknown",
         "MEDIA/IMAGES/GALLERY/recording-session-behind-the-scenes-checkmark-audio-view-07.webp": null
@@ -201,7 +201,7 @@
       "hero": "MEDIA/IMAGES/BY_PAGE/studio-a/control-room-desk-view-04.webp",
       "detailRail": [
         "MEDIA/IMAGES/BY_PAGE/studio-a/studio-compressor-rack-close-up-view-01.webp",
-        "MEDIA/IMAGES/GALLERY/dontcallkody-studio-a-headphones-session.webp",
+        "MEDIA/IMAGES/GALLERY/country-medicine-studio-a-headphones-session.webp",
         "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-05.webp"
       ],
       "editorialStory": [
@@ -227,10 +227,10 @@
       ]
     },
     "featuredArtists": {
-      "status": "Expanded mixed-layout artist roster implemented for review 2026-10-07",
+      "status": "Expanded mixed-layout artist roster with Country Medicine identity correction implemented 2026-10-08",
       "hero": "MEDIA/IMAGES/BY_PAGE/community/marz-studio-side-profile.webp",
       "homepageTeaser": [
-        "MEDIA/IMAGES/BY_PAGE/community/dontcallkody-studio-headphones-black-and-white-square.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/country-medicine-studio-headphones-black-and-white-square.webp",
         "MEDIA/IMAGES/BY_PAGE/community/artist-black-and-white-headshot.webp",
         "MEDIA/IMAGES/GALLERY/kai-warrior-albuquerque-music-scene-checkmark-audio-client-view-04.webp"
       ],
@@ -242,6 +242,7 @@
         "MEDIA/IMAGES/GALLERY/kai-warrior-albuquerque-music-scene-checkmark-audio-client-view-03.webp",
         "MEDIA/IMAGES/GALLERY/kai-warrior-albuquerque-music-scene-checkmark-audio-client-view-04.webp",
         "MEDIA/IMAGES/BY_PAGE/community/dontcallkody-zardex-artist-duo-portrait.webp",
+        "MEDIA/IMAGES/BY_PAGE/community/country-medicine-studio-headphones-black-and-white-square.webp",
         "MEDIA/IMAGES/GALLERY/neh-albuquerque-music-scene-checkmark-audio-client-view-09.webp",
         "MEDIA/IMAGES/GALLERY/neh-albuquerque-music-scene-checkmark-audio-client-view-06.webp",
         "MEDIA/IMAGES/GALLERY/daniel-albuquerque-music-scene-checkmark-audio-client-view-02.webp",
@@ -296,7 +297,7 @@
       "MEDIA/IMAGES/BY_PAGE/studio-a/studio-patch-bay-and-rack-gear-view-03.webp",
       "MEDIA/IMAGES/BY_PAGE/studio-a/studio-rack-gear-meters-view-02.webp",
       "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-albuquerque-nm-control-room-microphone-view-01.webp",
-      "MEDIA/IMAGES/GALLERY/dontcallkody-studio-headphones-black-and-white.webp",
+      "MEDIA/IMAGES/GALLERY/country-medicine-studio-headphones-black-and-white.webp",
       "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-02.webp",
       "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-03.webp",
       "MEDIA/IMAGES/GALLERY/gregorio-and-the-unknown-music-video-session-studio-b-checkmark-audio-view-04.webp",

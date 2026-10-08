@@ -6,6 +6,14 @@ updated: 2026-10-08
 
 # Finish and migrate CheckmarkAudio.com
 
+## October 8, 2026 — review Country Medicine identity correction
+
+Author: OpenAI Codex; GPT-5.
+Task: Correct the selected blonde artist's identity and add Country Medicine to Featured Artists.
+Scope/status: The retained homepage headphones portrait, related Studio A image, Checkmark Tonight credit, filenames, and media records now identify Country Medicine. dontcallkody remains attributed only to the confirmed Austin + zardex imagery. Country Medicine is added to the existing artist mosaic without removing or reformatting another artist. Desktop and phone review, media-reference checks, canonical JSON, metadata shape, regenerated media index, source/public parity, and the 212-file noindex artifact pass; pending commit and push.
+
+Next: Include Country Medicine's Featured Artists card and corrected credits in final Netlify acceptance review. Preserve all other artist entries and keep Wix, DNS, domain routing, and indexing unchanged until cutover approval.
+
 ## October 8, 2026 — complete the controlled Netlify domain cutover
 
 Author: OpenAI Codex; GPT-5.
@@ -18,7 +26,7 @@ Next: Confirm Netlify successfully builds the final shared-main commit and revie
 
 Author: OpenAI Codex; GPT-5.
 Task: Replace the first two homepage teaser images and move Antoine's black-and-white portrait into the second teaser slot.
-Scope/status: The homepage teaser now shows dontcallkody, Antoine, and Kai Warrior in black and white. Antoine's dedicated artist card uses the requested color interview headshot. All other Featured Artists cards and the teaser's third image remain unchanged. Committed and pushed in `eaa68b0`.
+Scope/status: The homepage teaser shows Country Medicine, Antoine, and Kai Warrior in black and white. Antoine's dedicated artist card uses the requested color interview headshot. Country Medicine was subsequently added to the Featured Artists gallery; all other cards and the teaser's third image remain unchanged.
 
 Next: Include the teaser and Antoine crop in the final Netlify desktop/phone acceptance review; keep Wix, DNS, domain routing, and indexing unchanged until cutover approval.
 
@@ -103,7 +111,7 @@ October 6 homepage correction: the purple motion guitarist photograph is no long
 
 October 6 gallery correction: the two Kai Warrior portraits are one responsive side-by-side feature with one shared name caption. Preserve this pairing and its individual focal crops unless Bridget requests another arrangement.
 
-October 6 Checkmark Tonight correction: the thumbnail grid is caption-free and opens an accessible full-screen viewer with navigation and confirmed artist credits. Preserve the interaction. Bridget identified the blonde artist as `dontcallkody`; the old provisional `Country Medicine` credit has been corrected in the active page and media records. Bridget/Gavin still need to identify the artist in the purple light-trail portrait and the artist/session in the live-recording preparation photo before those two viewer credits can be filled accurately.
+October 8 Checkmark Tonight identity correction: the thumbnail grid remains caption-free and opens an accessible full-screen viewer with navigation and confirmed artist credits. Preserve the interaction. Bridget confirmed that the blonde artist is Country Medicine and that dontcallkody is Austin, a man. The purple light-trail portrait and live-recording preparation photo still require owner identification before those two viewer credits can be filled.
 
 October 6 SEO naming correction: the new blue-tagged zardex Studio B portrait and two green-tagged dontcallkody/zardex portraits now have optimized lowercase WebP names and catalog records. They are intentionally unplaced. Next visual pass: decide whether the blue image belongs in Studio B and which green image belongs on Featured Artists; do not add both automatically if that makes the gallery repetitive.
 

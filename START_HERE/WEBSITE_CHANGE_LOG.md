@@ -2,6 +2,16 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-10-08 — Artists — Country Medicine identity correction
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Correct the blonde headphones portrait's identity and add Country Medicine to Featured Artists.
+
+**Status:** Implemented and validated in the isolated release worktree; pending commit and push
+
+**Change:** Kept the selected homepage image but corrected its identity from dontcallkody to Country Medicine. Added Country Medicine to the existing artist mosaic with the approved black-and-white portrait. Renamed the related Country Medicine web variants and corrected Studio A, Checkmark Tonight, canonical media selections, metadata, catalog, and media-index records. Preserved the confirmed dontcallkody + zardex imagery, all other artist cards, and the current layout.
+
+**Validation:** Reviewed Featured Artists at desktop and phone width, plus the homepage teaser and Checkmark Tonight placement. The page contains 14 artist presentations, the selected Country Medicine portrait loads at its real dimensions, and the checked pages have no horizontal overflow. Source references, canonical JSON, the 589-row metadata file, regenerated media index, JavaScript syntax, whitespace, source/public parity, and the fresh 212-file noindex Netlify artifact pass.
+
 ## 2026-10-08 — Sitewide — Netlify migration baseline pushed
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Validate, commit, and push the completed page-image updates before the controlled `checkmarkaudio.com` migration.
@@ -18,7 +28,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Status:** Committed and pushed in `eaa68b0`; domain launch not yet performed
 
-**Change:** Replaced the homepage teaser's first image with the native black-and-white dontcallkody headphones portrait and moved Antoine's black-and-white headshot into the second slot. Preserved Kai Warrior as the third teaser image and retained the homepage-only monochrome direction. Replaced Antoine's dedicated Featured Artists card image with the existing optimized WebP of the owner-named 2400×1603 color interview-headshot source. No other artist cards, captions, order, or color treatments changed.
+**Change:** Replaced the homepage teaser's first image with the native black-and-white Country Medicine headphones portrait and moved Antoine's black-and-white headshot into the second slot. Preserved Kai Warrior as the third teaser image and retained the homepage-only monochrome direction. Replaced Antoine's dedicated Featured Artists card image with the existing optimized WebP of the owner-named 2400×1603 color interview-headshot source. Country Medicine was subsequently added to the dedicated artist gallery; no other artist cards, captions, order, or color treatments changed.
 
 **Validation:** Reviewed the homepage teaser and Antoine's dedicated card at desktop and 390×844 phone width. The new teaser images form three equal monochrome frames and load at their real dimensions; Antoine's color interview photo keeps his face and cap visible in the tall gallery card. Both pages have zero horizontal overflow. Source/public parity, canonical JSON, referenced public assets, whitespace, public `noindex`, and the regenerated 216-file artifact pass.
 
@@ -136,7 +146,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Featured Artists gallery correction:** Combined the two Kai Warrior portraits into one wide side-by-side editorial feature, used distinct focal crops to keep the images complementary, and replaced the duplicate captions with one shared `Kai Warrior` caption. The pair remains together at phone width; other gallery cards were not changed.
 
-**Checkmark Tonight gallery correction:** Removed all always-visible thumbnail captions and made the six photographs open an accessible full-screen viewer. Added previous/next buttons, keyboard arrows, Escape close, swipe navigation, image count, focus restoration, and artist credits where confirmed. Gregorio and the Unknown, dontcallkody, and Diego are credited; two unidentified images remain intentionally blank rather than guessing. Bridget corrected the blonde artist's prior provisional `Country Medicine` label to the exact lowercase artist name `dontcallkody`; the active filename, alt text, Studio A reference, and media records were updated together.
+**Checkmark Tonight gallery correction:** Removed all always-visible thumbnail captions and made the six photographs open an accessible full-screen viewer. Added previous/next buttons, keyboard arrows, Escape close, swipe navigation, image count, focus restoration, and artist credits where confirmed. Gregorio and the Unknown, Country Medicine, and Diego are credited; two unidentified images remain intentionally blank rather than guessing. Bridget's October 8 correction establishes that the blonde artist is Country Medicine and that dontcallkody is Austin, a man; the active filename, alt text, Studio A reference, and media records were updated together.
 
 **SEO artist naming correction:** Bridget identified the wavy-haired artist in the newly tagged camera files as `zardex` and the other artist as `dontcallkody`. Created three production-sized lowercase WebP copies with factual names: a blue-tagged Studio B portrait of zardex and two green-tagged dontcallkody/zardex portraits. The raw camera files remain untouched in the main checkout. The optimized copies are cataloged but not yet placed on a page.
 
@@ -148,7 +158,7 @@ This is the chronological record of root-website and exploratory visual decision
 
 **Files changed:** `featured-artists.html`, `featured-artists.css`, shared navigation/gallery code, Home/Services/Studio A/Studio B/Checkmark Tonight pages and CSS, `MEDIA/WEBSITE_MEDIA_SELECTIONS.json`, and selected optimized WebP assets in `MEDIA/IMAGES/`.
 
-**Outcome and validation:** Visually reviewed all affected pages at 1440px and narrow phone width with no horizontal page overflow or broken loaded images. The restored Production photograph loads at its full 2400×1800 dimensions in the selected Services panel with the confirmed Gavin/Richard alt text. JavaScript syntax, canonical JSON, metadata row shape, whitespace, site-reference links, and a generated 214-file Netlify artifact passed. The release artifact includes the active renamed dontcallkody images and all three newly cataloged dontcallkody/zardex assets, retains `noindex,nofollow`, and contains no obsolete public Country Medicine filename. Historical source names remain only in provenance/audit records. The known missing source-video audit reference remains documented; its public tour derivative is included. Local review URL: `http://127.0.0.1:4193/services.html`.
+**Outcome and validation:** Visually reviewed all affected pages at 1440px and narrow phone width with no horizontal page overflow or broken loaded images. The restored Production photograph loads at its full 2400×1800 dimensions in the selected Services panel with the confirmed Gavin/Richard alt text. JavaScript syntax, canonical JSON, metadata row shape, whitespace, site-reference links, and a generated 214-file Netlify artifact passed. The October 8 Country Medicine correction supersedes the earlier artist-attribution portion of this record; the confirmed dontcallkody + zardex assets remain valid. The known missing source-video audit reference remains documented; its public tour derivative is included.
 
 **Delivery / follow-up:** Pushed to pull request #4 on `codex/netlify-review-release`; `https://deploy-preview-4--checkmarkaudio.netlify.app/` is ready with passing deploy-preview, header, and redirect checks. Bridget/Gavin review image order and copy, identify unnamed artists without guessing, and confirm usage permissions. Merging, production deployment, indexing, and DNS cutover remain separately gated.
 
