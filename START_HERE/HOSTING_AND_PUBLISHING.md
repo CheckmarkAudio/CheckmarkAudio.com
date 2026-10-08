@@ -8,7 +8,9 @@ Decided 2026-09-29 by Gavin: the live site is hosted on Netlify. GitHub stays th
 |---|---|---|
 | `checkmarkaudio.netlify.app` | Whatever is on `main` right now | Blocked |
 | `deploy-preview-<PR number>--checkmarkaudio.netlify.app` | That pull request's changes, before they reach `main` | Blocked |
-| `checkmarkaudio.com` | Still the Wix site, until the DNS switch | Wix |
+| `checkmarkaudio.com` | Current Netlify production deploy from `main` | Blocked until `SITE_LAUNCHED=true` |
+
+Verified October 8, 2026: the apex domain resolves to Netlify, `www` redirects to the apex domain, HTTPS is active, and the production response remains `noindex,nofollow`. Preserve these website records and every email-related DNS record during any registrar transfer.
 
 ## Making changes safely
 
@@ -22,7 +24,7 @@ Once the domain points at Netlify, merging to `main` changes the public website 
 ## Launch day
 
 1. Set `SITE_LAUNCHED=true` for the Production context in Netlify (Site configuration → Environment variables), then redeploy. This removes the noindex tags and opens `robots.txt`.
-2. Add `www.checkmarkaudio.com` and `checkmarkaudio.com` under Domain management, then update the website records in Wix DNS as `NEXT_STEPS.md` section 5 describes. Keep every email record.
+2. Confirm both `www.checkmarkaudio.com` and `checkmarkaudio.com` remain connected under Domain management. Their Netlify routing is already active; do not replace the current website or email DNS records during a registrar transfer.
 
 ## How the build works
 

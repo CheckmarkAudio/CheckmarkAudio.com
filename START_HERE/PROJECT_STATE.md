@@ -6,6 +6,22 @@ updated: 2026-10-08
 
 # Project State
 
+## October 8, 2026 — three mobile Services icon-navigation concepts prepared
+
+Author: OpenAI Codex; GPT-5.
+Task: Draft less cramped, more editorial mobile treatments for the Services process-icon rail while preserving its behavior.
+Scope: Added three branch-only mobile presentations selected by the `mobile-icons` preview query: `strip` is a horizontal signal strip, `index` is a large two-column process index, and `chapters` is a full-width numbered chapter list. All three reuse the existing six SVG icon assets and the existing seven-service accordion, image swaps, links, copy, and signal-to-service mapping. The ordinary Services URL remains visually unchanged.
+
+Validation/status: Visually reviewed all three concepts at phone width. Automated browser interaction confirmed Idea opens Consultation and Release opens Artist Media in every concept, with the correct stage label and zero horizontal overflow. The default URL retains its existing mobile grid/rail rules. Draft implementation is local on `codex/services-mobile-icon-concepts`; no live-site publication is approved.
+
+## October 8, 2026 — Netlify production deploy and domain routing verified
+
+Author: OpenAI Codex; GPT-5.
+Task: Verify whether the current website is fully updated on Netlify during the domain-transfer process.
+Scope: Read-only hosting verification confirmed that Netlify's published production deploy is `ready` on exact shared-main commit `6a95cec503acffa9ffd92920082752ce6d9a97bc`. The deployed Featured Artists page contains the Country Medicine correction. `checkmarkaudio.com` now resolves to Netlify and returns HTTP 200 over HTTPS; `www.checkmarkaudio.com` redirects to the apex domain. This supersedes older notes that describe Wix as the current web destination.
+
+Validation/status: The custom domain is publicly reachable through Netlify, but the response still carries `X-Robots-Tag: noindex, nofollow`, so search publication has not been enabled. End-to-end production inquiry delivery and Cal.com booking were not exercised in this read-only verification. During any registrar transfer, preserve the current Netlify website records and all email-related DNS records. No deployment setting, DNS record, Wix setting, or indexing state was changed in this task.
+
 ## October 8, 2026 — Country Medicine identity corrected and artist card added
 
 Author: OpenAI Codex; GPT-5.

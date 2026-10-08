@@ -104,6 +104,116 @@ body[data-page="services"]{background:#070807}
   .service-option.is-active{background:rgba(214,168,94,.065);box-shadow:inset 3px 0 var(--service-gold),0 0 18px rgba(214,168,94,.05)}
   .service-detail{min-height:0}
   .service-image-wrap{aspect-ratio:4/3}
+
+  body[data-mobile-icon-layout] .services-shell{
+    display:block;
+    width:min(100% - 26px,1760px);
+  }
+  body[data-mobile-icon-layout] .signal-path{
+    position:relative;
+    top:auto;
+    grid-column:auto;
+    grid-row:auto;
+    margin:0;
+  }
+  body[data-mobile-icon-layout] .signal-path::before{display:none}
+  body[data-mobile-icon-layout] .services-main{
+    grid-column:auto;
+    grid-row:auto;
+    padding-top:34px;
+  }
+
+  /* Concept 01: a compact horizontal signal strip. */
+  body[data-mobile-icon-layout="strip"] .signal-path{
+    display:flex;
+    gap:0;
+    padding:10px 0 13px;
+    overflow-x:auto;
+    border-top:1px solid rgba(214,168,94,.22);
+    border-bottom:1px solid rgba(214,168,94,.32);
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  body[data-mobile-icon-layout="strip"] .signal-path::-webkit-scrollbar{display:none}
+  body[data-mobile-icon-layout="strip"] .signal-step{
+    flex:0 0 112px;
+    min-width:112px;
+    padding:8px 10px 7px;
+    border-right:1px solid rgba(214,168,94,.16);
+    scroll-snap-align:start;
+  }
+  body[data-mobile-icon-layout="strip"] .signal-action{width:100%;gap:8px}
+  body[data-mobile-icon-layout="strip"] .signal-screen,
+  body[data-mobile-icon-layout="strip"] .signal-globe{width:78px;height:52px;padding:2px}
+  body[data-mobile-icon-layout="strip"] .signal-step b{font-size:.78rem;letter-spacing:.13em}
+  body[data-mobile-icon-layout="strip"] .signal-step.is-active{
+    background:linear-gradient(180deg,rgba(214,168,94,.13),rgba(214,168,94,.025));
+    box-shadow:inset 0 -2px var(--service-gold);
+  }
+
+  /* Concept 02: a two-column editorial process index. */
+  body[data-mobile-icon-layout="index"] .signal-path{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:0;
+    padding:0;
+    border-top:1px solid rgba(214,168,94,.34);
+    border-left:1px solid rgba(214,168,94,.34);
+  }
+  body[data-mobile-icon-layout="index"] .signal-step{
+    min-height:142px;
+    padding:17px 8px 14px;
+    border-right:1px solid rgba(214,168,94,.34);
+    border-bottom:1px solid rgba(214,168,94,.34);
+  }
+  body[data-mobile-icon-layout="index"] .signal-action{width:100%;gap:11px}
+  body[data-mobile-icon-layout="index"] .signal-screen,
+  body[data-mobile-icon-layout="index"] .signal-globe{width:min(118px,31vw);height:76px;padding:3px}
+  body[data-mobile-icon-layout="index"] .signal-step b{font-size:.96rem;letter-spacing:.16em}
+  body[data-mobile-icon-layout="index"] .signal-step.is-active{
+    background:linear-gradient(135deg,rgba(214,168,94,.16),rgba(214,168,94,.025) 72%);
+    box-shadow:inset 0 0 0 2px rgba(240,203,130,.72);
+  }
+
+  /* Concept 03: a full-width chapter list with oversized iconography. */
+  body[data-mobile-icon-layout="chapters"] .signal-path{
+    display:block;
+    padding:0;
+    border-top:1px solid rgba(214,168,94,.34);
+    counter-reset:signal-chapter;
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-step{
+    display:block;
+    min-height:102px;
+    border-bottom:1px solid rgba(214,168,94,.27);
+    counter-increment:signal-chapter;
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-action{
+    position:relative;
+    display:grid;
+    grid-template-columns:112px 1fr 42px;
+    align-items:center;
+    gap:14px;
+    width:100%;
+    min-height:102px;
+    padding:10px 8px 10px 0;
+    text-align:left;
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-action::after{
+    content:counter(signal-chapter,decimal-leading-zero);
+    color:rgba(214,168,94,.42);
+    font:500 1.2rem/1 "Barlow Condensed",sans-serif;
+    letter-spacing:.08em;
+    text-align:right;
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-screen,
+  body[data-mobile-icon-layout="chapters"] .signal-globe{width:104px;height:72px;padding:2px}
+  body[data-mobile-icon-layout="chapters"] .signal-step b{font-size:1.18rem;letter-spacing:.18em}
+  body[data-mobile-icon-layout="chapters"] .signal-step.is-active{
+    background:linear-gradient(90deg,rgba(214,168,94,.16),transparent 72%);
+    box-shadow:inset 3px 0 var(--service-gold);
+  }
+  body[data-mobile-icon-layout="chapters"] .signal-step.is-active .signal-action::after{color:#f0cb82}
 }
 @media(max-width:380px){
   .services-shell{grid-template-columns:minmax(0,1fr) 62px;column-gap:8px}

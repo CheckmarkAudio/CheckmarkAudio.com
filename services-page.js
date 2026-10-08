@@ -1,4 +1,8 @@
 (()=>{
+  const iconLayout=new URLSearchParams(window.location.search).get('mobile-icons');
+  if(['strip','index','chapters'].includes(iconLayout)){
+    document.body.dataset.mobileIconLayout=iconLayout;
+  }
   const options=[...document.querySelectorAll('.service-option')];
   const signalSteps=[...document.querySelectorAll('.signal-step[data-service-index]')];
   const selector=document.querySelector('.service-selector');

@@ -2,6 +2,26 @@
 
 This is the chronological record of root-website and exploratory visual decisions. It does not replace the brand guide, project state, source-of-truth documents, or explicit approval from Bridget or Gavin.
 
+## 2026-10-08 — Services — Three mobile icon-navigation concepts
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Redesign the cramped phone-side icon rail as editorial mobile concepts while preserving its function.
+
+**Status:** Branch-only draft on `codex/services-mobile-icon-concepts`; not approved or published to the live site
+
+**Change:** Added three query-selected phone treatments using the current icon artwork and service logic: a horizontally scrolling signal strip, a two-column icon index, and a full-width numbered process chapter list. No service name, rate, summary, image, link, desktop layout, or accordion behavior changed. The default URL keeps the current mobile rail until Bridget chooses a concept.
+
+**Validation:** Visually reviewed every concept at phone width. Click tests confirm Idea opens Consultation and Release opens Artist Media for all three; active labels update correctly and page overflow remains zero. JavaScript syntax and whitespace checks pass.
+
+## 2026-10-08 — Hosting — Netlify production and custom domain verified
+
+**Author:** OpenAI Codex; GPT-5. **Task:** Verify whether the latest shared-main website is ready on Netlify during domain transfer.
+
+**Status:** Read-only verification complete; no deployment, DNS, Wix, registrar, or indexing change made
+
+**Finding:** Netlify's public site API reports production deploy `6ac74ed1fa5593000822d8e1` ready on commit `6a95cec503acffa9ffd92920082752ce6d9a97bc`. The current hosted HTML contains the Country Medicine correction. Live DNS and HTTPS checks show `checkmarkaudio.com` served by Netlify and `www.checkmarkaudio.com` redirecting to the apex domain, superseding older Wix-active notes.
+
+**Remaining launch gate:** The live response still sends `X-Robots-Tag: noindex, nofollow`. Production EmailJS inquiry delivery and Cal.com booking have not been exercised in this verification. Preserve Netlify and email DNS records during registrar transfer; enable `SITE_LAUNCHED=true` and redeploy only after final owner acceptance and production workflow checks.
+
 ## 2026-10-08 — Artists — Country Medicine identity correction
 
 **Author:** OpenAI Codex; GPT-5. **Task:** Correct the blonde headphones portrait's identity and add Country Medicine to Featured Artists.

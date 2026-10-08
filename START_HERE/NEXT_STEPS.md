@@ -6,6 +6,22 @@ updated: 2026-10-08
 
 # Finish and migrate CheckmarkAudio.com
 
+## October 8, 2026 — choose a mobile Services icon direction
+
+Author: OpenAI Codex; GPT-5.
+Task: Compare three mobile layouts for the Services process icons without changing live behavior.
+Scope/status: The preview branch supports `?mobile-icons=strip`, `?mobile-icons=index`, and `?mobile-icons=chapters`. The live/default layout is unchanged. All concepts use the existing assets and open the same service accordion destinations.
+
+Next: Review the three Netlify Deploy Preview URLs on a phone and select one direction or request a blend. Only the selected treatment should replace the current mobile rail after explicit approval; desktop and all Services content/functionality remain protected.
+
+## October 8, 2026 — finish the now-active Netlify domain launch
+
+Author: OpenAI Codex; GPT-5.
+Task: Reconcile the live hosting state during the domain-transfer process.
+Scope/status: Netlify reports production deploy `6ac74ed1fa5593000822d8e1` ready on shared-main commit `6a95cec503acffa9ffd92920082752ce6d9a97bc`. Both the apex domain and `www` now route through Netlify with HTTPS, and `www` redirects to `https://checkmarkaudio.com/`. The site remains intentionally `noindex,nofollow`.
+
+Next: Preserve the current Netlify A/CNAME records and every email MX/TXT record during the registrar transfer. Before search launch, run a real production EmailJS inquiry test and a Cal.com consultation test, complete final desktop/phone acceptance review, then set `SITE_LAUNCHED=true` in Netlify's Production context and redeploy. Confirm the resulting robots, sitemap, canonical URLs, SSL, redirects, forms, and calendar before treating launch as complete.
+
 ## October 8, 2026 — review Country Medicine identity correction
 
 Author: OpenAI Codex; GPT-5.
