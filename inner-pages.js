@@ -19,7 +19,7 @@ if(['recording','live'].includes(page)){
   const bookingScripts=[];
   if(!window.emailjs)bookingScripts.push('https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js');
   if(typeof EMAILJS_SERVICE==='undefined')bookingScripts.push('checkmark-emailjs.js?v=20261008-cal-embed');
-  bookingScripts.push('checkmark-cal-booking.js?v=20261008-cal-embed');
+  bookingScripts.push('checkmark-cal-booking.js?v=20261008-lazy');
   for(const src of bookingScripts){const script=document.createElement('script');script.src=src;script.async=false;document.body.appendChild(script)}
 }
 const goldThemeStyles=document.createElement('link');goldThemeStyles.rel='stylesheet';goldThemeStyles.href='checkmark-gold-theme.css?v=20260925-bebas2';document.head.appendChild(goldThemeStyles);
