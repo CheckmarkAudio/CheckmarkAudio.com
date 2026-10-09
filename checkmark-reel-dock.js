@@ -84,7 +84,9 @@
     for (const el of document.querySelectorAll(INFLOW_KEEP_CLEAR)) {
       if (dock.contains(el) || getComputedStyle(el).position === 'fixed') continue;
       const r = el.getBoundingClientRect();
-      if (!r.width || !r.height) continue;
+      // Skip empty or card-sized links (a whole card that links to booking);
+      // only real buttons need the dock to step aside.
+      if (!r.width || !r.height || r.height > 120) continue;
       if (r.left < right + pad && r.right > left - pad && r.top < bottom + pad && r.bottom > top - pad) return true;
     }
     return false;
@@ -107,7 +109,7 @@
     const consoleEl = document.getElementById('demoVideoConsole') || reel.stage;
     const { dock, part } = buildDock();
     const playBtn = part('toggle');
-    let started = false;
+    let started = !!reel.resumed; // set when the visitor already has a demo going from another page
     let dismissed = false;
     let consoleOnScreen = true;
     let yielding = false;
@@ -123,7 +125,7 @@
     };
     const paintProgress = () => {
       const d = audio.duration;
-      const p = Number.isFinite(d) && d > 0 ? Math.min(1, audio.currentTime / d) : 0;
+      const p = Number.isFinite(d) && d > 0 ? Math.min(1, audio.currentTime / d) : reel.restingProgress || 0;
       dock.style.setProperty('--reel-progress', p.toFixed(4));
     };
     const wanted = () => started && !dismissed && !consoleOnScreen;
@@ -135,7 +137,7 @@
       const show = want && !yielding;
       if (!show && dock.contains(document.activeElement)) {
         // Don't strand keyboard focus inside a dock that is going inert.
-        if (consoleOnScreen) reel.playButton.focus({ preventScroll: true });
+        if (consoleOnScreen && reel.playButton) reel.playButton.focus({ preventScroll: true });
         else document.activeElement.blur();
       }
       dock.classList.toggle('is-visible', show);
@@ -144,6 +146,7 @@
 
     showTrack(reel.index);
     paintPlayState();
+    paintProgress();
     update();
 
     document.addEventListener('checkmark:demo-track', event => showTrack(event.detail.index));
@@ -170,6 +173,7 @@
     part('prev').addEventListener('click', () => reel.step(-1));
     part('next').addEventListener('click', () => reel.step(1));
     part('expand').addEventListener('click', () => {
+      if (reel.expand) { reel.expand(); return; }
       consoleEl.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'center' });
       reel.playButton.focus({ preventScroll: true });
     });
@@ -177,6 +181,7 @@
       reel.pause();
       dismissed = true;
       update();
+      document.dispatchEvent(new CustomEvent('checkmark:reel-dock-close'));
     };
     part('close').addEventListener('click', close);
     dock.addEventListener('keydown', event => {
@@ -196,6 +201,9 @@
     };
     window.addEventListener('scroll', recheck, { passive: true });
     window.addEventListener('resize', recheck);
+    // Late layout (web fonts, images, styles injected by inner-pages.js) can
+    // move booking buttons without any scroll, so re-check when the page resizes.
+    if ('ResizeObserver' in window) new ResizeObserver(recheck).observe(document.body);
     let watchedBadge = null;
     const badgeWatch = new MutationObserver(recheck);
     const watchBadge = () => {

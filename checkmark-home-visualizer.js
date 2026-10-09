@@ -104,6 +104,13 @@
     pause: stopPlayback,
     toggle: togglePlay,
     load: (index, andPlay) => loadTrack(index, andPlay),
+    // Pick the song without fetching it (used when the visitor comes back from
+    // another page mid-demo); the clip loads on the next play.
+    park: index => {
+      if (audio.getAttribute('src')) return loadTrack(index, false);
+      trackIndex = ((index % tracks.length) + tracks.length) % tracks.length;
+      showTrack();
+    },
     step: delta => loadTrack(trackIndex + delta, !audio.paused)
   };
   document.dispatchEvent(new CustomEvent('checkmark:demo-reel-ready'));
