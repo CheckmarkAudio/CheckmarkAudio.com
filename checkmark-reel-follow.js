@@ -34,22 +34,39 @@
   };
   const clock = t => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
 
-  // Park the reel at the saved spot without loading any audio. The seek lands
-  // once the visitor presses play and the clip's metadata arrives.
+  // Park the reel at the saved spot without loading any audio. When the
+  // visitor presses play, the clip is fetched and we jump to the saved time as
+  // soon as the browser can seek there. Until the jump has really landed, the
+  // saved spot (not 0:00) is what gets remembered, so a slow or failed seek can
+  // never wipe the visitor's place.
   function parkAt(reel, saved) {
     const { audio } = reel;
     const t = Number(saved.t) || 0, d = Number(saved.d) || 0;
     reel.pendingTime = t > 0.25 ? t : null;
     reel.restingDuration = d;
     reel.restingProgress = d > 0 ? Math.min(1, t / d) : 0;
-    const forget = () => { reel.pendingTime = null; reel.restingProgress = 0; reel.restingDuration = 0; };
-    document.addEventListener('checkmark:demo-track', forget, { once: true });
-    audio.addEventListener('loadedmetadata', () => {
+    if (reel.pendingTime == null) return;
+    const events = ['loadedmetadata', 'loadeddata', 'canplay', 'progress', 'playing', 'seeked'];
+    const done = () => {
+      reel.pendingTime = null; reel.restingProgress = 0; reel.restingDuration = 0;
+      events.forEach(type => audio.removeEventListener(type, trySeek));
       document.removeEventListener('checkmark:demo-track', forget);
+    };
+    // A different song was picked: the old spot no longer applies.
+    const forget = () => done();
+    function trySeek() {
       const at = reel.pendingTime;
-      forget();
-      if (at != null && at < audio.duration - 0.5) audio.currentTime = at;
-    }, { once: true });
+      if (at == null || audio.readyState < 1) return;
+      const dur = audio.duration;
+      if (Number.isFinite(dur) && at >= dur - 0.5) return done(); // spot is past the end
+      if (Math.abs(audio.currentTime - at) < 0.75) return done(); // landed
+      const s = audio.seekable;
+      for (let k = 0; k < s.length; k++) {
+        if (s.start(k) <= at && at <= s.end(k)) { audio.currentTime = at; return; }
+      }
+    }
+    events.forEach(type => audio.addEventListener(type, trySeek));
+    document.addEventListener('checkmark:demo-track', forget, { once: true });
   }
 
   // Keep the saved spot current while this page has the reel.
