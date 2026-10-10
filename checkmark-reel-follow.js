@@ -46,7 +46,7 @@
     reel.restingDuration = d;
     reel.restingProgress = d > 0 ? Math.min(1, t / d) : 0;
     if (reel.pendingTime == null) return;
-    const events = ['loadedmetadata', 'loadeddata', 'canplay', 'progress', 'playing', 'seeked'];
+    const events = ['loadedmetadata', 'loadeddata', 'canplay', 'progress', 'playing', 'seeked', 'timeupdate'];
     const done = () => {
       reel.pendingTime = null; reel.restingProgress = 0; reel.restingDuration = 0;
       events.forEach(type => audio.removeEventListener(type, trySeek));
@@ -64,6 +64,9 @@
       for (let k = 0; k < s.length; k++) {
         if (s.start(k) <= at && at <= s.end(k)) { audio.currentTime = at; return; }
       }
+      // A server that can't seek (no byte ranges) plays from the top; once it
+      // has clearly started there, track the real time instead of a stale spot.
+      if (!s.length && audio.currentTime > 2) done();
     }
     events.forEach(type => audio.addEventListener(type, trySeek));
     document.addEventListener('checkmark:demo-track', forget, { once: true });
