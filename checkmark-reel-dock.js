@@ -5,8 +5,11 @@
 // scrolls on. Once they have started it and the console leaves the screen,
 // a small player docks bottom-left with play/pause, previous/next, a button
 // back to the full console, and close. It never starts audio on its own.
+// While another page is shown on top by checkmark-reel-continue.js, the dock
+// measures that page (booking buttons, footer) instead of the one underneath.
 (() => {
   'use strict';
+  if (window.top !== window) return; // a page shown inside the continue frame: the outer page owns the dock
   const LOGO = 'MEDIA/IMAGES/checkmark-audio-logo-official-gold-gradient-transparent-384.png';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const icon = (name, path) => `<svg class="icon-${name}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${path}"/></svg>`;
@@ -51,20 +54,21 @@
   // fixed element marked data-reel-dock-avoid. offsetLeft/offsetWidth ignore
   // the slide-in transform, so this measures where the dock will settle.
   const FIXED_OBSTACLES = '#nl-badge-frame, .mobile-cta, [data-reel-dock-avoid]';
-  function placeAboveObstacles(dock) {
+  const styleOf = el => el.ownerDocument.defaultView.getComputedStyle(el);
+  function placeAboveObstacles(dock, docs) {
     let bottom = 0;
     const left = dock.offsetLeft;
     const right = left + dock.offsetWidth;
-    document.querySelectorAll(FIXED_OBSTACLES).forEach(el => {
+    docs.forEach(doc => doc.querySelectorAll(FIXED_OBSTACLES).forEach(el => {
       if (el === dock || dock.contains(el)) return;
-      const style = getComputedStyle(el);
+      const style = styleOf(el);
       if (style.position !== 'fixed' || style.display === 'none' || style.visibility === 'hidden') return;
       const r = el.getBoundingClientRect();
       if (!r.width || !r.height) return;
       const overlapsX = r.left < right + 8 && r.right > left - 8;
       const nearBottom = r.bottom > window.innerHeight - 160;
       if (overlapsX && nearBottom) bottom = Math.max(bottom, Math.ceil(window.innerHeight - r.top + 10));
-    });
+    }));
     // Measured from the real viewport edge, so the safe-area inset is already
     // included; .is-raised drops the extra env() padding.
     dock.classList.toggle('is-raised', bottom > 0);
@@ -77,12 +81,12 @@
   // them passes under the dock, the dock steps aside and comes back once it
   // has scrolled clear.
   const INFLOW_KEEP_CLEAR = 'a[href$="#book"], #inquiryForm [type="submit"], [data-reel-dock-keep-clear]';
-  function coversCallToAction(dock) {
+  function coversCallToAction(dock, doc) {
     const left = dock.offsetLeft, top = dock.offsetTop;
     const right = left + dock.offsetWidth, bottom = top + dock.offsetHeight;
     const pad = 8;
-    for (const el of document.querySelectorAll(INFLOW_KEEP_CLEAR)) {
-      if (dock.contains(el) || getComputedStyle(el).position === 'fixed') continue;
+    for (const el of doc.querySelectorAll(INFLOW_KEEP_CLEAR)) {
+      if (dock.contains(el) || styleOf(el).position === 'fixed') continue;
       const r = el.getBoundingClientRect();
       // Skip empty or card-sized links (a whole card that links to booking);
       // only real buttons need the dock to step aside.
@@ -94,13 +98,13 @@
 
   // While the dock is in use, pad the bottom of the footer so the last lines
   // of the page can always scroll clear of it.
-  function reserveFooterSpace(dock, active) {
-    const root = document.documentElement;
-    const footer = document.querySelector('.footer');
+  function reserveFooterSpace(dock, active, doc) {
+    const root = doc.documentElement;
+    const footer = doc.querySelector('.footer');
     root.classList.toggle('has-reel-dock', active && !!footer);
     if (!active || !footer) return;
     const dockTop = window.innerHeight - dock.offsetTop;
-    const ownPad = parseFloat(getComputedStyle(footer).paddingBottom) || 0;
+    const ownPad = parseFloat(styleOf(footer).paddingBottom) || 0;
     root.style.setProperty('--reel-dock-clearance', `${Math.max(0, Math.ceil(dockTop + 12 - ownPad))}px`);
   }
 
@@ -113,6 +117,8 @@
     let dismissed = false;
     let consoleOnScreen = true;
     let yielding = false;
+    let view = null; // { doc, win } of a page shown on top (checkmark-reel-continue.js)
+    const pageDoc = () => (view ? view.doc : document);
 
     const showTrack = index => {
       part('count').textContent = `${String(index + 1).padStart(2, '0')} / ${String(tracks.length).padStart(2, '0')}`;
@@ -128,16 +134,17 @@
       const p = Number.isFinite(d) && d > 0 ? Math.min(1, audio.currentTime / d) : reel.restingProgress || 0;
       dock.style.setProperty('--reel-progress', p.toFixed(4));
     };
-    const wanted = () => started && !dismissed && !consoleOnScreen;
+    const wanted = () => started && !dismissed && (!!view || !consoleOnScreen);
     const update = () => {
       const want = wanted();
-      if (want) placeAboveObstacles(dock);
-      reserveFooterSpace(dock, started && !dismissed);
-      if (want) yielding = coversCallToAction(dock);
+      if (view && !view.doc.defaultView) view = null; // that page is gone
+      if (want) placeAboveObstacles(dock, view ? [document, view.doc] : [document]);
+      reserveFooterSpace(dock, started && !dismissed, pageDoc());
+      if (want) yielding = coversCallToAction(dock, pageDoc());
       const show = want && !yielding;
       if (!show && dock.contains(document.activeElement)) {
         // Don't strand keyboard focus inside a dock that is going inert.
-        if (consoleOnScreen && reel.playButton) reel.playButton.focus({ preventScroll: true });
+        if (consoleOnScreen && !view && reel.playButton) reel.playButton.focus({ preventScroll: true });
         else document.activeElement.blur();
       }
       dock.classList.toggle('is-visible', show);
@@ -173,6 +180,7 @@
     part('prev').addEventListener('click', () => reel.step(-1));
     part('next').addEventListener('click', () => reel.step(1));
     part('expand').addEventListener('click', () => {
+      document.dispatchEvent(new CustomEvent('checkmark:reel-dock-expand')); // drops the page on top, if any
       if (reel.expand) { reel.expand(); return; }
       consoleEl.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'center' });
       reel.playButton.focus({ preventScroll: true });
@@ -215,6 +223,19 @@
     };
     watchBadge();
     new MutationObserver(() => { watchBadge(); recheck(); }).observe(document.body, { childList: true });
+
+    // A page shown on top: follow its scrolling and late layout instead.
+    let viewSize = null;
+    document.addEventListener('checkmark:reel-stage', event => {
+      const next = event.detail;
+      if (viewSize) { viewSize.disconnect(); viewSize = null; }
+      view = next && next.doc ? next : null;
+      if (view) {
+        view.win.addEventListener('scroll', recheck, { passive: true });
+        if ('ResizeObserver' in view.win && view.doc.body) { viewSize = new view.win.ResizeObserver(recheck); viewSize.observe(view.doc.body); }
+      }
+      update();
+    });
   }
 
   if (window.CheckmarkDemoReel) init(window.CheckmarkDemoReel);

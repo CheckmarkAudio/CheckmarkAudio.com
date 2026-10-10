@@ -12,13 +12,20 @@
 // cost nothing extra for visitors who never press play.
 // To drop the feature: remove the <script> in index.html and the check in
 // inner-pages.js. The home-page dock keeps working without this file.
+//
+// While the demo is playing, page changes don't stop it at all:
+// checkmark-reel-continue.js (loaded below) keeps this page alive and shows
+// the next page on top. The saved spot above covers everything else (paused,
+// reloads, new tabs).
 (() => {
   'use strict';
+  if (window.top !== window) return; // shown inside the continue frame: the outer page owns the demo
   const KEY = 'checkmark-reel';
   const MAX_AGE = 3 * 60 * 60 * 1000;
   // Same cache strings as index.html, so inner pages reuse the cached files.
-  const DOCK_CSS = 'checkmark-reel-dock.css?v=20261009-follow';
-  const DOCK_JS = 'checkmark-reel-dock.js?v=20261009-follow';
+  const DOCK_CSS = 'checkmark-reel-dock.css?v=20261010-continuous';
+  const DOCK_JS = 'checkmark-reel-dock.js?v=20261010-continuous';
+  const CONTINUE_JS = 'checkmark-reel-continue.js?v=20261010-continuous';
   const PLAYLIST_JS = 'checkmark-demo-playlist.js?v=20261005-neh-credit';
   const HOME_PLAYER = 'index.html#demoVideoConsole';
 
@@ -95,6 +102,12 @@
     document.addEventListener('visibilitychange', () => { if (document.hidden) save(true); });
   }
 
+  const loadScript = src => new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = resolve; s.onerror = reject;
+    document.body.appendChild(s);
+  });
+
   // ---- Home page: the real console is the reel ---------------------------
   const home = window.CheckmarkDemoReel;
   if (home && document.getElementById('demoVideoConsole')) {
@@ -106,6 +119,8 @@
       home.resumed = true; // the dock may show once the console scrolls away
     }
     remember(home);
+    // Fetched on the first press of play, so visitors who never play pay nothing.
+    home.audio.addEventListener('play', () => loadScript(CONTINUE_JS).catch(() => {}), { once: true });
     return;
   }
   if (document.getElementById('demoVideoConsole')) return;
@@ -114,11 +129,6 @@
   const saved = store.read();
   if (!saved) return;
 
-  const loadScript = src => new Promise((resolve, reject) => {
-    const s = document.createElement('script');
-    s.src = src; s.onload = resolve; s.onerror = reject;
-    document.body.appendChild(s);
-  });
   const loadStyle = href => new Promise(resolve => {
     const l = document.createElement('link');
     l.rel = 'stylesheet'; l.href = href; l.onload = l.onerror = resolve;
@@ -179,6 +189,7 @@
     parkAt(reel, saved);
     remember(reel);
     window.CheckmarkDemoReel = reel;
+    reel.audio.addEventListener('play', () => loadScript(CONTINUE_JS).catch(() => {}), { once: true });
     return loadScript(DOCK_JS).then(() => {
       const hint = document.querySelector('#reelDock [data-reel-dock="hint"]');
       if (!hint) return;
