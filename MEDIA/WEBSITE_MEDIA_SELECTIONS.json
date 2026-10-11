@@ -62,7 +62,7 @@
       "studioB-rail-2": { "slot": "studioB-rail-2", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-control-room-desk-synth-view-01.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "studioB-rail-3": { "slot": "studioB-rail-3", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/zardex-recording-session-studio-b-checkmark-audio.webp", "desktop": { "x": 50, "y": 60, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 100 } },
       "studioB-story-focus": { "slot": "studioB-story-focus", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/studio-b-mixing-console-close-up.webp", "desktop": { "x": 50, "y": 54, "zoom": 100 }, "mobile": { "x": 50, "y": 52, "zoom": 100 } },
-      "studioB-story-room": { "slot": "studioB-story-room", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/checkmark-audio-vocal-recording-booth-view-02.webp", "desktop": { "x": 50, "y": 48, "zoom": 100 }, "mobile": { "x": 50, "y": 42, "zoom": 100 } },
+      "studioB-story-room": { "slot": "studioB-story-room", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-artist-back-green-light-view-03.webp", "desktop": { "x": 66, "y": 50, "zoom": 100 }, "mobile": { "x": 80, "y": 50, "zoom": 100 } },
       "studioB-story-plan": { "slot": "studioB-story-plan", "kind": "image", "src": "MEDIA/IMAGES/BY_PAGE/studio-b/vocal-booth-microphone-warm-light-view-03.webp", "desktop": { "x": 50, "y": 48, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 100 } }
     }
   },
