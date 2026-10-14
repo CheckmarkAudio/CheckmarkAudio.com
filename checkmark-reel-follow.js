@@ -23,8 +23,8 @@
   const KEY = 'checkmark-reel';
   const MAX_AGE = 3 * 60 * 60 * 1000;
   // Same cache strings as index.html, so inner pages reuse the cached files.
-  const DOCK_CSS = 'checkmark-reel-dock.css?v=20261013-waves';
-  const DOCK_JS = 'checkmark-reel-dock.js?v=20261013-waves';
+  const DOCK_CSS = 'checkmark-reel-dock.css?v=20261014-slim';
+  const DOCK_JS = 'checkmark-reel-dock.js?v=20261014-slim';
   const CONTINUE_JS = 'checkmark-reel-continue.js?v=20261010-continuous';
   const PLAYLIST_JS = 'checkmark-demo-playlist.js?v=20261014-order';
   const HOME_PLAYER = 'index.html#demoVideoConsole';

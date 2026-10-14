@@ -96,8 +96,7 @@
     return false;
   }
 
-  // The square card is tall enough that a booking button often sits under
-  // it when a page lands. Rather than hiding (which left the card invisible
+  // The dock can land with a booking button under it. Rather than hiding (which left the card invisible
   // until the visitor scrolled), move aside: bottom-left, then bottom-right,
   // then lift above the button. Only hide if no spot is clear.
   function findClearSpot(dock, doc) {
@@ -108,7 +107,7 @@
     if (!coversCallToAction(dock, doc)) return false;
     for (const side of [false, true]) {
       dock.classList.toggle('is-right', side);
-      for (let lift = 40; lift <= window.innerHeight * 0.5; lift += 40) {
+      for (let lift = 24; lift <= window.innerHeight * 0.5; lift += 24) {
         dock.style.setProperty('--reel-dock-lift', `${lift}px`);
         if (!coversCallToAction(dock, doc)) return false;
       }
@@ -128,133 +127,6 @@
     const dockTop = window.innerHeight - dock.offsetTop;
     const ownPad = parseFloat(styleOf(footer).paddingBottom) || 0;
     root.style.setProperty('--reel-dock-clearance', `${Math.max(0, Math.ceil(dockTop + 12 - ownPad))}px`);
-  }
-
-  // Music waves: the same gold halo the homepage console draws around the
-  // logo (checkmark-home-visualizer.js), scaled to the card. Same 32-band
-  // log spectrum, smoothing, colours and twin weaving lines. Runs at ~30fps
-  // only while the card is on screen and the music is playing; goes still on
-  // pause and is off entirely with reduced motion.
-  function startWaves(dock, reel) {
-    if (reducedMotion.matches) return;
-    const canvas = document.createElement('canvas');
-    canvas.className = 'reel-dock__waves';
-    canvas.setAttribute('aria-hidden', 'true');
-    const playBtn = dock.querySelector('.reel-dock__play');
-    playBtn.insertBefore(canvas, playBtn.firstChild);
-    const ctx = canvas.getContext('2d');
-    const supportsFilter = typeof ctx.filter === 'string';
-    const BAR_COUNT = 32;
-    const ANGLE_ORDER = new Array(BAR_COUNT);
-    for (let i = 0; i < BAR_COUNT; i++) ANGLE_ORDER[i] = (i * 13) % BAR_COUNT;
-    const smoothBars = new Float32Array(BAR_COUNT), drawn = new Float32Array(BAR_COUNT), rOff = new Float32Array(BAR_COUNT);
-    const px = new Float32Array(BAR_COUNT), py = new Float32Array(BAR_COUNT);
-    let W = 0, H = 0, bassLevel = 0, energyLevel = 0, freqData = null, last = 0, still = true;
-    const size = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      W = canvas.clientWidth; H = canvas.clientHeight;
-      if (!W || !H) return;
-      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    };
-    window.addEventListener('resize', size);
-    const levels = (analyser, t) => {
-      if (analyser) {
-        if (!freqData || freqData.length !== analyser.frequencyBinCount) freqData = new Uint8Array(analyser.frequencyBinCount);
-        analyser.getByteFrequencyData(freqData);
-        const nyquist = analyser.context.sampleRate / 2;
-        const bassBins = Math.max(4, Math.round(150 / nyquist * freqData.length));
-        let bass = 0;
-        for (let i = 0; i < bassBins; i++) bass += freqData[i];
-        bass = bass / bassBins / 255;
-        bassLevel += (bass - bassLevel) * (bass > bassLevel ? 0.6 : 0.16);
-        for (let i = 0; i < BAR_COUNT; i++) {
-          const f0 = 40 * Math.pow(375, i / BAR_COUNT), f1 = 40 * Math.pow(375, (i + 1) / BAR_COUNT);
-          const b0 = Math.floor(f0 / nyquist * freqData.length);
-          const b1 = Math.max(b0 + 1, Math.ceil(f1 / nyquist * freqData.length));
-          let sum = 0;
-          for (let b = b0; b < b1 && b < freqData.length; b++) sum += freqData[b];
-          const v = (sum / (b1 - b0)) / 255;
-          smoothBars[i] += (v - smoothBars[i]) * (v > smoothBars[i] ? 0.65 : 0.22);
-        }
-      } else {
-        // No analyser on this page (resumed after a full reload): a gentle
-        // stand-in motion so the card still reads as playing.
-        for (let i = 0; i < BAR_COUNT; i++) {
-          const v = 0.55 + 0.25 * Math.sin(t * 2.1 + i * 0.9) * Math.sin(t * 0.7 + i * 0.37);
-          smoothBars[i] += (v - smoothBars[i]) * 0.2;
-        }
-        bassLevel += ((0.35 + 0.2 * Math.sin(t * 3.4)) - bassLevel) * 0.2;
-      }
-      let energy = 0;
-      for (let i = 0; i < BAR_COUNT; i++) energy += smoothBars[i];
-      energyLevel += (energy / BAR_COUNT - energyLevel) * 0.15;
-    };
-    function draw(now) {
-      requestAnimationFrame(draw);
-      const active = dock.classList.contains('is-visible') && !reel.audio.paused && !document.hidden;
-      if (!active) {
-        if (!still) { ctx.clearRect(0, 0, W, H); still = true; }
-        return;
-      }
-      if (now - last < 33) return; // ~30fps is plenty for a card this size
-      last = now;
-      if (still || !W) size();
-      still = false;
-      const t = now / 1000;
-      levels(reel.analyser, t);
-      ctx.clearRect(0, 0, W, H);
-      const cx = W / 2, cy = H * parseFloat(getComputedStyle(canvas).getPropertyValue('--wave-cy') || 0.4);
-      const minDim = Math.min(W, H);
-      const innerR = minDim * 0.26 * (1 + bassLevel * 0.05);
-      const maxLen = minDim * 0.14;
-      for (let i = 0; i < BAR_COUNT; i++) drawn[i] = Math.pow(smoothBars[ANGLE_ORDER[i]], 2.6);
-      for (let i = 0; i < BAR_COUNT; i++) {
-        const m1 = drawn[(i + BAR_COUNT - 1) % BAR_COUNT], p1 = drawn[(i + 1) % BAR_COUNT];
-        rOff[i] = 3 + ((m1 + 2 * drawn[i] + p1) / 4) * maxLen;
-      }
-      const haloPath = (scale, rot = 0, rippleFreq = 0, ripplePhase = 0, rippleAmp = 0) => {
-        for (let i = 0; i < BAR_COUNT; i++) {
-          const frac = (i + 0.5) / BAR_COUNT;
-          let r = innerR + rOff[i] * scale;
-          if (rippleAmp) r += Math.sin(frac * Math.PI * 2 * rippleFreq + ripplePhase) * rippleAmp;
-          const ang = -Math.PI / 2 + frac * Math.PI * 2 + rot;
-          px[i] = cx + Math.cos(ang) * r; py[i] = cy + Math.sin(ang) * r;
-        }
-        ctx.beginPath();
-        ctx.moveTo((px[BAR_COUNT - 1] + px[0]) / 2, (py[BAR_COUNT - 1] + py[0]) / 2);
-        for (let i = 0; i < BAR_COUNT; i++) {
-          const j = (i + 1) % BAR_COUNT;
-          ctx.quadraticCurveTo(px[i], py[i], (px[i] + px[j]) / 2, (py[i] + py[j]) / 2);
-        }
-        ctx.closePath();
-      };
-      const haloFill = alphaMul => {
-        const fill = ctx.createRadialGradient(cx, cy, innerR * 0.9, cx, cy, innerR + maxLen * 1.3);
-        fill.addColorStop(0, 'rgba(169, 108, 34, ' + ((0.10 + energyLevel * 0.14) * alphaMul).toFixed(3) + ')');
-        fill.addColorStop(0.55, 'rgba(229, 189, 109, ' + ((0.13 + energyLevel * 0.20) * alphaMul).toFixed(3) + ')');
-        fill.addColorStop(1, 'rgba(245, 220, 155, ' + ((0.05 + energyLevel * 0.10) * alphaMul).toFixed(3) + ')');
-        return fill;
-      };
-      ctx.save();
-      if (supportsFilter) {
-        ctx.filter = 'blur(8px)'; haloPath(1.3); ctx.fillStyle = haloFill(0.8); ctx.fill();
-        ctx.filter = 'blur(2px)';
-      } else {
-        ctx.shadowColor = 'rgba(229, 189, 109, 0.55)'; ctx.shadowBlur = 10;
-      }
-      haloPath(0.82); ctx.fillStyle = haloFill(1.2); ctx.fill();
-      if (supportsFilter) ctx.filter = 'none';
-      ctx.shadowBlur = 0; ctx.lineJoin = 'round'; ctx.lineWidth = 1;
-      haloPath(0.90, Math.sin(t * 0.31) * 0.10, 5, t * 1.2, 1.5 + energyLevel * 3);
-      ctx.strokeStyle = 'rgba(245, 220, 155, ' + (0.40 + energyLevel * 0.30).toFixed(3) + ')'; ctx.stroke();
-      haloPath(0.97, -Math.sin(t * 0.23 + 1.1) * 0.10, 3, -t * 1.7, 1.5 + energyLevel * 3);
-      ctx.strokeStyle = 'rgba(214, 168, 94, ' + (0.38 + energyLevel * 0.28).toFixed(3) + ')'; ctx.stroke();
-      ctx.restore();
-      ctx.beginPath(); ctx.arc(cx, cy, innerR, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(214, 168, 94,' + (0.18 + bassLevel * 0.30).toFixed(3) + ')'; ctx.stroke();
-    }
-    requestAnimationFrame(draw);
   }
 
   function init(reel) {
@@ -315,7 +187,6 @@
       dock.toggleAttribute('inert', !show);
     };
 
-    startWaves(dock, reel);
     showTrack(reel.index);
     paintPlayState();
     paintProgress();

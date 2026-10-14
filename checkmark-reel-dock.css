@@ -211,51 +211,6 @@
   .reel-dock__controls button { width: 34px; height: 40px; }
 }
 
-/* Square card layout (default): 200x200 desktop, 140x140 phone. */
-.reel-dock{--sq:200px;display:block;box-sizing:border-box;width:var(--sq);height:var(--sq);min-height:0;padding:0;overflow:hidden;border-radius:18px;
- background:radial-gradient(circle at 50% 38%,#3a2e1c 0%,#14110c 55%,#080807 100%)}
-/* the art fills the card; tapping it toggles play */
-.reel-dock .reel-dock__play{position:absolute;inset:0;width:100%;height:100%;border-radius:0!important;background:none!important;box-shadow:none;animation:none!important}
-.reel-dock .reel-dock__play img{position:absolute;left:50%;top:40%;width:56%;height:56%;transform:translate(-50%,-50%);opacity:.55}
-.reel-dock.is-playing .reel-dock__play img{opacity:.7}
-/* gold play/pause disc sits at the left of the bottom control row */
-.reel-dock .reel-dock__play .reel-dock__glyph{inset:auto auto 10px 10px;width:40px;height:40px;border-radius:50%;background:#e6cba1;color:#111;filter:none;box-shadow:0 3px 10px rgba(0,0,0,.6)}
-.reel-dock .reel-dock__play .reel-dock__glyph svg{width:20px;height:20px}
-/* shade so text reads over the art */
-.reel-dock::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,transparent 28%,transparent 48%,rgba(0,0,0,.85) 100%);pointer-events:none}
-.reel-dock .reel-dock__meta{position:absolute;left:12px;right:12px;top:10px;bottom:auto;pointer-events:none}
-.reel-dock .reel-dock__title{position:absolute;top:118px;left:0;right:0;font-size:.82rem;text-overflow:clip}
-.reel-dock .reel-dock__hint{display:none}
-.reel-dock .reel-dock__controls{position:absolute;right:8px;bottom:10px;gap:4px}
-.reel-dock .reel-dock__controls button{width:40px;height:40px}
-.reel-dock [data-reel-dock="prev"],.reel-dock [data-reel-dock="expand"]{display:none}
-.reel-dock .reel-dock__close{margin-left:0!important;border-left:0!important;border-radius:9px!important}
-.reel-dock .reel-dock__progress{left:0;right:0;bottom:0;height:3px;border-radius:0}
-@media (max-width:560px){
- .reel-dock{--sq:140px;width:var(--sq);border-radius:14px}
- .reel-dock .reel-dock__meta{left:9px;right:9px;top:8px}
- .reel-dock .reel-dock__kicker{font-size:.56rem;letter-spacing:.12em}
- .reel-dock .reel-dock__title{top:72px;font-size:.72rem}
- .reel-dock .reel-dock__play img{top:36%;width:48%;height:48%}
- .reel-dock .reel-dock__play .reel-dock__glyph{left:7px;bottom:7px;width:38px;height:38px}
- .reel-dock .reel-dock__controls{right:5px;bottom:7px;gap:2px}
- .reel-dock .reel-dock__controls button{width:38px;height:38px}}
-
-
-/* Stepping aside for a booking button: other corner, or lifted above it. */
-.reel-dock.is-right{left:auto;right:max(16px,env(safe-area-inset-right))}
-.reel-dock{margin-bottom:var(--reel-dock-lift,0px)}
-/* Music waves behind the logo (drawn by checkmark-reel-dock.js). */
-.reel-dock .reel-dock__waves{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;--wave-cy:.4}
-.reel-dock .reel-dock__play img{z-index:1}
-@media (max-width:560px){.reel-dock.is-right{right:max(12px,env(safe-area-inset-right))}.reel-dock .reel-dock__waves{--wave-cy:.36}}
-
-/* Long titles drift slowly left and back so the whole name can be read. */
-.reel-dock__title > span{display:inline-block}
-.reel-dock__title.is-long > span{animation:reel-dock-marquee var(--marquee-time,10s) ease-in-out infinite alternate}
-@keyframes reel-dock-marquee{0%,15%{transform:translateX(0)}85%,100%{transform:translateX(calc(-1 * var(--marquee-shift,0px)))}}
-@media (prefers-reduced-motion: reduce){.reel-dock__title.is-long > span{animation:none}.reel-dock__title{text-overflow:ellipsis}}
-
 @media (prefers-reduced-motion: reduce) {
   .reel-dock,
   .reel-dock.is-visible {
@@ -275,4 +230,22 @@
 
 @media print {
   .reel-dock { display: none !important; }
+}
+
+/* Stepping aside for a booking button: other corner, or lifted above it
+   (positions chosen by checkmark-reel-dock.js instead of hiding the bar). */
+.reel-dock.is-right { left: auto; right: max(16px, env(safe-area-inset-right)); }
+.reel-dock { margin-bottom: var(--reel-dock-lift, 0px); }
+@media (max-width: 560px) {
+  .reel-dock.is-right { right: max(12px, env(safe-area-inset-right)); }
+}
+
+/* Long titles drift slowly left and back instead of being cut off. */
+.reel-dock__title.is-long { text-overflow: clip; }
+.reel-dock__title > span { display: inline-block; }
+.reel-dock__title.is-long > span { animation: reel-dock-marquee var(--marquee-time, 10s) ease-in-out infinite alternate; }
+@keyframes reel-dock-marquee { 0%, 15% { transform: translateX(0); } 85%, 100% { transform: translateX(calc(-1 * var(--marquee-shift, 0px))); } }
+@media (prefers-reduced-motion: reduce) {
+  .reel-dock__title.is-long > span { animation: none; }
+  .reel-dock__title.is-long { text-overflow: ellipsis; }
 }

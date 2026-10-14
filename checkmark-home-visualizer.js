@@ -97,7 +97,6 @@
     audio,
     tracks,
     stage,
-    get analyser() { return analyser; }, // read-only, for the mini player's waves
     playButton: logoBtn,
     get index() { return trackIndex; },
     label: index => trackLabel(tracks[index == null ? trackIndex : index]),
