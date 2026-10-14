@@ -180,12 +180,13 @@
         "file": "MEDIA/AUDIO/demo-clips/valao-demo-clip.mp3",
         "source": "MEDIA/AUDIO/valao-master.wav",
         "sourceSha256": "4ef2bec5ae33681e62e087a6d29a3f884f797361a914995744a6e844fa5a74d1",
-        "sourceStartSeconds": 44,
-        "sourceEndSeconds": 58,
+        "sourceStartSeconds": 50.5,
+        "sourceEndSeconds": 64.5,
         "durationSeconds": 14,
-        "selectionMethod": "Owner-specified exact source interval 00:44–00:58.",
+        "selectionMethod": "2026-10-13 clean-lyrics recut: owner window 00:44-00:58 shifted to 00:50.5-01:04.5 to drop 'giles' (49.1s) while keeping the Obi-Wan Kenobi line (~53.6-54.5s).",
         "fadeInSeconds": 0.12,
-        "fadeOutSeconds": 0.45
+        "fadeOutSeconds": 0.45,
+        "previousSourceStartSeconds": 44
       },
       {
         "title": "Song of Solomon",
@@ -237,11 +238,13 @@
         "file": "MEDIA/AUDIO/demo-clips/the-wave-demo-clip.mp3",
         "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/The Wave_122Master2_48.wav",
         "sourceSha256": "1401453ee2a053046727761dbd3f604fe7994864aafa51979ef996a8158df575",
-        "sourceStartSeconds": 56.0,
+        "sourceStartSeconds": 52,
         "durationSeconds": 15,
-        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
+        "selectionMethod": "2026-10-13 clean-lyrics recut: window chosen to avoid profanity/slurs/sexual words (Whisper medium transcript check on mix and separated vocals).",
         "fadeInSeconds": 0.12,
-        "fadeOutSeconds": 0.45
+        "fadeOutSeconds": 0.45,
+        "previousSourceStartSeconds": 56.0,
+        "sourceEndSeconds": 67
       },
       {
         "title": "BULLSHIT",
@@ -249,24 +252,27 @@
         "file": "MEDIA/AUDIO/demo-clips/bullshit-gavin-hammond-demo-clip.mp3",
         "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/TrapDrill_vocal_Master.wav",
         "sourceSha256": "55e02805adf4099ef65a99685a0bfdaee7f4dbabf2dadaa4546ac35c2345cffc",
-        "sourceStartSeconds": 124.0,
-        "durationSeconds": 15,
-        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
+        "sourceStartSeconds": 113.5,
+        "durationSeconds": 15.0,
+        "selectionMethod": "2026-10-13 clean-lyrics recut: window chosen to avoid profanity/slurs/sexual words (Whisper medium transcript check on mix and separated vocals).",
         "fadeInSeconds": 0.12,
-        "fadeOutSeconds": 0.45
+        "fadeOutSeconds": 0.45,
+        "previousSourceStartSeconds": 124.0,
+        "sourceEndSeconds": 128.5
       },
       {
         "title": "BOOM",
         "file": "MEDIA/AUDIO/demo-clips/boom-demo-clip.mp3",
         "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/Bagpipebeat_vox._2wav.mp3",
         "sourceSha256": "77d92a462b5065898e107cf1e37dec15df375b5786ebd5deae446894e1b579e3",
-        "sourceStartSeconds": 40.0,
-        "sourceEndSeconds": 55.0,
+        "sourceStartSeconds": 126,
+        "sourceEndSeconds": 141,
         "durationSeconds": 15,
-        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending. Owner identifies Bagpipebeat as BOOM.",
+        "selectionMethod": "2026-10-13 clean-lyrics recut: window chosen to avoid profanity/slurs/sexual words (Whisper medium transcript check on mix and separated vocals).",
         "fadeInSeconds": 0.12,
         "fadeOutSeconds": 0.45,
-        "artist": "Gavin Hammond"
+        "artist": "Gavin Hammond",
+        "previousSourceStartSeconds": 40.0
       },
       {
         "title": "Up Next",
@@ -284,11 +290,13 @@
         "file": "MEDIA/AUDIO/demo-clips/hyper-demo-clip.mp3",
         "source": "MEDIA/AUDIO/CMA Demo Reels/DemoTracks/GavinMaster/Hyper4.wav",
         "sourceSha256": "6704bdc3f54034c275cc5fe06c7130c0cd96761d430968f7d29bdcc34fec93ea",
-        "sourceStartSeconds": 141.5,
+        "sourceStartSeconds": 99,
         "durationSeconds": 15,
-        "selectionMethod": "Automated strongest sustained RMS-energy window; listening review pending.",
+        "selectionMethod": "2026-10-13 clean-lyrics recut: window chosen to avoid profanity/slurs/sexual words (Whisper medium transcript check on mix and separated vocals).",
         "fadeInSeconds": 0.12,
-        "fadeOutSeconds": 0.45
+        "fadeOutSeconds": 0.45,
+        "previousSourceStartSeconds": 141.5,
+        "sourceEndSeconds": 114
       },
       {
         "title": "Love never Dies",
@@ -351,11 +359,15 @@
         "file": "MEDIA/AUDIO/demo-clips/prollyintheclub-98-demo-clip.mp3",
         "source": "MEDIA/AUDIO/prollyintheclub-98.mp3",
         "sourceSha256": "4f6dd6fc493eba73d78063febf4d67f25f43833623e3f00bd95d4003da172815",
-        "previousSourceStartSeconds": 36.5,
+        "previousSourceStartSeconds": 39.5,
         "offsetWithinPreviousExcerpt": 3.0,
-        "sourceStartSeconds": 39.5,
+        "sourceStartSeconds": 10,
         "durationSeconds": 15,
-        "encodedDurationSeconds": 15.0
+        "encodedDurationSeconds": 15.0,
+        "sourceEndSeconds": 25,
+        "fadeInSeconds": 0.12,
+        "fadeOutSeconds": 0.45,
+        "selectionMethod": "2026-10-13 clean-lyrics recut: window chosen to avoid profanity/slurs/sexual words (Whisper medium transcript check on mix and separated vocals)."
       },
       {
         "title": "Save You",
