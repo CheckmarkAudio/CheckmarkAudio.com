@@ -15,3 +15,4 @@
 @media(max-width:900px){#artist-diego,#artist-neh,#artist-millie{grid-column:auto;grid-row:auto}}
 @media(max-width:900px) and (min-width:621px){#artist-neh{grid-column:1/-1}#artist-lobo{grid-column:auto}}
 @media(max-width:620px){#artist-neh{height:300px}}
+#artist-millie img{object-position:0% 0%}
