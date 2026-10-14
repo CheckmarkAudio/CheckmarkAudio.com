@@ -26,7 +26,7 @@
   const DOCK_CSS = 'checkmark-reel-dock.css?v=20261013-waves';
   const DOCK_JS = 'checkmark-reel-dock.js?v=20261013-waves';
   const CONTINUE_JS = 'checkmark-reel-continue.js?v=20261010-continuous';
-  const PLAYLIST_JS = 'checkmark-demo-playlist.js?v=20261005-neh-credit';
+  const PLAYLIST_JS = 'checkmark-demo-playlist.js?v=20261014-order';
   const HOME_PLAYER = 'index.html#demoVideoConsole';
 
   const store = {
