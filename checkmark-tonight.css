@@ -183,3 +183,6 @@ body.tonight-page .tonight .btn.primary:hover{filter:brightness(1.08);transform:
 @media(prefers-reduced-motion:reduce){
   .tonight-gallery__item img,.tonight-lightbox__figure img{transition:none}
 }
+
+/* gold paper texture to match Team page */
+section.tonight-story{background:url("MEDIA/IMAGES/TEXTURES/APPROVED/panel-paper-gold-on-white.webp") center / cover no-repeat;}
