@@ -16,3 +16,6 @@
 @media(max-width:900px) and (min-width:621px){#artist-neh{grid-column:1/-1}#artist-lobo{grid-column:auto}}
 @media(max-width:620px){#artist-neh{height:300px}}
 #artist-millie img{object-position:0% 0%}
+/* 2026-10-14 preview: gallery heading without eyebrow, one line on desktop */
+.artists-gallery__head h2{margin-top:0;max-width:none;text-wrap:balance}
+@media(min-width:901px){.artists-gallery__head h2{white-space:nowrap;font-size:clamp(3rem,4.7vw,5rem)}}
