@@ -7,7 +7,7 @@
   const options=[...document.querySelectorAll('.service-option')];
   const signalSteps=[...document.querySelectorAll('.signal-step[data-service-index]')];
   if(iconLayout==='accordion'){
-    const iconForService=[0,1,2,3,4,0,5];
+    const iconForService=[0,1,4,2,3,0,5];
     options.forEach((option,index)=>{
       const icon=signalSteps[iconForService[index]]?.querySelector('.signal-screen')?.cloneNode(true);
       if(!icon) return;
@@ -101,6 +101,7 @@
       const swap=()=>{
         image.src=option.dataset.image;
         image.alt=option.dataset.alt;
+        image.style.objectPosition=option.dataset.position||'';
         requestAnimationFrame(()=>stage.classList.remove('is-changing'));
       };
       nextImage.addEventListener('load',swap,{once:true});

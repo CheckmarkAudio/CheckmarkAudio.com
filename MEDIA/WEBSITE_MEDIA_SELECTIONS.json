@@ -30,7 +30,7 @@
       "services-recording": { "slot": "services-recording", "kind": "dataset", "src": "MEDIA/IMAGES/GALLERY/country-meds-singer-vocal-recording-microphone.webp", "desktop": { "x": 70, "y": 35, "zoom": 100 }, "mobile": { "x": 70, "y": 35, "zoom": 115 } },
       "services-production": { "slot": "services-production", "kind": "dataset", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "services-mixing-mastering": { "slot": "services-mixing-mastering", "kind": "dataset", "src": "MEDIA/IMAGES/studio-rack-gear-meters-view-02.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
-      "services-live-recordings": { "slot": "services-live-recordings", "kind": "dataset", "src": "MEDIA/IMAGES/GALLERY/recording-artist-acoustic-guitar-session-view-03.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
+      "services-live-recordings": { "slot": "services-live-recordings", "kind": "dataset", "src": "MEDIA/IMAGES/GALLERY/recording-session-behind-the-scenes-checkmark-audio-view-07.webp", "desktop": { "x": 50, "y": 15, "zoom": 100 }, "mobile": { "x": 50, "y": 15, "zoom": 115 } },
       "services-podcast-voice-over": { "slot": "services-podcast-voice-over", "kind": "dataset", "src": "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-microphone-close-up.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "services-artist-media": { "slot": "services-artist-media", "kind": "dataset", "src": "MEDIA/IMAGES/dontcalkody-zardex-albuquerque-artists-photo-shoot.webp", "desktop": { "x": 50, "y": 50, "zoom": 100 }, "mobile": { "x": 50, "y": 50, "zoom": 115 } },
       "recording-hero": { "slot": "recording-hero", "kind": "background", "src": "MEDIA/IMAGES/vocal-recording-albuquerque-nm-control-room-microphone-2880.webp", "cssVar": "--page-image" },
@@ -161,7 +161,7 @@
         "recording": "MEDIA/IMAGES/GALLERY/country-meds-singer-vocal-recording-microphone.webp",
         "production": "MEDIA/IMAGES/BY_PAGE/studio-a/music-production-collaborative-session-checkmark-audio.webp",
         "mixingMastering": "MEDIA/IMAGES/studio-rack-gear-meters-view-02.webp",
-        "liveRecordings": "MEDIA/IMAGES/GALLERY/recording-artist-acoustic-guitar-session-view-03.webp",
+        "liveRecordings": "MEDIA/IMAGES/GALLERY/recording-session-behind-the-scenes-checkmark-audio-view-07.webp",
         "podcastVoiceOver": "MEDIA/IMAGES/BY_PAGE/studio-a/vocal-recording-microphone-close-up.webp",
         "artistMedia": "MEDIA/IMAGES/dontcalkody-zardex-albuquerque-artists-photo-shoot.webp"
       }
