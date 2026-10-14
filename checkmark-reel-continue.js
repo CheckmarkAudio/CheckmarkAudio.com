@@ -26,7 +26,7 @@
   const reel = window.CheckmarkDemoReel;
   if (!reel || !reel.audio || !window.history || !history.pushState) return;
   const { audio } = reel;
-  const DOCK_CSS = 'checkmark-reel-dock.css?v=20261013-square';
+  const DOCK_CSS = 'checkmark-reel-dock.css?v=20261013-waves';
   const pagePath = p => p.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
   const home = { href: location.href, path: pagePath(location.pathname), search: location.search, title: document.title };
 
