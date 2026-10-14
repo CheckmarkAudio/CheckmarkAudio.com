@@ -63,7 +63,9 @@ body[data-page="team"] { background: #080909; }
   color: var(--team-ink);
 }
 .team-head__dot { color: #E6CBA1; }
-.team-vine { display: block; flex: none; overflow: visible; color: var(--team-gold-muted); }
+.team-vine { display: block; flex: 0 1 auto; min-width: 0; width: 150px; height: auto; aspect-ratio: 160 / 40; overflow: visible; color: var(--team-gold-muted); }
+.team-vine path { vector-effect: non-scaling-stroke; }
+.team-vine__vein { stroke-width: 1; opacity: .7; }
 .team-vine--right { transform: scaleX(-1); }
 
 /* —— Grid + cards —— */
@@ -235,10 +237,16 @@ body[data-page="team"] { background: #080909; }
   .team-profile__body { padding: 28px 24px 36px; }
   .team-profile__close { top: 12px; right: 12px; background: rgba(251, 248, 242, .92); }
 }
+@media (max-width: 360px) {
+  .team-vine { display: none; }
+}
 @media (max-width: 480px) {
   .team-head__title { gap: 12px; }
   .team-head__title h1 { font-size: 2.9rem; }
-  .team-vine { width: 64px; height: 18px; }
+  .team-vine { width: 58px; }
+  .team-vine path { stroke-width: 1; }
+  .team-vine .team-vine__vein { display: none; }
+  .team-head__title h1 { white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) {
   .team-card, .team-card__frame, .team-card__frame img, .team-card__more, .team-profile__scrim, .team-profile__panel, .team-book { transition: none; }
