@@ -11,7 +11,7 @@ All blocks include a page entity (`@id` = page URL + `#webpage`) with `isPartOf`
 | studio-b.html | WebPage, Place, Service | Same structure as Studio A. Vocal recording from $50/hr. Includes 3 page photos. |
 | featured-artists.html | CollectionPage, ItemList of 14 MusicGroup | Only the 14 artist names on the page, each with their photo. No links, genres, or other claims added. |
 | team.html | AboutPage, ItemList, 3 Person | Bridget Reinhard, Gavin Hammond, and Tony Rivera, with titles, bios (from the profile popups), and portraits. Each is linked to the business with `worksFor`. |
-| community.html | CollectionPage, ImageGallery | "Checkmark Tonight" photo gallery (6 captioned photos). Linked to the Checkmark Live service. No events, because none are listed. |
+| live.html | CollectionPage, ImageGallery | "Checkmark Tonight" photo gallery (6 captioned photos). Linked to the Checkmark Live service. No events, because none are listed. |
 | faq.html | FAQPage (replaces the existing block), Breadcrumb | Same 6 Q&A pairs, checked word for word against the visible page. |
 
 Every image URL in these snippets was checked against the live site and returned HTTP 200.

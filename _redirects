@@ -11,6 +11,10 @@
 https://checkmarkaudio.netlify.app/*  https://www.checkmarkaudio.com/:splat  301!
 
 # Browsers and crawlers ask for /favicon.ico even when the page names an icon.
+
+# Live page renamed from community.html 2026-10-13.
+/community.html               /live.html               301!
+/community                    /live.html               301!
 /favicon.ico                  /MEDIA/IMAGES/icons/checkmark-audio-icon-48.png  200
 
 /about                        /team.html               301!
@@ -30,7 +34,7 @@ https://checkmarkaudio.netlify.app/*  https://www.checkmarkaudio.com/:splat  301
 /service-page/consultation    /#book                   301!
 /artist-photography           /services.html           301!  # REVIEW: no photography page on the new site
 /artist-promotion             /services.html           301!  # REVIEW: no promotion page on the new site
-/challenges                   /community.html          301!  # REVIEW: guessing this was a community page
+/challenges                   /live.html          301!  # REVIEW: guessing this was a community page
 /marz                         /                        301!  # REVIEW: unknown page, sent home
 
 # Store, gift cards and payments: keep, replace or retire is still Gavin's call.
