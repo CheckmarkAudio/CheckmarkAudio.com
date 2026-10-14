@@ -2,5 +2,7 @@
 /* 2026-10-14: kqa added; Tiny House Elevator reframed; tablet grid fill */
 #artist-tiny-house-elevator img{transform:scale(1.75);transform-origin:47% 78%}
 #artist-tiny-house-elevator:hover img{transform:scale(1.79)}
-@media(max-width:900px) and (min-width:621px){.artists-grid{grid-auto-flow:row dense}#artist-gregorio{grid-column:1/-1}}
+@media(max-width:900px) and (min-width:621px){.artists-grid{grid-auto-flow:row dense}}
 @media(prefers-reduced-motion:reduce){#artist-tiny-house-elevator:hover img{transform:scale(1.75)}}
+@media(max-width:900px) and (min-width:621px){#artist-kqa{grid-row:span 2}}
+@media(max-width:620px){#artist-kqa{height:620px}}
