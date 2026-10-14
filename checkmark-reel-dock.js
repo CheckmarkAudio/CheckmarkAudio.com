@@ -144,21 +144,60 @@
     const showTrack = index => {
       part('count').textContent = `${String(index + 1).padStart(2, '0')} / ${String(tracks.length).padStart(2, '0')}`;
       const title = part('title');
+      const label = reel.label(index);
       title.innerHTML = '';
+      const track = document.createElement('span');
+      track.className = 'reel-dock__title-track';
       const text = document.createElement('span');
-      text.textContent = reel.label(index);
-      title.appendChild(text);
+      text.className = 'reel-dock__title-text';
+      text.textContent = label;
+      track.appendChild(text);
+      title.appendChild(track);
       fitTitle();
     };
-    // Titles too long for the square scroll slowly instead of being cut off.
+    // Titles too long for the bar run as a marquee (like Spotify / Apple
+    // Music): rest left-aligned ~2s, then scroll left at a steady ~30px/s
+    // with a second copy following after a gap, so it loops seamlessly.
+    // Only when the title overflows, and never with reduced motion.
+    const MARQUEE_SPEED = 30, MARQUEE_REST = 2000, MARQUEE_GAP = 40;
+    let marquee = null;
     const fitTitle = () => {
       const title = part('title');
-      const text = title.firstElementChild;
-      if (!text) return;
-      const shift = Math.ceil(text.scrollWidth - title.clientWidth);
-      title.classList.toggle('is-long', shift > 2);
-      title.style.setProperty('--marquee-shift', `${Math.max(0, shift)}px`);
-      title.style.setProperty('--marquee-time', `${Math.max(6, shift / 12 + 4).toFixed(1)}s`);
+      const track = title.querySelector('.reel-dock__title-track');
+      if (!track) return;
+      if (marquee) { marquee.forEach(a => a.cancel()); marquee = null; }
+      while (track.children.length > 1) track.lastChild.remove();
+      const text = track.firstElementChild;
+      const overflow = text.offsetWidth - title.clientWidth;
+      const long = overflow > 1;
+      title.classList.toggle('is-long', long);
+      title.classList.remove('is-marquee');
+      if (!long || reducedMotion.matches || !track.animate) return;
+      const copy = text.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      copy.style.marginLeft = `${MARQUEE_GAP}px`;
+      track.appendChild(copy);
+      const distance = text.offsetWidth + MARQUEE_GAP;
+      const move = distance / MARQUEE_SPEED * 1000;
+      const duration = MARQUEE_REST + move;
+      const rest = MARQUEE_REST / duration;
+      const fadeIn = Math.min(0.04, (1 - rest) / 4);
+      title.classList.add('is-marquee');
+      marquee = [
+        track.animate([
+          { transform: 'translateX(0)', offset: 0 },
+          { transform: 'translateX(0)', offset: rest, easing: 'linear' },
+          { transform: `translateX(${-distance}px)`, offset: 1 }
+        ], { duration, iterations: Infinity }),
+        // Left-edge fade only while moving, so the first letter is crisp at rest.
+        title.animate([
+          { '--reel-fade-l': '0px', offset: 0 },
+          { '--reel-fade-l': '0px', offset: rest },
+          { '--reel-fade-l': '14px', offset: rest + fadeIn },
+          { '--reel-fade-l': '14px', offset: 1 - fadeIn },
+          { '--reel-fade-l': '0px', offset: 1 }
+        ], { duration, iterations: Infinity })
+      ];
     };
     const paintPlayState = () => {
       const playing = !audio.paused;
@@ -244,7 +283,9 @@
       });
     };
     window.addEventListener('scroll', recheck, { passive: true });
-    window.addEventListener('resize', () => { fitTitle(); recheck(); });
+    let fitTimer = 0;
+    window.addEventListener('resize', () => { clearTimeout(fitTimer); fitTimer = setTimeout(fitTitle, 150); recheck(); });
+    reducedMotion.addEventListener && reducedMotion.addEventListener('change', fitTitle);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitle);
     // Late layout (web fonts, images, styles injected by inner-pages.js) can
     // move booking buttons without any scroll, so re-check when the page resizes.

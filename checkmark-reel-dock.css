@@ -240,12 +240,21 @@
   .reel-dock.is-right { right: max(12px, env(safe-area-inset-right)); }
 }
 
-/* Long titles drift slowly left and back instead of being cut off. */
+/* Long titles: continuous marquee driven by checkmark-reel-dock.js. */
+@property --reel-fade-l { syntax: "<length>"; inherits: false; initial-value: 0px; }
+.reel-dock__title {
+  /* room for ascenders/descenders so nothing is clipped vertically */
+  line-height: 1.4;
+  padding-block: 1px;
+}
+.reel-dock__title-track { display: inline-flex; white-space: nowrap; will-change: transform; }
+.reel-dock__title-text { flex: none; }
 .reel-dock__title.is-long { text-overflow: clip; }
-.reel-dock__title > span { display: inline-block; }
-.reel-dock__title.is-long > span { animation: reel-dock-marquee var(--marquee-time, 10s) ease-in-out infinite alternate; }
-@keyframes reel-dock-marquee { 0%, 15% { transform: translateX(0); } 85%, 100% { transform: translateX(calc(-1 * var(--marquee-shift, 0px))); } }
+.reel-dock__title.is-marquee {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--reel-fade-l), #000 calc(100% - 14px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 var(--reel-fade-l), #000 calc(100% - 14px), transparent 100%);
+}
 @media (prefers-reduced-motion: reduce) {
-  .reel-dock__title.is-long > span { animation: none; }
   .reel-dock__title.is-long { text-overflow: ellipsis; }
+  .reel-dock__title-track { display: inline; }
 }
