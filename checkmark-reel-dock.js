@@ -122,7 +122,22 @@
 
     const showTrack = index => {
       part('count').textContent = `${String(index + 1).padStart(2, '0')} / ${String(tracks.length).padStart(2, '0')}`;
-      part('title').textContent = reel.label(index);
+      const title = part('title');
+      title.innerHTML = '';
+      const text = document.createElement('span');
+      text.textContent = reel.label(index);
+      title.appendChild(text);
+      fitTitle();
+    };
+    // Titles too long for the square scroll slowly instead of being cut off.
+    const fitTitle = () => {
+      const title = part('title');
+      const text = title.firstElementChild;
+      if (!text) return;
+      const shift = Math.ceil(text.scrollWidth - title.clientWidth);
+      title.classList.toggle('is-long', shift > 2);
+      title.style.setProperty('--marquee-shift', `${Math.max(0, shift)}px`);
+      title.style.setProperty('--marquee-time', `${Math.max(6, shift / 12 + 4).toFixed(1)}s`);
     };
     const paintPlayState = () => {
       const playing = !audio.paused;
@@ -208,7 +223,8 @@
       });
     };
     window.addEventListener('scroll', recheck, { passive: true });
-    window.addEventListener('resize', recheck);
+    window.addEventListener('resize', () => { fitTitle(); recheck(); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitle);
     // Late layout (web fonts, images, styles injected by inner-pages.js) can
     // move booking buttons without any scroll, so re-check when the page resizes.
     if ('ResizeObserver' in window) new ResizeObserver(recheck).observe(document.body);
