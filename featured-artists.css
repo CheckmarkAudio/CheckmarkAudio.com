@@ -6,3 +6,12 @@
 @media(prefers-reduced-motion:reduce){#artist-tiny-house-elevator:hover img{transform:scale(1.75)}}
 @media(max-width:900px) and (min-width:621px){#artist-kqa{grid-row:span 2}}
 @media(max-width:620px){#artist-kqa{height:620px}}
+/* 2026-10-14 preview: Daniel + Vohn top row, Diego tall right, NEH + Millie row 2 */
+#artist-diego{grid-column:9/13;grid-row:1/3}
+#artist-neh{grid-column:span 5}
+#artist-millie{grid-column:span 3}
+#artist-neh img{transform:scale(1.12);transform-origin:50% 35%;object-position:50% 30%}
+#artist-neh:hover img{transform:scale(1.15)}
+@media(max-width:900px){#artist-diego,#artist-neh,#artist-millie{grid-column:auto;grid-row:auto}}
+@media(max-width:900px) and (min-width:621px){#artist-neh{grid-column:1/-1}#artist-lobo{grid-column:auto}}
+@media(max-width:620px){#artist-neh{height:300px}}
