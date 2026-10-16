@@ -1,0 +1,20 @@
+/* Checkmark Audio — footer "Follow" column (Instagram). */
+.footgrid.has-follow { grid-template-columns: 1.4fr .8fr .8fr .9fr; }
+.foot-follow b { display: block; }
+.foot-follow-link {
+  display: inline-flex; align-items: center; gap: 10px; width: max-content; max-width: 100%;
+  margin-top: 12px; padding: 9px 16px 9px 11px; min-height: 44px; box-sizing: border-box;
+  border: 1px solid rgba(200, 149, 78, .45); border-radius: 999px;
+  color: #e6cba1; text-decoration: none; font-weight: 600;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+.foot-follow-link svg { width: 22px; height: 22px; flex: none; }
+.foot-follow-link:hover, .foot-follow-link:focus-visible { background: rgba(200, 149, 78, .14); color: #fff3dd; border-color: rgba(230, 203, 161, .7); }
+.footer .foot-follow p { margin-top: 10px; font-size: .9rem; }
+@media (max-width: 900px) {
+  .footgrid.has-follow { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
+  .footgrid.has-follow > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .footgrid.has-follow { grid-template-columns: 1fr; }
+}
