@@ -15,7 +15,7 @@
 .inquiry-overlay::after,
 .inquiry-card .inquiry-stretch::before,
 .inquiry-row .inquiry-stretch::before {
-  content: "Inquire \2197";
+  content: "Inquire \2197\FE0E";
   position: absolute;
   font: 700 .68rem/1 "Barlow Condensed", sans-serif;
   letter-spacing: .14em;

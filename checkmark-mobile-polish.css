@@ -1,0 +1,76 @@
+/* 2026-10-18 mobile polish: flatter buttons, text-style arrows, review dots,
+   affiliate logo tiles + phone marquee. Loaded last on every page. */
+
+/* Inline arrow that replaces the "↗" emoji (iOS drew it as a grey emoji box). */
+.cm-arrow{display:inline-block;width:.8em;height:.8em;margin-left:.35em;vertical-align:-.05em;flex:none;overflow:visible}
+
+/* ---- Buttons: flatter, finer outline on phone ---- */
+@media (max-width:700px){
+  body :is(.btn:not(.primary),.menu,.video-console-cues button,.team-mobile-controls button,.tab){
+    border:1px solid color-mix(in srgb,currentColor 55%,transparent) !important;
+    border-radius:2px !important;
+    box-shadow:none !important;
+    background-image:none;
+  }
+  body .btn{min-height:46px;padding:11px 18px;letter-spacing:.12em}
+  body .btn:not(.primary):is(:hover,:focus-visible){background-color:color-mix(in srgb,currentColor 9%,transparent);filter:none}
+  body :is(.btn,.menu,.video-console-cues button,.team-mobile-controls button,.tab):active{box-shadow:none !important;transform:none}
+  body .btn:not(.primary):active{background-color:color-mix(in srgb,currentColor 14%,transparent)}
+  body[data-page="home"] .hero--cinematic-lower-third .actions{gap:10px}
+  body[data-page="home"] .hero--cinematic-lower-third .actions .btn{min-height:46px}
+}
+
+/* ---- Reviews: dots replace the arrow buttons ---- */
+.review-dots{display:none}
+@media (max-width:700px){
+  .review-controls{display:none !important}
+  .review-dots{display:flex;justify-content:center;gap:2px;margin-top:14px}
+  .review-dots button{display:grid;place-items:center;width:30px;height:30px;padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .review-dots button::before{content:"";display:block;width:7px;height:7px;border-radius:4px;background:rgba(109,80,48,.28);transition:width .3s ease,background-color .3s ease}
+  .review-dots button[aria-current="true"]::before{width:20px;background:#a8773a}
+  .review-dots button:focus-visible{outline:2px solid #a8773a;outline-offset:-4px;border-radius:50%}
+}
+@media (max-width:700px) and (prefers-reduced-motion:reduce){.review-dots button::before{transition:none}}
+
+/* ---- Affiliates & recognition: uniform logo tiles ---- */
+.affiliate-logos figure{margin:0;padding:0;min-height:0}
+.affiliate-logos a{box-sizing:border-box;display:flex;align-items:center;justify-content:center;overflow:hidden;width:176px;height:84px;min-height:0;padding:12px 18px;border-radius:3px;background:#fcfbf4;box-shadow:inset 0 0 0 1px rgba(226,178,111,.3)}
+.affiliate-logos img{flex:none;width:100%;height:100%;min-height:0;max-width:none;max-height:none;object-fit:contain;filter:none}
+.affiliate-logos a:hover,.affiliate-logos a:focus-visible{background:#fffdf6;box-shadow:inset 0 0 0 1px rgba(226,178,111,.75)}
+.affiliate-logos a:hover img,.affiliate-logos a:focus-visible img{filter:none;transform:none}
+/* White-on-transparent artwork reads dark on the cream tile. */
+.affiliate-logos img[src*="los-angeles-film-school-logo-transparent"]{filter:invert(1)}
+.affiliate-logos a:hover img[src*="los-angeles-film-school-logo-transparent"],.affiliate-logos a:focus-visible img[src*="los-angeles-film-school-logo-transparent"]{filter:invert(1)}
+/* Square artwork with a wide margin: crop to the wordmark band. */
+.affiliate-logos img[src*="workforce-connection-logo"]{object-fit:cover;transform:scale(1.04)}
+.affiliate-logos a:hover img[src*="workforce-connection-logo"]{transform:scale(1.04)}
+
+/* Track injected by checkmark-mobile-polish.js. Desktop: one centred wrapped row. */
+.affiliate-logos.has-track{display:block;max-width:1120px}
+.affiliate-track{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,2vw,28px)}
+.affiliate-track figure{grid-column:auto !important}
+.affiliate-track [data-aff-clone]{display:none}
+
+/* Phone: continuous single-row marquee with soft edges. */
+@media (max-width:700px){
+  .affiliate-bar{padding-inline:0}
+  .affiliate-logos.has-track{overflow:hidden;max-width:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+  .affiliate-track{flex-wrap:nowrap;justify-content:flex-start;gap:0;width:max-content;animation:cm-aff-marquee 26s linear infinite;will-change:transform}
+  .affiliate-track figure{flex:none;margin-right:12px}
+  .affiliate-track [data-aff-clone]{display:block}
+  .affiliate-logos a{width:132px;height:64px;padding:9px 13px}
+  .affiliate-logos.is-paused .affiliate-track{animation-play-state:paused}
+}
+@keyframes cm-aff-marquee{to{transform:translateX(-50%)}}
+@media (max-width:700px) and (prefers-reduced-motion:reduce){
+  .affiliate-bar{padding-inline:20px}
+  .affiliate-logos.has-track{overflow:visible;-webkit-mask-image:none;mask-image:none}
+  .affiliate-track{flex-wrap:wrap;justify-content:center;gap:12px;width:auto;animation:none}
+  .affiliate-track figure{margin-right:0}
+  .affiliate-track [data-aff-clone]{display:none}
+}
+/* Artwork with built-in whitespace: scale up so marks read at a matched size. */
+.affiliate-logos img[src*="namm-believe-in-music-logo"]{transform:scale(1.45)}
+.affiliate-logos img[src*="top-pro-awards-logo"]{transform:scale(1.18)}
+.affiliate-logos a:hover img[src*="namm-believe-in-music-logo"]{transform:scale(1.45)}
+.affiliate-logos a:hover img[src*="top-pro-awards-logo"]{transform:scale(1.18)}
