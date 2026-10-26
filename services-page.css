@@ -29,6 +29,8 @@ body[data-page="services"]{background:#070807}
 .service-option:hover .service-bullet,.service-option:focus-visible .service-bullet,.service-option.is-active .service-bullet{background:var(--service-gold);box-shadow:inset 0 0 0 4px #070807,0 0 12px rgba(214,168,94,.26)}
 .service-detail{padding:13px 0 0;transition:opacity .16s,transform .16s}.service-detail.is-changing{opacity:.25;transform:translateY(5px)}
 .service-rate{display:flex;align-items:flex-start;gap:12px;margin:0 0 14px;color:var(--service-gold);font:500 clamp(.92rem,1.05vw,1.08rem)/1.25 "Barlow Condensed",sans-serif;letter-spacing:.045em;text-transform:uppercase}
+.service-rates{display:grid;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.service-rates>.service-rate{margin:0}
 .service-rate>span{flex:0 0 auto;width:10px;height:10px;margin-top:2px;border-radius:50%;background:#e62f26;box-shadow:0 0 11px rgba(230,47,38,.56)}
 .service-detail>p:not(.service-rate){margin:0 0 15px;color:#aaa291;font-size:.88rem;line-height:1.55}.service-detail a{color:var(--service-cream);font:600 .86rem "Barlow Condensed",sans-serif;letter-spacing:.09em;text-decoration-color:var(--service-gold);text-underline-offset:5px;text-transform:uppercase}
 .service-stage{position:relative;margin:0;border:2px solid var(--service-gold);border-radius:3px;background:#080807;box-shadow:22px 22px 0 -20px rgba(214,168,94,.55),0 28px 70px rgba(0,0,0,.36);overflow:hidden}
@@ -98,7 +100,7 @@ body[data-page="services"]{background:#070807}
   }
   .service-selector>.service-stage .service-window-bar{min-height:36px;background:rgba(214,168,94,.04)}
   .service-selector>.service-stage .service-image-wrap{aspect-ratio:4/3}
-  .service-selector>.service-detail .service-rate{margin-bottom:10px}
+  .service-selector>.service-detail .service-rates{margin-bottom:10px}
   .service-option{min-height:52px;scroll-margin-top:82px;transition:color .18s,border-color .18s,background .18s,transform .12s,box-shadow .18s;-webkit-tap-highlight-color:transparent}
   .service-option:hover,.service-option:focus-visible{background:rgba(214,168,94,.075);box-shadow:inset 3px 0 var(--service-gold)}
   .service-option:active{transform:scale(.985);background:rgba(214,168,94,.13)}

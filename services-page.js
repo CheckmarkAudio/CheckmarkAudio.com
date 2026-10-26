@@ -79,7 +79,16 @@
     placePanels(option);
     stage.setAttribute('aria-labelledby',option.id);
     label.textContent=option.dataset.label;
-    rate.textContent=option.dataset.rate;
+    rate.replaceChildren(...option.dataset.rate.split('|').map(text=>{
+      const item=document.createElement('li');
+      const dot=document.createElement('span');
+      const value=document.createElement('strong');
+      item.className='service-rate';
+      dot.setAttribute('aria-hidden','true');
+      value.textContent=text.trim();
+      item.append(dot,value);
+      return item;
+    }));
     summary.textContent=option.dataset.summary;
     link.href=option.dataset.link;
     const service=formServices[option.id.replace('service-','')];

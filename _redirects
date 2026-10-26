@@ -15,6 +15,9 @@ https://checkmarkaudio.netlify.app/*  https://www.checkmarkaudio.com/:splat  301
 # Live page renamed from community.html 2026-10-13.
 /community.html               /live.html               301!
 /community                    /live.html               301!
+# Old Checkmark Live page retired 2026-10-24 (archived in ARCHIVE/retired-pages-2026-10-24/).
+/live-recordings.html         /live.html               301!
+/live-recordings              /live.html               301!
 /favicon.ico                  /MEDIA/IMAGES/icons/checkmark-audio-icon-48.png  200
 
 /about                        /team.html               301!
