@@ -23,8 +23,9 @@
   let trackIndex = 0, playbackGeneration = 0;
   let retryPlayback = null;
   const trackLabel = track => track.artist ? `${track.title} — ${track.artist}` : track.title;
-  function stopPlayback() {
+  function stopPlayback(keepTail) {
     playbackGeneration++;
+    if (!keepTail) { killTail(0.12); resetTrackGain(); }
     if (retryPlayback) audio.removeEventListener('canplay', retryPlayback);
     retryPlayback = null;
     audio.pause();
@@ -36,8 +37,8 @@
     if (small) small.textContent = trackLabel(tracks[trackIndex]);
     document.dispatchEvent(new CustomEvent('checkmark:demo-track', { detail: { index: trackIndex, track: tracks[trackIndex], label: trackLabel(tracks[trackIndex]) } }));
   };
-  const loadTrack = (index, andPlay) => {
-    stopPlayback();
+  const loadTrack = (index, andPlay, crossfading) => {
+    stopPlayback(crossfading);
     trackIndex = ((index % tracks.length) + tracks.length) % tracks.length;
     audio.src = tracks[trackIndex].src;
     audio.load();
@@ -46,8 +47,87 @@
   };
   showTrack();
 
+  // ---- Crossfade ------------------------------------------------------
+  // The last XFADE seconds of a clip overlap the first XFADE of the next, so
+  // the reel never drops to silence between songs. The outgoing clip keeps
+  // playing on a detached "tail" element while the one real <audio> (which
+  // the mini player, follow and continue scripts all hold) moves on to the
+  // next song. Pause, skip, or the fader all still act on that one element.
+  const XFADE = 1.8;
+  let tail = null, crossfading = false, preloadEl = null;
+  const curve = (fadeIn, n = 64) => {
+    const c = new Float32Array(n);
+    for (let i = 0; i < n; i++) { const x = i / (n - 1) * Math.PI / 2; c[i] = fadeIn ? Math.sin(x) : Math.cos(x); }
+    return c;
+  };
+  function killTail(fade) {
+    crossfading = false;
+    const t = tail; tail = null;
+    if (!t) return;
+    const done = () => { t.el.pause(); t.el.removeAttribute('src'); t.el.load(); if (t.node) t.node.disconnect(); };
+    if (t.gain && audioCtx && fade) {
+      const now = audioCtx.currentTime;
+      t.gain.gain.cancelScheduledValues(now);
+      t.gain.gain.setValueAtTime(t.gain.gain.value, now);
+      t.gain.gain.linearRampToValueAtTime(0, now + fade);
+      setTimeout(done, fade * 1000 + 50);
+    } else done();
+  }
+  function resetTrackGain() {
+    if (!trackGain || !audioCtx) return;
+    trackGain.gain.cancelScheduledValues(audioCtx.currentTime);
+    trackGain.gain.setValueAtTime(1, audioCtx.currentTime);
+  }
+  // Warm the cache for the next clip so the overlap starts on time.
+  function preloadNext() {
+    const next = tracks[(trackIndex + 1) % tracks.length];
+    if (!next || (preloadEl && preloadEl.dataset.src === next.src)) return;
+    preloadEl = preloadEl || new Audio();
+    preloadEl.preload = 'auto';
+    preloadEl.dataset.src = next.src;
+    preloadEl.src = next.src;
+  }
+  function beginCrossfade() {
+    if (crossfading || !audioCtx || tracks.length < 2) return;
+    crossfading = true;
+    const el = new Audio();
+    el.preload = 'auto';
+    const t = { el, node: null, gain: null };
+    tail = t;
+    let handed = false;
+    const handOver = () => {
+      if (handed || tail !== t) return;
+      handed = true;
+      const now = audioCtx.currentTime;
+      if (!el.paused) {
+        t.node = audioCtx.createMediaElementSource(el);
+        t.gain = audioCtx.createGain();
+        const left = Math.max(0.2, (el.duration || 0) - el.currentTime);
+        t.gain.gain.setValueCurveAtTime(curve(false), now, left);
+        t.node.connect(t.gain); t.gain.connect(analyser);
+        el.addEventListener('ended', () => { if (tail === t) killTail(0); }, { once: true });
+      } else { killTail(0); }
+      loadTrack(trackIndex + 1, true, true);
+      crossfading = false; // the new song may start its own overlap later
+      try {
+        trackGain.gain.cancelScheduledValues(now);
+        trackGain.gain.setValueCurveAtTime(curve(true), now, XFADE);
+      } catch (e) { resetTrackGain(); }
+    };
+    el.addEventListener('loadedmetadata', () => { el.currentTime = Math.min(audio.currentTime + 0.03, el.duration || audio.currentTime); }, { once: true });
+    el.addEventListener('seeked', () => { if (tail === t) el.play().then(handOver).catch(handOver); }, { once: true });
+    setTimeout(handOver, 900); // slow network: move on anyway
+    el.src = audio.currentSrc || audio.src;
+  }
+  audio.addEventListener('timeupdate', () => {
+    if (audio.paused || crossfading || !Number.isFinite(audio.duration)) return;
+    const left = audio.duration - audio.currentTime;
+    if (left <= XFADE + 4) preloadNext();
+    if (left <= XFADE) beginCrossfade();
+  });
+
   // ---- Audio graph ----------------------------------------------------
-  let audioCtx = null, analyser = null, gainNode = null, freqData = null;
+  let audioCtx = null, analyser = null, gainNode = null, trackGain = null, freqData = null;
   function ensureAudio() {
     if (audioCtx) return;
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -57,7 +137,9 @@
     analyser.smoothingTimeConstant = 0.68;
     gainNode = audioCtx.createGain();
     gainNode.gain.value = Number(fader ? fader.value : 1);
-    src.connect(analyser);
+    trackGain = audioCtx.createGain();
+    src.connect(trackGain);
+    trackGain.connect(analyser);
     analyser.connect(gainNode);
     gainNode.connect(audioCtx.destination);
     freqData = new Uint8Array(analyser.frequencyBinCount);
@@ -122,7 +204,8 @@
   }, true);
   audio.addEventListener('play', () => stage.classList.remove('is-paused'));
   audio.addEventListener('pause', () => stage.classList.add('is-paused'));
-  audio.addEventListener('ended', () => loadTrack(trackIndex + 1, true));
+  // Fallback when the overlap could not start (very short clip, no audio graph).
+  audio.addEventListener('ended', () => { if (!crossfading) loadTrack(trackIndex + 1, true); });
   stage.classList.add('is-paused');
 
   cueButtons.forEach(button => button.addEventListener('click', () => {

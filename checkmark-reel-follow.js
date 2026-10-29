@@ -26,7 +26,7 @@
   const DOCK_CSS = 'checkmark-reel-dock.css?v=20261014-marquee';
   const DOCK_JS = 'checkmark-reel-dock.js?v=20261014-marquee';
   const CONTINUE_JS = 'checkmark-reel-continue.js?v=20261010-continuous';
-  const PLAYLIST_JS = 'checkmark-demo-playlist.js?v=20261014-order';
+  const PLAYLIST_JS = 'checkmark-demo-playlist.js?v=20261028-order2';
   const HOME_PLAYER = 'index.html#demoVideoConsole';
 
   const store = {
@@ -142,7 +142,62 @@
     audio.volume = Number.isFinite(savedVolume) ? Math.max(0, Math.min(1, savedVolume)) : 0.75;
     let index = 0, generation = 0;
     const label = i => { const t = tracks[i == null ? index : i]; return t.artist ? `${t.title} — ${t.artist}` : t.title; };
-    const pause = () => { generation++; audio.pause(); };
+    // Crossfade, same idea as the home console: the outgoing clip finishes on a
+    // detached tail element while `audio` moves on to the next song. Uses
+    // element volume (no Web Audio here); where volume is read-only (iOS) the
+    // songs simply follow each other.
+    const XFADE = 1.8;
+    const baseVolume = audio.volume;
+    let tail = null, xfading = false, fadeTimer = 0;
+    const volumeWorks = (() => { const a = new Audio(); a.volume = 0.5; return a.volume === 0.5; })();
+    const stopFades = () => { clearInterval(fadeTimer); fadeTimer = 0; };
+    const dropTail = () => { xfading = false; if (tail) { tail.pause(); tail.removeAttribute('src'); tail.load(); tail = null; } };
+    const fade = (from, len) => {
+      stopFades();
+      const t0 = performance.now();
+      fadeTimer = setInterval(() => {
+        const x = Math.min(1, (performance.now() - t0) / (len * 1000));
+        audio.volume = baseVolume * Math.sin(x * Math.PI / 2);
+        if (from) from.volume = baseVolume * Math.cos(x * Math.PI / 2);
+        if (x >= 1) { stopFades(); if (from === tail) dropTail(); }
+      }, 40);
+    };
+    const crossfade = () => {
+      if (xfading || !volumeWorks || tracks.length < 2) return;
+      xfading = true;
+      const el = new Audio();
+      el.preload = 'auto'; el.volume = audio.volume;
+      tail = el;
+      let handed = false;
+      const handOver = () => {
+        if (handed || tail !== el) return;
+        handed = true;
+        if (el.paused) dropTail();
+        load(index + 1, true, true);
+        xfading = false;
+        audio.volume = 0;
+        fade(tail, XFADE);
+      };
+      el.addEventListener('loadedmetadata', () => { el.currentTime = Math.min(audio.currentTime + 0.03, el.duration || audio.currentTime); }, { once: true });
+      el.addEventListener('seeked', () => { if (tail === el) el.play().then(handOver).catch(handOver); }, { once: true });
+      setTimeout(handOver, 900);
+      el.src = audio.currentSrc || audio.src;
+    };
+    let warm = null;
+    audio.addEventListener('timeupdate', () => {
+      if (audio.paused || xfading || !Number.isFinite(audio.duration)) return;
+      const left = audio.duration - audio.currentTime;
+      const next = tracks[(index + 1) % tracks.length];
+      if (left <= XFADE + 4 && (!warm || warm.dataset.src !== next.src)) {
+        warm = warm || new Audio(); warm.preload = 'auto'; warm.dataset.src = next.src; warm.src = next.src;
+      }
+      if (left <= XFADE) crossfade();
+    });
+    const pause = keepTail => {
+      generation++;
+      if (keepTail !== true) { stopFades(); dropTail(); audio.volume = baseVolume; }
+      audio.pause();
+    };
     const play = async () => {
       // The clip is only fetched here, on the visitor's tap, never on page load.
       if (audio.getAttribute('src') !== tracks[index].src) audio.src = tracks[index].src;
@@ -156,8 +211,8 @@
         audio.addEventListener('canplay', () => { if (token === generation) audio.play().catch(() => {}); }, { once: true });
       }
     };
-    const load = (i, andPlay) => {
-      pause();
+    const load = (i, andPlay, crossfading) => {
+      pause(crossfading);
       index = ((i % tracks.length) + tracks.length) % tracks.length;
       if (audio.hasAttribute('src')) { audio.removeAttribute('src'); audio.load(); }
       document.dispatchEvent(new CustomEvent('checkmark:demo-track', { detail: { index, track: tracks[index], label: label(index) } }));
@@ -168,11 +223,11 @@
     const yieldTo = e => { const m = e.target; if (m !== audio && m instanceof HTMLMediaElement && !m.paused && !m.muted) pause(); };
     document.addEventListener('play', yieldTo, true);
     document.addEventListener('volumechange', yieldTo, true);
-    audio.addEventListener('ended', () => load(index + 1, true));
+    audio.addEventListener('ended', () => { if (!xfading) load(index + 1, true); });
     return {
       audio, tracks, stage: null, playButton: null, resumed: true,
       get index() { return index; },
-      label, play, pause,
+      label, play, pause: () => pause(),
       toggle: () => (audio.paused ? play() : pause()),
       load,
       step: delta => load(index + delta, !audio.paused),
