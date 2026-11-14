@@ -25,9 +25,11 @@ if(['recording','live'].includes(page)){
   for(const src of bookingScripts){const script=document.createElement('script');script.src=src;script.async=false;document.body.appendChild(script)}
 }
 const goldThemeStyles=document.createElement('link');goldThemeStyles.rel='stylesheet';goldThemeStyles.href='checkmark-gold-theme.css?v=20260925-bebas2';document.head.appendChild(goldThemeStyles);
-const panelTextureStyles=document.createElement("link");panelTextureStyles.rel="stylesheet";panelTextureStyles.href="checkmark-panel-texture.css?v=20260925-goldpaper-banners";document.head.appendChild(panelTextureStyles);
+const panelTextureStyles=document.createElement("link");panelTextureStyles.rel="stylesheet";panelTextureStyles.href="checkmark-panel-texture.css?v=20261114-foam-black";document.head.appendChild(panelTextureStyles);
 
 const mediaLoader=document.createElement('script');mediaLoader.src='checkmark-media-loader.js?v=20260827-1';document.body.appendChild(mediaLoader);
 if(['localhost','127.0.0.1','0.0.0.0'].includes(location.hostname)){const editorStyles=document.createElement('link');editorStyles.rel='stylesheet';editorStyles.href='checkmark-site-media-editor.css?v=20260827-1';document.head.appendChild(editorStyles);mediaLoader.addEventListener('load',()=>{const editor=document.createElement('script');editor.src='checkmark-site-media-editor.js?v=20260922-2';document.body.appendChild(editor)})}
 
 const roundedBevelStyles=document.createElement("link");roundedBevelStyles.rel="stylesheet";roundedBevelStyles.href="checkmark-rounded-bevels.css?v=20260925-wash3";document.head.appendChild(roundedBevelStyles);
+
+(function(){const panelTextureLate=document.createElement("link");panelTextureLate.rel="stylesheet";panelTextureLate.href="checkmark-panel-texture.css?v=20261114-foam-black";document.head.appendChild(panelTextureLate);})();

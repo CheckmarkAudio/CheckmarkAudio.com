@@ -85,19 +85,12 @@
   filter: none;
 }
 
-/* Dark page CTAs (default) — industrial felt */
-.pagecta::before {
-  background-image: var(--tex-felt);
-  opacity: var(--panel-texture-opacity-dark);
-  mix-blend-mode: overlay;
-}
-
-/* Studio A/B black CTAs only — acoustic foam */
+/* Dark page CTAs — acoustic foam (same treatment as Studio A/B) */
+.pagecta::before,
 .pagecta.pagecta--foam::before {
   background-image: var(--tex-foam);
   background-size: var(--panel-texture-size-foam);
   opacity: var(--panel-texture-opacity-foam);
-  /* screen: soft-light stays too quiet on #11110f even with boosted tile */
   mix-blend-mode: screen;
 }
 
@@ -110,9 +103,198 @@
   mix-blend-mode: multiply;
 }
 
-/* Listen / sound-proof dark band — industrial felt */
+/* Listen / sound-proof dark band — acoustic foam */
 .sound-proof::before {
-  background-image: var(--tex-felt);
-  opacity: var(--panel-texture-opacity-dark);
-  mix-blend-mode: overlay;
+  background-image: var(--tex-foam);
+  background-size: var(--panel-texture-size-foam);
+  opacity: var(--panel-texture-opacity-foam);
+  mix-blend-mode: screen;
+}
+
+/* ------------------------------------------------------------------
+   Acoustic foam on remaining solid-black site surfaces.
+   Reuses the approved Studio A/B tile (panel-acoustic-foam-neutral.webp)
+   and the same size / opacity / screen blend so text stays readable.
+   Photo heroes, consoles, editor chrome and cream bands are left alone.
+   2026-11-14-foam-black
+   ------------------------------------------------------------------ */
+
+/* Body / page roots: tiled foam under a dark wash. Footer is transparent
+   so this layer shows through. Not a ::before, to avoid trapping z-index
+   of the sticky header, mini player, and lightboxes. */
+html,
+body,
+body.studio-page,
+body.artists-page,
+body.tonight-page,
+body[data-page="home"],
+body[data-page="services"],
+body[data-page="team"],
+body[data-page="community"],
+body[data-page="artists"],
+body[data-page="studioA"],
+body[data-page="studioB"],
+body[data-page="notfound"],
+body[data-page="faq"],
+body[data-page="recording"] {
+  background-color: #080909;
+  background-image:
+    linear-gradient(rgba(8, 9, 9, .62), rgba(8, 9, 9, .62)),
+    var(--tex-foam);
+  background-size: auto, var(--panel-texture-size-foam);
+  background-repeat: no-repeat, repeat;
+  background-position: 0 0, 0 0;
+}
+
+.footer,
+body[data-page="community"] .footer {
+  background-color: transparent;
+  background-image: none;
+}
+
+/* Shared ::before foam layer for opaque black bands / bars / menus */
+.header,
+.contact-bar,
+.affiliate-bar,
+.homepage-media:not(.demo-reel-section),
+.artist-teaser,
+.services-hero,
+.services-cta,
+.master-chapter,
+.team-cta,
+.artists-cta,
+.artists-grid,
+.not-found,
+.navdrop-menu,
+.navlinks.open,
+.studio-a-story,
+.studio-b-story,
+.studio-story--plan,
+.studio-showcase,
+.tonight-gallery,
+.tonight-quote,
+.checkmark-live .live-quote {
+  position: relative;
+  isolation: isolate;
+}
+
+.header::before,
+.contact-bar::before,
+.affiliate-bar::before,
+.homepage-media:not(.demo-reel-section)::before,
+.artist-teaser::before,
+.services-hero::before,
+.services-cta::before,
+.master-chapter::before,
+.team-cta::before,
+.artists-cta::before,
+.artists-grid::before,
+.not-found::before,
+.navdrop-menu::before,
+.navlinks.open::before,
+.studio-a-story::before,
+.studio-b-story::before,
+.studio-showcase::before,
+.tonight-gallery::before,
+.tonight-quote::before,
+.checkmark-live .live-quote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: var(--tex-foam);
+  background-repeat: repeat;
+  background-size: var(--panel-texture-size-foam);
+  opacity: var(--panel-texture-opacity-foam);
+  mix-blend-mode: screen;
+}
+
+.header > *,
+.contact-bar > *,
+.affiliate-bar > *,
+.homepage-media:not(.demo-reel-section) > *,
+.artist-teaser > *,
+.services-hero > *,
+.services-cta > *,
+.master-chapter > *,
+.team-cta > *,
+.artists-cta > *,
+.artists-grid > *,
+.not-found > *,
+.navdrop-menu > *,
+.navlinks.open > *,
+.studio-a-story > *,
+.studio-b-story > *,
+.studio-showcase > *,
+.tonight-gallery > *,
+.tonight-quote > *,
+.checkmark-live .live-quote > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Override the felt shorthand on the team CTA so the shared foam layer reads. */
+.team-cta {
+  background-color: #11110f;
+  background-image: none;
+  background-blend-mode: normal;
+}
+
+/* studio-story--plan already uses ::before for a red hairline — foam via layers. */
+.studio-story--plan {
+  background-color: #090a09;
+  background-image:
+    linear-gradient(rgba(9, 10, 9, .62), rgba(9, 10, 9, .62)),
+    var(--tex-foam);
+  background-size: auto, var(--panel-texture-size-foam);
+  background-repeat: no-repeat, repeat;
+  background-position: 0 0, 0 0;
+}
+
+@media (max-width: 700px) {
+  html,
+  body,
+  body.studio-page,
+  body.artists-page,
+  body.tonight-page,
+  body[data-page="home"],
+  body[data-page="services"],
+  body[data-page="team"],
+  body[data-page="community"],
+  body[data-page="artists"],
+  body[data-page="studioA"],
+  body[data-page="studioB"],
+  body[data-page="notfound"],
+  body[data-page="faq"],
+  body[data-page="recording"],
+  .studio-story--plan {
+    background-size: auto, 180px auto;
+  }
+  .header::before,
+  .contact-bar::before,
+  .affiliate-bar::before,
+  .homepage-media:not(.demo-reel-section)::before,
+  .artist-teaser::before,
+  .services-hero::before,
+  .services-cta::before,
+  .master-chapter::before,
+  .team-cta::before,
+  .artists-cta::before,
+  .artists-grid::before,
+  .not-found::before,
+  .navdrop-menu::before,
+  .navlinks.open::before,
+  .studio-a-story::before,
+  .studio-b-story::before,
+  .studio-showcase::before,
+  .tonight-gallery::before,
+  .tonight-quote::before,
+  .checkmark-live .live-quote::before,
+  .pagecta::before,
+  .pagecta.pagecta--foam::before,
+  .sound-proof::before,
+  .studio-story--rooms::before {
+    background-size: 180px auto;
+  }
 }
