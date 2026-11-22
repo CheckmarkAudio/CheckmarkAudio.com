@@ -74,3 +74,22 @@
 .affiliate-logos img[src*="top-pro-awards-logo"]{transform:scale(1.18)}
 .affiliate-logos a:hover img[src*="namm-believe-in-music-logo"]{transform:scale(1.45)}
 .affiliate-logos a:hover img[src*="top-pro-awards-logo"]{transform:scale(1.18)}
+
+/* Titles never split a word across lines: break only between whole words.
+   (body keeps overflow-wrap:break-word as a safety net for long body text). */
+h1,h2,h3,h4,h5,h6,summary,button,.btn,
+[class*="title"],[class*="eyebrow"],[class*="kicker"],[class*="cta"]{
+  overflow-wrap:normal;
+  word-break:normal;
+  -webkit-hyphens:manual;
+  hyphens:manual;
+}
+/* Hyphenated words and phone numbers in titles/buttons stay on one line. */
+.cm-nobreak,a[href^="tel:"]{white-space:nowrap}
+@media (max-width:700px){
+  h1,h2,h3{text-wrap:balance}
+}
+@media (max-width:650px){
+  /* Checkmark Tonight hero: size so "Performance," always fits the phone width. */
+  .live-cover h1{font-size:clamp(1.9rem,calc((100vw - 88px) / 6.45),4.2rem)}
+}
