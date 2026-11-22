@@ -17,6 +17,9 @@
   --panel-texture-opacity-dark: .34;
   --panel-texture-opacity-reviews: .48;
   --panel-texture-opacity-foam: .28;
+  /* Short CTA / intro / footer bands need a stronger mix so the wedges read
+     as clearly as the taller Studio A/B and services-hero surfaces. */
+  --panel-texture-opacity-foam-cta: .5;
 }
 
 /* Shared positioning / stacking for textured bands */
@@ -146,10 +149,31 @@ body[data-page="recording"] {
   background-position: 0 0, 0 0;
 }
 
+/* Footer gets its own foam layer (body wash alone is too faint). */
 .footer,
 body[data-page="community"] .footer {
-  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+  background-color: #080909;
   background-image: none;
+}
+.footer::before,
+body[data-page="community"] .footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: var(--tex-foam);
+  background-repeat: repeat;
+  background-size: var(--panel-texture-size-foam);
+  opacity: var(--panel-texture-opacity-foam-cta);
+  mix-blend-mode: screen;
+}
+.footer > *,
+body[data-page="community"] .footer > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Shared ::before foam layer for opaque black bands / bars / menus */
@@ -252,6 +276,31 @@ body[data-page="community"] .footer {
   background-position: 0 0, 0 0;
 }
 
+
+/* Bridget 2026-11-21: these short black bands still read as flat without a
+   stronger mix. Same tile and screen blend as Studio A/B, higher opacity. */
+.services-cta,
+.services-cta.pagecta,
+.artists-cta,
+.team-cta,
+.pagecta,
+.tonight-gallery {
+  background-color: #11110f;
+}
+.services-cta::before,
+.services-cta.pagecta::before,
+.artists-cta::before,
+.team-cta::before,
+.pagecta::before,
+.pagecta.pagecta--foam::before,
+.tonight-gallery::before {
+  background-image: var(--tex-foam);
+  background-repeat: repeat;
+  background-size: var(--panel-texture-size-foam);
+  opacity: var(--panel-texture-opacity-foam-cta);
+  mix-blend-mode: screen;
+}
+
 @media (max-width: 700px) {
   html,
   body,
@@ -294,7 +343,9 @@ body[data-page="community"] .footer {
   .pagecta::before,
   .pagecta.pagecta--foam::before,
   .sound-proof::before,
-  .studio-story--rooms::before {
+  .studio-story--rooms::before,
+  .footer::before,
+  body[data-page="community"] .footer::before {
     background-size: 180px auto;
   }
 }
